@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
-//Name: Ultimate_Handy_v1.0.2.ma
-//Last modified: Wed, Sep 23, 2026 06:22:36 PM
+//Name: Ultimate_Handy_v1.0.3.ma
+//Last modified: Wed, Sep 23, 2026 06:22:54 PM
 //Codeset: 1252
 requires maya "2027";
 requires "stereoCamera" "10.0";
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202604221258-70da84b25e";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26200)";
-fileInfo "UUID" "7E6D39FC-4C12-242F-13FF-B89AA5058206";
+fileInfo "UUID" "F25B7F57-44FF-7E01-6DC9-23ACDB276F44";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "25E5A074-4D3A-D298-D0EB-A3849EAC265A";
@@ -12128,4 +12128,4 @@ connectAttr "jojolArmIKViz.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "jojolArmFKViz.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "ikRPsolver.msg" ":ikSystem.sol" -na;
-// End of Ultimate_Handy_v1.0.2.ma
+// End of Ultimate_Handy_v1.0.3.ma
