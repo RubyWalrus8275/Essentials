@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Mech Factory.ma
-//Last modified: Tue, Nov 17, 2026 09:58:39 PM
+//Last modified: Wed, Nov 18, 2026 09:28:34 PM
 //Codeset: 1252
 requires maya "2027";
 requires "stereoCamera" "10.0";
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202604221258-70da84b25e";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26300)";
-fileInfo "UUID" "E86CEE73-4A47-D60D-6A33-09A01592D115";
+fileInfo "UUID" "B6DFB675-422C-EF7D-5C7C-34BA2F8D20AA";
 createNode transform -s -n "persp";
 	rename -uid "5930DFF9-459B-491E-34C1-619B3F8F514D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 20.111702930657021 -1.0016936181433864 15.430996923503798 ;
-	setAttr ".r" -type "double3" 14.061647271197334 -688.1999999998867 0 ;
+	setAttr ".t" -type "double3" 13.154978664899234 6.5639164855286776 10.727117948127606 ;
+	setAttr ".r" -type "double3" -27.938352698440099 -3557.7999999999897 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "CDBD1DBB-4247-8260-AD96-52A82812BC4D";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 6.5407411297542426;
+	setAttr ".coi" 9.9999997473787516e-06;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -192,15 +192,11 @@ createNode mesh -n "pCubeShape3" -p "pCube3";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.375 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 4 ".pt[8:11]" -type "float3"  0.10444536 -0.91589415 -0.10444541 
-		-0.10444546 -0.91589415 -0.10444541 -0.10444564 -0.91589415 0.1044454 0.10444546 
-		-0.91589415 0.10444535;
 createNode mesh -n "polySurfaceShape19" -p "pCube3";
 	rename -uid "29800902-4823-9F57-FB7B-71A7AA899D46";
 	setAttr -k off ".v";
@@ -9658,11 +9654,6 @@ createNode mesh -n "pCubeShape129" -p "pCube131";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 4 ".pt";
-	setAttr ".pt[1]" -type "float3" -0.63968122 -1.110223e-16 -0.29262984 ;
-	setAttr ".pt[3]" -type "float3" -0.63294637 1.110223e-16 -0.29262984 ;
-	setAttr ".pt[5]" -type "float3" -0.63294637 1.110223e-16 0.24812253 ;
-	setAttr ".pt[7]" -type "float3" -0.63968122 -1.110223e-16 0.24812253 ;
 createNode transform -n "pCube132";
 	rename -uid "7EB3A5EE-4639-374C-25A4-8D9CD067EFFA";
 	setAttr ".t" -type "double3" 18.46127475786319 0.86342965873004451 7.1662754069723738 ;
@@ -9671,6 +9662,18 @@ createNode transform -n "pCube132";
 createNode mesh -n "pCubeShape132" -p "pCube132";
 	rename -uid "BAA3AF30-4832-EF92-848D-5A8ACB2986EF";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.75 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape37" -p "pCube132";
+	rename -uid "1E06E546-4E1D-EC99-6E72-7987B234CF3D";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -9731,6 +9734,18 @@ createNode mesh -n "pCubeShape133" -p "pCube133";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.75 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape36" -p "pCube133";
+	rename -uid "0C85F358-4843-895A-F459-33B7CC062A96";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
@@ -9787,6 +9802,18 @@ createNode transform -n "pCube134";
 createNode mesh -n "pCubeShape134" -p "pCube134";
 	rename -uid "900A89CA-499D-2AE9-932C-1085C21F3A02";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.75 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape34" -p "pCube134";
+	rename -uid "259040FC-4452-0A11-024B-6D96C548CE51";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -9847,6 +9874,18 @@ createNode mesh -n "pCubeShape135" -p "pCube135";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.75 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape35" -p "pCube135";
+	rename -uid "83091BB7-444F-6465-C992-85B3E64C3CC9";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
@@ -9903,6 +9942,18 @@ createNode transform -n "pCube136";
 createNode mesh -n "pCubeShape136" -p "pCube136";
 	rename -uid "F2E2A963-44B3-17BC-BEDB-AFA2BD9CA593";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.75 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape40" -p "pCube136";
+	rename -uid "62E10BAF-42CB-F881-3718-EC9F5DB86A68";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -9963,6 +10014,18 @@ createNode mesh -n "pCubeShape137" -p "pCube137";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.75 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape41" -p "pCube137";
+	rename -uid "52D79105-4188-4474-73C2-C3BFDD412B2E";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
@@ -10019,6 +10082,18 @@ createNode transform -n "pCube138";
 createNode mesh -n "pCubeShape138" -p "pCube138";
 	rename -uid "34CDA86D-405D-0C61-373A-8F8D32164C93";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.75 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape42" -p "pCube138";
+	rename -uid "D29D039F-4F9D-CD39-2ECA-389B26293FA4";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -10079,6 +10154,18 @@ createNode mesh -n "pCubeShape139" -p "pCube139";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.75 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape38" -p "pCube139";
+	rename -uid "59488335-496E-0042-EB92-CA809F192D50";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
@@ -10135,6 +10222,18 @@ createNode transform -n "pCube140";
 createNode mesh -n "pCubeShape140" -p "pCube140";
 	rename -uid "3C471C31-498B-4DFE-92B7-C08EBDCE27BA";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.75 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape39" -p "pCube140";
+	rename -uid "F03AE7E2-4D6C-B0DD-B80C-2C9B3D8B411F";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -10217,9 +10316,6 @@ createNode mesh -n "pCubeShape142" -p "pCube142";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 2 ".pt";
-	setAttr ".pt[12]" -type "float3" -0.019084817 0 -1.5543122e-15 ;
-	setAttr ".pt[15]" -type "float3" -0.019084817 0 -1.5543122e-15 ;
 createNode transform -n "pCylinder12";
 	rename -uid "B6808431-4866-DB63-BCB2-2E9C8604AC6D";
 	setAttr ".t" -type "double3" 17.646212176668168 0.53938412839114636 12.355967542016041 ;
@@ -10241,6 +10337,17 @@ createNode transform -n "pCylinder13";
 createNode mesh -n "pCylinderShape13" -p "pCylinder13";
 	rename -uid "4FA6E289-4551-6A22-B1EB-D89C56374920";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape43" -p "pCylinder13";
+	rename -uid "D82DB884-4303-D208-01E9-EC8E2104FDCE";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 10 ".gtag";
@@ -10443,6 +10550,17 @@ createNode mesh -n "pCylinderShape14" -p "pCylinder14";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape44" -p "pCylinder14";
+	rename -uid "D1B81F46-4E97-75E9-8A13-9C938535D0F3";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 10 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "bottom";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[20:39]";
@@ -10641,6 +10759,17 @@ createNode transform -n "pCylinder15";
 createNode mesh -n "pCylinderShape15" -p "pCylinder15";
 	rename -uid "34AE87DC-4079-337A-FD23-DAA5EF39564B";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape45" -p "pCylinder15";
+	rename -uid "B1EACCFE-4D67-1FC4-9B07-F1BD33A787F5";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 10 ".gtag";
@@ -11045,6 +11174,72 @@ createNode mesh -n "pCubeShape143" -p "pCube143";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.375 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape19" -p "pCube143";
+	rename -uid "61F9A5EB-411D-753D-98CC-2F8D9E724303";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".pv" -type "double2" 0.5 0.375 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 4 ".pt";
+	setAttr ".pt[0]" -type "float3" 0.092479758 0 7.7715612e-16 ;
+	setAttr ".pt[1]" -type "float3" -0.038540009 0 0 ;
+	setAttr ".pt[6]" -type "float3" 0.092479758 0 9.9920072e-16 ;
+	setAttr ".pt[7]" -type "float3" -0.038540009 0 3.3306691e-16 ;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape31" -p "pCube143";
+	rename -uid "73120F68-45B6-4DBD-2DDD-DBAD11C48B84";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
@@ -11097,60 +11292,6 @@ createNode mesh -n "pCubeShape143" -p "pCube143";
 		mu 0 4 5 4 17 16
 		f 4 -7 12 19 -18
 		mu 0 4 4 2 14 17;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape19" -p "pCube143";
-	rename -uid "61F9A5EB-411D-753D-98CC-2F8D9E724303";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr -s 6 ".gtag";
-	setAttr ".gtag[0].gtagnm" -type "string" "back";
-	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
-	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
-	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
-	setAttr ".gtag[2].gtagnm" -type "string" "front";
-	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
-	setAttr ".gtag[3].gtagnm" -type "string" "left";
-	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
-	setAttr ".gtag[4].gtagnm" -type "string" "right";
-	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
-	setAttr ".gtag[5].gtagnm" -type "string" "top";
-	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
-	setAttr ".pv" -type "double2" 0.5 0.375 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 4 ".pt";
-	setAttr ".pt[0]" -type "float3" 0.092479758 0 7.7715612e-16 ;
-	setAttr ".pt[1]" -type "float3" -0.038540009 0 0 ;
-	setAttr ".pt[6]" -type "float3" 0.092479758 0 9.9920072e-16 ;
-	setAttr ".pt[7]" -type "float3" -0.038540009 0 3.3306691e-16 ;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
-		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
-	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 1 7 -3 -7
-		mu 0 4 2 3 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 -1 -11
-		mu 0 4 6 7 9 8
-		f 4 -12 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 10 4 6 8
-		mu 0 4 12 0 2 13;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
@@ -11982,6 +12123,17 @@ createNode transform -n "pCube145";
 createNode mesh -n "pCubeShape145" -p "pCube145";
 	rename -uid "996D4C32-4917-9950-DD9B-30A3353CA354";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape46" -p "pCube145";
+	rename -uid "8E0F3FFC-4A81-1572-877F-FCBBCAE3E963";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -13271,6 +13423,17 @@ createNode mesh -n "pCubeShape155" -p "pCube155";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape32" -p "pCube155";
+	rename -uid "46B648D7-4087-EC40-DEA5-E39711B27D77";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
@@ -13323,6 +13486,17 @@ createNode mesh -n "pCubeShape156" -p "pCube156";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape33" -p "pCube156";
+	rename -uid "789FEB8C-4237-5490-1035-5C9011C15F60";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
@@ -13337,9 +13511,11 @@ createNode mesh -n "pCubeShape156" -p "pCube156";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.60901892 -1.017240405
+		 0.65823036 -1.012569308 0.47997308 0.3422831 0.52918452 0.34695423 0.47196019 0.42670044
+		 0.52117163 0.43137157 0.34291434 1.78622401 0.39212576 1.7908951 0.33490145 1.87064135
+		 0.38411286 1.87531245 0.74264771 -1.0045564175 0.61360186 0.35496712 0.52460158 -1.025253296
+		 0.39555573 0.33427021;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
@@ -15793,8 +15969,6 @@ createNode mesh -n "pCubeShape157" -p "pCube157";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 2 ".pt[2:3]" -type "float3"  1.6098234e-15 0 -0.34417772 
-		1.9428903e-15 0 -0.34417772;
 createNode transform -n "pCube158";
 	rename -uid "D34E4EF7-478E-EEE1-B313-5C8B8B1EB57D";
 	setAttr ".t" -type "double3" 17.276553934604774 0.81435145855589286 11.991493092971945 ;
@@ -15810,9 +15984,6 @@ createNode mesh -n "pCubeShape158" -p "pCube158";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 2 ".pt";
-	setAttr ".pt[1]" -type "float3" -0.47973901 -5.5511151e-17 0 ;
-	setAttr ".pt[7]" -type "float3" -0.47973901 -5.5511151e-17 0 ;
 createNode transform -n "pCube159";
 	rename -uid "6F8123B6-46D6-7EC2-5255-C8A1B3BA4390";
 	setAttr ".t" -type "double3" 17.315112901865952 0.36121818076980627 11.981582602281545 ;
@@ -15844,11 +16015,6 @@ createNode mesh -n "pCubeShape160" -p "pCube160";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 4 ".pt";
-	setAttr ".pt[0]" -type "float3" -2.553513e-15 0 -0.1890633 ;
-	setAttr ".pt[1]" -type "float3" -2.4424907e-15 0 -0.1890633 ;
-	setAttr ".pt[6]" -type "float3" -1.110223e-16 0 0.23778445 ;
-	setAttr ".pt[7]" -type "float3" 5.5511151e-17 0 0.23778445 ;
 createNode transform -n "pSphere1";
 	rename -uid "8E5698D3-4505-B67F-9C21-B8B4F92353A1";
 	setAttr ".t" -type "double3" 16.915034819109064 1.2848932771832622 12.475604645044195 ;
@@ -15870,6 +16036,17 @@ createNode transform -n "pSphere2";
 createNode mesh -n "pSphereShape2" -p "pSphere2";
 	rename -uid "AE6F52F3-4A20-2AF4-9E94-DA9B008A0891";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape60" -p "pSphere2";
+	rename -uid "98A20DF8-4C1F-69A7-194E-709F3DA7DDA2";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -17007,6 +17184,17 @@ createNode mesh -n "pSphereShape3" -p "pSphere3";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape61" -p "pSphere3";
+	rename -uid "D4C5FA4B-41F3-961A-EF4F-0C863BF9E4A9";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 439 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0 0.050000001 0.050000001 0.050000001
 		 0.1 0.050000001 0.15000001 0.050000001 0.2 0.050000001 0.25 0.050000001 0.30000001
@@ -18138,6 +18326,17 @@ createNode transform -n "pSphere4";
 createNode mesh -n "pSphereShape4" -p "pSphere4";
 	rename -uid "C2E2388F-47C4-FCF4-DCB4-2AA472B26939";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape62" -p "pSphere4";
+	rename -uid "174C2F0A-4C1C-5F53-DF57-E49CCDCC4E03";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -19275,6 +19474,17 @@ createNode mesh -n "pSphereShape5" -p "pSphere5";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape64" -p "pSphere5";
+	rename -uid "C1D0B829-47C0-801E-6580-64880759E5D4";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 439 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0 0.050000001 0.050000001 0.050000001
 		 0.1 0.050000001 0.15000001 0.050000001 0.2 0.050000001 0.25 0.050000001 0.30000001
@@ -20406,6 +20616,17 @@ createNode transform -n "pSphere6";
 createNode mesh -n "pSphereShape6" -p "pSphere6";
 	rename -uid "BDAFE1B8-4AFF-C3DE-E290-7EAE990738F5";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape63" -p "pSphere6";
+	rename -uid "8B37705F-4A77-FC45-DD8C-B697A2E022FD";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -21634,6 +21855,18 @@ createNode transform -n "pCylinder39";
 createNode mesh -n "pCylinder39Shape" -p "pCylinder39";
 	rename -uid "9C65A22C-424B-9A16-9AC5-009AD8ABC56F";
 	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape53" -p "pCylinder39";
+	rename -uid "5E76BD98-4606-4B16-BCF9-05A29E6591E1";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:541]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -23206,6 +23439,18 @@ createNode transform -n "pCylinder40";
 createNode mesh -n "pCylinder40Shape" -p "pCylinder40";
 	rename -uid "F21B596A-4CE8-5708-855E-17980463FA8D";
 	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape55" -p "pCylinder40";
+	rename -uid "6E30A9E1-4682-C5A2-F93D-59B434CD0E09";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:541]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -24778,6 +25023,18 @@ createNode transform -n "pCylinder41";
 createNode mesh -n "pCylinder41Shape" -p "pCylinder41";
 	rename -uid "C4C7DE58-4B57-9464-8B4D-A4AA14183F9E";
 	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape54" -p "pCylinder41";
+	rename -uid "42B07B92-4B2F-08D6-046D-72A33BBE9343";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:541]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -26350,6 +26607,18 @@ createNode transform -n "pCylinder42";
 createNode mesh -n "pCylinder42Shape" -p "pCylinder42";
 	rename -uid "68165A1C-4337-1A72-5A2D-CBBB33246BB6";
 	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape59" -p "pCylinder42";
+	rename -uid "41983BBD-446D-F773-6CC1-43BBFC827F28";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:541]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -27922,6 +28191,18 @@ createNode transform -n "pCylinder43";
 createNode mesh -n "pCylinder43Shape" -p "pCylinder43";
 	rename -uid "4FBA2679-4432-8B7A-1EED-FBB72880C0D2";
 	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape58" -p "pCylinder43";
+	rename -uid "9BD4D62E-41C6-F193-20A8-3C97F5E322B8";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:541]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -29494,6 +29775,18 @@ createNode transform -n "pCylinder44";
 createNode mesh -n "pCylinder44Shape" -p "pCylinder44";
 	rename -uid "CA99DEAE-4217-285B-A045-9D9434BF365F";
 	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape56" -p "pCylinder44";
+	rename -uid "8093E1A9-4FF6-5841-F81A-E6A8416546EE";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:541]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -31066,6 +31359,18 @@ createNode transform -n "pCylinder45";
 createNode mesh -n "pCylinder45Shape" -p "pCylinder45";
 	rename -uid "8C02529A-4129-E463-C947-AF80F6C6460B";
 	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape57" -p "pCylinder45";
+	rename -uid "4C394823-4098-4F29-E053-06913EEA649A";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:541]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -32643,11 +32948,6 @@ createNode mesh -n "pCubeShape161" -p "pCube161";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 4 ".pt";
-	setAttr ".pt[0]" -type "float3" -1.110223e-16 -8.8817842e-16 0.11359561 ;
-	setAttr ".pt[2]" -type "float3" -1.110223e-16 -1.1657342e-15 0.11359561 ;
-	setAttr ".pt[4]" -type "float3" 3.3306691e-16 2.3869795e-15 -0.14061911 ;
-	setAttr ".pt[6]" -type "float3" 3.3306691e-16 2.6090241e-15 -0.14061911 ;
 createNode transform -n "pCube162";
 	rename -uid "A6E736B2-4324-24AA-44DA-8E951856B8FC";
 	setAttr ".t" -type "double3" 17.175608823628281 0.12304571487232879 9.5933926136256549 ;
@@ -32656,6 +32956,18 @@ createNode transform -n "pCube162";
 createNode mesh -n "pCubeShape162" -p "pCube162";
 	rename -uid "8DDBD08B-46F1-A57E-506B-64BC1AC59CCD";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.375 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape47" -p "pCube162";
+	rename -uid "7AFB67AD-4BB8-FD42-283A-DBBA2123A496";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -32761,6 +33073,17 @@ createNode mesh -n "pCubeShape166" -p "pCube166";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape48" -p "pCube166";
+	rename -uid "7B84FD81-4AE1-E091-EC6B-01BD1A74254D";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
@@ -32811,6 +33134,17 @@ createNode transform -n "pCube167";
 createNode mesh -n "pCubeShape167" -p "pCube167";
 	rename -uid "7C3B2864-4208-0EA9-0E21-388A6FAB6E88";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape50" -p "pCube167";
+	rename -uid "459CF2AD-468F-68CD-CA20-F59BE5D9D04D";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -32865,6 +33199,17 @@ createNode mesh -n "pCubeShape168" -p "pCube168";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape49" -p "pCube168";
+	rename -uid "96264F61-48DD-2DFC-1A93-63B86AAFBD06";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
@@ -32915,6 +33260,17 @@ createNode transform -n "pCylinder46";
 createNode mesh -n "pCylinderShape46" -p "pCylinder46";
 	rename -uid "8AACA9DC-4D04-8222-D347-44BAE58ADCF1";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape51" -p "pCylinder46";
+	rename -uid "51C9E2D4-4EE9-68ED-C5E4-21997D065FFE";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 10 ".gtag";
@@ -33116,6 +33472,17 @@ createNode transform -n "pCylinder47";
 createNode mesh -n "pCylinderShape47" -p "pCylinder47";
 	rename -uid "D734EF0C-469B-5F3F-2F17-00B1624E1567";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape52" -p "pCylinder47";
+	rename -uid "15901502-4FB5-462C-8587-9CAD539C6748";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 10 ".gtag";
@@ -34128,21 +34495,3082 @@ createNode mesh -n "pCylinderShape51" -p "pCylinder51";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube170";
+	rename -uid "62FCD71D-492D-FDDF-9DB5-5A8FD56882B7";
+	setAttr ".t" -type "double3" 0 0.51159918109627323 0 ;
+	setAttr ".s" -type "double3" 1.3104997299069956 1 6.0613761103635335 ;
+createNode mesh -n "pCubeShape170" -p "pCube170";
+	rename -uid "8DC1BDAB-4347-6DD7-6CF5-C398B937C47D";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49999997019767761 0.060538411140441895 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCube171";
+	rename -uid "1CEB7765-4415-0ED7-7703-4F91C83B2BDC";
+	setAttr ".t" -type "double3" 0.74079766871072561 0.46306058738998024 0.89447754877924812 ;
+	setAttr ".s" -type "double3" 0.14675143719116229 0.78141132478435493 0.89335063528433678 ;
+createNode mesh -n "pCubeShape171" -p "pCube171";
+	rename -uid "B8C80F30-482C-C001-C79B-14A8FBF966C2";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.625 0.125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCube172";
+	rename -uid "767ABD63-4AC6-5C90-0372-BBB69D17B332";
+	setAttr ".t" -type "double3" -0.74214630517810498 0.4790428597174019 0.8944775487792479 ;
+	setAttr ".s" -type "double3" 0.14675143719116229 0.78141132478435493 0.86151631868613865 ;
+createNode mesh -n "pCubeShape172" -p "pCube172";
+	rename -uid "BF7D5A83-4556-4680-146E-ACB91745F445";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.625 0.125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape22" -p "pCube172";
+	rename -uid "9A44DF81-43C0-F283-D0D4-B69E216E2A4C";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".pv" -type "double2" 0.625 0.125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.50741494 -0.18485186
+		 0.5737071 -0.18017858 0.48253101 0.16813569 0.54882312 0.17280896 0.45509613 0.55730909
+		 0.52138829 0.56198239 0.4302122 0.91029668 0.49650434 0.91496992 0.40277731 1.29947007
+		 0.46906945 1.30414343 0.96288049 -0.1527437 0.93799657 0.20024383 0.11824151 -0.21228673
+		 0.09335757 0.14070082;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCylinder52";
+	rename -uid "5740D943-43C9-681D-94F3-23ACEA70BE80";
+	setAttr ".t" -type "double3" 0 1.0648410264183166 0.90300974215051122 ;
+	setAttr ".s" -type "double3" 0.46722165031094509 0.46722165031094509 0.46722165031094509 ;
+createNode mesh -n "pCylinderShape52" -p "pCylinder52";
+	rename -uid "8CDF914F-4440-9360-2F73-00A6532D0A04";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49999998509883881 0.84374997019767761 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCube173";
+	rename -uid "A112B73E-4C35-9F6C-0010-609B70DBDE78";
+	setAttr ".t" -type "double3" 0 1.0582615370184811 -0.45963553532055668 ;
+	setAttr ".s" -type "double3" 1 0.079512028893802725 1.2743474283842218 ;
+createNode mesh -n "pCubeShape173" -p "pCube173";
+	rename -uid "B4C2E1BB-43FE-1852-0E75-FCBAEC878C58";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCylinder53";
+	rename -uid "9E031C2D-4A14-E38C-4447-6B8806DC56B6";
+	setAttr ".t" -type "double3" 0.64333366532257075 0.50773848154522061 0.15852019117652166 ;
+	setAttr ".s" -type "double3" 0.15762388884308454 0.46602045102352135 0.15762388884308454 ;
+createNode mesh -n "pCylinderShape53" -p "pCylinder53";
+	rename -uid "EEC6116F-47C6-32BE-D5BD-CFA124FDC68B";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.44687490165233612 0.49999996274709702 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCylinder54";
+	rename -uid "F238E864-4853-5EE2-C994-4593F7512C8E";
+	setAttr ".t" -type "double3" 0.64333366532257075 0.50773848154522061 1.6154762717300633 ;
+	setAttr ".s" -type "double3" 0.15762388884308454 0.46602045102352135 0.15762388884308454 ;
+createNode mesh -n "pCylinderShape54" -p "pCylinder54";
+	rename -uid "D1791B41-4BC3-C902-C7BB-94A10488BC6B";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 10 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[10:19]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottomRing";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "e[0:9]";
+	setAttr ".gtag[2].gtagnm" -type "string" "cylBottomCap";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 2 "vtx[0:10]" "vtx[22]";
+	setAttr ".gtag[3].gtagnm" -type "string" "cylBottomRing";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "vtx[0:10]";
+	setAttr ".gtag[4].gtagnm" -type "string" "cylSides";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "vtx[0:21]";
+	setAttr ".gtag[5].gtagnm" -type "string" "cylTopCap";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 2 "vtx[11:21]" "vtx[23]";
+	setAttr ".gtag[6].gtagnm" -type "string" "cylTopRing";
+	setAttr ".gtag[6].gtagcmp" -type "componentList" 1 "vtx[11:21]";
+	setAttr ".gtag[7].gtagnm" -type "string" "sides";
+	setAttr ".gtag[7].gtagcmp" -type "componentList" 1 "f[0:9]";
+	setAttr ".gtag[8].gtagnm" -type "string" "top";
+	setAttr ".gtag[8].gtagcmp" -type "componentList" 1 "f[20:30]";
+	setAttr ".gtag[9].gtagnm" -type "string" "topRing";
+	setAttr ".gtag[9].gtagcmp" -type "componentList" 1 "e[10:19]";
+	setAttr ".pv" -type "double2" 0.44687490165233612 0.49999996274709702 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 48 ".uvst[0].uvsp[0:47]" -type "float2" 0.64860266 0.10796607
+		 0.62640899 0.064408496 0.59184152 0.029841021 0.54828393 0.0076473355 0.5 -7.4505806e-08
+		 0.5 0.3125 0.54828387 0.3048526 0.59184146 0.28265893 0.62640893 0.24809146 0.6486026
+		 0.2045339 0.65625 0.15625 0.375 0.3125 0.38749999 0.3125 0.39999998 0.3125 0.41249996
+		 0.3125 0.42499995 0.3125 0.54999983 0.3125 0.56249982 0.3125 0.57499981 0.3125 0.5874998
+		 0.3125 0.59999979 0.3125 0.61249977 0.3125 0.62499976 0.3125 0.375 0.6875 0.38749999
+		 0.6875 0.39999998 0.6875 0.41249996 0.6875 0.42499995 0.6875 0.54999983 0.6875 0.56249982
+		 0.6875 0.57499981 0.6875 0.5874998 0.6875 0.59999979 0.6875 0.61249977 0.6875 0.62499976
+		 0.6875 0.64860266 0.79546607 0.62640899 0.75190848 0.59184152 0.71734101 0.54828393
+		 0.69514734 0.5 0.68749994 0.5 1 0.54828387 0.9923526 0.59184146 0.97015893 0.62640893
+		 0.93559146 0.6486026 0.89203393 0.65625 0.84375 0.5 0.15625 0.5 0.84375;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 24 ".vt[0:23]"  0.95105714 -1 -0.30901718 0.80901754 -1 -0.5877856
+		 0.5877856 -1 -0.80901748 0.30901715 -1 -0.95105702 0 -1 -1.000000476837 -2.9802322e-08 -1 1.000000119209
+		 0.30901697 -1 0.9510566 0.58778524 -1 0.80901706 0.809017 -1 0.5877853 0.95105654 -1 0.309017
+		 1 -1 0 0.95105714 1 -0.30901718 0.80901754 1 -0.5877856 0.5877856 1 -0.80901748 0.30901715 1 -0.95105702
+		 0 1 -1.000000476837 -2.9802322e-08 1 1.000000119209 0.30901697 1 0.9510566 0.58778524 1 0.80901706
+		 0.809017 1 0.5877853 0.95105654 1 0.309017 1 1 0 0 -1 0 0 1 0;
+	setAttr -s 53 ".ed[0:52]"  0 1 0 1 2 0 2 3 0 3 4 0 5 6 0 6 7 0 7 8 0
+		 8 9 0 9 10 0 10 0 0 11 12 0 12 13 0 13 14 0 14 15 0 16 17 0 17 18 0 18 19 0 19 20 0
+		 20 21 0 21 11 0 0 11 1 1 12 1 2 13 1 3 14 1 4 15 1 5 16 1 6 17 1 7 18 1 8 19 1 9 20 1
+		 10 21 1 22 0 1 22 1 1 22 2 1 22 3 1 22 4 1 22 5 1 22 6 1 22 7 1 22 8 1 22 9 1 22 10 1
+		 11 23 1 12 23 1 13 23 1 14 23 1 15 23 1 16 23 1 17 23 1 18 23 1 19 23 1 20 23 1 21 23 1;
+	setAttr -s 31 -ch 106 ".fc[0:30]" -type "polyFaces" 
+		f 4 0 21 -11 -21
+		mu 0 4 11 12 24 23
+		f 4 1 22 -12 -22
+		mu 0 4 12 13 25 24
+		f 4 2 23 -13 -23
+		mu 0 4 13 14 26 25
+		f 4 3 24 -14 -24
+		mu 0 4 14 15 27 26
+		f 4 4 26 -15 -26
+		mu 0 4 16 17 29 28
+		f 4 5 27 -16 -27
+		mu 0 4 17 18 30 29
+		f 4 6 28 -17 -28
+		mu 0 4 18 19 31 30
+		f 4 7 29 -18 -29
+		mu 0 4 19 20 32 31
+		f 4 8 30 -19 -30
+		mu 0 4 20 21 33 32
+		f 4 9 20 -20 -31
+		mu 0 4 21 22 34 33
+		f 3 -1 -32 32
+		mu 0 3 1 0 46
+		f 3 -2 -33 33
+		mu 0 3 2 1 46
+		f 3 -3 -34 34
+		mu 0 3 3 2 46
+		f 3 -4 -35 35
+		mu 0 3 4 3 46
+		f 3 -5 -37 37
+		mu 0 3 6 5 46
+		f 3 -6 -38 38
+		mu 0 3 7 6 46
+		f 3 -7 -39 39
+		mu 0 3 8 7 46
+		f 3 -8 -40 40
+		mu 0 3 9 8 46
+		f 3 -9 -41 41
+		mu 0 3 10 9 46
+		f 3 -10 -42 31
+		mu 0 3 0 10 46
+		f 3 10 43 -43
+		mu 0 3 44 43 47
+		f 3 11 44 -44
+		mu 0 3 43 42 47
+		f 3 12 45 -45
+		mu 0 3 42 41 47
+		f 3 13 46 -46
+		mu 0 3 41 40 47
+		f 6 -47 -25 -36 36 25 47
+		mu 0 6 47 27 4 46 16 39
+		f 3 14 48 -48
+		mu 0 3 39 38 47
+		f 3 15 49 -49
+		mu 0 3 38 37 47
+		f 3 16 50 -50
+		mu 0 3 37 36 47
+		f 3 17 51 -51
+		mu 0 3 36 35 47
+		f 3 18 52 -52
+		mu 0 3 35 45 47
+		f 3 19 42 -53
+		mu 0 3 45 44 47;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCylinder55";
+	rename -uid "1ADF58D4-4B55-8F7E-9D41-108F4F99B50A";
+	setAttr ".t" -type "double3" -0.64543923335662168 0.50773848154522061 1.5950364084909507 ;
+	setAttr ".r" -type "double3" 0 180 0 ;
+	setAttr ".s" -type "double3" 0.15762388884308454 0.46602045102352135 0.15762388884308454 ;
+createNode mesh -n "pCylinderShape55" -p "pCylinder55";
+	rename -uid "A7CA0E87-46E6-47B4-9A13-D4A4567D752C";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.44687490165233612 0.49999996274709702 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape28" -p "pCylinder55";
+	rename -uid "D463275A-43B6-23CD-A198-DE8F4F01E9CB";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 10 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[10:19]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottomRing";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "e[0:9]";
+	setAttr ".gtag[2].gtagnm" -type "string" "cylBottomCap";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 2 "vtx[0:10]" "vtx[22]";
+	setAttr ".gtag[3].gtagnm" -type "string" "cylBottomRing";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "vtx[0:10]";
+	setAttr ".gtag[4].gtagnm" -type "string" "cylSides";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "vtx[0:21]";
+	setAttr ".gtag[5].gtagnm" -type "string" "cylTopCap";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 2 "vtx[11:21]" "vtx[23]";
+	setAttr ".gtag[6].gtagnm" -type "string" "cylTopRing";
+	setAttr ".gtag[6].gtagcmp" -type "componentList" 1 "vtx[11:21]";
+	setAttr ".gtag[7].gtagnm" -type "string" "sides";
+	setAttr ".gtag[7].gtagcmp" -type "componentList" 1 "f[0:9]";
+	setAttr ".gtag[8].gtagnm" -type "string" "top";
+	setAttr ".gtag[8].gtagcmp" -type "componentList" 1 "f[20:30]";
+	setAttr ".gtag[9].gtagnm" -type "string" "topRing";
+	setAttr ".gtag[9].gtagcmp" -type "componentList" 1 "e[10:19]";
+	setAttr ".pv" -type "double2" 0.44687490165233612 0.49999996274709702 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 48 ".uvst[0].uvsp[0:47]" -type "float2" 0.64860266 0.10796607
+		 0.62640899 0.064408496 0.59184152 0.029841021 0.54828393 0.0076473355 0.5 -7.4505806e-08
+		 0.5 0.3125 0.54828387 0.3048526 0.59184146 0.28265893 0.62640893 0.24809146 0.6486026
+		 0.2045339 0.65625 0.15625 0.375 0.3125 0.38749999 0.3125 0.39999998 0.3125 0.41249996
+		 0.3125 0.42499995 0.3125 0.54999983 0.3125 0.56249982 0.3125 0.57499981 0.3125 0.5874998
+		 0.3125 0.59999979 0.3125 0.61249977 0.3125 0.62499976 0.3125 0.375 0.6875 0.38749999
+		 0.6875 0.39999998 0.6875 0.41249996 0.6875 0.42499995 0.6875 0.54999983 0.6875 0.56249982
+		 0.6875 0.57499981 0.6875 0.5874998 0.6875 0.59999979 0.6875 0.61249977 0.6875 0.62499976
+		 0.6875 0.64860266 0.79546607 0.62640899 0.75190848 0.59184152 0.71734101 0.54828393
+		 0.69514734 0.5 0.68749994 0.5 1 0.54828387 0.9923526 0.59184146 0.97015893 0.62640893
+		 0.93559146 0.6486026 0.89203393 0.65625 0.84375 0.5 0.15625 0.5 0.84375;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 24 ".vt[0:23]"  0.95105714 -1 -0.30901718 0.80901754 -1 -0.5877856
+		 0.5877856 -1 -0.80901748 0.30901715 -1 -0.95105702 0 -1 -1.000000476837 -2.9802322e-08 -1 1.000000119209
+		 0.30901697 -1 0.9510566 0.58778524 -1 0.80901706 0.809017 -1 0.5877853 0.95105654 -1 0.309017
+		 1 -1 0 0.95105714 1 -0.30901718 0.80901754 1 -0.5877856 0.5877856 1 -0.80901748 0.30901715 1 -0.95105702
+		 0 1 -1.000000476837 -2.9802322e-08 1 1.000000119209 0.30901697 1 0.9510566 0.58778524 1 0.80901706
+		 0.809017 1 0.5877853 0.95105654 1 0.309017 1 1 0 0 -1 0 0 1 0;
+	setAttr -s 53 ".ed[0:52]"  0 1 0 1 2 0 2 3 0 3 4 0 5 6 0 6 7 0 7 8 0
+		 8 9 0 9 10 0 10 0 0 11 12 0 12 13 0 13 14 0 14 15 0 16 17 0 17 18 0 18 19 0 19 20 0
+		 20 21 0 21 11 0 0 11 1 1 12 1 2 13 1 3 14 1 4 15 1 5 16 1 6 17 1 7 18 1 8 19 1 9 20 1
+		 10 21 1 22 0 1 22 1 1 22 2 1 22 3 1 22 4 1 22 5 1 22 6 1 22 7 1 22 8 1 22 9 1 22 10 1
+		 11 23 1 12 23 1 13 23 1 14 23 1 15 23 1 16 23 1 17 23 1 18 23 1 19 23 1 20 23 1 21 23 1;
+	setAttr -s 31 -ch 106 ".fc[0:30]" -type "polyFaces" 
+		f 4 0 21 -11 -21
+		mu 0 4 11 12 24 23
+		f 4 1 22 -12 -22
+		mu 0 4 12 13 25 24
+		f 4 2 23 -13 -23
+		mu 0 4 13 14 26 25
+		f 4 3 24 -14 -24
+		mu 0 4 14 15 27 26
+		f 4 4 26 -15 -26
+		mu 0 4 16 17 29 28
+		f 4 5 27 -16 -27
+		mu 0 4 17 18 30 29
+		f 4 6 28 -17 -28
+		mu 0 4 18 19 31 30
+		f 4 7 29 -18 -29
+		mu 0 4 19 20 32 31
+		f 4 8 30 -19 -30
+		mu 0 4 20 21 33 32
+		f 4 9 20 -20 -31
+		mu 0 4 21 22 34 33
+		f 3 -1 -32 32
+		mu 0 3 1 0 46
+		f 3 -2 -33 33
+		mu 0 3 2 1 46
+		f 3 -3 -34 34
+		mu 0 3 3 2 46
+		f 3 -4 -35 35
+		mu 0 3 4 3 46
+		f 3 -5 -37 37
+		mu 0 3 6 5 46
+		f 3 -6 -38 38
+		mu 0 3 7 6 46
+		f 3 -7 -39 39
+		mu 0 3 8 7 46
+		f 3 -8 -40 40
+		mu 0 3 9 8 46
+		f 3 -9 -41 41
+		mu 0 3 10 9 46
+		f 3 -10 -42 31
+		mu 0 3 0 10 46
+		f 3 10 43 -43
+		mu 0 3 44 43 47
+		f 3 11 44 -44
+		mu 0 3 43 42 47
+		f 3 12 45 -45
+		mu 0 3 42 41 47
+		f 3 13 46 -46
+		mu 0 3 41 40 47
+		f 6 -47 -25 -36 36 25 47
+		mu 0 6 47 27 4 46 16 39
+		f 3 14 48 -48
+		mu 0 3 39 38 47
+		f 3 15 49 -49
+		mu 0 3 38 37 47
+		f 3 16 50 -50
+		mu 0 3 37 36 47
+		f 3 17 51 -51
+		mu 0 3 36 35 47
+		f 3 18 52 -52
+		mu 0 3 35 45 47
+		f 3 19 42 -53
+		mu 0 3 45 44 47;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCylinder56";
+	rename -uid "9838F77C-449B-69FB-0E1D-27B6DBF1FBCC";
+	setAttr ".t" -type "double3" -0.64543923335662168 0.50773848154522061 0.17746065878625927 ;
+	setAttr ".r" -type "double3" 0 180 0 ;
+	setAttr ".s" -type "double3" 0.15762388884308454 0.46602045102352135 0.15762388884308454 ;
+createNode mesh -n "pCylinderShape56" -p "pCylinder56";
+	rename -uid "184B74BD-4D28-D284-AC5E-BF8ABDC42E4A";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.44687490165233612 0.49999996274709702 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape27" -p "pCylinder56";
+	rename -uid "90D1E5ED-4E8D-EA77-E906-19A570FDDD5A";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 10 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[10:19]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottomRing";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "e[0:9]";
+	setAttr ".gtag[2].gtagnm" -type "string" "cylBottomCap";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 2 "vtx[0:10]" "vtx[22]";
+	setAttr ".gtag[3].gtagnm" -type "string" "cylBottomRing";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "vtx[0:10]";
+	setAttr ".gtag[4].gtagnm" -type "string" "cylSides";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "vtx[0:21]";
+	setAttr ".gtag[5].gtagnm" -type "string" "cylTopCap";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 2 "vtx[11:21]" "vtx[23]";
+	setAttr ".gtag[6].gtagnm" -type "string" "cylTopRing";
+	setAttr ".gtag[6].gtagcmp" -type "componentList" 1 "vtx[11:21]";
+	setAttr ".gtag[7].gtagnm" -type "string" "sides";
+	setAttr ".gtag[7].gtagcmp" -type "componentList" 1 "f[0:9]";
+	setAttr ".gtag[8].gtagnm" -type "string" "top";
+	setAttr ".gtag[8].gtagcmp" -type "componentList" 1 "f[20:30]";
+	setAttr ".gtag[9].gtagnm" -type "string" "topRing";
+	setAttr ".gtag[9].gtagcmp" -type "componentList" 1 "e[10:19]";
+	setAttr ".pv" -type "double2" 0.44687490165233612 0.49999996274709702 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 48 ".uvst[0].uvsp[0:47]" -type "float2" 0.64860266 0.10796607
+		 0.62640899 0.064408496 0.59184152 0.029841021 0.54828393 0.0076473355 0.5 -7.4505806e-08
+		 0.5 0.3125 0.54828387 0.3048526 0.59184146 0.28265893 0.62640893 0.24809146 0.6486026
+		 0.2045339 0.65625 0.15625 0.375 0.3125 0.38749999 0.3125 0.39999998 0.3125 0.41249996
+		 0.3125 0.42499995 0.3125 0.54999983 0.3125 0.56249982 0.3125 0.57499981 0.3125 0.5874998
+		 0.3125 0.59999979 0.3125 0.61249977 0.3125 0.62499976 0.3125 0.375 0.6875 0.38749999
+		 0.6875 0.39999998 0.6875 0.41249996 0.6875 0.42499995 0.6875 0.54999983 0.6875 0.56249982
+		 0.6875 0.57499981 0.6875 0.5874998 0.6875 0.59999979 0.6875 0.61249977 0.6875 0.62499976
+		 0.6875 0.64860266 0.79546607 0.62640899 0.75190848 0.59184152 0.71734101 0.54828393
+		 0.69514734 0.5 0.68749994 0.5 1 0.54828387 0.9923526 0.59184146 0.97015893 0.62640893
+		 0.93559146 0.6486026 0.89203393 0.65625 0.84375 0.5 0.15625 0.5 0.84375;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 24 ".vt[0:23]"  0.95105714 -1 -0.30901718 0.80901754 -1 -0.5877856
+		 0.5877856 -1 -0.80901748 0.30901715 -1 -0.95105702 0 -1 -1.000000476837 -2.9802322e-08 -1 1.000000119209
+		 0.30901697 -1 0.9510566 0.58778524 -1 0.80901706 0.809017 -1 0.5877853 0.95105654 -1 0.309017
+		 1 -1 0 0.95105714 1 -0.30901718 0.80901754 1 -0.5877856 0.5877856 1 -0.80901748 0.30901715 1 -0.95105702
+		 0 1 -1.000000476837 -2.9802322e-08 1 1.000000119209 0.30901697 1 0.9510566 0.58778524 1 0.80901706
+		 0.809017 1 0.5877853 0.95105654 1 0.309017 1 1 0 0 -1 0 0 1 0;
+	setAttr -s 53 ".ed[0:52]"  0 1 0 1 2 0 2 3 0 3 4 0 5 6 0 6 7 0 7 8 0
+		 8 9 0 9 10 0 10 0 0 11 12 0 12 13 0 13 14 0 14 15 0 16 17 0 17 18 0 18 19 0 19 20 0
+		 20 21 0 21 11 0 0 11 1 1 12 1 2 13 1 3 14 1 4 15 1 5 16 1 6 17 1 7 18 1 8 19 1 9 20 1
+		 10 21 1 22 0 1 22 1 1 22 2 1 22 3 1 22 4 1 22 5 1 22 6 1 22 7 1 22 8 1 22 9 1 22 10 1
+		 11 23 1 12 23 1 13 23 1 14 23 1 15 23 1 16 23 1 17 23 1 18 23 1 19 23 1 20 23 1 21 23 1;
+	setAttr -s 31 -ch 106 ".fc[0:30]" -type "polyFaces" 
+		f 4 0 21 -11 -21
+		mu 0 4 11 12 24 23
+		f 4 1 22 -12 -22
+		mu 0 4 12 13 25 24
+		f 4 2 23 -13 -23
+		mu 0 4 13 14 26 25
+		f 4 3 24 -14 -24
+		mu 0 4 14 15 27 26
+		f 4 4 26 -15 -26
+		mu 0 4 16 17 29 28
+		f 4 5 27 -16 -27
+		mu 0 4 17 18 30 29
+		f 4 6 28 -17 -28
+		mu 0 4 18 19 31 30
+		f 4 7 29 -18 -29
+		mu 0 4 19 20 32 31
+		f 4 8 30 -19 -30
+		mu 0 4 20 21 33 32
+		f 4 9 20 -20 -31
+		mu 0 4 21 22 34 33
+		f 3 -1 -32 32
+		mu 0 3 1 0 46
+		f 3 -2 -33 33
+		mu 0 3 2 1 46
+		f 3 -3 -34 34
+		mu 0 3 3 2 46
+		f 3 -4 -35 35
+		mu 0 3 4 3 46
+		f 3 -5 -37 37
+		mu 0 3 6 5 46
+		f 3 -6 -38 38
+		mu 0 3 7 6 46
+		f 3 -7 -39 39
+		mu 0 3 8 7 46
+		f 3 -8 -40 40
+		mu 0 3 9 8 46
+		f 3 -9 -41 41
+		mu 0 3 10 9 46
+		f 3 -10 -42 31
+		mu 0 3 0 10 46
+		f 3 10 43 -43
+		mu 0 3 44 43 47
+		f 3 11 44 -44
+		mu 0 3 43 42 47
+		f 3 12 45 -45
+		mu 0 3 42 41 47
+		f 3 13 46 -46
+		mu 0 3 41 40 47
+		f 6 -47 -25 -36 36 25 47
+		mu 0 6 47 27 4 46 16 39
+		f 3 14 48 -48
+		mu 0 3 39 38 47
+		f 3 15 49 -49
+		mu 0 3 38 37 47
+		f 3 16 50 -50
+		mu 0 3 37 36 47
+		f 3 17 51 -51
+		mu 0 3 36 35 47
+		f 3 18 52 -52
+		mu 0 3 35 45 47
+		f 3 19 42 -53
+		mu 0 3 45 44 47;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCylinder57";
+	rename -uid "428FBEB8-43CC-4E36-92B8-9BBA1722A9A2";
+	setAttr ".t" -type "double3" 0.6541181879107143 0.28213889058211417 0.15852019117652166 ;
+	setAttr ".s" -type "double3" 0.2060876420425663 0.26802789940255617 0.2060876420425663 ;
+createNode mesh -n "pCylinderShape57" -p "pCylinder57";
+	rename -uid "6A9CD5DA-44B2-E53B-5805-30B055A08274";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.44687490165233612 0.49999996274709702 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape23" -p "pCylinder57";
+	rename -uid "57B01025-4203-E809-373C-FFBFA20DB4AB";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 10 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[10:19]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottomRing";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "e[0:9]";
+	setAttr ".gtag[2].gtagnm" -type "string" "cylBottomCap";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 2 "vtx[0:10]" "vtx[22]";
+	setAttr ".gtag[3].gtagnm" -type "string" "cylBottomRing";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "vtx[0:10]";
+	setAttr ".gtag[4].gtagnm" -type "string" "cylSides";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "vtx[0:21]";
+	setAttr ".gtag[5].gtagnm" -type "string" "cylTopCap";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 2 "vtx[11:21]" "vtx[23]";
+	setAttr ".gtag[6].gtagnm" -type "string" "cylTopRing";
+	setAttr ".gtag[6].gtagcmp" -type "componentList" 1 "vtx[11:21]";
+	setAttr ".gtag[7].gtagnm" -type "string" "sides";
+	setAttr ".gtag[7].gtagcmp" -type "componentList" 1 "f[0:9]";
+	setAttr ".gtag[8].gtagnm" -type "string" "top";
+	setAttr ".gtag[8].gtagcmp" -type "componentList" 1 "f[20:30]";
+	setAttr ".gtag[9].gtagnm" -type "string" "topRing";
+	setAttr ".gtag[9].gtagcmp" -type "componentList" 1 "e[10:19]";
+	setAttr ".pv" -type "double2" 0.44687490165233612 0.49999996274709702 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 48 ".uvst[0].uvsp[0:47]" -type "float2" 0.64860266 0.10796607
+		 0.62640899 0.064408496 0.59184152 0.029841021 0.54828393 0.0076473355 0.5 -7.4505806e-08
+		 0.5 0.3125 0.54828387 0.3048526 0.59184146 0.28265893 0.62640893 0.24809146 0.6486026
+		 0.2045339 0.65625 0.15625 0.375 0.3125 0.38749999 0.3125 0.39999998 0.3125 0.41249996
+		 0.3125 0.42499995 0.3125 0.54999983 0.3125 0.56249982 0.3125 0.57499981 0.3125 0.5874998
+		 0.3125 0.59999979 0.3125 0.61249977 0.3125 0.62499976 0.3125 0.375 0.6875 0.38749999
+		 0.6875 0.39999998 0.6875 0.41249996 0.6875 0.42499995 0.6875 0.54999983 0.6875 0.56249982
+		 0.6875 0.57499981 0.6875 0.5874998 0.6875 0.59999979 0.6875 0.61249977 0.6875 0.62499976
+		 0.6875 0.64860266 0.79546607 0.62640899 0.75190848 0.59184152 0.71734101 0.54828393
+		 0.69514734 0.5 0.68749994 0.5 1 0.54828387 0.9923526 0.59184146 0.97015893 0.62640893
+		 0.93559146 0.6486026 0.89203393 0.65625 0.84375 0.5 0.15625 0.5 0.84375;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 24 ".vt[0:23]"  0.95105714 -1 -0.30901718 0.80901754 -1 -0.5877856
+		 0.5877856 -1 -0.80901748 0.30901715 -1 -0.95105702 0 -1 -1.000000476837 -2.9802322e-08 -1 1.000000119209
+		 0.30901697 -1 0.9510566 0.58778524 -1 0.80901706 0.809017 -1 0.5877853 0.95105654 -1 0.309017
+		 1 -1 0 0.95105714 1 -0.30901718 0.80901754 1 -0.5877856 0.5877856 1 -0.80901748 0.30901715 1 -0.95105702
+		 0 1 -1.000000476837 -2.9802322e-08 1 1.000000119209 0.30901697 1 0.9510566 0.58778524 1 0.80901706
+		 0.809017 1 0.5877853 0.95105654 1 0.309017 1 1 0 0 -1 0 0 1 0;
+	setAttr -s 53 ".ed[0:52]"  0 1 0 1 2 0 2 3 0 3 4 0 5 6 0 6 7 0 7 8 0
+		 8 9 0 9 10 0 10 0 0 11 12 0 12 13 0 13 14 0 14 15 0 16 17 0 17 18 0 18 19 0 19 20 0
+		 20 21 0 21 11 0 0 11 1 1 12 1 2 13 1 3 14 1 4 15 1 5 16 1 6 17 1 7 18 1 8 19 1 9 20 1
+		 10 21 1 22 0 1 22 1 1 22 2 1 22 3 1 22 4 1 22 5 1 22 6 1 22 7 1 22 8 1 22 9 1 22 10 1
+		 11 23 1 12 23 1 13 23 1 14 23 1 15 23 1 16 23 1 17 23 1 18 23 1 19 23 1 20 23 1 21 23 1;
+	setAttr -s 31 -ch 106 ".fc[0:30]" -type "polyFaces" 
+		f 4 0 21 -11 -21
+		mu 0 4 11 12 24 23
+		f 4 1 22 -12 -22
+		mu 0 4 12 13 25 24
+		f 4 2 23 -13 -23
+		mu 0 4 13 14 26 25
+		f 4 3 24 -14 -24
+		mu 0 4 14 15 27 26
+		f 4 4 26 -15 -26
+		mu 0 4 16 17 29 28
+		f 4 5 27 -16 -27
+		mu 0 4 17 18 30 29
+		f 4 6 28 -17 -28
+		mu 0 4 18 19 31 30
+		f 4 7 29 -18 -29
+		mu 0 4 19 20 32 31
+		f 4 8 30 -19 -30
+		mu 0 4 20 21 33 32
+		f 4 9 20 -20 -31
+		mu 0 4 21 22 34 33
+		f 3 -1 -32 32
+		mu 0 3 1 0 46
+		f 3 -2 -33 33
+		mu 0 3 2 1 46
+		f 3 -3 -34 34
+		mu 0 3 3 2 46
+		f 3 -4 -35 35
+		mu 0 3 4 3 46
+		f 3 -5 -37 37
+		mu 0 3 6 5 46
+		f 3 -6 -38 38
+		mu 0 3 7 6 46
+		f 3 -7 -39 39
+		mu 0 3 8 7 46
+		f 3 -8 -40 40
+		mu 0 3 9 8 46
+		f 3 -9 -41 41
+		mu 0 3 10 9 46
+		f 3 -10 -42 31
+		mu 0 3 0 10 46
+		f 3 10 43 -43
+		mu 0 3 44 43 47
+		f 3 11 44 -44
+		mu 0 3 43 42 47
+		f 3 12 45 -45
+		mu 0 3 42 41 47
+		f 3 13 46 -46
+		mu 0 3 41 40 47
+		f 6 -47 -25 -36 36 25 47
+		mu 0 6 47 27 4 46 16 39
+		f 3 14 48 -48
+		mu 0 3 39 38 47
+		f 3 15 49 -49
+		mu 0 3 38 37 47
+		f 3 16 50 -50
+		mu 0 3 37 36 47
+		f 3 17 51 -51
+		mu 0 3 36 35 47
+		f 3 18 52 -52
+		mu 0 3 35 45 47
+		f 3 19 42 -53
+		mu 0 3 45 44 47;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCylinder58";
+	rename -uid "A5CB225A-4D43-1010-56BE-B0992207BE43";
+	setAttr ".t" -type "double3" 0.6541181879107143 0.28213889058211417 1.6153702110237558 ;
+	setAttr ".s" -type "double3" 0.2060876420425663 0.26802789940255617 0.2060876420425663 ;
+createNode mesh -n "pCylinderShape58" -p "pCylinder58";
+	rename -uid "C0FBFF13-4050-563F-9ECE-61A343E30BD8";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.44687490165233612 0.49999996274709702 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape24" -p "pCylinder58";
+	rename -uid "20688464-4DD1-8349-BB11-24A19B0F48AD";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 10 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[10:19]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottomRing";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "e[0:9]";
+	setAttr ".gtag[2].gtagnm" -type "string" "cylBottomCap";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 2 "vtx[0:10]" "vtx[22]";
+	setAttr ".gtag[3].gtagnm" -type "string" "cylBottomRing";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "vtx[0:10]";
+	setAttr ".gtag[4].gtagnm" -type "string" "cylSides";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "vtx[0:21]";
+	setAttr ".gtag[5].gtagnm" -type "string" "cylTopCap";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 2 "vtx[11:21]" "vtx[23]";
+	setAttr ".gtag[6].gtagnm" -type "string" "cylTopRing";
+	setAttr ".gtag[6].gtagcmp" -type "componentList" 1 "vtx[11:21]";
+	setAttr ".gtag[7].gtagnm" -type "string" "sides";
+	setAttr ".gtag[7].gtagcmp" -type "componentList" 1 "f[0:9]";
+	setAttr ".gtag[8].gtagnm" -type "string" "top";
+	setAttr ".gtag[8].gtagcmp" -type "componentList" 1 "f[20:30]";
+	setAttr ".gtag[9].gtagnm" -type "string" "topRing";
+	setAttr ".gtag[9].gtagcmp" -type "componentList" 1 "e[10:19]";
+	setAttr ".pv" -type "double2" 0.44687490165233612 0.49999996274709702 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 48 ".uvst[0].uvsp[0:47]" -type "float2" 0.64860266 0.10796607
+		 0.62640899 0.064408496 0.59184152 0.029841021 0.54828393 0.0076473355 0.5 -7.4505806e-08
+		 0.5 0.3125 0.54828387 0.3048526 0.59184146 0.28265893 0.62640893 0.24809146 0.6486026
+		 0.2045339 0.65625 0.15625 0.375 0.3125 0.38749999 0.3125 0.39999998 0.3125 0.41249996
+		 0.3125 0.42499995 0.3125 0.54999983 0.3125 0.56249982 0.3125 0.57499981 0.3125 0.5874998
+		 0.3125 0.59999979 0.3125 0.61249977 0.3125 0.62499976 0.3125 0.375 0.6875 0.38749999
+		 0.6875 0.39999998 0.6875 0.41249996 0.6875 0.42499995 0.6875 0.54999983 0.6875 0.56249982
+		 0.6875 0.57499981 0.6875 0.5874998 0.6875 0.59999979 0.6875 0.61249977 0.6875 0.62499976
+		 0.6875 0.64860266 0.79546607 0.62640899 0.75190848 0.59184152 0.71734101 0.54828393
+		 0.69514734 0.5 0.68749994 0.5 1 0.54828387 0.9923526 0.59184146 0.97015893 0.62640893
+		 0.93559146 0.6486026 0.89203393 0.65625 0.84375 0.5 0.15625 0.5 0.84375;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 24 ".vt[0:23]"  0.95105714 -1 -0.30901718 0.80901754 -1 -0.5877856
+		 0.5877856 -1 -0.80901748 0.30901715 -1 -0.95105702 0 -1 -1.000000476837 -2.9802322e-08 -1 1.000000119209
+		 0.30901697 -1 0.9510566 0.58778524 -1 0.80901706 0.809017 -1 0.5877853 0.95105654 -1 0.309017
+		 1 -1 0 0.95105714 1 -0.30901718 0.80901754 1 -0.5877856 0.5877856 1 -0.80901748 0.30901715 1 -0.95105702
+		 0 1 -1.000000476837 -2.9802322e-08 1 1.000000119209 0.30901697 1 0.9510566 0.58778524 1 0.80901706
+		 0.809017 1 0.5877853 0.95105654 1 0.309017 1 1 0 0 -1 0 0 1 0;
+	setAttr -s 53 ".ed[0:52]"  0 1 0 1 2 0 2 3 0 3 4 0 5 6 0 6 7 0 7 8 0
+		 8 9 0 9 10 0 10 0 0 11 12 0 12 13 0 13 14 0 14 15 0 16 17 0 17 18 0 18 19 0 19 20 0
+		 20 21 0 21 11 0 0 11 1 1 12 1 2 13 1 3 14 1 4 15 1 5 16 1 6 17 1 7 18 1 8 19 1 9 20 1
+		 10 21 1 22 0 1 22 1 1 22 2 1 22 3 1 22 4 1 22 5 1 22 6 1 22 7 1 22 8 1 22 9 1 22 10 1
+		 11 23 1 12 23 1 13 23 1 14 23 1 15 23 1 16 23 1 17 23 1 18 23 1 19 23 1 20 23 1 21 23 1;
+	setAttr -s 31 -ch 106 ".fc[0:30]" -type "polyFaces" 
+		f 4 0 21 -11 -21
+		mu 0 4 11 12 24 23
+		f 4 1 22 -12 -22
+		mu 0 4 12 13 25 24
+		f 4 2 23 -13 -23
+		mu 0 4 13 14 26 25
+		f 4 3 24 -14 -24
+		mu 0 4 14 15 27 26
+		f 4 4 26 -15 -26
+		mu 0 4 16 17 29 28
+		f 4 5 27 -16 -27
+		mu 0 4 17 18 30 29
+		f 4 6 28 -17 -28
+		mu 0 4 18 19 31 30
+		f 4 7 29 -18 -29
+		mu 0 4 19 20 32 31
+		f 4 8 30 -19 -30
+		mu 0 4 20 21 33 32
+		f 4 9 20 -20 -31
+		mu 0 4 21 22 34 33
+		f 3 -1 -32 32
+		mu 0 3 1 0 46
+		f 3 -2 -33 33
+		mu 0 3 2 1 46
+		f 3 -3 -34 34
+		mu 0 3 3 2 46
+		f 3 -4 -35 35
+		mu 0 3 4 3 46
+		f 3 -5 -37 37
+		mu 0 3 6 5 46
+		f 3 -6 -38 38
+		mu 0 3 7 6 46
+		f 3 -7 -39 39
+		mu 0 3 8 7 46
+		f 3 -8 -40 40
+		mu 0 3 9 8 46
+		f 3 -9 -41 41
+		mu 0 3 10 9 46
+		f 3 -10 -42 31
+		mu 0 3 0 10 46
+		f 3 10 43 -43
+		mu 0 3 44 43 47
+		f 3 11 44 -44
+		mu 0 3 43 42 47
+		f 3 12 45 -45
+		mu 0 3 42 41 47
+		f 3 13 46 -46
+		mu 0 3 41 40 47
+		f 6 -47 -25 -36 36 25 47
+		mu 0 6 47 27 4 46 16 39
+		f 3 14 48 -48
+		mu 0 3 39 38 47
+		f 3 15 49 -49
+		mu 0 3 38 37 47
+		f 3 16 50 -50
+		mu 0 3 37 36 47
+		f 3 17 51 -51
+		mu 0 3 36 35 47
+		f 3 18 52 -52
+		mu 0 3 35 45 47
+		f 3 19 42 -53
+		mu 0 3 45 44 47;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCylinder59";
+	rename -uid "458F9C7C-46C8-BA2A-2644-AE93DC4C2416";
+	setAttr ".t" -type "double3" -0.65549512379921127 0.28213889058211417 1.59621300852022 ;
+	setAttr ".r" -type "double3" 0 0 180 ;
+	setAttr ".s" -type "double3" 0.2060876420425663 0.26802789940255617 0.2060876420425663 ;
+createNode mesh -n "pCylinderShape59" -p "pCylinder59";
+	rename -uid "D76E5679-48E1-AAB3-BFF0-DCA05B9E3A9F";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.44687490165233612 0.49999996274709702 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape26" -p "pCylinder59";
+	rename -uid "38CA0714-48CB-618D-E37A-B68D61697266";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 10 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[10:19]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottomRing";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "e[0:9]";
+	setAttr ".gtag[2].gtagnm" -type "string" "cylBottomCap";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 2 "vtx[0:10]" "vtx[22]";
+	setAttr ".gtag[3].gtagnm" -type "string" "cylBottomRing";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "vtx[0:10]";
+	setAttr ".gtag[4].gtagnm" -type "string" "cylSides";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "vtx[0:21]";
+	setAttr ".gtag[5].gtagnm" -type "string" "cylTopCap";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 2 "vtx[11:21]" "vtx[23]";
+	setAttr ".gtag[6].gtagnm" -type "string" "cylTopRing";
+	setAttr ".gtag[6].gtagcmp" -type "componentList" 1 "vtx[11:21]";
+	setAttr ".gtag[7].gtagnm" -type "string" "sides";
+	setAttr ".gtag[7].gtagcmp" -type "componentList" 1 "f[0:9]";
+	setAttr ".gtag[8].gtagnm" -type "string" "top";
+	setAttr ".gtag[8].gtagcmp" -type "componentList" 1 "f[20:30]";
+	setAttr ".gtag[9].gtagnm" -type "string" "topRing";
+	setAttr ".gtag[9].gtagcmp" -type "componentList" 1 "e[10:19]";
+	setAttr ".pv" -type "double2" 0.44687490165233612 0.49999996274709702 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 48 ".uvst[0].uvsp[0:47]" -type "float2" 0.64860266 0.10796607
+		 0.62640899 0.064408496 0.59184152 0.029841021 0.54828393 0.0076473355 0.5 -7.4505806e-08
+		 0.5 0.3125 0.54828387 0.3048526 0.59184146 0.28265893 0.62640893 0.24809146 0.6486026
+		 0.2045339 0.65625 0.15625 0.375 0.3125 0.38749999 0.3125 0.39999998 0.3125 0.41249996
+		 0.3125 0.42499995 0.3125 0.54999983 0.3125 0.56249982 0.3125 0.57499981 0.3125 0.5874998
+		 0.3125 0.59999979 0.3125 0.61249977 0.3125 0.62499976 0.3125 0.375 0.6875 0.38749999
+		 0.6875 0.39999998 0.6875 0.41249996 0.6875 0.42499995 0.6875 0.54999983 0.6875 0.56249982
+		 0.6875 0.57499981 0.6875 0.5874998 0.6875 0.59999979 0.6875 0.61249977 0.6875 0.62499976
+		 0.6875 0.64860266 0.79546607 0.62640899 0.75190848 0.59184152 0.71734101 0.54828393
+		 0.69514734 0.5 0.68749994 0.5 1 0.54828387 0.9923526 0.59184146 0.97015893 0.62640893
+		 0.93559146 0.6486026 0.89203393 0.65625 0.84375 0.5 0.15625 0.5 0.84375;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 24 ".vt[0:23]"  0.95105714 -1 -0.30901718 0.80901754 -1 -0.5877856
+		 0.5877856 -1 -0.80901748 0.30901715 -1 -0.95105702 0 -1 -1.000000476837 -2.9802322e-08 -1 1.000000119209
+		 0.30901697 -1 0.9510566 0.58778524 -1 0.80901706 0.809017 -1 0.5877853 0.95105654 -1 0.309017
+		 1 -1 0 0.95105714 1 -0.30901718 0.80901754 1 -0.5877856 0.5877856 1 -0.80901748 0.30901715 1 -0.95105702
+		 0 1 -1.000000476837 -2.9802322e-08 1 1.000000119209 0.30901697 1 0.9510566 0.58778524 1 0.80901706
+		 0.809017 1 0.5877853 0.95105654 1 0.309017 1 1 0 0 -1 0 0 1 0;
+	setAttr -s 53 ".ed[0:52]"  0 1 0 1 2 0 2 3 0 3 4 0 5 6 0 6 7 0 7 8 0
+		 8 9 0 9 10 0 10 0 0 11 12 0 12 13 0 13 14 0 14 15 0 16 17 0 17 18 0 18 19 0 19 20 0
+		 20 21 0 21 11 0 0 11 1 1 12 1 2 13 1 3 14 1 4 15 1 5 16 1 6 17 1 7 18 1 8 19 1 9 20 1
+		 10 21 1 22 0 1 22 1 1 22 2 1 22 3 1 22 4 1 22 5 1 22 6 1 22 7 1 22 8 1 22 9 1 22 10 1
+		 11 23 1 12 23 1 13 23 1 14 23 1 15 23 1 16 23 1 17 23 1 18 23 1 19 23 1 20 23 1 21 23 1;
+	setAttr -s 31 -ch 106 ".fc[0:30]" -type "polyFaces" 
+		f 4 0 21 -11 -21
+		mu 0 4 11 12 24 23
+		f 4 1 22 -12 -22
+		mu 0 4 12 13 25 24
+		f 4 2 23 -13 -23
+		mu 0 4 13 14 26 25
+		f 4 3 24 -14 -24
+		mu 0 4 14 15 27 26
+		f 4 4 26 -15 -26
+		mu 0 4 16 17 29 28
+		f 4 5 27 -16 -27
+		mu 0 4 17 18 30 29
+		f 4 6 28 -17 -28
+		mu 0 4 18 19 31 30
+		f 4 7 29 -18 -29
+		mu 0 4 19 20 32 31
+		f 4 8 30 -19 -30
+		mu 0 4 20 21 33 32
+		f 4 9 20 -20 -31
+		mu 0 4 21 22 34 33
+		f 3 -1 -32 32
+		mu 0 3 1 0 46
+		f 3 -2 -33 33
+		mu 0 3 2 1 46
+		f 3 -3 -34 34
+		mu 0 3 3 2 46
+		f 3 -4 -35 35
+		mu 0 3 4 3 46
+		f 3 -5 -37 37
+		mu 0 3 6 5 46
+		f 3 -6 -38 38
+		mu 0 3 7 6 46
+		f 3 -7 -39 39
+		mu 0 3 8 7 46
+		f 3 -8 -40 40
+		mu 0 3 9 8 46
+		f 3 -9 -41 41
+		mu 0 3 10 9 46
+		f 3 -10 -42 31
+		mu 0 3 0 10 46
+		f 3 10 43 -43
+		mu 0 3 44 43 47
+		f 3 11 44 -44
+		mu 0 3 43 42 47
+		f 3 12 45 -45
+		mu 0 3 42 41 47
+		f 3 13 46 -46
+		mu 0 3 41 40 47
+		f 6 -47 -25 -36 36 25 47
+		mu 0 6 47 27 4 46 16 39
+		f 3 14 48 -48
+		mu 0 3 39 38 47
+		f 3 15 49 -49
+		mu 0 3 38 37 47
+		f 3 16 50 -50
+		mu 0 3 37 36 47
+		f 3 17 51 -51
+		mu 0 3 36 35 47
+		f 3 18 52 -52
+		mu 0 3 35 45 47
+		f 3 19 42 -53
+		mu 0 3 45 44 47;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCylinder60";
+	rename -uid "60F3FBE3-49E5-3D5C-650C-FE99693E1CD9";
+	setAttr ".t" -type "double3" -0.65549512379921127 0.28213889058211417 0.17373076546590938 ;
+	setAttr ".r" -type "double3" 0 0 180 ;
+	setAttr ".s" -type "double3" 0.2060876420425663 0.26802789940255617 0.2060876420425663 ;
+createNode mesh -n "pCylinderShape60" -p "pCylinder60";
+	rename -uid "4D760885-45A1-6417-8D39-3483194423EB";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.44687490165233612 0.49999996274709702 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape25" -p "pCylinder60";
+	rename -uid "036524F6-47CA-160B-8CB0-F3869858C601";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 10 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[10:19]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottomRing";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "e[0:9]";
+	setAttr ".gtag[2].gtagnm" -type "string" "cylBottomCap";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 2 "vtx[0:10]" "vtx[22]";
+	setAttr ".gtag[3].gtagnm" -type "string" "cylBottomRing";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "vtx[0:10]";
+	setAttr ".gtag[4].gtagnm" -type "string" "cylSides";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "vtx[0:21]";
+	setAttr ".gtag[5].gtagnm" -type "string" "cylTopCap";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 2 "vtx[11:21]" "vtx[23]";
+	setAttr ".gtag[6].gtagnm" -type "string" "cylTopRing";
+	setAttr ".gtag[6].gtagcmp" -type "componentList" 1 "vtx[11:21]";
+	setAttr ".gtag[7].gtagnm" -type "string" "sides";
+	setAttr ".gtag[7].gtagcmp" -type "componentList" 1 "f[0:9]";
+	setAttr ".gtag[8].gtagnm" -type "string" "top";
+	setAttr ".gtag[8].gtagcmp" -type "componentList" 1 "f[20:30]";
+	setAttr ".gtag[9].gtagnm" -type "string" "topRing";
+	setAttr ".gtag[9].gtagcmp" -type "componentList" 1 "e[10:19]";
+	setAttr ".pv" -type "double2" 0.44687490165233612 0.49999996274709702 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 48 ".uvst[0].uvsp[0:47]" -type "float2" 0.64860266 0.10796607
+		 0.62640899 0.064408496 0.59184152 0.029841021 0.54828393 0.0076473355 0.5 -7.4505806e-08
+		 0.5 0.3125 0.54828387 0.3048526 0.59184146 0.28265893 0.62640893 0.24809146 0.6486026
+		 0.2045339 0.65625 0.15625 0.375 0.3125 0.38749999 0.3125 0.39999998 0.3125 0.41249996
+		 0.3125 0.42499995 0.3125 0.54999983 0.3125 0.56249982 0.3125 0.57499981 0.3125 0.5874998
+		 0.3125 0.59999979 0.3125 0.61249977 0.3125 0.62499976 0.3125 0.375 0.6875 0.38749999
+		 0.6875 0.39999998 0.6875 0.41249996 0.6875 0.42499995 0.6875 0.54999983 0.6875 0.56249982
+		 0.6875 0.57499981 0.6875 0.5874998 0.6875 0.59999979 0.6875 0.61249977 0.6875 0.62499976
+		 0.6875 0.64860266 0.79546607 0.62640899 0.75190848 0.59184152 0.71734101 0.54828393
+		 0.69514734 0.5 0.68749994 0.5 1 0.54828387 0.9923526 0.59184146 0.97015893 0.62640893
+		 0.93559146 0.6486026 0.89203393 0.65625 0.84375 0.5 0.15625 0.5 0.84375;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 24 ".vt[0:23]"  0.95105714 -1 -0.30901718 0.80901754 -1 -0.5877856
+		 0.5877856 -1 -0.80901748 0.30901715 -1 -0.95105702 0 -1 -1.000000476837 -2.9802322e-08 -1 1.000000119209
+		 0.30901697 -1 0.9510566 0.58778524 -1 0.80901706 0.809017 -1 0.5877853 0.95105654 -1 0.309017
+		 1 -1 0 0.95105714 1 -0.30901718 0.80901754 1 -0.5877856 0.5877856 1 -0.80901748 0.30901715 1 -0.95105702
+		 0 1 -1.000000476837 -2.9802322e-08 1 1.000000119209 0.30901697 1 0.9510566 0.58778524 1 0.80901706
+		 0.809017 1 0.5877853 0.95105654 1 0.309017 1 1 0 0 -1 0 0 1 0;
+	setAttr -s 53 ".ed[0:52]"  0 1 0 1 2 0 2 3 0 3 4 0 5 6 0 6 7 0 7 8 0
+		 8 9 0 9 10 0 10 0 0 11 12 0 12 13 0 13 14 0 14 15 0 16 17 0 17 18 0 18 19 0 19 20 0
+		 20 21 0 21 11 0 0 11 1 1 12 1 2 13 1 3 14 1 4 15 1 5 16 1 6 17 1 7 18 1 8 19 1 9 20 1
+		 10 21 1 22 0 1 22 1 1 22 2 1 22 3 1 22 4 1 22 5 1 22 6 1 22 7 1 22 8 1 22 9 1 22 10 1
+		 11 23 1 12 23 1 13 23 1 14 23 1 15 23 1 16 23 1 17 23 1 18 23 1 19 23 1 20 23 1 21 23 1;
+	setAttr -s 31 -ch 106 ".fc[0:30]" -type "polyFaces" 
+		f 4 0 21 -11 -21
+		mu 0 4 11 12 24 23
+		f 4 1 22 -12 -22
+		mu 0 4 12 13 25 24
+		f 4 2 23 -13 -23
+		mu 0 4 13 14 26 25
+		f 4 3 24 -14 -24
+		mu 0 4 14 15 27 26
+		f 4 4 26 -15 -26
+		mu 0 4 16 17 29 28
+		f 4 5 27 -16 -27
+		mu 0 4 17 18 30 29
+		f 4 6 28 -17 -28
+		mu 0 4 18 19 31 30
+		f 4 7 29 -18 -29
+		mu 0 4 19 20 32 31
+		f 4 8 30 -19 -30
+		mu 0 4 20 21 33 32
+		f 4 9 20 -20 -31
+		mu 0 4 21 22 34 33
+		f 3 -1 -32 32
+		mu 0 3 1 0 46
+		f 3 -2 -33 33
+		mu 0 3 2 1 46
+		f 3 -3 -34 34
+		mu 0 3 3 2 46
+		f 3 -4 -35 35
+		mu 0 3 4 3 46
+		f 3 -5 -37 37
+		mu 0 3 6 5 46
+		f 3 -6 -38 38
+		mu 0 3 7 6 46
+		f 3 -7 -39 39
+		mu 0 3 8 7 46
+		f 3 -8 -40 40
+		mu 0 3 9 8 46
+		f 3 -9 -41 41
+		mu 0 3 10 9 46
+		f 3 -10 -42 31
+		mu 0 3 0 10 46
+		f 3 10 43 -43
+		mu 0 3 44 43 47
+		f 3 11 44 -44
+		mu 0 3 43 42 47
+		f 3 12 45 -45
+		mu 0 3 42 41 47
+		f 3 13 46 -46
+		mu 0 3 41 40 47
+		f 6 -47 -25 -36 36 25 47
+		mu 0 6 47 27 4 46 16 39
+		f 3 14 48 -48
+		mu 0 3 39 38 47
+		f 3 15 49 -49
+		mu 0 3 38 37 47
+		f 3 16 50 -50
+		mu 0 3 37 36 47
+		f 3 17 51 -51
+		mu 0 3 36 35 47
+		f 3 18 52 -52
+		mu 0 3 35 45 47
+		f 3 19 42 -53
+		mu 0 3 45 44 47;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube174";
+	rename -uid "B8A1D2F0-4A1C-0A81-67EF-08B9C5282057";
+	setAttr ".t" -type "double3" 0.84148074727049793 0.30923741284350709 0.89447754877924823 ;
+	setAttr ".s" -type "double3" 0.04681424646304564 0.31243140230083144 0.66949576548263812 ;
+createNode mesh -n "pCubeShape174" -p "pCube174";
+	rename -uid "9A63865A-4883-82D7-BC95-20A8F2D9E294";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.625 0.125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape20" -p "pCube174";
+	rename -uid "40E95DF3-4DE4-8550-9625-CCB5890D0DF4";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".pv" -type "double2" 0.625 0.125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube175";
+	rename -uid "49126233-4791-5765-7F72-FCAD2CB3A564";
+	setAttr ".t" -type "double3" -0.84419506290090385 0.30923741284350709 0.89447754877924801 ;
+	setAttr ".s" -type "double3" 0.04681424646304564 0.31243140230083144 0.66949576548263812 ;
+createNode mesh -n "pCubeShape175" -p "pCube175";
+	rename -uid "F59D084C-4B07-D2E8-BBEB-71ADCB61A1DB";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.625 0.125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape21" -p "pCube175";
+	rename -uid "A85B92A3-4BFD-E33B-A9AB-F589E5F27526";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".pv" -type "double2" 0.625 0.125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCylinder61";
+	rename -uid "D2F5ACF6-4E09-7DA3-E494-7DB43FA23770";
+	setAttr ".t" -type "double3" 0.0033898591766653025 0.69254969186456816 3.0294693929320355 ;
+	setAttr ".r" -type "double3" 90 -90 180 ;
+	setAttr ".s" -type "double3" 0.2060876420425663 0.68474608235232559 0.2060876420425663 ;
+createNode mesh -n "pCylinderShape61" -p "pCylinder61";
+	rename -uid "6F071014-48C0-C053-12C4-1687D0335F02";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.44687490165233612 0.49999996274709702 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape29" -p "pCylinder61";
+	rename -uid "A0F05787-4074-0A86-F754-B38D25A399C8";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 10 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[10:19]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottomRing";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "e[0:9]";
+	setAttr ".gtag[2].gtagnm" -type "string" "cylBottomCap";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 2 "vtx[0:10]" "vtx[22]";
+	setAttr ".gtag[3].gtagnm" -type "string" "cylBottomRing";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "vtx[0:10]";
+	setAttr ".gtag[4].gtagnm" -type "string" "cylSides";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "vtx[0:21]";
+	setAttr ".gtag[5].gtagnm" -type "string" "cylTopCap";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 2 "vtx[11:21]" "vtx[23]";
+	setAttr ".gtag[6].gtagnm" -type "string" "cylTopRing";
+	setAttr ".gtag[6].gtagcmp" -type "componentList" 1 "vtx[11:21]";
+	setAttr ".gtag[7].gtagnm" -type "string" "sides";
+	setAttr ".gtag[7].gtagcmp" -type "componentList" 1 "f[0:9]";
+	setAttr ".gtag[8].gtagnm" -type "string" "top";
+	setAttr ".gtag[8].gtagcmp" -type "componentList" 1 "f[20:30]";
+	setAttr ".gtag[9].gtagnm" -type "string" "topRing";
+	setAttr ".gtag[9].gtagcmp" -type "componentList" 1 "e[10:19]";
+	setAttr ".pv" -type "double2" 0.44687490165233612 0.49999996274709702 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 48 ".uvst[0].uvsp[0:47]" -type "float2" 0.64860266 0.10796607
+		 0.62640899 0.064408496 0.59184152 0.029841021 0.54828393 0.0076473355 0.5 -7.4505806e-08
+		 0.5 0.3125 0.54828387 0.3048526 0.59184146 0.28265893 0.62640893 0.24809146 0.6486026
+		 0.2045339 0.65625 0.15625 0.375 0.3125 0.38749999 0.3125 0.39999998 0.3125 0.41249996
+		 0.3125 0.42499995 0.3125 0.54999983 0.3125 0.56249982 0.3125 0.57499981 0.3125 0.5874998
+		 0.3125 0.59999979 0.3125 0.61249977 0.3125 0.62499976 0.3125 0.375 0.6875 0.38749999
+		 0.6875 0.39999998 0.6875 0.41249996 0.6875 0.42499995 0.6875 0.54999983 0.6875 0.56249982
+		 0.6875 0.57499981 0.6875 0.5874998 0.6875 0.59999979 0.6875 0.61249977 0.6875 0.62499976
+		 0.6875 0.64860266 0.79546607 0.62640899 0.75190848 0.59184152 0.71734101 0.54828393
+		 0.69514734 0.5 0.68749994 0.5 1 0.54828387 0.9923526 0.59184146 0.97015893 0.62640893
+		 0.93559146 0.6486026 0.89203393 0.65625 0.84375 0.5 0.15625 0.5 0.84375;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 24 ".vt[0:23]"  0.95105714 -1 -0.30901718 0.80901754 -1 -0.5877856
+		 0.5877856 -1 -0.80901748 0.30901715 -1 -0.95105702 0 -1 -1.000000476837 -2.9802322e-08 -1 1.000000119209
+		 0.30901697 -1 0.9510566 0.58778524 -1 0.80901706 0.809017 -1 0.5877853 0.95105654 -1 0.309017
+		 1 -1 0 0.95105714 1 -0.30901718 0.80901754 1 -0.5877856 0.5877856 1 -0.80901748 0.30901715 1 -0.95105702
+		 0 1 -1.000000476837 -2.9802322e-08 1 1.000000119209 0.30901697 1 0.9510566 0.58778524 1 0.80901706
+		 0.809017 1 0.5877853 0.95105654 1 0.309017 1 1 0 0 -1 0 0 1 0;
+	setAttr -s 53 ".ed[0:52]"  0 1 0 1 2 0 2 3 0 3 4 0 5 6 0 6 7 0 7 8 0
+		 8 9 0 9 10 0 10 0 0 11 12 0 12 13 0 13 14 0 14 15 0 16 17 0 17 18 0 18 19 0 19 20 0
+		 20 21 0 21 11 0 0 11 1 1 12 1 2 13 1 3 14 1 4 15 1 5 16 1 6 17 1 7 18 1 8 19 1 9 20 1
+		 10 21 1 22 0 1 22 1 1 22 2 1 22 3 1 22 4 1 22 5 1 22 6 1 22 7 1 22 8 1 22 9 1 22 10 1
+		 11 23 1 12 23 1 13 23 1 14 23 1 15 23 1 16 23 1 17 23 1 18 23 1 19 23 1 20 23 1 21 23 1;
+	setAttr -s 31 -ch 106 ".fc[0:30]" -type "polyFaces" 
+		f 4 0 21 -11 -21
+		mu 0 4 11 12 24 23
+		f 4 1 22 -12 -22
+		mu 0 4 12 13 25 24
+		f 4 2 23 -13 -23
+		mu 0 4 13 14 26 25
+		f 4 3 24 -14 -24
+		mu 0 4 14 15 27 26
+		f 4 4 26 -15 -26
+		mu 0 4 16 17 29 28
+		f 4 5 27 -16 -27
+		mu 0 4 17 18 30 29
+		f 4 6 28 -17 -28
+		mu 0 4 18 19 31 30
+		f 4 7 29 -18 -29
+		mu 0 4 19 20 32 31
+		f 4 8 30 -19 -30
+		mu 0 4 20 21 33 32
+		f 4 9 20 -20 -31
+		mu 0 4 21 22 34 33
+		f 3 -1 -32 32
+		mu 0 3 1 0 46
+		f 3 -2 -33 33
+		mu 0 3 2 1 46
+		f 3 -3 -34 34
+		mu 0 3 3 2 46
+		f 3 -4 -35 35
+		mu 0 3 4 3 46
+		f 3 -5 -37 37
+		mu 0 3 6 5 46
+		f 3 -6 -38 38
+		mu 0 3 7 6 46
+		f 3 -7 -39 39
+		mu 0 3 8 7 46
+		f 3 -8 -40 40
+		mu 0 3 9 8 46
+		f 3 -9 -41 41
+		mu 0 3 10 9 46
+		f 3 -10 -42 31
+		mu 0 3 0 10 46
+		f 3 10 43 -43
+		mu 0 3 44 43 47
+		f 3 11 44 -44
+		mu 0 3 43 42 47
+		f 3 12 45 -45
+		mu 0 3 42 41 47
+		f 3 13 46 -46
+		mu 0 3 41 40 47
+		f 6 -47 -25 -36 36 25 47
+		mu 0 6 47 27 4 46 16 39
+		f 3 14 48 -48
+		mu 0 3 39 38 47
+		f 3 15 49 -49
+		mu 0 3 38 37 47
+		f 3 16 50 -50
+		mu 0 3 37 36 47
+		f 3 17 51 -51
+		mu 0 3 36 35 47
+		f 3 18 52 -52
+		mu 0 3 35 45 47
+		f 3 19 42 -53
+		mu 0 3 45 44 47;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCylinder62";
+	rename -uid "EED46681-48C6-B839-FDD2-CE9CD0CA11A7";
+	setAttr ".t" -type "double3" 0.11610923624421857 1.9496659789748383 0.92054972759527054 ;
+	setAttr ".r" -type "double3" 0 0 -90 ;
+	setAttr ".s" -type "double3" 0.40819026626383309 0.09786574878526004 0.40819026626383309 ;
+createNode transform -n "transform63" -p "pCylinder62";
+	rename -uid "CE28A9F7-4F18-0FD2-DC59-7D80B47E77AC";
+	setAttr ".v" no;
+createNode mesh -n "pCylinderShape62" -p "transform63";
+	rename -uid "5EFDAC5E-438B-1E0B-1879-528EA50386AC";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49999998509883881 0.84374997019767761 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCube176";
+	rename -uid "B2DF7F79-4200-1B3B-233E-C6B6AFC4DA08";
+	setAttr ".t" -type "double3" 0.33141299085680159 2.2210328570124123 0.92012017317668038 ;
+	setAttr ".s" -type "double3" 0.25434722791870862 0.22274005871150002 0.039836008879086726 ;
+createNode transform -n "transform62" -p "pCube176";
+	rename -uid "65180101-42AC-F527-5E9A-8E910D43E56F";
+	setAttr ".v" no;
+createNode mesh -n "pCubeShape176" -p "transform62";
+	rename -uid "89DA17F0-4D29-8673-8249-CBA19D529F3F";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.75 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 4 ".pt";
+	setAttr ".pt[1]" -type "float3" -0.15514602 0 0 ;
+	setAttr ".pt[3]" -type "float3" -0.62815404 0 0 ;
+	setAttr ".pt[5]" -type "float3" -0.62815404 0 0 ;
+	setAttr ".pt[7]" -type "float3" -0.15514602 0 0 ;
+createNode transform -n "pCube177";
+	rename -uid "D7A77462-4A21-937B-6B7E-E8A902DE71CD";
+	setAttr ".t" -type "double3" 0.33141299085680159 1.6811784017945539 0.92012017317668038 ;
+	setAttr ".r" -type "double3" 180 0 0 ;
+	setAttr ".s" -type "double3" 0.25434722791870862 0.22274005871150002 0.039836008879086726 ;
+createNode transform -n "transform64" -p "pCube177";
+	rename -uid "328E3DB1-4DE6-5FB3-44F6-F7847C30CD4F";
+	setAttr ".v" no;
+createNode mesh -n "pCubeShape177" -p "transform64";
+	rename -uid "DD963429-4D3D-6314-5DFF-2F9F16402CCA";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:5]";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".pv" -type "double2" 0.75 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 4 ".pt";
+	setAttr ".pt[1]" -type "float3" -0.15514602 0 0 ;
+	setAttr ".pt[3]" -type "float3" -0.62815404 0 0 ;
+	setAttr ".pt[5]" -type "float3" -0.62815404 0 0 ;
+	setAttr ".pt[7]" -type "float3" -0.15514602 0 0 ;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube178";
+	rename -uid "EC44DB89-4D4D-C120-8C39-6DA224A87B35";
+	setAttr ".t" -type "double3" 0.33463489731293933 1.9518315682832494 1.1865718054072787 ;
+	setAttr ".r" -type "double3" 90 0 0 ;
+	setAttr ".s" -type "double3" 0.25434722791870862 0.22274005871150002 0.039836008879086726 ;
+createNode transform -n "transform60" -p "pCube178";
+	rename -uid "C3940483-40C5-9606-9EF3-39AF9227704D";
+	setAttr ".v" no;
+createNode mesh -n "pCubeShape178" -p "transform60";
+	rename -uid "5A4774F6-4DD4-55C9-20E0-8A8DBE1F6888";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:5]";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".pv" -type "double2" 0.75 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 4 ".pt";
+	setAttr ".pt[1]" -type "float3" -0.15514602 0 0 ;
+	setAttr ".pt[3]" -type "float3" -0.62815404 0 0 ;
+	setAttr ".pt[5]" -type "float3" -0.62815404 0 0 ;
+	setAttr ".pt[7]" -type "float3" -0.15514602 0 0 ;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube179";
+	rename -uid "907D1AE2-4109-FDCA-2B87-9B93EB1226D5";
+	setAttr ".t" -type "double3" 0.33463489731293933 1.9518315682832494 0.66549898993573886 ;
+	setAttr ".r" -type "double3" -90 0 0 ;
+	setAttr ".s" -type "double3" 0.25434722791870862 0.22274005871150002 0.039836008879086726 ;
+createNode transform -n "transform61" -p "pCube179";
+	rename -uid "BA83F079-48FE-7F09-498D-56A2A59D6B9A";
+	setAttr ".v" no;
+createNode mesh -n "pCubeShape179" -p "transform61";
+	rename -uid "58E3B621-4C15-90C9-18A4-40A82942A43D";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:5]";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".pv" -type "double2" 0.75 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 4 ".pt";
+	setAttr ".pt[1]" -type "float3" -0.15514602 0 0 ;
+	setAttr ".pt[3]" -type "float3" -0.62815404 0 0 ;
+	setAttr ".pt[5]" -type "float3" -0.62815404 0 0 ;
+	setAttr ".pt[7]" -type "float3" -0.15514602 0 0 ;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCylinder63";
+	rename -uid "DB500137-4C5F-753A-EF70-D89385FE364E";
+	setAttr ".t" -type "double3" 0.010706416826377501 2.6879113440422202 0.90134310529066308 ;
+	setAttr ".s" -type "double3" 0.18270453137452433 0.22777006528144877 0.18270453137452433 ;
+createNode transform -n "transform66" -p "pCylinder63";
+	rename -uid "F2FB7BE4-47F1-FF47-FF96-A8A207105594";
+	setAttr ".v" no;
+createNode mesh -n "pCylinderShape63" -p "transform66";
+	rename -uid "92380170-4280-DA87-C7BB-F583704C7F84";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCube181";
+	rename -uid "5CDA40E0-43DC-647A-FD7F-81AA3FC463FD";
+	setAttr ".t" -type "double3" -0.4671711004622226 0.11126869241031123 -0.019132254967923281 ;
+	setAttr ".r" -type "double3" 0 180 0 ;
+	setAttr ".s" -type "double3" 1.2166048482449558 1.2166048482449558 1.2166048482449558 ;
+	setAttr ".rp" -type "double3" 0.22626302162450812 1.9496659789748385 0.92054965460516303 ;
+	setAttr ".rpt" -type "double3" 2.7755575615628914e-17 0 1.3877787807814457e-16 ;
+	setAttr ".sp" -type "double3" 0.22626302162450812 1.9496659789748385 0.92054965460516303 ;
+createNode transform -n "transform65" -p "pCube181";
+	rename -uid "7F07A560-4794-0161-CD10-959613AC6306";
+	setAttr ".v" no;
+createNode mesh -n "pCube181Shape" -p "transform65";
+	rename -uid "A1773544-464B-1730-B9DF-D1B28FBB23E6";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:203]";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 14 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 4 "f[2]" "f[188]" "f[194]" "f[200]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 5 "f[3]" "f[26:45]" "f[189]" "f[195]" "f[201]";
+	setAttr ".gtag[2].gtagnm" -type "string" "bottomRing";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "e[12:31]";
+	setAttr ".gtag[3].gtagnm" -type "string" "cylBottomCap";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 2 "vtx[8:27]" "vtx[48]";
+	setAttr ".gtag[4].gtagnm" -type "string" "cylBottomRing";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "vtx[8:27]";
+	setAttr ".gtag[5].gtagnm" -type "string" "cylSides";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "vtx[8:47]";
+	setAttr ".gtag[6].gtagnm" -type "string" "cylTopCap";
+	setAttr ".gtag[6].gtagcmp" -type "componentList" 1 "vtx[28:47]";
+	setAttr ".gtag[7].gtagnm" -type "string" "cylTopRing";
+	setAttr ".gtag[7].gtagcmp" -type "componentList" 1 "vtx[28:47]";
+	setAttr ".gtag[8].gtagnm" -type "string" "front";
+	setAttr ".gtag[8].gtagcmp" -type "componentList" 4 "f[0]" "f[186]" "f[192]" "f[198]";
+	setAttr ".gtag[9].gtagnm" -type "string" "left";
+	setAttr ".gtag[9].gtagcmp" -type "componentList" 4 "f[5]" "f[191]" "f[197]" "f[203]";
+	setAttr ".gtag[10].gtagnm" -type "string" "right";
+	setAttr ".gtag[10].gtagcmp" -type "componentList" 4 "f[4]" "f[190]" "f[196]" "f[202]";
+	setAttr ".gtag[11].gtagnm" -type "string" "sides";
+	setAttr ".gtag[11].gtagcmp" -type "componentList" 1 "f[6:25]";
+	setAttr ".gtag[12].gtagnm" -type "string" "top";
+	setAttr ".gtag[12].gtagcmp" -type "componentList" 5 "f[1]" "f[46:185]" "f[187]" "f[193]" "f[199]";
+	setAttr ".gtag[13].gtagnm" -type "string" "topRing";
+	setAttr ".gtag[13].gtagcmp" -type "componentList" 1 "e[32:51]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 260 ".uvst[0].uvsp";
+	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.375 0 0.625 0 0.375 0.25
+		 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0 0.875
+		 0.25 0.125 0 0.125 0.25 0.375 0.3125 0.38749999 0.3125 0.38749999 0.6875 0.375 0.6875
+		 0.39999998 0.3125 0.39999998 0.6875 0.41249996 0.3125 0.41249996 0.6875 0.42499995
+		 0.3125 0.42499995 0.6875 0.43749994 0.3125 0.43749994 0.6875 0.44999993 0.3125 0.44999993
+		 0.6875 0.46249992 0.3125 0.46249992 0.6875 0.4749999 0.3125 0.4749999 0.6875 0.48749989
+		 0.3125 0.48749989 0.6875 0.49999988 0.3125 0.49999988 0.6875 0.51249987 0.3125 0.51249987
+		 0.6875 0.52499986 0.3125 0.52499986 0.6875 0.53749985 0.3125 0.53749985 0.6875 0.54999983
+		 0.3125 0.54999983 0.6875 0.56249982 0.3125 0.56249982 0.6875 0.57499981 0.3125 0.57499981
+		 0.6875 0.5874998 0.3125 0.5874998 0.6875 0.59999979 0.3125 0.59999979 0.6875 0.61249977
+		 0.3125 0.61249977 0.6875 0.62499976 0.3125 0.62499976 0.6875 0.62640899 0.064408496
+		 0.64860266 0.10796607 0.5 0.15625 0.59184152 0.029841021 0.54828393 0.0076473355
+		 0.5 -7.4505806e-08 0.45171607 0.0076473504 0.40815851 0.029841051 0.37359107 0.064408526
+		 0.3513974 0.1079661 0.34374997 0.15625 0.3513974 0.2045339 0.37359107 0.24809146
+		 0.40815854 0.28265893 0.4517161 0.3048526 0.5 0.3125 0.54828387 0.3048526 0.59184146
+		 0.28265893 0.62640893 0.24809146 0.6486026 0.2045339 0.65625 0.15625 0.6486026 0.89203393
+		 0.62640893 0.93559146 0.5 0.84375 0.59184146 0.97015893 0.54828387 0.9923526 0.5
+		 1 0.4517161 0.9923526 0.40815854 0.97015893 0.37359107 0.93559146 0.3513974 0.89203393
+		 0.34374997 0.84375 0.3513974 0.79546607 0.37359107 0.75190854 0.40815851 0.71734107
+		 0.45171607 0.69514734 0.5 0.68749994 0.54828393 0.69514734 0.59184152 0.71734101
+		 0.62640899 0.75190848 0.64860266 0.79546607 0.65625 0.84375 0.6486026 0.89203393
+		 0.62640893 0.93559146 0.62640893 0.93559146 0.6486026 0.89203393 0.59184146 0.97015893
+		 0.59184146 0.97015893 0.54828387 0.9923526 0.54828387 0.9923526 0.5 1 0.5 1 0.4517161
+		 0.9923526 0.4517161 0.9923526 0.40815854 0.97015893 0.40815854 0.97015893 0.37359107
+		 0.93559146 0.37359107 0.93559146 0.3513974 0.89203393 0.3513974 0.89203393 0.34374997
+		 0.84375 0.34374997 0.84375 0.3513974 0.79546607 0.3513974 0.79546607 0.37359107 0.75190854
+		 0.37359107 0.75190854 0.40815851 0.71734107 0.40815851 0.71734107 0.45171607 0.69514734
+		 0.45171607 0.69514734 0.5 0.68749994 0.5 0.68749994 0.54828393 0.69514734 0.54828393
+		 0.69514734 0.59184152 0.71734101 0.59184152 0.71734101 0.62640899 0.75190848 0.62640899
+		 0.75190848 0.64860266 0.79546607 0.64860266 0.79546607 0.65625 0.84375 0.65625 0.84375
+		 0.6486026 0.89203393 0.62640893 0.93559146 0.59184146 0.97015893 0.54828387 0.9923526
+		 0.5 1 0.4517161 0.9923526 0.40815854 0.97015893 0.37359107 0.93559146 0.3513974 0.89203393
+		 0.34374997 0.84375 0.3513974 0.79546607 0.37359107 0.75190854 0.40815851 0.71734107
+		 0.45171607 0.69514734 0.5 0.68749994 0.54828393 0.69514734 0.59184152 0.71734101
+		 0.62640899 0.75190848 0.64860266 0.79546607 0.65625 0.84375 0.6486026 0.89203393
+		 0.62640893 0.93559146 0.62640893 0.93559146 0.6486026 0.89203393 0.6486026 0.89203393
+		 0.62640893 0.93559146 0.59184146 0.97015893 0.59184146 0.97015893 0.59184146 0.97015893
+		 0.54828387 0.9923526 0.54828387 0.9923526 0.54828387 0.9923526 0.5 1 0.5 1 0.5 1
+		 0.4517161 0.9923526 0.4517161 0.9923526 0.4517161 0.9923526 0.40815854 0.97015893
+		 0.40815854 0.97015893 0.40815854 0.97015893 0.37359107 0.93559146 0.37359107 0.93559146
+		 0.37359107 0.93559146 0.3513974 0.89203393 0.3513974 0.89203393 0.3513974 0.89203393
+		 0.34374997 0.84375 0.34374997 0.84375 0.34374997 0.84375 0.3513974 0.79546607 0.3513974
+		 0.79546607 0.3513974 0.79546607 0.37359107 0.75190854 0.37359107 0.75190854 0.37359107
+		 0.75190854 0.40815851 0.71734107 0.40815851 0.71734107 0.40815851 0.71734107 0.45171607
+		 0.69514734 0.45171607 0.69514734 0.45171607 0.69514734 0.5 0.68749994 0.5 0.68749994
+		 0.5 0.68749994 0.54828393 0.69514734 0.54828393 0.69514734 0.54828393 0.69514734
+		 0.59184152 0.71734101 0.59184152 0.71734101 0.59184152 0.71734101 0.62640899 0.75190848
+		 0.62640899 0.75190848 0.62640899 0.75190848 0.64860266 0.79546607 0.64860266 0.79546607
+		 0.64860266 0.79546607 0.65625 0.84375 0.65625 0.84375 0.65625 0.84375 0.375 0 0.625
+		 0 0.625 0.25 0.375 0.25 0.625 0.5 0.375 0.5 0.625 0.75 0.375 0.75 0.625 1 0.375 1
+		 0.875 0 0.875 0.25 0.125 0 0.125 0.25 0.375 0 0.625 0 0.625 0.25 0.375 0.25 0.625
+		 0.5 0.375 0.5 0.625 0.75 0.375 0.75 0.625 1 0.375 1 0.875 0 0.875 0.25 0.125 0 0.125
+		 0.25 0.375 0 0.625 0 0.625 0.25 0.375 0.25;
+	setAttr ".uvst[0].uvsp[250:259]" 0.625 0.5 0.375 0.5 0.625 0.75 0.375 0.75
+		 0.625 1 0.375 1 0.875 0 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 194 ".vt";
+	setAttr ".vt[0:165]"  0.20423938 1.79254842 0.90020216 0.41912568 1.79254842 0.90020216
+		 0.20423938 1.56980848 0.90020216 0.29881737 1.56980848 0.90020216 0.20423938 1.56980848 0.9400382
+		 0.29881737 1.56980848 0.9400382 0.20423938 1.79254842 0.9400382 0.41912568 1.79254842 0.9400382
+		 0.018243507 1.5614537 0.79441196 0.018243507 1.61943293 0.68062127 0.018243507 1.70973754 0.59031653
+		 0.018243507 1.82352817 0.53233743 0.018243507 1.94966602 0.51235926 0.018243507 2.075803757 0.53233743
+		 0.018243507 2.18959427 0.59031677 0.018243507 2.27989912 0.68062145 0.018243507 2.33787823 0.79441202
+		 0.018243507 2.35785627 0.92054975 0.018243507 2.33787823 1.046687484 0.018243507 2.27989888 1.160478
+		 0.018243507 2.18959427 1.25078273 0.018243507 2.075803757 1.30876184 0.018243507 1.94966602 1.32874012
+		 0.018243507 1.82352817 1.30876184 0.018243507 1.70973778 1.25078261 0.018243507 1.61943316 1.160478
+		 0.018243507 1.56145406 1.046687484 0.018243507 1.54147577 0.92054975 0.21397497 1.5614537 0.79441196
+		 0.21397497 1.61943293 0.68062127 0.21397497 1.70973754 0.59031653 0.21397497 1.82352817 0.53233743
+		 0.21397497 1.94966602 0.51235926 0.21397497 2.075803757 0.53233743 0.21397497 2.18959427 0.59031677
+		 0.21397497 2.27989912 0.68062145 0.21397497 2.33787823 0.79441202 0.21397497 2.35785627 0.92054975
+		 0.21397497 2.33787823 1.046687484 0.21397497 2.27989888 1.160478 0.21397497 2.18959427 1.25078273
+		 0.21397497 2.075803757 1.30876184 0.21397497 1.94966602 1.32874012 0.21397497 1.82352817 1.30876184
+		 0.21397497 1.70973778 1.25078261 0.21397497 1.61943316 1.160478 0.21397497 1.56145406 1.046687484
+		 0.21397497 1.54147577 0.92054975 0.018243507 1.94966602 0.92054975 0.21397497 1.76346362 0.86004883
+		 0.21397497 1.79127264 0.80547011 0.21397497 1.8345865 0.76215637 0.21397497 1.88916516 0.73434722
+		 0.21397497 1.94966602 0.7247647 0.21397497 2.010166883 0.73434722 0.21397497 2.064745426 0.76215637
+		 0.21397497 2.10805941 0.80547011 0.21397497 2.13586855 0.86004883 0.21397497 2.14545083 0.92054957
+		 0.21397497 2.13586855 0.98105049 0.21397497 2.10805917 1.035629034 0.21397497 2.064745426 1.078942895
+		 0.21397497 2.010166883 1.10675216 0.21397497 1.94966602 1.11633444 0.21397497 1.88916516 1.10675216
+		 0.21397497 1.83458674 1.078942895 0.21397497 1.79127288 1.035629034 0.21397497 1.76346362 0.98105049
+		 0.21397497 1.75388122 0.92054957 0.43428254 1.76346362 0.86004883 0.43428254 1.79127264 0.80547011
+		 0.43428254 1.94966602 0.92054957 0.43428254 1.83458674 0.76215637 0.43428254 1.88916516 0.73434722
+		 0.43428254 1.94966602 0.7247647 0.43428254 2.010166883 0.73434722 0.43428254 2.064745426 0.76215637
+		 0.43428254 2.10805941 0.80547011 0.43428254 2.13586855 0.86004883 0.43428254 2.14545083 0.92054957
+		 0.43428254 2.13586855 0.98105049 0.43428254 2.10805917 1.035629034 0.43428254 2.064745426 1.078942895
+		 0.43428254 2.010166883 1.10675216 0.43428254 1.94966602 1.11633444 0.43428254 1.88916516 1.10675216
+		 0.43428254 1.83458674 1.078942895 0.43428254 1.79127288 1.035629034 0.43428254 1.76346362 0.98105049
+		 0.43428254 1.75388122 0.92054957 0.21397497 1.64868784 0.82275605 0.21397497 1.69363868 0.73453498
+		 0.21397497 1.82686496 0.83132929 0.21397497 1.80530465 0.87364376 0.21397497 1.76365137 0.66452241
+		 0.21397497 1.86044586 0.79774845 0.21397497 1.85187232 0.61957163 0.21397497 1.90276027 0.77618825
+		 0.21397497 1.94966602 0.6040827 0.21397497 1.94966602 0.76875901 0.21397497 2.047459602 0.61957163
+		 0.21397497 1.99657202 0.77618825 0.21397497 2.13568068 0.66452253 0.21397497 2.03888607 0.79774851
+		 0.21397497 2.20569324 0.73453504 0.21397497 2.072467327 0.83132935 0.21397497 2.25064397 0.82275605
+		 0.21397497 2.094027281 0.87364376 0.21397497 2.26613283 0.92054975 0.21397497 2.1014564 0.92054957
+		 0.21397497 2.25064397 1.01834321 0.21397497 2.094027281 0.96745545 0.21397497 2.20569324 1.10656428
+		 0.21397497 2.072467089 1.0097697973 0.21397497 2.13568068 1.17657685 0.21397497 2.03888607 1.043350697
+		 0.21397497 2.047459602 1.22152758 0.21397497 1.99657202 1.064910889 0.21397497 1.94966602 1.23701668
+		 0.21397497 1.94966602 1.072340131 0.21397497 1.85187232 1.22152758 0.21397497 1.90276027 1.064910889
+		 0.21397497 1.76365137 1.17657661 0.21397497 1.86044586 1.043350697 0.21397497 1.69363904 1.10656428
+		 0.21397497 1.82686496 1.0097697973 0.21397497 1.64868808 1.01834321 0.21397497 1.80530465 0.96745545
+		 0.21397497 1.63319921 0.92054975 0.21397497 1.79787564 0.92054957 0.10928415 1.64868784 0.82275605
+		 0.10928416 1.69363868 0.73453498 0.10928416 1.82686496 0.83132929 0.10928415 1.80530465 0.87364376
+		 0.10928416 1.76365137 0.66452241 0.10928416 1.86044586 0.79774845 0.10928416 1.85187232 0.61957163
+		 0.10928416 1.90276027 0.77618825 0.10928416 1.94966602 0.6040827 0.10928416 1.94966602 0.76875901
+		 0.10928416 2.047459602 0.61957163 0.10928416 1.99657202 0.77618825 0.10928416 2.13568068 0.66452253
+		 0.10928416 2.03888607 0.79774851 0.10928416 2.20569324 0.73453504 0.10928416 2.072467327 0.83132935
+		 0.10928415 2.25064397 0.82275605 0.10928415 2.094027281 0.87364376 0.10928416 2.26613283 0.92054975
+		 0.10928416 2.1014564 0.92054957 0.10928415 2.25064397 1.01834321 0.10928415 2.094027281 0.96745545
+		 0.10928416 2.20569324 1.10656428 0.10928416 2.072467089 1.0097697973 0.10928416 2.13568068 1.17657685
+		 0.10928416 2.03888607 1.043350697 0.10928416 2.047459602 1.22152758 0.10928416 1.99657202 1.064910889
+		 0.10928416 1.94966602 1.23701668 0.10928416 1.94966602 1.072340131 0.10928416 1.85187232 1.22152758
+		 0.10928416 1.90276027 1.064910889 0.10928416 1.76365137 1.17657661 0.10928416 1.86044586 1.043350697
+		 0.10928415 1.69363904 1.10656428 0.10928415 1.82686496 1.0097697973;
+	setAttr ".vt[166:193]" 0.10928415 1.64868808 1.01834321 0.10928415 1.80530465 0.96745545
+		 0.10928415 1.63319921 0.92054975 0.10928415 1.79787564 0.92054957 0.20423938 2.10966277 0.9400382
+		 0.41912568 2.10966277 0.9400382 0.20423938 2.33240294 0.9400382 0.29881737 2.33240294 0.9400382
+		 0.20423938 2.33240294 0.90020216 0.29881737 2.33240294 0.90020216 0.20423938 2.10966277 0.90020216
+		 0.41912568 2.10966277 0.90020216 0.20746128 1.97174954 0.776869 0.42234755 1.97174954 0.776869
+		 0.20746128 1.97174954 0.55412894 0.30203927 1.97174954 0.55412894 0.20746128 1.93191361 0.55412894
+		 0.30203927 1.93191361 0.55412894 0.20746128 1.93191361 0.776869 0.42234755 1.93191361 0.776869
+		 0.20746128 1.93191361 1.07520175 0.42234755 1.93191361 1.07520175 0.20746128 1.93191361 1.29794192
+		 0.30203927 1.93191361 1.29794192 0.20746128 1.97174954 1.29794192 0.30203927 1.97174954 1.29794192
+		 0.20746128 1.97174954 1.07520175 0.42234755 1.97174954 1.07520175;
+	setAttr -s 388 ".ed";
+	setAttr ".ed[0:165]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0 3 5 0 4 6 0
+		 5 7 0 6 0 0 7 1 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 16 0 16 17 0
+		 17 18 0 18 19 0 19 20 0 20 21 0 21 22 0 22 23 0 23 24 0 24 25 0 25 26 0 26 27 0 27 8 0
+		 28 29 0 29 30 0 30 31 0 31 32 0 32 33 0 33 34 0 34 35 0 35 36 0 36 37 0 37 38 0 38 39 0
+		 39 40 0 40 41 0 41 42 0 42 43 0 43 44 0 44 45 0 45 46 0 46 47 0 47 28 0 8 28 1 9 29 1
+		 10 30 1 11 31 1 12 32 1 13 33 1 14 34 1 15 35 1 16 36 1 17 37 1 18 38 1 19 39 1 20 40 1
+		 21 41 1 22 42 1 23 43 1 24 44 1 25 45 1 26 46 1 27 47 1 48 8 1 48 9 1 48 10 1 48 11 1
+		 48 12 1 48 13 1 48 14 1 48 15 1 48 16 1 48 17 1 48 18 1 48 19 1 48 20 1 48 21 1 48 22 1
+		 48 23 1 48 24 1 48 25 1 48 26 1 48 27 1 49 50 0 50 51 0 51 52 0 52 53 0 53 54 0 54 55 0
+		 55 56 0 56 57 0 57 58 0 58 59 0 59 60 0 60 61 0 61 62 0 62 63 0 63 64 0 64 65 0 65 66 0
+		 66 67 0 67 68 0 68 49 0 49 69 1 50 70 1 69 70 0 70 71 1 69 71 1 51 72 1 70 72 0 72 71 1
+		 52 73 1 72 73 0 73 71 1 53 74 1 73 74 0 74 71 1 54 75 1 74 75 0 75 71 1 55 76 1 75 76 0
+		 76 71 1 56 77 1 76 77 0 77 71 1 57 78 1 77 78 0 78 71 1 58 79 1 78 79 0 79 71 1 59 80 1
+		 79 80 0 80 71 1 60 81 1 80 81 0 81 71 1 61 82 1 81 82 0 82 71 1 62 83 1 82 83 0 83 71 1
+		 63 84 1 83 84 0 84 71 1 64 85 1 84 85 0 85 71 1 65 86 1 85 86 0 86 71 1 66 87 1 86 87 0
+		 87 71 1 67 88 1;
+	setAttr ".ed[166:331]" 87 88 0 88 71 1 68 89 1 88 89 0 89 71 1 89 69 0 28 90 0
+		 29 91 0 90 91 0 50 92 0 49 93 0 93 92 0 30 94 0 91 94 0 51 95 0 92 95 0 31 96 0 94 96 0
+		 52 97 0 95 97 0 32 98 0 96 98 0 53 99 0 97 99 0 33 100 0 98 100 0 54 101 0 99 101 0
+		 34 102 0 100 102 0 55 103 0 101 103 0 35 104 0 102 104 0 56 105 0 103 105 0 36 106 0
+		 104 106 0 57 107 0 105 107 0 37 108 0 106 108 0 58 109 0 107 109 0 38 110 0 108 110 0
+		 59 111 0 109 111 0 39 112 0 110 112 0 60 113 0 111 113 0 40 114 0 112 114 0 61 115 0
+		 113 115 0 41 116 0 114 116 0 62 117 0 115 117 0 42 118 0 116 118 0 63 119 0 117 119 0
+		 43 120 0 118 120 0 64 121 0 119 121 0 44 122 0 120 122 0 65 123 0 121 123 0 45 124 0
+		 122 124 0 66 125 0 123 125 0 46 126 0 124 126 0 67 127 0 125 127 0 47 128 0 126 128 0
+		 68 129 0 127 129 0 128 90 0 129 93 0 90 130 1 91 131 1 130 131 0 92 132 1 131 132 0
+		 93 133 1 133 132 0 130 133 0 94 134 1 131 134 0 95 135 1 134 135 0 132 135 0 96 136 1
+		 134 136 0 97 137 1 136 137 0 135 137 0 98 138 1 136 138 0 99 139 1 138 139 0 137 139 0
+		 100 140 1 138 140 0 101 141 1 140 141 0 139 141 0 102 142 1 140 142 0 103 143 1 142 143 0
+		 141 143 0 104 144 1 142 144 0 105 145 1 144 145 0 143 145 0 106 146 1 144 146 0 107 147 1
+		 146 147 0 145 147 0 108 148 1 146 148 0 109 149 1 148 149 0 147 149 0 110 150 1 148 150 0
+		 111 151 1 150 151 0 149 151 0 112 152 1 150 152 0 113 153 1 152 153 0 151 153 0 114 154 1
+		 152 154 0 115 155 1 154 155 0 153 155 0 116 156 1 154 156 0 117 157 1 156 157 0 155 157 0
+		 118 158 1 156 158 0 119 159 1 158 159 0 157 159 0 120 160 1 158 160 0 121 161 1 160 161 0
+		 159 161 0 122 162 1 160 162 0;
+	setAttr ".ed[332:387]" 123 163 1 162 163 0 161 163 0 124 164 1 162 164 0 125 165 1
+		 164 165 0 163 165 0 126 166 1 164 166 0 127 167 1 166 167 0 165 167 0 128 168 1 166 168 0
+		 129 169 1 168 169 0 167 169 0 168 130 0 169 133 0 170 171 0 172 173 0 174 175 0 176 177 0
+		 170 172 0 171 173 0 172 174 0 173 175 0 174 176 0 175 177 0 176 170 0 177 171 0 178 179 0
+		 180 181 0 182 183 0 184 185 0 178 180 0 179 181 0 180 182 0 181 183 0 182 184 0 183 185 0
+		 184 178 0 185 179 0 186 187 0 188 189 0 190 191 0 192 193 0 186 188 0 187 189 0 188 190 0
+		 189 191 0 190 192 0 191 193 0 192 186 0 193 187 0;
+	setAttr -s 204 -ch 776 ".fc[0:203]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13
+		f 4 12 53 -33 -53
+		mu 0 4 14 15 16 17
+		f 4 13 54 -34 -54
+		mu 0 4 15 18 19 16
+		f 4 14 55 -35 -55
+		mu 0 4 18 20 21 19
+		f 4 15 56 -36 -56
+		mu 0 4 20 22 23 21
+		f 4 16 57 -37 -57
+		mu 0 4 22 24 25 23
+		f 4 17 58 -38 -58
+		mu 0 4 24 26 27 25
+		f 4 18 59 -39 -59
+		mu 0 4 26 28 29 27
+		f 4 19 60 -40 -60
+		mu 0 4 28 30 31 29
+		f 4 20 61 -41 -61
+		mu 0 4 30 32 33 31
+		f 4 21 62 -42 -62
+		mu 0 4 32 34 35 33
+		f 4 22 63 -43 -63
+		mu 0 4 34 36 37 35
+		f 4 23 64 -44 -64
+		mu 0 4 36 38 39 37
+		f 4 24 65 -45 -65
+		mu 0 4 38 40 41 39
+		f 4 25 66 -46 -66
+		mu 0 4 40 42 43 41
+		f 4 26 67 -47 -67
+		mu 0 4 42 44 45 43
+		f 4 27 68 -48 -68
+		mu 0 4 44 46 47 45
+		f 4 28 69 -49 -69
+		mu 0 4 46 48 49 47
+		f 4 29 70 -50 -70
+		mu 0 4 48 50 51 49
+		f 4 30 71 -51 -71
+		mu 0 4 50 52 53 51
+		f 4 31 52 -52 -72
+		mu 0 4 52 54 55 53
+		f 3 -13 -73 73
+		mu 0 3 56 57 58
+		f 3 -14 -74 74
+		mu 0 3 59 56 58
+		f 3 -15 -75 75
+		mu 0 3 60 59 58
+		f 3 -16 -76 76
+		mu 0 3 61 60 58
+		f 3 -17 -77 77
+		mu 0 3 62 61 58
+		f 3 -18 -78 78
+		mu 0 3 63 62 58
+		f 3 -19 -79 79
+		mu 0 3 64 63 58
+		f 3 -20 -80 80
+		mu 0 3 65 64 58
+		f 3 -21 -81 81
+		mu 0 3 66 65 58
+		f 3 -22 -82 82
+		mu 0 3 67 66 58
+		f 3 -23 -83 83
+		mu 0 3 68 67 58
+		f 3 -24 -84 84
+		mu 0 3 69 68 58
+		f 3 -25 -85 85
+		mu 0 3 70 69 58
+		f 3 -26 -86 86
+		mu 0 3 71 70 58
+		f 3 -27 -87 87
+		mu 0 3 72 71 58
+		f 3 -28 -88 88
+		mu 0 3 73 72 58
+		f 3 -29 -89 89
+		mu 0 3 74 73 58
+		f 3 -30 -90 90
+		mu 0 3 75 74 58
+		f 3 -31 -91 91
+		mu 0 3 76 75 58
+		f 3 -32 -92 72
+		mu 0 3 57 76 58
+		f 3 114 115 -117
+		mu 0 3 77 78 79
+		f 3 118 119 -116
+		mu 0 3 78 80 79
+		f 3 121 122 -120
+		mu 0 3 80 81 79
+		f 3 124 125 -123
+		mu 0 3 81 82 79
+		f 3 127 128 -126
+		mu 0 3 82 83 79
+		f 3 130 131 -129
+		mu 0 3 83 84 79
+		f 3 133 134 -132
+		mu 0 3 84 85 79
+		f 3 136 137 -135
+		mu 0 3 85 86 79
+		f 3 139 140 -138
+		mu 0 3 86 87 79
+		f 3 142 143 -141
+		mu 0 3 87 88 79
+		f 3 145 146 -144
+		mu 0 3 88 89 79
+		f 3 148 149 -147
+		mu 0 3 89 90 79
+		f 3 151 152 -150
+		mu 0 3 90 91 79
+		f 3 154 155 -153
+		mu 0 3 91 92 79
+		f 3 157 158 -156
+		mu 0 3 92 93 79
+		f 3 160 161 -159
+		mu 0 3 93 94 79
+		f 3 163 164 -162
+		mu 0 3 94 95 79
+		f 3 166 167 -165
+		mu 0 3 95 96 79
+		f 3 169 170 -168
+		mu 0 3 96 97 79
+		f 3 171 116 -171
+		mu 0 3 97 77 79
+		f 4 254 256 -259 -260
+		mu 0 4 98 99 100 101
+		f 4 261 263 -265 -257
+		mu 0 4 99 102 103 100
+		f 4 266 268 -270 -264
+		mu 0 4 102 104 105 103
+		f 4 271 273 -275 -269
+		mu 0 4 104 106 107 105
+		f 4 276 278 -280 -274
+		mu 0 4 106 108 109 107
+		f 4 281 283 -285 -279
+		mu 0 4 108 110 111 109
+		f 4 286 288 -290 -284
+		mu 0 4 110 112 113 111
+		f 4 291 293 -295 -289
+		mu 0 4 112 114 115 113
+		f 4 296 298 -300 -294
+		mu 0 4 114 116 117 115
+		f 4 301 303 -305 -299
+		mu 0 4 116 118 119 117
+		f 4 306 308 -310 -304
+		mu 0 4 118 120 121 119
+		f 4 311 313 -315 -309
+		mu 0 4 120 122 123 121
+		f 4 316 318 -320 -314
+		mu 0 4 122 124 125 123
+		f 4 321 323 -325 -319
+		mu 0 4 124 126 127 125
+		f 4 326 328 -330 -324
+		mu 0 4 126 128 129 127
+		f 4 331 333 -335 -329
+		mu 0 4 128 130 131 129
+		f 4 336 338 -340 -334
+		mu 0 4 130 132 133 131
+		f 4 341 343 -345 -339
+		mu 0 4 132 134 135 133
+		f 4 346 348 -350 -344
+		mu 0 4 134 136 137 135
+		f 4 350 259 -352 -349
+		mu 0 4 136 98 101 137
+		f 4 92 113 -115 -113
+		mu 0 4 138 139 78 77
+		f 4 93 117 -119 -114
+		mu 0 4 139 140 80 78
+		f 4 94 120 -122 -118
+		mu 0 4 140 141 81 80
+		f 4 95 123 -125 -121
+		mu 0 4 141 142 82 81
+		f 4 96 126 -128 -124
+		mu 0 4 142 143 83 82
+		f 4 97 129 -131 -127
+		mu 0 4 143 144 84 83
+		f 4 98 132 -134 -130
+		mu 0 4 144 145 85 84
+		f 4 99 135 -137 -133
+		mu 0 4 145 146 86 85
+		f 4 100 138 -140 -136
+		mu 0 4 146 147 87 86
+		f 4 101 141 -143 -139
+		mu 0 4 147 148 88 87
+		f 4 102 144 -146 -142
+		mu 0 4 148 149 89 88
+		f 4 103 147 -149 -145
+		mu 0 4 149 150 90 89
+		f 4 104 150 -152 -148
+		mu 0 4 150 151 91 90
+		f 4 105 153 -155 -151
+		mu 0 4 151 152 92 91
+		f 4 106 156 -158 -154
+		mu 0 4 152 153 93 92
+		f 4 107 159 -161 -157
+		mu 0 4 153 154 94 93
+		f 4 108 162 -164 -160
+		mu 0 4 154 155 95 94
+		f 4 109 165 -167 -163
+		mu 0 4 155 156 96 95
+		f 4 110 168 -170 -166
+		mu 0 4 156 157 97 96
+		f 4 111 112 -172 -169
+		mu 0 4 157 138 77 97
+		f 4 32 173 -175 -173
+		mu 0 4 158 159 160 161
+		f 4 -93 176 177 -176
+		mu 0 4 139 138 162 163
+		f 4 33 178 -180 -174
+		mu 0 4 159 164 165 160
+		f 4 -94 175 181 -181
+		mu 0 4 140 139 163 166
+		f 4 34 182 -184 -179
+		mu 0 4 164 167 168 165
+		f 4 -95 180 185 -185
+		mu 0 4 141 140 166 169
+		f 4 35 186 -188 -183
+		mu 0 4 167 170 171 168
+		f 4 -96 184 189 -189
+		mu 0 4 142 141 169 172
+		f 4 36 190 -192 -187
+		mu 0 4 170 173 174 171
+		f 4 -97 188 193 -193
+		mu 0 4 143 142 172 175
+		f 4 37 194 -196 -191
+		mu 0 4 173 176 177 174
+		f 4 -98 192 197 -197
+		mu 0 4 144 143 175 178
+		f 4 38 198 -200 -195
+		mu 0 4 176 179 180 177
+		f 4 -99 196 201 -201
+		mu 0 4 145 144 178 181
+		f 4 39 202 -204 -199
+		mu 0 4 179 182 183 180
+		f 4 -100 200 205 -205
+		mu 0 4 146 145 181 184
+		f 4 40 206 -208 -203
+		mu 0 4 182 185 186 183
+		f 4 -101 204 209 -209
+		mu 0 4 147 146 184 187
+		f 4 41 210 -212 -207
+		mu 0 4 185 188 189 186
+		f 4 -102 208 213 -213
+		mu 0 4 148 147 187 190
+		f 4 42 214 -216 -211
+		mu 0 4 188 191 192 189
+		f 4 -103 212 217 -217
+		mu 0 4 149 148 190 193
+		f 4 43 218 -220 -215
+		mu 0 4 191 194 195 192
+		f 4 -104 216 221 -221
+		mu 0 4 150 149 193 196
+		f 4 44 222 -224 -219
+		mu 0 4 194 197 198 195
+		f 4 -105 220 225 -225
+		mu 0 4 151 150 196 199
+		f 4 45 226 -228 -223
+		mu 0 4 197 200 201 198
+		f 4 -106 224 229 -229
+		mu 0 4 152 151 199 202
+		f 4 46 230 -232 -227
+		mu 0 4 200 203 204 201
+		f 4 -107 228 233 -233
+		mu 0 4 153 152 202 205
+		f 4 47 234 -236 -231
+		mu 0 4 203 206 207 204
+		f 4 -108 232 237 -237
+		mu 0 4 154 153 205 208
+		f 4 48 238 -240 -235
+		mu 0 4 206 209 210 207
+		f 4 -109 236 241 -241
+		mu 0 4 155 154 208 211
+		f 4 49 242 -244 -239
+		mu 0 4 209 212 213 210
+		f 4 -110 240 245 -245
+		mu 0 4 156 155 211 214
+		f 4 50 246 -248 -243
+		mu 0 4 212 215 216 213
+		f 4 -111 244 249 -249
+		mu 0 4 157 156 214 217
+		f 4 51 172 -251 -247
+		mu 0 4 215 158 161 216
+		f 4 -112 248 251 -177
+		mu 0 4 138 157 217 162
+		f 4 174 253 -255 -253
+		mu 0 4 161 160 99 98
+		f 4 -178 257 258 -256
+		mu 0 4 163 162 101 100
+		f 4 179 260 -262 -254
+		mu 0 4 160 165 102 99
+		f 4 -182 255 264 -263
+		mu 0 4 166 163 100 103
+		f 4 183 265 -267 -261
+		mu 0 4 165 168 104 102
+		f 4 -186 262 269 -268
+		mu 0 4 169 166 103 105
+		f 4 187 270 -272 -266
+		mu 0 4 168 171 106 104
+		f 4 -190 267 274 -273
+		mu 0 4 172 169 105 107
+		f 4 191 275 -277 -271
+		mu 0 4 171 174 108 106
+		f 4 -194 272 279 -278
+		mu 0 4 175 172 107 109
+		f 4 195 280 -282 -276
+		mu 0 4 174 177 110 108
+		f 4 -198 277 284 -283
+		mu 0 4 178 175 109 111
+		f 4 199 285 -287 -281
+		mu 0 4 177 180 112 110
+		f 4 -202 282 289 -288
+		mu 0 4 181 178 111 113
+		f 4 203 290 -292 -286
+		mu 0 4 180 183 114 112
+		f 4 -206 287 294 -293
+		mu 0 4 184 181 113 115
+		f 4 207 295 -297 -291
+		mu 0 4 183 186 116 114
+		f 4 -210 292 299 -298
+		mu 0 4 187 184 115 117
+		f 4 211 300 -302 -296
+		mu 0 4 186 189 118 116
+		f 4 -214 297 304 -303
+		mu 0 4 190 187 117 119
+		f 4 215 305 -307 -301
+		mu 0 4 189 192 120 118
+		f 4 -218 302 309 -308
+		mu 0 4 193 190 119 121
+		f 4 219 310 -312 -306
+		mu 0 4 192 195 122 120
+		f 4 -222 307 314 -313
+		mu 0 4 196 193 121 123
+		f 4 223 315 -317 -311
+		mu 0 4 195 198 124 122
+		f 4 -226 312 319 -318
+		mu 0 4 199 196 123 125
+		f 4 227 320 -322 -316
+		mu 0 4 198 201 126 124
+		f 4 -230 317 324 -323
+		mu 0 4 202 199 125 127
+		f 4 231 325 -327 -321
+		mu 0 4 201 204 128 126
+		f 4 -234 322 329 -328
+		mu 0 4 205 202 127 129
+		f 4 235 330 -332 -326
+		mu 0 4 204 207 130 128
+		f 4 -238 327 334 -333
+		mu 0 4 208 205 129 131
+		f 4 239 335 -337 -331
+		mu 0 4 207 210 132 130
+		f 4 -242 332 339 -338
+		mu 0 4 211 208 131 133
+		f 4 243 340 -342 -336
+		mu 0 4 210 213 134 132
+		f 4 -246 337 344 -343
+		mu 0 4 214 211 133 135
+		f 4 247 345 -347 -341
+		mu 0 4 213 216 136 134
+		f 4 -250 342 349 -348
+		mu 0 4 217 214 135 137
+		f 4 250 252 -351 -346
+		mu 0 4 216 161 98 136
+		f 4 -252 347 351 -258
+		mu 0 4 162 217 137 101
+		f 4 352 357 -354 -357
+		mu 0 4 218 219 220 221
+		f 4 353 359 -355 -359
+		mu 0 4 221 220 222 223
+		f 4 354 361 -356 -361
+		mu 0 4 223 222 224 225
+		f 4 355 363 -353 -363
+		mu 0 4 225 224 226 227
+		f 4 -364 -362 -360 -358
+		mu 0 4 219 228 229 220
+		f 4 362 356 358 360
+		mu 0 4 230 218 221 231
+		f 4 364 369 -366 -369
+		mu 0 4 232 233 234 235
+		f 4 365 371 -367 -371
+		mu 0 4 235 234 236 237
+		f 4 366 373 -368 -373
+		mu 0 4 237 236 238 239
+		f 4 367 375 -365 -375
+		mu 0 4 239 238 240 241
+		f 4 -376 -374 -372 -370
+		mu 0 4 233 242 243 234
+		f 4 374 368 370 372
+		mu 0 4 244 232 235 245
+		f 4 376 381 -378 -381
+		mu 0 4 246 247 248 249
+		f 4 377 383 -379 -383
+		mu 0 4 249 248 250 251
+		f 4 378 385 -380 -385
+		mu 0 4 251 250 252 253
+		f 4 379 387 -377 -387
+		mu 0 4 253 252 254 255
+		f 4 -388 -386 -384 -382
+		mu 0 4 247 256 257 248
+		f 4 386 380 382 384
+		mu 0 4 258 246 249 259;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCylinder64";
+	rename -uid "318EAE60-4CFC-4FC9-2A08-99BB7E6B8968";
+	setAttr ".t" -type "double3" 5.4287160445222371 -0.018253974141174932 0.053095397727241395 ;
+	setAttr ".r" -type "double3" 18.972754034650805 0 0 ;
+	setAttr ".rp" -type "double3" -0.15028734338660885 2.2400049484702795 0.90141735569559411 ;
+	setAttr ".rpt" -type "double3" 0 7.7715611723760958e-16 -2.2204460492503131e-16 ;
+	setAttr ".sp" -type "double3" -0.15028734338660885 2.2400049484702795 0.90141735569559411 ;
+createNode mesh -n "pCylinder64Shape" -p "pCylinder64";
+	rename -uid "4A15E151-4BC7-F4A9-0B89-84AC07933D3B";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCylinder65";
+	rename -uid "F295AE18-407A-F042-3C00-13B4164F6E65";
+	setAttr ".t" -type "double3" 5.7579016396594618 -0.37090832444305682 -2.3330164195684562e-16 ;
+	setAttr ".r" -type "double3" -180 -180 -1.1087879024794064e-16 ;
+	setAttr ".rp" -type "double3" -0.15028734338660885 2.2400049484702795 0.90141735569559411 ;
+	setAttr ".rpt" -type "double3" 5.5511151231257827e-17 -8.8817841970012523e-16 -6.2172489379008766e-15 ;
+	setAttr ".sp" -type "double3" -0.15028734338660885 2.2400049484702795 0.90141735569559411 ;
+createNode mesh -n "pCylinder65Shape" -p "pCylinder65";
+	rename -uid "203D27BC-477C-8ED3-2DB0-23B047059CCD";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape30" -p "pCylinder65";
+	rename -uid "16881880-4C65-0F45-9001-269603F2367D";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:263]";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 14 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 4 "f[62]" "f[248]" "f[254]" "f[260]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 6 "f[20:39]" "f[63]" "f[86:105]" "f[249]" "f[255]" "f[261]";
+	setAttr ".gtag[2].gtagnm" -type "string" "bottomRing";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 2 "e[0:19]" "e[112:131]";
+	setAttr ".gtag[3].gtagnm" -type "string" "cylBottomCap";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 4 "vtx[0:19]" "vtx[40]" "vtx[50:69]" "vtx[90]";
+	setAttr ".gtag[4].gtagnm" -type "string" "cylBottomRing";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 2 "vtx[0:19]" "vtx[50:69]";
+	setAttr ".gtag[5].gtagnm" -type "string" "cylSides";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 2 "vtx[0:39]" "vtx[50:89]";
+	setAttr ".gtag[6].gtagnm" -type "string" "cylTopCap";
+	setAttr ".gtag[6].gtagcmp" -type "componentList" 3 "vtx[20:39]" "vtx[41]" "vtx[70:89]";
+	setAttr ".gtag[7].gtagnm" -type "string" "cylTopRing";
+	setAttr ".gtag[7].gtagcmp" -type "componentList" 2 "vtx[20:39]" "vtx[70:89]";
+	setAttr ".gtag[8].gtagnm" -type "string" "front";
+	setAttr ".gtag[8].gtagcmp" -type "componentList" 4 "f[60]" "f[246]" "f[252]" "f[258]";
+	setAttr ".gtag[9].gtagnm" -type "string" "left";
+	setAttr ".gtag[9].gtagcmp" -type "componentList" 4 "f[65]" "f[251]" "f[257]" "f[263]";
+	setAttr ".gtag[10].gtagnm" -type "string" "right";
+	setAttr ".gtag[10].gtagcmp" -type "componentList" 4 "f[64]" "f[250]" "f[256]" "f[262]";
+	setAttr ".gtag[11].gtagnm" -type "string" "sides";
+	setAttr ".gtag[11].gtagcmp" -type "componentList" 2 "f[0:19]" "f[66:85]";
+	setAttr ".gtag[12].gtagnm" -type "string" "top";
+	setAttr ".gtag[12].gtagcmp" -type "componentList" 6 "f[40:59]" "f[61]" "f[106:245]" "f[247]" "f[253]" "f[259]";
+	setAttr ".gtag[13].gtagnm" -type "string" "topRing";
+	setAttr ".gtag[13].gtagcmp" -type "componentList" 2 "e[20:39]" "e[132:151]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 344 ".uvst[0].uvsp";
+	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.64860266 0.10796607 0.62640899
+		 0.064408496 0.59184152 0.029841021 0.54828393 0.0076473355 0.5 -7.4505806e-08 0.45171607
+		 0.0076473504 0.40815851 0.029841051 0.37359107 0.064408526 0.3513974 0.1079661 0.34374997
+		 0.15625 0.3513974 0.2045339 0.37359107 0.24809146 0.40815854 0.28265893 0.4517161
+		 0.3048526 0.5 0.3125 0.54828387 0.3048526 0.59184146 0.28265893 0.62640893 0.24809146
+		 0.6486026 0.2045339 0.65625 0.15625 0.375 0.3125 0.38749999 0.3125 0.39999998 0.3125
+		 0.41249996 0.3125 0.42499995 0.3125 0.43749994 0.3125 0.44999993 0.3125 0.46249992
+		 0.3125 0.4749999 0.3125 0.48749989 0.3125 0.49999988 0.3125 0.51249987 0.3125 0.52499986
+		 0.3125 0.53749985 0.3125 0.54999983 0.3125 0.56249982 0.3125 0.57499981 0.3125 0.5874998
+		 0.3125 0.59999979 0.3125 0.61249977 0.3125 0.62499976 0.3125 0.375 0.6875 0.38749999
+		 0.6875 0.39999998 0.6875 0.41249996 0.6875 0.42499995 0.6875 0.43749994 0.6875 0.44999993
+		 0.6875 0.46249992 0.6875 0.4749999 0.6875 0.48749989 0.6875 0.49999988 0.6875 0.51249987
+		 0.6875 0.52499986 0.6875 0.53749985 0.6875 0.54999983 0.6875 0.56249982 0.6875 0.57499981
+		 0.6875 0.5874998 0.6875 0.59999979 0.6875 0.61249977 0.6875 0.62499976 0.6875 0.64860266
+		 0.79546607 0.62640899 0.75190848 0.59184152 0.71734101 0.54828393 0.69514734 0.5
+		 0.68749994 0.45171607 0.69514734 0.40815851 0.71734107 0.37359107 0.75190854 0.3513974
+		 0.79546607 0.34374997 0.84375 0.3513974 0.89203393 0.37359107 0.93559146 0.40815854
+		 0.97015893 0.4517161 0.9923526 0.5 1 0.54828387 0.9923526 0.59184146 0.97015893 0.62640893
+		 0.93559146 0.6486026 0.89203393 0.65625 0.84375 0.5 0.15625 0.5 0.84375 0.375 0 0.625
+		 0 0.625 0.25 0.375 0.25 0.625 0.5 0.375 0.5 0.625 0.75 0.375 0.75 0.625 1 0.375 1
+		 0.875 0 0.875 0.25 0.125 0 0.125 0.25 0.375 0.3125 0.38749999 0.3125 0.38749999 0.6875
+		 0.375 0.6875 0.39999998 0.3125 0.39999998 0.6875 0.41249996 0.3125 0.41249996 0.6875
+		 0.42499995 0.3125 0.42499995 0.6875 0.43749994 0.3125 0.43749994 0.6875 0.44999993
+		 0.3125 0.44999993 0.6875 0.46249992 0.3125 0.46249992 0.6875 0.4749999 0.3125 0.4749999
+		 0.6875 0.48749989 0.3125 0.48749989 0.6875 0.49999988 0.3125 0.49999988 0.6875 0.51249987
+		 0.3125 0.51249987 0.6875 0.52499986 0.3125 0.52499986 0.6875 0.53749985 0.3125 0.53749985
+		 0.6875 0.54999983 0.3125 0.54999983 0.6875 0.56249982 0.3125 0.56249982 0.6875 0.57499981
+		 0.3125 0.57499981 0.6875 0.5874998 0.3125 0.5874998 0.6875 0.59999979 0.3125 0.59999979
+		 0.6875 0.61249977 0.3125 0.61249977 0.6875 0.62499976 0.3125 0.62499976 0.6875 0.62640899
+		 0.064408496 0.64860266 0.10796607 0.5 0.15625 0.59184152 0.029841021 0.54828393 0.0076473355
+		 0.5 -7.4505806e-08 0.45171607 0.0076473504 0.40815851 0.029841051 0.37359107 0.064408526
+		 0.3513974 0.1079661 0.34374997 0.15625 0.3513974 0.2045339 0.37359107 0.24809146
+		 0.40815854 0.28265893 0.4517161 0.3048526 0.5 0.3125 0.54828387 0.3048526 0.59184146
+		 0.28265893 0.62640893 0.24809146 0.6486026 0.2045339 0.65625 0.15625 0.6486026 0.89203393
+		 0.62640893 0.93559146 0.5 0.84375 0.59184146 0.97015893 0.54828387 0.9923526 0.5
+		 1 0.4517161 0.9923526 0.40815854 0.97015893 0.37359107 0.93559146 0.3513974 0.89203393
+		 0.34374997 0.84375 0.3513974 0.79546607 0.37359107 0.75190854 0.40815851 0.71734107
+		 0.45171607 0.69514734 0.5 0.68749994 0.54828393 0.69514734 0.59184152 0.71734101
+		 0.62640899 0.75190848 0.64860266 0.79546607 0.65625 0.84375 0.6486026 0.89203393
+		 0.62640893 0.93559146 0.62640893 0.93559146 0.6486026 0.89203393 0.59184146 0.97015893
+		 0.59184146 0.97015893 0.54828387 0.9923526 0.54828387 0.9923526 0.5 1 0.5 1 0.4517161
+		 0.9923526 0.4517161 0.9923526 0.40815854 0.97015893 0.40815854 0.97015893 0.37359107
+		 0.93559146 0.37359107 0.93559146 0.3513974 0.89203393 0.3513974 0.89203393 0.34374997
+		 0.84375 0.34374997 0.84375 0.3513974 0.79546607 0.3513974 0.79546607 0.37359107 0.75190854
+		 0.37359107 0.75190854 0.40815851 0.71734107 0.40815851 0.71734107 0.45171607 0.69514734
+		 0.45171607 0.69514734 0.5 0.68749994 0.5 0.68749994 0.54828393 0.69514734 0.54828393
+		 0.69514734 0.59184152 0.71734101 0.59184152 0.71734101 0.62640899 0.75190848 0.62640899
+		 0.75190848 0.64860266 0.79546607 0.64860266 0.79546607 0.65625 0.84375 0.65625 0.84375
+		 0.6486026 0.89203393 0.62640893 0.93559146 0.59184146 0.97015893 0.54828387 0.9923526
+		 0.5 1 0.4517161 0.9923526 0.40815854 0.97015893 0.37359107 0.93559146 0.3513974 0.89203393
+		 0.34374997 0.84375 0.3513974 0.79546607 0.37359107 0.75190854 0.40815851 0.71734107
+		 0.45171607 0.69514734 0.5 0.68749994 0.54828393 0.69514734 0.59184152 0.71734101
+		 0.62640899 0.75190848 0.64860266 0.79546607 0.65625 0.84375 0.6486026 0.89203393
+		 0.62640893 0.93559146 0.62640893 0.93559146 0.6486026 0.89203393 0.6486026 0.89203393
+		 0.62640893 0.93559146 0.59184146 0.97015893 0.59184146 0.97015893;
+	setAttr ".uvst[0].uvsp[250:343]" 0.59184146 0.97015893 0.54828387 0.9923526
+		 0.54828387 0.9923526 0.54828387 0.9923526 0.5 1 0.5 1 0.5 1 0.4517161 0.9923526 0.4517161
+		 0.9923526 0.4517161 0.9923526 0.40815854 0.97015893 0.40815854 0.97015893 0.40815854
+		 0.97015893 0.37359107 0.93559146 0.37359107 0.93559146 0.37359107 0.93559146 0.3513974
+		 0.89203393 0.3513974 0.89203393 0.3513974 0.89203393 0.34374997 0.84375 0.34374997
+		 0.84375 0.34374997 0.84375 0.3513974 0.79546607 0.3513974 0.79546607 0.3513974 0.79546607
+		 0.37359107 0.75190854 0.37359107 0.75190854 0.37359107 0.75190854 0.40815851 0.71734107
+		 0.40815851 0.71734107 0.40815851 0.71734107 0.45171607 0.69514734 0.45171607 0.69514734
+		 0.45171607 0.69514734 0.5 0.68749994 0.5 0.68749994 0.5 0.68749994 0.54828393 0.69514734
+		 0.54828393 0.69514734 0.54828393 0.69514734 0.59184152 0.71734101 0.59184152 0.71734101
+		 0.59184152 0.71734101 0.62640899 0.75190848 0.62640899 0.75190848 0.62640899 0.75190848
+		 0.64860266 0.79546607 0.64860266 0.79546607 0.64860266 0.79546607 0.65625 0.84375
+		 0.65625 0.84375 0.65625 0.84375 0.375 0 0.625 0 0.625 0.25 0.375 0.25 0.625 0.5 0.375
+		 0.5 0.625 0.75 0.375 0.75 0.625 1 0.375 1 0.875 0 0.875 0.25 0.125 0 0.125 0.25 0.375
+		 0 0.625 0 0.625 0.25 0.375 0.25 0.625 0.5 0.375 0.5 0.625 0.75 0.375 0.75 0.625 1
+		 0.375 1 0.875 0 0.875 0.25 0.125 0 0.125 0.25 0.375 0 0.625 0 0.625 0.25 0.375 0.25
+		 0.625 0.5 0.375 0.5 0.625 0.75 0.375 0.75 0.625 1 0.375 1 0.875 0 0.875 0.25 0.125
+		 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 236 ".vt";
+	setAttr ".vt[0:165]"  0.18446887 2.46014118 0.84488428 0.1585176 2.46014118 0.79395199
+		 0.11809751 2.46014118 0.75353193 0.067165256 2.46014118 0.72758067 0.010706417 2.46014118 0.71863848
+		 -0.045752417 2.46014118 0.72758067 -0.096684657 2.46014118 0.75353199 -0.13710469 2.46014118 0.79395205
+		 -0.16305599 2.46014118 0.84488428 -0.17199817 2.46014118 0.90134311 -0.16305599 2.46014118 0.95780194
+		 -0.13710469 2.46014118 1.008734107 -0.096684635 2.46014118 1.049154162 -0.045752402 2.46014118 1.075105429
+		 0.010706412 2.46014118 1.084047675 0.067165226 2.46014118 1.075105429 0.11809745 2.46014118 1.049154162
+		 0.15851751 2.46014118 1.008734107 0.18446878 2.46014118 0.95780194 0.19341096 2.46014118 0.90134311
+		 0.18446887 2.91568136 0.84488428 0.1585176 2.91568136 0.79395199 0.11809751 2.91568136 0.75353193
+		 0.067165256 2.91568136 0.72758067 0.010706417 2.91568136 0.71863848 -0.045752417 2.91568136 0.72758067
+		 -0.096684657 2.91568136 0.75353199 -0.13710469 2.91568136 0.79395205 -0.16305599 2.91568136 0.84488428
+		 -0.17199817 2.91568136 0.90134311 -0.16305599 2.91568136 0.95780194 -0.13710469 2.91568136 1.008734107
+		 -0.096684635 2.91568136 1.049154162 -0.045752402 2.91568136 1.075105429 0.010706412 2.91568136 1.084047675
+		 0.067165226 2.91568136 1.075105429 0.11809745 2.91568136 1.049154162 0.15851751 2.91568136 1.008734107
+		 0.18446878 2.91568136 0.95780194 0.19341096 2.91568136 0.90134311 0.010706417 2.46014118 0.90134311
+		 0.010706417 2.91568136 0.90134311 -0.21411401 1.86978471 0.92617226 -0.47554573 1.86978471 0.92617226
+		 -0.21411401 1.59879816 0.92617226 -0.32917804 1.59879816 0.92617226 -0.21411401 1.59879816 0.87770748
+		 -0.32917804 1.59879816 0.87770748 -0.21411401 1.86978471 0.87770748 -0.47554573 1.86978471 0.87770748
+		 0.012169473 1.58863378 1.054877043 0.012169473 1.65917158 1.19331551 0.012169473 1.76903665 1.30318058
+		 0.012169473 1.90747488 1.37371826 0.012169473 2.060934544 1.39802384 0.012169473 2.21439433 1.37371826
+		 0.012169473 2.35283256 1.30318034 0.012169473 2.46269774 1.19331527 0.012169473 2.53323555 1.054877043
+		 0.012169473 2.55754089 0.90141726 0.012169473 2.53323555 0.74795747 0.012169473 2.46269751 0.60951936
+		 0.012169473 2.35283256 0.49965429 0.012169473 2.21439433 0.42911661 0.012169473 2.060934544 0.40481091
+		 0.012169473 1.90747488 0.42911661 0.012169473 1.76903689 0.49965441 0.012169473 1.65917182 0.60951936
+		 0.012169473 1.58863413 0.74795747 0.012169473 1.56432855 0.90141726 -0.22595838 1.58863378 1.054877043
+		 -0.22595838 1.65917158 1.19331551 -0.22595838 1.76903665 1.30318058 -0.22595838 1.90747488 1.37371826
+		 -0.22595838 2.060934544 1.39802384 -0.22595838 2.21439433 1.37371826 -0.22595838 2.35283256 1.30318034
+		 -0.22595838 2.46269774 1.19331527 -0.22595838 2.53323555 1.054877043 -0.22595838 2.55754089 0.90141726
+		 -0.22595838 2.53323555 0.74795747 -0.22595838 2.46269751 0.60951936 -0.22595838 2.35283256 0.49965429
+		 -0.22595838 2.21439433 0.42911661 -0.22595838 2.060934544 0.40481091 -0.22595838 1.90747488 0.42911661
+		 -0.22595838 1.76903689 0.49965441 -0.22595838 1.65917182 0.60951936 -0.22595838 1.58863413 0.74795747
+		 -0.22595838 1.56432855 0.90141726 0.012169473 2.060934544 0.90141726 -0.22595838 1.83440006 0.97502303
+		 -0.22595838 1.86823261 1.041423798 -0.22595838 1.92092836 1.09411943 -0.22595838 1.98732913 1.1279521
+		 -0.22595838 2.060934544 1.13961029 -0.22595838 2.13454032 1.1279521 -0.22595838 2.20094085 1.09411943
+		 -0.22595838 2.25363684 1.041423798 -0.22595838 2.28746939 0.97502303 -0.22595838 2.29912734 0.90141749
+		 -0.22595838 2.28746939 0.82781184 -0.22595838 2.25363636 0.76141131 -0.22595838 2.20094085 0.70871544
+		 -0.22595838 2.13454032 0.67488253 -0.22595838 2.060934544 0.6632247 -0.22595838 1.98732913 0.67488253
+		 -0.22595838 1.9209286 0.70871544 -0.22595838 1.86823285 0.76141131 -0.22595838 1.83440006 0.82781184
+		 -0.22595838 1.82274187 0.90141749 -0.49398562 1.83440006 0.97502303 -0.49398562 1.86823261 1.041423798
+		 -0.49398562 2.060934544 0.90141749 -0.49398562 1.9209286 1.09411943 -0.49398562 1.98732913 1.1279521
+		 -0.49398562 2.060934544 1.13961029 -0.49398562 2.13454032 1.1279521 -0.49398562 2.20094085 1.09411943
+		 -0.49398562 2.25363684 1.041423798 -0.49398562 2.28746939 0.97502303 -0.49398562 2.29912734 0.90141749
+		 -0.49398562 2.28746939 0.82781184 -0.49398562 2.25363636 0.76141131 -0.49398562 2.20094085 0.70871544
+		 -0.49398562 2.13454032 0.67488253 -0.49398562 2.060934544 0.6632247 -0.49398562 1.98732913 0.67488253
+		 -0.49398562 1.9209286 0.70871544 -0.49398562 1.86823285 0.76141131 -0.49398562 1.83440006 0.82781184
+		 -0.49398562 1.82274187 0.90141749 -0.22595838 1.6947633 1.02039361 -0.22595838 1.74945056 1.12772369
+		 -0.22595838 1.91153443 1.009963274 -0.22595838 1.88530409 0.95848334 -0.22595838 1.83462846 1.21290135
+		 -0.22595838 1.95238912 1.050817966 -0.22595838 1.94195855 1.26758873 -0.22595838 2.0038688183 1.077048182
+		 -0.22595838 2.060934544 1.28643262 -0.22595838 2.060934544 1.086086631 -0.22595838 2.17991066 1.26758873
+		 -0.22595838 2.11800075 1.077048182 -0.22595838 2.28724098 1.21290123 -0.22595838 2.16948009 1.050817847
+		 -0.22595838 2.37241864 1.12772369 -0.22595838 2.21033525 1.009963274 -0.22595838 2.4271059 1.02039361
+		 -0.22595838 2.23656511 0.95848334 -0.22595838 2.44594955 0.90141726 -0.22595838 2.24560356 0.90141749
+		 -0.22595838 2.4271059 0.78244126 -0.22595838 2.23656511 0.84435153 -0.22595838 2.37241864 0.67511106
+		 -0.22595838 2.21033502 0.79287171 -0.22595838 2.28724098 0.58993351 -0.22595838 2.16948009 0.75201702
+		 -0.22595838 2.17991066 0.53524625 -0.22595838 2.11800075 0.72578681 -0.22595838 2.060934544 0.51640213
+		 -0.22595838 2.060934544 0.71674836 -0.22595838 1.94195855 0.53524625 -0.22595838 2.0038688183 0.72578681
+		 -0.22595838 1.83462846 0.58993375 -0.22595838 1.95238912 0.75201702;
+	setAttr ".vt[166:235]" -0.22595838 1.74945104 0.67511106 -0.22595838 1.91153443 0.79287171
+		 -0.22595838 1.69476354 0.78244126 -0.22595838 1.88530409 0.84435153 -0.22595838 1.67591965 0.90141726
+		 -0.22595838 1.87626588 0.90141749 -0.098591015 1.6947633 1.02039361 -0.098591015 1.74945056 1.12772369
+		 -0.098591015 1.91153443 1.009963274 -0.098591015 1.88530409 0.95848334 -0.098591015 1.83462846 1.21290135
+		 -0.098591015 1.95238912 1.050817966 -0.098591015 1.94195855 1.26758873 -0.098591015 2.0038688183 1.077048182
+		 -0.098591015 2.060934544 1.28643262 -0.098591015 2.060934544 1.086086631 -0.098591015 2.17991066 1.26758873
+		 -0.098591015 2.11800075 1.077048182 -0.098591015 2.28724098 1.21290123 -0.098591015 2.16948009 1.050817847
+		 -0.098591015 2.37241864 1.12772369 -0.098591015 2.21033525 1.009963274 -0.098591015 2.4271059 1.02039361
+		 -0.098591015 2.23656511 0.95848334 -0.098591015 2.44594955 0.90141726 -0.098591015 2.24560356 0.90141749
+		 -0.098591015 2.4271059 0.78244126 -0.098591015 2.23656511 0.84435153 -0.098591015 2.37241864 0.67511106
+		 -0.098591015 2.21033502 0.79287171 -0.098591015 2.28724098 0.58993351 -0.098591015 2.16948009 0.75201702
+		 -0.098591015 2.17991066 0.53524625 -0.098591015 2.11800075 0.72578681 -0.098591015 2.060934544 0.51640213
+		 -0.098591015 2.060934544 0.71674836 -0.098591015 1.94195855 0.53524625 -0.098591015 2.0038688183 0.72578681
+		 -0.098591015 1.83462846 0.58993375 -0.098591015 1.95238912 0.75201702 -0.098591015 1.74945104 0.67511106
+		 -0.098591015 1.91153443 0.79287171 -0.098591015 1.69476354 0.78244126 -0.098591015 1.88530409 0.84435153
+		 -0.098591015 1.67591965 0.90141726 -0.098591015 1.87626588 0.90141749 -0.21411401 2.25558734 0.87770748
+		 -0.47554573 2.25558734 0.87770748 -0.21411401 2.52657413 0.87770748 -0.32917804 2.52657413 0.87770748
+		 -0.21411401 2.52657413 0.92617226 -0.32917804 2.52657413 0.92617226 -0.21411401 2.25558734 0.92617226
+		 -0.47554573 2.25558734 0.92617226 -0.21803379 2.087801456 1.076220036 -0.47946545 2.087801456 1.076220036
+		 -0.21803379 2.087801456 1.34720659 -0.33309782 2.087801456 1.34720659 -0.21803379 2.03933692 1.34720659
+		 -0.33309782 2.03933692 1.34720659 -0.21803379 2.03933692 1.076220036 -0.47946545 2.03933692 1.076220036
+		 -0.21803379 2.03933692 0.71326685 -0.47946545 2.03933692 0.71326685 -0.21803379 2.03933692 0.44228017
+		 -0.33309782 2.03933692 0.44228017 -0.21803379 2.087801456 0.44228017 -0.33309782 2.087801456 0.44228017
+		 -0.21803379 2.087801456 0.71326685 -0.47946545 2.087801456 0.71326685;
+	setAttr -s 488 ".ed";
+	setAttr ".ed[0:165]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0 7 8 0 8 9 0
+		 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 16 0 16 17 0 17 18 0 18 19 0 19 0 0
+		 20 21 0 21 22 0 22 23 0 23 24 0 24 25 0 25 26 0 26 27 0 27 28 0 28 29 0 29 30 0 30 31 0
+		 31 32 0 32 33 0 33 34 0 34 35 0 35 36 0 36 37 0 37 38 0 38 39 0 39 20 0 0 20 1 1 21 1
+		 2 22 1 3 23 1 4 24 1 5 25 1 6 26 1 7 27 1 8 28 1 9 29 1 10 30 1 11 31 1 12 32 1 13 33 1
+		 14 34 1 15 35 1 16 36 1 17 37 1 18 38 1 19 39 1 40 0 1 40 1 1 40 2 1 40 3 1 40 4 1
+		 40 5 1 40 6 1 40 7 1 40 8 1 40 9 1 40 10 1 40 11 1 40 12 1 40 13 1 40 14 1 40 15 1
+		 40 16 1 40 17 1 40 18 1 40 19 1 20 41 1 21 41 1 22 41 1 23 41 1 24 41 1 25 41 1 26 41 1
+		 27 41 1 28 41 1 29 41 1 30 41 1 31 41 1 32 41 1 33 41 1 34 41 1 35 41 1 36 41 1 37 41 1
+		 38 41 1 39 41 1 42 43 0 44 45 0 46 47 0 48 49 0 42 44 0 43 45 0 44 46 0 45 47 0 46 48 0
+		 47 49 0 48 42 0 49 43 0 50 51 0 51 52 0 52 53 0 53 54 0 54 55 0 55 56 0 56 57 0 57 58 0
+		 58 59 0 59 60 0 60 61 0 61 62 0 62 63 0 63 64 0 64 65 0 65 66 0 66 67 0 67 68 0 68 69 0
+		 69 50 0 70 71 0 71 72 0 72 73 0 73 74 0 74 75 0 75 76 0 76 77 0 77 78 0 78 79 0 79 80 0
+		 80 81 0 81 82 0 82 83 0 83 84 0 84 85 0 85 86 0 86 87 0 87 88 0 88 89 0 89 70 0 50 70 1
+		 51 71 1 52 72 1 53 73 1 54 74 1 55 75 1 56 76 1 57 77 1 58 78 1 59 79 1 60 80 1 61 81 1
+		 62 82 1 63 83 1;
+	setAttr ".ed[166:331]" 64 84 1 65 85 1 66 86 1 67 87 1 68 88 1 69 89 1 90 50 1
+		 90 51 1 90 52 1 90 53 1 90 54 1 90 55 1 90 56 1 90 57 1 90 58 1 90 59 1 90 60 1 90 61 1
+		 90 62 1 90 63 1 90 64 1 90 65 1 90 66 1 90 67 1 90 68 1 90 69 1 91 92 0 92 93 0 93 94 0
+		 94 95 0 95 96 0 96 97 0 97 98 0 98 99 0 99 100 0 100 101 0 101 102 0 102 103 0 103 104 0
+		 104 105 0 105 106 0 106 107 0 107 108 0 108 109 0 109 110 0 110 91 0 91 111 1 92 112 1
+		 111 112 0 112 113 1 111 113 1 93 114 1 112 114 0 114 113 1 94 115 1 114 115 0 115 113 1
+		 95 116 1 115 116 0 116 113 1 96 117 1 116 117 0 117 113 1 97 118 1 117 118 0 118 113 1
+		 98 119 1 118 119 0 119 113 1 99 120 1 119 120 0 120 113 1 100 121 1 120 121 0 121 113 1
+		 101 122 1 121 122 0 122 113 1 102 123 1 122 123 0 123 113 1 103 124 1 123 124 0 124 113 1
+		 104 125 1 124 125 0 125 113 1 105 126 1 125 126 0 126 113 1 106 127 1 126 127 0 127 113 1
+		 107 128 1 127 128 0 128 113 1 108 129 1 128 129 0 129 113 1 109 130 1 129 130 0 130 113 1
+		 110 131 1 130 131 0 131 113 1 131 111 0 70 132 0 71 133 0 132 133 0 92 134 0 91 135 0
+		 135 134 0 72 136 0 133 136 0 93 137 0 134 137 0 73 138 0 136 138 0 94 139 0 137 139 0
+		 74 140 0 138 140 0 95 141 0 139 141 0 75 142 0 140 142 0 96 143 0 141 143 0 76 144 0
+		 142 144 0 97 145 0 143 145 0 77 146 0 144 146 0 98 147 0 145 147 0 78 148 0 146 148 0
+		 99 149 0 147 149 0 79 150 0 148 150 0 100 151 0 149 151 0 80 152 0 150 152 0 101 153 0
+		 151 153 0 81 154 0 152 154 0 102 155 0 153 155 0 82 156 0 154 156 0 103 157 0 155 157 0
+		 83 158 0 156 158 0 104 159 0 157 159 0 84 160 0 158 160 0 105 161 0 159 161 0 85 162 0
+		 160 162 0;
+	setAttr ".ed[332:487]" 106 163 0 161 163 0 86 164 0 162 164 0 107 165 0 163 165 0
+		 87 166 0 164 166 0 108 167 0 165 167 0 88 168 0 166 168 0 109 169 0 167 169 0 89 170 0
+		 168 170 0 110 171 0 169 171 0 170 132 0 171 135 0 132 172 1 133 173 1 172 173 0 134 174 1
+		 173 174 0 135 175 1 175 174 0 172 175 0 136 176 1 173 176 0 137 177 1 176 177 0 174 177 0
+		 138 178 1 176 178 0 139 179 1 178 179 0 177 179 0 140 180 1 178 180 0 141 181 1 180 181 0
+		 179 181 0 142 182 1 180 182 0 143 183 1 182 183 0 181 183 0 144 184 1 182 184 0 145 185 1
+		 184 185 0 183 185 0 146 186 1 184 186 0 147 187 1 186 187 0 185 187 0 148 188 1 186 188 0
+		 149 189 1 188 189 0 187 189 0 150 190 1 188 190 0 151 191 1 190 191 0 189 191 0 152 192 1
+		 190 192 0 153 193 1 192 193 0 191 193 0 154 194 1 192 194 0 155 195 1 194 195 0 193 195 0
+		 156 196 1 194 196 0 157 197 1 196 197 0 195 197 0 158 198 1 196 198 0 159 199 1 198 199 0
+		 197 199 0 160 200 1 198 200 0 161 201 1 200 201 0 199 201 0 162 202 1 200 202 0 163 203 1
+		 202 203 0 201 203 0 164 204 1 202 204 0 165 205 1 204 205 0 203 205 0 166 206 1 204 206 0
+		 167 207 1 206 207 0 205 207 0 168 208 1 206 208 0 169 209 1 208 209 0 207 209 0 170 210 1
+		 208 210 0 171 211 1 210 211 0 209 211 0 210 172 0 211 175 0 212 213 0 214 215 0 216 217 0
+		 218 219 0 212 214 0 213 215 0 214 216 0 215 217 0 216 218 0 217 219 0 218 212 0 219 213 0
+		 220 221 0 222 223 0 224 225 0 226 227 0 220 222 0 221 223 0 222 224 0 223 225 0 224 226 0
+		 225 227 0 226 220 0 227 221 0 228 229 0 230 231 0 232 233 0 234 235 0 228 230 0 229 231 0
+		 230 232 0 231 233 0 232 234 0 233 235 0 234 228 0 235 229 0;
+	setAttr -s 264 -ch 976 ".fc[0:263]" -type "polyFaces" 
+		f 4 0 41 -21 -41
+		mu 0 4 20 21 42 41
+		f 4 1 42 -22 -42
+		mu 0 4 21 22 43 42
+		f 4 2 43 -23 -43
+		mu 0 4 22 23 44 43
+		f 4 3 44 -24 -44
+		mu 0 4 23 24 45 44
+		f 4 4 45 -25 -45
+		mu 0 4 24 25 46 45
+		f 4 5 46 -26 -46
+		mu 0 4 25 26 47 46
+		f 4 6 47 -27 -47
+		mu 0 4 26 27 48 47
+		f 4 7 48 -28 -48
+		mu 0 4 27 28 49 48
+		f 4 8 49 -29 -49
+		mu 0 4 28 29 50 49
+		f 4 9 50 -30 -50
+		mu 0 4 29 30 51 50
+		f 4 10 51 -31 -51
+		mu 0 4 30 31 52 51
+		f 4 11 52 -32 -52
+		mu 0 4 31 32 53 52
+		f 4 12 53 -33 -53
+		mu 0 4 32 33 54 53
+		f 4 13 54 -34 -54
+		mu 0 4 33 34 55 54
+		f 4 14 55 -35 -55
+		mu 0 4 34 35 56 55
+		f 4 15 56 -36 -56
+		mu 0 4 35 36 57 56
+		f 4 16 57 -37 -57
+		mu 0 4 36 37 58 57
+		f 4 17 58 -38 -58
+		mu 0 4 37 38 59 58
+		f 4 18 59 -39 -59
+		mu 0 4 38 39 60 59
+		f 4 19 40 -40 -60
+		mu 0 4 39 40 61 60
+		f 3 -1 -61 61
+		mu 0 3 1 0 82
+		f 3 -2 -62 62
+		mu 0 3 2 1 82
+		f 3 -3 -63 63
+		mu 0 3 3 2 82
+		f 3 -4 -64 64
+		mu 0 3 4 3 82
+		f 3 -5 -65 65
+		mu 0 3 5 4 82
+		f 3 -6 -66 66
+		mu 0 3 6 5 82
+		f 3 -7 -67 67
+		mu 0 3 7 6 82
+		f 3 -8 -68 68
+		mu 0 3 8 7 82
+		f 3 -9 -69 69
+		mu 0 3 9 8 82
+		f 3 -10 -70 70
+		mu 0 3 10 9 82
+		f 3 -11 -71 71
+		mu 0 3 11 10 82
+		f 3 -12 -72 72
+		mu 0 3 12 11 82
+		f 3 -13 -73 73
+		mu 0 3 13 12 82
+		f 3 -14 -74 74
+		mu 0 3 14 13 82
+		f 3 -15 -75 75
+		mu 0 3 15 14 82
+		f 3 -16 -76 76
+		mu 0 3 16 15 82
+		f 3 -17 -77 77
+		mu 0 3 17 16 82
+		f 3 -18 -78 78
+		mu 0 3 18 17 82
+		f 3 -19 -79 79
+		mu 0 3 19 18 82
+		f 3 -20 -80 60
+		mu 0 3 0 19 82
+		f 3 20 81 -81
+		mu 0 3 80 79 83
+		f 3 21 82 -82
+		mu 0 3 79 78 83
+		f 3 22 83 -83
+		mu 0 3 78 77 83
+		f 3 23 84 -84
+		mu 0 3 77 76 83
+		f 3 24 85 -85
+		mu 0 3 76 75 83
+		f 3 25 86 -86
+		mu 0 3 75 74 83
+		f 3 26 87 -87
+		mu 0 3 74 73 83
+		f 3 27 88 -88
+		mu 0 3 73 72 83
+		f 3 28 89 -89
+		mu 0 3 72 71 83
+		f 3 29 90 -90
+		mu 0 3 71 70 83
+		f 3 30 91 -91
+		mu 0 3 70 69 83
+		f 3 31 92 -92
+		mu 0 3 69 68 83
+		f 3 32 93 -93
+		mu 0 3 68 67 83
+		f 3 33 94 -94
+		mu 0 3 67 66 83
+		f 3 34 95 -95
+		mu 0 3 66 65 83
+		f 3 35 96 -96
+		mu 0 3 65 64 83
+		f 3 36 97 -97
+		mu 0 3 64 63 83
+		f 3 37 98 -98
+		mu 0 3 63 62 83
+		f 3 38 99 -99
+		mu 0 3 62 81 83
+		f 3 39 80 -100
+		mu 0 3 81 80 83
+		f 4 100 105 -102 -105
+		mu 0 4 84 85 86 87
+		f 4 101 107 -103 -107
+		mu 0 4 87 86 88 89
+		f 4 102 109 -104 -109
+		mu 0 4 89 88 90 91
+		f 4 103 111 -101 -111
+		mu 0 4 91 90 92 93
+		f 4 -112 -110 -108 -106
+		mu 0 4 85 94 95 86
+		f 4 110 104 106 108
+		mu 0 4 96 84 87 97
+		f 4 112 153 -133 -153
+		mu 0 4 98 99 100 101
+		f 4 113 154 -134 -154
+		mu 0 4 99 102 103 100
+		f 4 114 155 -135 -155
+		mu 0 4 102 104 105 103
+		f 4 115 156 -136 -156
+		mu 0 4 104 106 107 105
+		f 4 116 157 -137 -157
+		mu 0 4 106 108 109 107
+		f 4 117 158 -138 -158
+		mu 0 4 108 110 111 109
+		f 4 118 159 -139 -159
+		mu 0 4 110 112 113 111
+		f 4 119 160 -140 -160
+		mu 0 4 112 114 115 113
+		f 4 120 161 -141 -161
+		mu 0 4 114 116 117 115
+		f 4 121 162 -142 -162
+		mu 0 4 116 118 119 117
+		f 4 122 163 -143 -163
+		mu 0 4 118 120 121 119
+		f 4 123 164 -144 -164
+		mu 0 4 120 122 123 121
+		f 4 124 165 -145 -165
+		mu 0 4 122 124 125 123
+		f 4 125 166 -146 -166
+		mu 0 4 124 126 127 125
+		f 4 126 167 -147 -167
+		mu 0 4 126 128 129 127
+		f 4 127 168 -148 -168
+		mu 0 4 128 130 131 129
+		f 4 128 169 -149 -169
+		mu 0 4 130 132 133 131
+		f 4 129 170 -150 -170
+		mu 0 4 132 134 135 133
+		f 4 130 171 -151 -171
+		mu 0 4 134 136 137 135
+		f 4 131 152 -152 -172
+		mu 0 4 136 138 139 137
+		f 3 -113 -173 173
+		mu 0 3 140 141 142
+		f 3 -114 -174 174
+		mu 0 3 143 140 142
+		f 3 -115 -175 175
+		mu 0 3 144 143 142
+		f 3 -116 -176 176
+		mu 0 3 145 144 142
+		f 3 -117 -177 177
+		mu 0 3 146 145 142
+		f 3 -118 -178 178
+		mu 0 3 147 146 142
+		f 3 -119 -179 179
+		mu 0 3 148 147 142
+		f 3 -120 -180 180
+		mu 0 3 149 148 142
+		f 3 -121 -181 181
+		mu 0 3 150 149 142
+		f 3 -122 -182 182
+		mu 0 3 151 150 142
+		f 3 -123 -183 183
+		mu 0 3 152 151 142
+		f 3 -124 -184 184
+		mu 0 3 153 152 142
+		f 3 -125 -185 185
+		mu 0 3 154 153 142
+		f 3 -126 -186 186
+		mu 0 3 155 154 142
+		f 3 -127 -187 187
+		mu 0 3 156 155 142
+		f 3 -128 -188 188
+		mu 0 3 157 156 142
+		f 3 -129 -189 189
+		mu 0 3 158 157 142
+		f 3 -130 -190 190
+		mu 0 3 159 158 142
+		f 3 -131 -191 191
+		mu 0 3 160 159 142
+		f 3 -132 -192 172
+		mu 0 3 141 160 142
+		f 3 214 215 -217
+		mu 0 3 161 162 163
+		f 3 218 219 -216
+		mu 0 3 162 164 163
+		f 3 221 222 -220
+		mu 0 3 164 165 163
+		f 3 224 225 -223
+		mu 0 3 165 166 163
+		f 3 227 228 -226
+		mu 0 3 166 167 163
+		f 3 230 231 -229
+		mu 0 3 167 168 163
+		f 3 233 234 -232
+		mu 0 3 168 169 163
+		f 3 236 237 -235
+		mu 0 3 169 170 163
+		f 3 239 240 -238
+		mu 0 3 170 171 163
+		f 3 242 243 -241
+		mu 0 3 171 172 163
+		f 3 245 246 -244
+		mu 0 3 172 173 163
+		f 3 248 249 -247
+		mu 0 3 173 174 163
+		f 3 251 252 -250
+		mu 0 3 174 175 163
+		f 3 254 255 -253
+		mu 0 3 175 176 163
+		f 3 257 258 -256
+		mu 0 3 176 177 163
+		f 3 260 261 -259
+		mu 0 3 177 178 163
+		f 3 263 264 -262
+		mu 0 3 178 179 163
+		f 3 266 267 -265
+		mu 0 3 179 180 163
+		f 3 269 270 -268
+		mu 0 3 180 181 163
+		f 3 271 216 -271
+		mu 0 3 181 161 163
+		f 4 354 356 -359 -360
+		mu 0 4 182 183 184 185
+		f 4 361 363 -365 -357
+		mu 0 4 183 186 187 184
+		f 4 366 368 -370 -364
+		mu 0 4 186 188 189 187
+		f 4 371 373 -375 -369
+		mu 0 4 188 190 191 189
+		f 4 376 378 -380 -374
+		mu 0 4 190 192 193 191
+		f 4 381 383 -385 -379
+		mu 0 4 192 194 195 193
+		f 4 386 388 -390 -384
+		mu 0 4 194 196 197 195
+		f 4 391 393 -395 -389
+		mu 0 4 196 198 199 197
+		f 4 396 398 -400 -394
+		mu 0 4 198 200 201 199
+		f 4 401 403 -405 -399
+		mu 0 4 200 202 203 201
+		f 4 406 408 -410 -404
+		mu 0 4 202 204 205 203
+		f 4 411 413 -415 -409
+		mu 0 4 204 206 207 205
+		f 4 416 418 -420 -414
+		mu 0 4 206 208 209 207
+		f 4 421 423 -425 -419
+		mu 0 4 208 210 211 209
+		f 4 426 428 -430 -424
+		mu 0 4 210 212 213 211
+		f 4 431 433 -435 -429
+		mu 0 4 212 214 215 213
+		f 4 436 438 -440 -434
+		mu 0 4 214 216 217 215
+		f 4 441 443 -445 -439
+		mu 0 4 216 218 219 217
+		f 4 446 448 -450 -444
+		mu 0 4 218 220 221 219
+		f 4 450 359 -452 -449
+		mu 0 4 220 182 185 221
+		f 4 192 213 -215 -213
+		mu 0 4 222 223 162 161
+		f 4 193 217 -219 -214
+		mu 0 4 223 224 164 162
+		f 4 194 220 -222 -218
+		mu 0 4 224 225 165 164
+		f 4 195 223 -225 -221
+		mu 0 4 225 226 166 165
+		f 4 196 226 -228 -224
+		mu 0 4 226 227 167 166
+		f 4 197 229 -231 -227
+		mu 0 4 227 228 168 167
+		f 4 198 232 -234 -230
+		mu 0 4 228 229 169 168
+		f 4 199 235 -237 -233
+		mu 0 4 229 230 170 169
+		f 4 200 238 -240 -236
+		mu 0 4 230 231 171 170
+		f 4 201 241 -243 -239
+		mu 0 4 231 232 172 171
+		f 4 202 244 -246 -242
+		mu 0 4 232 233 173 172
+		f 4 203 247 -249 -245
+		mu 0 4 233 234 174 173
+		f 4 204 250 -252 -248
+		mu 0 4 234 235 175 174
+		f 4 205 253 -255 -251
+		mu 0 4 235 236 176 175
+		f 4 206 256 -258 -254
+		mu 0 4 236 237 177 176
+		f 4 207 259 -261 -257
+		mu 0 4 237 238 178 177
+		f 4 208 262 -264 -260
+		mu 0 4 238 239 179 178
+		f 4 209 265 -267 -263
+		mu 0 4 239 240 180 179
+		f 4 210 268 -270 -266
+		mu 0 4 240 241 181 180
+		f 4 211 212 -272 -269
+		mu 0 4 241 222 161 181
+		f 4 132 273 -275 -273
+		mu 0 4 242 243 244 245
+		f 4 -193 276 277 -276
+		mu 0 4 223 222 246 247
+		f 4 133 278 -280 -274
+		mu 0 4 243 248 249 244
+		f 4 -194 275 281 -281
+		mu 0 4 224 223 247 250
+		f 4 134 282 -284 -279
+		mu 0 4 248 251 252 249
+		f 4 -195 280 285 -285
+		mu 0 4 225 224 250 253
+		f 4 135 286 -288 -283
+		mu 0 4 251 254 255 252
+		f 4 -196 284 289 -289
+		mu 0 4 226 225 253 256
+		f 4 136 290 -292 -287
+		mu 0 4 254 257 258 255
+		f 4 -197 288 293 -293
+		mu 0 4 227 226 256 259
+		f 4 137 294 -296 -291
+		mu 0 4 257 260 261 258
+		f 4 -198 292 297 -297
+		mu 0 4 228 227 259 262
+		f 4 138 298 -300 -295
+		mu 0 4 260 263 264 261
+		f 4 -199 296 301 -301
+		mu 0 4 229 228 262 265
+		f 4 139 302 -304 -299
+		mu 0 4 263 266 267 264
+		f 4 -200 300 305 -305
+		mu 0 4 230 229 265 268
+		f 4 140 306 -308 -303
+		mu 0 4 266 269 270 267
+		f 4 -201 304 309 -309
+		mu 0 4 231 230 268 271
+		f 4 141 310 -312 -307
+		mu 0 4 269 272 273 270
+		f 4 -202 308 313 -313
+		mu 0 4 232 231 271 274
+		f 4 142 314 -316 -311
+		mu 0 4 272 275 276 273
+		f 4 -203 312 317 -317
+		mu 0 4 233 232 274 277
+		f 4 143 318 -320 -315
+		mu 0 4 275 278 279 276
+		f 4 -204 316 321 -321
+		mu 0 4 234 233 277 280
+		f 4 144 322 -324 -319
+		mu 0 4 278 281 282 279
+		f 4 -205 320 325 -325
+		mu 0 4 235 234 280 283
+		f 4 145 326 -328 -323
+		mu 0 4 281 284 285 282
+		f 4 -206 324 329 -329
+		mu 0 4 236 235 283 286
+		f 4 146 330 -332 -327
+		mu 0 4 284 287 288 285
+		f 4 -207 328 333 -333
+		mu 0 4 237 236 286 289
+		f 4 147 334 -336 -331
+		mu 0 4 287 290 291 288
+		f 4 -208 332 337 -337
+		mu 0 4 238 237 289 292
+		f 4 148 338 -340 -335
+		mu 0 4 290 293 294 291
+		f 4 -209 336 341 -341
+		mu 0 4 239 238 292 295
+		f 4 149 342 -344 -339
+		mu 0 4 293 296 297 294
+		f 4 -210 340 345 -345
+		mu 0 4 240 239 295 298
+		f 4 150 346 -348 -343
+		mu 0 4 296 299 300 297
+		f 4 -211 344 349 -349
+		mu 0 4 241 240 298 301
+		f 4 151 272 -351 -347
+		mu 0 4 299 242 245 300
+		f 4 -212 348 351 -277
+		mu 0 4 222 241 301 246
+		f 4 274 353 -355 -353
+		mu 0 4 245 244 183 182
+		f 4 -278 357 358 -356
+		mu 0 4 247 246 185 184
+		f 4 279 360 -362 -354
+		mu 0 4 244 249 186 183
+		f 4 -282 355 364 -363
+		mu 0 4 250 247 184 187
+		f 4 283 365 -367 -361
+		mu 0 4 249 252 188 186
+		f 4 -286 362 369 -368
+		mu 0 4 253 250 187 189
+		f 4 287 370 -372 -366
+		mu 0 4 252 255 190 188
+		f 4 -290 367 374 -373
+		mu 0 4 256 253 189 191
+		f 4 291 375 -377 -371
+		mu 0 4 255 258 192 190
+		f 4 -294 372 379 -378
+		mu 0 4 259 256 191 193
+		f 4 295 380 -382 -376
+		mu 0 4 258 261 194 192
+		f 4 -298 377 384 -383
+		mu 0 4 262 259 193 195
+		f 4 299 385 -387 -381
+		mu 0 4 261 264 196 194
+		f 4 -302 382 389 -388
+		mu 0 4 265 262 195 197
+		f 4 303 390 -392 -386
+		mu 0 4 264 267 198 196
+		f 4 -306 387 394 -393
+		mu 0 4 268 265 197 199
+		f 4 307 395 -397 -391
+		mu 0 4 267 270 200 198
+		f 4 -310 392 399 -398
+		mu 0 4 271 268 199 201
+		f 4 311 400 -402 -396
+		mu 0 4 270 273 202 200
+		f 4 -314 397 404 -403
+		mu 0 4 274 271 201 203
+		f 4 315 405 -407 -401
+		mu 0 4 273 276 204 202
+		f 4 -318 402 409 -408
+		mu 0 4 277 274 203 205
+		f 4 319 410 -412 -406
+		mu 0 4 276 279 206 204
+		f 4 -322 407 414 -413
+		mu 0 4 280 277 205 207
+		f 4 323 415 -417 -411
+		mu 0 4 279 282 208 206
+		f 4 -326 412 419 -418
+		mu 0 4 283 280 207 209
+		f 4 327 420 -422 -416
+		mu 0 4 282 285 210 208
+		f 4 -330 417 424 -423
+		mu 0 4 286 283 209 211
+		f 4 331 425 -427 -421
+		mu 0 4 285 288 212 210
+		f 4 -334 422 429 -428
+		mu 0 4 289 286 211 213
+		f 4 335 430 -432 -426
+		mu 0 4 288 291 214 212
+		f 4 -338 427 434 -433
+		mu 0 4 292 289 213 215
+		f 4 339 435 -437 -431
+		mu 0 4 291 294 216 214
+		f 4 -342 432 439 -438
+		mu 0 4 295 292 215 217
+		f 4 343 440 -442 -436
+		mu 0 4 294 297 218 216
+		f 4 -346 437 444 -443
+		mu 0 4 298 295 217 219
+		f 4 347 445 -447 -441
+		mu 0 4 297 300 220 218
+		f 4 -350 442 449 -448
+		mu 0 4 301 298 219 221
+		f 4 350 352 -451 -446
+		mu 0 4 300 245 182 220
+		f 4 -352 447 451 -358
+		mu 0 4 246 301 221 185
+		f 4 452 457 -454 -457
+		mu 0 4 302 303 304 305
+		f 4 453 459 -455 -459
+		mu 0 4 305 304 306 307
+		f 4 454 461 -456 -461
+		mu 0 4 307 306 308 309
+		f 4 455 463 -453 -463
+		mu 0 4 309 308 310 311
+		f 4 -464 -462 -460 -458
+		mu 0 4 303 312 313 304
+		f 4 462 456 458 460
+		mu 0 4 314 302 305 315
+		f 4 464 469 -466 -469
+		mu 0 4 316 317 318 319
+		f 4 465 471 -467 -471
+		mu 0 4 319 318 320 321
+		f 4 466 473 -468 -473
+		mu 0 4 321 320 322 323
+		f 4 467 475 -465 -475
+		mu 0 4 323 322 324 325
+		f 4 -476 -474 -472 -470
+		mu 0 4 317 326 327 318
+		f 4 474 468 470 472
+		mu 0 4 328 316 319 329
+		f 4 476 481 -478 -481
+		mu 0 4 330 331 332 333
+		f 4 477 483 -479 -483
+		mu 0 4 333 332 334 335
+		f 4 478 485 -480 -485
+		mu 0 4 335 334 336 337
+		f 4 479 487 -477 -487
+		mu 0 4 337 336 338 339
+		f 4 -488 -486 -484 -482
+		mu 0 4 331 340 341 332
+		f 4 486 480 482 484
+		mu 0 4 342 330 333 343;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "0434B2EC-4075-99F2-F9A5-DBA8951DFF77";
+	rename -uid "EF614654-455E-1B12-0C01-F4AB2B7F3098";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "999E4C95-4A8F-8294-A1CF-02B56875486A";
+	rename -uid "C929AA63-45F2-E9FA-024F-E28097DE5442";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "D05B1E93-4D9E-E2C1-A0C7-6C80D42E1813";
+	rename -uid "47ED7345-454A-7D05-D98F-6DAD1FDD671A";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "03B446EC-404B-66FA-E5CD-74B189A519D8";
+	rename -uid "B6F70854-4C45-3759-8B08-A49DB11790CA";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "AB9BA2FA-44C5-0ED6-5B7F-38B2510A3882";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "EB561E42-4888-0866-495C-74ADBC1A7670";
+	rename -uid "B44B9DE5-4059-995E-20CD-7FAB5BADC344";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "7E58BF9C-4537-C346-01E5-1B983C1937E6";
 	setAttr ".g" yes;
@@ -34194,10 +37622,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|group1|group2|camera1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1122\n            -height 1427\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1322\n            -height 1427\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n"
-		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 1\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n"
-		+ "            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1121\n            -height 1427\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
+		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n"
+		+ "            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1321\n            -height 1427\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
 		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n"
 		+ "            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n"
 		+ "            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n"
@@ -34225,11 +37653,11 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n"
 		+ "                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
 		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 50 100 -ps 2 50 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Front View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|group1|group2|camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1122\\n    -height 1427\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|group1|group2|camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1122\\n    -height 1427\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|group1|group2|camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1322\\n    -height 1427\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|group1|group2|camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1322\\n    -height 1427\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 1\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1121\\n    -height 1427\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 1\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1121\\n    -height 1427\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1321\\n    -height 1427\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1321\\n    -height 1427\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -35840,48 +39268,6 @@ createNode groupParts -n "groupParts15";
 createNode groupId -n "groupId132";
 	rename -uid "402D8511-4007-2476-EE17-389FB37F6BF3";
 	setAttr ".ihi" 0;
-createNode groupId -n "groupId133";
-	rename -uid "96E646E9-4A55-DD67-270F-8D9FCF521EAA";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId134";
-	rename -uid "64DA878F-4FA7-906C-3253-DB98E699F64A";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId135";
-	rename -uid "0069FDC4-4EF2-397C-DA6A-A88CC4269D1D";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId136";
-	rename -uid "3F4EED47-49A2-5DA3-A216-A88FC1DCA4B1";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId137";
-	rename -uid "8CD21797-4138-39A3-0A90-6492F3798DD4";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId138";
-	rename -uid "D461C96C-4077-0D7F-5CC9-08A18EC17D4B";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId139";
-	rename -uid "C4E28F23-4A3C-1AEB-DF9E-2F9B279FAB68";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId140";
-	rename -uid "2541E3E4-4C7F-934A-979D-C29043F0FF96";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId141";
-	rename -uid "333B9FCA-400C-7991-937A-58AC9A048F18";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId142";
-	rename -uid "682076E5-43B3-58E6-674E-84B530C2837E";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId143";
-	rename -uid "F5125CA0-4554-7E19-5731-1BB83762311C";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId144";
-	rename -uid "6C3BCADB-4610-202A-A411-21831087FFDD";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId145";
-	rename -uid "EE8B2DFF-4224-B3BF-B845-87BEA8F13EB6";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId146";
-	rename -uid "76BCD0F4-4D32-05F7-19B1-A2BC3FC2A212";
-	setAttr ".ihi" 0;
 createNode polyCube -n "polyCube22";
 	rename -uid "6C35FB2A-47FB-878F-8771-6A8A47E64803";
 	setAttr ".cuv" 4;
@@ -35897,6 +39283,9421 @@ createNode polyCube -n "polyCube25";
 createNode polyCube -n "polyCube26";
 	rename -uid "5D6E03B3-414A-325D-2383-87AC140D6077";
 	setAttr ".cuv" 4;
+createNode polyCube -n "polyCube27";
+	rename -uid "93DD4F80-4D42-9734-04DB-668E656799AB";
+	setAttr ".cuv" 4;
+createNode polySplitRing -n "polySplitRing1";
+	rename -uid "CA7CDB93-4565-D607-E1D8-93BB1E3D4FC8";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "e[4:5]" "e[8:9]";
+	setAttr ".ix" -type "matrix" 1.3104997299069956 0 0 0 0 1 0 0 0 0 6.0613761103635335 0
+		 0 0.51159918109627323 0 1;
+	setAttr ".wt" 0.24215362966060638;
+	setAttr ".re" 5;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing2";
+	rename -uid "769EC0F8-47D3-4609-27A5-FF9BD8560505";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 4 "e[6:7]" "e[10:11]" "e[16]" "e[19]";
+	setAttr ".ix" -type "matrix" 1.3104997299069956 0 0 0 0 1 0 0 0 0 6.0613761103635335 0
+		 0 0.51159918109627323 0 1;
+	setAttr ".wt" 0.69998294115066528;
+	setAttr ".dr" no;
+	setAttr ".re" 6;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing3";
+	rename -uid "B78DB33F-4DAE-DF42-D250-CE94D8B172AD";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 5 "e[6:7]" "e[16]" "e[23]" "e[25]" "e[27]";
+	setAttr ".ix" -type "matrix" 1.3104997299069956 0 0 0 0 1 0 0 0 0 6.0613761103635335 0
+		 0 0.51159918109627323 0 1;
+	setAttr ".wt" 0.27609461545944214;
+	setAttr ".re" 16;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyTweak -n "polyTweak17";
+	rename -uid "30D97E50-4CCC-D76C-7593-58AE59A73DB7";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".tk";
+	setAttr ".tk[4]" -type "float3" 0 -0.7549547 0 ;
+	setAttr ".tk[5]" -type "float3" 0 -0.7549547 0 ;
+	setAttr ".tk[12]" -type "float3" 0 0 -7.4505806e-09 ;
+	setAttr ".tk[17]" -type "float3" 0 0 -7.4505806e-09 ;
+createNode polySplitRing -n "polySplitRing4";
+	rename -uid "57423418-4A22-8069-AFCF-4983458F6CB7";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 6 "e[23]" "e[25]" "e[27]" "e[32]" "e[39]" "e[41]";
+	setAttr ".ix" -type "matrix" 1.3104997299069956 0 0 0 0 1 0 0 0 0 6.0613761103635335 0
+		 0 0.51159918109627323 0 1;
+	setAttr ".wt" 0.6326795220375061;
+	setAttr ".dr" no;
+	setAttr ".re" 32;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyExtrudeFace -n "polyExtrudeFace46";
+	rename -uid "5FEAA2D1-4785-0493-EE47-FEA0F4697B39";
+	setAttr ".ics" -type "componentList" 1 "f[4]";
+	setAttr ".ix" -type "matrix" 1.3104997299069956 0 0 0 0 1 0 0 0 0 6.0613761103635335 0
+		 0 0.51159918109627323 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0.65524989 0.13267601 2.4449725 ;
+	setAttr ".rs" 44093;
+	setAttr ".lt" -type "double3" 0 -2.0415015378430793e-17 0.7398646462569386 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" 0.6552498649534978 0.011599181096273226 1.8592572100898472 ;
+	setAttr ".cbx" -type "double3" 0.6552498649534978 0.2537528256580408 3.0306880551817668 ;
+createNode polyExtrudeFace -n "polyExtrudeFace47";
+	rename -uid "AA68FBA0-4660-F695-C03B-FBAD33889A22";
+	setAttr ".ics" -type "componentList" 1 "f[24]";
+	setAttr ".ix" -type "matrix" 1.3104997299069956 0 0 0 0 1 0 0 0 0 6.0613761103635335 0
+		 0 0.51159918109627323 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0.65524989 0.13267601 -0.64807242 ;
+	setAttr ".rs" 37331;
+	setAttr ".lt" -type "double3" 0 3.96801972749333e-18 0.71232576311077034 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" 0.6552498649534978 0.011599181096273226 -1.212171821970879 ;
+	setAttr ".cbx" -type "double3" 0.6552498649534978 0.2537528256580408 -0.083973067060207671 ;
+createNode polyExtrudeFace -n "polyExtrudeFace48";
+	rename -uid "29126E78-4425-7AEA-B50E-BB84E23AEA80";
+	setAttr ".ics" -type "componentList" 1 "f[22]";
+	setAttr ".ix" -type "matrix" 1.3104997299069956 0 0 0 0 1 0 0 0 0 6.0613761103635335 0
+		 0 0.51159918109627323 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -0.65524989 0.13267601 -0.64807242 ;
+	setAttr ".rs" 39803;
+	setAttr ".lt" -type "double3" 0 0 0.76941731709474503 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -0.6552498649534978 0.011599181096273226 -1.212171821970879 ;
+	setAttr ".cbx" -type "double3" -0.6552498649534978 0.2537528256580408 -0.083973067060207671 ;
+createNode polyExtrudeFace -n "polyExtrudeFace49";
+	rename -uid "B4EFA094-4BA5-73C1-AB91-0D875FD30524";
+	setAttr ".ics" -type "componentList" 1 "f[5]";
+	setAttr ".ix" -type "matrix" 1.3104997299069956 0 0 0 0 1 0 0 0 0 6.0613761103635335 0
+		 0 0.51159918109627323 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -0.65524989 0.13267601 2.4449725 ;
+	setAttr ".rs" 46502;
+	setAttr ".lt" -type "double3" 0 0 0.77980618333393903 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -0.6552498649534978 0.011599181096273226 1.8592572100898472 ;
+	setAttr ".cbx" -type "double3" -0.6552498649534978 0.2537528256580408 3.0306880551817668 ;
+createNode polyExtrudeFace -n "polyExtrudeFace50";
+	rename -uid "8171E065-406F-7FFB-F758-C78A487D015E";
+	setAttr ".ics" -type "componentList" 4 "f[30]" "f[35]" "f[38]" "f[42]";
+	setAttr ".ix" -type "matrix" 1.3104997299069956 0 0 0 0 1 0 0 0 0 6.0613761103635335 0
+		 0 0.51159918109627323 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -0.019970706 0.25375283 0.90925813 ;
+	setAttr ".rs" 51367;
+	setAttr ".lt" -type "double3" 0 0 0.86833626233898498 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -1.4350559818687594 0.2537528256580408 -1.212171821970879 ;
+	setAttr ".cbx" -type "double3" 1.3951145702607952 0.2537528256580408 3.0306880551817668 ;
+createNode polyExtrudeFace -n "polyExtrudeFace51";
+	rename -uid "4E3A209E-4CE0-0379-CF29-AEA487D62024";
+	setAttr ".ics" -type "componentList" 2 "f[30]" "f[42]";
+	setAttr ".ix" -type "matrix" 1.3104997299069956 0 0 0 0 1 0 0 0 0 6.0613761103635335 0
+		 0 0.51159918109627323 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -0.019970706 1.122089 2.9934037 ;
+	setAttr ".rs" 50351;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -1.4350559818687594 1.1220890263721521 1.8592572100898472 ;
+	setAttr ".cbx" -type "double3" 1.3951145702607952 1.1220891455814417 4.127549976733877 ;
+createNode polyTweak -n "polyTweak18";
+	rename -uid "552156CB-4A6E-2449-26DF-66AC3563A318";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".tk";
+	setAttr ".tk[47]" -type "float3" 0 0 0.18095924 ;
+	setAttr ".tk[48]" -type "float3" 0 0 0.18095924 ;
+	setAttr ".tk[58]" -type "float3" 0 0 0.18095924 ;
+	setAttr ".tk[61]" -type "float3" 0 0 0.18095924 ;
+createNode polyExtrudeFace -n "polyExtrudeFace52";
+	rename -uid "023B1BA1-4038-6379-9638-88A41518E31F";
+	setAttr ".ics" -type "componentList" 2 "f[35]" "f[38]";
+	setAttr ".ix" -type "matrix" 1.3104997299069956 0 0 0 0 1 0 0 0 0 6.0613761103635335 0
+		 0 0.51159918109627323 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -0.028545827 1.122089 -1.1785054 ;
+	setAttr ".rs" 59269;
+	setAttr ".lt" -type "double3" -2.2204460492503131e-16 0 0.57005607665540126 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -1.4246672592655474 1.1220890263721521 -2.2730377185565196 ;
+	setAttr ".cbx" -type "double3" 1.3675756052873127 1.1220891455814417 -0.083973067060207671 ;
+createNode polyTweak -n "polyTweak19";
+	rename -uid "D7E3E30F-42CC-7EDC-D969-72878A41014E";
+	setAttr ".uopa" yes;
+	setAttr -s 12 ".tk";
+	setAttr ".tk[50]" -type "float3" 0 0 -0.17502065 ;
+	setAttr ".tk[53]" -type "float3" 0 0 -0.17502065 ;
+	setAttr ".tk[55]" -type "float3" 0 0 -0.17502065 ;
+	setAttr ".tk[56]" -type "float3" 0 0 -0.17502065 ;
+	setAttr ".tk[62]" -type "float3" 0 0.20215286 0 ;
+	setAttr ".tk[63]" -type "float3" 0 0.57814735 0 ;
+	setAttr ".tk[64]" -type "float3" 0 0.57814735 0 ;
+	setAttr ".tk[65]" -type "float3" 0 0.20215286 0 ;
+	setAttr ".tk[66]" -type "float3" 0 0.57814735 0 ;
+	setAttr ".tk[67]" -type "float3" 0 0.20215286 0 ;
+	setAttr ".tk[68]" -type "float3" 0 0.20215286 0 ;
+	setAttr ".tk[69]" -type "float3" 0 0.57814735 0 ;
+createNode polyCube -n "polyCube28";
+	rename -uid "585580CE-486C-E44B-FE97-A190E146B746";
+	setAttr ".cuv" 4;
+createNode polyCylinder -n "polyCylinder7";
+	rename -uid "6BE24F52-42F4-330C-4F1E-2094CA31AE19";
+	setAttr ".sc" 1;
+	setAttr ".cuv" 3;
+createNode polyExtrudeFace -n "polyExtrudeFace53";
+	rename -uid "0A00BBAA-42A6-6594-C6DE-18ABD3200F71";
+	setAttr ".ics" -type "componentList" 1 "f[40:59]";
+	setAttr ".ix" -type "matrix" 0.46722165031094509 0 0 0 0 0.46722165031094509 0 0
+		 0 0 0.46722165031094509 0 0 1.0648410264183166 0.81687020665989563 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -5.5697161e-08 1.5320626 0.81687009 ;
+	setAttr ".rs" 62377;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -0.46722176170526708 1.5320626767292618 0.34964833356030656 ;
+	setAttr ".cbx" -type "double3" 0.46722165031094509 1.5320626767292618 1.2840919126680017 ;
+createNode polyExtrudeFace -n "polyExtrudeFace54";
+	rename -uid "4D3C8E94-4518-08AC-48F0-FE8D96BACEB6";
+	setAttr ".ics" -type "componentList" 1 "f[40:59]";
+	setAttr ".ix" -type "matrix" 0.46722165031094509 0 0 0 0 0.46722165031094509 0 0
+		 0 0 0.46722165031094509 0 0 1.0648410264183166 0.81687020665989563 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -6.962145e-08 1.5320625 0.81687009 ;
+	setAttr ".rs" 45061;
+	setAttr ".lt" -type "double3" 2.7755575615628914e-17 -1.4985603670682635e-16 -0.24008922727066706 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -0.33202662254131521 1.5320625653349396 0.48484347272425843 ;
+	setAttr ".cbx" -type "double3" 0.33202648329841272 1.5320625653349396 1.1488967735040498 ;
+createNode polyTweak -n "polyTweak20";
+	rename -uid "AB994607-460A-467D-B758-8BBCA439A27F";
+	setAttr ".uopa" yes;
+	setAttr -s 21 ".tk[41:61]" -type "float3"  -0.27519763 0 0.08941707 -0.23409706
+		 0 0.17008141 -4.3117957e-08 0 -5.1741534e-08 -0.17008148 0 0.234097 -0.089417145
+		 0 0.27519757 -4.3117957e-08 0 0.28935975 0.089417048 0 0.27519751 0.17008139 0 0.23409694
+		 0.23409693 0 0.17008136 0.27519748 0 0.08941707 0.28935975 0 -5.1741534e-08 0.27519748
+		 0 -0.08941713 0.2340969 0 -0.17008136 0.17008138 0 -0.23409696 0.089417063 0 -0.27519751
+		 -3.4494363e-08 0 -0.28935975 -0.089417085 0 -0.27519751 -0.17008142 0 -0.23409696
+		 -0.23409696 0 -0.17008136 -0.27519751 0 -0.08941713 -0.28935975 0 -5.1741534e-08;
+createNode polyCube -n "polyCube29";
+	rename -uid "33C5C485-4EDF-8DF1-D6DA-C78CC529C03F";
+	setAttr ".cuv" 4;
+createNode polyCylinder -n "polyCylinder8";
+	rename -uid "774B36C1-4FBB-003B-7FC7-13B44917D587";
+	setAttr ".sc" 1;
+	setAttr ".cuv" 3;
+createNode deleteComponent -n "deleteComponent9";
+	rename -uid "99F90B30-4F73-1DC0-29A9-3C8916DBCB45";
+	setAttr ".dc" -type "componentList" 5 "e[4:13]" "e[24:33]" "e[45:53]" "e[65:73]" "e[85:93]";
+createNode polyCylinder -n "polyCylinder9";
+	rename -uid "E6F70650-4245-A5DC-FF9B-1DB141CBE6A1";
+	setAttr ".sc" 1;
+	setAttr ".cuv" 3;
+createNode polyExtrudeFace -n "polyExtrudeFace55";
+	rename -uid "9C6D02AA-450A-FA2A-23C0-8EB7D675F32C";
+	setAttr ".ics" -type "componentList" 1 "f[40:59]";
+	setAttr ".ix" -type "matrix" 0 -0.40819026626383309 0 0 0.09786574878526004 0 0 0
+		 0 0 0.40819026626383309 0 0.11610923624421857 1.9496659789748383 0.92054972759527054 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0.21397498 1.949666 0.92054963 ;
+	setAttr ".rs" 61463;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" 0.21397498502947859 1.5414757127110053 0.51235926669115095 ;
+	setAttr ".cbx" -type "double3" 0.21397498502947859 2.3578563425588146 1.3287400425191753 ;
+createNode polyExtrudeFace -n "polyExtrudeFace56";
+	rename -uid "1F063BF7-4F9F-7C0C-F2B0-67BCB4B0B784";
+	setAttr ".ics" -type "componentList" 1 "f[40:59]";
+	setAttr ".ix" -type "matrix" 0 -0.40819026626383309 0 0 0.09786574878526004 0 0 0
+		 0 0 0.40819026626383309 0 0.11610923624421857 1.9496659789748383 0.92054972759527054 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0.21397497 1.949666 0.92054963 ;
+	setAttr ".rs" 57114;
+	setAttr ".lt" -type "double3" 0 2.6979898306323093e-17 0.22030758848271639 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" 0.21397497336297222 1.7538812075183752 0.72476483448862838 ;
+	setAttr ".cbx" -type "double3" 0.21397497336297222 2.1454507504313014 1.1163344747216977 ;
+createNode polyTweak -n "polyTweak21";
+	rename -uid "FFDBAE7F-4284-494C-29A3-D595C02867A2";
+	setAttr ".uopa" yes;
+	setAttr -s 21 ".tk[41:61]" -type "float3"  -0.49489132 0 0.16079977 -0.42097965
+		 0 0.30585954 0 0 -9.3047454e-08 -0.30585966 0 0.42097962 -0.16079989 0 0.49489111
+		 0 0 0.52035934 0.16079989 0 0.49489111 0.30585936 0 0.42097944 0.42097965 0 0.30585942
+		 0.49489108 0 0.16079974 0.52035904 0 -9.3047454e-08 0.49489108 0 -0.16079988 0.42097941
+		 0 -0.30585951 0.30585936 0 -0.42097956 0.16079989 0 -0.49489111 0 0 -0.52035934 -0.16079989
+		 0 -0.49489111 -0.30585936 0 -0.42097944 -0.42097932 0 -0.30585951 -0.49489087 0 -0.16079988
+		 -0.52035904 0 -9.3047454e-08;
+createNode polyExtrudeFace -n "polyExtrudeFace57";
+	rename -uid "50CDB315-4F5A-1473-F6E6-A0BCB3BC93D1";
+	setAttr ".ics" -type "componentList" 1 "f[60:79]";
+	setAttr ".ix" -type "matrix" 0 -0.40819026626383309 0 0 0.09786574878526004 0 0 0
+		 0 0 0.40819026626383309 0 0.11610923624421857 1.9496659789748383 0.92054972759527054 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0.21397497 1.949666 0.92054963 ;
+	setAttr ".rs" 59540;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" 0.21397497336297222 1.5414757127110053 0.5123592180310792 ;
+	setAttr ".cbx" -type "double3" 0.21397497336297222 2.3578562452386715 1.3287400911792469 ;
+createNode polyExtrudeFace -n "polyExtrudeFace58";
+	rename -uid "1D5BFE87-4A97-DC24-4970-68B8546272FA";
+	setAttr ".ics" -type "componentList" 1 "f[60:79]";
+	setAttr ".ix" -type "matrix" 0 -0.40819026626383309 0 0 0.09786574878526004 0 0 0
+		 0 0 0.40819026626383309 0 0.11610923624421857 1.9496659789748383 0.92054972759527054 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0.21397497 1.949666 0.92054963 ;
+	setAttr ".rs" 58500;
+	setAttr ".lt" -type "double3" 1.1102230246251565e-16 4.3126828403207375e-16 -0.10469080413156912 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" 0.21397497336297222 1.6331991448666061 0.60408267451671604 ;
+	setAttr ".cbx" -type "double3" 0.21397497336297222 2.2661328130830705 1.23701663469361 ;
+createNode polyTweak -n "polyTweak22";
+	rename -uid "FDAF2F4F-4EE5-4998-A34E-35A6975D1D7B";
+	setAttr ".uopa" yes;
+	setAttr -s 40 ".tk[82:121]" -type "float3"  -0.21370976 0 0.069438457
+		 -0.18179244 0 0.13207993 -0.087195113 0 0.063350953 -0.1025039 0 0.033305544 -0.13207988
+		 0 0.18179242 -0.063350938 0 0.087195069 -0.069438502 0 0.21370977 -0.033305526 0
+		 0.10250392 0 0 0.22470762 0 0 0.10777904 0.069438502 0 0.21370977 0.033305526 0 0.10250392
+		 0.13207978 0 0.18179226 0.063350827 0 0.087195031 0.18179244 0 0.1320798 0.087195113
+		 0 0.063350938 0.21370973 0 0.069438428 0.1025039 0 0.033305544 0.22470754 0 -4.0180847e-08
+		 0.10777896 0 6.696807e-08 0.21370973 0 -0.069438487 0.1025039 0 -0.033305518 0.18179224
+		 0 -0.13207982 0.087195002 0 -0.063350827 0.13207978 0 -0.18179235 0.063350827 0 -0.087194994
+		 0.069438502 0 -0.2137097 0.033305526 0 -0.1025039 0 0 -0.22470762 0 0 -0.10777893
+		 -0.069438502 0 -0.2137097 -0.033305526 0 -0.1025039 -0.13207978 0 -0.18179226 -0.063350827
+		 0 -0.087194994 -0.18179221 0 -0.13207982 -0.087195002 0 -0.063350827 -0.21370956
+		 0 -0.069438487 -0.1025039 0 -0.033305518 -0.22470754 0 -4.0180847e-08 -0.10777896
+		 0 6.696807e-08;
+createNode polyCube -n "polyCube30";
+	rename -uid "C041AC8E-4045-EC09-1D0D-79A75778210D";
+	setAttr ".cuv" 4;
+createNode groupId -n "groupId147";
+	rename -uid "F59B2688-4C17-87B9-B70E-F6B8BD181453";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId148";
+	rename -uid "CADBC173-4EC0-CE8F-0042-CFBBDC742116";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId149";
+	rename -uid "BC082986-4001-3597-A84A-31B12339FC14";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts16";
+	rename -uid "7C656BD9-4E1B-10E1-5353-A598A7CF8371";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:179]";
+createNode groupId -n "groupId150";
+	rename -uid "D969E233-4CA0-FA4B-3ED6-7A9F2DA0F95A";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId151";
+	rename -uid "50246254-49DF-DC98-03A2-A9A3D74D75D7";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts17";
+	rename -uid "16983AAF-49C8-3E60-2D75-9AB3E721F920";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:5]";
+createNode groupId -n "groupId152";
+	rename -uid "3CA9DD30-4AA6-D3BC-E845-1BAA634FD720";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId153";
+	rename -uid "4F1FA51E-4BEE-1C65-9814-978677D33387";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId154";
+	rename -uid "FA94DEFA-48A2-2C81-618A-F691CB829B3E";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId155";
+	rename -uid "3DE0FC74-47DB-354F-7372-E493B6803618";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId156";
+	rename -uid "37F06A1B-4453-1381-8021-5F8318B07972";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId157";
+	rename -uid "4ABE67E4-4F5D-0AB6-1B2A-B29168B6178C";
+	setAttr ".ihi" 0;
+createNode polyCylinder -n "polyCylinder10";
+	rename -uid "C8CF11C3-4D39-5EE8-E57D-8A9DF6925C29";
+	setAttr ".sc" 1;
+	setAttr ".cuv" 3;
+createNode groupId -n "groupId159";
+	rename -uid "8FA7ECAD-4BAC-9368-C3F9-3488895E2A6E";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId160";
+	rename -uid "DD06B4A2-4B67-219B-8EA3-59824DC004FC";
+	setAttr ".ihi" 0;
+createNode polyUnite -n "polyUnite6";
+	rename -uid "C30BC8A4-4A47-33AD-20EB-B7B2C3571ABE";
+	setAttr -s 2 ".ip";
+	setAttr -s 2 ".im";
+createNode groupId -n "groupId161";
+	rename -uid "B6021D6C-465D-BBDE-C6F0-919E95CB568D";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts19";
+	rename -uid "CBE0C955-40CF-5D04-4C1E-AC9FDFC19C17";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:59]";
+createNode groupId -n "groupId162";
+	rename -uid "3C841A2A-44FD-F180-4A01-B5BD63AF387B";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId163";
+	rename -uid "63F9633A-4E84-D9CC-6C74-17A970F74668";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts20";
+	rename -uid "25F1B740-4B52-B521-4BBC-1CB1831088F3";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:263]";
+createNode groupId -n "groupId164";
+	rename -uid "227DFF6C-4B5E-55E8-C313-BDAF960CE7CA";
+	setAttr ".ihi" 0;
+createNode polyAutoProj -n "polyAutoProj7";
+	rename -uid "7323F23E-45D1-3AC4-F101-F8B4C9DF952F";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 0.04681424646304564 0 0 0 0 0.31243140230083144 0 0
+		 0 0 0.66949576548263812 0 0.84148074727049793 0.30923741284350709 0.89447754877924823 1;
+	setAttr ".s" -type "double3" 0.66949576548263812 0.66949576548263812 0.66949576548263812 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyLayoutUV -n "polyLayoutUV4";
+	rename -uid "017AD3C3-43D1-AA90-D81D-A08B2C77DE66";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV10";
+	rename -uid "3E6EDA15-4616-2B85-8856-6DAD38D53986";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.092282958 0.095749021
+		 0.053231299 0.01206696 0.092282951 -0.095749021 -0.053231314 -0.01206696 -0.092282966
+		 0.095749021 0.053231299 0.01206696 0.092282951 -0.095749021 -0.053231299 -0.01206696
+		 0.34211391 -0.43405712 0.094241679 -0.40354511 -0.34211394 0.43405709 -0.094241694
+		 0.40354511 0.34211388 -0.43405709 0.094241679 -0.40354508 -0.34211391 0.43405706
+		 -0.094241679 0.40354508 0.23737627 -0.25942272 0.029026866 -0.21950525 -0.23737627
+		 0.25942269 -0.029026862 0.21950528 0.23737627 -0.25942269 0.029026866 -0.21950525
+		 -0.23737627 0.25942272 -0.029026866 0.21950525;
+createNode polyLayoutUV -n "polyLayoutUV5";
+	rename -uid "9B4AB320-4B0E-4FCC-73B3-918DD1E32851";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV11";
+	rename -uid "DFE640B9-4E9A-6E09-D825-07884591BD36";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.074555159 -0.31250471 0.466957
+		 -0.31246352 0.46693784 -0.12934268 0.074535958 -0.1293838 -0.26225939 -0.7207039
+		 0.13014245 -0.72066271 0.13012326 -0.53754187 -0.26227859 -0.53758299 -0.25172776
+		 0.75448877 -0.251728 0.72852737 0.11954926 0.72852457 0.11954946 0.75448591 -0.19537902
+		 0.36005676 -0.19537926 0.33409536 0.17589799 0.33409256 0.17589819 0.36005393 0.34190613
+		 0.8358565 0.34190828 0.76948202 0.78488183 0.7694962 0.7848798 0.83587074 -0.6863519
+		 0.50259161 -0.68634981 0.43621713 -0.24337614 0.43623132 -0.24337828 0.5026058;
+createNode polyAutoProj -n "polyAutoProj8";
+	rename -uid "4488FE8A-4106-22E8-E37E-CF8B047F7D6D";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 0.14675143719116229 0 0 0 0 0.78141132478435493 0 0
+		 0 0 0.89335063528433678 0 0.74079766871072561 0.46306058738998024 0.89447754877924812 1;
+	setAttr ".s" -type "double3" 0.89335063528433678 0.89335063528433678 0.89335063528433678 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapCut -n "polyMapCut6";
+	rename -uid "74575742-4A08-75BE-9B84-2C94EB5F4B7E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0:11]";
+createNode polyTweakUV -n "polyTweakUV12";
+	rename -uid "60FEB6B6-4694-9E7A-95ED-738AFEBF08C6";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.0018904954 -0.66852748
+		 0.24025556 -0.66852802 0.24025592 -0.49800834 -0.0018900702 -0.49800777 -0.33870506
+		 -0.16852772 -0.096559137 -0.16852829 -0.096558779 0.0019915104 -0.33870468 0.0019919872
+		 0.3315047 -0.0019920319 0.095926166 -0.0019919712 0.095925808 0.24015391 0.33150423
+		 0.24015391 0.2907216 -0.33526003 0.055143058 -0.33525991 0.055142641 -0.093113855
+		 0.29072118 -0.093113914 0.86258233 -0.0019919861 0.62700373 -0.0019920468 0.62700391
+		 0.16852799 0.86258245 0.16852793 0.1496821 -0.33526 -0.085896403 -0.33526003 -0.085896254
+		 -0.1647402 0.14968222 -0.16474032;
+createNode polyAutoProj -n "polyAutoProj9";
+	rename -uid "F0A5CEF8-4470-3441-F436-FDA5BA2E16F9";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 0.04681424646304564 0 0 0 0 0.31243140230083144 0 0
+		 0 0 0.66949576548263812 0 -0.84419506290090385 0.30923741284350709 0.89447754877924801 1;
+	setAttr ".s" -type "double3" 0.66949576548263812 0.66949576548263812 0.66949576548263812 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapCut -n "polyMapCut7";
+	rename -uid "9F719302-453D-44FB-D17E-2D8819EF00A5";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0:11]";
+createNode polyTweakUV -n "polyTweakUV13";
+	rename -uid "4DCA2496-4E69-C418-DCAD-CBAD8C62F0EE";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.0018905029 -0.28393865
+		 0.49274808 -0.28393927 0.49274844 -0.22883064 -0.00189015 -0.22882986 -0.33870503
+		 -0.66852736 0.15593362 -0.66852808 0.15593398 -0.61341941 -0.33870468 -0.61341864
+		 0.48708695 -0.0019920319 0.21523309 -0.0019919614 0.21523219 0.49264675 0.48708612
+		 0.49264681 0.601726 -0.33526009 0.32987207 -0.33526006 0.32987267 0.15937865 0.60172647
+		 0.15937871 0.94048321 0.38259661 0.66862935 0.38259673 0.66862905 0.43770549 0.94048297
+		 0.43770549 0.32471454 -0.33526 0.052860677 -0.33526006 0.052861035 -0.28015149 0.3247149
+		 -0.28015143;
+createNode polyLayoutUV -n "polyLayoutUV6";
+	rename -uid "C3FCC72A-4716-9DC7-5C82-709F4B1A76EC";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV14";
+	rename -uid "1F280153-4ED6-2387-66AC-1C8AC14A1F52";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" -0.20449081 0.18399352 -0.22628847
+		 0.18399756 -0.20451221 0.067927167 -0.22630984 0.06793119 -0.20453581 -0.060037494
+		 -0.22633341 -0.0600335 -0.20455721 -0.17610389 -0.22635481 -0.17609984 -0.20458078
+		 -0.30406857 -0.22637841 -0.30406457 -0.35425311 0.18402113 -0.35427451 0.067954779
+		 -0.076526135 0.18396994 -0.076547526 0.067903593;
+createNode polyAutoProj -n "polyAutoProj10";
+	rename -uid "22403A13-4005-C576-5773-0F852BF9101E";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.079512028893802725 0 0 0 0 1.2743474283842218 0
+		 0 1.0582615370184811 -0.45963553532055668 1;
+	setAttr ".s" -type "double3" 1.2743474283842218 1.2743474283842218 1.2743474283842218 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapCut -n "polyMapCut8";
+	rename -uid "140D1D16-4098-B06C-CD55-2489DF353FBD";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0:11]";
+createNode polyTweakUV -n "polyTweakUV15";
+	rename -uid "8239B620-43E7-0F3C-5D53-08A874FEEEB1";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.34427497 -0.060628474 0.62269402
+		 -0.060628951 0.62269402 -0.35217947 0.34427497 -0.35217893 0.0074604154 -0.022698939
+		 0.28587931 -0.022699356 0.28587931 -0.31424987 0.0074604154 -0.3142494 0.14233008
+		 -0.0019919674 0.28987783 -0.0019920319 0.28987801 0.27642709 0.14233023 0.27642715
+		 -0.2823565 -0.33525991 -0.13480872 -0.33526003 -0.13480857 -0.056841016 -0.28235638
+		 -0.056840837 0.51960552 0.68176645 0.667153 0.68176615 0.667153 0.39021564 0.51960552
+		 0.39021593 0.34441155 -0.18771216 0.34441125 -0.33526003 0.052860737 -0.33526003
+		 0.052860975 -0.18771216;
+createNode polyAutoProj -n "polyAutoProj11";
+	rename -uid "CFC107E1-4BE8-1440-7023-02A7F87BD36D";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:75]";
+	setAttr ".ix" -type "matrix" 1.3104997299069956 0 0 0 0 1 0 0 0 0 6.0613761103635335 0
+		 0 0.51159918109627323 0 1;
+	setAttr ".s" -type "double3" 7.1582383932018132 7.1582383932018132 7.1582383932018132 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweak -n "polyTweak23";
+	rename -uid "6CD248B0-4E21-AEFC-0263-14B2E6A8A147";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".tk";
+	setAttr ".tk[71]" -type "float3" 0 -0.3784388 0 ;
+	setAttr ".tk[72]" -type "float3" 0 -0.3784388 0 ;
+	setAttr ".tk[74]" -type "float3" 0 -0.3784388 0 ;
+	setAttr ".tk[77]" -type "float3" 0 -0.3784388 0 ;
+createNode polyTweakUV -n "polyTweakUV16";
+	rename -uid "947EB6E1-4F50-47EA-8D6D-DFBB165BEAC4";
+	setAttr ".uopa" yes;
+	setAttr -s 192 ".uvtk[0:191]" -type "float2" -0.022837877 0.086712547
+		 0.031027377 0.072730102 0.033917725 0.044555664 -0.019947469 0.058538117 0.044282377
+		 -0.056474701 -0.060019195 -0.029399857 0.046695352 -0.079995006 -0.053118318 -0.096666858
+		 -0.03037703 0.072157852 0.023346543 0.087037474 0.020270646 0.058833726 -0.033452868
+		 0.043954112 0.059544623 -0.028369293 -0.044482529 -0.057181358 0.052200913 -0.095706284
+		 -0.047050297 -0.080726221 0.087010205 -0.057487965 0.092104137 0.030216455 0.14669651
+		 0.038090289 0.14160264 -0.049614131 -0.0035504401 -0.070549488 0.0015434623 0.017154932
+		 -0.051034242 0.0095716715 -0.056128144 -0.078132749 0.0031711161 0.045179188 0.093731761
+		 0.058240712 -0.13578288 -0.0026515722 -0.13580231 -0.0029861331 -0.13415523 0.025372684
+		 -0.049406588 0.037595928 -0.14661673 0.017374575 -0.091688752 0.017246604 -0.091605991
+		 -0.070240617 -0.14653397 -0.070112705 -0.00057119131 0.017034411 -0.00048840046 -0.070452869
+		 -0.091715217 0.04520148 -0.00059765577 0.044989228 0.052329838 0.016911149 0.052412629
+		 -0.070576072 0.13759941 0.016712546 0.13759971 0.01637882 0.052303374 0.044866025
+		 0.13757294 0.044667423 -0.020258665 0.085133672 0.032061934 0.07498157 0.034240961
+		 0.046902269 -0.018079638 0.057054371 0.042054772 -0.053786904 -0.059463978 -0.034088552
+		 0.043779016 -0.076006174 -0.054334283 -0.10019022 -0.037368178 0.051558077 -0.036610544
+		 0.079527825 0.01622057 0.083057642 0.015462935 0.055087894 0.062424064 -0.04188931
+		 -0.040084958 -0.048738241 0.060640514 -0.10773307 -0.040684462 -0.070870817 -0.050964355
+		 0.091579109 0.0032512248 0.080119759 0.062509984 -0.031380832 -0.042470008 -0.0091916323
+		 0.06816563 -0.09847492 -0.040492475 -0.032651484 -0.023501739 0.087545246 0.026468098
+		 0.064881235 0.04391183 -0.037617385 -0.053045496 0.0063580275 0.047761157 -0.060235798
+		 -0.04159382 -0.060931385 -0.049025774 0.090295523 0.0032699108 0.079927713 0.060424134
+		 -0.030529857 -0.041045994 -0.010412931 0.065662801 -0.096644104 -0.039285082 -0.032636344
+		 -0.013080955 0.08277449 0.041732848 0.078177184 0.045140684 -0.02215004 -0.060997784
+		 -0.013248026 0.045934021 -0.045506716 -0.058728829 -0.080046833 -0.085469291 -0.09575659
+		 -0.059729241 0.011996269 -0.019843962 0.035004854 -0.045584012 -0.072748005 0.046319939
+		 0.073172569 0.020579897 -0.03458029 0.084733352 0.095332026 0.05899331 -0.012420893
+		 0.051804781 -0.051664889 0.051322162 0.052346997 0.094551444 0.051915564 0.095034122
+		 -0.052096337 -0.019906193 -0.050949216 -0.020388842 0.0530627 0.05104965 0.11106864
+		 0.094278991 0.1106372 0.095321298 -0.11398804 0.052092016 -0.11355662 -0.061540157
+		 -0.050533682 -0.062022835 0.053478204 -0.12864889 -0.049863935 -0.12913156 0.054147966
+		 -0.062285185 0.11001414 -0.020651191 0.10959863 -0.019622803 -0.11201641 -0.061256796
+		 -0.11160091 -0.0005765144 -0.0099264085 -0.039340161 0.005289346 -0.058798924 -0.018148333
+		 -0.010401189 -0.00062295794 -0.14052443 0.10955243 -0.17377996 0.077061005 -0.081005111
+		 -0.031553902 -0.04885602 -0.032241613 -0.12612161 -0.063623339 -0.092150062 -0.09224388
+		 -0.34654102 -0.1369618 -0.22639553 -0.24661022 -0.10967401 0.2229847 -0.23041226
+		 0.1339556 -0.44502491 -0.23349623 -0.33734235 -0.33118761 -0.22184658 0.32334331
+		 -0.33032393 0.21394432 0.024921864 -0.022880256 0.023537248 0.021964967 0.0040971637
+		 0.021709085 0.0054818094 -0.023136139 0.025154233 -0.022877216 0.023769617 0.021968007
+		 -0.052788638 -0.020796835 -0.054173276 0.024048388 0.011708319 -0.023572624 0.011749625
+		 -0.0046148002 -0.012095332 -0.0044885874 -0.012136638 -0.023446411 0.011897743 0.06336689
+		 -0.011947215 0.063493103 0.011932254 0.079193451 -0.011912704 0.079319663 0.012324452
+		 -0.11468846 -0.011520505 -0.11456224 0.011077523 0.0049610138 0.011080742 0.023637474
+		 -0.011048079 0.023646891 -0.011051238 0.0049704313 -0.011062741 -0.062001199 0.011066079
+		 -0.062010616 -0.011065304 -0.076779902 0.011063516 -0.07678932 0.011034131 0.11017793
+		 -0.011094689 0.11018735 0.00084418058 0.0033836365 0.00058633089 0.014380336 0.0010476708
+		 0.013621986 0.0013054609 0.0026252866 -0.00087314844 -0.021067619 -0.00041180849
+		 -0.021825969 -0.0014800429 0.0048203468 -0.001018703 0.0040619969 -0.011681616 0.023726314
+		 -0.011734486 0.0050498247 0.012168109 0.0048819184 0.012220979 0.023558408 -0.011923969
+		 -0.061921954 0.011978626 -0.06208986 -0.011965811 -0.076700687 0.011936784 -0.076868594
+		 -0.012450635 0.11026627 0.011452019 0.11009836 -0.00044357777 0.014349461 -0.00066232681
+		 0.0033529997 -0.0011614263 0.0026580691 -0.00094270706 0.01365453 0.00029551983 -0.021794915
+		 0.00079464912 -0.021099985 0.00081038475 0.0040924549 0.001309514 0.0047873855 -0.012665212
+		 -0.0045134425 -0.012688935 -0.023471296 0.012443185 -0.02354762 0.012466848 -0.0045897961
+		 0.012551844 0.063391834 -0.012580216 0.063468158 0.012571633 0.07921838 -0.012560427
+		 0.079294719 -0.01233542 -0.11458731 0.0127967 -0.11466365;
+createNode polyLayoutUV -n "polyLayoutUV7";
+	rename -uid "3008CCAF-49EB-1513-0E80-4C9D789E64FC";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:75]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV17";
+	rename -uid "D7A6480B-4D4F-2182-1C08-38814900109D";
+	setAttr ".uopa" yes;
+	setAttr -s 192 ".uvtk[0:191]" -type "float2" -0.21034342 0.12694123 -0.19030774
+		 0.12953192 -0.19084328 0.13367361 -0.21087897 0.13108294 -0.19276366 0.1485253 -0.23155962
+		 0.14350882 -0.19321072 0.15198283 -0.23283823 0.15339723 -0.10669565 0.23801106 -0.10374123
+		 0.25799644 -0.10787255 0.25860715 -0.11082691 0.2386218 -0.11992055 0.27951032 -0.12564132
+		 0.24081179 -0.12978414 0.28096843 -0.12909019 0.24132162 -0.38732976 -0.31765622
+		 -0.37426475 -0.31801087 -0.37371656 -0.29781574 -0.3867816 -0.29746115 -0.38823912
+		 -0.35115692 -0.37517408 -0.35151154 -0.37570202 -0.37096134 -0.38876706 -0.37060669
+		 -0.37099946 -0.35162488 -0.3700901 -0.31812418 -0.376553 -0.40231198 -0.37660286
+		 -0.40231064 -0.37237835 -0.40242532 -0.37152737 -0.37107465 -0.29122746 -0.24595553
+		 -0.271025 -0.24595249 -0.27102697 -0.23288262 -0.29122946 -0.23288572 -0.23751208
+		 -0.24594742 -0.23751405 -0.23287761 -0.27102438 -0.25012863 -0.23751146 -0.25012362
+		 -0.21805519 -0.2459445 -0.21805716 -0.23287469 -0.18669307 -0.24593973 -0.18669307
+		 -0.2458899 -0.21805453 -0.25012064 -0.18669242 -0.25011593 -0.60910797 -0.061237782
+		 -0.58991885 -0.058020294 -0.59060949 -0.053901613 -0.60979855 -0.057119101 -0.59308589
+		 -0.039132416 -0.63031882 -0.045375347 -0.59363234 -0.035873264 -0.63194454 -0.035679489
+		 -0.24814904 0.21350816 -0.2440334 0.21279949 -0.2407316 0.23197427 -0.24484724 0.23268294
+		 -0.25650066 0.25325459 -0.26290721 0.21604946 -0.26618928 0.25492293 -0.26616389
+		 0.21661025 -0.14762881 0.14523727 -0.12769262 0.14196771 -0.10660192 0.1536842 -0.1452052
+		 0.16001517 -0.10498825 0.1635235 -0.14464098 0.16345555 0.55275965 0.24584156 0.57193494
+		 0.24914026 0.56939602 0.26389879 0.53218997 0.25749826 0.56883579 0.26715565 0.53052312
+		 0.26718718 0.031028116 0.26551396 0.050200932 0.26220107 0.070779309 0.27384257 0.033577941
+		 0.28027064 0.072453231 0.28353018 0.034140613 0.28352702 0.17800963 0.2102645 0.19794008
+		 0.21356821 0.19549116 0.22834194 0.15689893 0.22194481 0.19492105 0.2317813 0.15526842
+		 0.23178124 0.6751669 -0.31697333 0.71085423 -0.3169741 0.71085489 -0.28507391 0.67516762
+		 -0.28507313 0.71085608 -0.23215622 0.67516875 -0.23215544 0.71085668 -0.2014333 0.67516941
+		 -0.20143259 -0.075353652 -0.057633996 -0.075352609 -0.093321286 -0.043452442 -0.093320347
+		 -0.043453455 -0.057633057 -0.12827134 -0.057635561 -0.1282703 -0.093322836 -0.075352013
+		 -0.11346915 -0.043451846 -0.11346821 -0.043454111 -0.036397517 -0.075354278 -0.03639847
+		 -0.15899426 -0.057636455 -0.15899321 -0.093323745 -0.20851576 -0.057637915 -0.20851472
+		 -0.093325198 -0.15899263 -0.11272167 -0.12826973 -0.11272077 -0.12827197 -0.036682904
+		 -0.15899487 -0.036683828 0.66849107 0.038616896 0.67184973 0.10777627 0.66011053
+		 0.11480035 0.65518761 0.032846481 0.70920897 0.11608095 0.70205015 0.12733166 0.61266357
+		 0.11205547 0.61266792 0.037892431 0.70156091 0.020377427 0.70467287 0.031851351 0.69028437
+		 0.20731615 0.64552748 0.19984508 0.64311153 -0.054765761 0.68974429 -0.057226717
+		 0.67913043 0.24242222 0.63975656 0.23126712 0.64923662 -0.092170775 0.6900413 -0.087800801
+		 0.56463933 -0.67799246 0.56464058 -0.65450835 0.56030118 -0.65450805 0.56029993 -0.67799222
+		 0.56469107 -0.67799246 0.56469238 -0.65450835 0.59997559 -0.67799437 0.59997684 -0.6545102
+		 0.19258624 0.24573484 0.19258654 0.25055531 0.17785829 0.25055623 0.177858 0.24573576
+		 0.19258767 0.26784098 0.17785943 0.26784194 0.19258791 0.27186516 0.17785966 0.27186608
+		 0.19259089 0.31763542 0.17786264 0.31763637 -0.6472854 -0.16564192 -0.647286 -0.16053982
+		 -0.66229445 -0.16054152 -0.66229385 -0.1656436 -0.66229182 -0.18393913 -0.64728338
+		 -0.18393746 -0.66229135 -0.18797645 -0.6472829 -0.18797475 -0.64727759 -0.23478168
+		 -0.66228604 -0.23478341 0.3030678 0.3086018 0.30306602 0.32138431 0.26546466 0.32137901
+		 0.26546645 0.30859649 0.30305582 0.39375114 0.26545441 0.39374584 0.30305159 0.42384258
+		 0.26545018 0.42383727 0.31502861 0.10304561 0.31502831 0.097943485 0.3312397 0.097942591
+		 0.33124 0.10304466 0.3150273 0.079647899 0.33123869 0.079647005 0.31502706 0.075610578
+		 0.33123845 0.075609684 0.31502438 0.028803527 0.33123577 0.028802633 0.49830234 0.019780159
+		 0.49830139 0.0069976449 0.53891647 0.0069946647 0.53891736 0.019777119 0.53892267
+		 0.092143953 0.4983077 0.092146993 0.53892493 0.12223536 0.49830991 0.12223837 -0.015725195
+		 0.25056407 -0.015724838 0.24574363 -0.0002015233 0.24574479 -0.00020188093 0.25056529
+		 -0.00020319223 0.26785094 -0.015726566 0.26784974 -0.00020349026 0.27187508 -0.015726864
+		 0.27187389 -0.015730321 0.31764412 -0.00020700693 0.31764531;
+createNode polyAutoProj -n "polyAutoProj12";
+	rename -uid "13E90853-46F9-1E09-B681-A58D40462E23";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:75]";
+	setAttr ".ix" -type "matrix" 1.3104997299069956 0 0 0 0 1 0 0 0 0 6.0613761103635335 0
+		 0 0.51159918109627323 0 1;
+	setAttr ".s" -type "double3" 7.1582383932018132 7.1582383932018132 7.1582383932018132 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyLayoutUV -n "polyLayoutUV8";
+	rename -uid "017892C5-4081-DBA2-4C9C-A5833FD71A14";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[38]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV18";
+	rename -uid "EF90953E-4C00-063B-34A5-3D8B3690CD35";
+	setAttr ".uopa" yes;
+	setAttr -s 192 ".uvtk[164:191]" -type "float2" -0.27234909 -0.42572752 -0.27234909
+		 -0.32871094 -0.50757211 -0.32871094 -0.50757211 -0.42572752 -0.27234909 0.019179583
+		 -0.50757211 0.019179583 -0.27234909 0.095949054 -0.50757211 0.095949054 -0.27234909
+		 0.24756688 -0.50757211 0.24756688 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0;
+createNode polyAutoProj -n "polyAutoProj13";
+	rename -uid "A740E018-4E4E-3823-C5E4-729CEC116F56";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:75]";
+	setAttr ".ix" -type "matrix" 1.3104997299069956 0 0 0 0 1 0 0 0 0 6.0613761103635335 0
+		 0 0.51159918109627323 0 1;
+	setAttr ".s" -type "double3" 7.1582383932018132 7.1582383932018132 7.1582383932018132 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyPlanarProj -n "polyPlanarProj2";
+	rename -uid "30A9B61D-44B2-29D0-3875-18886012366B";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:75]";
+	setAttr ".ix" -type "matrix" 1.3104997299069956 0 0 0 0 1 0 0 0 0 6.0613761103635335 0
+		 0 0.51159918109627323 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -0.019970715045928955 0.85591781139373779 0.54843103885650635 ;
+	setAttr ".ro" -type "double3" 0 90 0 ;
+	setAttr ".ps" -type "double2" 7.1582381725311279 1.6886372566223145 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyLayoutUV -n "polyLayoutUV9";
+	rename -uid "2BAC28BF-4346-27CF-14BA-8BA5762845F3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:75]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV19";
+	rename -uid "4D6947C7-461D-6F6F-5870-D098B2E5CAFA";
+	setAttr ".uopa" yes;
+	setAttr -s 78 ".uvtk[0:77]" -type "float2" -7.4505806e-08 0 -7.4505806e-08
+		 0 -7.4505806e-08 -1.4901161e-08 -7.4505806e-08 -1.4901161e-08 -7.4505806e-08 -5.9604645e-08
+		 -7.4505806e-08 -5.9604645e-08 -8.9406967e-08 -5.9604645e-08 -8.9406967e-08 -5.9604645e-08
+		 -1.1920929e-07 -1.4901161e-08 -1.1920929e-07 -1.4901161e-08 -1.1920929e-07 0 -1.1920929e-07
+		 0 -8.9406967e-08 0 -8.9406967e-08 0 -7.4505806e-08 0 -8.9406967e-08 0 -8.9406967e-08
+		 -1.4901161e-08 -7.4505806e-08 -1.4901161e-08 -8.9406967e-08 0 -7.4505806e-08 0 -7.4505806e-08
+		 -1.4901161e-08 -8.9406967e-08 -1.4901161e-08 -8.9406967e-08 -1.4901161e-08 -1.1920929e-07
+		 -1.4901161e-08 -1.1920929e-07 -1.4901161e-08 -8.9406967e-08 -1.4901161e-08 -1.1920929e-07
+		 -1.4901161e-08 -1.1920929e-07 -5.9604645e-08 -1.1920929e-07 0 -1.1920929e-07 0 -1.1920929e-07
+		 -1.4901161e-08 -1.1920929e-07 -5.9604645e-08 -1.1920929e-07 0 -1.1920929e-07 -1.4901161e-08
+		 -1.1920929e-07 0 -1.1920929e-07 -1.4901161e-08 -1.1920929e-07 -5.9604645e-08 -1.1920929e-07
+		 -5.9604645e-08 -1.1920929e-07 0 -1.1920929e-07 0 -1.1920929e-07 -1.4901161e-08 -1.1920929e-07
+		 -1.4901161e-08 -1.1920929e-07 -1.4901161e-08 -1.1920929e-07 0 -1.1920929e-07 0 -1.1920929e-07
+		 -1.4901161e-08 -8.9406967e-08 -5.9604645e-08 -5.9604645e-08 -5.9604645e-08 -5.9604645e-08
+		 -5.9604645e-08 -8.9406967e-08 -5.9604645e-08 -1.1920929e-07 -5.9604645e-08 -1.1920929e-07
+		 -5.9604645e-08 -1.1920929e-07 -5.9604645e-08 -1.1920929e-07 -5.9604645e-08 -1.1920929e-07
+		 -5.9604645e-08 -1.1920929e-07 -5.9604645e-08 -1.1920929e-07 -5.9604645e-08 -1.1920929e-07
+		 -5.9604645e-08 -5.9604645e-08 -5.9604645e-08 -8.9406967e-08 -5.9604645e-08 -8.9406967e-08
+		 -5.9604645e-08 -5.9604645e-08 -5.9604645e-08 -5.9604645e-08 -5.9604645e-08 -8.9406967e-08
+		 -5.9604645e-08 -5.9604645e-08 -5.9604645e-08 -8.9406967e-08 -5.9604645e-08 -1.1920929e-07
+		 -5.9604645e-08 -1.1920929e-07 -5.9604645e-08 -1.1920929e-07 -5.9604645e-08 -1.1920929e-07
+		 -5.9604645e-08 -1.1920929e-07 -5.9604645e-08 -1.1920929e-07 -5.9604645e-08 -1.1920929e-07
+		 -5.9604645e-08 -1.1920929e-07 -5.9604645e-08 -8.9406967e-08 -5.9604645e-08 -5.9604645e-08
+		 -5.9604645e-08 -8.9406967e-08 -5.9604645e-08 -5.9604645e-08 -5.9604645e-08;
+createNode polyAutoProj -n "polyAutoProj14";
+	rename -uid "8D33524F-4829-ECFF-7277-BD8992713E1E";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:75]";
+	setAttr ".ix" -type "matrix" 1.3104997299069956 0 0 0 0 1 0 0 0 0 6.0613761103635335 0
+		 0 0.51159918109627323 0 1;
+	setAttr ".s" -type "double3" 7.1582383932018132 7.1582383932018132 7.1582383932018132 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapDel -n "polyMapDel5";
+	rename -uid "FAB2AFD9-4D18-713A-B805-C7919879F2A5";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:75]";
+createNode polyAutoProj -n "polyAutoProj15";
+	rename -uid "8BEC0EE9-4987-8F7B-CF6A-9DB94C60D7E5";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:75]";
+	setAttr ".ix" -type "matrix" 1.3104997299069956 0 0 0 0 1 0 0 0 0 6.0613761103635335 0
+		 0 0.51159918109627323 0 1;
+	setAttr ".s" -type "double3" 7.1582383932018132 7.1582383932018132 7.1582383932018132 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV20";
+	rename -uid "C30AD7EB-4D69-B1A5-E872-76A350FC15E1";
+	setAttr ".uopa" yes;
+	setAttr -s 192 ".uvtk[0:191]" -type "float2" -0.022837877 0.086712547
+		 0.031027377 0.072730102 0.033917725 0.044555664 -0.019947469 0.058538117 0.044282377
+		 -0.056474701 -0.060019195 -0.029399857 0.046695352 -0.079995006 -0.053118318 -0.096666858
+		 -0.03037703 0.072157852 0.023346543 0.087037474 0.020270646 0.058833726 -0.033452868
+		 0.043954112 0.059544623 -0.028369293 -0.044482529 -0.057181358 0.052200913 -0.095706284
+		 -0.047050297 -0.080726221 0.087010205 -0.057487965 0.092104137 0.030216455 0.14669651
+		 0.038090289 0.14160264 -0.049614131 -0.0035504401 -0.070549488 0.0015434623 0.017154932
+		 -0.051034242 0.0095716715 -0.056128144 -0.078132749 0.0031711161 0.045179188 0.093731761
+		 0.058240712 -0.13578288 -0.0026515722 -0.13580231 -0.0029861331 -0.13415523 0.025372684
+		 -0.049406588 0.037595928 -0.14661673 0.017374575 -0.091688752 0.017246604 -0.091605991
+		 -0.070240617 -0.14653397 -0.070112705 -0.00057119131 0.017034411 -0.00048840046 -0.070452869
+		 -0.091715217 0.04520148 -0.00059765577 0.044989228 0.052329838 0.016911149 0.052412629
+		 -0.070576072 0.13759941 0.016712546 0.13759971 0.01637882 0.052303374 0.044866025
+		 0.13757294 0.044667423 -0.020258665 0.085133672 0.032061934 0.07498157 0.034240961
+		 0.046902269 -0.018079638 0.057054371 0.042054772 -0.053786904 -0.059463978 -0.034088552
+		 0.043779016 -0.076006174 -0.054334283 -0.10019022 -0.037368178 0.051558077 -0.036610544
+		 0.079527825 0.01622057 0.083057642 0.015462935 0.055087894 0.062424064 -0.04188931
+		 -0.040084958 -0.048738241 0.060640514 -0.10773307 -0.040684462 -0.070870817 -0.050964355
+		 0.091579109 0.0032512248 0.080119759 0.062509984 -0.031380832 -0.042470008 -0.0091916323
+		 0.06816563 -0.09847492 -0.040492475 -0.032651484 -0.023501739 0.087545246 0.026468098
+		 0.064881235 0.04391183 -0.037617385 -0.053045496 0.0063580275 0.047761157 -0.060235798
+		 -0.04159382 -0.060931385 -0.049025774 0.090295523 0.0032699108 0.079927713 0.060424134
+		 -0.030529857 -0.041045994 -0.010412931 0.065662801 -0.096644104 -0.039285082 -0.032636344
+		 -0.013080955 0.08277449 0.041732848 0.078177184 0.045140684 -0.02215004 -0.060997784
+		 -0.013248026 0.045934021 -0.045506716 -0.058728829 -0.080046833 -0.085469291 -0.09575659
+		 -0.059729241 0.011996269 -0.019843962 0.035004854 -0.045584012 -0.072748005 0.046319939
+		 0.073172569 0.020579897 -0.03458029 0.084733352 0.095332026 0.05899331 -0.012420893
+		 0.051804781 -0.051664889 0.051322162 0.052346997 0.094551444 0.051915564 0.095034122
+		 -0.052096337 -0.019906193 -0.050949216 -0.020388842 0.0530627 0.05104965 0.11106864
+		 0.094278991 0.1106372 0.095321298 -0.11398804 0.052092016 -0.11355662 -0.061540157
+		 -0.050533682 -0.062022835 0.053478204 -0.12864889 -0.049863935 -0.12913156 0.054147966
+		 -0.062285185 0.11001414 -0.020651191 0.10959863 -0.019622803 -0.11201641 -0.061256796
+		 -0.11160091 -0.0005765144 -0.0099264085 -0.039340161 0.005289346 -0.058798924 -0.018148333
+		 -0.010401189 -0.00062295794 -0.14052443 0.10955243 -0.17377996 0.077061005 -0.081005111
+		 -0.031553902 -0.04885602 -0.032241613 -0.12612161 -0.063623339 -0.092150062 -0.09224388
+		 -0.34654102 -0.1369618 -0.22639553 -0.24661022 -0.10967401 0.2229847 -0.23041226
+		 0.1339556 -0.44502491 -0.23349623 -0.33734235 -0.33118761 -0.22184658 0.32334331
+		 -0.33032393 0.21394432 0.024921864 -0.022880256 0.023537248 0.021964967 0.0040971637
+		 0.021709085 0.0054818094 -0.023136139 0.025154233 -0.022877216 0.023769617 0.021968007
+		 -0.052788638 -0.020796835 -0.054173276 0.024048388 0.011708319 -0.023572624 0.011749625
+		 -0.0046148002 -0.012095332 -0.0044885874 -0.012136638 -0.023446411 0.011897743 0.06336689
+		 -0.011947215 0.063493103 0.011932254 0.079193451 -0.011912704 0.079319663 0.012324452
+		 -0.11468846 -0.011520505 -0.11456224 0.011077523 0.0049610138 0.011080742 0.023637474
+		 -0.011048079 0.023646891 -0.011051238 0.0049704313 -0.011062741 -0.062001199 0.011066079
+		 -0.062010616 -0.011065304 -0.076779902 0.011063516 -0.07678932 0.011034131 0.11017793
+		 -0.011094689 0.11018735 0.00084418058 0.0033836365 0.00058633089 0.014380336 0.0010476708
+		 0.013621986 0.0013054609 0.0026252866 -0.00087314844 -0.021067619 -0.00041180849
+		 -0.021825969 -0.0014800429 0.0048203468 -0.001018703 0.0040619969 -0.011681616 0.023726314
+		 -0.011734486 0.0050498247 0.012168109 0.0048819184 0.012220979 0.023558408 -0.011923969
+		 -0.061921954 0.011978626 -0.06208986 -0.011965811 -0.076700687 0.011936784 -0.076868594
+		 -0.012450635 0.11026627 0.011452019 0.11009836 -0.00044357777 0.014349461 -0.00066232681
+		 0.0033529997 -0.0011614263 0.0026580691 -0.00094270706 0.01365453 0.00029551983 -0.021794915
+		 0.00079464912 -0.021099985 0.00081038475 0.0040924549 0.001309514 0.0047873855 -0.012665212
+		 -0.0045134425 -0.012688935 -0.023471296 0.012443185 -0.02354762 0.012466848 -0.0045897961
+		 0.012551844 0.063391834 -0.012580216 0.063468158 0.012571633 0.07921838 -0.012560427
+		 0.079294719 -0.01233542 -0.11458731 0.0127967 -0.11466365;
+createNode polyLayoutUV -n "polyLayoutUV10";
+	rename -uid "DC33DB76-4D4E-C80A-FEC1-07B752106B66";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:75]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV21";
+	rename -uid "BA20EF2B-4858-A3CD-82DC-7BB03C30FBEB";
+	setAttr ".uopa" yes;
+	setAttr -s 192 ".uvtk[0:191]" -type "float2" -0.21034342 0.12694123 -0.19030774
+		 0.12953192 -0.19084328 0.13367361 -0.21087897 0.13108294 -0.19276366 0.1485253 -0.23155962
+		 0.14350882 -0.19321072 0.15198283 -0.23283823 0.15339723 -0.10669565 0.23801106 -0.10374123
+		 0.25799644 -0.10787255 0.25860715 -0.11082691 0.2386218 -0.11992055 0.27951032 -0.12564132
+		 0.24081179 -0.12978414 0.28096843 -0.12909019 0.24132162 -0.38732976 -0.31765622
+		 -0.37426475 -0.31801087 -0.37371656 -0.29781574 -0.3867816 -0.29746115 -0.38823912
+		 -0.35115692 -0.37517408 -0.35151154 -0.37570202 -0.37096134 -0.38876706 -0.37060669
+		 -0.37099946 -0.35162488 -0.3700901 -0.31812418 -0.376553 -0.40231198 -0.37660286
+		 -0.40231064 -0.37237835 -0.40242532 -0.37152737 -0.37107465 -0.29122746 -0.24595553
+		 -0.271025 -0.24595249 -0.27102697 -0.23288262 -0.29122946 -0.23288572 -0.23751208
+		 -0.24594742 -0.23751405 -0.23287761 -0.27102438 -0.25012863 -0.23751146 -0.25012362
+		 -0.21805519 -0.2459445 -0.21805716 -0.23287469 -0.18669307 -0.24593973 -0.18669307
+		 -0.2458899 -0.21805453 -0.25012064 -0.18669242 -0.25011593 -0.60910797 -0.061237782
+		 -0.58991885 -0.058020294 -0.59060949 -0.053901613 -0.60979855 -0.057119101 -0.59308589
+		 -0.039132416 -0.63031882 -0.045375347 -0.59363234 -0.035873264 -0.63194454 -0.035679489
+		 -0.24814904 0.21350816 -0.2440334 0.21279949 -0.2407316 0.23197427 -0.24484724 0.23268294
+		 -0.25650066 0.25325459 -0.26290721 0.21604946 -0.26618928 0.25492293 -0.26616389
+		 0.21661025 -0.14762881 0.14523727 -0.12769262 0.14196771 -0.10660192 0.1536842 -0.1452052
+		 0.16001517 -0.10498825 0.1635235 -0.14464098 0.16345555 0.55275965 0.24584156 0.57193494
+		 0.24914026 0.56939602 0.26389879 0.53218997 0.25749826 0.56883579 0.26715565 0.53052312
+		 0.26718718 0.031028116 0.26551396 0.050200932 0.26220107 0.070779309 0.27384257 0.033577941
+		 0.28027064 0.072453231 0.28353018 0.034140613 0.28352702 0.17800963 0.2102645 0.19794008
+		 0.21356821 0.19549116 0.22834194 0.15689893 0.22194481 0.19492105 0.2317813 0.15526842
+		 0.23178124 0.6751669 -0.31697333 0.71085423 -0.3169741 0.71085489 -0.28507391 0.67516762
+		 -0.28507313 0.71085608 -0.23215622 0.67516875 -0.23215544 0.71085668 -0.2014333 0.67516941
+		 -0.20143259 -0.075353652 -0.057633996 -0.075352609 -0.093321286 -0.043452442 -0.093320347
+		 -0.043453455 -0.057633057 -0.12827134 -0.057635561 -0.1282703 -0.093322836 -0.075352013
+		 -0.11346915 -0.043451846 -0.11346821 -0.043454111 -0.036397517 -0.075354278 -0.03639847
+		 -0.15899426 -0.057636455 -0.15899321 -0.093323745 -0.20851576 -0.057637915 -0.20851472
+		 -0.093325198 -0.15899263 -0.11272167 -0.12826973 -0.11272077 -0.12827197 -0.036682904
+		 -0.15899487 -0.036683828 0.66849107 0.038616896 0.67184973 0.10777627 0.66011053
+		 0.11480035 0.65518761 0.032846481 0.70920897 0.11608095 0.70205015 0.12733166 0.61266357
+		 0.11205547 0.61266792 0.037892431 0.70156091 0.020377427 0.70467287 0.031851351 0.69028437
+		 0.20731615 0.64552748 0.19984508 0.64311153 -0.054765761 0.68974429 -0.057226717
+		 0.67913043 0.24242222 0.63975656 0.23126712 0.64923662 -0.092170775 0.6900413 -0.087800801
+		 0.56463933 -0.67799246 0.56464058 -0.65450835 0.56030118 -0.65450805 0.56029993 -0.67799222
+		 0.56469107 -0.67799246 0.56469238 -0.65450835 0.59997559 -0.67799437 0.59997684 -0.6545102
+		 0.19258624 0.24573484 0.19258654 0.25055531 0.17785829 0.25055623 0.177858 0.24573576
+		 0.19258767 0.26784098 0.17785943 0.26784194 0.19258791 0.27186516 0.17785966 0.27186608
+		 0.19259089 0.31763542 0.17786264 0.31763637 -0.6472854 -0.16564192 -0.647286 -0.16053982
+		 -0.66229445 -0.16054152 -0.66229385 -0.1656436 -0.66229182 -0.18393913 -0.64728338
+		 -0.18393746 -0.66229135 -0.18797645 -0.6472829 -0.18797475 -0.64727759 -0.23478168
+		 -0.66228604 -0.23478341 0.3030678 0.3086018 0.30306602 0.32138431 0.26546466 0.32137901
+		 0.26546645 0.30859649 0.30305582 0.39375114 0.26545441 0.39374584 0.30305159 0.42384258
+		 0.26545018 0.42383727 0.31502861 0.10304561 0.31502831 0.097943485 0.3312397 0.097942591
+		 0.33124 0.10304466 0.3150273 0.079647899 0.33123869 0.079647005 0.31502706 0.075610578
+		 0.33123845 0.075609684 0.31502438 0.028803527 0.33123577 0.028802633 0.49830234 0.019780159
+		 0.49830139 0.0069976449 0.53891647 0.0069946647 0.53891736 0.019777119 0.53892267
+		 0.092143953 0.4983077 0.092146993 0.53892493 0.12223536 0.49830991 0.12223837 -0.015725195
+		 0.25056407 -0.015724838 0.24574363 -0.0002015233 0.24574479 -0.00020188093 0.25056529
+		 -0.00020319223 0.26785094 -0.015726566 0.26784974 -0.00020349026 0.27187508 -0.015726864
+		 0.27187389 -0.015730321 0.31764412 -0.00020700693 0.31764531;
+createNode polyLayoutUV -n "polyLayoutUV11";
+	rename -uid "E1706B08-4737-F638-2777-58AD56852040";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:75]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV22";
+	rename -uid "4F658B01-42AE-3AB1-FB34-A3BC7497C530";
+	setAttr ".uopa" yes;
+	setAttr -s 192 ".uvtk[0:191]" -type "float2" 0.10715646 0.11768784 0.10538408
+		 0.11739545 0.10544449 0.11702906 0.10721689 0.11732143 0.10566121 0.11571527 0.10909319
+		 0.11628142 0.1057117 0.1154094 0.10923748 0.11540666 -0.17837295 -0.10829522 -0.17866012
+		 -0.11006844 -0.17829359 -0.11012781 -0.17800638 -0.10835458 -0.17724809 -0.11200103
+		 -0.17669198 -0.10856748 -0.17637295 -0.11214277 -0.17638597 -0.10861704 -0.0028655278
+		 -0.011566877 -0.0040276349 -0.011566997 -0.0040274784 -0.013363302 -0.0028653641
+		 -0.013363183 -0.0028657976 -0.0085870326 -0.0040279105 -0.0085871518 -0.004028067
+		 -0.006857127 -0.0028659548 -0.0068570077 -0.0043992326 -0.0085871816 -0.0043989643
+		 -0.011566997 -0.0040283203 -0.0040685385 -0.0040238872 -0.0040685385 -0.0043996498
+		 -0.0040685683 -0.0043993965 -0.0068571568 -0.011161722 -0.0073471069 -0.01295805
+		 -0.007347405 -0.012957871 -0.0085095167 -0.011161543 -0.0085092187 -0.015937865 -0.0073478222
+		 -0.015937686 -0.0085099339 -0.012958094 -0.006976068 -0.015937924 -0.0069764853 -0.01766789
+		 -0.0073481202 -0.017667741 -0.008510232 -0.020456493 -0.0073485374 -0.020456493 -0.0073529482
+		 -0.017667949 -0.0069767833 -0.020456553 -0.0069772005 0.21590391 0.26038298 0.21419892
+		 0.26008967 0.21426189 0.25972372 0.21596688 0.26001698 0.21448758 0.25841144 0.21779582
+		 0.25898051 0.21453741 0.25812188 0.21794401 0.25811899 -0.45934865 -0.34421411 -0.45971459
+		 -0.34415096 -0.4600088 -0.34585583 -0.45964289 -0.34591898 -0.45860741 -0.34774855
+		 -0.45803648 -0.34444058 -0.45774597 -0.3478972 -0.45774692 -0.34449056 -0.011081137
+		 -0.0087855458 -0.012853339 -0.0084921122 -0.014730215 -0.0095310211 -0.011298649
+		 -0.010099232 -0.014875054 -0.01040566 -0.011349291 -0.010405004 -0.61768121 0.0060228705
+		 -0.61938596 0.0057283044 -0.61915922 0.0044162273 -0.6158514 0.0049878359 -0.61910915
+		 0.004126668 -0.61570257 0.0041264892 0.5714336 -0.025677383 0.56972879 -0.025382817
+		 0.56789911 -0.026417911 0.57120681 -0.02698946 0.56775022 -0.027279317 0.5711568
+		 -0.027279019 -0.076887041 0.024004638 -0.078659177 0.023710907 -0.078441441 0.02239728
+		 -0.075009987 0.022966087 -0.078390747 0.022091448 -0.074865013 0.022091448 -0.026343644
+		 -0.002174437 -0.028353214 -0.0021743774 -0.028353274 -0.0039707124 -0.026343703 -0.0039707422
+		 -0.028353333 -0.0069505572 -0.026343763 -0.0069506168 -0.028353393 -0.008680582 -0.026343822
+		 -0.0086806417 -0.0074984431 -0.0031542182 -0.0074985027 -0.0011446401 -0.0092948079
+		 -0.0011446923 -0.0092947483 -0.0031542778 -0.0045186281 -0.0031541288 -0.0045186877
+		 -0.0011445582 -0.0074985325 -1.0102447e-05 -0.0092948675 -1.0155292e-05 -0.0092947483
+		 -0.0043500662 -0.0074984133 -0.0043500066 -0.0027885884 -0.0031540841 -0.002788648
+		 -0.001144506 0 -0.0031539947 -5.8901378e-08 -0.0011444241 -0.0027886778 -5.2193413e-05
+		 -0.0045187175 -5.2244402e-05 -0.0045185983 -0.0043340027 -0.0027885586 -0.0043339431
+		 -0.015248895 -0.00478369 -0.015257597 -0.0029652119 -0.01557529 -0.0027974248 -0.015589714
+		 -0.0049536526 -0.014289439 -0.0026951432 -0.014492929 -0.0024100989 -0.016815841
+		 -0.0029358119 -0.01671195 -0.0048808157 -0.014356077 -0.005215764 -0.014290512 -0.0049104989
+		 -0.01491344 -0.00032887608 -0.016076803 -0.00058744103 -0.015783846 -0.0072682798
+		 -0.014557421 -0.0072675645 -0.015255094 0.00057621417 -0.016272068 0.00022856146
+		 -0.015570879 -0.0082406998 -0.014506817 -0.0080689788 -0.0061175823 -0.011014327
+		 -0.0061175227 -0.0090047419 -0.0064888 -0.0090047196 -0.0064889193 -0.011014313 -0.0061131716
+		 -0.011014327 -0.0061130524 -0.0090047419 -0.0030937791 -0.011014491 -0.0030937195
+		 -0.0090049058 -0.0068674684 -0.016552866 -0.0068674684 -0.016181588 -0.0080019832
+		 -0.016181469 -0.0080020428 -0.016552806 -0.0068673491 -0.01485002 -0.0080019236 -0.014849961
+		 -0.0068673491 -0.014540046 -0.008001864 -0.014539957 -0.0068671107 -0.011014298 -0.0080016851
+		 -0.011014223 0.82911569 0.33821261 0.82911563 0.33858389 0.82802331 0.33858377 0.82802337
+		 0.33821243 0.82802349 0.33688092 0.82911581 0.33688104 0.82802355 0.33658704 0.82911587
+		 0.33658719 0.82911623 0.33318061 0.82802391 0.33318049 -0.44593301 -0.01385963 -0.44593307
+		 -0.013488293 -0.44702542 -0.013488412 -0.44702536 -0.013859749 -0.44593337 -0.011386037
+		 -0.44702566 -0.011386216 -0.44593349 -0.010511875 -0.44702584 -0.010512054 0.0067247748
+		 -0.016553819 0.0067247152 -0.016925097 0.0079045892 -0.016925216 0.0079045892 -0.016553879
+		 0.0067246556 -0.018256664 0.0079045296 -0.018256724 0.0067246556 -0.018550515 0.00790447
+		 -0.018550575 0.0067244172 -0.021957099 0.0079042912 -0.021957159 -0.37316608 0.19648993
+		 -0.37316608 0.19611859 -0.37198621 0.19611853 -0.37198621 0.19648987 -0.37198603
+		 0.19859213 -0.37316591 0.19859225 -0.37198597 0.19946635 -0.37316585 0.19946641 -0.0067213178
+		 -0.016181707 -0.0067212582 -0.016553044 -0.0055254698 -0.016552925 -0.0055255294
+		 -0.016181588 -0.005525589 -0.01485008 -0.0067213774 -0.014850169 -0.0055256486 -0.014540076
+		 -0.006721437 -0.014540195 -0.0067216754 -0.011014462 -0.005525887 -0.011014372;
+createNode polyLayoutUV -n "polyLayoutUV12";
+	rename -uid "77FF64F3-4DFF-43F4-EFD3-80B84480AE7A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyAutoProj -n "polyAutoProj16";
+	rename -uid "03D5A6CE-4097-BC6A-6A55-238FB6124A78";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:30]";
+	setAttr ".ix" -type "matrix" 0.2060876420425663 0 0 0 0 0.26802789940255617 0 0 0 0 0.2060876420425663 0
+		 0.6541181879107143 0.28213889058211417 0.15852019117652166 1;
+	setAttr ".s" -type "double3" 0.53605579880511223 0.53605579880511223 0.53605579880511223 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV23";
+	rename -uid "E95164FD-40C8-684D-660E-C28F36755E4F";
+	setAttr ".uopa" yes;
+	setAttr -s 56 ".uvtk[0:55]" -type "float2" -0.011833876 -0.013292449
+		 -0.017334521 -0.01315272 -0.018496186 0.013711631 -0.012995541 0.013571918 -0.0096838772
+		 -0.013012992 -0.010845542 0.013851374 0.00058084726 -0.013432177 -0.00058081746 0.013432175
+		 0.012995526 -0.013571905 0.011833861 0.013292462 0.018496171 -0.013711634 0.017334513
+		 0.013152719 0.010845554 -0.013851362 0.0096838912 0.013013005 0.031791568 -0.012587488
+		 0.04147017 -0.04096508 -0.022112995 -0.015790105 -0.031791568 0.012587488 -0.04147014
+		 0.04096511 0.022113025 0.015790105 0 1.4901161e-08 0 0 0 1.4901161e-08 0 1.4901161e-08
+		 0 3.7252903e-09 0 0 0 -4.6566129e-09 0 -2.9802322e-08 0 -1.1874363e-08 0 0 0 2.9802322e-08
+		 0 0 5.9604645e-08 0 0 0 0 -5.9604645e-08 0 0 5.9604645e-08 0 -5.9604645e-08 -5.9604645e-08
+		 5.9604645e-08 0 0 0 0 5.9604645e-08 0 0 0 2.9802322e-08 0 2.9802322e-08 -0.0085598826
+		 0.024841011 -0.005612433 0.024045289 0.001003027 -0.024045279 -0.0019444227 -0.02324955
+		 0.0042491257 0.023249537 0.010864586 -0.024841009 0.010864615 -0.024841016 0.001003027
+		 -0.024045289 -0.005612433 0.024045289 0.0042491555 0.023249567 -0.0019444227 -0.023249559
+		 -0.0085598826 0.024841011;
+createNode polyLayoutUV -n "polyLayoutUV13";
+	rename -uid "F958A53C-4822-59BA-B111-7E90627D6C93";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:30]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV24";
+	rename -uid "12FD4658-4EEE-277C-8A69-56B9D6CEB0F0";
+	setAttr ".uopa" yes;
+	setAttr -s 56 ".uvtk[0:55]" -type "float2" 0.49729937 0.01161439 0.49921459
+		 0.01161458 0.49921304 0.027537227 0.49729782 0.027537018 0.50112987 0.011614769 0.50112826
+		 0.027537405 0.49538416 0.0116142 0.49538255 0.027536839 0.49346897 0.01161401 0.49346733
+		 0.02753666 0.49155372 0.01161382 0.49155214 0.027536452 0.48963851 0.01161363 0.48963693
+		 0.027536273 -0.29545984 -0.49934256 -0.29545975 -0.50757098 -0.27405673 -0.50757074
+		 -0.27405682 -0.49934232 -0.27405694 -0.49111387 -0.29545996 -0.49111414 -0.49592397
+		 0.36756825 -0.50109029 0.35742882 -0.4664982 0.3461892 -0.50287044 0.3461892 -0.48787725
+		 0.37561494 -0.50109023 0.33494958 -0.47773784 0.38078123 -0.49592394 0.32481015 -0.4664982
+		 0.38256142 -0.48787725 0.31676343 -0.47773781 0.31159714 -0.4664982 0.30981699 -0.80402744
+		 -0.12618965 -0.79886115 -0.13632905 -0.76943541 -0.11495 -0.79081446 -0.14437574
+		 -0.80580759 -0.11495 -0.78067505 -0.14954203 -0.80402744 -0.10371041 -0.76943541
+		 -0.15132225 -0.79886115 -0.093570977 -0.79081446 -0.085524291 -0.78067505 -0.080358028
+		 -0.76943541 -0.078577816 0.47718656 0.016951293 0.47782958 0.016950577 0.47783542
+		 0.022296121 0.47719246 0.022296825 0.47847253 0.016949862 0.4784784 0.022295415 -0.1351158
+		 0.52223033 -0.13575879 0.52223098 -0.13576463 0.51688552 -0.13512167 0.5168848 -0.13640177
+		 0.5222317 -0.13640761 0.51688623;
+createNode polyAutoProj -n "polyAutoProj17";
+	rename -uid "FC2348B0-4068-8EE7-AFDD-E49604AFE0F2";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:30]";
+	setAttr ".ix" -type "matrix" 0.2060876420425663 0 0 0 0 0.26802789940255617 0 0 0 0 0.2060876420425663 0
+		 0.6541181879107143 0.28213889058211417 1.6153702110237558 1;
+	setAttr ".s" -type "double3" 0.53605579880511223 0.53605579880511223 0.53605579880511223 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapCut -n "polyMapCut9";
+	rename -uid "14D7D90C-4EAD-7217-1F6C-A7A5339CD55C";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0:52]";
+createNode polyAutoProj -n "polyAutoProj18";
+	rename -uid "16A6F9EB-485C-E3DC-FA5E-3195498230EC";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:30]";
+	setAttr ".ix" -type "matrix" 0.15762388884308454 0 0 0 0 0.46602045102352135 0 0
+		 0 0 0.15762388884308454 0 0.64333366532257075 0.50773848154522061 0.15852019117652166 1;
+	setAttr ".s" -type "double3" 0.9320409020470426 0.9320409020470426 0.9320409020470426 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV25";
+	rename -uid "A8CB25C6-4E19-DE98-E2D0-5899303081F3";
+	setAttr ".uopa" yes;
+	setAttr -s 56 ".uvtk[0:55]" -type "float2" -0.026729077 -0.13571081
+		 -0.051839054 -0.13515048 -0.062429011 0.13739178 -0.037319034 0.13683149 -0.063797742
+		 -0.13459015 -0.074387699 0.13795212 0.0052949935 -0.13627113 -0.0052949637 0.13627115
+		 0.037319005 -0.13683146 0.026729047 0.13571081 0.062429007 -0.13739179 0.05183905
+		 0.13515046 0.074387714 -0.13795213 0.063797757 0.13459012 0.16014844 -0.057977498
+		 0.17975837 -0.15507156 -0.14053847 -0.039116502 -0.16014843 0.057977498 -0.17975838
+		 0.15507153 0.14053845 0.039116532 0 0 0 0 0 -1.4901161e-08 -5.9604645e-08 0 0 -2.6077032e-08
+		 -5.9604645e-08 0 0 -2.0489097e-08 0 2.9802322e-08 5.9604645e-08 -4.6100467e-08 0
+		 2.9802322e-08 0 2.9802322e-08 0 0 -5.9604645e-08 0 5.9604645e-08 0 0 0 0 5.9604645e-08
+		 0 0 0 -5.9604645e-08 5.9604645e-08 0 0 5.9604645e-08 0 0 -5.9604645e-08 0 5.9604645e-08
+		 -2.9802322e-08 0 -5.9604645e-08 -0.043469787 0.15380532 -0.020016938 0.15193099 0.015407592
+		 -0.15193099 -0.0080451965 -0.15005662 0.0103499 0.1500566 0.04577446 -0.15380535
+		 0.04577446 -0.15380535 0.015407622 -0.15193099 -0.020016968 0.15193096 0.01034987
+		 0.15005663 -0.0080451965 -0.15005662 -0.043469787 0.15380535;
+createNode polyLayoutUV -n "polyLayoutUV14";
+	rename -uid "E246E63E-42C0-5885-9886-CDA39C83564E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:30]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV26";
+	rename -uid "484DBAED-4823-C1F1-CF8A-FBAD14A2CC97";
+	setAttr ".uopa" yes;
+	setAttr -s 56 ".uvtk[0:55]" -type "float2" 0.68029356 0.13448016 0.68121839
+		 0.1344801 0.68121946 0.15195906 0.68029457 0.15195912 0.68214321 0.13448004 0.68214428
+		 0.151959 0.67936873 0.13448021 0.67936975 0.15195918 0.67844391 0.13448027 0.67844498
+		 0.15195924 0.67751902 0.13448033 0.6775201 0.1519593 0.6765942 0.13448039 0.67659527
+		 0.15195936 -0.1805014 -0.56516314 -0.18050158 -0.57172465 -0.1417031 -0.57172573
+		 -0.14170292 -0.56516427 -0.14170273 -0.55860281 -0.18050122 -0.55860168 -0.29047632
+		 0.20878106 -0.30499291 0.18029059 -0.2077938 0.1487087 -0.30999494 0.14870869 -0.26786619
+		 0.23139122 -0.30499285 0.11712679 -0.23937571 0.24590781 -0.29047626 0.088636339
+		 -0.20779383 0.25090989 -0.26786613 0.066026211 -0.23937568 0.051509589 -0.2077938
+		 0.046507508 -0.54157174 -0.34400624 -0.52705508 -0.37249672 -0.44437253 -0.31242433
+		 -0.50444496 -0.39510688 -0.54657376 -0.31242433 -0.47595447 -0.40962347 -0.54157162
+		 -0.28084245 -0.44437253 -0.41462553 -0.52705503 -0.25235197 -0.5044449 -0.22974184
+		 -0.47595447 -0.21522525 -0.44437253 -0.21022314 0.25852486 0.38866824 0.25929672
+		 0.3886683 0.25929511 0.40325624 0.2585232 0.40325618 0.2600686 0.38866842 0.26006696
+		 0.40325636 0.036527753 0.40325868 0.035755873 0.40325862 0.035757542 0.38867068 0.036529422
+		 0.3886708 0.034983993 0.40325853 0.034985662 0.38867062;
+createNode polyAutoProj -n "polyAutoProj19";
+	rename -uid "23A959AA-4F01-F72C-71BE-94B8CBDEEDD9";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:30]";
+	setAttr ".ix" -type "matrix" -0.2060876420425663 2.5238457117125431e-17 0 0 -3.2823950908552922e-17 -0.26802789940255617 0 0
+		 0 0 0.2060876420425663 0 -0.65549512379921127 0.28213889058211417 0.17373076546590938 1;
+	setAttr ".s" -type "double3" 0.53605579880511223 0.53605579880511223 0.53605579880511223 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV27";
+	rename -uid "1F096C89-448D-310E-EC36-A8861703707B";
+	setAttr ".uopa" yes;
+	setAttr -s 56 ".uvtk[0:55]" -type "float2" -0.011833876 -0.013292449
+		 -0.017334521 -0.01315272 -0.018496186 0.013711631 -0.012995541 0.013571918 -0.0096838772
+		 -0.013012992 -0.010845542 0.013851374 0.00058084726 -0.013432177 -0.00058081746 0.013432175
+		 0.012995526 -0.013571905 0.011833861 0.013292462 0.018496171 -0.013711634 0.017334513
+		 0.013152719 0.010845554 -0.013851362 0.0096838912 0.013013005 0.031791568 -0.012587488
+		 0.04147017 -0.04096508 -0.022112995 -0.015790105 -0.031791568 0.012587488 -0.04147014
+		 0.04096511 0.022113025 0.015790105 0 1.4901161e-08 0 0 0 1.4901161e-08 0 1.4901161e-08
+		 0 3.7252903e-09 0 0 0 -4.6566129e-09 0 -2.9802322e-08 0 -1.1874363e-08 0 0 0 2.9802322e-08
+		 0 0 5.9604645e-08 0 0 0 0 -5.9604645e-08 0 0 5.9604645e-08 0 -5.9604645e-08 -5.9604645e-08
+		 5.9604645e-08 0 0 0 0 5.9604645e-08 0 0 0 2.9802322e-08 0 2.9802322e-08 -0.0085598826
+		 0.024841011 -0.005612433 0.024045289 0.001003027 -0.024045279 -0.0019444227 -0.02324955
+		 0.0042491257 0.023249537 0.010864586 -0.024841009 0.010864615 -0.024841016 0.001003027
+		 -0.024045289 -0.005612433 0.024045289 0.0042491555 0.023249567 -0.0019444227 -0.023249559
+		 -0.0085598826 0.024841011;
+createNode polyLayoutUV -n "polyLayoutUV15";
+	rename -uid "F4F34A73-4C07-BD62-6271-C6AD35CAF3BE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:30]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV28";
+	rename -uid "CD02C42A-4CC2-B10C-56FB-11B490227CAC";
+	setAttr ".uopa" yes;
+	setAttr -s 56 ".uvtk[0:55]" -type "float2" 0.49729937 0.01161439 0.49921459
+		 0.01161458 0.49921304 0.027537227 0.49729782 0.027537018 0.50112987 0.011614769 0.50112826
+		 0.027537405 0.49538416 0.0116142 0.49538255 0.027536839 0.49346897 0.01161401 0.49346733
+		 0.02753666 0.49155372 0.01161382 0.49155214 0.027536452 0.48963851 0.01161363 0.48963693
+		 0.027536273 -0.29545984 -0.49934256 -0.29545975 -0.50757098 -0.27405673 -0.50757074
+		 -0.27405682 -0.49934232 -0.27405694 -0.49111387 -0.29545996 -0.49111414 -0.49592397
+		 0.36756825 -0.50109029 0.35742882 -0.4664982 0.3461892 -0.50287044 0.3461892 -0.48787725
+		 0.37561494 -0.50109023 0.33494958 -0.47773784 0.38078123 -0.49592394 0.32481015 -0.4664982
+		 0.38256142 -0.48787725 0.31676343 -0.47773781 0.31159714 -0.4664982 0.30981699 -0.80402744
+		 -0.12618965 -0.79886115 -0.13632905 -0.76943541 -0.11495 -0.79081446 -0.14437574
+		 -0.80580759 -0.11495 -0.78067505 -0.14954203 -0.80402744 -0.10371041 -0.76943541
+		 -0.15132225 -0.79886115 -0.093570977 -0.79081446 -0.085524291 -0.78067505 -0.080358028
+		 -0.76943541 -0.078577816 0.47718656 0.016951293 0.47782958 0.016950577 0.47783542
+		 0.022296121 0.47719246 0.022296825 0.47847253 0.016949862 0.4784784 0.022295415 -0.1351158
+		 0.52223033 -0.13575879 0.52223098 -0.13576463 0.51688552 -0.13512167 0.5168848 -0.13640177
+		 0.5222317 -0.13640761 0.51688623;
+createNode polyAutoProj -n "polyAutoProj20";
+	rename -uid "F2CE1ECA-4890-FA30-8CC1-C99063EF4862";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:30]";
+	setAttr ".ix" -type "matrix" -0.2060876420425663 2.5238457117125431e-17 0 0 -3.2823950908552922e-17 -0.26802789940255617 0 0
+		 0 0 0.2060876420425663 0 -0.65549512379921127 0.28213889058211417 1.59621300852022 1;
+	setAttr ".s" -type "double3" 0.53605579880511223 0.53605579880511223 0.53605579880511223 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyLayoutUV -n "polyLayoutUV16";
+	rename -uid "3C0530C8-4D9F-4878-62BC-B694FEF7535B";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:30]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV29";
+	rename -uid "812A4E6F-448C-6653-5754-D5AC2F88FE79";
+	setAttr ".uopa" yes;
+	setAttr -s 56 ".uvtk[0:55]" -type "float2" 0.50462633 -0.0018365644
+		 0.51209784 -0.0018365644 0.51209784 0.051767409 0.50462633 0.051767409 0.51802737
+		 -0.0018365644 0.51802737 0.051767409 0.49634403 -0.0018365644 0.49634403 0.051767409
+		 0.48806179 -0.0018365644 0.48806179 0.051767409 0.48059022 -0.0018365644 0.48059022
+		 0.051767409 0.47466075 -0.0018365644 0.47466075 0.051767409 -0.2891185 -0.45445514
+		 -0.2891185 -0.44593695 -0.30615488 -0.44593695 -0.30615488 -0.45445514 -0.30615488
+		 -0.46297333 -0.2891185 -0.46297333 -0.67960775 0.46381694 -0.68254435 0.45805356
+		 -0.66288179 0.45166481 -0.6835562 0.45166481 -0.67503393 0.46839079 -0.68254435 0.44527605
+		 -0.66927052 0.47132739 -0.67960775 0.4395127 -0.66288179 0.47233927 -0.67503393 0.43493882
+		 -0.66927052 0.43200225 -0.66288179 0.43099037 -0.57672787 -0.015860677 -0.57379127
+		 -0.021624088 -0.55706537 -0.0094719529 -0.56921744 -0.02619791 -0.57773972 -0.0094719529
+		 -0.56345409 -0.029134512 -0.57672787 -0.0030831695 -0.55706537 -0.03014636 -0.57379127
+		 0.0026801825 -0.56921744 0.0072540045 -0.56345409 0.010190606 -0.55706537 0.011202484
+		 0.055841029 0.54101825 0.051366031 0.54101825 0.051366031 0.50891256 0.055841029
+		 0.50891256 0.046405435 0.54101825 0.046405435 0.50891256 0.050431252 0.50891262 0.055391848
+		 0.50891262 0.055391848 0.54101825 0.050431252 0.54101825 0.059866846 0.50891262 0.059866846
+		 0.54101825;
+createNode polyAutoProj -n "polyAutoProj21";
+	rename -uid "0F89DEFD-48D8-873D-F2BD-C4B3737480CB";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:30]";
+	setAttr ".ix" -type "matrix" -0.15762388884308454 0 -1.9303359094084166e-17 0 0 0.46602045102352135 0 0
+		 1.9303359094084166e-17 0 -0.15762388884308454 0 -0.64543923335662168 0.50773848154522061 0.17746065878625927 1;
+	setAttr ".s" -type "double3" 0.9320409020470426 0.9320409020470426 0.9320409020470426 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyLayoutUV -n "polyLayoutUV17";
+	rename -uid "8640383C-4EE5-C363-7ED0-FE851DC2FBC9";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:30]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV30";
+	rename -uid "845B2A9B-41E1-E356-7ACA-25989F170839";
+	setAttr ".uopa" yes;
+	setAttr -s 56 ".uvtk[0:55]" -type "float2" 0.50016743 -0.15921552 0.48122185
+		 -0.15856573 0.46894109 0.23048148 0.48788667 0.22983167 0.47542763 -0.15791593 0.46314687
+		 0.23113129 0.52602708 -0.15986532 0.51374626 0.22918186 0.55188662 -0.16051511 0.53960586
+		 0.22853211 0.57083213 -0.16116491 0.55855137 0.2278823 0.57662642 -0.16181469 0.5643456
+		 0.22723249 -0.098699093 -0.50787699 -0.077586293 -0.59489495 -0.45746374 -0.47005349
+		 -0.47857654 -0.38303554 -0.49968934 -0.29601762 -0.11981189 -0.42085904 -0.42831925
+		 0.45511258 -0.44045684 0.43129122 -0.35918698 0.40488499 -0.44463918 0.40488505 -0.4094145
+		 0.47401729 -0.44045687 0.37847888 -0.38559315 0.48615488 -0.42831922 0.35465753 -0.35918695
+		 0.49033719 -0.40941447 0.33575284 -0.38559312 0.32361525 -0.35918698 0.31943294 -0.39976454
+		 -0.051261663 -0.38762683 -0.075083017 -0.31849462 -0.024855494 -0.3687222 -0.093987763
+		 -0.40394676 -0.024855494 -0.34490079 -0.10612535 -0.39976442 0.0015506744 -0.31849462
+		 -0.11030757 -0.38762689 0.025372088 -0.3687222 0.044276774 -0.34490076 0.056414336
+		 -0.31849462 0.060596615 -0.41173011 0.71187317 -0.39274085 0.70979106 -0.35338941
+		 0.32157013 -0.37237871 0.32365227 -0.36683756 0.70770884 -0.32748613 0.31948799 -0.31791222
+		 0.31948802 -0.34381551 0.32157016 -0.38316691 0.70979106 -0.35726362 0.70770884 -0.3628048
+		 0.3236523 -0.4021562 0.71187317;
+createNode polyLayoutUV -n "polyLayoutUV18";
+	rename -uid "5B97AC68-4281-1DDF-4C84-AD8CAF899D47";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:30]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV31";
+	rename -uid "8BFD42AF-4628-937F-8303-36AAFF066BDF";
+	setAttr ".uopa" yes;
+	setAttr -s 56 ".uvtk[0:55]" -type "float2" 0.15424526 0.15808085 0.149005
+		 0.15808116 0.14899898 0.059042811 0.15423924 0.059042454 0.14376473 0.15808147 0.14375871
+		 0.059043109 0.15948552 0.15808052 0.1594795 0.059042156 0.16472578 0.15808019 0.16471976
+		 0.059041858 0.16996604 0.15807988 0.16996002 0.0590415 0.1752063 0.15807956 0.17520028
+		 0.059041202 0.07801646 -0.11970603 0.078015983 -0.13645509 0.17705424 -0.13645795
+		 0.17705473 -0.11970888 0.17705521 -0.10295984 0.078016937 -0.10295699 0.0078177452
+		 -0.24632782 0.0054387152 -0.25099692 0.021367997 -0.25617266 0.0046189725 -0.25617266
+		 0.011523157 -0.24262238 0.0054387152 -0.2613484 0.016192257 -0.24024335 0.0078177452
+		 -0.2660175 0.021367997 -0.2394236 0.011523157 -0.26972291 0.016192257 -0.27210194
+		 0.021367997 -0.27292168 -0.01178211 -0.29274836 -0.0094031096 -0.29741746 0.0041471422
+		 -0.28757262 -0.0056976676 -0.30112287 -0.012601852 -0.28757262 -0.0010285974 -0.3035019
+		 -0.01178211 -0.28239688 0.0041471422 -0.30432165 -0.0094031096 -0.27772781 -0.0056976676
+		 -0.27402237 -0.0010285676 -0.27164334 0.0041471422 -0.2708236 0.6248216 -0.16923809
+		 0.63006186 -0.16923749 0.63005066 -0.070199192 0.6248104 -0.070199758 0.63530219
+		 -0.1692369 0.63529092 -0.070198596 0.40217784 -0.070196271 0.39693755 -0.070196867
+		 0.39694875 -0.16923499 0.40218902 -0.1692344 0.39169735 -0.070197463 0.39170855 -0.16923559;
+createNode polyAutoProj -n "polyAutoProj22";
+	rename -uid "17F93A62-4638-5393-5581-16B0E3474694";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:30]";
+	setAttr ".ix" -type "matrix" -0.15762388884308454 0 -1.9303359094084166e-17 0 0 0.46602045102352135 0 0
+		 1.9303359094084166e-17 0 -0.15762388884308454 0 -0.64543923335662168 0.50773848154522061 1.5950364084909507 1;
+	setAttr ".s" -type "double3" 0.9320409020470426 0.9320409020470426 0.9320409020470426 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyLayoutUV -n "polyLayoutUV19";
+	rename -uid "82BECEC9-4741-1CA8-CE2E-DF817E4E3402";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:30]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV32";
+	rename -uid "40A0BEDD-4F5C-CCEA-709A-EA823698EF60";
+	setAttr ".uopa" yes;
+	setAttr -s 56 ".uvtk[0:55]" -type "float2" 0.50016743 -0.15921552 0.48122185
+		 -0.15856573 0.46894109 0.23048148 0.48788667 0.22983167 0.47542763 -0.15791593 0.46314687
+		 0.23113129 0.52602708 -0.15986532 0.51374626 0.22918186 0.55188662 -0.16051511 0.53960586
+		 0.22853211 0.57083213 -0.16116491 0.55855137 0.2278823 0.57662642 -0.16181469 0.5643456
+		 0.22723249 -0.098699093 -0.50787699 -0.077586293 -0.59489495 -0.45746374 -0.47005349
+		 -0.47857654 -0.38303554 -0.49968934 -0.29601762 -0.11981189 -0.42085904 -0.42831925
+		 0.45511258 -0.44045684 0.43129122 -0.35918698 0.40488499 -0.44463918 0.40488505 -0.4094145
+		 0.47401729 -0.44045687 0.37847888 -0.38559315 0.48615488 -0.42831922 0.35465753 -0.35918695
+		 0.49033719 -0.40941447 0.33575284 -0.38559312 0.32361525 -0.35918698 0.31943294 -0.39976454
+		 -0.051261663 -0.38762683 -0.075083017 -0.31849462 -0.024855494 -0.3687222 -0.093987763
+		 -0.40394676 -0.024855494 -0.34490079 -0.10612535 -0.39976442 0.0015506744 -0.31849462
+		 -0.11030757 -0.38762689 0.025372088 -0.3687222 0.044276774 -0.34490076 0.056414336
+		 -0.31849462 0.060596615 -0.41173011 0.71187317 -0.39274085 0.70979106 -0.35338941
+		 0.32157013 -0.37237871 0.32365227 -0.36683756 0.70770884 -0.32748613 0.31948799 -0.31791222
+		 0.31948802 -0.34381551 0.32157016 -0.38316691 0.70979106 -0.35726362 0.70770884 -0.3628048
+		 0.3236523 -0.4021562 0.71187317;
+createNode polyLayoutUV -n "polyLayoutUV20";
+	rename -uid "969DD7D9-4147-CB03-E2D2-08AAFF0F4AD5";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:30]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV33";
+	rename -uid "424CF1C9-47D4-F089-D7CF-129F61D4DB0F";
+	setAttr ".uopa" yes;
+	setAttr -s 56 ".uvtk[0:55]" -type "float2" 0.15424526 0.15808085 0.149005
+		 0.15808116 0.14899898 0.059042811 0.15423924 0.059042454 0.14376473 0.15808147 0.14375871
+		 0.059043109 0.15948552 0.15808052 0.1594795 0.059042156 0.16472578 0.15808019 0.16471976
+		 0.059041858 0.16996604 0.15807988 0.16996002 0.0590415 0.1752063 0.15807956 0.17520028
+		 0.059041202 0.07801646 -0.11970603 0.078015983 -0.13645509 0.17705424 -0.13645795
+		 0.17705473 -0.11970888 0.17705521 -0.10295984 0.078016937 -0.10295699 0.0078177452
+		 -0.24632782 0.0054387152 -0.25099692 0.021367997 -0.25617266 0.0046189725 -0.25617266
+		 0.011523157 -0.24262238 0.0054387152 -0.2613484 0.016192257 -0.24024335 0.0078177452
+		 -0.2660175 0.021367997 -0.2394236 0.011523157 -0.26972291 0.016192257 -0.27210194
+		 0.021367997 -0.27292168 -0.01178211 -0.29274836 -0.0094031096 -0.29741746 0.0041471422
+		 -0.28757262 -0.0056976676 -0.30112287 -0.012601852 -0.28757262 -0.0010285974 -0.3035019
+		 -0.01178211 -0.28239688 0.0041471422 -0.30432165 -0.0094031096 -0.27772781 -0.0056976676
+		 -0.27402237 -0.0010285676 -0.27164334 0.0041471422 -0.2708236 0.6248216 -0.16923809
+		 0.63006186 -0.16923749 0.63005066 -0.070199192 0.6248104 -0.070199758 0.63530219
+		 -0.1692369 0.63529092 -0.070198596 0.40217784 -0.070196271 0.39693755 -0.070196867
+		 0.39694875 -0.16923499 0.40218902 -0.1692344 0.39169735 -0.070197463 0.39170855 -0.16923559;
+createNode polyAutoProj -n "polyAutoProj23";
+	rename -uid "B871DE14-4960-320E-67E9-38B57E70AE88";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:99]";
+	setAttr ".ix" -type "matrix" 0.46722165031094509 0 0 0 0 0.46722165031094509 0 0
+		 0 0 0.46722165031094509 0 0 1.0648410264183166 0.90300974215051122 1;
+	setAttr ".s" -type "double3" 0.93444357910769515 0.93444357910769515 0.93444357910769515 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV34";
+	rename -uid "447911CF-4BFD-FC61-2F35-1484273FD66F";
+	setAttr ".uopa" yes;
+	setAttr -s 178 ".uvtk[0:177]" -type "float2" -0.0041588098 0.012081882
+		 -0.0021370649 0.011784184 -0.00023405254 -0.012974977 -0.0022557974 -0.012677282
+		 0.0098310411 0.011486485 0.011734068 -0.013272673 -0.00095149875 0.01237958 0.00095152855
+		 -0.012379587 0.0022558123 0.012677279 0.0041588321 -0.012081891 0.00023400784 0.012974977
+		 0.0021370314 -0.011784196 -0.011734049 0.013272676 -0.0098310262 -0.011486471 0.00086432695
+		 0.012577116 0.0028868914 0.01247713 0.0035261214 -0.012277126 0.001503557 -0.01217711
+		 -0.00031965971 0.012377113 0.00031960011 -0.012377143 -0.011104524 0.012677103 -0.010465294
+		 -0.012077153 -0.0035261512 0.012277126 -0.002886951 -0.0124771 -0.0015035868 0.01217711
+		 -0.00086432695 -0.012577116 0.010465324 0.012077123 0.011104584 -0.012677133 -0.0024065375
+		 -0.003192544 -0.0016230941 -0.001763761 0.0047568083 4.6849251e-05 0.0039733648 -0.0013819337
+		 -0.00083968043 0.0067332983 0.0055402219 0.0085439086 -0.0031899512 -0.00090527534
+		 0.0031899512 0.00090533495 -0.0039733648 0.0013818741 0.0024065375 0.003192544 -0.0047567785
+		 -4.6849251e-05 0.0016230941 0.0017637014 -0.0055402219 -0.0085439682 0.00083968043
+		 -0.0067332983 -0.0044934154 9.8228455e-05 -0.0038401783 0.0015297532 0.0025336742
+		 0.0030394197 0.0018804073 0.0016081333 -0.0031869113 -0.00075483322 0.0031869113
+		 0.00075483322 -0.0051466823 -0.0084013939 0.0012271404 -0.0068915486 -0.0025336444
+		 -0.0030395389 0.0038401783 -0.0015296936 -0.0018804073 -0.0016080737 0.0044934154
+		 -9.8288059e-05 -0.0012271702 0.0068915486 0.0051466823 0.0084013343 0 0 0 0 0 -1.4901161e-08
+		 0 -1.4901161e-08 -5.9604645e-08 -3.7252903e-09 0 -1.4901161e-08 -5.9604645e-08 -5.5879354e-09
+		 0 0 0 -7.1013346e-09 0 0 0 5.5879354e-09 0 2.9802322e-08 0 1.1175871e-08 0 0 5.9604645e-08
+		 0 0 2.9802322e-08 0 7.4505806e-09 0 0 -2.9802322e-08 -1.4901161e-08 5.9604645e-08
+		 0 0 -1.4901161e-08 0 0 0 5.9604645e-08 7.4505806e-09 5.9604645e-08 -1.4901161e-08
+		 0 1.4901161e-08 5.9604645e-08 0 0 -1.4901161e-08 5.9604645e-08 0 5.9604645e-08 0
+		 0 -1.4901161e-08 0 0 0 0 -5.9604645e-08 1.4901161e-08 -5.9604645e-08 -3.7252903e-09
+		 5.9604645e-08 7.4505806e-09 -5.9604645e-08 1.8626451e-09 0 0 0 3.259629e-09 -5.9604645e-08
+		 3.7252903e-09 5.9604645e-08 3.7252903e-09 0 0 0 0 0 0 0 0 0 5.9604645e-08 0 0 -5.9604645e-08
+		 -5.9604645e-08 0 0 -5.9604645e-08 0 -5.9604645e-08 0 -5.9604645e-08 1.1920929e-07
+		 5.9604645e-08 5.9604645e-08 -2.9802322e-08 0 0 0 0 0 0 5.9604645e-08 -2.9802322e-08
+		 0 -2.9802322e-08 5.9604645e-08 -5.9604645e-08 5.9604645e-08 5.9604645e-08 0 0 0 0
+		 5.9604645e-08 -5.9604645e-08 -5.9604645e-08 5.9604645e-08 0 -5.9604645e-08 5.9604645e-08
+		 0 0 5.9604645e-08 -5.9604645e-08 5.9604645e-08 -5.9604645e-08 -2.9802322e-08 -5.9604645e-08
+		 0 5.9604645e-08 5.9604645e-08 0 0 -5.9604645e-08 -2.9802322e-08 5.9604645e-08 2.9802322e-08
+		 0 0 -5.9604645e-08 0 0 2.9802322e-08 -5.9604645e-08 2.9802322e-08 5.9604645e-08 2.9802322e-08
+		 0 5.9604645e-08 0 2.9802322e-08 -5.9604645e-08 0 0.0040056109 -0.0058128834 -0.00022292137
+		 -0.0055695772 -0.0017781854 0.0050829891 0.0024503469 0.0048396913 0.0007776618 -0.0053263009
+		 -0.0007776022 0.0053262869 0.0017781854 -0.0050829947 0.00022292137 0.0055695847
+		 -0.0024503469 -0.0048396885 -0.0040056407 0.0058128834 -0.0040056556 0.0058129132
+		 0.00022292137 0.0055696368 0.0017782003 -0.0050830245 -0.0024503618 -0.0048397183
+		 -0.0007776618 0.0053263307 0.000777632 -0.0053263307 -0.0017781854 0.0050830245 -0.00022289157
+		 -0.0055696368 0.0024503767 0.0048397183 0.0040056407 -0.005812943 -0.002206862 -0.0027731061
+		 -0.001788795 0.00022989511 0.00095269084 0.0011960864 0.00053462386 -0.0018069148
+		 -0.001370728 -0.00048309565 0.001370728 0.00048309565 -0.00095266104 -0.0011960864
+		 0.001788795 -0.00022989511 -0.00053465366 0.0018069744 0.002206862 0.0027731061 0.002206862
+		 0.0027731657 0.001788795 -0.00022983551 -0.00095272064 -0.0011960268 -0.00053465366
+		 0.0018069148 0.001370728 0.00048309565 -0.001370728 -0.00048309565 0.00095272064
+		 0.0011960268 -0.001788795 0.00022983551 0.00053465366 -0.0018069744 -0.002206862
+		 -0.0027731657;
+createNode polyLayoutUV -n "polyLayoutUV21";
+	rename -uid "0D364C2C-4225-36E6-8890-C99076DDCB8F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:99]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV35";
+	rename -uid "C796E07C-4F9C-854F-B3FD-04A74C334CD1";
+	setAttr ".uopa" yes;
+	setAttr -s 178 ".uvtk[0:177]" -type "float2" 0.41458136 -0.014237549 0.42302302
+		 -0.014239037 0.42303246 0.039723843 0.41459087 0.039725333 0.43146464 -0.014240525
+		 0.43147415 0.039722383 0.40613967 -0.014236062 0.40614918 0.039726824 0.39769801
+		 -0.014234572 0.39770752 0.039728314 0.38925636 -0.014233083 0.38926587 0.039729804
+		 0.3808147 -0.014231596 0.38082424 0.039731294 0.039887369 0.010998666 0.048329055
+		 0.01099807 0.048333019 0.064960897 0.039891362 0.064961553 0.056770682 0.010997415
+		 0.056774676 0.064960301 0.031445712 0.010999292 0.031449705 0.064962149 0.065212369
+		 0.010996819 0.065216362 0.064959705 0.073653996 0.010996193 0.07365799 0.064959049
+		 0.082095623 0.010995567 0.082099617 0.064958394 0.63988757 0.080209494 0.63988817
+		 0.086208463 0.62602329 0.086209834 0.6260227 0.080210865 0.63988876 0.092207491 0.62602389
+		 0.092208803 0.63988703 0.074210465 0.6260221 0.074211836 0.63988638 0.068211496 0.62602156
+		 0.068212867 0.6398859 0.062212527 0.62602103 0.062213898 0.63988525 0.056213498 0.62602043
+		 0.056214869 -0.34035087 0.035017252 -0.34035149 0.041016221 -0.35421634 0.04101485
+		 -0.35421574 0.035015881 -0.34035209 0.04701525 -0.35421693 0.047013879 -0.34035027
+		 0.029018283 -0.35421512 0.029016852 -0.34035268 0.053014219 -0.35421753 0.053012848
+		 -0.34035328 0.059013188 -0.35421813 0.059011817 -0.34035388 0.065012157 -0.35421872
+		 0.065010786 -0.47244832 0.38302299 -0.47386032 0.38736874 -0.48687321 0.38073832
+		 -0.47654614 0.39106545 -0.47244832 0.37845361 -0.48024282 0.3937512 -0.47386032 0.3741079
+		 -0.48458856 0.39516324 -0.47654614 0.37041122 -0.48915792 0.39516321 -0.48024282
+		 0.36772543 -0.49350363 0.39375123 -0.48458856 0.36631343 -0.49720031 0.39106545 -0.48915792
+		 0.36631343 -0.49988613 0.38736874 -0.49350363 0.36772543 -0.50129813 0.38302299 -0.49720031
+		 0.37041122 -0.50129813 0.37845367 -0.49988613 0.37410793 0.18237409 0.037108481 0.17928587
+		 0.038111925 0.17766228 0.027860999 0.17603871 0.038111925 0.18500111 0.035199821
+		 0.17295045 0.037108481 0.18690977 0.032572806 0.17032343 0.035199821 0.18791318 0.02948457
+		 0.1684148 0.032572806 0.18791318 0.026237428 0.16741136 0.02948457 0.18690975 0.023149192
+		 0.16741136 0.026237428 0.18500112 0.020522177 0.1684148 0.023149192 0.1823741 0.018613517
+		 0.17032345 0.020522118 0.17928587 0.017610073 0.17295045 0.018613517 0.17603871 0.017610073
+		 -0.63334227 -0.32631123 -0.63768798 -0.32489923 -0.63834906 -0.32907319 -0.63526082
+		 -0.33007663 -0.64225733 -0.32489923 -0.64159626 -0.32907319 -0.62964559 -0.32899705
+		 -0.63263381 -0.33198527 -0.64660305 -0.32631123 -0.64468449 -0.33007663 -0.6269598
+		 -0.33269373 -0.6307252 -0.33461231 -0.65029973 -0.32899705 -0.64731151 -0.33198527
+		 -0.62554777 -0.33703941 -0.62972176 -0.33770055 -0.65298551 -0.33269373 -0.64922011
+		 -0.33461228 -0.62554777 -0.34160876 -0.62972176 -0.34094769 -0.65439755 -0.33703941
+		 -0.65022355 -0.33770052 -0.6269598 -0.34595448 -0.6307252 -0.34403592 -0.65439755
+		 -0.34160876 -0.65022355 -0.34094769 -0.62964559 -0.34965119 -0.63263381 -0.34666294
+		 -0.65298551 -0.34595448 -0.64922011 -0.34403592 -0.63334227 -0.35233697 -0.63526082
+		 -0.34857157 -0.65029973 -0.34965116 -0.64731151 -0.34666294 -0.63768798 -0.35374898
+		 -0.63834906 -0.34957501 -0.64660305 -0.35233697 -0.64468449 -0.34857157 -0.64225733
+		 -0.35374898 -0.64159626 -0.34957501 0.46840096 0.032647699 0.46216574 0.032647938
+		 0.46216416 -0.0072104214 0.46839938 -0.0072106663 0.45593053 0.032648176 0.45592892
+		 -0.0072101746 0.44969526 0.032648414 0.44969374 -0.0072099296 0.44346008 0.032648683
+		 0.44345847 -0.0072096824 0.59015226 0.018007845 0.59638751 0.018007606 0.59638911
+		 0.057865977 0.59015387 0.057866216 0.60262275 0.018007368 0.6026243 0.057865739 0.60885793
+		 0.018007129 0.60885954 0.0578655 0.61509323 0.018006861 0.61509472 0.057865262 0.34659153
+		 0.05088079 0.34659535 0.055311799 0.33635443 0.05532068 0.33635056 0.050889671 0.34659922
+		 0.059742808 0.33635828 0.059751689 0.34660304 0.064173818 0.33636212 0.064182699
+		 0.34660691 0.068604827 0.33636594 0.068613708 -0.40760744 -0.61786193 -0.40761131
+		 -0.62229294 -0.39737034 -0.62230182 -0.39736652 -0.61787081 -0.40761513 -0.62672395
+		 -0.39737421 -0.62673283 -0.407619 -0.63115495 -0.39737806 -0.63116384 -0.40762281
+		 -0.63558596 -0.3973819 -0.63559484;
+createNode polyAutoProj -n "polyAutoProj24";
+	rename -uid "AD17FADE-4002-60E7-431E-6E8887377A2B";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:30]";
+	setAttr ".ix" -type "matrix" 0 0 0.2060876420425663 0 0.68474608235232559 0 0 0 0 0.2060876420425663 0 0
+		 0.0033898591766653025 0.69254969186456816 3.0294693929320355 1;
+	setAttr ".s" -type "double3" 1.3694921647046512 1.3694921647046512 1.3694921647046512 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV36";
+	rename -uid "C42F4188-4E1A-45EC-8FC3-AF8BE2B52824";
+	setAttr ".uopa" yes;
+	setAttr -s 56 ".uvtk[0:55]" -type "float2" -0.028214395 -0.157628 -0.055513859
+		 -0.15706311 -0.067511946 0.15932271 -0.040212512 0.15875778 -0.069661945 -0.15649821
+		 -0.081660062 0.15988758 0.0059990734 -0.1581929 -0.0059990436 0.1581929 0.040212512
+		 -0.15875779 0.02821441 0.15762797 0.067511931 -0.15932268 0.055513818 0.1570631 0.081660062
+		 -0.15988758 0.069661945 0.15649822 0.18293571 -0.065202713 0.20255977 -0.16992402
+		 -0.16331168 -0.039518476 -0.18293573 0.065202832 -0.20255977 0.16992399 0.16331166
+		 0.039518446 0 0 0 1.4901161e-08 0 1.4901161e-08 0 1.4901161e-08 0 -3.7252903e-08
+		 5.9604645e-08 0 0 2.7939677e-09 0 2.9802322e-08 0 -1.5366822e-08 -5.9604645e-08 0
+		 0 0 0 0 0 0 5.9604645e-08 0 0 5.9604645e-08 0 0 -5.9604645e-08 0 0 0 0 -5.9604645e-08
+		 5.9604645e-08 5.9604645e-08 -5.9604645e-08 0 -5.9604645e-08 0 0 -2.9802322e-08 0
+		 -2.9802322e-08 -0.04799512 0.17662194 -0.022254199 0.17474338 0.017644823 -0.1747434
+		 -0.0080960989 -0.17286488 0.010400802 0.17286488 0.050299823 -0.17662193 0.050299764
+		 -0.17662184 0.017644823 -0.17474332 -0.022254109 0.17474332 0.010400772 0.17286482
+		 -0.0080960989 -0.17286479 -0.04799509 0.17662182;
+createNode polyLayoutUV -n "polyLayoutUV22";
+	rename -uid "05B3B3B5-4499-1CCF-4B58-CC8751EC1E91";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:30]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV37";
+	rename -uid "27833CB3-4215-1BC1-C11F-7391B0ECC398";
+	setAttr ".uopa" yes;
+	setAttr -s 56 ".uvtk[0:55]" -type "float2" 0.69372791 0.15642123 0.69349349
+		 0.1564212 0.69349432 0.15144163 0.6937288 0.15144163 0.693259 0.15642115 0.69325995
+		 0.15144157 0.6939624 0.15642127 0.69396323 0.15144169 0.69419682 0.15642132 0.69419765
+		 0.15144175 0.6944313 0.15642135 0.69443214 0.15144175 0.69466573 0.15642139 0.69466662
+		 0.15144181 -0.18271434 -0.57584476 -0.18271345 -0.585572 -0.11807415 -0.5855661 -0.11807504
+		 -0.57583886 -0.11807592 -0.56611162 -0.18271524 -0.56611753 -0.48766229 0.18298137
+		 -0.50369906 0.15150745 -0.39632145 0.11661838 -0.50922489 0.11661838 -0.46268445
+		 0.20795919 -0.50369895 0.081729323 -0.43121055 0.22399594 -0.48766223 0.050255418
+		 -0.39632145 0.22952183 -0.46268439 0.025277615 -0.43121052 0.0092408657 -0.39632145
+		 0.0037149489 -0.72785282 -0.37941819 -0.71181607 -0.4108921 -0.62047523 -0.34452915
+		 -0.68683827 -0.4358699 -0.73337859 -0.34452912 -0.65536433 -0.45190665 -0.7278527
+		 -0.30964005 -0.62047529 -0.45743254 -0.71181595 -0.27816617 -0.68683815 -0.25318837
+		 -0.65536427 -0.23715164 -0.62047523 -0.23162575 -0.3378112 0.36578006 -0.33597624
+		 0.36577994 -0.3359744 0.4047538 -0.33780935 0.40475386 -0.33414125 0.36577988 -0.33413941
+		 0.40475371 -0.55089295 0.40474683 -0.55272788 0.40474692 -0.55272979 0.36577326 -0.5508948
+		 0.3657732 -0.55456287 0.40474701 -0.55456471 0.36577338;
+createNode polyAutoProj -n "polyAutoProj25";
+	rename -uid "E386A6F8-41B9-6092-62DD-5CA82D0ABBB6";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:263]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.94567328669975437 0.32511849351041877 0
+		 0 -0.32511849351041877 0.94567328669975437 0 5.4287160445222371 0.39650558519339912 -0.62620059432855923 1;
+	setAttr ".s" -type "double3" 1.3642708277590967 1.3642708277590967 1.3642708277590967 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyLayoutUV -n "polyLayoutUV23";
+	rename -uid "9501AB64-4A56-3A74-7CE2-789E539A7577";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:263]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV38";
+	rename -uid "76FBAEA2-4B9C-6388-51AA-E9950EB55427";
+	setAttr ".uopa" yes;
+	setAttr -s 540 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0.55764675 -0.23433679 0.56123674 -0.23433679
+		 0.56123674 -0.20222765 0.55764675 -0.20222765 0.56408578 -0.23433679 0.56408578 -0.20222765
+		 0.55366719 -0.23433679 0.55366719 -0.20222765 0.54968768 -0.23433679 0.54968768 -0.20222765
+		 0.5460977 -0.23433679 0.5460977 -0.20222765 0.54324859 -0.23433679 0.54324859 -0.20222765
+		 0.49061149 0.036383927 0.49420148 0.036383927 0.49420148 0.068493068 0.49061149 0.068493068
+		 0.49818099 0.036383927 0.49818099 0.068493068 0.48776239 0.036383927 0.48776239 0.068493068
+		 0.50216055 0.036383927 0.50216055 0.068493068 0.50575054 0.036383927 0.50575054 0.068493068
+		 0.50859964 0.036383927 0.50859964 0.068493068 0.49592721 -0.53867972 0.49272436 -0.53867972
+		 0.49272436 -0.55658835 0.49592721 -0.55658835 0.12499067 -0.6357969 0.12306553 -0.6357969
+		 0.12306553 -0.64656126 0.12499067 -0.64656126 -0.004187976 0.012322217 -0.0022807792
+		 0.0064524785 0.01529564 0.015408114 0.0013469234 0.0014594048 -0.0041879802 0.018494025
+		 0.0063400194 -0.0021682922 -0.0022807885 0.024363756 0.012209758 -0.0040754871 0.0013469085
+		 0.029356837 0.018381551 -0.0040754867 0.0063399971 0.032984555 0.024251282 -0.0021682996
+		 0.012209758 0.034891754 0.029244363 0.0014593937 0.018381551 0.034891754 0.032872081
+		 0.0064524859 0.024251282 0.032984555 0.03477928 0.012322232 0.029244363 0.029356837
+		 0.034779251 0.018494025 0.032872081 0.024363756 0.24499276 0.1609413 0.24780813 0.16002655
+		 0.24928826 0.16937169 0.25076836 0.16002658 0.24259791 0.16268131 0.25358376 0.16094136
+		 0.24085787 0.1650762 0.25597864 0.16268131 0.23994312 0.16789159 0.25771862 0.16507623
+		 0.23994312 0.17085186 0.2586334 0.16789159 0.24085787 0.17366719 0.25863338 0.17085186
+		 0.24259785 0.17606205 0.25771862 0.17366716 0.24499279 0.17780209 0.25597861 0.17606205
+		 0.2478081 0.17871684 0.25358373 0.17780209 0.25076836 0.17871684 -0.32175609 -0.36285049
+		 -0.31720537 -0.36432913 -0.31596041 -0.35646883 -0.31814313 -0.35575962 -0.31242037
+		 -0.36432913 -0.31366533 -0.35646883 -0.32562721 -0.36003795 -0.31999984 -0.35441062
+		 -0.30786961 -0.36285049 -0.31148261 -0.35575962 -0.32843971 -0.35616687 -0.32134888
+		 -0.35255387 -0.30399853 -0.36003798 -0.30962586 -0.35441065 -0.32991835 -0.35161608
+		 -0.32205808 -0.35037112 -0.30118597 -0.35616687 -0.30827683 -0.35255387 -0.32991835
+		 -0.34683114 -0.32205805 -0.34807611 -0.29970735 -0.35161608 -0.30756766 -0.35037118
+		 -0.32843971 -0.34228039 -0.32134885 -0.34589338 -0.29970735 -0.34683114 -0.30756766
+		 -0.34807611 -0.32562721 -0.33840927 -0.31999987 -0.34403664 -0.30118597 -0.34228039
+		 -0.30827683 -0.34589338 -0.32175609 -0.33559677 -0.31814313 -0.34268761 -0.30399853
+		 -0.33840927 -0.30962586 -0.34403664 -0.31720537 -0.3341181 -0.31596041 -0.34197843
+		 -0.30786961 -0.33559677 -0.31148261 -0.34268761 -0.31242037 -0.33411813 -0.31366533
+		 -0.3419784 -0.35830906 0.38916245 -0.35243934 0.38725522 -0.3517459 0.39163336 -0.35629666
+		 0.393112 -0.34626752 0.38725525 -0.34696096 0.39163336 -0.36330214 0.39279014 -0.36016777
+		 0.39592451 -0.34039778 0.38916242 -0.34241018 0.393112 -0.36692983 0.39778325 -0.36298028
+		 0.39979559 -0.33540472 0.39279014 -0.33853909 0.39592451 -0.36883703 0.40365297 -0.36445892
+		 0.40434641 -0.33177701 0.39778322 -0.33572656 0.39979565 -0.36883703 0.40982473 -0.36445892
+		 0.40913129 -0.32986981 0.40365294 -0.33424795 0.40434638 -0.36692983 0.41569448 -0.36298028
+		 0.41368207 -0.32986981 0.40982473 -0.33424795 0.40913129 -0.36330214 0.42068759 -0.36016777
+		 0.41755322 -0.33177701 0.41569448 -0.33572656 0.41368204 -0.35830906 0.42431527 -0.35629666
+		 0.42036572 -0.33540472 0.42068756 -0.33853909 0.41755319 -0.35243931 0.42622244 -0.3517459
+		 0.42184433 -0.3403978 0.42431524 -0.34241018 0.42036569 -0.34626752 0.42622244 -0.34696096
+		 0.42184436 0.018747933 0.07948333 0.019662708 0.076667935 0.021557078 0.077633172
+		 0.020847857 0.079815924 0.021402694 0.07427305 0.022906072 0.075776428 0.018747933
+		 0.082443535 0.020847864 0.082110941 0.023797587 0.072533071 0.024762809 0.074427426
+		 0.019662715 0.085258931 0.02155707 0.084293664 0.026612952 0.071618289 0.026945546
+		 0.07371822 0.021402687 0.087653816 0.022906058 0.086150408 0.029573202 0.071618289
+		 0.029240593 0.07371822 0.023797601 0.089393795 0.024762809 0.08749944 0.032388553
+		 0.072533071 0.031423315 0.074427426 0.026612937 0.090308547 0.026945531 0.088208616
+		 0.034783438 0.07427305 0.03328006 0.075776428 0.029573187 0.090308547 0.029240593
+		 0.088208616 0.036523432 0.076667935 0.034629077 0.077633172 0.032388553 0.089393795
+		 0.03142333 0.08749944 0.037438199 0.079483271 0.035338268 0.079815865 0.034783423
+		 0.087653816 0.03328006 0.086150408 0.037438199 0.082443565 0.035338268 0.082110971
+		 0.036523446 0.085258901 0.034629077 0.084293693 0.52494067 -0.70535141 0.52814353
+		 -0.70535141 0.52814353 -0.68744272 0.52494067 -0.68744272 0.1762526 -0.70535141 0.17817776
+		 -0.70535141 0.17817776 -0.69458705 0.1762526 -0.69458705 -0.10032961 -0.50060999
+		 -0.10353244 -0.50060999 -0.10353244 -0.51851845 -0.10032961 -0.51851845 0.83578771
+		 -0.50514197 0.83771282 -0.50514197 0.83771282 -0.49437785 0.83578771 -0.49437785
+		 0.52387714 -0.57653236 0.52707994 -0.57653236 0.52707994 -0.55862391 0.52387714 -0.55862391
+		 0.36939842 -0.71819937 0.3674733 -0.71819937 0.3674733 -0.72896349 0.36939842 -0.72896349
+		 -0.18563759 0.075691998 -0.18633926 0.077851474 -0.19280577 0.074556649 -0.18767393
+		 0.079688489 -0.18563759 0.073421359 -0.18951094 0.081023157 -0.18633926 0.071261823
+		 -0.19167042 0.081724823 -0.18767393 0.069424868 -0.19394106 0.081724823 -0.18951094
+		 0.0680902 -0.19610059 0.081023157 -0.19167042 0.067388535 -0.19793755 0.079688489
+		 -0.19394106 0.067388535 -0.19927222 0.077851474 -0.19610059 0.0680902 -0.19997388
+		 0.075691998 -0.19793755 0.069424868 -0.19997388 0.073421359 -0.19927222 0.071261823
+		 -0.46419665 0.010872841 -0.46635616 0.011574507 -0.46749148 0.0044063926 -0.4686268
+		 0.011574507 -0.46235967 0.0095381737 -0.4707863 0.010872841 -0.461025 0.0077012181;
+	setAttr ".uvtk[250:499]" -0.47262329 0.0095381737 -0.46032333 0.0055416822
+		 -0.47395796 0.0077012181 -0.46032333 0.0032710433 -0.47465962 0.0055416822 -0.461025
+		 0.0011115074 -0.47465962 0.0032710433 -0.46235967 -0.00072544813 -0.47395796 0.0011115074
+		 -0.46419665 -0.0020601153 -0.47262329 -0.00072544813 -0.46635616 -0.0027617812 -0.47078633
+		 -0.0020601153 -0.4686268 -0.0027617812 -0.6122328 -0.83413815 -0.6122328 -0.82956755
+		 -0.61415792 -0.82956755 -0.61415792 -0.83413815 0.11862603 -0.54081297 0.11862603
+		 -0.53042817 0.11670089 -0.53042817 0.11670089 -0.54081297 -0.32110807 0.33325148
+		 -0.32110807 0.34300941 -0.33789274 0.34300941 -0.33789274 0.33325148 -0.32110807
+		 0.3507534 -0.33789274 0.3507534 -0.32110807 0.32243466 -0.33789274 0.32243466 -0.32110807
+		 0.31161788 -0.33789274 0.31161788 -0.32110807 0.30185995 -0.33789274 0.30185995 -0.32110807
+		 0.29411599 -0.33789274 0.29411599 -0.13155204 0.23472248 -0.13155204 0.24448043 -0.14833671
+		 0.24448043 -0.14833671 0.23472248 -0.13155204 0.25529718 -0.14833671 0.25529718 -0.13155204
+		 0.22697853 -0.14833671 0.22697853 -0.13155204 0.26611394 -0.14833671 0.26611394 -0.13155204
+		 0.27587187 -0.14833671 0.27587187 -0.13155204 0.28361586 -0.14833671 0.28361586 -0.20436352
+		 0.20846695 -0.20436352 0.21314722 -0.22325563 0.21314722 -0.22325563 0.20846695 -0.20436352
+		 0.21686155 -0.22325563 0.21686155 -0.20436352 0.20327878 -0.22325563 0.20327878 -0.20436352
+		 0.19809067 -0.22325563 0.19809067 -0.20436352 0.19341034 -0.22325563 0.19341034 -0.20436352
+		 0.18969601 -0.22325563 0.18969601 -0.58552104 0.17997479 -0.58552104 0.18465513 -0.60441321
+		 0.18465513 -0.60441321 0.17997479 -0.58552104 0.1898433 -0.60441321 0.1898433 -0.58552104
+		 0.17626047 -0.60441321 0.17626047 -0.58552104 0.19503146 -0.60441321 0.19503146 -0.58552104
+		 0.19971174 -0.60441321 0.19971174 -0.58552104 0.20342606 -0.60441321 0.20342606 0.21124017
+		 -0.34905747 0.21124017 -0.35662273 0.22021776 -0.35662273 0.22021776 -0.34905747
+		 0.21124017 -0.36262655 0.22021776 -0.36262655 0.21124017 -0.3406713 0.22021776 -0.3406713
+		 0.21124017 -0.33228517 0.22021776 -0.33228517 0.21124017 -0.32471991 0.22021776 -0.32471991
+		 0.21124017 -0.31871611 0.22021776 -0.31871611 -0.78973472 -0.29758966 -0.78973472
+		 -0.30121827 -0.78075719 -0.30121827 -0.78075719 -0.29758966 -0.78973472 -0.30524063
+		 -0.78075719 -0.30524063 -0.78973472 -0.29470998 -0.78075719 -0.29470998 -0.78973472
+		 -0.30926293 -0.78075719 -0.30926293 -0.78973472 -0.31289157 -0.78075719 -0.31289157
+		 -0.78973472 -0.31577125 -0.78075719 -0.31577125 0.28933847 -0.057043493 0.28933847
+		 -0.064608753 0.29831606 -0.064608753 0.29831606 -0.057043493 0.28933847 -0.072994918
+		 0.29831606 -0.072994918 0.28933847 -0.051039696 0.29831606 -0.051039696 0.28933847
+		 -0.081381053 0.29831606 -0.081381053 0.28933847 -0.088946313 0.29831606 -0.088946313
+		 0.28933847 -0.09495014 0.29831606 -0.09495014 -0.38658911 -0.68665403 -0.38658911
+		 -0.69028264 -0.37761146 -0.69028264 -0.37761146 -0.68665403 -0.38658911 -0.69316232
+		 -0.37761146 -0.69316232 -0.38658911 -0.68263167 -0.37761146 -0.68263167 -0.38658911
+		 -0.67860931 -0.37761146 -0.67860931 -0.38658911 -0.67498064 -0.37761146 -0.67498064
+		 -0.38658911 -0.67210096 -0.37761146 -0.67210096 -0.61659843 -0.83413821 -0.61659843
+		 -0.82956755 -0.61852354 -0.82956755 -0.61852354 -0.83413821 0.067076147 -0.54139954
+		 0.067076147 -0.5310148 0.065150976 -0.5310148 0.065150976 -0.54139954 0.26570645
+		 0.197312 0.25532168 0.197312 0.26113582 0.1865477 0.26570645 0.1865477 0.62178838
+		 0.089188993 0.61721778 0.089188993 0.6114037 0.078424752 0.62178838 0.078424752 0.71073937
+		 0.048691571 0.70035464 0.048691571 0.70616871 0.03792727 0.71073937 0.03792727 0.26337579
+		 0.021933019 0.25880513 0.021933019 0.25299105 0.011168778 0.26337579 0.011168778
+		 0.71388936 -0.033289194 0.71122056 -0.033289194 0.71122056 -0.057159424 0.71388936
+		 -0.057159424 0.70826209 -0.033289194 0.70826209 -0.057159424 0.70530367 -0.033289194
+		 0.70530367 -0.057159424 0.70263481 -0.033289194 0.70263481 -0.057159424 0.50579059
+		 0.13033783 0.50845945 0.13033783 0.50845945 0.15420812 0.50579059 0.15420812 0.51141793
+		 0.13033783 0.51141793 0.15420812 0.51437628 0.13033783 0.51437628 0.15420812 0.5170452
+		 0.13033783 0.5170452 0.15420812 0.14360416 0.13352209 0.13321942 0.13352209 0.1390335
+		 0.12275785 0.14360416 0.12275785 -0.39072239 -0.10912001 -0.39529303 -0.10912001
+		 -0.40110713 -0.11988425 -0.39072239 -0.11988425 0.26766086 -0.36262652 0.26766086
+		 -0.3553724 0.25518304 -0.3553724 0.25518304 -0.36262652 0.26766086 -0.34733117 0.25518304
+		 -0.34733117 0.26766086 -0.3392899 0.25518304 -0.3392899 0.26766086 -0.33203578 0.25518304
+		 -0.33203578 0.35933024 -0.12233995 0.35933024 -0.11508578 0.34685236 -0.11508578
+		 0.34685236 -0.12233995 0.35933024 -0.10704449 0.34685236 -0.10704449 0.35933024 -0.099003226
+		 0.34685236 -0.099003226 0.35933024 -0.091749072 0.34685236 -0.091749072 -0.12858266
+		 -0.0085992217 -0.12858266 -0.0051198006 -0.14262724 -0.0051198006 -0.14262724 -0.0085992217
+		 -0.12858266 -0.0012629032 -0.14262724 -0.0012629032 -0.12858266 0.0025940537 -0.14262724
+		 0.0025940537 -0.12858266 0.0060734153 -0.14262724 0.0060734153 -0.56617159 0.0042091608
+		 -0.56617159 0.0076885819 -0.58021617 0.0076885819 -0.58021617 0.0042091608 -0.56617159
+		 0.011545479 -0.58021617 0.011545479 -0.56617159 0.015402436 -0.58021617 0.015402436
+		 -0.56617159 0.018881798 -0.58021617 0.018881798 0.51111156 -0.017244041 0.51111156
+		 -0.022868156 0.51778561 -0.022868156 0.51778561 -0.017244041 0.51111156 -0.029102445
+		 0.51778561 -0.029102445 0.51111156 -0.035336852 0.51778561 -0.035336852 0.51111156
+		 -0.040960908 0.51778561 -0.040960908 0.18836433 -0.73341018 0.18836433 -0.73610771
+		 0.19503838 -0.73610771 0.19503838 -0.73341018 0.18836433 -0.73041993 0.19503838 -0.73041993
+		 0.18836433 -0.72742969 0.19503838 -0.72742969 0.18836433 -0.72473216 0.19503838 -0.72473216
+		 0.48994607 -0.55259693 0.48994607 -0.55822098 0.49662003 -0.55822098 0.49662003 -0.55259693;
+	setAttr ".uvtk[500:539]" 0.48994607 -0.56445533 0.49662003 -0.56445533 0.48994607
+		 -0.57068962 0.49662003 -0.57068962 0.48994607 -0.57631367 0.49662003 -0.57631367
+		 -0.22076091 -0.51274347 -0.22076091 -0.515441 -0.21408686 -0.515441 -0.21408686 -0.51274347
+		 -0.22076091 -0.50975323 -0.21408686 -0.50975323 -0.22076091 -0.50676298 -0.21408686
+		 -0.50676298 -0.22076091 -0.50406539 -0.21408686 -0.50406539 0.065723896 0.051681757
+		 0.055339098 0.051681757 0.061153233 0.040917456 0.065723896 0.040917456 0.40692797
+		 -0.69458705 0.40235728 -0.69458705 0.39654315 -0.70535141 0.40692797 -0.70535141
+		 -0.62096405 -0.83413815 -0.62096405 -0.82956761 -0.62288916 -0.82956761 -0.62288916
+		 -0.83413815 0.041739732 -0.43711016 0.041739732 -0.42672545 0.039814591 -0.42672545
+		 0.039814591 -0.43711016 -0.36319467 -0.88302225 -0.36319467 -0.87845159 -0.36511981
+		 -0.87845159 -0.36511981 -0.88302225 -0.46068221 -0.52718389 -0.46068221 -0.51679933
+		 -0.46260732 -0.51679933 -0.46260732 -0.52718389;
+createNode polyAutoProj -n "polyAutoProj26";
+	rename -uid "89797752-49E1-72C9-D0E7-DD84480FB0D9";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:263]";
+	setAttr ".ix" -type "matrix" -1 0 1.2246467991473532e-16 0 1.4997597826618576e-32 -1 1.2246467991473532e-16 0
+		 1.2246467991473532e-16 1.2246467991473532e-16 1 0 5.4573269528862447 4.1091015724975009 -6.6613381477509392e-15 1;
+	setAttr ".s" -type "double3" 1.3513528108596802 1.3513528108596802 1.3513528108596802 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode groupId -n "groupId165";
+	rename -uid "E4BEB7D8-4975-D0DA-4449-2C96FD7952B2";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts21";
+	rename -uid "AB6AC22B-4564-B850-5DD6-CFBAEF68CDA8";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:263]";
+createNode polyLayoutUV -n "polyLayoutUV24";
+	rename -uid "CA14500E-4702-E42B-B0E7-D0AB760EA8CC";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:263]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV39";
+	rename -uid "4CE94B96-4D5E-5CFC-BDC9-FC8F5C8AC00E";
+	setAttr ".uopa" yes;
+	setAttr -s 540 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0.51447022 -0.23226115 0.51820993 -0.23226115
+		 0.51820993 -0.1988129 0.51447022 -0.1988129 0.52117783 -0.23226115 0.52117783 -0.1988129
+		 0.51032472 -0.23226115 0.51032472 -0.1988129 0.50617921 -0.23226115 0.50617921 -0.1988129
+		 0.5024395 -0.23226115 0.5024395 -0.1988129 0.49947166 -0.23226115 0.49947166 -0.1988129
+		 0.4954288 0.040311635 0.49916852 0.040311635 0.49916852 0.073759854 0.4954288 0.073759854
+		 0.50331402 0.040311635 0.50331402 0.073759854 0.49246091 0.040311635 0.49246091 0.073759854
+		 0.50745952 0.040311635 0.50745952 0.073759854 0.51119924 0.040311635 0.51119924 0.073759854
+		 0.51416707 0.040311635 0.51416707 0.073759854 0.50266767 -0.53661668 0.49932376 -0.53661668
+		 0.49932376 -0.55531371 0.50266767 -0.55531371 0.12903228 -0.6343984 0.12697491 -0.6343984
+		 0.12697491 -0.64590216 0.12903228 -0.64590216 -0.0041879336 0.013448745 -0.0021497104
+		 0.0071757287 0.016634271 0.01674664 0.0017272383 0.0018396005 -0.0041879434 0.020044565
+		 0.0070633665 -0.0020373296 -0.0021497179 0.026317596 0.013336375 -0.0040755486 0.0017272197
+		 0.031653702 0.019932196 -0.0040755486 0.0070633441 0.035530657 0.026205212 -0.0020373333
+		 0.01333636 0.037568867 0.031541318 0.0018395893 0.019932196 0.037568867 0.035418272
+		 0.0071757287 0.026205212 0.035530657 0.037456483 0.013448745 0.031541348 0.031653702
+		 0.037456483 0.020044565 0.035418272 0.026317567 0.24874702 0.16458702 0.2517558 0.16360939
+		 0.25333759 0.17359653 0.25491947 0.16360942 0.24618763 0.16644651 0.25792822 0.16458702
+		 0.24432805 0.16900599 0.26048765 0.16644654 0.24335048 0.17201474 0.26234716 0.16900599
+		 0.24335045 0.17517838 0.26332477 0.17201471 0.24432805 0.17818716 0.26332477 0.17517835
+		 0.2461876 0.18074656 0.26234719 0.17818713 0.24874702 0.1826061 0.26048762 0.18074656
+		 0.2517558 0.18358374 0.25792822 0.1826061 0.25491944 0.18358374 -0.31850532 -0.36274889
+		 -0.31364191 -0.3643291 -0.31231141 -0.35592878 -0.3146441 -0.35517085 -0.30852818
+		 -0.3643291 -0.30985868 -0.35592878 -0.32264239 -0.35974312 -0.31662843 -0.35372916
+		 -0.3036648 -0.36274886 -0.30752599 -0.35517085 -0.32564813 -0.35560605 -0.31807011
+		 -0.35174483 -0.2995277 -0.35974312 -0.30554169 -0.35372916 -0.32722837 -0.35074264
+		 -0.31882805 -0.34941214 -0.29652196 -0.35560608 -0.30409998 -0.35174483 -0.32722834
+		 -0.34562895 -0.31882805 -0.34695941 -0.29494172 -0.35074264 -0.3033421 -0.34941217
+		 -0.32564813 -0.34076554 -0.31807011 -0.34462672 -0.29494172 -0.34562895 -0.30334204
+		 -0.34695941 -0.32264242 -0.33662847 -0.31662843 -0.34264243 -0.29652196 -0.34076554
+		 -0.30409998 -0.34462672 -0.31850535 -0.33362272 -0.3146441 -0.34120071 -0.29952776
+		 -0.33662847 -0.30554169 -0.34264243 -0.31364191 -0.33204249 -0.31231147 -0.34044281
+		 -0.3036648 -0.33362272 -0.30752599 -0.34120074 -0.30852824 -0.33204249 -0.30985868
+		 -0.34044278 -0.35758582 0.39197069 -0.35131279 0.38993245 -0.35057172 0.39461136
+		 -0.35543513 0.3961916 -0.34471697 0.38993245 -0.34545803 0.39461136 -0.36292192 0.39584762
+		 -0.3595722 0.39919737 -0.33844396 0.39197069 -0.34059462 0.39619157 -0.36679888 0.40118378
+		 -0.36257797 0.40333441 -0.33310783 0.39584759 -0.33645755 0.39919731 -0.36883709
+		 0.40745679 -0.36415818 0.40819782 -0.32923087 0.40118375 -0.33345181 0.40333438 -0.36883709
+		 0.41405258 -0.36415818 0.41331154 -0.32719266 0.40745676 -0.33187157 0.40819782 -0.36679888
+		 0.42032561 -0.36257797 0.41817492 -0.32719266 0.41405258 -0.33187157 0.41331154 -0.36292195
+		 0.42566174 -0.35957223 0.42231202 -0.32923087 0.42032561 -0.33345181 0.41817492 -0.35758582
+		 0.42953867 -0.35543516 0.42531776 -0.33310783 0.42566171 -0.33645758 0.42231202 -0.35131282
+		 0.43157691 -0.35057172 0.426898 -0.33844396 0.42953867 -0.34059462 0.42531776 -0.34471697
+		 0.43157691 -0.34545803 0.42689797 0.01942946 0.083001703 0.020407088 0.07999289 0.022431597
+		 0.081024438 0.021673657 0.083357126 0.022266611 0.077433467 0.023873292 0.07904014
+		 0.01942946 0.086165279 0.021673657 0.085809886 0.02482605 0.075573951 0.025857583
+		 0.077598453 0.020407081 0.089174092 0.022431597 0.088142544 0.027834833 0.074596316
+		 0.02819027 0.07684052 0.022266604 0.091733515 0.023873262 0.090126842 0.030998453
+		 0.074596316 0.030643016 0.07684052 0.024826035 0.093593061 0.025857598 0.09156853
+		 0.034007251 0.075573921 0.032975689 0.077598453 0.027834833 0.094570696 0.028190255
+		 0.092326462 0.036566645 0.077433467 0.034960002 0.07904011 0.030998439 0.094570696
+		 0.030643016 0.092326462 0.038426206 0.07999289 0.036401674 0.081024438 0.034007236
+		 0.093593061 0.032975689 0.09156853 0.039403826 0.083001673 0.037159622 0.083357096
+		 0.03656666 0.091733515 0.034960002 0.090126842 0.039403811 0.086165309 0.037159607
+		 0.085809857 0.038426191 0.089174062 0.036401689 0.088142544 0.53006935 -0.70535129
+		 0.53341329 -0.70535129 0.53341329 -0.68665427 0.53006935 -0.68665427 0.17883478 -0.70535129
+		 0.18089217 -0.70535129 0.18089217 -0.69384748 0.17883478 -0.69384748 0.78661036 -0.51847494
+		 0.78326654 -0.51847494 0.78326654 -0.53717172 0.78661036 -0.53717172 0.50983757 -0.53062785
+		 0.51189494 -0.53062785 0.51189494 -0.51912427 0.50983757 -0.51912427 0.30292442 -0.58472395
+		 0.30626822 -0.58472395 0.30626822 -0.56602716 0.30292442 -0.56602716 0.37465954 -0.71667129
+		 0.37260219 -0.71667129 0.37260219 -0.72817487 0.37465954 -0.72817487 -0.14950216
+		 0.081129313 -0.15025204 0.083437204 -0.15716279 0.079916 -0.15167838 0.085400403
+		 -0.14950216 0.078702688 -0.15364158 0.086826742 -0.15025204 0.076394796 -0.15594947
+		 0.087576628 -0.15167838 0.074431598 -0.1583761 0.087576628 -0.15364158 0.073005259
+		 -0.16068399 0.086826742 -0.15594947 0.072255373 -0.16264719 0.085400403 -0.1583761
+		 0.072255373 -0.16407353 0.083437204 -0.16068399 0.073005259 -0.16482341 0.081129313
+		 -0.16264719 0.074431598 -0.16482341 0.078702688 -0.16407353 0.076394796 -0.46093136
+		 0.01619643 -0.46323922 0.016946256 -0.46445256 0.0092856884 -0.46566588 0.016946256
+		 -0.45896816 0.014770091 -0.46797374 0.01619643 -0.45754182 0.012806892;
+	setAttr ".uvtk[250:499]" -0.46993694 0.014770091 -0.45679194 0.010499001 -0.47136328
+		 0.012806892 -0.45679194 0.0080723763 -0.47211316 0.010499001 -0.45754182 0.0057644844
+		 -0.47211316 0.0080723763 -0.45896816 0.0038012862 -0.47136328 0.0057644844 -0.46093136
+		 0.0023749471 -0.46993694 0.0038012862 -0.46323922 0.001625061 -0.46797374 0.0023749471
+		 -0.46566588 0.001625061 -0.59098631 -0.83413815 -0.59098631 -0.82925344 -0.59304368
+		 -0.82925344 -0.59304368 -0.83413815 -0.40551159 -0.55407619 -0.40551159 -0.54297799
+		 -0.40756899 -0.54297799 -0.40756899 -0.55407619 -0.31771809 0.33690843 -0.31771809
+		 0.34707338 -0.33520275 0.34707338 -0.33520275 0.33690843 -0.31771809 0.35514024 -0.33520275
+		 0.35514024 -0.31771809 0.32564059 -0.33520275 0.32564059 -0.31771809 0.31437272 -0.33520275
+		 0.31437272 -0.31771809 0.30420783 -0.33520275 0.30420783 -0.31771809 0.29614094 -0.33520275
+		 0.29614094 -0.12622523 0.23661113 -0.12622523 0.24677601 -0.1437099 0.24677601 -0.1437099
+		 0.23661113 -0.12622523 0.25804389 -0.1437099 0.25804389 -0.12622523 0.22854421 -0.1437099
+		 0.22854421 -0.12622523 0.26931179 -0.1437099 0.26931179 -0.12622523 0.27947664 -0.1437099
+		 0.27947664 -0.12622523 0.28754357 -0.1437099 0.28754357 -0.20167473 0.21449041 -0.20167473
+		 0.21936589 -0.22135475 0.21936589 -0.22135475 0.21449041 -0.20167473 0.22323513 -0.22135475
+		 0.22323513 -0.20167473 0.20908588 -0.22135475 0.20908588 -0.20167473 0.20368135 -0.22135475
+		 0.20368135 -0.20167473 0.19880581 -0.22135475 0.19880581 -0.20167473 0.19493663 -0.22135475
+		 0.19493663 -0.58473313 0.18537468 -0.58473313 0.19025016 -0.60441315 0.19025016 -0.60441315
+		 0.18537468 -0.58473313 0.19565469 -0.60441315 0.19565469 -0.58473313 0.1815055 -0.60441315
+		 0.1815055 -0.58473313 0.20105922 -0.60441315 0.20105922 -0.58473313 0.2059347 -0.60441315
+		 0.2059347 -0.58473313 0.20980394 -0.60441315 0.20980394 0.21726567 -0.34849149 0.21726567
+		 -0.35637227 0.22661763 -0.35637227 0.22661763 -0.34849149 0.21726567 -0.36262646
+		 0.22661763 -0.36262646 0.21726567 -0.33975559 0.22661763 -0.33975559 0.21726567 -0.33101976
+		 0.22661763 -0.33101976 0.21726567 -0.32313898 0.22661763 -0.32313898 0.21726567 -0.31688479
+		 0.22661763 -0.31688479 -0.78862298 -0.29366595 -0.78862298 -0.29744589 -0.77927095
+		 -0.29744589 -0.77927095 -0.29366595 -0.78862298 -0.30163598 -0.77927095 -0.30163598
+		 -0.78862298 -0.29066616 -0.77927095 -0.29066616 -0.78862298 -0.30582607 -0.77927095
+		 -0.30582607 -0.78862298 -0.30960599 -0.77927095 -0.30960599 -0.78862298 -0.31260577
+		 -0.77927095 -0.31260577 0.29554331 -0.053631246 0.29554331 -0.061512023 0.30489528
+		 -0.061512023 0.30489528 -0.053631246 0.29554331 -0.070247918 0.30489528 -0.070247918
+		 0.29554331 -0.04737705 0.30489528 -0.04737705 0.29554331 -0.078983784 0.30489528
+		 -0.078983784 0.29554331 -0.086864531 0.30489528 -0.086864531 0.29554331 -0.093118727
+		 0.30489528 -0.093118727 -0.38307416 -0.68579906 -0.38307416 -0.68957901 -0.37372214
+		 -0.68957901 -0.37372214 -0.68579906 -0.38307416 -0.69257879 -0.37372214 -0.69257879
+		 -0.38307416 -0.68160892 -0.37372214 -0.68160892 -0.38307416 -0.67741883 -0.37372214
+		 -0.67741883 -0.38307416 -0.67363888 -0.37372214 -0.67363888 -0.38307416 -0.67063916
+		 -0.37372214 -0.67063916 -0.63743693 -0.83413815 -0.63743693 -0.82925349 -0.63949436
+		 -0.82925349 -0.63949436 -0.83413815 0.54040802 -0.54060817 0.54040802 -0.5295099
+		 0.53835064 -0.5295099 0.53835064 -0.54060817 0.66475093 0.18627584 0.65365279 0.18627584
+		 0.65986633 0.17477208 0.66475093 0.17477208 0.55279839 0.066053808 0.54791373 0.066053808
+		 0.54170018 0.054549992 0.55279839 0.054549992 0.7172991 0.05520916 0.7062009 0.05520916
+		 0.71241444 0.043705344 0.7172991 0.043705344 -0.14943834 -0.2054463 -0.154323 -0.2054463
+		 -0.16053653 -0.21695012 -0.14943834 -0.21695012 0.72008938 -0.028718829 0.71727717
+		 -0.028718829 0.71727717 -0.053871781 0.72008938 -0.053871781 0.71415967 -0.028718829
+		 0.71415967 -0.053871781 0.71104228 -0.028718829 0.71104228 -0.053871781 0.70823002
+		 -0.028718829 0.70823002 -0.053871781 0.5113858 0.13490826 0.51419806 0.13490826 0.51419806
+		 0.16006118 0.5113858 0.16006118 0.51731551 0.13490826 0.51731551 0.16006118 0.52043289
+		 0.13490826 0.52043289 0.16006118 0.5232451 0.13490826 0.5232451 0.16006118 0.049010277
+		 0.16985327 0.037912071 0.16985327 0.044125617 0.15834945 0.049010277 0.15834945 -0.088485241
+		 0.15216619 -0.093369901 0.15216619 -0.099583417 0.14066243 -0.088485241 0.14066243
+		 0.27367544 -0.36262646 0.27367544 -0.3549825 0.26052707 -0.3549825 0.26052707 -0.36262646
+		 0.27367544 -0.34650916 0.26052707 -0.34650916 0.27367544 -0.33803576 0.26052707 -0.33803576
+		 0.27367544 -0.33039182 0.26052707 -0.33039182 0.36534482 -0.12069602 0.36534482 -0.11305204
+		 0.35219643 -0.11305204 0.35219643 -0.12069602 0.36534482 -0.10457867 0.35219643 -0.10457867
+		 0.36534482 -0.096105278 0.35219643 -0.096105278 0.36534482 -0.08846131 0.35219643
+		 -0.08846131 -0.091673315 -0.0033324361 -0.091673315 0.00033390522 -0.10647261 0.00033390522
+		 -0.10647261 -0.0033324361 -0.091673315 0.0043980479 -0.10647261 0.0043980479 -0.091673315
+		 0.0084622502 -0.10647261 0.0084622502 -0.091673315 0.012128592 -0.10647261 0.012128592
+		 -0.56462789 0.0095636249 -0.56462789 0.013229966 -0.57942718 0.013229966 -0.57942718
+		 0.0095636249 -0.56462789 0.017294168 -0.57942718 0.017294168 -0.56462789 0.021358311
+		 -0.57942718 0.021358311 -0.56462789 0.025024712 -0.57942718 0.025024712 0.51731652
+		 -0.012306809 0.51731652 -0.01823312 0.52434921 -0.01823312 0.52434921 -0.012306809
+		 0.51731652 -0.024802506 0.52434921 -0.024802506 0.51731652 -0.031371832 0.52434921
+		 -0.031371832 0.51731652 -0.037298143 0.52434921 -0.037298143 0.19313467 -0.73252553
+		 0.19313467 -0.73536801 0.2001673 -0.73536801 0.2001673 -0.73252553 0.19313467 -0.72937459
+		 0.2001673 -0.72937459 0.19313467 -0.72622365 0.2001673 -0.72622365 0.19313467 -0.72338116
+		 0.2001673 -0.72338116 0.4963662 -0.55132228 0.4963662 -0.55724859 0.50339884 -0.55724859
+		 0.50339884 -0.55132228;
+	setAttr ".uvtk[500:539]" 0.4963662 -0.56381798 0.50339884 -0.56381798 0.4963662
+		 -0.5703873 0.50339884 -0.5703873 0.4963662 -0.57631361 0.50339884 -0.57631361 -0.21842945
+		 -0.51034909 -0.21842945 -0.51319158 -0.21139678 -0.51319158 -0.21139678 -0.51034909
+		 -0.21842945 -0.5071981 -0.21139678 -0.5071981 -0.21842945 -0.50404721 -0.21139678
+		 -0.50404721 -0.21842945 -0.50120473 -0.21139678 -0.50120473 0.10087028 0.043325722
+		 0.089772046 0.043325722 0.095985621 0.031821847 0.10087028 0.031821847 0.41205275
+		 -0.69384748 0.40716809 -0.69384748 0.40095454 -0.70535129 0.41205275 -0.70535129
+		 -0.62054479 -0.83413815 -0.62054479 -0.82925355 -0.62260216 -0.82925355 -0.62260216
+		 -0.83413815 0.20363632 -0.46869037 0.20363632 -0.45759219 0.20157892 -0.45759219
+		 0.20157892 -0.46869037 -0.36083862 -0.88302225 -0.36083862 -0.87813777 -0.36289597
+		 -0.87813777 -0.36289597 -0.88302225 -0.46040654 -0.52501506 -0.46040654 -0.51391715
+		 -0.46246389 -0.51391715 -0.46246389 -0.52501506;
+createNode polyAutoProj -n "polyAutoProj27";
+	rename -uid "05308573-456A-8D47-687A-B2818E998161";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:9]";
+	setAttr ".ix" -type "matrix" 2.1260885161042862 0 -0.097619340422870265 0 0 1.2188526026345168 0 0
+		 0.21692111695552005 0 4.7244070044095219 0 17.463725160073764 0.85721039789636633 9.4106826096754457 1;
+	setAttr ".s" -type "double3" 4.8220270011226525 4.8220270011226525 4.8220270011226525 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweak -n "polyTweak24";
+	rename -uid "EB582A87-4DEC-A38E-0A58-23BDBE185B23";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".tk[8:11]" -type "float3"  0.10444536 -0.91589415 -0.10444541
+		 -0.10444546 -0.91589415 -0.10444541 -0.10444564 -0.91589415 0.1044454 0.10444546
+		 -0.91589415 0.10444535;
+createNode polyLayoutUV -n "polyLayoutUV25";
+	rename -uid "AA185983-4180-81FA-324C-E2B20E68A9B3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:9]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV40";
+	rename -uid "05437C6F-41C9-3ECE-7CD7-CE858C3339C0";
+	setAttr ".uopa" yes;
+	setAttr -s 40 ".uvtk[0:39]" -type "float2" -0.62239212 0.22842836 -0.62239212
+		 0.1633352 -0.5572989 0.1633352 -0.5572989 0.22842842 -0.029949814 0.14058071 -0.029949814
+		 0.073759019 0.03687191 0.073759019 0.03687191 0.14058071 0.50988948 0.13119447 0.50988948
+		 0.19909102 0.44770342 0.19199955 0.44770342 0.13828593 0.27064282 -0.22221243 0.27064282
+		 -0.15431583 0.20845675 -0.16140735 0.20845675 -0.21512094 -0.34970936 -0.65875822
+		 -0.34970936 -0.79248273 -0.21598476 -0.79248291 -0.21598476 -0.65875816 -0.53492129
+		 -0.0019868722 -0.3880339 -0.0019868722 -0.3880339 0.16704726 -0.53492123 0.16704732
+		 0.228034 0.71063936 0.228034 0.74721575 0.1859428 0.74883801 0.1859428 0.70674682
+		 -0.26847765 0.70784879 -0.26847765 0.74994004 -0.3105689 0.74831784 -0.3105689 0.71174133
+		 0.59172893 0.30901378 0.59172893 0.34115276 0.56229305 0.33779597 0.56229305 0.31237054
+		 0.43903986 -0.52898955 0.43903986 -0.56112856 0.4684757 -0.5577718 0.4684757 -0.53234631;
+createNode polyAutoProj -n "polyAutoProj28";
+	rename -uid "F28CA40B-4954-5E19-B322-17AF00CF65F3";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:9]";
+	setAttr ".ix" -type "matrix" 2.1260885161042862 0 -0.097619340422870265 0 0 1.2188526026345168 0 0
+		 0.21692111695552005 0 4.7244070044095219 0 17.463725160073764 0.85721039789636633 9.4106826096754457 1;
+	setAttr ".s" -type "double3" 4.8220270011226525 4.8220270011226525 4.8220270011226525 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyLayoutUV -n "polyLayoutUV26";
+	rename -uid "7A0C61EB-400C-CA97-6D29-6DA87544FF9D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:9]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV41";
+	rename -uid "6D5D8DB8-4FFE-50EE-AFE7-A7BAF6108943";
+	setAttr ".uopa" yes;
+	setAttr -s 40 ".uvtk[0:39]" -type "float2" -0.62239212 0.22842836 -0.62239212
+		 0.1633352 -0.5572989 0.1633352 -0.5572989 0.22842842 -0.029949814 0.14058071 -0.029949814
+		 0.073759019 0.03687191 0.073759019 0.03687191 0.14058071 0.50988948 0.13119447 0.50988948
+		 0.19909102 0.44770342 0.19199955 0.44770342 0.13828593 0.27064282 -0.22221243 0.27064282
+		 -0.15431583 0.20845675 -0.16140735 0.20845675 -0.21512094 -0.34970936 -0.65875822
+		 -0.34970936 -0.79248273 -0.21598476 -0.79248291 -0.21598476 -0.65875816 -0.53492129
+		 -0.0019868722 -0.3880339 -0.0019868722 -0.3880339 0.16704726 -0.53492123 0.16704732
+		 0.228034 0.71063936 0.228034 0.74721575 0.1859428 0.74883801 0.1859428 0.70674682
+		 -0.26847765 0.70784879 -0.26847765 0.74994004 -0.3105689 0.74831784 -0.3105689 0.71174133
+		 0.59172893 0.30901378 0.59172893 0.34115276 0.56229305 0.33779597 0.56229305 0.31237054
+		 0.43903986 -0.52898955 0.43903986 -0.56112856 0.4684757 -0.5577718 0.4684757 -0.53234631;
+createNode polyLayoutUV -n "polyLayoutUV27";
+	rename -uid "08BD39C8-49BC-AF24-6E0B-D8A06F11A983";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV42";
+	rename -uid "911A4892-4079-7A98-DCE5-C88D9E29D722";
+	setAttr ".uopa" yes;
+	setAttr -s 40 ".uvtk[0:39]" -type "float2" 0.16690737 0.16763633 -0.0013219416
+		 -0.12418237 -0.16690733 -0.16763633 0.0013220012 0.12418234 0.16649541 0.16700828
+		 -0.00093767047 -0.1232986 -0.16649538 -0.1670083 0.00093764067 0.12329853 -0.16020346
+		 -0.16474491 0.0084763169 0.12414742 0.14258564 0.13457131 0.009141475 -0.093973994
+		 -0.1602034 -0.16474484 0.0084763765 0.12414736 0.14258558 0.13457137 0.0091415048
+		 -0.093973979 -0.099599659 -0.10327943 -0.058573902 0.012115464 0.099599719 0.1032796
+		 0.058573842 -0.012115628 0.11764715 -0.12183522 -0.0086705387 -0.079218775 -0.11764711
+		 0.12183523 0.0086705014 0.079218775 0.014627382 0.020488322 0.039959803 -0.039030313
+		 -0.012717664 -0.0249753 -0.041869581 0.043517232 0.047178566 0.045700908 0.0083311405
+		 -0.021637619 -0.044633672 -0.041289568 -0.01087606 0.017226279 0.038571477 0.038428366
+		 0.005993247 -0.019742489 -0.035168827 -0.032352686 -0.0093958974 0.01366657 -0.038571417
+		 -0.038428281 -0.0059931874 0.019742429 0.035168767 0.032352626 0.0093958378 -0.013666744;
+createNode polyAutoProj -n "polyAutoProj29";
+	rename -uid "C001B4BB-429E-B66A-3AB4-ECB900EB998D";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 0.0017981336761072216 0 0.041630086922037825 0 0 1.1511524355638352 0 0
+		 -0.071412297654016146 0 0.0030845205185460003 0 18.351802077244866 0.88887921024025296 11.753540890651015 1;
+	setAttr ".s" -type "double3" 1.1511524355638354 1.1511524355638354 1.1511524355638354 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyLayoutUV -n "polyLayoutUV28";
+	rename -uid "092BFA7F-493F-6AC0-2782-F39556722B15";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV43";
+	rename -uid "9CFBCA79-4D3E-179C-0B32-D8A0B342EB23";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.0018905025 -0.49800807
+		 -0.0018905025 -0.66852808 0.16862953 -0.66852808 0.16862953 -0.49800807 -0.33870506
+		 -0.16852814 -0.168185 -0.16852814 -0.168185 0.0019919276 -0.33870506 0.0019919276
+		 0.54605156 0.093136251 0.31169987 0.093136251 0.31169987 -0.14121549 0.54605156 -0.14121549
+		 0.60240018 -0.33526012 0.36804855 -0.33526012 0.36804855 -0.56961185 0.60240018 -0.56961185
+		 0.50013435 -0.0019920322 0.55241156 -0.0019920322 0.55241156 0.050285131 0.50013435
+		 0.050285131 -0.11563414 0.046497047 -0.063356996 0.046497047 -0.063356996 0.098774254
+		 -0.11563414 0.098774254;
+createNode polyLayoutUV -n "polyLayoutUV29";
+	rename -uid "AFF9F27F-4A46-6C62-6C3E-6DB1409F193F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV44";
+	rename -uid "23256DED-4676-BCDB-9CED-3FA59AC4114F";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.71040124 -0.54674864 -0.66631323
+		 -0.16328008 0.71040124 0.54674864 0.66631323 0.16328007 0.54674876 -0.7104013 0.16328013
+		 -0.66631323 -0.54674876 0.7104013 -0.16328011 0.66631317 0.01955086 -0.018880844
+		 -0.0035472512 -0.0095514655 -0.01955086 0.018880844 0.0035472512 0.0095514655 0.01955092
+		 -0.018880866 -0.0035472512 -0.0095514758 -0.01955092 0.018880866 0.0035472512 0.009551473
+		 0.52418548 -0.75610346 0.21002316 -0.72952694 -0.52418542 0.75610352 -0.21002313
+		 0.72952688 0.52418524 -0.75610352 0.21002305 -0.72952694 -0.52418524 0.75610352 -0.21002305
+		 0.72952688;
+createNode polyLayoutUV -n "polyLayoutUV30";
+	rename -uid "593BB912-4179-0BC0-AEF8-AA8607D89C66";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV45";
+	rename -uid "966FBCF7-4506-F0EC-D4F0-E6B1F0BE7E30";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.18770729 0.81160802 -0.25396505
+		 0.81160426 -0.25390509 -0.25546312 -0.18764734 -0.25545943 -0.31379831 -0.68770725
+		 -0.31379455 -0.75396502 0.75327295 -0.753905 0.7532692 -0.68764722 0.0042102933 -0.10637332
+		 0.0042083263 -0.1449986 0.070466101 -0.14500198 0.070468068 -0.10637671 0.0042102933
+		 0.11515327 0.0042083263 0.07652799 0.07046622 0.07652463 0.070468128 0.11514991 -0.69617277
+		 -0.062105119 -0.69617534 -0.10073037 0.37089247 -0.1008015 0.37089503 -0.062176213
+		 -0.69617265 -0.47786903 -0.69617522 -0.51649427 0.37089252 -0.51656556 0.37089509
+		 -0.47794032;
+createNode polyLayoutUV -n "polyLayoutUV31";
+	rename -uid "66433325-485D-E23B-983A-AFBAB12BED8A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV46";
+	rename -uid "2EB7ACBD-4160-8286-D67B-AD8F4ECCE43E";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" -0.44592929 1.021234274 -0.47832131
+		 1.021237135 -0.44600707 0.12636656 -0.4783991 0.12636939 -0.4460119 0.070801258 -0.47840396
+		 0.07080406 -0.44608971 -0.82406658 -0.47848174 -0.82406366 -0.44609454 -0.87963188
+		 -0.47848654 -0.87962902 -0.53388661 1.021242023 -0.5339644 0.12637421 -0.39036396
+		 1.021229506 -0.39044178 0.12636173;
+createNode polyAutoProj -n "polyAutoProj30";
+	rename -uid "BEDBBD9E-498F-C666-62C0-6696AA535FE7";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 0.1420443182679933 -0.0078306025123711792 -0.0066218990030848784 0
+		 0.066879953821311386 1.2131783513892578 0 0 0.016406742461216164 -0.00090446897350891992 0.35300554777856474 0
+		 18.663706459728221 0.85227002761958259 11.521772177494222 1;
+	setAttr ".s" -type "double3" 1.2166396588970767 1.2166396588970767 1.2166396588970767 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV47";
+	rename -uid "C1511785-4C95-2720-4C09-AB9432ADE228";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" 0.087890431 -0.19878624 -0.021832049
+		 -0.18915938 -0.093904674 0.19922599 0.015817821 0.18959913 -0.14269981 0.20525131
+		 -0.070982367 -0.18316266 0.14904797 -0.20566383 0.076662675 0.18269572 0.2328369
+		 -0.23075622 -0.0041568875 -0.16424483 -0.2328369 0.23075622 0.0041569173 0.16424483
+		 0.17598146 -0.14102355 0.02259326 -0.031550921 -0.10239577 0.077072799 -0.096178949
+		 0.095501691 -0.01801908 -0.12850042 -0.058358312 -0.074624345 -0.010284066 0.053228617
+		 0.086661458 0.14989612;
+createNode polyLayoutUV -n "polyLayoutUV32";
+	rename -uid "36EEFC56-4965-8FE6-52EB-6081049D0CA9";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV48";
+	rename -uid "E99DCBB9-4E9F-59B3-E0BA-5D8AFE6C4B08";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" -0.12480415 0.19372277 -0.13988279
+		 0.19372284 -0.13988326 0.080834985 -0.12480462 0.080834925 -0.14936781 0.080838859
+		 -0.149322 0.19372667 -0.11407828 0.19372652 -0.11403885 0.08083868 -0.34220511 0.1585893
+		 -0.34220552 0.11628693 -0.19676131 0.11628544 -0.19676086 0.15858775 -0.52553356
+		 -0.19778191 -0.36272109 -0.28005272 -0.10722473 -0.28001621 0.030803129 -0.19770247
+		 -0.25480667 0.13747932 -0.33576405 -0.00045879558 -0.33608478 -0.25595489 -0.2555052
+		 -0.41885692;
+createNode polyAutoProj -n "polyAutoProj31";
+	rename -uid "CD1B1584-456F-B2D9-0210-E9A8553641C7";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 0.1420443182679933 -0.0078306025123711792 -0.0066218990030848784 0
+		 0.066879953821311386 1.2131783513892578 0 0 0.016406742461216164 -0.00090446897350891992 0.35300554777856474 0
+		 18.612333721237373 0.85510209791988745 10.416442357469515 1;
+	setAttr ".s" -type "double3" 1.2166396588970767 1.2166396588970767 1.2166396588970767 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV49";
+	rename -uid "8B2A5B1B-44BE-05B4-1212-528FAB712B94";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" 0.087890431 -0.19878624 -0.021832049
+		 -0.18915938 -0.093904674 0.19922599 0.015817821 0.18959913 -0.14269981 0.20525131
+		 -0.070982367 -0.18316266 0.14904797 -0.20566383 0.076662675 0.18269572 0.2328369
+		 -0.23075622 -0.0041568875 -0.16424483 -0.2328369 0.23075622 0.0041569173 0.16424483
+		 0.17598146 -0.14102355 0.02259326 -0.031550921 -0.10239577 0.077072799 -0.096178949
+		 0.095501691 -0.01801908 -0.12850042 -0.058358312 -0.074624345 -0.010284066 0.053228617
+		 0.086661458 0.14989612;
+createNode polyLayoutUV -n "polyLayoutUV33";
+	rename -uid "037EE441-4714-F943-3647-EC8E83F77F48";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV50";
+	rename -uid "E5F46225-4E4A-31AB-DBE6-E99FFDD11C5E";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" -0.12480415 0.19372277 -0.13988279
+		 0.19372284 -0.13988326 0.080834985 -0.12480462 0.080834925 -0.14936781 0.080838859
+		 -0.149322 0.19372667 -0.11407828 0.19372652 -0.11403885 0.08083868 -0.34220511 0.1585893
+		 -0.34220552 0.11628693 -0.19676131 0.11628544 -0.19676086 0.15858775 -0.52553356
+		 -0.19778191 -0.36272109 -0.28005272 -0.10722473 -0.28001621 0.030803129 -0.19770247
+		 -0.25480667 0.13747932 -0.33576405 -0.00045879558 -0.33608478 -0.25595489 -0.2555052
+		 -0.41885692;
+createNode polyAutoProj -n "polyAutoProj32";
+	rename -uid "2AE9970E-4585-F71D-B946-55BDFEBB789E";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 0.1420443182679933 -0.0078306025123711792 -0.0066218990030848784 0
+		 0.066879953821311386 1.2131783513892578 0 0 0.016406742461216164 -0.00090446897350891992 0.35300554777856474 0
+		 18.561988255639189 0.85787753684068879 9.3332152205979551 1;
+	setAttr ".s" -type "double3" 1.2166396588970767 1.2166396588970767 1.2166396588970767 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweak -n "polyTweak25";
+	rename -uid "BC93A88F-41A2-F904-9F50-70991DE31DC2";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".tk";
+	setAttr ".tk[1]" -type "float3" -0.63968122 -1.110223e-16 -0.29262984 ;
+	setAttr ".tk[3]" -type "float3" -0.63294637 1.110223e-16 -0.29262984 ;
+	setAttr ".tk[5]" -type "float3" -0.63294637 1.110223e-16 0.24812253 ;
+	setAttr ".tk[7]" -type "float3" -0.63968122 -1.110223e-16 0.24812253 ;
+createNode polyTweakUV -n "polyTweakUV51";
+	rename -uid "F44D13C7-435C-C141-068C-F9AAA6030066";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" 0.087890431 -0.19878624 -0.021832049
+		 -0.18915938 -0.093904674 0.19922599 0.015817821 0.18959913 -0.14269981 0.20525131
+		 -0.070982367 -0.18316266 0.14904797 -0.20566383 0.076662675 0.18269572 0.2328369
+		 -0.23075622 -0.0041568875 -0.16424483 -0.2328369 0.23075622 0.0041569173 0.16424483
+		 0.17598146 -0.14102355 0.02259326 -0.031550921 -0.10239577 0.077072799 -0.096178949
+		 0.095501691 -0.01801908 -0.12850042 -0.058358312 -0.074624345 -0.010284066 0.053228617
+		 0.086661458 0.14989612;
+createNode polyLayoutUV -n "polyLayoutUV34";
+	rename -uid "B553BF2E-4132-642F-9754-12AA5E76C2B2";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV52";
+	rename -uid "821C5200-4C16-55BF-2565-EC941C9A0EB6";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" -0.12480415 0.19372277 -0.13988279
+		 0.19372284 -0.13988326 0.080834985 -0.12480462 0.080834925 -0.14936781 0.080838859
+		 -0.149322 0.19372667 -0.11407828 0.19372652 -0.11403885 0.08083868 -0.34220511 0.1585893
+		 -0.34220552 0.11628693 -0.19676131 0.11628544 -0.19676086 0.15858775 -0.52553356
+		 -0.19778191 -0.36272109 -0.28005272 -0.10722473 -0.28001621 0.030803129 -0.19770247
+		 -0.25480667 0.13747932 -0.33576405 -0.00045879558 -0.33608478 -0.25595489 -0.2555052
+		 -0.41885692;
+createNode polyAutoProj -n "polyAutoProj33";
+	rename -uid "2EA3BD1D-4A0E-E0D3-AE46-BB900FD3995B";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 0.1420443182679933 -0.0078306025123711792 -0.0066218990030848784 0
+		 0.066879953821311386 1.2131783513892578 0 0 0.016406742461216164 -0.00090446897350891992 0.35300554777856474 0
+		 18.508035806134789 0.86085182114708814 8.1723806407708981 1;
+	setAttr ".s" -type "double3" 1.2166396588970767 1.2166396588970767 1.2166396588970767 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV53";
+	rename -uid "CC56E54C-4147-1FD8-F6BF-D5AC086F3DD3";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" 0.087890431 -0.19878624 -0.021832049
+		 -0.18915938 -0.093904674 0.19922599 0.015817821 0.18959913 -0.14269981 0.20525131
+		 -0.070982367 -0.18316266 0.14904797 -0.20566383 0.076662675 0.18269572 0.2328369
+		 -0.23075622 -0.0041568875 -0.16424483 -0.2328369 0.23075622 0.0041569173 0.16424483
+		 0.17598146 -0.14102355 0.02259326 -0.031550921 -0.10239577 0.077072799 -0.096178949
+		 0.095501691 -0.01801908 -0.12850042 -0.058358312 -0.074624345 -0.010284066 0.053228617
+		 0.086661458 0.14989612;
+createNode polyLayoutUV -n "polyLayoutUV35";
+	rename -uid "D658F9CA-4A09-D9A9-50F0-A883E298509C";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV54";
+	rename -uid "86C158A4-403C-1BC9-92AF-96B520350AB1";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" -0.12480415 0.19372277 -0.13988279
+		 0.19372284 -0.13988326 0.080834985 -0.12480462 0.080834925 -0.14936781 0.080838859
+		 -0.149322 0.19372667 -0.11407828 0.19372652 -0.11403885 0.08083868 -0.34220511 0.1585893
+		 -0.34220552 0.11628693 -0.19676131 0.11628544 -0.19676086 0.15858775 -0.52553356
+		 -0.19778191 -0.36272109 -0.28005272 -0.10722473 -0.28001621 0.030803129 -0.19770247
+		 -0.25480667 0.13747932 -0.33576405 -0.00045879558 -0.33608478 -0.25595489 -0.2555052
+		 -0.41885692;
+createNode polyAutoProj -n "polyAutoProj34";
+	rename -uid "4F2985A4-4374-7272-7F82-90A3C6E6AEBE";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 0.1420443182679933 -0.0078306025123711792 -0.0066218990030848784 0
+		 0.066879953821311386 1.2131783513892578 0 0 0.016406742461216164 -0.00090446897350891992 0.35300554777856474 0
+		 18.46127475786319 0.86342965873004451 7.1662754069723738 1;
+	setAttr ".s" -type "double3" 1.2166396588970767 1.2166396588970767 1.2166396588970767 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV55";
+	rename -uid "DBF4A2C6-42C9-4459-7F69-CCB7B7242A4C";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" 0.087890431 -0.19878624 -0.021832049
+		 -0.18915938 -0.093904674 0.19922599 0.015817821 0.18959913 -0.14269981 0.20525131
+		 -0.070982367 -0.18316266 0.14904797 -0.20566383 0.076662675 0.18269572 0.2328369
+		 -0.23075622 -0.0041568875 -0.16424483 -0.2328369 0.23075622 0.0041569173 0.16424483
+		 0.17598146 -0.14102355 0.02259326 -0.031550921 -0.10239577 0.077072799 -0.096178949
+		 0.095501691 -0.01801908 -0.12850042 -0.058358312 -0.074624345 -0.010284066 0.053228617
+		 0.086661458 0.14989612;
+createNode polyLayoutUV -n "polyLayoutUV36";
+	rename -uid "ED754327-4893-83A4-F5CB-5C9CDE456A97";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV56";
+	rename -uid "02F83C77-4C40-DD15-93F6-9BA31E8D0681";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" -0.12480415 0.19372277 -0.13988279
+		 0.19372284 -0.13988326 0.080834985 -0.12480462 0.080834925 -0.14936781 0.080838859
+		 -0.149322 0.19372667 -0.11407828 0.19372652 -0.11403885 0.08083868 -0.34220511 0.1585893
+		 -0.34220552 0.11628693 -0.19676131 0.11628544 -0.19676086 0.15858775 -0.52553356
+		 -0.19778191 -0.36272109 -0.28005272 -0.10722473 -0.28001621 0.030803129 -0.19770247
+		 -0.25480667 0.13747932 -0.33576405 -0.00045879558 -0.33608478 -0.25595489 -0.2555052
+		 -0.41885692;
+createNode polyLayoutUV -n "polyLayoutUV37";
+	rename -uid "458C9252-4C7D-BFEB-B7D4-21917346DFAB";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV57";
+	rename -uid "73943540-429A-958B-B85B-4097801153DA";
+	setAttr ".uopa" yes;
+	setAttr -s 40 ".uvtk[0:39]" -type "float2" 0.093955696 -0.097200215
+		 0.093964666 -0.042875946 0.0799326 -0.042873636 0.07992363 -0.09719795 0.1363886
+		 -0.23725528 0.13638997 -0.18293098 0.12220818 -0.18293063 0.12220687 -0.23725492
+		 -0.46091861 -0.27562559 -0.46092558 -0.32994992 -0.4478502 -0.32427764 -0.44784468
+		 -0.28130117 -0.042572677 -0.1509926 -0.042579651 -0.20531696 -0.02950424 -0.19964474
+		 -0.029498696 -0.15666822 -0.054648012 0.31197625 -0.073988378 0.31197876 -0.073993981
+		 0.26900229 -0.054653615 0.26899981 0.078986585 -0.08938764 0.07898432 -0.11063175
+		 0.13330865 -0.11063746 0.1333109 -0.089393362 0.42319915 -0.18965268 0.40195626 -0.18942219
+		 0.40086225 -0.20341158 0.42530799 -0.20367688 0.61414403 -0.0055649281 0.61414599
+		 0.018882275 0.60014552 0.017941236 0.60014379 -0.0033028722 0.022207439 0.13402218
+		 0.022206903 0.15846938 0.0081847906 0.15591568 0.0081852674 0.13657528 -0.28805119
+		 0.71612835 -0.28805065 0.69168115 -0.27402854 0.69423485 -0.27402896 0.71357524;
+createNode polyAutoProj -n "polyAutoProj35";
+	rename -uid "36E526DC-4204-F100-2D7C-9BADDA4D8C75";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" -0.14074086057349405 -0.020944875158224182 0.0059227193054787429 0
+		 -0.17841421114079506 1.2018049912904185 0.010381361911761403 0 -0.014980915780071847 0.00082586616751085075 -0.35306912373106347 0
+		 16.33110902242214 0.85331787306722251 7.2798781207307757 1;
+	setAttr ".s" -type "double3" 1.2099727733319214 1.2099727733319214 1.2099727733319214 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV58";
+	rename -uid "FF7104DB-4BCD-020D-0B7D-4FADE8B02F4E";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" 0.087890431 -0.19878624 -0.021832049
+		 -0.18915938 -0.093904674 0.19922599 0.015817821 0.18959913 -0.14269981 0.20525131
+		 -0.070982367 -0.18316266 0.14904796 -0.20566383 0.076662675 0.18269572 0.23283687
+		 -0.23075619 -0.0041568875 -0.1642448 -0.23283684 0.23075616 0.0041569173 0.16424477
+		 0.17598146 -0.14102356 0.02259326 -0.031550921 -0.10239577 0.077072769 -0.096178949
+		 0.095501721 -0.01801908 -0.12850049 -0.058358371 -0.07462436 -0.010284066 0.053228647
+		 0.086661518 0.1498962;
+createNode polyLayoutUV -n "polyLayoutUV38";
+	rename -uid "9392F393-4E81-F030-B8A0-14AB3F4C9A03";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV59";
+	rename -uid "0C9D65EC-4D35-8A49-5154-74BF8D3FC4CA";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" -0.12480415 0.1937228 -0.13988279
+		 0.19372287 -0.13988326 0.080834985 -0.12480463 0.080834866 -0.14936782 0.080838859
+		 -0.14932202 0.1937267 -0.11407827 0.19372655 -0.11403885 0.08083868 -0.34220493 0.15858924
+		 -0.34220535 0.11628693 -0.19676121 0.11628538 -0.19676076 0.15858769 -0.52553344
+		 -0.19778191 -0.36272097 -0.28005272 -0.10722467 -0.28001624 0.030803248 -0.19770248
+		 -0.25480658 0.13747941 -0.33576393 -0.00045874342 -0.33608472 -0.25595492 -0.25550511
+		 -0.41885701;
+createNode polyAutoProj -n "polyAutoProj36";
+	rename -uid "A120DA64-49FD-2FCC-6161-4AB98741B559";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" -0.14074086057349405 -0.020944875158224182 0.0059227193054787429 0
+		 -0.17841421114079506 1.2018049912904185 0.010381361911761403 0 -0.014980915780071847 0.00082586616751085075 -0.35306912373106347 0
+		 16.377438134676378 0.85076384720236398 8.3717592384790684 1;
+	setAttr ".s" -type "double3" 1.2099727733319217 1.2099727733319217 1.2099727733319217 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV60";
+	rename -uid "1A43D74F-439B-CDDC-29D3-489D06477EC1";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" 0.087890431 -0.19878624 -0.021832049
+		 -0.18915938 -0.093904674 0.19922599 0.015817821 0.18959913 -0.14269981 0.20525131
+		 -0.070982367 -0.18316266 0.14904796 -0.20566383 0.076662675 0.18269572 0.23283687
+		 -0.23075619 -0.0041568875 -0.1642448 -0.23283684 0.23075616 0.0041569173 0.16424477
+		 0.17598146 -0.14102356 0.02259326 -0.031550921 -0.10239577 0.077072769 -0.096178949
+		 0.095501721 -0.01801908 -0.12850049 -0.058358371 -0.07462436 -0.010284066 0.053228647
+		 0.086661518 0.1498962;
+createNode polyLayoutUV -n "polyLayoutUV39";
+	rename -uid "F9702A85-4407-AC9A-D0F3-0EB2C2128AAB";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV61";
+	rename -uid "35FD9E08-48AE-441B-274B-47BAA067BD2A";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" -0.12480415 0.1937228 -0.13988279
+		 0.19372287 -0.13988326 0.080834985 -0.12480463 0.080834866 -0.14936782 0.080838859
+		 -0.14932202 0.1937267 -0.11407827 0.19372655 -0.11403885 0.08083868 -0.34220493 0.15858924
+		 -0.34220535 0.11628693 -0.19676121 0.11628538 -0.19676076 0.15858769 -0.52553344
+		 -0.19778191 -0.36272097 -0.28005272 -0.10722467 -0.28001624 0.030803248 -0.19770248
+		 -0.25480658 0.13747941 -0.33576393 -0.00045874342 -0.33608472 -0.25595492 -0.25550511
+		 -0.41885701;
+createNode polyAutoProj -n "polyAutoProj37";
+	rename -uid "5F10E1A6-4018-FF96-7379-858ACAD62E6E";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" -0.14074086057349405 -0.020944875158224182 0.0059227193054787429 0
+		 -0.17841421114079506 1.2018049912904185 0.010381361911761403 0 -0.014980915780071847 0.00082586616751085075 -0.35306912373106347 0
+		 16.422106726013251 0.84830136233981646 9.4245053211049505 1;
+	setAttr ".s" -type "double3" 1.2099727733319214 1.2099727733319214 1.2099727733319214 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV62";
+	rename -uid "2FA50577-4C7E-EEF5-2219-839C46A826E0";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" 0.087890431 -0.19878624 -0.021832049
+		 -0.18915938 -0.093904674 0.19922599 0.015817821 0.18959913 -0.14269981 0.20525131
+		 -0.070982367 -0.18316266 0.14904796 -0.20566383 0.076662675 0.18269572 0.23283687
+		 -0.23075619 -0.0041568875 -0.1642448 -0.23283684 0.23075616 0.0041569173 0.16424477
+		 0.17598146 -0.14102356 0.02259326 -0.031550921 -0.10239577 0.077072769 -0.096178949
+		 0.095501721 -0.01801908 -0.12850049 -0.058358371 -0.07462436 -0.010284066 0.053228647
+		 0.086661518 0.1498962;
+createNode polyLayoutUV -n "polyLayoutUV40";
+	rename -uid "5C439C22-4295-D8A0-6A69-CBB6CE64741D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV63";
+	rename -uid "9EC769C2-488E-B9B1-1DCE-22AF82A2FB2E";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" -0.12480415 0.1937228 -0.13988279
+		 0.19372287 -0.13988326 0.080834985 -0.12480463 0.080834866 -0.14936782 0.080838859
+		 -0.14932202 0.1937267 -0.11407827 0.19372655 -0.11403885 0.08083868 -0.34220493 0.15858924
+		 -0.34220535 0.11628693 -0.19676121 0.11628538 -0.19676076 0.15858769 -0.52553344
+		 -0.19778191 -0.36272097 -0.28005272 -0.10722467 -0.28001624 0.030803248 -0.19770248
+		 -0.25480658 0.13747941 -0.33576393 -0.00045874342 -0.33608472 -0.25595492 -0.25550511
+		 -0.41885701;
+createNode polyAutoProj -n "polyAutoProj38";
+	rename -uid "ABA8D90D-47CD-7306-AAC5-81B4BAA3557A";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" -0.14074086057349405 -0.020944875158224182 0.0059227193054787429 0
+		 -0.17841421114079506 1.2018049912904185 0.010381361911761403 0 -0.014980915780071847 0.00082586616751085075 -0.35306912373106347 0
+		 16.471503102453511 0.84557824469477116 10.588675496098769 1;
+	setAttr ".s" -type "double3" 1.2099727733319214 1.2099727733319214 1.2099727733319214 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV64";
+	rename -uid "A4426BB1-432F-9371-DFDC-9185F486BB0A";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" 0.087890431 -0.19878624 -0.021832049
+		 -0.18915938 -0.093904674 0.19922599 0.015817821 0.18959913 -0.14269981 0.20525131
+		 -0.070982367 -0.18316266 0.14904796 -0.20566383 0.076662675 0.18269572 0.23283687
+		 -0.23075619 -0.0041568875 -0.1642448 -0.23283684 0.23075616 0.0041569173 0.16424477
+		 0.17598146 -0.14102356 0.02259326 -0.031550921 -0.10239577 0.077072769 -0.096178949
+		 0.095501721 -0.01801908 -0.12850049 -0.058358371 -0.07462436 -0.010284066 0.053228647
+		 0.086661518 0.1498962;
+createNode polyLayoutUV -n "polyLayoutUV41";
+	rename -uid "8E02FB45-47EC-5D07-E5D8-B38D5C8CEDBF";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV65";
+	rename -uid "6ABB737D-4873-FADA-2DFA-6A899E9A3CD3";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" -0.12480415 0.1937228 -0.13988279
+		 0.19372287 -0.13988326 0.080834985 -0.12480463 0.080834866 -0.14936782 0.080838859
+		 -0.14932202 0.1937267 -0.11407827 0.19372655 -0.11403885 0.08083868 -0.34220493 0.15858924
+		 -0.34220535 0.11628693 -0.19676121 0.11628538 -0.19676076 0.15858769 -0.52553344
+		 -0.19778191 -0.36272097 -0.28005272 -0.10722467 -0.28001624 0.030803248 -0.19770248
+		 -0.25480658 0.13747941 -0.33576393 -0.00045874342 -0.33608472 -0.25595492 -0.25550511
+		 -0.41885701;
+createNode polyAutoProj -n "polyAutoProj39";
+	rename -uid "C6637D79-459A-DEB3-E43B-79B7C74BB15D";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" -0.14074086057349405 -0.020944875158224182 0.0059227193054787429 0
+		 -0.17841421114079506 1.2018049912904185 0.010381361911761403 0 -0.014980915780071847 0.00082586616751085075 -0.35306912373106347 0
+		 16.516237185098955 0.84311214943505142 11.642965073078186 1;
+	setAttr ".s" -type "double3" 1.2099727733319214 1.2099727733319214 1.2099727733319214 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV66";
+	rename -uid "AA27ACEE-44C7-37B5-7A98-8D99E6005C97";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" 0.087890431 -0.19878624 -0.021832049
+		 -0.18915938 -0.093904674 0.19922599 0.015817821 0.18959913 -0.14269981 0.20525131
+		 -0.070982367 -0.18316266 0.14904796 -0.20566383 0.076662675 0.18269572 0.23283687
+		 -0.23075619 -0.0041568875 -0.1642448 -0.23283684 0.23075616 0.0041569173 0.16424477
+		 0.17598146 -0.14102356 0.02259326 -0.031550921 -0.10239577 0.077072769 -0.096178949
+		 0.095501721 -0.01801908 -0.12850049 -0.058358371 -0.07462436 -0.010284066 0.053228647
+		 0.086661518 0.1498962;
+createNode polyLayoutUV -n "polyLayoutUV42";
+	rename -uid "84DFF0E0-48B2-5CB1-AA54-B3B9E33DDE07";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV67";
+	rename -uid "D5CD5A62-40EA-3F7D-450F-649BB803E3DD";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".uvtk[0:19]" -type "float2" -0.12480415 0.1937228 -0.13988279
+		 0.19372287 -0.13988326 0.080834985 -0.12480463 0.080834866 -0.14936782 0.080838859
+		 -0.14932202 0.1937267 -0.11407827 0.19372655 -0.11403885 0.08083868 -0.34220493 0.15858924
+		 -0.34220535 0.11628693 -0.19676121 0.11628538 -0.19676076 0.15858769 -0.52553344
+		 -0.19778191 -0.36272097 -0.28005272 -0.10722467 -0.28001624 0.030803248 -0.19770248
+		 -0.25480658 0.13747941 -0.33576393 -0.00045874342 -0.33608472 -0.25595492 -0.25550511
+		 -0.41885701;
+createNode polyAutoProj -n "polyAutoProj40";
+	rename -uid "ACBC239D-433B-7A36-4695-439D28C0FA42";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 0.2337648367108088 0 -0.0085023759100493826 0 0 0.065109006112994042 0 0
+		 0.031353545490635806 0 0.8620362730916733 0 16.972857262770521 1.2848453805667777 12.23052170413944 1;
+	setAttr ".s" -type "double3" 0.87053864900172329 0.87053864900172329 0.87053864900172329 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweak -n "polyTweak26";
+	rename -uid "F5A0BBF7-491F-BA7E-8768-34A3DF88C3ED";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".tk[2:3]" -type "float3"  1.6098234e-15 0 -0.34417772
+		 1.9428903e-15 0 -0.34417772;
+createNode polyTweakUV -n "polyTweakUV68";
+	rename -uid "DCD6B94A-4DA7-CD60-4413-5CABC5EB0BB6";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.46264124 0.4217827 0.29404068
+		 -0.086754516 0.33242476 -0.33426911 -0.16382413 -0.00075906515 -0.29404062 -0.086754501
+		 0.46264121 0.42178255 0.1638241 -0.00075906515 -0.3324247 -0.33426899 -0.11550546
+		 -0.14390896 -0.064941466 0.021623746 0.11550546 0.14390896 0.064941466 -0.02162376
+		 0.16326958 -0.16304469 -0.00042366982 -0.11888456 -0.16326958 0.16304469 0.00042366982
+		 0.11888456 0.032669712 -0.032003433 -0.0083736777 -0.013304971 -0.032669723 0.032003433
+		 0.0083736926 0.013304979 -0.15936172 0.16004838 0.1151818 0.0013215826 0.15936172
+		 -0.16004838 -0.11518177 -0.001321584;
+createNode polyLayoutUV -n "polyLayoutUV43";
+	rename -uid "A858FEE0-4C85-A8DE-7E53-1A942BBBA7FF";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV69";
+	rename -uid "52A4703C-418C-8D39-D14F-2AB48BD56F49";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.23445159 0.40766659 -0.037137568
+		 0.40764612 -0.037136018 0.38714671 0.14097819 0.38716018 0.81643069 -0.33678493 0.81641012
+		 -0.60837406 0.83691663 -0.51490068 0.83693004 -0.33678648 0.30900621 0.2939055 0.38900018
+		 0.29313868 0.39085472 0.48659796 0.31086075 0.4873648 -0.16395295 -0.41417605 -0.16394502
+		 -0.33417845 -0.45894599 -0.3341493 -0.45895392 -0.4141469 0.39121017 0.27267841 0.35373247
+		 0.27268139 0.35372868 0.22398442 0.39120632 0.22398144 -0.25323755 0.17173992 -0.62620306
+		 0.17217764 -0.62632489 0.068366617 -0.25335938 0.06792891;
+createNode polyAutoProj -n "polyAutoProj41";
+	rename -uid "314EFA37-4744-F19E-C6FB-2DAA06FBEA5C";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:45]";
+	setAttr ".ix" -type "matrix" 0.56748000642691598 0 -0.022160590259561255 0 0 0.29669934475450327 0 0
+		 0.024120172915530716 0 0.61766025727668006 0 16.973956013427603 0.5062854649079308 12.120355142943833 1;
+	setAttr ".s" -type "double3" 0.89409724306089222 0.89409724306089222 0.89409724306089222 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweak -n "polyTweak27";
+	rename -uid "E8D55CA7-4BE0-F313-A36A-60ACBCE9CE38";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".tk";
+	setAttr ".tk[12]" -type "float3" -0.019084817 0 -1.5543122e-15 ;
+	setAttr ".tk[15]" -type "float3" -0.019084817 0 -1.5543122e-15 ;
+createNode polyTweakUV -n "polyTweakUV70";
+	rename -uid "D0399A12-44A0-AEF1-253A-17B38C197927";
+	setAttr ".uopa" yes;
+	setAttr -s 144 ".uvtk[0:143]" -type "float2" 0.011420488 0.045133173 0.012786686
+		 0.02501297 -0.0001013875 -0.027368665 -0.014570177 -0.048671007 0.011419833 0.045134008
+		 0.012787819 0.025013328 -0.014569521 -0.048671722 -0.00010168552 -0.027369499 -0.046874464
+		 0.048648596 0.026625454 0.0064627528 0.046874464 -0.048648596 -0.026625454 -0.0064627528
+		 -0.046874523 0.048648596 0.026625514 0.0064627528 0.046874523 -0.048648596 -0.026625514
+		 -0.0064627528 -0.006303966 0.044769198 0.019420654 0.045223236 0.018321037 -0.044556379
+		 -0.031437725 -0.045436084 -0.054961145 0.069101512 0.0077211857 0.032727599 0.066997886
+		 -0.076086283 -0.019757926 -0.025742829 0.012316465 0.025114238 0.0015976429 -0.020214438
+		 -0.012316465 -0.025114238 -0.0015976429 0.020214438 -0.012316585 -0.025114417 -0.0015976429
+		 0.020214498 0.012316585 0.025114417 0.0015976429 -0.020214498 0.011618912 0.041471899
+		 -0.0078381896 -0.037202001 -0.011619091 -0.041472077 0.0078383684 0.03720215 -0.021498919
+		 -0.049144506 0.018685818 0.050642312 0.021499217 0.049144566 -0.018686116 -0.050642371
+		 -0.044067115 0.050801609 0.032861769 0.055406298 0.029061496 0.047386467 -0.036696643
+		 0.043445013 0.05730927 -0.049768418 0.049769819 -0.042912573 -0.048597634 -0.056647211
+		 -0.040480942 -0.048850358 -0.0091241598 0.050440591 0.066854894 0.0699986 0.014770985
+		 0.04538513 -0.010660589 0.038845442 0.047921896 -0.037898988 -0.0011847615 -0.045002043
+		 -0.057269335 -0.065101326 -0.050469577 -0.057746649 0.0015454143 -0.0032228231 -0.0067155957
+		 -0.0071356595 -0.0015454292 0.0032228231 0.0067156255 0.0071356893 -0.0055035432
+		 -0.0055422783 -0.0019785257 0.0017055869 0.0055035353 0.0055423379 0.0019785315 -0.0017056465
+		 -0.0013347268 -0.0031787157 -4.7445297e-05 0.0028712749 0.0013347268 0.0031787753
+		 4.7445297e-05 -0.0028713942 0.0013346672 0.0031786561 4.7504902e-05 -0.0028712153
+		 -0.0013346672 -0.0031787157 -4.7445297e-05 0.0028712749 0.00038552284 0.0031748414
+		 -3.3378601e-06 -0.0031523108 -0.00038558245 -0.0031748414 3.3378601e-06 0.0031523108
+		 0.00038583577 0.0043869019 -3.6507845e-06 -0.0043706298 -0.00038586557 -0.0043869019
+		 3.6805868e-06 0.0043706298 -0.00034934282 -0.0012337565 -1.1920929e-07 0.0011853576
+		 0.00034934282 0.0012337565 1.1920929e-07 -0.001185298 -0.00035196543 -0.0023528934
+		 2.5629997e-06 0.0023275018 0.00035196543 0.0023528934 -2.5629997e-06 -0.0023275018
+		 0.036061406 0.034750283 0.0055420995 -0.018805921 -0.036061406 -0.034750283 -0.0055420995
+		 0.018805921 0.043021426 0.041457057 0.0066118836 -0.022435308 -0.043021441 -0.041457057
+		 -0.0066118836 0.022435308 -0.022846576 0.041609053 0.024240509 0.043629114 0.0253665
+		 -0.033666432 -0.027417995 -0.035930067 -0.022738399 0.037326988 0.024348781 0.039348774
+		 -0.025884191 0.043744426 0.027514637 0.046037219 0.050914973 -0.048751771 0.045539752
+		 -0.039898634 -0.052729953 -0.051472574 -0.046308033 -0.041976124 0.014967084 -0.033432007
+		 -0.049477533 -0.066032588 -0.019480944 0.031148579 0.053991407 0.068316028 0.024932623
+		 0.033767283 0.023255408 -0.032891393 0.019493163 -0.027569413 0.020898998 0.028304279
+		 -0.024932683 -0.033767641 -0.020898938 -0.028303921 -0.023255467 0.032891035 -0.019493103
+		 0.02756983 0.021434426 -0.034093559 -0.027865931 0.037440598 -0.018156916 0.029337943
+		 0.024588414 -0.032684952 -0.0039620399 -0.037706077 0.00081992149 0.036952674 0.0039618611
+		 0.037706047 -0.00081974268 -0.036952674 -0.0030816793 -0.041337371 -0.00051158667
+		 0.041636169 0.0030816793 0.041337371 0.00051158667 -0.041636169 0.004894048 0.040862918
+		 -0.0014933944 -0.039829791 -0.0048941374 -0.040862918 0.0014934838 0.03982982 0.0048995614
+		 0.036806524 -0.0019552708 -0.037157118 -0.0048995614 -0.036806583 0.0019552708 0.037157178
+		 0.00062358379 0.007298708 1.4066696e-05 -0.0072695613 -0.0006236434 -0.0072987676
+		 -1.4066696e-05 0.0072695613;
+createNode polyLayoutUV -n "polyLayoutUV44";
+	rename -uid "B2C90E81-4B27-BEE7-687D-A7A81981CEA3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:45]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV71";
+	rename -uid "CA91FC4D-470B-5469-A41D-B9879A31DD41";
+	setAttr ".uopa" yes;
+	setAttr -s 144 ".uvtk[0:143]" -type "float2" -0.57567137 -0.037867188
+		 -0.33934754 0.010506749 -0.51280379 -0.21797562 -0.33936194 -0.22704858 -0.5756768
+		 -0.037865937 -0.33934402 0.010512173 -0.33935681 -0.22704953 -0.51280254 -0.21798009
+		 0.34642267 0.16456807 0.3533963 0.16456932 0.3533957 0.16791666 0.34642205 0.1679154
+		 0.16652924 -0.20959571 0.17350286 -0.20959443 0.17350227 -0.20624715 0.16652864 -0.2062484
+		 0.31832644 -0.13421753 0.32081264 -0.13421747 0.32081246 -0.12819606 0.31600344 -0.12819612
+		 0.080390394 0.23503724 0.086506367 0.23503652 0.088855982 0.24095535 0.080391139
+		 0.24095637 -0.2250784 -0.90049404 -0.22788388 -0.90047723 -0.22789153 -0.90175968
+		 -0.22508603 -0.90177649 -0.29583237 -0.88610691 -0.29302663 -0.88612372 -0.29301897
+		 -0.88484114 -0.29582471 -0.88482434 0.049677849 0.039576918 0.049677849 0.046345949
+		 0.049363852 0.046345949 0.049363911 0.039576918 -0.39377782 -0.44508591 -0.38715297
+		 -0.4450857 -0.38715297 -0.44477803 -0.39377782 -0.44477829 -0.36556971 0.30144119
+		 -0.35801947 0.30143794 -0.35835707 0.30196398 -0.36481491 0.30196667 -0.35513571
+		 0.30875543 -0.35589632 0.30821496 -0.36556888 0.30874434 -0.36481163 0.30820373 -0.3404018
+		 0.062906995 -0.33303624 0.062903434 -0.3378903 0.063673124 -0.34036052 0.063674897
+		 -0.33303219 0.070041716 -0.33788919 0.069659144 -0.34322771 0.070042789 -0.34267029
+		 0.069660127 -0.16455932 -0.35056728 -0.084404469 -0.35055843 -0.084415585 -0.24464676
+		 -0.16457069 -0.24465531 0.28386846 0.10326135 0.28387323 0.03295511 0.36039612 0.032960296
+		 0.3603915 0.10326654 -0.49354666 -0.79638839 -0.49354571 -0.85531968 -0.47947171
+		 -0.85532016 -0.47947249 -0.79638761 -0.31073618 -0.70859081 -0.31073678 -0.64965975
+		 -0.32481089 -0.6496594 -0.32481015 -0.7085917 0.057174444 -0.17041147 0.057185709
+		 -0.23598805 0.060985029 -0.23598754 0.060973585 -0.17041081 0.84153926 0.17487681
+		 0.84154856 0.084114492 0.84534776 0.084115028 0.84533805 0.17487741 -0.025909722
+		 -0.83543527 -0.025909841 -0.80964369 -0.02948451 -0.80964357 -0.029484391 -0.83543527
+		 0.337161 -0.81513476 0.33715791 -0.76524484 0.33358306 -0.76524514 0.33358616 -0.81513506
+		 0.06715554 -0.59042037 0.067155898 -0.58742881 0.065593004 -0.58742863 0.065592647
+		 -0.59042013 -0.054983526 0.043589413 -0.054983109 0.047158241 -0.056847602 0.04715848
+		 -0.056848019 0.043589592 0.40927497 0.32392541 0.41781539 0.32392633 0.41844124 0.33378035
+		 0.40886742 0.33377931 0.409275 0.32346737 0.41781545 0.32346839 0.40867865 0.32286519
+		 0.41836384 0.32286632 0.42001346 0.33372784 0.41929564 0.33323064 0.40714884 0.33374012
+		 0.40805703 0.33325419 0.44614038 -0.043998212 0.44614369 -0.040429339 0.44238976
+		 -0.040187903 0.44238597 -0.044256717 0.13046616 -0.64490473 0.13046646 -0.64133584
+		 0.1303156 -0.64162457 0.13031536 -0.64461601 0.12860191 -0.64133573 0.12875271 -0.64162445
+		 0.12860167 -0.64490461 0.12875253 -0.64461589 0.32747701 -0.39865452 0.33154583 -0.39865386
+		 0.33123782 -0.39843202 0.32770997 -0.39843261 0.10058331 -0.15173078 0.10058242 -0.15664102
+		 0.10085559 -0.15664108 0.10085648 -0.15173084 -0.52027524 -0.025880635 -0.52027583
+		 -0.022664487 -0.52046835 -0.022664517 -0.52046776 -0.025880694 -0.14058512 -0.027036816
+		 -0.14058527 -0.0301947 -0.14040458 -0.0301947 -0.14040443 -0.027036816 0.42647529
+		 0.042498052 0.42647445 0.046888053 0.42624009 0.046887994 0.42624086 0.042498022
+		 -0.016302884 -0.082037866 -0.016305864 -0.005100131 -0.019986033 -0.0050999522 -0.019983232
+		 -0.082037747;
+createNode polyAutoProj -n "polyAutoProj42";
+	rename -uid "23185303-4DEF-868E-2354-7FB7FBE2AC9D";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" -0.00088499755014699881 0.20317334191230835 0.0014185187219316214 0
+		 -0.019759755370848231 -9.1358093014663207e-05 0.00075726457269274024 0 0.01920966479624223 -0.0034130796884440768 0.50083745939609059 0
+		 16.68283665681183 0.50863300811839918 12.128660356631517 1;
+	setAttr ".s" -type "double3" 0.50301324269071657 0.50301324269071657 0.50301324269071657 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV72";
+	rename -uid "78834B54-46FC-B0E1-7467-B7A719576853";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.61954999 0.43649381 0.59570265
+		 -0.16795808 0.61954999 -0.43649387 -0.59570265 0.16795808 -0.61955005 0.43649381
+		 0.59570271 -0.16795808 0.61955005 -0.43649381 -0.59570265 0.16795808 0.11338395 -0.10969193
+		 -0.010506749 -0.067988239 -0.11338395 0.10969195 0.010506719 0.067988247 0.11338398
+		 -0.10969195 -0.010506749 -0.067988247 -0.11338398 0.10969192 0.010506749 0.067988217
+		 -0.34969553 0.29454741 0.31501147 -0.061826475 0.34969553 -0.29454741 -0.3150115
+		 0.061826468 -0.34969547 0.29454735 0.31501144 -0.061826468 0.3496955 -0.29454732
+		 -0.31501147 0.061826468;
+createNode polyLayoutUV -n "polyLayoutUV45";
+	rename -uid "A9E3B040-459E-E24B-9CC9-DC8760D50FEF";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV73";
+	rename -uid "A8549FE8-4078-8C3D-177B-C390D86D9882";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.66276205 0.049818873 0.0039585829
+		 0.049714804 0.0039626956 0.023723066 0.66276616 0.023827136 0.32594758 0.010365963
+		 -0.33285618 0.010261834 -0.33285207 -0.015729845 0.32595167 -0.015625775 0.23779517
+		 -0.061830755 0.23780501 0.13375798 -0.24468519 0.1337823 -0.24469504 -0.061806452
+		 0.29414397 0.010266781 0.29415387 0.20585555 -0.18833652 0.20587987 -0.18834636 0.01029107
+		 0.76984155 0.77451307 0.11907697 0.77438998 0.11908895 0.71105438 0.76985353 0.71117753
+		 -0.25433618 0.44118059 -0.9051007 0.44105747 -0.90508872 0.37772191 -0.25432417 0.37784511;
+createNode polyAutoProj -n "polyAutoProj43";
+	rename -uid "60352D55-4F74-4123-7065-A4887B52C511";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:13]";
+	setAttr ".ix" -type "matrix" 1.8497896403032201 0 -0.08774571415734983 0 0 0.091976122790000073 0 0
+		 0.047382231476172286 0 0.99887683131622307 0 17.603951303703433 0.3085369106548832 11.900843892004788 1;
+	setAttr ".s" -type "double3" 1.8971718717793919 1.8971718717793919 1.8971718717793919 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV74";
+	rename -uid "AA76370B-42D1-621A-3A03-449AAC271BB5";
+	setAttr ".uopa" yes;
+	setAttr -s 48 ".uvtk[0:47]" -type "float2" -0.35182637 0.29301536 0.31891406
+		 -0.064819157 0.35182631 -0.29301533 -0.31891406 0.064819157 0.29301548 0.35182703
+		 -0.064819336 -0.31891477 -0.29301551 -0.35182703 0.064819336 0.31891477 -0.080918044
+		 -0.30466509 0.028314114 0.30183327 0.080918014 0.30466509 -0.028314114 -0.30183321
+		 -0.080917954 -0.3046653 0.028314054 0.30183339 0.080917954 0.30466533 -0.028314084
+		 -0.30183342 0.064343028 0.064632475 0.0083874818 -0.037087023 -0.064342871 -0.064632237
+		 -0.0083876252 0.037086785 -0.072279274 0.074975349 0.038350046 0.012142883 0.072279334
+		 -0.074975312 -0.038350105 -0.012142926 -0.05830951 0.043652296 0.056879431 0.041003704
+		 0.052232027 0.034180611 -0.053427964 0.036610097 0.058309406 -0.043652236 0.053427756
+		 -0.036610007 -0.056879282 -0.041003823 -0.052231878 -0.034180641 -0.52150375 0.38403085
+		 0.49591559 -0.13116682 0.52150375 -0.38403082 -0.49591559 0.13116682 -0.52150273
+		 0.38403079 0.49591464 -0.13116667 0.52150279 -0.38403079 -0.49591458 0.13116667 0.10754555
+		 0.50691032 -0.048947453 -0.50491309 -0.10754557 -0.50691032 0.048947453 0.50491309
+		 -0.10754532 -0.50690818 0.048947304 0.50491095 0.10754532 0.50690818 -0.048947304
+		 -0.50491095;
+createNode polyLayoutUV -n "polyLayoutUV46";
+	rename -uid "609359CD-4610-9FBB-E4D2-1CA5D087E1FF";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:13]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV75";
+	rename -uid "079210A9-4557-C977-4798-F880C783FCDF";
+	setAttr ".uopa" yes;
+	setAttr -s 48 ".uvtk[0:47]" -type "float2" -0.28395253 -0.054310143
+		 -0.98361218 -0.054197699 -0.98362255 -0.11854976 -0.28396288 -0.11866224 0.48554254
+		 -0.058415592 0.48565477 0.64124548 0.42130268 0.64125574 0.42119044 -0.058405221
+		 0.47282225 -0.34171283 0.47272962 -0.92677915 0.4878976 -0.92678154 0.4879902 -0.34171525
+		 0.40032738 -0.34171265 0.40023494 -0.92677903 0.41540283 -0.92678154 0.41549534 -0.34171504
+		 0.61794776 -0.39435315 0.61792058 -0.59550655 0.71694332 -0.59551948 0.71697056 -0.39436668
+		 -0.59551823 -0.044129748 -0.37622416 -0.044167507 -0.37620324 0.074250132 -0.59549773
+		 0.07428813 0.029625708 -0.014308751 0.2489202 -0.014300108 0.23984918 -0.0046029687
+		 0.038695753 -0.0046108961 0.24891514 0.10411757 0.23984489 0.094419718 0.029621046
+		 0.10410917 0.03869205 0.09441191 0.84952259 0.61267269 0.070744276 0.61276174 0.070739865
+		 0.57408237 0.84951818 0.57399344 0.52385175 0.58020264 -0.25492537 0.58029199 -0.25492978
+		 0.54161274 0.52384728 0.54152328 0.68604505 -0.85213256 0.68612468 -0.13777789 0.67700785
+		 -0.13777685 0.67692828 -0.85213161 0.58579087 -0.13777907 0.58571112 -0.85213047
+		 0.59482795 -0.85213143 0.5949077 -0.1377801;
+createNode polyAutoProj -n "polyAutoProj44";
+	rename -uid "431072E3-4A50-E809-4653-13A955D0CF4A";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 0.069641150862750953 0 0 0 0 0.70435210865639131 0 0
+		 0 0 0.31707947268736397 0 17.276553934604774 0.81435145855589286 11.991493092971945 1;
+	setAttr ".s" -type "double3" 0.7043521086563912 0.7043521086563912 0.7043521086563912 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweak -n "polyTweak28";
+	rename -uid "D9AFA42E-4640-6A3F-3667-8E82A1FC1C1D";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".tk";
+	setAttr ".tk[1]" -type "float3" -0.47973901 -5.5511151e-17 0 ;
+	setAttr ".tk[7]" -type "float3" -0.47973901 -5.5511151e-17 0 ;
+createNode polyTweakUV -n "polyTweakUV76";
+	rename -uid "84F32356-4D50-F622-7FE5-8B95BFBEADDB";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.10041426 -0.096838087 -0.011760443
+		 -0.056973457 -0.10041425 0.096838057 0.011760429 0.056973457 -0.096699975 -0.10027331
+		 -0.056858666 0.011770844 0.096699983 0.10027331 0.056858659 -0.011770844 0.18935254
+		 -0.19433272 0.0080576539 -0.15097491 -0.18935254 0.19433272 -0.0080576539 0.1509749
+		 0.11018151 -0.18823576 0.017751455 -0.1736173 -0.11018151 0.18823576 -0.017751455
+		 0.1736173 0.19811259 -0.35560304 0.079356015 -0.34414667 -0.25286603 0.36088508 -0.024602577
+		 0.33886462 -0.024602532 -0.33886465 -0.25286603 -0.36088508 0.079356015 0.34414667
+		 0.19811255 0.35560304;
+createNode polyLayoutUV -n "polyLayoutUV47";
+	rename -uid "F3D91336-4762-F593-D0BC-F48660AE78DB";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV77";
+	rename -uid "276DBD18-4F58-A297-30D9-2486DAED9401";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.18233317 -0.38951334 0.18233162
+		 -0.30109635 -0.014296507 -0.30109981 -0.01429496 -0.38951683 -0.055998698 -0.27830619
+		 0.032294154 -0.27828938 0.032256722 -0.08215791 -0.056036144 -0.082174718 -0.23324287
+		 0.21984479 -0.23323888 0.13337041 0.16048305 0.13338833 0.16047908 0.2198627 -0.24589646
+		 -0.082502395 -0.24589425 -0.12749162 0.14782771 -0.12747255 0.14782551 -0.082483292
+		 0.34878433 0.55948353 0.34885871 0.54093057 0.70960212 0.52526891 0.70945913 0.56092978
+		 0.00028443336 0.024155909 -0.035375714 0.024421994 -0.020959198 -0.33637327 -0.0024065971
+		 -0.33651173;
+createNode polyAutoProj -n "polyAutoProj45";
+	rename -uid "A857C087-4846-5684-158A-6580E675828E";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 0.12676716923122544 0 -0.0047462955908827258 0 0 0.05891335224940919 0 0
+		 0.013083021244027424 0 0.34942989460732071 0 17.315112901865952 0.36121818076980627 11.981582602281545 1;
+	setAttr ".s" -type "double3" 0.35417619019820279 0.35417619019820279 0.35417619019820279 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV78";
+	rename -uid "53F4D0C6-4EFB-47B6-BEDC-20B61DD8D79F";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.23815183 0.22247386 0.19699338
+		 -0.02181828 0.23815182 -0.22247386 -0.1969934 0.021818221 -0.23815185 0.22247386
+		 0.19699341 -0.02181828 0.23815185 -0.22247386 -0.1969934 0.021818221 0.12721679 -0.12378427
+		 -0.0085392594 -0.080730081 -0.12721682 0.12378427 0.0085392296 0.080730081 0.12721676
+		 -0.12378424 -0.0085392594 -0.080730081 -0.12721676 0.12378424 0.0085392296 0.080730081
+		 -0.092875235 0.096357413 0.053713143 0.012031076 0.092875242 -0.09635742 -0.053713128
+		 -0.012031078 -0.092875242 0.096357465 0.053713143 0.012031078 0.092875302 -0.096357465
+		 -0.053713143 -0.012031078;
+createNode polyLayoutUV -n "polyLayoutUV48";
+	rename -uid "F361ED92-4F70-8A00-01A0-62B263D9530C";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV79";
+	rename -uid "7C1F244E-43F0-B348-BAF3-1EA0A995AE56";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.23473029 -0.17619443 0.24424136
+		 -0.17619586 0.2442416 -0.17459339 0.23473053 -0.17459202 -0.10208423 -0.039351761
+		 -0.092573345 -0.039353132 -0.092573106 -0.037750781 -0.102084 -0.03774935 0.035275459
+		 -0.067453742 0.035265982 0.028752506 -0.2299237 0.028726429 -0.22991422 -0.067479834
+		 0.091624081 -0.10606441 0.091614604 -0.0098581314 -0.17357504 -0.0098842382 -0.17356558
+		 -0.10609046 0.34375727 0.80867928 0.15493506 0.80868965 0.1549302 0.72099853 0.34375247
+		 0.72098809 0.025937319 0.47536787 -0.16288483 0.4753783 -0.16288972 0.38768715 0.025932491
+		 0.38767672;
+createNode polyAutoProj -n "polyAutoProj46";
+	rename -uid "FE3DEED6-4FC9-B85E-0039-8BA3BB7C3876";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:59]";
+	setAttr ".ix" -type "matrix" 0.019982986608556411 0 0 0 0 0.20684115672706765 0 0
+		 0 0 0.019982986608556411 0 17.646212176668168 0.53938412839114636 12.355967542016041 1;
+	setAttr ".s" -type "double3" 0.41368231345413536 0.41368231345413536 0.41368231345413536 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV80";
+	rename -uid "A6E213F5-4759-AD59-AF23-D49742644DD4";
+	setAttr ".uopa" yes;
+	setAttr -s 90 ".uvtk[0:89]" -type "float2" -0.034367442 -0.32734382
+		 -0.065425098 -0.32729322 -0.068773985 0.32749569 -0.037716389 0.32744509 -0.087002099
+		 -0.32724261 -0.090351045 0.3275463 0.0016744733 -0.32739446 -0.0016744137 0.32739443
+		 0.037716329 -0.32744506 0.034367442 0.32734382 0.068773985 -0.32749566 0.065425038
+		 0.32729322 0.090351045 -0.3275463 0.087002099 0.32724261 0.083659187 -0.32811928
+		 0.052593201 -0.32761925 0.01950717 0.32661915 0.050573155 0.32611912 0.016543031
+		 -0.3271192 -0.016543001 0.32711923 0.10524455 -0.3286193 0.072158515 0.3256191 -0.0195072
+		 -0.32661918 -0.052593231 0.32761925 -0.05057314 -0.32611912 -0.083659172 0.32811928
+		 -0.072158515 -0.3256191 -0.10524455 0.3286193 -2.9802322e-08 0 0 7.4505806e-09 0
+		 0 0 0 0 0 0 1.4901161e-08 1.4901161e-08 5.5879354e-09 0 0 0 2.0954758e-09 2.9802322e-08
+		 0 0 0 1.4901161e-08 -2.9802322e-08 -7.4505806e-09 0 0 -2.9802322e-08 -3.7252903e-09
+		 7.4505806e-09 0 0 -5.5879354e-09 0 -7.4505806e-09 0 -1.0128133e-08 0 -3.7252903e-09
+		 0 -5.5879354e-09 1.4901161e-08 -5.9604645e-08 1.4901161e-08 0 2.9802322e-08 0 1.4901161e-08
+		 0 0 5.9604645e-08 1.4901161e-08 0 -2.9802322e-08 -5.9604645e-08 0 0 0 5.9604645e-08
+		 -7.4505806e-09 2.9802322e-08 0 0 -1.1175871e-08 2.9802322e-08 0 0 -1.4901161e-08
+		 -2.9802322e-08 0 0 -1.5133992e-08 0 1.4901161e-08 0 -1.2107193e-08 0 1.4901161e-08
+		 2.9802322e-08 -7.4505806e-09 0 0 0 0 -0.099432349 0.34995562 -0.068995237 0.34894079
+		 -0.0018473268 -0.34691119 -0.032284439 -0.34589636 -0.033573985 0.34792596 0.033573925
+		 -0.34792602 0.0018473864 0.34691113 0.068995297 -0.34894082 0.032284409 0.34589642
+		 0.09943229 -0.34995565 0.09943226 -0.34995559 0.068995215 -0.34894076 0.0018473528
+		 0.34691107 0.032284394 0.34589636 0.033573933 -0.34792593 -0.03357394 0.3479259 -0.0018473566
+		 -0.34691113 -0.068995222 0.34894073 -0.032284394 -0.3458963 -0.099432252 0.34995556;
+createNode polyLayoutUV -n "polyLayoutUV49";
+	rename -uid "E6CF5628-4BAD-8AE2-9FE3-F099CA33729B";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:59]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV81";
+	rename -uid "EFE1E9C8-4874-7EC7-0216-09B852EB7800";
+	setAttr ".uopa" yes;
+	setAttr -s 90 ".uvtk[0:89]" -type "float2" -0.64813185 -0.0078252228
+		 -0.6478954 -0.0078252349 -0.64789462 0.0078177452 -0.64813101 0.0078177452 -0.64765894
+		 -0.007825247 -0.64765823 0.0078176856 -0.64836824 -0.0078252116 -0.64836746 0.0078177452
+		 -0.64860463 -0.0078252004 -0.64860386 0.0078177452 -0.64884102 -0.0078251883 -0.64884031
+		 0.0078177452 -0.64907748 -0.0078251772 -0.6490767 0.0078178048 -0.27074668 -0.0078215338
+		 -0.27051026 -0.0078215646 -0.27050826 0.0078214407 -0.27074465 0.0078214407 -0.27027386
+		 -0.0078215944 -0.27027184 0.0078213811 -0.2709831 -0.0078215031 -0.27098107 0.0078215003
+		 -0.27003744 -0.0078216251 -0.27003542 0.0078213811 -0.26980102 -0.0078216558 -0.26979899
+		 0.0078213215 -0.2695646 -0.0078216866 -0.2695626 0.0078213215 0.17469832 -0.13727759
+		 0.18595892 -0.17193419 0.28973514 -0.11905755 0.20737791 -0.20141478 0.17469832 -0.1008375
+		 0.23685855 -0.22283374 0.18595892 -0.066180907 0.27151513 -0.23409434 0.20737788
+		 -0.036700256 0.30795521 -0.23409434 0.23685852 -0.015281299 0.34261176 -0.22283374
+		 0.2715151 -0.0040207086 0.37209243 -0.20141479 0.30795521 -0.0040207156 0.39351135
+		 -0.17193416 0.34261179 -0.015281325 0.40477195 -0.13727757 0.37209243 -0.036700271
+		 0.40477195 -0.10083749 0.39351138 -0.066180915 -0.19621494 -0.22283375 -0.16155833
+		 -0.23409438 -0.14333829 -0.11905749 -0.12511826 -0.23409438 -0.22569555 -0.20141476
+		 -0.090461642 -0.22283374 -0.24711451 -0.17193413 -0.060981005 -0.20141478 -0.25837511
+		 -0.13727754 -0.039562047 -0.17193413 -0.25837511 -0.10083746 -0.028301448 -0.13727754
+		 -0.24711451 -0.066180885 -0.028301477 -0.10083744 -0.22569555 -0.036700223 -0.039562076
+		 -0.06618087 -0.19621491 -0.015281284 -0.060981035 -0.036700215 -0.16155833 -0.0040206779
+		 -0.090461671 -0.015281272 -0.12511826 -0.0040206742 -0.33484983 -0.013805449 -0.33443254
+		 -0.013805509 -0.33442739 0.013805064 -0.33484465 0.013805142 -0.33401525 -0.013805628
+		 -0.33401009 0.013804986 -0.33359796 -0.013805687 -0.33359283 0.013804907 -0.33318067
+		 -0.013805747 -0.33317554 0.01380483 0.18201643 -0.31942785 0.18159914 -0.31942779
+		 0.18159401 -0.34703815 0.18201128 -0.34703821 0.18118188 -0.3194277 0.18117672 -0.34703809
+		 0.18076459 -0.31942764 0.18075943 -0.34703797 0.18034731 -0.31942755 0.18034217 -0.34703791;
+createNode polyAutoProj -n "polyAutoProj47";
+	rename -uid "4BB965C9-44FA-141C-53FC-4D9AF0B39EC8";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:59]";
+	setAttr ".ix" -type "matrix" 0.019982986608556411 0 0 0 0 0.20684115672706765 0 0
+		 0 0 0.019982986608556411 0 18.101147520576443 0.53938412839114636 12.337284350371156 1;
+	setAttr ".s" -type "double3" 0.41368231345413536 0.41368231345413536 0.41368231345413536 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV82";
+	rename -uid "147FD56C-4E9C-5D9D-1A7A-839345A49B43";
+	setAttr ".uopa" yes;
+	setAttr -s 90 ".uvtk[0:89]" -type "float2" -0.034367442 -0.32734382
+		 -0.065425098 -0.32729322 -0.068773985 0.32749569 -0.037716389 0.32744509 -0.087002099
+		 -0.32724261 -0.090351045 0.3275463 0.0016744733 -0.32739446 -0.0016744137 0.32739443
+		 0.037716329 -0.32744506 0.034367442 0.32734382 0.068773985 -0.32749566 0.065425038
+		 0.32729322 0.090351045 -0.3275463 0.087002099 0.32724261 0.083659187 -0.32811928
+		 0.052593201 -0.32761925 0.01950717 0.32661915 0.050573155 0.32611912 0.016543031
+		 -0.3271192 -0.016543001 0.32711923 0.10524455 -0.3286193 0.072158515 0.3256191 -0.0195072
+		 -0.32661918 -0.052593231 0.32761925 -0.05057314 -0.32611912 -0.083659172 0.32811928
+		 -0.072158515 -0.3256191 -0.10524455 0.3286193 -2.9802322e-08 0 0 7.4505806e-09 0
+		 0 0 0 0 0 0 1.4901161e-08 1.4901161e-08 5.5879354e-09 0 0 0 2.0954758e-09 2.9802322e-08
+		 0 0 0 1.4901161e-08 -2.9802322e-08 -7.4505806e-09 0 0 -2.9802322e-08 -3.7252903e-09
+		 7.4505806e-09 0 0 -5.5879354e-09 0 -7.4505806e-09 0 -1.0128133e-08 0 -3.7252903e-09
+		 0 -5.5879354e-09 1.4901161e-08 -5.9604645e-08 1.4901161e-08 0 2.9802322e-08 0 1.4901161e-08
+		 0 0 5.9604645e-08 1.4901161e-08 0 -2.9802322e-08 -5.9604645e-08 0 0 0 5.9604645e-08
+		 -7.4505806e-09 2.9802322e-08 0 0 -1.1175871e-08 2.9802322e-08 0 0 -1.4901161e-08
+		 -2.9802322e-08 0 0 -1.5133992e-08 0 1.4901161e-08 0 -1.2107193e-08 0 1.4901161e-08
+		 2.9802322e-08 -7.4505806e-09 0 0 0 0 -0.099432349 0.34995562 -0.068995237 0.34894079
+		 -0.0018473268 -0.34691119 -0.032284439 -0.34589636 -0.033573985 0.34792596 0.033573925
+		 -0.34792602 0.0018473864 0.34691113 0.068995297 -0.34894082 0.032284409 0.34589642
+		 0.09943229 -0.34995565 0.09943226 -0.34995559 0.068995215 -0.34894076 0.0018473528
+		 0.34691107 0.032284394 0.34589636 0.033573933 -0.34792593 -0.03357394 0.3479259 -0.0018473566
+		 -0.34691113 -0.068995222 0.34894073 -0.032284394 -0.3458963 -0.099432252 0.34995556;
+createNode polyLayoutUV -n "polyLayoutUV50";
+	rename -uid "2B46AF83-4D50-77CA-9DF9-2B9A061EC438";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:59]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV83";
+	rename -uid "5491D06B-44F0-7C22-AE83-33B3E1D09037";
+	setAttr ".uopa" yes;
+	setAttr -s 90 ".uvtk[0:89]" -type "float2" -0.64813185 -0.0078252228
+		 -0.6478954 -0.0078252349 -0.64789462 0.0078177452 -0.64813101 0.0078177452 -0.64765894
+		 -0.007825247 -0.64765823 0.0078176856 -0.64836824 -0.0078252116 -0.64836746 0.0078177452
+		 -0.64860463 -0.0078252004 -0.64860386 0.0078177452 -0.64884102 -0.0078251883 -0.64884031
+		 0.0078177452 -0.64907748 -0.0078251772 -0.6490767 0.0078178048 -0.27074668 -0.0078215338
+		 -0.27051026 -0.0078215646 -0.27050826 0.0078214407 -0.27074465 0.0078214407 -0.27027386
+		 -0.0078215944 -0.27027184 0.0078213811 -0.2709831 -0.0078215031 -0.27098107 0.0078215003
+		 -0.27003744 -0.0078216251 -0.27003542 0.0078213811 -0.26980102 -0.0078216558 -0.26979899
+		 0.0078213215 -0.2695646 -0.0078216866 -0.2695626 0.0078213215 0.17469832 -0.13727759
+		 0.18595892 -0.17193419 0.28973514 -0.11905755 0.20737791 -0.20141478 0.17469832 -0.1008375
+		 0.23685855 -0.22283374 0.18595892 -0.066180907 0.27151513 -0.23409434 0.20737788
+		 -0.036700256 0.30795521 -0.23409434 0.23685852 -0.015281299 0.34261176 -0.22283374
+		 0.2715151 -0.0040207086 0.37209243 -0.20141479 0.30795521 -0.0040207156 0.39351135
+		 -0.17193416 0.34261179 -0.015281325 0.40477195 -0.13727757 0.37209243 -0.036700271
+		 0.40477195 -0.10083749 0.39351138 -0.066180915 -0.19621494 -0.22283375 -0.16155833
+		 -0.23409438 -0.14333829 -0.11905749 -0.12511826 -0.23409438 -0.22569555 -0.20141476
+		 -0.090461642 -0.22283374 -0.24711451 -0.17193413 -0.060981005 -0.20141478 -0.25837511
+		 -0.13727754 -0.039562047 -0.17193413 -0.25837511 -0.10083746 -0.028301448 -0.13727754
+		 -0.24711451 -0.066180885 -0.028301477 -0.10083744 -0.22569555 -0.036700223 -0.039562076
+		 -0.06618087 -0.19621491 -0.015281284 -0.060981035 -0.036700215 -0.16155833 -0.0040206779
+		 -0.090461671 -0.015281272 -0.12511826 -0.0040206742 -0.33484983 -0.013805449 -0.33443254
+		 -0.013805509 -0.33442739 0.013805064 -0.33484465 0.013805142 -0.33401525 -0.013805628
+		 -0.33401009 0.013804986 -0.33359796 -0.013805687 -0.33359283 0.013804907 -0.33318067
+		 -0.013805747 -0.33317554 0.01380483 0.18201643 -0.31942785 0.18159914 -0.31942779
+		 0.18159401 -0.34703815 0.18201128 -0.34703821 0.18118188 -0.3194277 0.18117672 -0.34703809
+		 0.18076459 -0.31942764 0.18075943 -0.34703797 0.18034731 -0.31942755 0.18034217 -0.34703791;
+createNode polyAutoProj -n "polyAutoProj48";
+	rename -uid "445AAB24-46F2-3DC5-310E-2EA17F793218";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:59]";
+	setAttr ".ix" -type "matrix" 0.019982986608556411 0 0 0 0 0.20684115672706765 0 0
+		 0 0 0.019982986608556411 0 18.518332724026802 0.53938412839114636 12.317959538154767 1;
+	setAttr ".s" -type "double3" 0.41368231345413536 0.41368231345413536 0.41368231345413536 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV84";
+	rename -uid "23442838-4FA9-C1EB-A63B-D89491DD30E4";
+	setAttr ".uopa" yes;
+	setAttr -s 90 ".uvtk[0:89]" -type "float2" -0.034367442 -0.32734382
+		 -0.065425098 -0.32729322 -0.068773985 0.32749569 -0.037716389 0.32744509 -0.087002099
+		 -0.32724261 -0.090351045 0.3275463 0.0016744733 -0.32739446 -0.0016744137 0.32739443
+		 0.037716329 -0.32744506 0.034367442 0.32734382 0.068773985 -0.32749566 0.065425038
+		 0.32729322 0.090351045 -0.3275463 0.087002099 0.32724261 0.083659187 -0.32811928
+		 0.052593201 -0.32761925 0.01950717 0.32661915 0.050573155 0.32611912 0.016543031
+		 -0.3271192 -0.016543001 0.32711923 0.10524455 -0.3286193 0.072158515 0.3256191 -0.0195072
+		 -0.32661918 -0.052593231 0.32761925 -0.05057314 -0.32611912 -0.083659172 0.32811928
+		 -0.072158515 -0.3256191 -0.10524455 0.3286193 -2.9802322e-08 0 0 7.4505806e-09 0
+		 0 0 0 0 0 0 1.4901161e-08 1.4901161e-08 5.5879354e-09 0 0 0 2.0954758e-09 2.9802322e-08
+		 0 0 0 1.4901161e-08 -2.9802322e-08 -7.4505806e-09 0 0 -2.9802322e-08 -3.7252903e-09
+		 7.4505806e-09 0 0 -5.5879354e-09 0 -7.4505806e-09 0 -1.0128133e-08 0 -3.7252903e-09
+		 0 -5.5879354e-09 1.4901161e-08 -5.9604645e-08 1.4901161e-08 0 2.9802322e-08 0 1.4901161e-08
+		 0 0 5.9604645e-08 1.4901161e-08 0 -2.9802322e-08 -5.9604645e-08 0 0 0 5.9604645e-08
+		 -7.4505806e-09 2.9802322e-08 0 0 -1.1175871e-08 2.9802322e-08 0 0 -1.4901161e-08
+		 -2.9802322e-08 0 0 -1.5133992e-08 0 1.4901161e-08 0 -1.2107193e-08 0 1.4901161e-08
+		 2.9802322e-08 -7.4505806e-09 0 0 0 0 -0.099432349 0.34995562 -0.068995237 0.34894079
+		 -0.0018473268 -0.34691119 -0.032284439 -0.34589636 -0.033573985 0.34792596 0.033573925
+		 -0.34792602 0.0018473864 0.34691113 0.068995297 -0.34894082 0.032284409 0.34589642
+		 0.09943229 -0.34995565 0.09943226 -0.34995559 0.068995215 -0.34894076 0.0018473528
+		 0.34691107 0.032284394 0.34589636 0.033573933 -0.34792593 -0.03357394 0.3479259 -0.0018473566
+		 -0.34691113 -0.068995222 0.34894073 -0.032284394 -0.3458963 -0.099432252 0.34995556;
+createNode polyLayoutUV -n "polyLayoutUV51";
+	rename -uid "07E6090A-4DAE-BCCB-53A8-7A9732253545";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:59]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV85";
+	rename -uid "43254238-4A81-0D23-3F6C-E4927ADDD2C3";
+	setAttr ".uopa" yes;
+	setAttr -s 90 ".uvtk[0:89]" -type "float2" -0.64813185 -0.0078252228
+		 -0.6478954 -0.0078252349 -0.64789462 0.0078177452 -0.64813101 0.0078177452 -0.64765894
+		 -0.007825247 -0.64765823 0.0078176856 -0.64836824 -0.0078252116 -0.64836746 0.0078177452
+		 -0.64860463 -0.0078252004 -0.64860386 0.0078177452 -0.64884102 -0.0078251883 -0.64884031
+		 0.0078177452 -0.64907748 -0.0078251772 -0.6490767 0.0078178048 -0.27074668 -0.0078215338
+		 -0.27051026 -0.0078215646 -0.27050826 0.0078214407 -0.27074465 0.0078214407 -0.27027386
+		 -0.0078215944 -0.27027184 0.0078213811 -0.2709831 -0.0078215031 -0.27098107 0.0078215003
+		 -0.27003744 -0.0078216251 -0.27003542 0.0078213811 -0.26980102 -0.0078216558 -0.26979899
+		 0.0078213215 -0.2695646 -0.0078216866 -0.2695626 0.0078213215 0.17469832 -0.13727759
+		 0.18595892 -0.17193419 0.28973514 -0.11905755 0.20737791 -0.20141478 0.17469832 -0.1008375
+		 0.23685855 -0.22283374 0.18595892 -0.066180907 0.27151513 -0.23409434 0.20737788
+		 -0.036700256 0.30795521 -0.23409434 0.23685852 -0.015281299 0.34261176 -0.22283374
+		 0.2715151 -0.0040207086 0.37209243 -0.20141479 0.30795521 -0.0040207156 0.39351135
+		 -0.17193416 0.34261179 -0.015281325 0.40477195 -0.13727757 0.37209243 -0.036700271
+		 0.40477195 -0.10083749 0.39351138 -0.066180915 -0.19621494 -0.22283375 -0.16155833
+		 -0.23409438 -0.14333829 -0.11905749 -0.12511826 -0.23409438 -0.22569555 -0.20141476
+		 -0.090461642 -0.22283374 -0.24711451 -0.17193413 -0.060981005 -0.20141478 -0.25837511
+		 -0.13727754 -0.039562047 -0.17193413 -0.25837511 -0.10083746 -0.028301448 -0.13727754
+		 -0.24711451 -0.066180885 -0.028301477 -0.10083744 -0.22569555 -0.036700223 -0.039562076
+		 -0.06618087 -0.19621491 -0.015281284 -0.060981035 -0.036700215 -0.16155833 -0.0040206779
+		 -0.090461671 -0.015281272 -0.12511826 -0.0040206742 -0.33484983 -0.013805449 -0.33443254
+		 -0.013805509 -0.33442739 0.013805064 -0.33484465 0.013805142 -0.33401525 -0.013805628
+		 -0.33401009 0.013804986 -0.33359796 -0.013805687 -0.33359283 0.013804907 -0.33318067
+		 -0.013805747 -0.33317554 0.01380483 0.18201643 -0.31942785 0.18159914 -0.31942779
+		 0.18159401 -0.34703815 0.18201128 -0.34703821 0.18118188 -0.3194277 0.18117672 -0.34703809
+		 0.18076459 -0.31942764 0.18075943 -0.34703797 0.18034731 -0.31942755 0.18034217 -0.34703791;
+createNode polyAutoProj -n "polyAutoProj49";
+	rename -uid "264B21DC-4B8E-EF83-2904-85B21C492098";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:59]";
+	setAttr ".ix" -type "matrix" 0.019982986608556411 0 0 0 0 0.20684115672706765 0 0
+		 0 0 0.019982986608556411 0 18.494489473575534 0.53938412839114636 11.98945790052778 1;
+	setAttr ".s" -type "double3" 0.41368231345413536 0.41368231345413536 0.41368231345413536 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV86";
+	rename -uid "88F56609-4AAF-8D5A-E7A9-0FAFEB77A73D";
+	setAttr ".uopa" yes;
+	setAttr -s 90 ".uvtk[0:89]" -type "float2" -0.034367442 -0.32734382
+		 -0.065425098 -0.32729322 -0.068773985 0.32749569 -0.037716389 0.32744509 -0.087002099
+		 -0.32724261 -0.090351045 0.3275463 0.0016744733 -0.32739446 -0.0016744137 0.32739443
+		 0.037716329 -0.32744506 0.034367442 0.32734382 0.068773985 -0.32749566 0.065425038
+		 0.32729322 0.090351045 -0.3275463 0.087002099 0.32724261 0.083659187 -0.32811928
+		 0.052593201 -0.32761925 0.01950717 0.32661915 0.050573155 0.32611912 0.016543031
+		 -0.3271192 -0.016543001 0.32711923 0.10524455 -0.3286193 0.072158515 0.3256191 -0.0195072
+		 -0.32661918 -0.052593231 0.32761925 -0.05057314 -0.32611912 -0.083659172 0.32811928
+		 -0.072158515 -0.3256191 -0.10524455 0.3286193 -2.9802322e-08 0 0 7.4505806e-09 0
+		 0 0 0 0 0 0 1.4901161e-08 1.4901161e-08 5.5879354e-09 0 0 0 2.0954758e-09 2.9802322e-08
+		 0 0 0 1.4901161e-08 -2.9802322e-08 -7.4505806e-09 0 0 -2.9802322e-08 -3.7252903e-09
+		 7.4505806e-09 0 0 -5.5879354e-09 0 -7.4505806e-09 0 -1.0128133e-08 0 -3.7252903e-09
+		 0 -5.5879354e-09 1.4901161e-08 -5.9604645e-08 1.4901161e-08 0 2.9802322e-08 0 1.4901161e-08
+		 0 0 5.9604645e-08 1.4901161e-08 0 -2.9802322e-08 -5.9604645e-08 0 0 0 5.9604645e-08
+		 -7.4505806e-09 2.9802322e-08 0 0 -1.1175871e-08 2.9802322e-08 0 0 -1.4901161e-08
+		 -2.9802322e-08 0 0 -1.5133992e-08 0 1.4901161e-08 0 -1.2107193e-08 0 1.4901161e-08
+		 2.9802322e-08 -7.4505806e-09 0 0 0 0 -0.099432349 0.34995562 -0.068995237 0.34894079
+		 -0.0018473268 -0.34691119 -0.032284439 -0.34589636 -0.033573985 0.34792596 0.033573925
+		 -0.34792602 0.0018473864 0.34691113 0.068995297 -0.34894082 0.032284409 0.34589642
+		 0.09943229 -0.34995565 0.09943226 -0.34995559 0.068995215 -0.34894076 0.0018473528
+		 0.34691107 0.032284394 0.34589636 0.033573933 -0.34792593 -0.03357394 0.3479259 -0.0018473566
+		 -0.34691113 -0.068995222 0.34894073 -0.032284394 -0.3458963 -0.099432252 0.34995556;
+createNode polyLayoutUV -n "polyLayoutUV52";
+	rename -uid "F175332D-4BA8-C1E1-AB87-6CAACD0A587A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:59]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV87";
+	rename -uid "469FE51D-4358-98C4-5E33-BBB61005695B";
+	setAttr ".uopa" yes;
+	setAttr -s 90 ".uvtk[0:89]" -type "float2" -0.64813185 -0.0078252228
+		 -0.6478954 -0.0078252349 -0.64789462 0.0078177452 -0.64813101 0.0078177452 -0.64765894
+		 -0.007825247 -0.64765823 0.0078176856 -0.64836824 -0.0078252116 -0.64836746 0.0078177452
+		 -0.64860463 -0.0078252004 -0.64860386 0.0078177452 -0.64884102 -0.0078251883 -0.64884031
+		 0.0078177452 -0.64907748 -0.0078251772 -0.6490767 0.0078178048 -0.27074668 -0.0078215338
+		 -0.27051026 -0.0078215646 -0.27050826 0.0078214407 -0.27074465 0.0078214407 -0.27027386
+		 -0.0078215944 -0.27027184 0.0078213811 -0.2709831 -0.0078215031 -0.27098107 0.0078215003
+		 -0.27003744 -0.0078216251 -0.27003542 0.0078213811 -0.26980102 -0.0078216558 -0.26979899
+		 0.0078213215 -0.2695646 -0.0078216866 -0.2695626 0.0078213215 0.17469832 -0.13727759
+		 0.18595892 -0.17193419 0.28973514 -0.11905755 0.20737791 -0.20141478 0.17469832 -0.1008375
+		 0.23685855 -0.22283374 0.18595892 -0.066180907 0.27151513 -0.23409434 0.20737788
+		 -0.036700256 0.30795521 -0.23409434 0.23685852 -0.015281299 0.34261176 -0.22283374
+		 0.2715151 -0.0040207086 0.37209243 -0.20141479 0.30795521 -0.0040207156 0.39351135
+		 -0.17193416 0.34261179 -0.015281325 0.40477195 -0.13727757 0.37209243 -0.036700271
+		 0.40477195 -0.10083749 0.39351138 -0.066180915 -0.19621494 -0.22283375 -0.16155833
+		 -0.23409438 -0.14333829 -0.11905749 -0.12511826 -0.23409438 -0.22569555 -0.20141476
+		 -0.090461642 -0.22283374 -0.24711451 -0.17193413 -0.060981005 -0.20141478 -0.25837511
+		 -0.13727754 -0.039562047 -0.17193413 -0.25837511 -0.10083746 -0.028301448 -0.13727754
+		 -0.24711451 -0.066180885 -0.028301477 -0.10083744 -0.22569555 -0.036700223 -0.039562076
+		 -0.06618087 -0.19621491 -0.015281284 -0.060981035 -0.036700215 -0.16155833 -0.0040206779
+		 -0.090461671 -0.015281272 -0.12511826 -0.0040206742 -0.33484983 -0.013805449 -0.33443254
+		 -0.013805509 -0.33442739 0.013805064 -0.33484465 0.013805142 -0.33401525 -0.013805628
+		 -0.33401009 0.013804986 -0.33359796 -0.013805687 -0.33359283 0.013804907 -0.33318067
+		 -0.013805747 -0.33317554 0.01380483 0.18201643 -0.31942785 0.18159914 -0.31942779
+		 0.18159401 -0.34703815 0.18201128 -0.34703821 0.18118188 -0.3194277 0.18117672 -0.34703809
+		 0.18076459 -0.31942764 0.18075943 -0.34703797 0.18034731 -0.31942755 0.18034217 -0.34703791;
+createNode polyAutoProj -n "polyAutoProj50";
+	rename -uid "CC24BE28-43BB-BCAC-E8B5-BEB5A5B1FC08";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 0.041660030114172665 0 -0.00085983297203724468 0 0 0.393845503733044 0 0
+		 0.0014749584416398657 0 0.071463662239284714 0 18.555419854770328 0.14382817492970434 12.310999028722511 1;
+	setAttr ".s" -type "double3" 0.39384550373304394 0.39384550373304394 0.39384550373304394 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV88";
+	rename -uid "C12E72C7-45F6-87DF-A8CD-C79917570BCC";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.21311361 -0.22528774 0.01760605
+		 -0.18341452 -0.21311361 0.2252878 -0.017606044 0.18341458 0.21311349 -0.22528768
+		 0.01760602 -0.18341449 -0.21311352 0.22528768 -0.01760605 0.18341446 0.067715079
+		 -0.065394379 -0.012286067 -0.0330818 -0.067715108 0.065394372 0.012286037 0.0330818
+		 0.067715168 -0.065394431 -0.012286067 -0.03308183 -0.067715168 0.065394461 0.012286067
+		 0.03308183 0.28312224 -0.33060986 0.054677188 -0.29487064 -0.28312224 0.33060983
+		 -0.054677203 0.29487064 0.28312224 -0.3306098 0.054677248 -0.29487056 -0.28312224
+		 0.3306098 -0.054677188 0.29487056;
+createNode polyLayoutUV -n "polyLayoutUV53";
+	rename -uid "F3926F82-4730-C807-20DC-5491F18689C7";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV89";
+	rename -uid "AD26332F-4823-2E37-14DA-06904AABA775";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.44603449 -0.5795207 0.44627118
+		 -0.53858268 0.22070457 -0.53727841 0.22046785 -0.57821637 0.10922003 -0.76085126
+		 0.10945678 -0.71991324 -0.11610992 -0.71860892 -0.11634664 -0.75954694 0.27844334
+		 0.53870606 0.27843589 0.3928344 0.52866429 0.39282161 0.5286718 0.53869331 0.15241712
+		 0.20546824 0.15240967 0.059596598 0.40263808 0.059583843 0.40264547 0.20545551 0.32587421
+		 0.25517842 0.32587397 0.25369966 0.33985072 0.25369737 0.33985096 0.25517613 -0.28989416
+		 0.027602166 -0.2898944 0.026123405 -0.27591777 0.02612114 -0.27591753 0.027599841;
+createNode polyAutoProj -n "polyAutoProj51";
+	rename -uid "54703E00-439A-286C-DF94-0CB0F5D53742";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 0.041634412268042549 0 -0.0016950330227590521 0 0 0.393845503733044 0 0
+		 0.0029076615425123612 0 0.071419717357388959 0 18.555419854770328 0.14382817492970434 11.994285338724117 1;
+	setAttr ".s" -type "double3" 0.39384550373304394 0.39384550373304394 0.39384550373304394 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV90";
+	rename -uid "87B8FC1E-4307-92F3-97A9-86A7468E9ED8";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.21311361 -0.22528774 0.01760605
+		 -0.18341452 -0.21311361 0.2252878 -0.017606044 0.18341458 0.21311349 -0.22528768
+		 0.01760602 -0.18341449 -0.21311352 0.22528768 -0.01760605 0.18341446 0.067715079
+		 -0.065394379 -0.012286067 -0.0330818 -0.067715108 0.065394372 0.012286037 0.0330818
+		 0.067715168 -0.065394431 -0.012286067 -0.03308183 -0.067715168 0.065394461 0.012286067
+		 0.03308183 0.28312224 -0.33060986 0.054677188 -0.29487064 -0.28312224 0.33060983
+		 -0.054677203 0.29487064 0.28312224 -0.3306098 0.054677248 -0.29487056 -0.28312224
+		 0.3306098 -0.054677188 0.29487056;
+createNode polyLayoutUV -n "polyLayoutUV54";
+	rename -uid "AC61AAA0-4120-B05C-2DD8-54925C6EF1D6";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV91";
+	rename -uid "EBC1C36B-46F2-10FB-6F19-1A9DC5A3FA03";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.44603449 -0.5795207 0.44627118
+		 -0.53858268 0.22070457 -0.53727841 0.22046785 -0.57821637 0.10922003 -0.76085126
+		 0.10945678 -0.71991324 -0.11610992 -0.71860892 -0.11634664 -0.75954694 0.27844334
+		 0.53870606 0.27843589 0.3928344 0.52866429 0.39282161 0.5286718 0.53869331 0.15241712
+		 0.20546824 0.15240967 0.059596598 0.40263808 0.059583843 0.40264547 0.20545551 0.32587421
+		 0.25517842 0.32587397 0.25369966 0.33985072 0.25369737 0.33985096 0.25517613 -0.28989416
+		 0.027602166 -0.2898944 0.026123405 -0.27591777 0.02612114 -0.27591753 0.027599841;
+createNode polyAutoProj -n "polyAutoProj52";
+	rename -uid "0C83E402-4D66-ED2A-66A7-628FE7A86068";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 0.73048112494100714 0 -0.026392984143174942 0 0 0.32514002027741984 0 0
+		 0.17918252314683158 0 4.9592516847668691 0 17.544878180003213 0.12636544719108045 9.5318953563081088 1;
+	setAttr ".s" -type "double3" 4.9856446689100444 4.9856446689100444 4.9856446689100444 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweak -n "polyTweak29";
+	rename -uid "E613E4E2-4970-D99F-4E67-5EBE643569D7";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".tk";
+	setAttr ".tk[0]" -type "float3" -2.553513e-15 0 -0.1890633 ;
+	setAttr ".tk[1]" -type "float3" -2.4424907e-15 0 -0.1890633 ;
+	setAttr ".tk[6]" -type "float3" -1.110223e-16 0 0.23778445 ;
+	setAttr ".tk[7]" -type "float3" 5.5511151e-17 0 0.23778445 ;
+createNode polyTweakUV -n "polyTweakUV92";
+	rename -uid "3A9E06CD-4CFB-E715-F63F-F8ACC65B51ED";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.27028075 0.28191689 0.21548289
+		 -0.016834348 0.4511638 -0.39316243 -0.39636591 0.12807989 -0.26531914 0.16422707
+		 0.27856052 0.077842534 0.46784288 -0.19639403 -0.48108429 -0.045675635 0.23958507
+		 -0.26265132 0.030139685 -0.22292176 -0.23958507 0.26265129 -0.030139655 0.22292176
+		 -0.15683448 -0.20217404 -0.10765806 0.01082167 0.15683448 0.20217404 0.10765809 -0.01082164
+		 0.038266759 -0.037374549 -0.0093316734 -0.016074391 -0.038266748 0.037374556 0.0093316706
+		 0.016074389 0.064670503 -0.062502205 -0.012137234 -0.03112939 -0.064670503 0.062502205
+		 0.012137234 0.03112942;
+createNode polyLayoutUV -n "polyLayoutUV55";
+	rename -uid "20C5FEAE-4152-0473-E0DE-3BB653300284";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV93";
+	rename -uid "BCEA91FC-4DB1-9CE3-5C1D-54B21201E01E";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.33397186 0.24889144 0.16930389
+		 0.24889609 0.10098732 0.23007411 0.38828966 0.230066 0.42036739 -0.018837631 0.25569928
+		 -0.018837273 0.20138085 -0.037661135 0.48868343 -0.037661731 0.068579018 -0.10344192
+		 0.068576396 -0.082608923 -0.072859213 -0.082626611 -0.072856613 -0.1034596 -0.44534317
+		 -0.10665524 -0.42451021 -0.10665144 -0.42452496 -0.02558738 -0.44535795 -0.025591195
+		 0.37318152 0.17264135 0.23776689 0.17265949 0.23774227 -0.011293799 0.37315691 -0.011311948
+		 -0.59072113 -0.22534586 -0.59071732 -0.33268768 -0.4109751 -0.33268136 -0.41097885
+		 -0.22533958;
+createNode polyAutoProj -n "polyAutoProj53";
+	rename -uid "EFE6D05F-4FD8-F393-4CB2-448E44948B31";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" -0.0042075990640728601 -0.19095817390967867 0.00019134472940877833 0
+		 0.025655980608026888 -0.0005663281469155038 -0.0010186263036045251 0 0.034186142467817836 0.00010946078105442666 0.86098014001097323 0
+		 17.926787554489913 0.10646425321819465 9.5635683622881515 1;
+	setAttr ".s" -type "double3" 1.0808725777889538 1.0808725777889538 1.0808725777889538 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweak -n "polyTweak30";
+	rename -uid "DEDE4F8B-4AD7-5E2A-C6C7-1C99DE3923DB";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".tk";
+	setAttr ".tk[0]" -type "float3" -1.110223e-16 -8.8817842e-16 0.11359561 ;
+	setAttr ".tk[2]" -type "float3" -1.110223e-16 -1.1657342e-15 0.11359561 ;
+	setAttr ".tk[4]" -type "float3" 3.3306691e-16 2.3869795e-15 -0.14061911 ;
+	setAttr ".tk[6]" -type "float3" 3.3306691e-16 2.6090241e-15 -0.14061911 ;
+createNode polyTweakUV -n "polyTweakUV94";
+	rename -uid "5D09698F-47EE-C42F-A918-19A886E190C8";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.6269654 0.4195534 0.6090101
+		 -0.18285435 0.6269654 -0.4195534 -0.6090101 0.18285441 0.44459462 0.80157161 -0.2087853
+		 -0.78604436 -0.44459462 -0.80157167 0.2087853 0.78604436 -0.021268649 -0.16581054
+		 -0.15720421 -0.16733509 0.001141727 0.12824067 0.17733113 0.20490497 0.24550569 -0.19217408
+		 0.046754777 -0.098437503 -0.21254659 0.15940088 -0.079713911 0.13121068 -0.26009074
+		 0.22815573 0.2281962 -0.038381457 0.26009077 -0.22815573 -0.22819622 0.038381457
+		 -0.26964268 0.23413521 0.23830369 -0.041878521 0.26964268 -0.23413521 -0.23830369
+		 0.041878521;
+createNode polyLayoutUV -n "polyLayoutUV56";
+	rename -uid "1B622C86-4D9B-3F4F-249C-3183BA07DF4E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV95";
+	rename -uid "47660B80-4D37-51EA-C4E8-B0B43D6C3743";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.56588238 -0.67641044 -0.36223024
+		 -0.67635673 -0.36223185 -0.7040199 0.56588078 -0.70407355 0.19548887 -0.67576575
+		 0.19531357 0.4882865 0.1676504 0.48828238 0.1678257 -0.67576998 -0.076269522 0.31040901
+		 -0.052742124 0.32246783 -0.052749813 0.42860836 -0.076279171 0.44353205 0.074410081
+		 -0.11429821 0.059486806 -0.090768546 -0.046653949 -0.09075889 -0.058713209 -0.11428609
+		 0.5035854 -0.27386305 -0.13586092 -0.27393103 -0.13585287 -0.35044882 0.50359356
+		 -0.35038087 0.97559631 -0.56047875 0.32393503 -0.56057966 0.32394648 -0.63457024
+		 0.97560775 -0.63446933;
+createNode polyAutoProj -n "polyAutoProj54";
+	rename -uid "CB5789B7-41C1-ED24-531F-FCAB2E902D47";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" -0.0042075990640728601 -0.19095817390967867 0.00019134472940877833 0
+		 0.025655980608026888 -0.0005663281469155038 -0.0010186263036045251 0 0.034186142467817836 0.00010946078105442666 0.86098014001097323 0
+		 17.175608823628281 0.12304571487232879 9.5933926136256549 1;
+	setAttr ".s" -type "double3" 1.0808725777889538 1.0808725777889538 1.0808725777889538 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV96";
+	rename -uid "E5ED23A2-450E-41C4-3CE3-9CA107A10B57";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.6269654 0.4195534 0.6090101
+		 -0.18285435 0.6269654 -0.4195534 -0.6090101 0.18285441 0.44459462 0.80157161 -0.2087853
+		 -0.78604436 -0.44459462 -0.80157167 0.2087853 0.78604436 -0.021268649 -0.16581054
+		 -0.15720421 -0.16733509 0.001141727 0.12824067 0.17733113 0.20490497 0.24550569 -0.19217408
+		 0.046754777 -0.098437503 -0.21254659 0.15940088 -0.079713911 0.13121068 -0.26009074
+		 0.22815573 0.2281962 -0.038381457 0.26009077 -0.22815573 -0.22819622 0.038381457
+		 -0.26964268 0.23413521 0.23830369 -0.041878521 0.26964268 -0.23413521 -0.23830369
+		 0.041878521;
+createNode polyLayoutUV -n "polyLayoutUV57";
+	rename -uid "6284235D-42DC-6F1D-84E0-C28AE3DE811F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV97";
+	rename -uid "15B1CED4-4A82-08F9-BAA2-7E81F7C4173B";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.56588238 -0.67641044 -0.36223024
+		 -0.67635673 -0.36223185 -0.7040199 0.56588078 -0.70407355 0.19548887 -0.67576575
+		 0.19531357 0.4882865 0.1676504 0.48828238 0.1678257 -0.67576998 -0.076269522 0.31040901
+		 -0.052742124 0.32246783 -0.052749813 0.42860836 -0.076279171 0.44353205 0.074410081
+		 -0.11429821 0.059486806 -0.090768546 -0.046653949 -0.09075889 -0.058713209 -0.11428609
+		 0.5035854 -0.27386305 -0.13586092 -0.27393103 -0.13585287 -0.35044882 0.50359356
+		 -0.35038087 0.97559631 -0.56047875 0.32393503 -0.56057966 0.32394648 -0.63457024
+		 0.97560775 -0.63446933;
+createNode polyAutoProj -n "polyAutoProj55";
+	rename -uid "0232B265-4E3F-3B77-077A-52B5E46CFFA9";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 0.47284055600183539 0.0019615820590500074 -0.018100947393604207 0
+		 -0.0004276452163592925 0.024379222971296997 -0.0085291754140630182 0 0.026410578881489295 0.25136055200696178 0.71714794090889533 0
+		 17.60907831986016 0.10828793518530085 11.516329810361537 1;
+	setAttr ".s" -type "double3" 0.74377806371656163 0.74377806371656163 0.74377806371656163 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV98";
+	rename -uid "407A3E71-4622-5110-C366-B289B4263585";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.67785025 0.46446544 0.65556657
+		 -0.19147742 0.67785025 -0.4644655 -0.65556657 0.19147742 -0.67785037 0.46446562 0.65556663
+		 -0.19147745 0.67785031 -0.46446556 -0.65556669 0.19147742 0.059463292 -0.057558246
+		 -0.011799634 -0.027896833 -0.059463322 0.057558239 0.011799663 0.027896821 0.059463352
+		 -0.057558298 -0.011799693 -0.027896851 -0.059463382 0.057558298 0.011799663 0.027896821
+		 -0.50754189 0.38075376 0.48003241 -0.12317232 0.50754189 -0.38075376 -0.48003241
+		 0.12317231 -0.50754195 0.38075373 0.48003238 -0.12317231 0.50754195 -0.38075373 -0.48003241
+		 0.12317228;
+createNode polyLayoutUV -n "polyLayoutUV58";
+	rename -uid "87CA3A10-494F-6628-2EA0-37A73C5DA40B";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV99";
+	rename -uid "011FAC50-4399-B0D4-2ACD-889D27AC35E8";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.93249798 0.14639038 -0.11261338
+		 0.14668083 -0.11262321 0.11117631 0.93248814 0.11088586 0.57180887 0.12117201 -0.47330236
+		 0.12146246 -0.47331226 0.085957944 0.57179898 0.085667491 0.030233443 0.42532372
+		 0.0302158 0.62746 -0.2946018 0.62743163 -0.29458413 0.42529538 0.086582184 -0.36999583
+		 0.086564481 -0.16785964 -0.2382531 -0.16788805 -0.2382354 -0.37002423 0.53845286
+		 0.84654492 -0.40966368 0.84650707 -0.40966156 0.79474902 0.53845501 0.79478687 0.4336068
+		 0.51320028 -0.51450992 0.51316237 -0.51450783 0.46140426 0.43360886 0.46144223;
+createNode polyAutoProj -n "polyAutoProj56";
+	rename -uid "9899B25A-4890-ABBB-2796-71A3C93E7A9D";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 0.314328491397114 0.00096336723381075051 -0.011366897497194925 0
+		 -0.00015420572918101427 0.0093157649405229484 -0.0034747169600521355 0 0.0077969951408939807 0.083179627434098485 0.2226597229616091 0
+		 17.603193449364905 0.085832312971611549 11.503665231203341 1;
+	setAttr ".s" -type "double3" 0.32227969226718756 0.32227969226718756 0.32227969226718756 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV100";
+	rename -uid "397FF6DD-4B69-E244-CD0D-F086AE637CE0";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.59809405 0.42604327 0.57361758
+		 -0.15933275 0.59809399 -0.42604321 -0.57361758 0.15933275 -0.59809411 0.42604315
+		 0.57361764 -0.15933275 0.59809405 -0.42604321 -0.57361764 0.15933275 -0.034143776
+		 0.034897014 0.014389813 0.0087705804 0.034143746 -0.034897 -0.014389813 -0.0087705851
+		 -0.034143746 0.034897 0.014389813 0.0087705851 0.034143746 -0.03489697 -0.014389813
+		 -0.0087705851 -0.70753074 0.47849882 0.68596995 -0.20349006 0.70753074 -0.47849882
+		 -0.68596995 0.20349005 -0.70753068 0.47849888 0.68596989 -0.20349009 0.70753068 -0.47849888
+		 -0.68596989 0.20349008;
+createNode polyLayoutUV -n "polyLayoutUV59";
+	rename -uid "986DD44D-47E2-A305-0632-A3B4C51EF3FE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV101";
+	rename -uid "DDCFC799-4735-9C27-F13A-8E963EC78D96";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 1.1120224 0.18081212 -0.028872192
+		 0.18060046 -0.028863311 0.13289601 1.11203122 0.13310772 0.30219528 0.18077505 -0.83869946
+		 0.18056327 -0.83869052 0.13285887 0.30220413 0.13307059 -0.31393579 -0.023329299
+		 -0.07071507 -0.023416778 -0.070648909 0.16048002 -0.31386963 0.16056752 -0.25758711
+		 0.11379537 -0.014366388 0.1137079 -0.014300227 0.29760474 -0.25752097 0.29769218
+		 1.075232387 0.80352646 -0.15567529 0.8034296 -0.15567225 0.76451498 1.075235486 0.76461184
+		 0.14412227 0.48990253 -1.086785316 0.48980579 -1.086782217 0.4508912 0.1441253 0.45098799;
+createNode polyAutoProj -n "polyAutoProj57";
+	rename -uid "156E04D8-4663-ED03-EE09-18B776BA53DD";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" -0.00045006561523712387 -0.0044010933879735396 -0.013008365369256293 0
+		 -0.0011893071315632431 0.049289275309404142 -0.016634790865251086 0 -0.061438022850449504 -0.0006866517113849255 0.0023579565140789509 0
+		 17.913978034841996 0.18558467828392883 11.780225501103011 1;
+	setAttr ".s" -type "double3" 0.063077395597247232 0.063077395597247232 0.063077395597247232 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV102";
+	rename -uid "959989D9-4602-C662-D8C3-44B865FED3D2";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.020478545 0.020758808
+		 0.0078918934 0.0058855414 0.020478547 -0.020758808 -0.0078918878 -0.0058855414 -0.020478517
+		 0.020758748 0.0078918934 0.0058855414 0.020478547 -0.020758748 -0.0078918934 -0.0058855414
+		 0.18719435 -0.19164342 0.0072799325 -0.14818564 -0.18719432 0.19164339 -0.0072799623
+		 0.14818564 0.18719423 -0.19164334 0.0072799325 -0.1481856 -0.18719423 0.19164336
+		 -0.0072799623 0.14818561 0.16654728 -0.16683295 0.00052693486 -0.12271561 -0.16654728
+		 0.16683295 -0.00052694674 0.12271559 0.16654736 -0.16683298 0.00052696466 -0.12271562
+		 -0.16654736 0.16683298 -0.00052696466 0.12271565;
+createNode polyLayoutUV -n "polyLayoutUV60";
+	rename -uid "927AF832-4EAE-9AD6-A462-469F322F3B4E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV103";
+	rename -uid "60CF7BC1-44F2-FA97-D8AE-138981700008";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.012467578 -0.68168068 0.15214342
+		 -0.68169767 0.15215775 -0.56349516 0.012481914 -0.56347823 -0.3243469 -0.2603806
+		 -0.18467113 -0.26039752 -0.18465683 -0.14219511 -0.32433259 -0.14217818 0.14801389
+		 -0.088369906 0.14795172 -0.13287351 0.3471061 -0.13315156 0.34716827 -0.088647947
+		 0.042846382 0.42049226 0.042784274 0.37598872 0.24193856 0.37571061 0.24200068 0.42021424
+		 0.43609378 0.14101389 0.43610275 0.082952946 0.65598196 0.08298704 0.65597296 0.14104798
+		 -0.1054644 -0.30349094 -0.1054554 -0.36155188 0.11442384 -0.36151776 0.11441481 -0.30345681;
+createNode polyAutoProj -n "polyAutoProj58";
+	rename -uid "9BD7F941-4F85-57AB-08B5-FB9AE9C6B793";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" -0.00046848088693836532 -0.004401295248355518 -0.01300764688339617 0
+		 -0.001189307131563198 0.049289275309404135 -0.016634790865251103 0 -0.0614352660124627 -0.00066023306049483178 0.0024360384954194574 0
+		 17.325144121059935 0.1813403384512558 11.809748200993026 1;
+	setAttr ".s" -type "double3" 0.063093054030964879 0.063093054030964879 0.063093054030964879 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV104";
+	rename -uid "E1A8F910-46F9-DCEA-524E-D095211ECBBB";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.020478558 0.020758808
+		 0.0078918934 0.0058855414 0.020478547 -0.020758808 -0.0078918934 -0.0058855414 -0.020478547
+		 0.020758808 0.0078918934 0.0058855414 0.020478547 -0.020758808 -0.0078918934 -0.0058855414
+		 0.18719432 -0.1916434 0.0072799325 -0.14818563 -0.18719429 0.19164342 -0.0072799623
+		 0.14818564 0.18719429 -0.1916434 0.0072799325 -0.14818563 -0.18719429 0.19164342
+		 -0.0072799623 0.14818561 0.1665473 -0.16683295 0.00052693486 -0.12271561 -0.1665473
+		 0.16683295 -0.00052694674 0.12271562 0.1665473 -0.16683298 0.00052696466 -0.12271564
+		 -0.1665473 0.16683298 -0.00052696466 0.12271565;
+createNode polyLayoutUV -n "polyLayoutUV61";
+	rename -uid "BE553B13-4893-0118-9304-9395BD412D83";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV105";
+	rename -uid "13C655FC-46AA-4132-F24F-2DBEA7414D50";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.01246759 -0.68168074 0.15214339
+		 -0.68169773 0.15215772 -0.56349528 0.012481931 -0.56347829 -0.32434696 -0.26038069
+		 -0.18467116 -0.26039764 -0.18465686 -0.14219517 -0.32433262 -0.14217824 0.14801377
+		 -0.088369928 0.14795166 -0.13287354 0.34710607 -0.13315159 0.34716821 -0.088647984
+		 0.042846262 0.42049226 0.042784095 0.37598866 0.24193853 0.37571061 0.24200067 0.42021418
+		 0.51030391 0.029777035 0.51031291 -0.028283894 0.73019207 -0.0282498 0.73018312 0.029811136
+		 -0.1796748 -0.19225405 -0.1796658 -0.25031504 0.040213525 -0.25028095 0.040204525
+		 -0.19221996;
+createNode polyAutoProj -n "polyAutoProj59";
+	rename -uid "5EE961C9-4854-74A1-DE21-B9A90C669432";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" -8.2939259347371676e-05 -0.0043954196204198026 -0.013017801622679502 0
+		 -0.0011893071315632142 0.049289275309404135 -0.016634790865251096 0 -0.061469905638636406 -0.0012128333176010572 0.00080114754461569411 0
+		 17.903302020405505 -0.0028215836707831139 11.212466024412809 1;
+	setAttr ".s" -type "double3" 0.062742152029549914 0.062742152029549914 0.062742152029549914 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV106";
+	rename -uid "C4951744-43EA-96C1-2345-3F90131F871A";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.020478558 0.020758808
+		 0.0078918934 0.0058855414 0.020478547 -0.020758808 -0.0078918934 -0.0058855414 -0.020478547
+		 0.020758808 0.0078918934 0.0058855414 0.020478547 -0.020758808 -0.0078918934 -0.0058855414
+		 0.18719432 -0.1916434 0.0072799325 -0.14818563 -0.18719429 0.19164342 -0.0072799623
+		 0.14818564 0.18719429 -0.19164337 0.0072799325 -0.14818561 -0.18719429 0.19164336
+		 -0.0072799623 0.14818561 0.1665473 -0.16683297 0.00052693486 -0.12271561 -0.1665473
+		 0.16683295 -0.00052694674 0.12271562 0.1665473 -0.16683295 0.00052696466 -0.12271561
+		 -0.1665473 0.16683298 -0.00052696466 0.12271559;
+createNode polyLayoutUV -n "polyLayoutUV62";
+	rename -uid "F151C9DE-4D41-88CE-9096-93A4DCBF06FC";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV107";
+	rename -uid "CE7399E3-4C9C-5F54-005C-4689809F0EEB";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.01246759 -0.68168074 0.15214336
+		 -0.68169773 0.15215769 -0.56349528 0.012481931 -0.56347829 -0.3243469 -0.26038069
+		 -0.18467113 -0.26039764 -0.1846568 -0.14219522 -0.32433257 -0.14217824 -0.013502419
+		 0.75376022 -0.013564527 0.70925653 0.18558991 0.70897847 0.18565205 0.7534821 0.20436257
+		 -0.42163786 0.20430046 -0.46614143 0.40345472 -0.46641949 0.40351689 -0.42191592
+		 0.43609375 0.14101389 0.43610278 0.082952976 0.6559819 0.08298707 0.6559729 0.14104798
+		 -0.10546458 -0.30349088 -0.10545552 -0.36155182 0.11442366 -0.36151773 0.11441463
+		 -0.30345678;
+createNode polyAutoProj -n "polyAutoProj60";
+	rename -uid "4D07C471-42A1-A30C-7E6C-4B8A11210FA8";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" -0.00046848088693836532 -0.004401295248355518 -0.01300764688339617 0
+		 -0.001189307131563198 0.049289275309404135 -0.016634790865251103 0 -0.0614352660124627 -0.00066023306049483178 0.0024360384954194574 0
+		 17.304763666261263 -0.0063152055512833895 11.244906939767512 1;
+	setAttr ".s" -type "double3" 0.063093054030964879 0.063093054030964879 0.063093054030964879 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV108";
+	rename -uid "1CE38473-4BE3-F4FD-E6A3-B08733B5184A";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.020478558 0.020758808
+		 0.0078918934 0.0058855414 0.020478547 -0.020758808 -0.0078918934 -0.0058855414 -0.020478547
+		 0.020758808 0.0078918934 0.0058855414 0.020478547 -0.020758808 -0.0078918934 -0.0058855414
+		 0.18719432 -0.1916434 0.0072799325 -0.14818563 -0.18719429 0.19164342 -0.0072799623
+		 0.14818564 0.18719429 -0.1916434 0.0072799325 -0.14818563 -0.18719429 0.19164342
+		 -0.0072799623 0.14818561 0.1665473 -0.16683295 0.00052693486 -0.12271561 -0.1665473
+		 0.16683295 -0.00052694674 0.12271562 0.1665473 -0.16683298 0.00052696466 -0.12271564
+		 -0.1665473 0.16683298 -0.00052696466 0.12271565;
+createNode polyLayoutUV -n "polyLayoutUV63";
+	rename -uid "617E37D0-4E4D-A39F-CE34-FBBC165228FC";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV109";
+	rename -uid "84370FD6-4981-8D86-CE40-59BA81C8EC68";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" 0.01246759 -0.68168074 0.15214339
+		 -0.68169773 0.15215772 -0.56349528 0.012481931 -0.56347829 -0.32434696 -0.26038069
+		 -0.18467116 -0.26039764 -0.18465686 -0.14219517 -0.32433262 -0.14217824 0.14801377
+		 -0.088369928 0.14795166 -0.13287354 0.34710607 -0.13315159 0.34716821 -0.088647984
+		 0.042846262 0.42049226 0.042784095 0.37598866 0.24193853 0.37571061 0.24200067 0.42021418
+		 0.51030391 0.029777035 0.51031291 -0.028283894 0.73019207 -0.0282498 0.73018312 0.029811136
+		 -0.1796748 -0.19225405 -0.1796658 -0.25031504 0.040213525 -0.25028095 0.040204525
+		 -0.19221996;
+createNode polyAutoProj -n "polyAutoProj61";
+	rename -uid "342368D5-466D-CA48-0018-00998D757FDC";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:59]";
+	setAttr ".ix" -type "matrix" 6.1344318701921733e-05 -0.0095707463937269727 0.0031883297011746797 0
+		 -0.0017062309070598768 -0.095921864160266448 -0.28790597395893519 0 0.010087686343395812 4.0272143689685384e-05 -7.3200639175617223e-05 0
+		 17.906716068696241 0.080271001763841915 11.492406553790525 1;
+	setAttr ".s" -type "double3" 0.58218860808037576 0.58218860808037576 0.58218860808037576 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV110";
+	rename -uid "DE9CCF17-4457-B9BB-79EA-FAAB0E3FF1E1";
+	setAttr ".uopa" yes;
+	setAttr -s 90 ".uvtk[0:89]" -type "float2" -0.039351016 -0.67462283
+		 -0.076580361 -0.67459303 -0.082311302 0.6747123 -0.045081943 0.6746825 -0.1043236
+		 -0.67456323 -0.11005454 0.6747421 0.0028654784 -0.67465264 -0.0028654486 0.6746527
+		 0.045081958 -0.67468244 0.039351024 0.67462289 0.082311288 -0.67471224 0.076580361
+		 0.67459309 0.11005451 -0.67474204 0.10432357 0.67456329 0.10975504 -0.67474097 0.072520018
+		 -0.67442584 0.011924148 0.67379558 0.049159169 0.67348051 0.030297935 -0.67411071
+		 -0.030297935 0.67411077 0.13750392 -0.6750561 0.076908052 0.67316532 -0.011924207
+		 -0.67379564 -0.072520077 0.67442584 -0.049159169 -0.67348051 -0.10975504 0.67474091
+		 -0.076908052 -0.67316538 -0.13750392 0.6750561 0 2.9802322e-08 5.9604645e-08 0 0
+		 0 0 0 0 0 0 0 5.9604645e-08 0 0 0 0 0 0 0 -2.9802322e-08 0 0 -5.9604645e-08 0 0 0
+		 0 0 0 0 0 -2.9802322e-08 0 2.9802322e-08 0 -2.9802322e-08 0 0 0 0 0 0 0 2.9802322e-08
+		 -5.9604645e-08 0 0 0 5.9604645e-08 0 0 1.4901161e-08 0 2.9802322e-08 5.9604645e-08
+		 0 5.9604645e-08 0 -5.9604645e-08 0 -5.9604645e-08 0 0 0 0 -1.4901161e-08 0 -3.7252903e-09
+		 -5.9604645e-08 0 0 -4.6566129e-09 0 -1.4901161e-08 0 -1.641456e-08 0 0 0 -6.519258e-09
+		 0 -7.4505806e-09 0 -0.14032602 0.71066129 -0.10345784 0.71002066 0.019747257 -0.70873922
+		 -0.017120928 -0.70809853 -0.061602563 0.70937991 0.061602533 -0.70937997 -0.019747227
+		 0.70873928 0.10345787 -0.71002066 0.017120928 0.70809853 0.14032599 -0.71066135 0.14032608
+		 -0.71066165 0.10345787 -0.7100209 -0.019747317 0.70873946 0.017120898 0.70809883
+		 0.061602592 -0.70938021 -0.061602592 0.70938021 0.019747317 -0.70873952 -0.10345787
+		 0.71002096 -0.017120898 -0.70809883 -0.14032608 0.71066159;
+createNode polyLayoutUV -n "polyLayoutUV64";
+	rename -uid "8BC324A1-4B6E-950D-6F2A-6FB337BBA89D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:59]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV111";
+	rename -uid "32201273-4222-6EC4-D455-FBA7C2876264";
+	setAttr ".uopa" yes;
+	setAttr -s 90 ".uvtk[0:89]" -type "float2" -0.090579592 0.67266625 -0.094110876
+		 0.67266637 -0.094136864 -0.0063942075 -0.090605572 -0.0063943267 -0.097642168 0.67266649
+		 -0.097668149 -0.0063940883 -0.087048315 0.67266607 -0.087074295 -0.0063944459 -0.08351703
+		 0.67266595 -0.083543018 -0.0063946247 -0.079985753 0.67266583 -0.08001174 -0.0063947439
+		 -0.076454468 0.67266566 -0.076480456 -0.0063948631 -0.58503658 0.67266667 -0.58856785
+		 0.67266649 -0.58853489 -0.0063943863 -0.58500361 -0.0063942075 -0.59209913 0.67266631
+		 -0.59206623 -0.0063945651 -0.5815053 0.67266685 -0.58147234 -0.0063940287 -0.59563041
+		 0.67266619 -0.59559751 -0.0063947439 -0.59916168 0.67266595 -0.59912878 -0.0063948631
+		 -0.60269302 0.67266583 -0.60266006 -0.0063950419 -0.4728159 -0.50677502 -0.45848286
+		 -0.55088764 -0.32639116 -0.48358357 -0.43121961 -0.58841199 -0.4728159 -0.46039221
+		 -0.39369515 -0.61567521 -0.4584828 -0.41627955 -0.34958255 -0.63000822 -0.43121967
+		 -0.37875506 -0.3031998 -0.63000822 -0.39369521 -0.35149193 -0.25908715 -0.61567515
+		 -0.34958255 -0.33715892 -0.2215627 -0.58841205 -0.3031998 -0.33715892 -0.19429956
+		 -0.55088758 -0.25908709 -0.35149199 -0.17996651 -0.50677502 -0.2215627 -0.37875509
+		 -0.17996651 -0.46039221 -0.19429956 -0.41627955 -0.10946393 -0.94881231 -0.065351307
+		 -0.96314538 -0.042159878 -0.8167206 -0.018968463 -0.96314538 -0.14698833 -0.92154908
+		 0.025144197 -0.94881231 -0.17425147 -0.88402462 0.062668651 -0.92154914 -0.18858455
+		 -0.839912 0.089931756 -0.88402462 -0.18858452 -0.79352927 0.10426482 -0.83991206
+		 -0.1742515 -0.74941653 0.10426482 -0.79352921 -0.14698836 -0.71189213 0.089931764
+		 -0.74941659 -0.10946393 -0.68462902 0.062668622 -0.71189213 -0.065351278 -0.67029595
+		 0.025144152 -0.68462902 -0.018968493 -0.67029595 -0.28153452 -0.043284655 -0.27761957
+		 -0.043283999 -0.27774554 0.70955664 -0.2816605 0.70955598 -0.27370459 -0.043283343
+		 -0.27383059 0.70955729 -0.26978964 -0.043282688 -0.26991564 0.70955801 -0.26587468
+		 -0.043282032 -0.26600069 0.70955861 -0.6689471 0.37642193 -0.67286205 0.37642124
+		 -0.67273605 -0.37642008 -0.6688211 -0.37641948 -0.67677701 0.37642059 -0.676651 -0.3764208
+		 -0.68069196 0.37641996 -0.68056595 -0.37642145 -0.68460697 0.37641931 -0.68448091
+		 -0.37642205;
+createNode polyAutoProj -n "polyAutoProj62";
+	rename -uid "8D7100EC-4BF9-E3D7-87DD-91836B72C6BB";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:59]";
+	setAttr ".ix" -type "matrix" 6.134431870192397e-05 -0.0095707463937269727 0.0031883297011746775 0
+		 -0.0083223937550597222 -0.095925475225923082 -0.28778951692860255 0 0.010084051489581674 -2.9262519017764319e-05 -0.00028186025316423452 0
+		 17.31002360602761 0.087363416473494188 11.525177128008021 1;
+	setAttr ".s" -type "double3" 0.5819556940197117 0.5819556940197117 0.5819556940197117 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV112";
+	rename -uid "9A076B91-4DB3-D05E-41C2-1296F6AB0EC3";
+	setAttr ".uopa" yes;
+	setAttr -s 90 ".uvtk[0:89]" -type "float2" -0.039350986 -0.67462277
+		 -0.076580361 -0.67459297 -0.082311302 0.67471212 -0.045081928 0.67468232 -0.1043236
+		 -0.67456317 -0.11005452 0.67474192 0.0028654784 -0.67465258 -0.0028654486 0.67465252
+		 0.045081951 -0.67468238 0.039351016 0.67462271 0.082311273 -0.67471218 0.076580338
+		 0.67459291 0.11005451 -0.67474198 0.10432357 0.67456311 0.10975498 -0.67474079 0.072520077
+		 -0.67442572 0.011924207 0.67379552 0.04915911 0.67348033 0.030297935 -0.67411059
+		 -0.030297935 0.67411059 0.13750392 -0.67505592 0.076908052 0.67316526 -0.011924148
+		 -0.67379546 -0.072520018 0.67442566 -0.049159169 -0.67348033 -0.10975498 0.67474085
+		 -0.076908052 -0.67316526 -0.13750386 0.67505592 -5.9604645e-08 0 5.9604645e-08 -2.9802322e-08
+		 2.9802322e-08 0 0 0 0 2.9802322e-08 0 -5.9604645e-08 0 2.9802322e-08 0 0 2.9802322e-08
+		 0 0 0 0 2.9802322e-08 0 0 -2.9802322e-08 2.9802322e-08 0 0 0 0 2.9802322e-08 0 -2.9802322e-08
+		 0 0 0 -2.9802322e-08 0 -2.9802322e-08 0 -2.9802322e-08 -5.9604645e-08 -2.9802322e-08
+		 5.9604645e-08 -2.9802322e-08 0 1.4901161e-08 5.9604645e-08 0 0 -2.9802322e-08 5.9604645e-08
+		 -1.4901161e-08 5.9604645e-08 0 5.9604645e-08 0 -5.9604645e-08 0 0 -7.4505806e-09
+		 0 0 0 0 -5.9604645e-08 -1.4901161e-08 0 -7.4505806e-09 5.9604645e-08 2.9802322e-08
+		 -5.9604645e-08 0 0 2.2351742e-08 0 3.0267984e-09 0 2.2351742e-08 0 9.3132257e-09
+		 0 1.1175871e-08 -5.9604645e-08 -0.14032599 0.71066117 -0.10345781 0.71002054 0.019747257
+		 -0.7087391 -0.017120928 -0.70809841 -0.061602563 0.70937979 0.061602533 -0.70937979
+		 -0.019747227 0.70873916 0.10345784 -0.71002054 0.017120898 0.70809841 0.14032599
+		 -0.71066123 0.14032596 -0.71066129 0.10345787 -0.71002066 -0.019747198 0.70873928
+		 0.017120898 0.70809853 0.061602533 -0.70937991 -0.061602533 0.70937991 0.019747198
+		 -0.70873922 -0.10345787 0.71002066 -0.017120898 -0.70809853 -0.14032602 0.71066129;
+createNode polyLayoutUV -n "polyLayoutUV65";
+	rename -uid "8574C765-43E5-33E2-FFDC-0BAAE06A130E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:59]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV113";
+	rename -uid "91CCFDF7-4A8C-A8F6-2F88-6C80EF94E0C4";
+	setAttr ".uopa" yes;
+	setAttr -s 90 ".uvtk[0:89]" -type "float2" -0.090579584 0.67266613 -0.094110869
+		 0.67266625 -0.094136849 -0.0063937902 -0.090605564 -0.0063939095 -0.097642146 0.67266637
+		 -0.097668126 -0.006393671 -0.087048307 0.67266595 -0.087074295 -0.0063940883 -0.08351703
+		 0.67266583 -0.08354301 -0.0063942075 -0.079985745 0.67266572 -0.080011725 -0.0063943267
+		 -0.076454476 0.6726656 -0.076480448 -0.0063944459 -0.58503646 0.67266649 -0.58856773
+		 0.67266637 -0.58853477 -0.0063939095 -0.5850035 -0.0063937306 -0.59209901 0.67266619
+		 -0.59206605 -0.0063941479 -0.58150518 0.67266667 -0.58147222 -0.0063936114 -0.59563029
+		 0.67266601 -0.59559733 -0.0063942671 -0.59916157 0.67266577 -0.59912866 -0.0063944459
+		 -0.60269284 0.67266566 -0.60265994 -0.0063946247 -0.47281569 -0.5067749 -0.45848268
+		 -0.55088758 -0.32639101 -0.48358351 -0.43121946 -0.58841193 -0.47281569 -0.46039212
+		 -0.39369503 -0.61567509 -0.45848262 -0.41627946 -0.34958237 -0.6300081 -0.43121949
+		 -0.37875503 -0.30319959 -0.6300081 -0.39369503 -0.3514919 -0.25908697 -0.61567509
+		 -0.34958237 -0.33715886 -0.22156255 -0.58841193 -0.30319965 -0.33715889 -0.19429943
+		 -0.55088753 -0.259087 -0.35149193 -0.17996638 -0.5067749 -0.22156253 -0.37875503
+		 -0.17996638 -0.46039212 -0.19429943 -0.41627946 -0.1094639 -0.94881219 -0.065351248
+		 -0.96314514 -0.04215987 -0.81672049 -0.018968455 -0.96314514 -0.1469883 -0.9215489
+		 0.025144182 -0.94881213 -0.17425141 -0.8840245 0.062668629 -0.92154896 -0.18858446
+		 -0.83991188 0.089931726 -0.8840245 -0.18858449 -0.79352909 0.10426478 -0.83991188
+		 -0.17425144 -0.74941647 0.10426477 -0.79352909 -0.14698836 -0.71189201 0.089931712
+		 -0.74941647 -0.10946389 -0.68462896 0.062668562 -0.71189201 -0.065351263 -0.67029589
+		 0.02514413 -0.6846289 -0.018968515 -0.67029583 -0.30313224 -0.043284357 -0.29921728
+		 -0.043283701 -0.29934329 0.70955658 -0.30325824 0.70955586 -0.29530233 -0.043283045
+		 -0.29542834 0.70955718 -0.29138738 -0.04328239 -0.29151338 0.70955789 -0.28747243
+		 -0.043281734 -0.2875984 0.70955855 -0.64734906 0.3764216 -0.65126401 0.37642097 -0.65113807
+		 -0.37641954 -0.64722311 -0.37641883 -0.65517896 0.37642029 -0.65505302 -0.3764202
+		 -0.65909392 0.37641963 -0.65896797 -0.37642086 -0.66300893 0.37641898 -0.66288292
+		 -0.37642145;
+createNode polyAutoProj -n "polyAutoProj63";
+	rename -uid "B997703A-4B4F-B4DF-A539-84BF01831098";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:541]";
+	setAttr ".ix" -type "matrix" 0.16455634037728897 0.19890527943968497 -0.045386899628497859 0
+		 -0.024647050593029223 0.077265091039649236 0.24924826701289635 0 0.20252358811736268 -0.15221322387653527 0.067211611633803958 0
+		 15.03605377251829 -1.0539613638280221 10.61463139683582 1;
+	setAttr ".s" -type "double3" 0.57338348727398269 0.57338348727398269 0.57338348727398269 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV114";
+	rename -uid "46CE0548-444B-A653-366C-8FAB8831A4E5";
+	setAttr ".uopa" yes;
+	setAttr -s 730 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.0020909756 0.006370008 -0.0010323822
+		 0.0061986446 -0.00022043288 -0.0068055391 -0.0012790039 -0.0066340566 0.00524427
+		 0.0059522986 0.0060562491 -0.0070518255 -0.00040597469 0.0065020919 0.00040597469
+		 -0.0065020323 0.0012789965 0.0066341162 0.002090957 -0.0063700676 0.00022052415 0.0068055391
+		 0.0010324996 -0.0061986446 -0.0060562771 0.0070518255 -0.0052444208 -0.0059523582
+		 -0.00035876036 -0.0066050291 -0.0014207065 -0.0065677166 -0.001942426 0.0064145327
+		 -0.00088047981 0.0063773394 0.00026088953 -0.0064911246 -0.00026085973 0.0064911246
+		 0.0059213638 -0.0065672994 0.0053996146 0.0064149499 0.0019424558 -0.0064145327 0.0014207363
+		 0.0065677762 0.00088047981 -0.006377399 0.00035876036 0.0066050291 -0.0053995848
+		 -0.0064150095 -0.0059214383 0.006567359 -0.012208641 -0.0081269294 -0.00094532967
+		 -0.011821121 0.0018318892 -0.011618167 -0.0098516345 -0.0079647899 -0.012202919 -0.007236585
+		 -0.0013945699 -0.010197222 0.016376078 -0.0053302944 0.019155085 -0.0043894351 0.0061728358
+		 -0.0091542006 -0.0059407353 -0.0064568669 -0.016639709 0.00059947371 -0.014477074
+		 0.00092925131 -0.0091329217 -0.0056867898 0.0013213158 -0.0070070326 0.015375376
+		 -0.0042039156 -0.016473949 0.00028759241 0.023360372 -0.0010785162 0.011318862 -0.0038835704
+		 -0.001324594 -0.0033184886 -0.010803401 0.0013176054 -0.013588727 0.0091390386 -0.011321127
+		 0.0095697567 -0.0020890832 -0.0041357577 0.0072900057 -0.0046207309 0.016480029 -0.0008354187
+		 -0.013222873 -6.608665e-05 -0.013535261 0.0076753721 0.028626621 0.0052109361 -0.0064821839
+		 0.0017982572 -0.0075573921 0.0087475777 -0.0032936335 0.012434833 -0.00066685677
+		 0.012630399 -0.0062116981 -0.00058953464 -0.010385215 0.0054326057 -0.0036765933
+		 0.010395139 -0.0031502247 0.0064436272 0.0034234524 0.010605857 0.013701677 0.0058160052
+		 0.016357422 0.0049059307 0.0053582788 -0.0013661236 0.0090560317 -0.0042381436 -0.0034171939
+		 0.002918914 -0.0010207891 0.0068008453 0.012632966 0.0045725629 0.0081871152 0.0058173873
+		 0.020247161 0.0016353992 0.0077787638 0.0014684498 0.004847765 0.0034250915 0.013507307
+		 0.00086115301 0.025032878 -0.0045185825 0.0025219917 -0.012397528 0.013498485 -0.0087784678
+		 0.011179507 -0.0088199973 -0.00021618605 -0.012215734 0.0030019879 -0.010768384 0.01348716
+		 -0.0077394247 0.017160118 -0.00013692677 0.015001476 -7.340312e-05 0.0073491931 -0.0076301098
+		 -0.0044415593 -0.0098344684 -0.01529038 -0.0063077807 -0.018133283 -0.0050224066
+		 0.00043350458 -0.0076313317 0.010375857 -0.0059696138 0.016991377 -0.00025376678
+		 -0.014043689 -0.0054526329 0.013337433 0.0084640682 0.011037946 0.0086899921 0.011334062
+		 -9.0286136e-05 0.0028544068 -0.0049661994 -0.0093790293 -0.0046981275 -0.022221744
+		 -0.0013900995 -0.0053082108 -0.0047546476 0.0034561157 -0.0039896369 0.013736814
+		 -0.00037670135 -0.014763415 -0.002143383 0.013284862 0.0071491525 0.0027533174 0.011826254
+		 8.8214874e-05 0.011999469 0.0072034001 0.0075474903 0.0070218444 -0.00020682812 -0.027231276
+		 0.0051103532 0.0067178309 -0.00038914382 0.010169506 0.0051276088 0.0031054616 0.0097908825
+		 -0.01373899 0.004821429 -0.016341388 0.0042576455 -0.0041150451 0.0098887719 0.0026892424
+		 0.0047655925 -0.0076438785 -0.0031376183 -0.0048664808 -0.00022403896 0.0030644238
+		 0.0030388832 0.00030386448 0.0061389804 -0.012907952 0.0032994002 -0.020357609 0.0013049543
+		 -0.0090831518 0.0049597807 -0.0082057118 0.0025410652 -0.0058064163 0.0032464787
+		 -0.014165282 -0.00048289075 -0.025406361 -0.0046459804 3.3378601e-06 0.00026524067
+		 -0.0074012876 0.00094163418 -0.0051490664 -0.0025339127 0.0021058321 -0.0019604564
+		 -0.016999722 0.0065495372 -0.014746785 0.0023903847 -0.0030857325 -0.0045981407 0.0039658546
+		 -0.0034127235 0.0037059188 0.0023676157 0.0057973862 0.0015361905 -0.012757599 -0.00029611588
+		 -0.0016184449 -0.0054830909 0.00515306 -0.0041648149 0.0075654387 0.00069582462 0.0031782389
+		 0.0048756599 0.0054462552 0.0053675771 -0.011214435 -0.0017402768 -0.0011482239 -0.005337894
+		 0.0052499771 -0.0042874813 0.0085814595 -9.5486641e-05 0.0072839856 0.0050870776
+		 -0.0013699532 0.0052756667 0.0011839867 0.0068233609 -0.010303497 -0.0020153522 -0.00208354
+		 -0.0042700171 0.0038617253 -0.0038707852 0.0084396005 -0.00077879429 0.0082769394
+		 0.004217267 0.0031914115 0.0070168376 -0.008803606 0.00097292662 -0.0061864257 0.0030283928
+		 -0.010204911 -0.00093561411 -0.0045549273 -0.0031420588 0.00061440468 -0.0031350851
+		 0.0067648888 -0.001288116 0.0080314279 0.0029427409 0.0042896867 0.0061670542 -0.0042806864
+		 0.0036514401 0.0032240152 -0.0015274882 0.0062106252 0.0014944673 0.0041126013 0.0045281649
+		 -0.0032504797 0.0031766891 -0.0047275424 -0.0027223229 -0.002578795 -0.0014236569
+		 0.0023797154 0.00023764372 0.0022569895 0.0022674203 -0.0032561421 0.0017841458 -0.0034846663
+		 1.6450882e-05 -0.0012632012 0.00058805943 -0.0044528246 -0.00058704615 0.0048015118
+		 -0.0014606714 -0.001583755 -0.0018945336 -0.0036978126 -0.0037530065 0.0025426149
+		 -0.0044078827 -0.0045133829 0.00034987926 -0.0066283941 -0.00017184019 -0.0055546165
+		 -0.0047612786 0.00052285194 -0.0059153438 0.012948215 0.0040303469 0.010685861 0.00057035685
+		 -0.0031998754 0.0028347373 -0.0055123568 0.0036914945 -0.0084270239 -0.00061053038
+		 -0.0067172647 -0.0050125718 -0.00085061789 -0.006210804 0.0087786317 -0.0013504624
+		 0.0023925304 0.0031496882 -0.00023502111 0.005220592 -0.0074204803 0.0038493276 -0.0094788074
+		 -0.00093358755 -0.0067671537 -0.0046060681 -0.0011734366 -0.0054659843 0.0074421167
+		 -0.0020129085 0.011278927 -0.0010485649 0.008564949 0.0016994476 -0.0023698211 0.0059577823
+		 -0.0085137486 0.0034707785 -0.0093752742 -0.0011147261 -0.0053339005 -0.0036972165
+		 -1.5377998e-05 -0.0037629604 0.0068683028 -0.0015467405 0.0064620376 0.0030668974
+		 -0.0036502481 0.0056763887 -0.0083948374 0.0027121305 -0.0077375174 -0.0011401772
+		 -0.0019288063 -0.0025609732 0.002800107 -0.0022729039 0.0072103143 0.00015437603
+		 0.0051091313 0.0033334494 -0.0037098527 0.0046077967 -0.0066931844 0.0017434955 -0.0042228103
+		 -0.0010351539 0.0046690702 0.0026224852 -0.002170682 0.0029411316 -0.0030789375 0.00085860491
+		 0.0015696287 -0.00079572201 0.0036039352 -0.0020115972 0.0053360462 0.00079870224
+		 0.00095456839 0.0015674233 0.0025761724 0.00074356794 0.0017496347 -0.0027015805
+		 -0.00046792626 -0.0028684139 -0.00058415532 0.0027095675 0.0016333759 0.0028762817
+		 5.8025122e-05 -0.0029138923 -5.8203936e-05 0.00266397 0.00058421493 -0.0028320551
+		 0.00046795607 0.002745986 -0.0016333461 -0.0026288629 -0.0017495751 0.0029489994
+		 -0.0020181239 0.003117919 0.00019922853 0.0028307438 0.00085327029 -0.0027484894
+		 -0.0013640821 -0.0024613142 -0.00032714009 0.0026646256 0.00032690167 -0.0029144883
+		 -0.00085324049 0.002626121 -0.00019919872 -0.0029531121 0.0013641715 0.0027086735
+		 0.0020182133 -0.0028705597 0.0027810931 0.0070143938 -0.0096047521 0.0055655241;
+	setAttr ".uvtk[250:499]" -0.0082995296 0.0052387118 0.0035117269 0.0062137246
+		 0.0039442182 0.0069260895 -0.0086121559 0.0052757263 -0.014182031 -0.0010320544 -0.012884736
+		 -0.0014601648 -0.0054906011 0.004047513 0.0057142377 0.0042401552 0.0074259043 0.0060021877
+		 -0.0045641661 0.0044924021 -0.013101697 -0.00056487322 -0.010952413 -0.0075262189
+		 -0.0097205043 -0.0081307888 -0.010069966 -0.0018153191 -0.0020171404 0.0015653968
+		 0.0089750886 0.00055593252 0.013652861 0.0038433075 0.0033042431 0.0032441318 -0.0088413954
+		 -0.00010311604 -0.0098008513 -0.00626266 -0.00049930811 -0.0084852576 3.7252903e-05
+		 -0.0088989735 -0.0068991184 -0.0077470541 -0.0066223145 -0.0020655394 -0.00073343515
+		 0.00024777651 -0.0055095553 -0.0045723915 0.0011014342 -0.0072287917 0.0022675991
+		 -0.008064568 -0.0033220053 -0.0059264302 0.015318394 0.0027445555 0.011961758 0.00039640069
+		 0.0026988983 -0.0025280714 0.0052211285 -0.0053074956 0.0057097077 -0.0053243041
+		 0.015088558 -0.0017778873 0.012158632 -0.0024678111 -0.0027827621 -0.0070041418 0.0092948079
+		 -0.0057519674 0.007913053 -0.0053680539 -0.0035642982 -0.0061282516 -0.0038309693
+		 -0.0069974661 0.0084503889 -0.005522728 0.013813615 0.00063583255 0.012435019 0.0011053383
+		 0.0051048398 -0.004122138 -0.0057504177 -0.0040869713 -0.0071375966 -0.0061613917
+		 0.0046162605 -0.0048033595 0.012888372 0.00012719631 0.010788143 0.0069094896 0.0094903708
+		 0.0075396895 0.009618938 0.0015018284 0.0017111897 -0.0015860796 -0.0089272261 -0.00034087896
+		 -0.013136208 -0.0040926337 -0.0029815435 -0.0036221147 0.0088506341 -0.00037607551
+		 0.0097717643 0.0056234002 0.00079029799 0.0076395571 0.00022441149 0.0080646574 0.0066782236
+		 0.0071842074 0.0062536001 0.0017932653 0.0010236502 -0.00076812506 0.0056786537 0.0039143562
+		 -0.00072306395 0.0063804388 -0.0019735098 0.0072484314 0.0031883717 0.0053930879
+		 -0.014676094 -0.0031958818 -0.011343479 -0.00095739961 -0.0022773147 0.0018540919
+		 -0.0047008395 0.0044645369 -0.0053196549 0.0045308471 -0.014370918 0.0010978281 -0.011446357
+		 0.0016370416 -0.00058847666 0.0034644008 0.0014116764 0.0041800737 0.0030884147 0.0046719313
+		 0.0009701252 0.0044371486 0.0015480518 0.0026634336 0.003210187 0.0020723939 0.0046783686
+		 0.0044344664 0.002137661 0.0044484735 -0.0012393594 0.0011430383 0.00047403574 -0.00061392784
+		 0.004871428 0.0014240742 0.0057529807 0.003701508 0.0026541352 0.0038520098 -0.006144762
+		 0.0017550588 -0.0045367479 -0.00063490868 0.0021514297 -0.00172472 0.0060819387 0.00073391199
+		 0.005903244 0.0026476383 0.002270937 0.0028871298 -0.0032120347 -0.0021828413 0.0033764839
+		 -0.002415061 0.0063973665 1.8000603e-05 0.0047532916 0.0014021397 0.00074934959 0.001725316
+		 -0.0023730993 -0.003172338 0.0037484765 -0.0028234124 0.0053919554 -0.00070297718
+		 0.0019856095 1.8894672e-05 -0.0017868876 0.00014060736 -0.0022417903 -0.0037708282
+		 0.0028907657 -0.0030302405 0.0026641488 -0.0014022589 -0.0028269887 -0.0014810562
+		 -0.0060459375 -0.0015166402 -0.0079315305 -0.00026988983 -0.008782208 -0.0017200112
+		 -0.0030609369 -0.0040732026 0.00046402216 -0.0030335784 -0.0021924973 -0.0020393729
+		 -0.0048508644 -0.0038471222 -0.003955543 -0.0027743578 -0.013581634 -0.0032004714
+		 -0.013439775 -0.0029657483 -0.0082862973 -0.0032681823 0.0022348166 -0.004211843
+		 -0.002663672 -0.0043790936 -0.0042908192 -0.0048010349 0.00067096949 -0.0050505996
+		 -0.0038765073 -0.0020927787 -0.0054740906 -0.0015619397 -0.0052828193 -0.0045241117
+		 -8.8751316e-05 -0.0049340725 -0.00040531158 0.00018727779 -0.0020638108 0.0017396212
+		 -0.0064805746 -0.00099515915 -0.0052239299 -0.0037478209 0.00018835068 -0.0041537881
+		 0.0070269108 7.7903271e-05 0.0054163337 0.0021833181 -0.0031408072 0.0026370287 -0.0064652562
+		 -0.00040519238 -0.0037158132 -0.0026003718 0.0017006993 -0.0028431416 0.0044897199
+		 0.0034188628 -0.0032234192 0.0030677319 -0.0050207376 0.00019204617 -0.00035643578
+		 -0.0011181235 0.0046031475 -0.00092309713 0.0044475794 0.0040046573 -0.0019156933
+		 0.0031241775 -0.0017985106 0.00075209141 0.0054917932 0.0040029883 0.0011785626 0.0028437972
+		 0.0036022067 0.0012475252 0.0050530434 -0.00020307302 0.0078243017 0.0032472014 0.0062164664
+		 0.0029105544 -3.5762787e-06 4.2319298e-06 -2.3245811e-06 4.8875809e-06 5.9604645e-08
+		 5.9604645e-08 -8.3446503e-07 4.7683716e-06 -4.3511391e-06 3.3974648e-06 6.5565109e-07
+		 4.2915344e-06 -4.7683716e-06 2.2053719e-06 2.0861626e-06 3.2186508e-06 -4.529953e-06
+		 9.5367432e-07 3.2186508e-06 1.9669533e-06 -4.2319298e-06 -5.9604645e-07 4.1723251e-06
+		 5.364418e-07 -3.3378601e-06 -2.1457672e-06 4.7087669e-06 -7.7486038e-07 -2.0861626e-06
+		 -3.3378601e-06 4.7087669e-06 -2.2649765e-06 -6.5565109e-07 -4.1723251e-06 4.2915344e-06
+		 -3.516674e-06 9.5367432e-07 -4.6491623e-06 3.516674e-06 -4.3511391e-06 2.3245811e-06
+		 -4.7087669e-06 8.3446503e-07 4.3511391e-06 2.2649765e-06 3.2186508e-06 -5.9604645e-08
+		 5.9604645e-08 3.2782555e-06 2.0265579e-06 -8.3446503e-07 4.7683716e-06 4.1127205e-06
+		 6.5565109e-07 -2.2053719e-06 4.7683716e-06 4.5895576e-06 -6.5565109e-07 -3.3974648e-06
+		 4.1127205e-06 4.5895576e-06 -2.1457672e-06 -4.2319298e-06 3.2782555e-06 4.1723251e-06
+		 -3.3974648e-06 -4.6491623e-06 2.0861626e-06 3.516674e-06 -4.2319298e-06 -4.7087669e-06
+		 8.3446503e-07 2.2649765e-06 -4.6491623e-06 -4.1723251e-06 -7.1525574e-07 7.1525574e-07
+		 -4.6491623e-06 -3.2782555e-06 -2.1457672e-06 -7.1525574e-07 -4.1723251e-06 -2.1457672e-06
+		 -3.3378601e-06 0.00027605891 0.0014651418 0.00081652403 0.0010122061 0.0020378232
+		 0.0017992258 0.0011255443 0.002507031 -0.0009355545 -0.00043022633 0.0011804402 0.00041472912
+		 0.0026216507 0.00079035759 0.0020757914 0.001339227 0.0010336339 0.0018495023 -0.0003733933
+		 0.001739502 0.00016590953 0.0029684007 0.001326263 -0.00027102232 0.0027429163 -0.00037777424
+		 0.002727896 7.0810318e-05 0.00017333031 -0.0010659397 -0.0012607574 -0.00086989999
+		 0.00068241358 0.0023289621 -0.0010738373 0.0018119812 -0.00090497732 0.0031676888
+		 0.0012539923 -0.00097167492 0.0025434196 -0.0014490485 0.0024352968 -0.0013620853
+		 0.00099277496 -0.0025112033 0.00018104911 0.0027596951 -0.0017592609 0.001665771
+		 -0.0020724833 0.003046155 0.00097939372 -0.0016214848 0.0020822287 -0.002409339 0.0020045042
+		 -0.0018643141 0.00035440922 -0.0046070814 -0.0029316545 -0.0075531602 -0.0041477084
+		 -0.0056093633 -0.0012508631 0.0030518174 -0.0023564398 0.001301527 -0.0030808747
+		 0.0024616718 0.00052681565 -0.0021622181 0.0013746619 -0.0033223629 0.0015251935
+		 -0.0022166967 0.0035645068 0.00054129958 0.0014698505 0.0011794865 -0.0025187731
+		 0.0023991466 -0.0028091371 0.00076085329 -0.0037884712 0.0015488863 -7.0363283e-05
+		 -0.0025263429 0.00036656857 -0.0039066076 0.0010154247 -0.0032597184 2.5510788e-05
+		 0.00035881996 -0.0030285716 0.0013561845 -0.0030837059 0.00011122227 -0.0042495728
+		 0.00058859587 -0.0007558167 -0.0026724339 -0.00080108643 -0.0040284395 -0.00025263429
+		 -0.0039120913 -0.001252532 -0.0012190342 -0.0010567605 0.00021600723 0.0066843033
+		 -0.0029167235 0.0047414899 -0.0041335821;
+	setAttr ".uvtk[500:729]" -0.00016999245 -0.0010765195 -0.0035080314 0.0010038018
+		 -0.0031559765 -0.00058960915 -0.0044491589 -0.00048273802 -0.0014562905 -0.0026001334
+		 -0.0018717945 -0.0038288236 -0.0016846359 -0.0036202073 -0.0026964843 -0.0020399094
+		 -0.0039386749 0.0005016923 -0.0030100346 -0.001275301 -0.0043278039 -0.0016511083
+		 -0.0021056831 -0.0023254752 -0.0028316379 -0.0033676624 -0.0021857023 -0.0031896234
+		 -0.004791379 -0.0014017224 -0.0075670481 0.0020561814 -0.0056243837 0.0032731891
+		 -0.0042312145 -0.00093114376 -0.0026461482 -0.0018726587 -0.0037437379 -0.0026596785
+		 -0.0025372505 -0.0027102828 -0.0015811324 0.0037462711 -0.0022198558 0.0016505718
+		 -0.0035793185 -0.002199769 -0.0013999939 0.00020545721 3.4064054e-05 9.4175339e-06
+		 0.0020487905 0.0066925883 0.003264904 0.0047490597 -0.001075238 0.019533567 -0.0070405304
+		 0.01980678 -0.012800485 0.018223941 -0.017790228 0.014940068 -0.021521866 0.010277107
+		 -0.023630977 0.0046908855 -0.023912251 -0.001272276 -0.02233842 -0.0070293546 -0.019063801
+		 -0.012017906 -0.014408737 -0.01575017 -0.0088284612 -0.01786086 -0.0028687865 -0.018143505
+		 0.0028873831 -0.016569853 0.0078768134 -0.013293624 0.011611313 -0.0086345524 0.013724849
+		 -0.003047362 0.014010191 0.0029218197 0.012438402 0.0086889118 0.009163633 0.01368925
+		 0.004507944 0.017431848 -0.00025522709 0.017156981 -0.0055340827 0.017851897 -0.010769099
+		 0.016883679 -0.015450358 0.01434797 -0.019120991 0.010491654 -0.021422803 0.0056906193
+		 -0.022130191 0.00041356683 -0.021173567 -0.0048236549 -0.018645734 -0.0095088482
+		 -0.014794052 -0.013182938 -0.0099958032 -0.015485883 -0.0047206134 -0.016192794 0.00051444769
+		 -0.015233994 0.0051979199 -0.012703985 0.0088718906 -0.0088502467 0.011177547 -0.0040488392
+		 0.011889316 0.0012319237 0.010936886 0.0064769387 0.0084111542 0.011173509 0.0045553893
+		 0.01485873 0.00071437657 0.015682224 -0.00416857 0.016804509 -0.0091557801 0.016363882
+		 -0.013762921 0.014407404 -0.017542452 0.011125654 -0.020125926 0.0068377703 -0.02126053
+		 0.0019609928 -0.020833969 -0.0030281544 -0.018886775 -0.0076414645 -0.015609533 -0.011426896
+		 -0.011322856 -0.01401335 -0.0064470023 -0.015147656 -0.0014596656 -0.014719129 0.0031517744
+		 -0.012770504 0.006936986 -0.0094922483 0.0095268004 -0.0052039027 0.010668028 -0.00032305717
+		 0.010247044 0.0046753958 0.008300744 0.0093020573 0.0050152689 0.013098754 0.0016753972
+		 0.014062742 -0.0027658343 0.015613116 -0.0074630082 0.015715804 -0.011960447 0.014366291
+		 -0.015822768 0.011696935 -0.018675268 0.0079663843 -0.020238191 0.0035363436 -0.020357698
+		 -0.0011610091 -0.019020379 -0.0056660473 -0.016355842 -0.009537369 -0.012625486 -0.012395054
+		 -0.0081950426 -0.01395911 -0.0034984797 -0.014077216 0.0010054111 -0.012738913 0.0048772022
+		 -0.010074645 0.0077394005 -0.0063435882 0.0093123205 -0.0019079894 0.0094385818 0.0028015152
+		 0.0081000999 0.007323239 0.0054235756 0.011207212 0.0025739968 0.0010060433 0.0021052957
+		 0.0035554599 0.00088140368 0.0058357269 -0.00098410249 0.0076325387 -0.0033147931
+		 0.0087702125 -0.0058881938 0.0091340989 -0.008451879 0.0086842775 -0.010754049 0.0074619949
+		 -0.012565523 0.005586803 -0.013708502 0.0032428801 -0.014071211 0.00066107512 -0.013618529
+		 -0.0019055307 -0.012395479 -0.0042069256 -0.010520522 -0.0060185194 -0.0081753125
+		 -0.007163316 -0.0055871736 -0.0075267702 -0.0030092169 -0.0070691407 -0.00069824234
+		 -0.0058311522 0.0011113584 -0.003934361 0.0022366941 -0.001574045 0.00016151369 0.0003131628
+		 0.00023660064 0.00028944016 0.0002887249 0.00023713708 0.00031220913 0.0001617074
+		 0.000305444 7.0571899e-05 0.00026857853 -2.7537346e-05 0.00020572543 -0.00012296438
+		 0.00012239814 -0.00020623207 2.7254224e-05 -0.00026959181 -7.0571899e-05 -0.00030642748
+		 -0.00016148388 -0.00031322241 -0.00023658574 -0.00028920174 -0.0002886951 -0.00023722649
+		 -0.00031224638 -0.00016182661 -0.00030548126 -7.0631504e-05 -0.00026862323 2.7418137e-05
+		 -0.00020573288 0.00012293458 -0.00012238324 0.00020644069 -2.7239323e-05 0.00026956201
+		 7.0616603e-05 0.00030636787 -0.00075742602 -0.0026878715 -0.00059187412 -0.0013504624
+		 0.0009572506 0.00031709671 0.00087550282 -0.00069361925 -0.0012896359 -0.0011104345
+		 0.0004427731 0.00067061186 0.0014537871 0.00085908175 0.0015988648 0.00011736155
+		 0.00089645386 0.0013365746 0.0012511313 0.00061964989 0.0014960766 7.8320503e-05
+		 0.00020909309 -0.001670599 0.0012598634 -0.00055843592 0.00034442544 0.00085842609
+		 0.00029218197 0.0015842319 0.00077599287 0.0010169744 0.00062784553 -9.4175339e-05
+		 0.00080099702 -0.00038266182 0.0014951527 -0.00048744678 0.00022697449 0.00098091364
+		 -0.00035169721 0.0016105771 0.00018537045 0.0012248158 0.00035884976 0.00011968613
+		 -0.00017723441 -0.00090372562 0.00086370111 -0.00070726871 0.00099059939 -0.0006159544
+		 0.0013655424 -0.00094676018 -0.0003695488 0.00088900328 -0.0009919703 0.0013785958
+		 -0.00043442845 0.0012235641 2.9057264e-05 0.00023251772 0.00082349777 -0.0010278821
+		 0.00073358417 -0.00062847137 0.0011304915 -0.0013219714 0.0020964742 -0.00064891577
+		 0.0012574196 -0.00072240829 -0.00043553114 0.00012028217 -0.0013469458 0.00082784891
+		 -0.00099164248 0.0010102987 -0.00031915307 0.00023168325 0.00069221854 -0.0013149977
+		 0.00041982532 -0.0009548068 0.00078564882 -0.001658082 0.0013688207 -0.0018109679
+		 -1.9311905e-05 -0.00051170588 -0.0013028383 0.00033140182 -0.001388371 0.00061452389
+		 -0.00064247847 0.00011891127 0.00048235059 -0.0015472174 -0.0010261536 0.00078862906
+		 -0.00072807074 0.0013328791 -0.00020393729 -0.00098001957 0.000325948 -0.0018398166
+		 -0.0016152263 0.00015419722 -0.00090575218 -8.803606e-05 0.0002117753 -0.0017014146
+		 -0.0019970834 0.00074058771 -0.00047010183 -0.00082755089 -0.00013947487 -0.0018858314
+		 -0.0013596416 0.00038844347 -0.0017398 -0.00023245811 -0.0010904372 -0.00035601854
+		 -9.1671944e-05 -0.0017688274 -0.00073507428 -0.00066810846 -0.00058588386 -0.0018194914
+		 -0.0014383197 0.00036138296 -0.0017561316 -0.00062543154 -0.0011882186 -0.00064945221
+		 -0.00039964914 -0.0017485619 -0.00094664097 -0.0005016923 -0.00099244714 -0.0016517639
+		 -0.0014393926 -0.00010251999 -0.0016357601 -0.0010421276 -0.0011940598 -0.00094687939
+		 -0.0006865263 -0.0016447306 -0.0010584593 -0.00036746264 -0.0013391972 -0.0013936162
+		 -0.00015312433 0.0026609898 -0.00017470121 0.0018925667 -0.0011052489 -0.0012271404
+		 -0.00092869997 -0.0014663339 0.00047624111 0.001621604;
+createNode polyLayoutUV -n "polyLayoutUV66";
+	rename -uid "A36FBE87-4454-CB42-2A6C-35BE590C78AE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:541]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV115";
+	rename -uid "D119471D-4642-2D81-F8F0-0991F4A334FE";
+	setAttr ".uopa" yes;
+	setAttr -s 730 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0.59803092 0.12108099 0.59908181 0.12108105
+		 0.59908152 0.12779909 0.59803063 0.12779903 0.60013276 0.12108111 0.60013247 0.12779909
+		 0.59697998 0.12108094 0.59697968 0.12779897 0.59592903 0.12108094 0.59592873 0.12779891
+		 0.59487808 0.12108088 0.59487784 0.12779891 0.59382719 0.12108082 0.59382689 0.12779886
+		 0.012397557 0.027423143 0.011346638 0.02742511 0.01133436 0.02070713 0.012385279
+		 0.020705223 0.010295719 0.027427018 0.01028344 0.020709038 0.013448477 0.027421236
+		 0.013436198 0.020703316 0.0092447996 0.027428925 0.009232536 0.020711005 0.0081938803
+		 0.027430832 0.0081816018 0.020712912 0.0071429759 0.02743274 0.0071306974 0.020714819
+		 -0.1489011 0.029239371 -0.14783454 0.034543186 -0.15086234 0.035297453 -0.15196383
+		 0.02960667 -0.14584255 0.028830901 -0.14481401 0.033690304 -0.14613318 0.039777935
+		 -0.1491707 0.040912807 -0.153898 0.035978585 -0.15503615 0.02995263 -0.14924681 0.023877576
+		 -0.1523205 0.023839369 -0.14278835 0.028354466 -0.14178699 0.032739282 -0.14315933
+		 0.038457483 -0.1461814 0.023919418 -0.15222812 0.041867673 -0.1569379 0.036631793
+		 -0.15812287 0.03030026 -0.15540779 0.023808286 -0.14880025 0.018521532 -0.15185285
+		 0.018071793 -0.13970703 0.027759507 -0.1388039 0.031471565 -0.14029086 0.037006408
+		 -0.14311898 0.023959324 -0.14575684 0.019018084 -0.15526026 0.042691112 -0.15851453
+		 0.023787037 -0.15492016 0.017655134 -0.1475842 0.013249077 -0.15058875 0.012394458
+		 -0.14005452 0.023984417 -0.14271617 0.019574896 -0.14459771 0.014203675 -0.15800625
+		 0.017252892 -0.15361172 0.011619158 -0.14565384 0.008117795 -0.14864421 0.0068437522
+		 -0.13696051 0.023987204 -0.13663739 0.026890665 -0.13966995 0.020228907 -0.14162052
+		 0.015262738 -0.14275271 0.0095673651 -0.15664971 0.010877065 -0.15167964 0.00575137
+		 -0.1366362 0.021100655 -0.13870615 0.016579263 -0.13997608 0.011121385 -0.1547091
+		 0.0048028389 0.054438293 0.37997827 0.055652797 0.37470549 0.058705509 0.37515432
+		 0.057443023 0.38083202 0.051451504 0.37902457 0.052609205 0.37420979 0.056097806
+		 0.3693493 0.059171498 0.36938661 0.061772943 0.37557012 0.06046623 0.38160649 0.052509367
+		 0.38511008 0.055500031 0.3863833 0.048473895 0.37796631 0.049568385 0.37365389 0.053032398
+		 0.36930829 0.049607813 0.38366136 0.055750489 0.36398762 0.058813214 0.36361942 0.06225878
+		 0.36941683 0.064859152 0.37597147 0.063504457 0.3823477 0.058535814 0.38747483 0.045559227
+		 0.37665057 0.046521962 0.37300068 0.049969941 0.36926931 0.046830744 0.38210815 0.052692115
+		 0.36439693 0.054682493 0.35868406 0.057710052 0.35792893 0.061885417 0.36327258 0.065365553
+		 0.36943719 0.061565578 0.38842249 0.046905488 0.36924505 0.049638033 0.36487424 0.051662207
+		 0.35953781 0.052979648 0.35344982 0.056016922 0.35231405 0.060745537 0.35724697 0.064972043
+		 0.36292407 0.043487966 0.3721298 0.04381147 0.36924314 0.04655695 0.36547008 0.048635513
+		 0.36048973 0.050006121 0.35477114 0.059074044 0.35135832 0.063785195 0.35659289 0.043487459
+		 0.3663398 0.045652717 0.36175829 0.047138095 0.35622302 0.062105894 0.35053402 -0.47830331
+		 -0.3650766 -0.47898048 -0.3618896 -0.48049906 -0.3622601 -0.47984588 -0.36527723
+		 -0.47994962 -0.35885328 -0.48146397 -0.35932696 -0.48201013 -0.36264724 -0.48137906
+		 -0.36548507 -0.47805014 -0.36834264 -0.47960299 -0.36835283 -0.48298132 -0.35987258
+		 -0.48351198 -0.363074 -0.48290491 -0.36570948 -0.48114613 -0.36836797 -0.47824678
+		 -0.37159809 -0.47978958 -0.37142393 -0.48447615 -0.36050898 -0.48500487 -0.36355072
+		 -0.48442617 -0.36595726 -0.48268244 -0.36838663 -0.48132515 -0.37125057 -0.47883993
+		 -0.37476262 -0.48035926 -0.37443572 -0.48592645 -0.36123312 -0.48649314 -0.36407965
+		 -0.48594606 -0.36623514 -0.48421463 -0.36840713 -0.48285598 -0.37106657 -0.48187649
+		 -0.37409484 -0.47967929 -0.37779102 -0.4811947 -0.37737903 -0.48731449 -0.36200947
+		 -0.48794997 -0.36473733 -0.48746872 -0.36656165 -0.48574534 -0.36842668 -0.48438463
+		 -0.37086201 -0.48338977 -0.37371743 -0.48272276 -0.37690136 -0.48727703 -0.36843878
+		 -0.48591119 -0.37062347 -0.48489943 -0.37329075 -0.48424086 -0.37633368 -0.48898521
+		 -0.36699694 -0.4888235 -0.36843979 -0.48745123 -0.37032565 -0.48641226 -0.37281498
+		 -0.48572713 -0.37567329 -0.48898542 -0.36989099 -0.48790312 -0.37218094 -0.48716065
+		 -0.37494761 -0.74009717 -0.36279368 -0.74069035 -0.36595821 -0.73914754 -0.36613238
+		 -0.73857784 -0.36312062 -0.74088705 -0.36921364 -0.73933417 -0.36920345 -0.73761201
+		 -0.36630577 -0.73706061 -0.36346149 -0.73925781 -0.35976529 -0.73774236 -0.36017728
+		 -0.7406339 -0.37247968 -0.73909134 -0.37227905 -0.73779106 -0.36918837 -0.73608118
+		 -0.36648977 -0.73554736 -0.36383891 -0.73621434 -0.36065501 -0.73995674 -0.37566671
+		 -0.73843819 -0.37529621 -0.73755813 -0.37207124 -0.73625475 -0.36916971 -0.7345525
+		 -0.36669433 -0.7340377 -0.36426562 -0.73469627 -0.36122268 -0.73898768 -0.37870303
+		 -0.73747331 -0.37822935 -0.73692709 -0.3749091 -0.73603231 -0.37184685 -0.73472255
+		 -0.36914921 -0.73302597 -0.36693293 -0.73252487 -0.36474138 -0.73320997 -0.3618831
+		 -0.73595595 -0.37768379 -0.73542523 -0.37448236 -0.73451102 -0.37159911 -0.73319185
+		 -0.36912972 -0.73148596 -0.36723071 -0.73103404 -0.36537546 -0.73177648 -0.36260879
+		 -0.73446113 -0.37704739 -0.73393238 -0.37400565 -0.73299116 -0.37132123 -0.73166013
+		 -0.36911762 -0.73301083 -0.37632328 -0.73244411 -0.37347671 -0.73146844 -0.37099475
+		 -0.73011369 -0.3691166 -0.72995174 -0.36766541 -0.73162276 -0.37554693 -0.73098725
+		 -0.3728191 -0.72995198 -0.37055945 0.531537 0.059758425 0.53164238 0.059758425 0.53164232
+		 0.060432017 0.53153694 0.060431957 0.53174776 0.059758425 0.5317477 0.060432017 0.53185308
+		 0.059758425 0.53185308 0.060432017 0.53195846 0.059758425 0.53195846 0.060432017
+		 -0.42724913 0.0044901967 -0.42735448 0.0044901371 -0.42735443 0.0038166046 -0.42724904
+		 0.0038166046 -0.42745987 0.0044901371 -0.42745978 0.0038166046 -0.42756522 0.0044901371
+		 -0.42756516 0.003816545 -0.4276706 0.0044901371 -0.42767054 0.003816545 -0.38756466
+		 0.29959229 -0.38845125 0.30345279;
+	setAttr ".uvtk[250:499]" -0.39066234 0.30314168 -0.38982067 0.29897904 -0.3853482
+		 0.30034554 -0.3862505 0.30382639 -0.38876885 0.3073591 -0.39097893 0.30733669 -0.39288586
+		 0.30288208 -0.39209077 0.2984986 -0.38319218 0.30122396 -0.38405621 0.30426162 -0.38656357
+		 0.30738449 -0.38851824 0.31127077 -0.39073235 0.31153142 -0.39320076 0.30731973 -0.39512441
+		 0.30264664 -0.39434585 0.29811934 -0.38111198 0.30217442 -0.38185823 0.30474827 -0.38435584
+		 0.30740944 -0.38630861 0.31095076 -0.38774231 0.31516057 -0.39000785 0.3157028 -0.39295292
+		 0.31174994 -0.39544022 0.30731058 -0.38214284 0.3074261 -0.38409972 0.31056422 -0.38549948
+		 0.31447518 -0.39227208 0.31611788 -0.39518192 0.31195509 -0.37967193 0.30536184 -0.3799094
+		 0.30742773 -0.38188052 0.31011802 -0.38330334 0.3136524 -0.39451078 0.31644607 -0.37967145
+		 0.30950451 -0.38117826 0.31273466 0.14133513 -0.34204313 0.14217335 -0.34569007 0.14426214
+		 -0.3453958 0.14346635 -0.34146342 0.13924134 -0.34275508 0.14009434 -0.34604335 0.14247406
+		 -0.34938037 0.14456195 -0.34935883 0.14636272 -0.34515014 0.14561087 -0.34100914
+		 0.13720471 -0.34358531 0.13802147 -0.34645492 0.14039069 -0.34940469 0.14223796 -0.3530758
+		 0.14432967 -0.3533217 0.14666098 -0.34934244 0.14847744 -0.3449274 0.14774126 -0.34065047
+		 0.1352396 -0.34448355 0.13594508 -0.34691501 0.13830507 -0.34942862 0.14015043 -0.3527739
+		 0.14150554 -0.35675073 0.14364594 -0.35726258 0.14642757 -0.35352772 0.14877659 -0.34933347
+		 0.13621438 -0.34944475 0.13806361 -0.35240906 0.13938659 -0.35610357 0.14578509 -0.35765433
+		 0.14853334 -0.3537212 0.13387972 -0.34749502 0.13410437 -0.34944665 0.13596696 -0.35198793
+		 0.1373117 -0.35532662 0.14790004 -0.35796404 0.13387996 -0.35140866 0.13530397 -0.35446
+		 -0.59929812 -0.005527854 -0.59898353 -0.0035517812 -0.59996343 -0.0034539104 -0.60028219
+		 -0.0053747296 -0.59885579 -0.001502037 -0.599841 -0.0015006065 -0.60093927 -0.0033510923
+		 -0.60127795 -0.0051838756 -0.59898973 0.00055801868 -0.59997523 0.00045740604 -0.60081774
+		 -0.0015032887 -0.60191154 -0.0032301545 -0.60227495 -0.0049363971 -0.59933257 0.0025538802
+		 -0.60032618 0.0023886561 -0.600954 0.00034600496 -0.60178852 -0.0015088916 -0.60288072
+		 -0.0030828118 -0.60326338 -0.0046232939 -0.60132796 0.002178669 -0.60192686 0.00021117926
+		 -0.60275614 -0.0015162826 -0.60384661 -0.00290519 -0.60423446 -0.0042420626 -0.6023249
+		 0.0019087791 -0.60289419 4.7147274e-05 -0.60372388 -0.0015239716 -0.60480791 -0.0026991367
+		 -0.6051594 -0.00381881 -0.60330606 0.0015737414 -0.60385615 -0.00014692545 -0.6046955
+		 -0.0015301704 -0.60577291 -0.0024693608 -0.6060645 -0.0033417344 -0.60496092 -0.0054320693
+		 -0.60574955 -0.0048216581 -0.60426307 0.001175344 -0.6048125 -0.00036555529 -0.60567755
+		 -0.0015318394 -0.6051743 0.00073802471 -0.60577065 -0.00059825182 -0.60501337 0.0023521185
+		 -0.60578752 0.0017259121 -0.60606438 0.00026345253 0.36336231 -0.62732947 0.36301589
+		 -0.6297757 0.36423242 -0.62988311 0.36458355 -0.62750113 0.36288059 -0.63229394 0.36410254
+		 -0.63229048 0.36544526 -0.62999934 0.36581683 -0.62772065 0.36303538 -0.63482213
+		 0.3642568 -0.63470209 0.36531657 -0.63228393 0.36665589 -0.63013816 0.36704838 -0.62800658
+		 0.36342824 -0.63728774 0.36465758 -0.63709271 0.36547083 -0.63456929 0.36652571 -0.63227522
+		 0.36786675 -0.63030624 0.36826438 -0.62836194 0.36589253 -0.63684356 0.36667961 -0.63441092
+		 0.36773348 -0.63226593 0.36908382 -0.63050115 0.36945081 -0.62876922 0.36711776 -0.63652635
+		 0.36788577 -0.63422352 0.36894125 -0.63225967 0.36831969 -0.63614315 0.36909455 -0.63400972
+		 0.37015843 -0.63225901 0.37029773 -0.6307894 0.36948681 -0.63571769 0.37029701 -0.63372028
+		 0.14176106 -0.075158179 0.14082956 -0.075460851 0.14225072 -0.078250051 0.14003724
+		 -0.076036513 0.14274043 -0.075158238 0.13946158 -0.076828837 0.14367187 -0.075460851
+		 0.1391589 -0.077760279 0.14446419 -0.076036572 0.1391589 -0.078739703 0.14503986
+		 -0.076828897 0.13946152 -0.079671144 0.14534253 -0.077760339 0.14003718 -0.080463529
+		 0.14534253 -0.078739762 0.1408295 -0.08103919 0.14503986 -0.079671204 0.141761 -0.081341863
+		 0.14446419 -0.080463529 0.14274037 -0.081341863 0.14367181 -0.08103919 0.0049566627
+		 -0.1674054 0.0046539903 -0.16833687 0.007745862 -0.16882658 0.0046539903 -0.16931629
+		 0.0055323243 -0.16661304 0.0049566627 -0.17024773 0.0063247085 -0.16603738 0.0055323243
+		 -0.17104012 0.0072562099 -0.16573474 0.0063246489 -0.17161578 0.0082355738 -0.16573474
+		 0.0072561502 -0.17191845 0.0091670752 -0.16603741 0.0082355142 -0.17191845 0.0099593997
+		 -0.16661307 0.0091670156 -0.17161584 0.010535061 -0.16740546 0.0099593997 -0.17104012
+		 0.010837734 -0.16833693 0.010535061 -0.17024779 0.010837734 -0.16931635 -0.19886403
+		 0.03259635 -0.19902621 0.032678604 -0.19936797 0.03220731 -0.19904476 0.032041311
+		 -0.19868602 0.033150196 -0.19915523 0.032806933 -0.19962527 0.032464087 -0.19971451
+		 0.031737506 -0.19923432 0.031483799 -0.19868428 0.032568395 -0.19868374 0.031984597
+		 -0.19923855 0.032968819 -0.19979292 0.032787263 -0.20009628 0.032118738 -0.20007147
+		 0.031267881 -0.19945145 0.030930847 -0.19868441 0.031396538 -0.19850464 0.032597661
+		 -0.19832313 0.032043308 -0.19926777 0.033148408 -0.1998516 0.033147871 -0.20035119
+		 0.032598913 -0.20056616 0.031765074 -0.19813478 0.031484991 -0.1983428 0.032680988
+		 -0.19799989 0.032210946 -0.19923986 0.033328176 -0.19979489 0.033508956 -0.20043968
+		 0.033148587 -0.20090105 0.032382429 -0.20103073 0.031399757 -0.20043983 0.030805469
+		 -0.19765458 0.03173992 -0.19821441 0.032809973 -0.19774315 0.032468259 -0.19915761
+		 0.03349036 -0.1996289 0.033832133 -0.2003524 0.033698499 -0.1979183 0.030935138 -0.19730094
+		 0.031270057 -0.19727334 0.032121658 -0.19813216 0.032972157 -0.19757715 0.032791436
+		 -0.19902925 0.033619404 -0.19937214 0.034089446 -0.20009869 0.034178674 -0.19680372
+		 0.031764746 -0.19701964 0.032601893 -0.19810426 0.033151925 -0.19752043 0.033152461
+		 -0.19886738 0.033702731 -0.19904892 0.034257054 -0.19971748 0.034560442 -0.20056832
+		 0.034535646 -0.20090535 0.033915639 -0.19693559 0.030805469 -0.19634128 0.031396389;
+	setAttr ".uvtk[500:729]" -0.19646668 0.032384753 -0.19693238 0.033151805 -0.19813347
+		 0.033331573 -0.19757912 0.033513069 -0.19868776 0.033731937 -0.1986883 0.034315765
+		 -0.19923726 0.034815371 -0.2000711 0.035030305 -0.19702086 0.03370142 -0.1982168
+		 0.0334934 -0.19774675 0.033836305 -0.19850801 0.033704042 -0.19832727 0.034259021
+		 -0.19868763 0.034903824 -0.19945374 0.035365224 -0.20043644 0.035494864 -0.20103075
+		 0.034904003 -0.19727576 0.034181654 -0.19834581 0.033621788 -0.19800407 0.034093082
+		 -0.19813773 0.034816563 -0.19647098 0.033917904 -0.19680589 0.034535289 -0.19765753
+		 0.034562826 -0.19730055 0.035032511 -0.19792059 0.035369515 -0.19634131 0.034900606
+		 -0.19693223 0.035494924 0.033314794 0.015774027 0.033302546 0.018761769 0.032367438
+		 0.021599293 0.030601114 0.02400893 0.028176367 0.025754809 0.025330529 0.026665866
+		 0.02234228 0.026652873 0.019504204 0.02571696 0.01709418 0.023949772 0.015348166
+		 0.021524251 0.014437139 0.01867789 0.014450274 0.015689373 0.015386268 0.012851253
+		 0.017153397 0.010441422 0.019578621 0.0086957812 0.02242443 0.0077852011 0.025412127
+		 0.0077987611 0.028249204 0.0087350756 0.030657977 0.010502502 0.032402903 0.012928173
+		 0.036195427 0.01530984 0.036185652 0.019210473 0.034970701 0.022917271 0.032669455
+		 0.026067108 0.02950722 0.028351516 0.025793642 0.029546708 0.021892428 0.029535741
+		 0.018185541 0.028319657 0.015035853 0.026017576 0.012751654 0.022854894 0.011556529
+		 0.019141167 0.011567459 0.015239879 0.012783378 0.011532918 0.01508531 0.0083831698
+		 0.018247887 0.0060990602 0.021961495 0.0049042553 0.025862411 0.0049157813 0.029568583
+		 0.0061324835 0.032717109 0.0084350109 0.035000026 0.011597484 0.039509952 0.014776617
+		 0.039502561 0.0197272 0.037965626 0.024433613 0.03504914 0.028434813 0.031038612
+		 0.031338811 0.026326776 0.032861084 0.021375105 0.03285259 0.016668484 0.031314254
+		 0.012667648 0.028396785 0.0097641572 0.02438581 0.008242175 0.019673973 0.0082506761
+		 0.014722407 0.0097888634 0.010015771 0.012706243 0.0060148463 0.016717255 0.0031113923
+		 0.021429211 0.00158979 0.026380554 0.0015990585 0.031086326 0.0031381622 0.035085768
+		 0.0060559809 0.037987947 0.010066316 0.042787313 0.014248937 0.042782515 0.020237699
+		 0.040927351 0.02593255 0.037402689 0.030775666 0.032553464 0.034292459 0.026854545
+		 0.036138326 0.020864129 0.036132514 0.015168831 0.034275681 0.010326184 0.030749768
+		 0.0068101473 0.025900036 0.0049648285 0.020201191 0.0049708337 0.014211014 0.0068276301
+		 0.008515805 0.010353558 0.0036731288 0.015203506 0.00015720725 0.020902604 -0.0016876198
+		 0.026892602 -0.0016806684 0.032586783 0.00017711893 0.037427694 0.0037032738 0.040942162
+		 0.0085519999 0.046554446 0.013628274 0.046557099 0.020810992 0.044340134 0.027643979
+		 0.040119499 0.033457994 0.034308195 0.037683219 0.027475312 0.039905429 0.020290136
+		 0.039907038 0.013456337 0.037687957 0.0076429285 0.033465773 0.0034189261 0.027653843
+		 0.0011976259 0.020821124 0.0011964538 0.013636395 0.0034156013 0.0068028644 0.0076379701
+		 0.00098954886 0.013450317 -0.0032342933 0.020283476 -0.0054549379 0.027468115 -0.0054549142
+		 0.034300476 -0.0032345895 0.040111572 0.00098785013 0.044333488 0.0067982525 0.57880634
+		 -0.19448879 0.57847649 -0.19550365 0.57847631 -0.19657078 0.57880604 -0.19758573
+		 0.5794332 -0.19844913 0.58029646 -0.19907647 0.58131135 -0.19940636 0.58237845 -0.19940647
+		 0.58339339 -0.1990768 0.58425677 -0.19844967 0.58488417 -0.19758639 0.58521402 -0.19657153
+		 0.58521408 -0.1955044 0.58488446 -0.19448945 0.5842573 -0.19362605 0.58339405 -0.19299871
+		 0.58237916 -0.19266883 0.58131206 -0.19266871 0.58029711 -0.19299835 0.57943368 -0.19362551
+		 0.45707187 -0.27700102 0.4573245 -0.27723491 0.45746315 -0.27703875 0.45725402 -0.27684283
+		 0.45763066 -0.2773959 0.4577187 -0.2771703 0.45759976 -0.27684414 0.45744133 -0.27669227
+		 0.45779473 -0.27694261 0.4577364 -0.27665049 0.45763078 -0.27654773 0.45711181 -0.27659285
+		 0.45733416 -0.27649802 0.45801011 -0.27721679 0.45801187 -0.27697694 0.45786771 -0.27671641
+		 0.45787397 -0.27645814 0.45782122 -0.27640635 0.45756128 -0.27641708 0.45830223 -0.27717191
+		 0.45822921 -0.27694315 0.45801282 -0.27673918 0.45794001 -0.27649134 0.45801249 -0.2762664
+		 0.45778701 -0.27634078 0.45729661 -0.27627313 0.45753646 -0.27627039 0.45855933 -0.27704197
+		 0.45842507 -0.27684522 0.45815802 -0.27671647 0.45801306 -0.27650273 0.45777482 -0.27626783
+		 0.45733109 -0.27604842 0.45755896 -0.27612287 0.4583874 -0.2773971 0.45869488 -0.27724016
+		 0.45877045 -0.27684689 0.45858359 -0.27669388 0.45828947 -0.27665055 0.45808598 -0.27649122
+		 0.45778596 -0.27619463 0.45743263 -0.27585113 0.45762607 -0.27599031 0.45895177 -0.27700806
+		 0.45891428 -0.27659476 0.45869046 -0.27649921 0.45839506 -0.27654785 0.45815197 -0.27645791
+		 0.45781943 -0.27612847 0.4572376 -0.27571064 0.45710447 -0.2759642 0.45758724 -0.27569187
+		 0.45773077 -0.27588433 0.45846397 -0.27641714 0.45820445 -0.27640599 0.45787185 -0.27607572
+		 0.45743528 -0.27550465 0.45778874 -0.27558815 0.45786366 -0.27581596 0.45872796 -0.27627343
+		 0.45848811 -0.27626985 0.4582383 -0.27634037 0.45793808 -0.27604181 0.45801175 -0.27555251
+		 0.45801142 -0.2757923 0.45869327 -0.27604818 0.45846504 -0.27612215 0.45824996 -0.27626729
+		 0.45801169 -0.27602994 0.45823479 -0.2755881 0.4581593 -0.27581567 0.45859122 -0.27585077
+		 0.45839736 -0.27598935 0.45823827 -0.27619398 0.45808533 -0.27604151 0.45843643 -0.27569181
+		 0.45829254 -0.27588367 0.45891905 -0.27596372 0.45878655 -0.2757107 0.45820445 -0.27612776
+		 0.45815179 -0.27607524 0.45858854 -0.27550381;
+createNode polyAutoProj -n "polyAutoProj64";
+	rename -uid "9D9274AA-4D0D-ECA3-FD1E-CA9E53E88798";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:541]";
+	setAttr ".ix" -type "matrix" 0.14903018662243464 0.21301979079020958 -0.033386257834778617 0
+		 0.10846771956676285 -0.03898977612788309 0.23540735157321729 0 0.18635135441552628 -0.14766325234947786 -0.11032137879081295 0
+		 15.153834161682759 -1.0886217973933072 11.245546189340724 1;
+	setAttr ".s" -type "double3" 0.57093271628388464 0.57093271628388464 0.57093271628388464 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode groupId -n "groupId166";
+	rename -uid "A778E2AD-4E40-5595-29D8-669C8B4E0B20";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts22";
+	rename -uid "B49D163D-4BD4-7661-7040-11A44A108E4F";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:541]";
+createNode polyTweakUV -n "polyTweakUV116";
+	rename -uid "1CF0AAA6-4E3F-572D-E75E-9CA8B944E809";
+	setAttr ".uopa" yes;
+	setAttr -s 730 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.0020909086 0.006370008 -0.0010323822
+		 0.0061986446 -0.00022043288 -0.0068055987 -0.001278922 -0.0066341162 0.00524427 0.0059522986
+		 0.006056264 -0.0070518255 -0.00040596724 0.0065020323 0.00040598959 -0.0065020323
+		 0.0012789331 0.0066341758 0.0020909049 -0.0063700676 0.00022053346 0.0068055391 0.0010324009
+		 -0.006198585 -0.0060562748 0.0070518255 -0.0052444078 -0.0059523582 -0.00035879016
+		 -0.0066050291 -0.0014206767 -0.0065677166 -0.0019423664 0.0064145327 -0.00088045001
+		 0.006377399 0.00026087463 -0.0064911246 -0.00026084483 0.0064911246 0.005921334 -0.0065672994
+		 0.0053996146 0.0064150095 0.0019423813 -0.0064146519 0.0014206916 0.0065677762 0.00088046491
+		 -0.0063773394 0.00035879016 0.0066049099 -0.0053996146 -0.0064150095 -0.0059214234
+		 0.006567359 -0.012208641 -0.0081269145 -0.00094527006 -0.011821121 0.0018318892 -0.011618167
+		 -0.0098516345 -0.0079647452 -0.012202919 -0.007236585 -0.0013944507 -0.010197252
+		 0.016376138 -0.0053303242 0.019155025 -0.0043894053 0.0061728358 -0.0091542006 -0.0059407353
+		 -0.0064568222 -0.016639709 0.00059950352 -0.014476955 0.00092925131 -0.0091328621
+		 -0.0056867748 0.0013213158 -0.0070070922 0.015375495 -0.0042039454 -0.016474128 0.00028760731
+		 0.023360431 -0.0010785162 0.011318922 -0.0038836002 -0.0013245344 -0.0033184439 -0.010803521
+		 0.0013176352 -0.013588786 0.0091390386 -0.011321187 0.0095697492 -0.0020891428 -0.0041357428
+		 0.0072900057 -0.0046207607 0.016480029 -0.0008354485 -0.013222933 -6.608665e-05 -0.013535202
+		 0.0076753795 0.028626621 0.0052109659 -0.0064823031 0.0017982721 -0.0075573921 0.0087475777
+		 -0.0032936931 0.012434825 -0.00066679716 0.012630399 -0.0062116385 -0.00058954954
+		 -0.010385215 0.0054326206 -0.0036766529 0.010395125 -0.0031501651 0.0064436346 0.0034233928
+		 0.010605861 0.013701737 0.005816007 0.016357303 0.0049059289 0.0053582191 -0.0013661236
+		 0.0090559721 -0.0042381734 -0.0034170747 0.002918914 -0.0010207891 0.0068008453 0.012632906
+		 0.0045725517 0.0081870556 0.0058173873 0.020247221 0.0016354036 0.0077787042 0.0014684349
+		 0.004847765 0.0034250766 0.013507247 0.00086113438 0.025032878 -0.0045185732 0.0025219917
+		 -0.012397528 0.013498485 -0.0087784678 0.011179507 -0.0088199675 -0.00021618605 -0.012215734
+		 0.0030019283 -0.010768414 0.01348722 -0.0077394247 0.017160058 -0.00013691187 0.015001357
+		 -7.340312e-05 0.0073491335 -0.00763008 -0.0044416189 -0.0098344684 -0.015290439 -0.0063077807
+		 -0.018133163 -0.0050224364 0.00043344498 -0.0076313615 0.010375828 -0.0059695989
+		 0.016991496 -0.00025375187 -0.014043719 -0.0054526627 0.013337433 0.0084640756 0.011038005
+		 0.0086899921 0.011334181 -9.0271235e-05 0.0028543472 -0.0049661994 -0.0093790889
+		 -0.0046981573 -0.022221744 -0.0013901293 -0.0053082108 -0.0047546774 0.0034561157
+		 -0.0039896369 0.013736814 -0.00037670135 -0.014763415 -0.002143383 0.013284802 0.0071491674
+		 0.002753377 0.011826254 8.815527e-05 0.011999466 0.0072032809 0.0075474828 0.0070219636
+		 -0.00020681322 -0.027231276 0.005110383 0.0067177415 -0.00038915873 0.010169476 0.0051276088
+		 0.0031054616 0.0097908676 -0.013739049 0.0048214346 -0.016341269 0.0042576445 -0.0041149855
+		 0.0098887719 0.002689302 0.0047656 -0.0076438785 -0.0031376034 -0.0048664212 -0.00022402406
+		 0.0030643642 0.0030388981 0.00030383468 0.0061389878 -0.012907952 0.0032993965 -0.020357549
+		 0.001304958 -0.0090831518 0.0049597956 -0.008205682 0.0025410801 -0.0058064759 0.0032464638
+		 -0.014165223 -0.00048289821 -0.025406361 -0.0046459809 3.2782555e-06 0.00026518106
+		 -0.0074011683 0.00094157457 -0.0051490068 -0.0025338531 0.0021058321 -0.001960516
+		 -0.016999722 0.0065494776 -0.014746785 0.0023903847 -0.0030856133 -0.0045982003 0.003965795
+		 -0.0034127235 0.003706038 0.0023675561 0.0057975054 0.0015360713 -0.012757599 -0.00029611588
+		 -0.0016184449 -0.0054830909 0.00515306 -0.0041648746 0.0075654387 0.00069582462 0.0031781793
+		 0.0048757195 0.0054462552 0.0053674579 -0.011214435 -0.0017402768 -0.0011481047 -0.005337894
+		 0.0052499175 -0.0042874217 0.0085815191 -9.5546246e-05 0.0072838664 0.0050870776
+		 -0.0013700128 0.0052756071 0.0011839271 0.0068233609 -0.010303557 -0.0020153522 -0.00208354
+		 -0.0042700171 0.0038617849 -0.003870666 0.0084397197 -0.00077873468 0.0082769394
+		 0.004217267 0.0031914115 0.0070168376 -0.0088037252 0.00097286701 -0.0061863661 0.0030283928
+		 -0.010204852 -0.00093561411 -0.0045549273 -0.0031419992 0.00061440468 -0.0031349659
+		 0.0067649484 -0.0012879968 0.0080314279 0.0029427409 0.0042895675 0.0061670542 -0.004280746
+		 0.0036514401 0.0032239556 -0.0015274882 0.0062106848 0.0014945269 0.0041125417 0.0045282245
+		 -0.0032505989 0.0031766295 -0.0047274828 -0.0027222633 -0.0025787354 -0.0014236569
+		 0.002379775 0.00023758411 0.0022568703 0.0022674799 -0.0032562017 0.0017841458 -0.0034846067
+		 1.6450882e-05 -0.0012632012 0.00058811903 -0.0044528842 -0.00058698654 0.0048015118
+		 -0.0014606714 -0.001583755 -0.0018945932 -0.0036978126 -0.0037530065 0.0025426149
+		 -0.0044078231 -0.0045134425 0.00034981966 -0.0066284537 -0.0001718998 -0.0055546165
+		 -0.0047612786 0.00052273273 -0.0059153438 0.012948215 0.0040303469 0.010685921 0.00057041645
+		 -0.0031998754 0.0028347969 -0.0055123568 0.0036914945 -0.0084270835 -0.00061053038
+		 -0.0067172647 -0.0050125718 -0.00085055828 -0.006210804 0.0087786317 -0.0013504624
+		 0.0023925304 0.0031496882 -0.00023502111 0.005220592 -0.007420361 0.0038493872 -0.0094788671
+		 -0.00093364716 -0.0067669749 -0.0046060681 -0.0011734366 -0.0054660439 0.0074421167
+		 -0.0020129085 0.011278927 -0.0010485053 0.0085648894 0.0016995072 -0.0023698807 0.0059577823
+		 -0.008513689 0.0034707785 -0.0093753338 -0.0011146665 -0.0053339601 -0.0036971569
+		 -1.5318394e-05 -0.0037629604 0.006868422 -0.0015467405 0.0064620972 0.0030668974
+		 -0.0036502481 0.0056763887 -0.0083948374 0.0027121305 -0.0077375174 -0.0011401176
+		 -0.0019288659 -0.0025609136 0.002800107 -0.0022729635 0.0072103143 0.00015431643
+		 0.0051091313 0.0033333898 -0.0037097931 0.0046077967 -0.0066933036 0.0017434955 -0.0042227507
+		 -0.0010351539 0.0046690702 0.0026224852 -0.0021706223 0.0029411316 -0.0030789971
+		 0.0008585453 0.0015695691 -0.00079578161 0.0036038756 -0.0020115972 0.0053360462
+		 0.00079864264 0.00095444918 0.0015674829 0.0025761724 0.00074350834 0.0017496049
+		 -0.0027016401 -0.00046798587 -0.0028683543 -0.00058421493 0.0027095675 0.0016333461
+		 0.0028762817 5.8114529e-05 -0.0029138923 -5.8114529e-05 0.00266397 0.00058424473
+		 -0.0028319955 0.00046798587 0.002745986 -0.0016333759 -0.0026289225 -0.0017496049
+		 0.0029489994 -0.0020181239 0.003117919 0.00019928813 0.0028307438 0.00085327029 -0.002748549
+		 -0.0013641119 -0.0024613142 -0.00032702088 0.0026646256 0.00032699108 -0.0029145479
+		 -0.00085330009 0.002626121 -0.00019931793 -0.0029531717 0.0013641715 0.0027086735
+		 0.0020181537 -0.0028705597 0.0027810335 0.0070144534 -0.0096048117 0.0055655539;
+	setAttr ".uvtk[250:499]" -0.0082993507 0.0052387714 0.0035116076 0.0062136352
+		 0.0039441586 0.0069261193 -0.0086120367 0.0052755773 -0.01418221 -0.001032114 -0.012884676
+		 -0.0014602244 -0.0054906607 0.0040476918 0.0057143569 0.004240185 0.0074258447 0.0060022771
+		 -0.0045641661 0.0044924021 -0.013101757 -0.00056496263 -0.010952353 -0.0075260997
+		 -0.0097203255 -0.0081306696 -0.010069907 -0.0018154085 -0.0020171404 0.001565367
+		 0.0089752674 0.00055587292 0.013652802 0.0038432181 0.0033043623 0.0032442808 -0.0088416934
+		 -0.00010320544 -0.0098007321 -0.00626266 -0.0004992485 -0.008485198 3.7193298e-05
+		 -0.0088989735 -0.006899178 -0.0077468157 -0.0066225529 -0.0020656288 -0.00073355436
+		 0.0002476871 -0.0055095553 -0.0045725703 0.0011014342 -0.0072287917 0.0022677183
+		 -0.0080646873 -0.0033220053 -0.005926311 0.015318274 0.0027445257 0.011961937 0.00039628148
+		 0.0026989579 -0.0025278926 0.0052211285 -0.0053074956 0.0057098866 -0.0053243637
+		 0.015088379 -0.0017777085 0.012158632 -0.0024678707 -0.0027830005 -0.0070040822 0.0092947483
+		 -0.0057517886 0.0079129934 -0.0053679943 -0.0035641193 -0.0061283112 -0.0038309097
+		 -0.0069974661 0.0084503293 -0.0055226684 0.013813496 0.00063574314 0.012435138 0.0011052489
+		 0.0051050186 -0.0041218996 -0.0057502985 -0.0040870905 -0.0071375966 -0.0061613917
+		 0.0046163201 -0.0048034787 0.012888551 0.0001271069 0.010788143 0.0069094896 0.0094903111
+		 0.0075397193 0.009618938 0.001501739 0.0017111897 -0.0015859008 -0.0089272261 -0.00034093857
+		 -0.013136148 -0.0040926337 -0.0029816031 -0.0036219358 0.0088507533 -0.00037616491
+		 0.0097716451 0.005623281 0.00079005957 0.0076395571 0.0002245903 0.0080645382 0.0066783428
+		 0.0071843565 0.0062535405 0.0017931461 0.0010235906 -0.00076818466 0.0056786537 0.003914386
+		 -0.00072306395 0.0063804984 -0.0019734502 0.0072484314 0.0031883717 0.0053930283
+		 -0.014675856 -0.003195703 -0.011343598 -0.00095748901 -0.0022773743 0.0018543005
+		 -0.0047008991 0.0044644177 -0.0053197145 0.0045307279 -0.014370739 0.001097858 -0.011446357
+		 0.0016369522 -0.00058835745 0.00346452 0.0014116764 0.0041800737 0.0030885339 0.0046718121
+		 0.00096988678 0.0044370294 0.0015479326 0.0026635528 0.0032101274 0.0020725131 0.0046785474
+		 0.0044344664 0.0021377802 0.0044484138 -0.0012393594 0.0011431575 0.00047409534 -0.00061386824
+		 0.004871726 0.0014241934 0.0057527423 0.0037013888 0.0026542544 0.0038520098 -0.0061446428
+		 0.0017551184 -0.0045369864 -0.00063508749 0.0021515489 -0.0017247796 0.0060819983
+		 0.0007340312 0.0059031844 0.0026476383 0.0022708178 0.002887249 -0.0032119155 -0.0021830797
+		 0.0033762455 -0.0024152398 0.0063973665 1.8119812e-05 0.004753232 0.0014023185 0.00074952841
+		 0.001725316 -0.0023729205 -0.0031723976 0.0037484169 -0.002823472 0.0053918958 -0.00070285797
+		 0.0019856691 1.8835068e-05 -0.0017869473 0.00014048815 -0.0022418499 -0.0037708282
+		 0.0028907061 -0.0030303001 0.0026642084 -0.0014021397 -0.0028270483 -0.0014809966
+		 -0.0060460567 -0.0015166998 -0.0079315305 -0.00026983023 -0.0087822676 -0.001719892
+		 -0.0030606985 -0.0040732622 0.00046414137 -0.003033638 -0.002192378 -0.0020392537
+		 -0.0048508644 -0.0038471222 -0.0039556623 -0.002774477 -0.013581634 -0.0032005906
+		 -0.013439834 -0.0029657483 -0.0082864165 -0.0032681823 0.0022348166 -0.004211843
+		 -0.0026639104 -0.0043790936 -0.0042908192 -0.0048011541 0.00067073107 -0.005050838
+		 -0.0038765669 -0.0020928383 -0.0054742694 -0.0015619397 -0.0052825809 -0.004524231
+		 -8.8632107e-05 -0.0049343109 -0.00040543079 0.00018715858 -0.0020636916 0.001739502
+		 -0.006480515 -0.00099509954 -0.0052239895 -0.0037479997 0.00018841028 -0.0041537881
+		 0.0070272088 7.7903271e-05 0.0054163933 0.0021831393 -0.0031403899 0.0026369691 -0.006465435
+		 -0.00040513277 -0.0037161708 -0.0026004314 0.0017002821 -0.002843082 0.0044900775
+		 0.0034188032 -0.0032233596 0.003067553 -0.0050207973 0.00019216537 -0.00035649538
+		 -0.0011180043 0.0046030283 -0.00092309713 0.0044478774 0.0040046573 -0.0019159317
+		 0.0031241775 -0.0017983317 0.00075227022 0.0054915547 0.0040031672 0.0011786222 0.0028440356
+		 0.0036020279 0.001247704 0.005053103 -0.00020307302 0.0078244209 0.0032473207 0.0062165856
+		 0.0029106736 -3.516674e-06 4.2319298e-06 -2.2053719e-06 4.6491623e-06 -5.9604645e-08
+		 0 -8.9406967e-07 4.8279762e-06 -4.3511391e-06 3.4570694e-06 5.9604645e-07 4.2915344e-06
+		 -4.7683716e-06 2.2649765e-06 2.1457672e-06 3.2186508e-06 -4.4703484e-06 8.9406967e-07
+		 3.2782555e-06 2.0265579e-06 -4.2319298e-06 -6.5565109e-07 4.2319298e-06 6.5565109e-07
+		 -3.3378601e-06 -2.0265579e-06 4.7087669e-06 -8.3446503e-07 -2.0861626e-06 -3.2186508e-06
+		 4.7683716e-06 -2.2649765e-06 -5.9604645e-07 -4.2915344e-06 4.2915344e-06 -3.3974648e-06
+		 8.3446503e-07 -4.8279762e-06 3.516674e-06 -4.2319298e-06 2.2649765e-06 -4.8279762e-06
+		 5.9604645e-07 4.0531158e-06 2.0861626e-06 3.2186508e-06 1.1920929e-07 0 3.3378601e-06
+		 2.0861626e-06 -6.5565109e-07 4.7683716e-06 4.1723251e-06 7.1525574e-07 -2.3245811e-06
+		 4.7683716e-06 4.6491623e-06 -7.7486038e-07 -3.3378601e-06 4.1723251e-06 4.6491623e-06
+		 -2.1457672e-06 -4.2319298e-06 3.2782555e-06 4.2319298e-06 -3.3378601e-06 -4.6491623e-06
+		 2.2053719e-06 3.3378601e-06 -4.1127205e-06 -4.6491623e-06 7.7486038e-07 2.0861626e-06
+		 -4.7683716e-06 -4.1723251e-06 -6.5565109e-07 8.9406967e-07 -4.7087669e-06 -3.2782555e-06
+		 -2.0861626e-06 -8.3446503e-07 -4.2915344e-06 -2.0861626e-06 -3.1590462e-06 0.00027611852
+		 0.0014650226 0.00081655383 0.0010122061 0.002037853 0.001799047 0.0011253655 0.0025070608
+		 -0.00093570352 -0.00043028593 0.0011802614 0.00041490793 0.0026217997 0.0007905364
+		 0.0020759404 0.0013391972 0.0010337532 0.0018494427 -0.0003733933 0.0017396212 0.00016584992
+		 0.0029683113 0.0013262928 -0.00027084351 0.0027430058 -0.00037783384 0.0027278066
+		 7.0631504e-05 0.0001732111 -0.0010659397 -0.0012608469 -0.000870049 0.00068241358
+		 0.0023291111 -0.0010738671 0.0018118024 -0.00090482831 0.0031677186 0.0012540221
+		 -0.00097173452 0.0025434196 -0.0014491677 0.002435416 -0.0013620853 0.00099280477
+		 -0.0025113523 0.0001809597 0.0027596354 -0.0017592907 0.001665771 -0.0020725429 0.0030460358
+		 0.00097942352 -0.0016214252 0.0020823181 -0.0024094582 0.002004534 -0.0018643737
+		 0.00035429001 -0.0046069622 -0.0029316247 -0.0075531304 -0.0041476786 -0.0056093335
+		 -0.0012509823 0.0030517876 -0.0023564696 0.0013017058 -0.0030808151 0.002461791 0.00052666664
+		 -0.0021621585 0.0013748407 -0.0033221841 0.0015253127 -0.0022166371 0.0035645962
+		 0.00054115057 0.0014697313 0.0011794865 -0.0025186539 0.0023991466 -0.0028091371
+		 0.0007609725 -0.0037884116 0.0015488267 -7.0303679e-05 -0.0025262237 0.00036659837
+		 -0.0039066672 0.0010153353 -0.0032596588 2.5510788e-05 0.00035867095 -0.0030286312
+		 0.0013561845 -0.0030837357 0.00011116266 -0.0042495728 0.00058853626 -0.00075572729
+		 -0.0026725531 -0.00080126524 -0.0040283799 -0.00025269389 -0.0039122105 -0.0012525022
+		 -0.0012191534 -0.0010568798 0.00021612644 0.0066844821 -0.0029166937 0.0047414899
+		 -0.0041337907;
+	setAttr ".uvtk[500:729]" -0.00017011166 -0.0010763407 -0.0035080314 0.0010037422
+		 -0.0031560063 -0.00058954954 -0.0044490993 -0.00048285723 -0.0014562905 -0.0026000738
+		 -0.0018718243 -0.0038287044 -0.0016845465 -0.0036201477 -0.0026966035 -0.0020398498
+		 -0.0039387345 0.0005016923 -0.0030100942 -0.0012752414 -0.004327774 -0.0016509295
+		 -0.0021057129 -0.002325654 -0.002831459 -0.0033676624 -0.0021857023 -0.0031895638
+		 -0.00479123 -0.001401782 -0.0075670183 0.002056241 -0.0056243241 0.0032731295 -0.0042310953
+		 -0.00093108416 -0.0026461482 -0.0018725395 -0.0037437975 -0.0026596785 -0.0025373101
+		 -0.0027102232 -0.0015812516 0.0037464499 -0.0022198558 0.0016505122 -0.0035794377
+		 -0.0021998882 -0.0014001131 0.00020545721 3.4153461e-05 9.3579292e-06 0.0020487309
+		 0.0066925287 0.0032650828 0.0047490597 -0.001075238 0.019533761 -0.0070404559 0.019806854
+		 -0.012800485 0.018223822 -0.017790169 0.014940232 -0.021521807 0.010276943 -0.023630977
+		 0.0046907961 -0.023912191 -0.0012723058 -0.022338331 -0.0070294738 -0.019063771 -0.012017995
+		 -0.014408648 -0.015749991 -0.0088284314 -0.01786077 -0.0028688312 -0.018143296 0.0028874129
+		 -0.016569912 0.0078767836 -0.013293743 0.01161129 -0.0086345524 0.013724931 -0.0030474365
+		 0.014010169 0.0029216856 0.012438357 0.0086890757 0.0091636479 0.013689145 0.0045078844
+		 0.017431922 -0.00025519729 0.017156929 -0.0055340827 0.017852031 -0.010769218 0.016883746
+		 -0.015450269 0.014348015 -0.0191212 0.010491595 -0.021422833 0.0056905299 -0.02213037
+		 0.00041344762 -0.021173477 -0.0048236847 -0.018645823 -0.009508878 -0.014794022 -0.013182789
+		 -0.0099957436 -0.015486062 -0.0047207624 -0.016192645 0.0005146414 -0.015233994 0.0051979125
+		 -0.012703985 0.0088719577 -0.008850351 0.011177421 -0.0040488988 0.011889368 0.001231879
+		 0.010936864 0.0064770132 0.008411333 0.011173584 0.0045552105 0.014858872 0.00071445107
+		 0.015682291 -0.0041685402 0.01680446 -0.0091558099 0.016364135 -0.013763011 0.014407374
+		 -0.017542452 0.011125848 -0.020126015 0.006837666 -0.02126053 0.0019610524 -0.020834029
+		 -0.0030281246 -0.018886775 -0.0076414645 -0.015609473 -0.011427045 -0.011322737 -0.01401338
+		 -0.0064470619 -0.015147805 -0.0014594644 -0.014719099 0.0031517968 -0.012770444 0.0069371574
+		 -0.0094921589 0.0095268451 -0.0052039623 0.010668185 -0.00032283366 0.010247037 0.0046753958
+		 0.0083009228 0.009302333 0.0050151795 0.013098713 0.0016752481 0.01406271 -0.0027659833
+		 0.015613265 -0.0074630082 0.015715867 -0.011960328 0.014366277 -0.015822947 0.011697099
+		 -0.018675238 0.00796628 -0.02023837 0.0035364628 -0.020357788 -0.0011610091 -0.019020349
+		 -0.0056660771 -0.016355962 -0.0095374882 -0.01262559 -0.012394994 -0.0081948787 -0.013959199
+		 -0.0034984723 -0.014077246 0.0010054931 -0.012738883 0.0048771277 -0.010074496 0.0077393632
+		 -0.0063436478 0.0093122311 -0.0019077659 0.0094386376 0.002801545 0.0081000775 0.0073233321
+		 0.0054236948 0.011207376 0.0025740713 0.0010060088 0.0021052957 0.0035554385 0.00088143349
+		 0.0058355704 -0.00098398328 0.0076324418 -0.0033148527 0.0087701678 -0.0058881938
+		 0.0091339797 -0.008451879 0.0086843371 -0.0107539 0.0074618459 -0.012565434 0.0055867434
+		 -0.013708681 0.0032427013 -0.014071092 0.0006609261 -0.013618588 -0.0019057095 -0.012395553
+		 -0.0042069852 -0.010520432 -0.0060186386 -0.0081753377 -0.0071631968 -0.005586992
+		 -0.0075268298 -0.0030092578 -0.0070691407 -0.00069841743 -0.0058312044 0.0011112317
+		 -0.0039344877 0.0022365898 -0.0015740506 0.00016149879 0.00031319261 0.00023677945
+		 0.00028941035 0.00028854609 0.00023713708 0.00031229854 0.0001617074 0.0003054142
+		 7.0571899e-05 0.00026866794 -2.7477741e-05 0.00020554662 -0.00012284517 0.00012251735
+		 -0.00020641088 2.7194619e-05 -0.00026959181 -7.0586801e-05 -0.00030636787 -0.00016143918
+		 -0.00031322241 -0.00023671985 -0.00028938055 -0.00028873235 -0.00023710728 -0.00031230599
+		 -0.00016176701 -0.0003054142 -7.0631504e-05 -0.00026866794 2.7418137e-05 -0.00020552427
+		 0.00012287498 -0.00012250245 0.00020638108 -2.7149916e-05 0.00026959181 7.0631504e-05
+		 0.00030636787 -0.00075733662 -0.0026879311 -0.00059178472 -0.0013504028 0.00095719099
+		 0.00031703711 0.00087541342 -0.00069355965 -0.0012896359 -0.0011104941 0.00044283271
+		 0.00067055225 0.0014537871 0.00085908175 0.0015988648 0.00011742115 0.00089654326
+		 0.0013365746 0.0012511909 0.00061970949 0.0014961064 7.8320503e-05 0.00020930171
+		 -0.0016706586 0.0012597442 -0.00055837631 0.00034433603 0.00085842609 0.00029206276
+		 0.0015842915 0.00077605247 0.0010170341 0.00062790513 -9.4294548e-05 0.00080084801
+		 -0.00038272142 0.0014951527 -0.00048744678 0.00022697449 0.00098085403 -0.00035172701
+		 0.0016105771 0.00018528104 0.0012248755 0.00035876036 0.00011968613 -0.00017732382
+		 -0.00090372562 0.0008636415 -0.00070726871 0.0009906292 -0.000616014 0.0013653934
+		 -0.00094676018 -0.00036942959 0.00088900328 -0.0009919405 0.0013785362 -0.00043442845
+		 0.0012236238 2.8938055e-05 0.00023251772 0.00082367659 -0.0010278821 0.00073346496
+		 -0.00062847137 0.0011304915 -0.001322031 0.0020962954 -0.00064897537 0.0012574196
+		 -0.00072234869 -0.00043565035 0.00012028217 -0.0013468862 0.00082784891 -0.00099164248
+		 0.0010102391 -0.00031903386 0.00023168325 0.00069215894 -0.0013149977 0.00041982532
+		 -0.0009548068 0.00078567863 -0.0016581416 0.0013687611 -0.0018110275 -1.9192696e-05
+		 -0.00051170588 -0.0013026595 0.00033146143 -0.001388371 0.00061452389 -0.00064247847
+		 0.00011885166 0.00048220158 -0.001547277 -0.001026243 0.00078868866 -0.00072786212
+		 0.0013329387 -0.00020393729 -0.00097995996 0.0003260076 -0.001839757 -0.0016152263
+		 0.00015419722 -0.00090575218 -8.8095665e-05 0.00021183491 -0.0017014742 -0.001997143
+		 0.00074052811 -0.00047001243 -0.00082755089 -0.00013941526 -0.0018857718 -0.0013595819
+		 0.00038838387 -0.0017398596 -0.00023245811 -0.001090318 -0.00035601854 -9.1731548e-05
+		 -0.0017687678 -0.00073516369 -0.00066810846 -0.00058597326 -0.001819551 -0.0014384389
+		 0.00036138296 -0.001756072 -0.00062549114 -0.001188308 -0.0006493926 -0.00039973855
+		 -0.0017485023 -0.00094670057 -0.0005016923 -0.00099244714 -0.0016517043 -0.0014393926
+		 -0.00010251999 -0.0016357303 -0.0010421872 -0.0011939406 -0.00094687939 -0.00068640709
+		 -0.001644671 -0.0010584593 -0.00036746264 -0.0013391972 -0.0013936162 -0.00015300512
+		 0.0026609898 -0.00017482042 0.0018926859 -0.0011052489 -0.0012272 -0.00092869997
+		 -0.0014663935 0.00047636032 0.0016215444;
+createNode polyLayoutUV -n "polyLayoutUV67";
+	rename -uid "7BAAA7D3-49EE-81D2-2FA2-229B98D0F220";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:541]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV117";
+	rename -uid "EAD871EE-4CC8-7D52-E0BE-5592D6DDD1BA";
+	setAttr ".uopa" yes;
+	setAttr -s 730 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0.59803069 0.12108088 0.59908164 0.12108094
+		 0.5990814 0.12779897 0.59803039 0.12779891 0.60013258 0.12108099 0.60013229 0.12779903
+		 0.5969798 0.12108088 0.59697944 0.12779891 0.59592885 0.12108082 0.59592855 0.12779886
+		 0.5948779 0.12108076 0.5948776 0.1277988 0.59382695 0.1210807 0.59382671 0.12779874
+		 0.012397498 0.027423203 0.011346579 0.02742511 0.0113343 0.02070713 0.012385219 0.020705223
+		 0.010295644 0.027427018 0.010283366 0.020709097 0.013448417 0.027421296 0.013436139
+		 0.020703316 0.0092447251 0.027428925 0.0092324466 0.020711005 0.0081938058 0.027430892
+		 0.0081815273 0.020712912 0.0071428865 0.027432799 0.007130608 0.020714819 -0.14890128
+		 0.02923955 -0.14783478 0.034543365 -0.15086257 0.035297632 -0.15196407 0.029606849
+		 -0.14584279 0.02883108 -0.14481425 0.033690482 -0.14613342 0.039778113 -0.14917094
+		 0.040912986 -0.15389824 0.035978764 -0.15503639 0.029952794 -0.14924705 0.02387774
+		 -0.15232074 0.023839548 -0.14278853 0.028354645 -0.14178723 0.03273946 -0.14315957
+		 0.038457662 -0.14618164 0.023919597 -0.15222836 0.041867852 -0.15693814 0.036631972
+		 -0.15812311 0.030300438 -0.15540802 0.023808464 -0.14880049 0.018521696 -0.15185308
+		 0.018071957 -0.13970727 0.027759686 -0.13880414 0.031471729 -0.14029109 0.037006557
+		 -0.14311922 0.023959488 -0.14575708 0.019018248 -0.1552605 0.04269129 -0.15851477
+		 0.0237872 -0.1549204 0.017655306 -0.14758444 0.013249248 -0.15058899 0.012394622
+		 -0.14005476 0.023984581 -0.14271641 0.019575059 -0.14459795 0.014203839 -0.15800649
+		 0.017253064 -0.15361196 0.011619322 -0.14565408 0.0081179589 -0.14864445 0.0068439143
+		 -0.13696074 0.023987383 -0.13663757 0.026890844 -0.13967019 0.020229071 -0.14162076
+		 0.015262902 -0.14275295 0.009567529 -0.15664995 0.010877229 -0.15167987 0.005751533
+		 -0.13663644 0.021100819 -0.13870639 0.016579427 -0.13997632 0.011121549 -0.15470934
+		 0.0048030014 0.054438114 0.37997836 0.055652618 0.37470555 0.05870527 0.37515441
+		 0.057442844 0.38083217 0.051451266 0.37902462 0.052609026 0.37420988 0.056097627
+		 0.36934939 0.059171319 0.36938673 0.061772764 0.37557021 0.060466051 0.38160658 0.052509189
+		 0.38511023 0.055499852 0.38638341 0.048473746 0.3779664 0.049568206 0.37365398 0.05303216
+		 0.36930841 0.049607664 0.38366148 0.05575031 0.36398771 0.058813035 0.36361951 0.062258601
+		 0.36941692 0.064858973 0.37597156 0.063504279 0.38234779 0.058535635 0.38747489 0.045559049
+		 0.37665069 0.046521783 0.3730008 0.049969733 0.36926937 0.046830565 0.38210824 0.052691936
+		 0.36439705 0.054682255 0.35868418 0.057709873 0.35792905 0.061885238 0.36327267 0.065365374
+		 0.36943728 0.061565399 0.38842258 0.046905309 0.3692452 0.049637854 0.36487436 0.051662028
+		 0.35953793 0.052979469 0.35344994 0.056016743 0.35231414 0.060745358 0.35724705 0.064971864
+		 0.36292416 0.043487787 0.37212995 0.043811291 0.36924329 0.046556771 0.36547017 0.048635334
+		 0.36048982 0.050005943 0.35477123 0.059073806 0.35135844 0.063785017 0.35659298 0.043487281
+		 0.36633992 0.045652539 0.36175835 0.047137946 0.35622311 0.062105715 0.35053414 -0.47830337
+		 -0.36507666 -0.47898054 -0.36188966 -0.48049912 -0.3622601 -0.47984591 -0.36527729
+		 -0.47994968 -0.35885328 -0.48146403 -0.35932696 -0.48201019 -0.36264724 -0.48137912
+		 -0.36548513 -0.4780502 -0.36834264 -0.47960305 -0.36835289 -0.48298138 -0.35987258
+		 -0.48351204 -0.363074 -0.48290494 -0.36570948 -0.48114619 -0.36836797 -0.47824684
+		 -0.37159809 -0.47978964 -0.37142393 -0.48447621 -0.36050898 -0.48500493 -0.36355072
+		 -0.4844262 -0.36595726 -0.4826825 -0.36838669 -0.48132521 -0.3712506 -0.47883999
+		 -0.37476262 -0.48035932 -0.37443572 -0.48592648 -0.36123312 -0.4864932 -0.36407965
+		 -0.48594612 -0.36623514 -0.48421466 -0.36840713 -0.48285604 -0.3710666 -0.48187655
+		 -0.37409484 -0.47967935 -0.37779102 -0.48119476 -0.37737903 -0.48731452 -0.36200947
+		 -0.48795003 -0.36473733 -0.48746878 -0.36656165 -0.48574537 -0.36842668 -0.48438469
+		 -0.37086201 -0.48338982 -0.37371743 -0.48272282 -0.37690136 -0.48727706 -0.36843884
+		 -0.48591122 -0.37062347 -0.48489946 -0.37329075 -0.48424092 -0.37633368 -0.48898524
+		 -0.36699694 -0.48882356 -0.36843979 -0.48745126 -0.37032565 -0.48641232 -0.37281498
+		 -0.48572719 -0.37567329 -0.48898548 -0.36989099 -0.48790318 -0.37218094 -0.48716071
+		 -0.37494761 -0.74009705 -0.36279362 -0.74069023 -0.36595815 -0.73914742 -0.36613232
+		 -0.73857772 -0.36312056 -0.74088693 -0.36921358 -0.73933405 -0.36920339 -0.73761189
+		 -0.36630565 -0.73706049 -0.36346143 -0.73925769 -0.35976523 -0.73774225 -0.36017722
+		 -0.74063379 -0.37247962 -0.73909122 -0.37227899 -0.73779094 -0.36918831 -0.73608106
+		 -0.36648971 -0.73554724 -0.36383885 -0.73621422 -0.36065489 -0.73995662 -0.37566662
+		 -0.73843807 -0.37529615 -0.73755801 -0.37207118 -0.73625463 -0.36916965 -0.73455238
+		 -0.36669427 -0.73403758 -0.36426556 -0.73469615 -0.36122257 -0.73898757 -0.37870297
+		 -0.73747319 -0.37822929 -0.73692697 -0.37490904 -0.73603219 -0.3718468 -0.73472244
+		 -0.36914915 -0.73302585 -0.36693287 -0.73252475 -0.36474133 -0.73320985 -0.36188304
+		 -0.73595583 -0.37768373 -0.73542511 -0.3744823 -0.7345109 -0.37159905 -0.73319173
+		 -0.36912966 -0.73148584 -0.36723065 -0.73103386 -0.3653754 -0.73177636 -0.36260873
+		 -0.73446101 -0.37704733 -0.73393226 -0.37400559 -0.73299098 -0.37132117 -0.73166001
+		 -0.3691175 -0.73301071 -0.37632322 -0.73244393 -0.37347665 -0.73146832 -0.37099469
+		 -0.73011357 -0.36911654 -0.72995162 -0.36766535 -0.73162264 -0.37554687 -0.73098713
+		 -0.37281904 -0.72995186 -0.37055939 0.53153712 0.059758484 0.53164244 0.059758484
+		 0.53164244 0.060432017 0.53153706 0.060431957 0.53174782 0.059758484 0.53174782 0.060432017
+		 0.5318532 0.059758484 0.5318532 0.060432017 0.53195858 0.059758484 0.53195852 0.060432017
+		 -0.42724898 0.0044901371 -0.42735434 0.0044900775 -0.42735425 0.0038166046 -0.4272489
+		 0.0038166046 -0.42745969 0.0044900775 -0.42745963 0.0038166046 -0.42756504 0.0044900775
+		 -0.42756498 0.003816545 -0.42767042 0.0044900775 -0.42767033 0.003816545 -0.38756523
+		 0.29959244 -0.38845184 0.30345297;
+	setAttr ".uvtk[250:499]" -0.39066291 0.30314186 -0.38982126 0.29897922 -0.3853488
+		 0.30034569 -0.38625106 0.30382654 -0.38876942 0.30735928 -0.3909795 0.30733687 -0.39288643
+		 0.30288225 -0.39209133 0.29849875 -0.38319278 0.30122408 -0.38405675 0.30426183 -0.38656414
+		 0.30738464 -0.38851881 0.31127095 -0.39073291 0.3115316 -0.39320135 0.30731988 -0.39512497
+		 0.30264682 -0.39434645 0.29811949 -0.38111252 0.30217457 -0.38185883 0.30474845 -0.38435644
+		 0.30740958 -0.38630918 0.31095099 -0.38774288 0.31516075 -0.39000842 0.31570297 -0.39295352
+		 0.31175011 -0.39544079 0.30731079 -0.38214344 0.3074263 -0.38410032 0.3105644 -0.38550001
+		 0.31447536 -0.39227268 0.31611806 -0.39518249 0.31195527 -0.37967247 0.30536202 -0.37990993
+		 0.30742791 -0.38188106 0.3101182 -0.38330388 0.31365258 -0.39451134 0.31644624 -0.37967205
+		 0.30950469 -0.3811788 0.31273484 0.14133447 -0.34204298 0.14217269 -0.34568989 0.14426148
+		 -0.34539568 0.1434657 -0.34146327 0.13924062 -0.34275496 0.14009368 -0.3460432 0.1424734
+		 -0.34938025 0.14456129 -0.34935868 0.14636207 -0.34514999 0.14561015 -0.34100899
+		 0.13720399 -0.34358516 0.13802075 -0.34645477 0.14039004 -0.34940457 0.14223725 -0.35307565
+		 0.14432901 -0.35332155 0.14666027 -0.34934229 0.14847678 -0.34492725 0.14774054 -0.34065032
+		 0.13523889 -0.34448341 0.13594437 -0.34691483 0.13830441 -0.34942847 0.14014977 -0.35277376
+		 0.14150488 -0.35675058 0.14364529 -0.35726243 0.14642686 -0.35352761 0.14877588 -0.34933329
+		 0.13621372 -0.34944463 0.13806295 -0.35240892 0.13938588 -0.35610342 0.14578438 -0.35765418
+		 0.14853263 -0.35372105 0.13387901 -0.34749484 0.13410372 -0.34944648 0.1359663 -0.35198778
+		 0.13731104 -0.35532647 0.14789939 -0.35796389 0.1338793 -0.35140851 0.13530326 -0.35445985
+		 -0.59929806 -0.0055280924 -0.59898341 -0.00355196 -0.59996331 -0.0034541488 -0.60028207
+		 -0.0053749681 -0.59885567 -0.0015022159 -0.59984088 -0.001500845 -0.60093915 -0.0033513308
+		 -0.60127789 -0.005184114 -0.59898961 0.00055783987 -0.59997511 0.00045716763 -0.60081762
+		 -0.0015034676 -0.60191143 -0.0032303333 -0.60227489 -0.0049366355 -0.59933245 0.0025537014
+		 -0.60032612 0.0023884773 -0.60095394 0.00034576654 -0.6017884 -0.0015090704 -0.6028806
+		 -0.0030830503 -0.60326332 -0.0046235323 -0.60132784 0.0021784902 -0.6019268 0.00021094084
+		 -0.60275608 -0.0015164614 -0.60384655 -0.0029053688 -0.60423434 -0.004242301 -0.60232484
+		 0.0019086003 -0.60289413 4.6908855e-05 -0.60372382 -0.00152421 -0.60480785 -0.0026993752
+		 -0.60515934 -0.0038190484 -0.603306 0.0015735626 -0.60385609 -0.00014716387 -0.60469544
+		 -0.0015303493 -0.60577285 -0.0024695992 -0.60606444 -0.0033419728 -0.60496086 -0.0054323077
+		 -0.60574949 -0.0048218966 -0.60426295 0.0011751652 -0.60481238 -0.0003657341 -0.60567749
+		 -0.0015320778 -0.60517424 0.0007378459 -0.60577059 -0.00059843063 -0.60501331 0.0023519397
+		 -0.60578746 0.0017257333 -0.60606432 0.00026327372 0.36336178 -0.62732971 0.36301535
+		 -0.629776 0.36423188 -0.62988341 0.36458302 -0.62750137 0.36288005 -0.63229424 0.36410207
+		 -0.63229084 0.36544472 -0.62999958 0.3658163 -0.62772083 0.3630349 -0.63482249 0.36425626
+		 -0.63470244 0.36531603 -0.63228416 0.36665541 -0.63013846 0.36704791 -0.62800682
+		 0.3634277 -0.63728809 0.3646571 -0.63709313 0.36547035 -0.63456964 0.36652523 -0.63227552
+		 0.36786628 -0.63030654 0.3682639 -0.62836218 0.36589205 -0.63684392 0.36667913 -0.63441122
+		 0.367733 -0.63226622 0.3690834 -0.63050145 0.36945039 -0.62876946 0.36711729 -0.6365267
+		 0.36788529 -0.63422382 0.36894083 -0.63225996 0.36831921 -0.63614351 0.36909413 -0.63401008
+		 0.37015796 -0.63225925 0.37029731 -0.6307897 0.36948639 -0.63571799 0.3702966 -0.63372058
+		 0.14176106 -0.075158238 0.14082962 -0.075460911 0.14225072 -0.078250051 0.14003724
+		 -0.076036572 0.14274043 -0.075158238 0.13946158 -0.076828897 0.14367193 -0.075460911
+		 0.1391589 -0.077760339 0.14446425 -0.076036572 0.1391589 -0.078739762 0.14503992
+		 -0.076828957 0.13946152 -0.079671204 0.14534259 -0.077760398 0.14003718 -0.080463588
+		 0.14534253 -0.078739822 0.14082956 -0.08103925 0.14503992 -0.079671264 0.141761 -0.081341922
+		 0.14446419 -0.080463588 0.14274037 -0.081341922 0.14367187 -0.08103925 0.0049566627
+		 -0.16740537 0.0046539903 -0.16833687 0.007745862 -0.16882658 0.0046539903 -0.16931623
+		 0.0055323243 -0.16661301 0.0049566627 -0.17024773 0.0063247085 -0.16603735 0.0055323243
+		 -0.17104012 0.0072562099 -0.16573471 0.0063246489 -0.17161578 0.0082356334 -0.16573471
+		 0.0072561502 -0.17191845 0.0091670752 -0.16603738 0.0082355738 -0.17191845 0.0099593997
+		 -0.16661307 0.0091670156 -0.17161584 0.010535121 -0.16740543 0.0099593997 -0.17104012
+		 0.010837734 -0.16833693 0.010535061 -0.17024779 0.010837734 -0.16931629 -0.19886471
+		 0.03259629 -0.19902691 0.032678545 -0.19936867 0.032207251 -0.19904546 0.032041311
+		 -0.1986867 0.033150136 -0.19915593 0.032806933 -0.19962597 0.032464027 -0.19971521
+		 0.031737506 -0.19923501 0.031483799 -0.19868496 0.032568395 -0.19868442 0.031984597
+		 -0.19923925 0.032968819 -0.19979361 0.032787263 -0.20009698 0.032118678 -0.20007217
+		 0.031267852 -0.19945215 0.030930817 -0.19868511 0.031396508 -0.19850534 0.032597601
+		 -0.19832382 0.032043248 -0.19926848 0.033148408 -0.1998523 0.033147871 -0.20035188
+		 0.032598913 -0.20056686 0.031765074 -0.19813547 0.031484991 -0.19834349 0.032680929
+		 -0.19800058 0.032210886 -0.19924057 0.033328176 -0.19979557 0.033508897 -0.20044036
+		 0.033148527 -0.20090175 0.032382429 -0.20103142 0.031399727 -0.20044051 0.030805439
+		 -0.19765526 0.03173992 -0.19821513 0.032809973 -0.19774383 0.0324682 -0.19915831
+		 0.03349036 -0.19962959 0.033832133 -0.2003531 0.03369844 -0.19791898 0.030935138
+		 -0.19730163 0.031270027 -0.19727403 0.032121658 -0.19813287 0.032972157 -0.19757786
+		 0.032791436 -0.19902994 0.033619404 -0.19937283 0.034089446 -0.20009938 0.034178674
+		 -0.1968044 0.031764686 -0.19702032 0.032601833 -0.19810495 0.033151925 -0.19752112
+		 0.033152461 -0.19886808 0.033702731 -0.19904961 0.034257054 -0.19971816 0.034560442
+		 -0.20056902 0.034535646 -0.20090607 0.033915579 -0.19693628 0.030805439 -0.19634199
+		 0.031396359;
+	setAttr ".uvtk[500:729]" -0.19646737 0.032384753 -0.19693306 0.033151746 -0.19813418
+		 0.033331513 -0.1975798 0.033513069 -0.19868846 0.033731937 -0.198689 0.034315765
+		 -0.19923796 0.034815311 -0.2000718 0.035030305 -0.19702154 0.03370142 -0.19821751
+		 0.0334934 -0.19774744 0.033836305 -0.19850871 0.033703983 -0.19832796 0.034259021
+		 -0.19868833 0.034903824 -0.19945444 0.035365224 -0.20043714 0.035494864 -0.20103145
+		 0.034903944 -0.19727644 0.034181595 -0.19834653 0.033621728 -0.19800475 0.034093022
+		 -0.19813842 0.034816563 -0.19647169 0.033917904 -0.19680658 0.034535229 -0.19765821
+		 0.034562826 -0.19730124 0.035032451 -0.19792128 0.035369515 -0.19634199 0.034900606
+		 -0.19693291 0.035494924 0.033314824 0.015774116 0.033302575 0.018761858 0.032367468
+		 0.021599382 0.030601114 0.024009049 0.028176367 0.025754929 0.025330544 0.026665986
+		 0.02234228 0.026652962 0.019504189 0.02571708 0.017094165 0.023949862 0.015348136
+		 0.02152434 0.014437109 0.018677995 0.014450245 0.015689448 0.015386239 0.012851328
+		 0.017153382 0.010441482 0.019578606 0.0086958408 0.02242443 0.0077852607 0.025412142
+		 0.0077988207 0.028249204 0.0087351501 0.030658007 0.010502577 0.032402903 0.012928247
+		 0.036195457 0.015309915 0.036185682 0.019210577 0.034970731 0.02291736 0.032669485
+		 0.026067227 0.02950722 0.028351635 0.025793657 0.029546827 0.021892413 0.02953586
+		 0.018185511 0.028319776 0.015035823 0.026017696 0.012751617 0.022855014 0.011556491
+		 0.019141257 0.011567421 0.015239954 0.012783341 0.011532992 0.01508528 0.0083832443
+		 0.018247873 0.0060991123 0.02196148 0.0049043074 0.025862411 0.0049158335 0.029568583
+		 0.0061325431 0.032717109 0.0084350705 0.035000056 0.011597544 0.039509982 0.014776692
+		 0.039502591 0.019727275 0.037965655 0.024433732 0.03504917 0.028434932 0.031038642
+		 0.03133893 0.026326761 0.032861203 0.02137509 0.032852709 0.016668469 0.031314403
+		 0.012667611 0.028396904 0.0097641051 0.024385929 0.0082421303 0.019674063 0.0082506239
+		 0.014722481 0.0097888112 0.010015845 0.012706205 0.0060149059 0.01671724 0.0031114444
+		 0.021429196 0.0015898347 0.026380569 0.0015991032 0.031086326 0.0031382069 0.035085797
+		 0.0060560405 0.037987977 0.01006639 0.042787373 0.014249012 0.042782575 0.020237803
+		 0.04092738 0.02593267 0.037402719 0.030775785 0.032553494 0.034292579 0.02685456
+		 0.036138475 0.020864114 0.036132663 0.015168801 0.03427583 0.01032614 0.030749917
+		 0.0068100952 0.025900155 0.0049647726 0.020201296 0.0049707703 0.014211088 0.0068275779
+		 0.0085158646 0.010353513 0.0036731809 0.015203476 0.00015724823 0.020902589 -0.0016875826
+		 0.026892602 -0.0016806349 0.032586813 0.00017715618 0.037427723 0.003703326 0.040942192
+		 0.0085520595 0.046554506 0.013628349 0.046557188 0.020811081 0.044340193 0.027644098
+		 0.040119559 0.033458114 0.034308225 0.037683338 0.027475327 0.039905578 0.020290121
+		 0.039907187 0.013456307 0.037688106 0.0076428764 0.033465922 0.0034188628 0.027653962
+		 0.0011975558 0.020821214 0.0011963843 0.01363647 0.0034155399 0.0068029314 0.0076379254
+		 0.00098959357 0.013450287 -0.0032342616 0.020283461 -0.0054549151 0.027468115 -0.0054548904
+		 0.034300476 -0.0032345615 0.040111631 0.00098788738 0.044333547 0.0067983121 0.57880533
+		 -0.19448879 0.57847548 -0.19550365 0.57847536 -0.19657081 0.57880503 -0.19758576
+		 0.57943219 -0.19844916 0.58029544 -0.1990765 0.58131027 -0.19940639 0.58237743 -0.19940647
+		 0.58339244 -0.19907683 0.58425581 -0.19844967 0.58488315 -0.19758642 0.58521307 -0.19657153
+		 0.58521318 -0.1955044 0.58488351 -0.19448945 0.58425629 -0.19362605 0.58339304 -0.19299868
+		 0.58237821 -0.19266881 0.58131105 -0.19266871 0.5802961 -0.19299835 0.57943273 -0.19362551
+		 0.45707119 -0.27700126 0.45732382 -0.27723509 0.45746249 -0.27703899 0.45725331 -0.27684307
+		 0.45763001 -0.27739608 0.45771804 -0.27717054 0.45759904 -0.27684438 0.45744061 -0.27669251
+		 0.45779407 -0.27694285 0.45773575 -0.27665073 0.45763013 -0.27654791 0.45711115 -0.27659309
+		 0.45733351 -0.27649826 0.45800945 -0.27721703 0.45801124 -0.27697718 0.45786706 -0.27671665
+		 0.45787331 -0.27645838 0.45782056 -0.27640653 0.45756057 -0.27641732 0.45830151 -0.27717209
+		 0.4582285 -0.27694339 0.45801216 -0.27673942 0.45793933 -0.27649158 0.45801178 -0.27626663
+		 0.45778629 -0.27634102 0.45729598 -0.27627337 0.4575358 -0.27627057 0.45855862 -0.27704215
+		 0.45842436 -0.27684546 0.45815736 -0.27671671 0.45801237 -0.27650297 0.45777416 -0.27626806
+		 0.45733038 -0.2760486 0.45755824 -0.27612311 0.45838672 -0.27739727 0.45869422 -0.2772404
+		 0.4587698 -0.27684712 0.45858288 -0.27669412 0.45828882 -0.27665079 0.45808533 -0.27649146
+		 0.45778531 -0.27619487 0.45743197 -0.27585137 0.45762542 -0.27599055 0.45895106 -0.27700824
+		 0.45891356 -0.276595 0.45868981 -0.27649945 0.45839438 -0.27654809 0.45815125 -0.27645814
+		 0.45781878 -0.27612865 0.45723695 -0.27571088 0.45710382 -0.27596444 0.45758653 -0.27569211
+		 0.45773005 -0.27588457 0.45846331 -0.27641737 0.45820379 -0.27640623 0.45787114 -0.27607596
+		 0.45743456 -0.27550489 0.45778808 -0.27558839 0.45786294 -0.2758162 0.45872724 -0.27627367
+		 0.45848745 -0.27627009 0.45823759 -0.2763406 0.45793742 -0.27604198 0.45801109 -0.27555269
+		 0.45801076 -0.27579248 0.45869261 -0.27604836 0.45846432 -0.27612239 0.4582493 -0.27626747
+		 0.45801097 -0.27603018 0.45823416 -0.27558827 0.45815864 -0.27581584 0.45859057 -0.27585101
+		 0.4583967 -0.27598953 0.45823762 -0.27619421 0.45808467 -0.27604175 0.45843574 -0.27569199
+		 0.45829183 -0.27588391 0.45891833 -0.27596396 0.45878589 -0.27571094 0.45820379 -0.27612799
+		 0.45815107 -0.27607542 0.45858788 -0.27550405;
+createNode polyAutoProj -n "polyAutoProj65";
+	rename -uid "FD6A4BA4-47CB-FFAF-A87F-7BA01E7097D7";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:541]";
+	setAttr ".ix" -type "matrix" 0.14967025887483201 0.21441943851037476 -0.018032969873791223 0
+		 -0.041890981884502791 0.050581644376344194 0.25374931112058208 0 0.21105930268605955 -0.14201363190311461 0.063151952531918076 0
+		 15.084558254368174 -1.2612531813836116 8.1710094298861957 1;
+	setAttr ".s" -type "double3" 0.57457266284733777 0.57457266284733777 0.57457266284733777 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode groupId -n "groupId167";
+	rename -uid "172BE3D1-468D-2BA9-4FCD-E78187644050";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts23";
+	rename -uid "71096EE5-4620-2B91-B339-32B83924DD36";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:541]";
+createNode polyTweakUV -n "polyTweakUV118";
+	rename -uid "8BAE5F49-4FAD-B69D-0157-1688F3B28A7F";
+	setAttr ".uopa" yes;
+	setAttr -s 730 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.0020908639 0.006370008 -0.0010323822
+		 0.006198585 -0.00022043288 -0.0068055391 -0.0012790188 -0.0066341162 0.0052442849
+		 0.0059524179 0.006056264 -0.0070517659 -0.00040597469 0.0065020919 0.00040595978
+		 -0.0065020919 0.0012789816 0.0066341162 0.0020909347 -0.0063700676 0.00022048689
+		 0.0068055391 0.0010324474 -0.0061986446 -0.0060563236 0.0070517659 -0.005244364 -0.0059522986
+		 -0.00035873055 -0.0066049695 -0.0014206171 -0.0065677762 -0.0019424558 0.0064145327
+		 -0.00088045001 0.0063773394 0.00026087463 -0.0064911842 -0.00026088953 0.0064911842
+		 0.0059213638 -0.006567359 0.0053996444 0.0064149499 0.0019424409 -0.0064145923 0.0014207065
+		 0.0065677762 0.00088045001 -0.0063773394 0.00035871565 0.0066050291 -0.0053996444
+		 -0.0064149499 -0.0059213787 0.0065672398 -0.012208641 -0.0081269294 -0.00094532967
+		 -0.011821121 0.0018318295 -0.011618137 -0.0098515153 -0.0079647601 -0.012202919 -0.0072365701
+		 -0.0013945103 -0.010197222 0.016376138 -0.0053303242 0.019155085 -0.0043894053 0.0061728358
+		 -0.0091542006 -0.0059407353 -0.0064568371 -0.016639769 0.00059950352 -0.014477015
+		 0.00092923641 -0.0091328621 -0.0056867748 0.0013213754 -0.0070070922 0.015375376
+		 -0.0042039454 -0.016474009 0.00028760731 0.023360372 -0.0010785162 0.011318922 -0.0038835704
+		 -0.001324594 -0.0033184588 -0.010803521 0.001317665 -0.013588727 0.0091390461 -0.011321187
+		 0.0095697641 -0.0020891428 -0.0041357428 0.0072899461 -0.0046207607 0.016480088 -0.0008354485
+		 -0.013222933 -6.6071749e-05 -0.013535142 0.0076753795 0.02862668 0.0052109063 -0.0064821839
+		 0.0017982572 -0.0075573921 0.0087475851 -0.0032936335 0.012434833 -0.00066685677
+		 0.012630399 -0.0062116981 -0.00058956444 -0.010385215 0.0054325908 -0.0036767125
+		 0.010395125 -0.0031501651 0.0064436421 0.0034233332 0.010605849 0.013701737 0.0058159959
+		 0.016357303 0.0049059307 0.0053582788 -0.0013661236 0.0090560913 -0.0042381734 -0.0034171343
+		 0.002918914 -0.0010207295 0.0068008453 0.012632906 0.0045725405 0.0081870556 0.0058174022
+		 0.020247161 0.0016354057 0.0077787042 0.0014684498 0.004847765 0.0034250841 0.013507307
+		 0.00086114183 0.025032818 -0.0045185797 0.0025221109 -0.012397528 0.013498545 -0.0087784827
+		 0.011179447 -0.0088199675 -0.00021618605 -0.012215734 0.0030019879 -0.010768384 0.01348716
+		 -0.0077394247 0.017160118 -0.00013691187 0.015001416 -7.3418021e-05 0.0073491335
+		 -0.0076300949 -0.0044416189 -0.0098344684 -0.015290439 -0.0063077807 -0.018133223
+		 -0.0050224364 0.00043344498 -0.0076313615 0.010375798 -0.0059695989 0.016991436 -0.00025375187
+		 -0.014043689 -0.0054526627 0.013337433 0.0084640831 0.011037946 0.0086900145 0.011334181
+		 -9.0241432e-05 0.0028544068 -0.0049661845 -0.0093790293 -0.0046981573 -0.022221744
+		 -0.0013901293 -0.005308181 -0.0047546923 0.0034561753 -0.003989622 0.013736844 -0.00037670135
+		 -0.014763504 -0.0021434128 0.013284802 0.0071491748 0.0027532578 0.011826254 8.8214874e-05
+		 0.011999477 0.0072034001 0.0075474977 0.0070218444 -0.00020684302 -0.027231276 0.0051103234
+		 0.0067178011 -0.00038917363 0.010169476 0.0051276088 0.0031055212 0.0097908825 -0.01373899
+		 0.0048214514 -0.016341269 0.0042576548 -0.0041149855 0.0098887794 0.0026892424 0.0047656223
+		 -0.0076439679 -0.0031376183 -0.004866451 -0.00022403896 0.0030643642 0.0030388981
+		 0.00030383468 0.0061389878 -0.012907922 0.0032993965 -0.020357549 0.0013049692 -0.0090830922
+		 0.0049597919 -0.008205682 0.0025410503 -0.0058064759 0.0032464862 -0.014165252 -0.0004828833
+		 -0.025406361 -0.0046459623 3.2782555e-06 0.00026524067 -0.007401228 0.00094151497
+		 -0.0051490068 -0.0025339127 0.0021057725 -0.001960516 -0.016999722 0.0065495372 -0.014746845
+		 0.0023903847 -0.0030856729 -0.0045981407 0.0039658546 -0.0034127235 0.0037059188
+		 0.0023676753 0.0057974458 0.0015361309 -0.012757599 -0.00029617548 -0.0016185045
+		 -0.0054831505 0.0051530004 -0.0041648746 0.0075654984 0.00069582462 0.0031781793
+		 0.0048757792 0.0054462552 0.0053675175 -0.011214495 -0.0017403364 -0.0011481643 -0.0053379536
+		 0.0052499175 -0.0042874813 0.0085814595 -9.5546246e-05 0.007283926 0.0050870776 -0.0013698936
+		 0.0052756667 0.0011839867 0.0068234205 -0.010303497 -0.0020152926 -0.00208354 -0.0042699575
+		 0.0038617849 -0.003870666 0.0084396005 -0.00077873468 0.0082769394 0.0042172074 0.0031914115
+		 0.007016778 -0.008803606 0.00097292662 -0.0061863065 0.0030283332 -0.010204911 -0.0009355545
+		 -0.0045550466 -0.0031420588 0.00061440468 -0.0031349659 0.006765008 -0.0012880564
+		 0.0080314279 0.0029427409 0.0042896271 0.0061670542 -0.0042806864 0.0036514997 0.0032240152
+		 -0.0015274882 0.0062106252 0.0014945269 0.0041126609 0.0045281649 -0.0032504797 0.0031766295
+		 -0.0047274828 -0.0027223229 -0.002578795 -0.0014236569 0.002379775 0.00023764372
+		 0.0022569299 0.0022674799 -0.0032562017 0.0017840862 -0.003484726 1.6450882e-05 -0.0012631416
+		 0.00058805943 -0.0044528246 -0.00058704615 0.0048014522 -0.0014606714 -0.0015836954
+		 -0.0018945932 -0.003697753 -0.0037529469 0.0025426149 -0.0044078231 -0.0045133233
+		 0.00034987926 -0.0066283941 -0.00017184019 -0.0055546761 -0.004761219 0.00052279234
+		 -0.0059152842 0.012948215 0.0040303469 0.01068598 0.00057035685 -0.0031998754 0.0028347969
+		 -0.0055122972 0.0036914945 -0.0084270835 -0.00061053038 -0.006717205 -0.0050125718
+		 -0.00085055828 -0.006210804 0.0087786317 -0.001350522 0.0023924708 0.0031496882 -0.00023508072
+		 0.0052206516 -0.0074204206 0.0038493276 -0.0094788074 -0.00093358755 -0.0067670345
+		 -0.0046060681 -0.001173377 -0.0054660439 0.0074421763 -0.0020129681 0.011278808 -0.0010485053
+		 0.0085648298 0.0016994476 -0.0023698211 0.0059577227 -0.008513689 0.0034707785 -0.0093752742
+		 -0.0011146665 -0.0053339005 -0.0036971569 -1.5318394e-05 -0.0037629008 0.0068683624
+		 -0.0015466809 0.0064620972 0.003066957 -0.0036502481 0.0056763887 -0.008394897 0.0027121305
+		 -0.0077374578 -0.0011401772 -0.0019288659 -0.0025609732 0.0028002262 -0.0022729039
+		 0.0072103739 0.00015437603 0.0051090121 0.0033333898 -0.0037099123 0.0046077371 -0.006693244
+		 0.0017434955 -0.0042228103 -0.0010351539 0.0046691298 0.0026224852 -0.002170682 0.0029411316
+		 -0.0030790567 0.00085860491 0.0015696287 -0.00079578161 0.0036039352 -0.0020115972
+		 0.0053359866 0.00079864264 0.00095438957 0.0015674233 0.002576232 0.00074350834 0.0017496943
+		 -0.0027017593 -0.00046798587 -0.0028684139 -0.00058433414 0.0027095675 0.0016333461
+		 0.0028762221 5.8084726e-05 -0.0029138923 -5.826354e-05 0.0026640892 0.00058439374
+		 -0.0028319955 0.00046804547 0.002745986 -0.0016332865 -0.0026289225 -0.0017496347
+		 0.002949059 -0.0020181239 0.0031178594 0.00019937754 0.0028306842 0.0008534193 -0.0027484894
+		 -0.0013640821 -0.0024612546 -0.00032714009 0.0026646852 0.00032690167 -0.0029145479
+		 -0.0008533597 0.0026260614 -0.00019931793 -0.0029531121 0.0013641119 0.0027086139
+		 0.0020181537 -0.0028705597 0.0027807355 0.0070143938 -0.0096047521 0.0055655241;
+	setAttr ".uvtk[250:499]" -0.0082994103 0.0052387416 0.0035114884 0.006213665
+		 0.0039440393 0.0069259703 -0.0086121559 0.0052756965 -0.01418215 -0.0010320842 -0.012884676
+		 -0.0014601648 -0.0054907203 0.0040476918 0.0057143569 0.0042400956 0.0074259043 0.0060022473
+		 -0.0045642257 0.0044924617 -0.013101816 -0.00056493282 -0.010952294 -0.0075262189
+		 -0.0097202659 -0.0081305504 -0.010069966 -0.0018152893 -0.0020170808 0.0015653968
+		 0.0089751482 0.00055608153 0.01365304 0.0038431287 0.0033041835 0.0032441914 -0.0088415742
+		 -0.00010320544 -0.0098007917 -0.00626266 -0.00049942732 -0.0084850192 3.7252903e-05
+		 -0.0088989139 -0.0068991184 -0.0077468753 -0.0066224933 -0.0020654798 -0.00073361397
+		 0.0002476573 -0.0055095553 -0.0045725703 0.0011014938 -0.0072287917 0.0022679567
+		 -0.0080646276 -0.0033218265 -0.005926311 0.015318274 0.0027442873 0.011961758 0.00039625168
+		 0.0026988387 -0.0025280118 0.0052212477 -0.005307436 0.0057100058 -0.0053243041 0.015088439
+		 -0.0017778277 0.01215893 -0.0024678707 -0.0027827024 -0.0070039034 0.0092948079 -0.0057519674
+		 0.0079132318 -0.0053679347 -0.0035642385 -0.0061282516 -0.0038308501 -0.0069974065
+		 0.0084505081 -0.005522728 0.013813436 0.00063577294 0.012435079 0.0011052489 0.0051050186
+		 -0.0041220784 -0.0057501197 -0.0040871501 -0.0071375966 -0.0061612129 0.0046164393
+		 -0.0048034191 0.012888253 0.00012716651 0.010788083 0.00690943 0.0094904304 0.0075396299
+		 0.0096191168 0.0015017092 0.0017110705 -0.0015860796 -0.0089272261 -0.00034099817
+		 -0.013136327 -0.0040924549 -0.0029815435 -0.0036219358 0.0088508725 -0.00037607551
+		 0.0097718239 0.0056234002 0.00079017878 0.0076394975 0.00022429228 0.0080645084 0.0066782832
+		 0.0071842074 0.0062534809 0.0017931163 0.001023531 -0.00076809525 0.0056787133 0.0039145052
+		 -0.00072312355 0.0063803792 -0.0019734502 0.0072484314 0.0031881928 0.0053928792
+		 -0.014675915 -0.0031956434 -0.011343658 -0.0009573698 -0.0022773743 0.0018543005
+		 -0.0047009587 0.0044644177 -0.0053198934 0.0045307577 -0.014370799 0.0010977387 -0.011446595
+		 0.0016370118 -0.00058841705 0.0034644604 0.001411438 0.0041801333 0.0030885339 0.0046718717
+		 0.00096994638 0.0044369102 0.001547873 0.0026634932 0.0032101274 0.0020724535 0.0046784878
+		 0.0044344664 0.0021377206 0.0044484138 -0.0012395978 0.0011429787 0.00047415495 -0.00061380863
+		 0.0048716068 0.0014241338 0.0057528615 0.0037014484 0.0026542544 0.0038518906 -0.0061447024
+		 0.001755178 -0.0045368671 -0.00063478947 0.0021514893 -0.00172472 0.0060819983 0.0007339716
+		 0.0059033036 0.0026475787 0.0022708774 0.0028871298 -0.0032119751 -0.0021829605 0.0033763647
+		 -0.0024151802 0.0063974261 1.8060207e-05 0.0047533512 0.0014023185 0.0007494092 0.0017253757
+		 -0.0023729801 -0.003172338 0.0037485361 -0.002823472 0.0053921342 -0.00070291758
+		 0.0019857287 1.8835068e-05 -0.0017868876 0.00014060736 -0.0022418499 -0.0037707686
+		 0.0028908253 -0.0030301809 0.0026643276 -0.0014021993 -0.0028270483 -0.0014810562
+		 -0.0060461164 -0.001516819 -0.0079315305 -0.00026983023 -0.0087824464 -0.0017200708
+		 -0.0030608177 -0.0040732026 0.00046420097 -0.0030334592 -0.0021924376 -0.0020393729
+		 -0.0048508048 -0.0038470626 -0.0039556623 -0.0027745366 -0.013581634 -0.0032006502
+		 -0.013440013 -0.0029656887 -0.0082865357 -0.0032681823 0.0022348166 -0.0042117834
+		 -0.0026637316 -0.0043791533 -0.0042905807 -0.0048009753 0.00067090988 -0.0050505996
+		 -0.0038765669 -0.0020927787 -0.0054743886 -0.0015619397 -0.0052827001 -0.0045241117
+		 -8.8453293e-05 -0.0049341917 -0.00040537119 0.0001873374 -0.0020635724 0.0017396212
+		 -0.006480515 -0.00099515915 -0.0052239299 -0.0037479401 0.00018835068 -0.0041538477
+		 0.0070269704 7.7962875e-05 0.0054163337 0.0021831393 -0.0031406283 0.0026370883 -0.0064654946
+		 -0.00040519238 -0.0037160516 -0.002600491 0.0017006397 -0.0028431416 0.0044900179
+		 0.0034188628 -0.0032233596 0.0030676723 -0.0050207376 0.00019204617 -0.00035655499
+		 -0.0011180043 0.0046030879 -0.00092309713 0.004447639 0.0040045381 -0.0019159317
+		 0.0031240582 -0.0017984509 0.00075209141 0.0054917336 0.0040029883 0.0011784434 0.002843976
+		 0.0036020279 0.0012475252 0.005053103 -0.00020301342 0.0078243017 0.003247261 0.006216526
+		 0.0029105544 -3.516674e-06 4.3511391e-06 -2.3841858e-06 4.8279762e-06 0 1.1920929e-07
+		 -8.9406967e-07 4.7087669e-06 -4.4107437e-06 3.4570694e-06 6.5565109e-07 4.2319298e-06
+		 -4.7683716e-06 2.3841858e-06 2.0265579e-06 3.2782555e-06 -4.7087669e-06 1.013279e-06
+		 3.1590462e-06 1.9073486e-06 -4.2319298e-06 -6.5565109e-07 4.2319298e-06 6.5565109e-07
+		 -3.3378601e-06 -1.9669533e-06 4.7683716e-06 -8.3446503e-07 -1.9669533e-06 -3.2782555e-06
+		 4.8279762e-06 -2.4437904e-06 -5.9604645e-07 -4.2915344e-06 4.2319298e-06 -3.4570694e-06
+		 9.5367432e-07 -4.7087669e-06 3.516674e-06 -4.4107437e-06 2.4437904e-06 -4.8279762e-06
+		 8.3446503e-07 4.2319298e-06 2.1457672e-06 3.3378601e-06 0 5.9604645e-08 3.2782555e-06
+		 2.0861626e-06 -7.7486038e-07 4.7087669e-06 4.2915344e-06 7.7486038e-07 -2.2053719e-06
+		 4.7087669e-06 4.7683716e-06 -6.5565109e-07 -3.3378601e-06 4.2319298e-06 4.7683716e-06
+		 -2.2053719e-06 -4.2915344e-06 3.2782555e-06 4.1127205e-06 -3.3378601e-06 -4.6491623e-06
+		 2.2053719e-06 3.3974648e-06 -4.2915344e-06 -4.7683716e-06 8.3446503e-07 2.2649765e-06
+		 -4.7087669e-06 -4.2319298e-06 -7.7486038e-07 7.1525574e-07 -4.7683716e-06 -3.3974648e-06
+		 -2.0861626e-06 -7.7486038e-07 -4.2915344e-06 -2.1457672e-06 -3.3974648e-06 0.00027617812
+		 0.001464963 0.00081652403 0.0010120273 0.0020376742 0.0017992258 0.0011253655 0.0025070906
+		 -0.00093561411 -0.00043022633 0.001180321 0.00041466951 0.0026217997 0.0007905364
+		 0.0020758808 0.0013391972 0.0010338724 0.0018494725 -0.0003733933 0.0017394423 0.00016579032
+		 0.0029683411 0.0013263822 -0.00027096272 0.0027430952 -0.00037789345 0.002728045
+		 7.0750713e-05 0.0001732111 -0.0010659993 -0.0012608767 -0.00086995959 0.00068226457
+		 0.0023289621 -0.0010737181 0.0018118024 -0.00090479851 0.0031677485 0.0012539923
+		 -0.00097167492 0.002543509 -0.0014491081 0.0024354458 -0.0013622046 0.00099295378
+		 -0.0025113225 0.00018104911 0.0027596653 -0.0017592907 0.0016655922 -0.0020725727
+		 0.0030462146 0.00097951293 -0.0016214252 0.0020823777 -0.0024092793 0.0020044148
+		 -0.0018643141 0.00035434961 -0.0046069622 -0.0029316545 -0.0075531006 -0.004147768
+		 -0.0056092739 -0.0012510121 0.0030517876 -0.0023563206 0.0013014674 -0.0030807853
+		 0.0024618506 0.00052669644 -0.0021620989 0.0013748407 -0.0033223033 0.0015253425
+		 -0.0022165775 0.003564477 0.00054123998 0.0014697909 0.0011794269 -0.0025187135 0.002399087
+		 -0.0028092861 0.00076085329 -0.0037884116 0.0015487671 -7.0363283e-05 -0.0025262237
+		 0.00036638975 -0.0039067268 0.0010153055 -0.003259778 2.5629997e-05 0.00035873055
+		 -0.0030285716 0.0013560653 -0.0030837655 0.00011122227 -0.0042496324 0.00058859587
+		 -0.00075569749 -0.0026723742 -0.00080126524 -0.0040283203 -0.00025254488 -0.0039121509
+		 -0.0012524128 -0.0012190342 -0.00105685 0.00021600723 0.0066844225 -0.0029166341
+		 0.0047416091 -0.0041337013;
+	setAttr ".uvtk[500:729]" -0.00017011166 -0.0010762811 -0.0035079718 0.0010038614
+		 -0.0031561553 -0.00058954954 -0.0044490993 -0.00048267841 -0.0014563203 -0.0026000142
+		 -0.0018719435 -0.0038288832 -0.0016846955 -0.0036200285 -0.0026966333 -0.002039969
+		 -0.0039386749 0.0005017519 -0.0030099452 -0.0012751222 -0.0043277442 -0.0016510487
+		 -0.0021055639 -0.0023254752 -0.002831459 -0.0033676028 -0.0021858811 -0.0031895041
+		 -0.0047912896 -0.0014017224 -0.0075671375 0.0020560026 -0.0056244135 0.0032731891
+		 -0.0042311549 -0.00093114376 -0.002646178 -0.0018725395 -0.0037438273 -0.0026597381
+		 -0.0025372803 -0.002710104 -0.0015813112 0.0037463307 -0.0022197366 0.0016506314
+		 -0.0035794973 -0.002199769 -0.0014001131 0.00020539761 3.3974648e-05 9.4175339e-06
+		 0.0020486712 0.0066925883 0.0032650232 0.0047488809 -0.0010751486 0.019533709 -0.0070403814
+		 0.019806802 -0.012800366 0.018223956 -0.017790169 0.014940009 -0.021521837 0.010277048
+		 -0.023631036 0.0046908557 -0.023912221 -0.001272276 -0.022338361 -0.0070293844 -0.019063681
+		 -0.012017995 -0.014408603 -0.015750051 -0.0088283718 -0.01786086 -0.0028687418 -0.018143386
+		 0.0028874278 -0.016569972 0.0078767091 -0.013293654 0.011611231 -0.0086345375 0.013724893
+		 -0.0030473918 0.014010124 0.0029217452 0.012438297 0.0086888373 0.0091636777 0.013689265
+		 0.0045079887 0.01743187 -0.00025524199 0.017156996 -0.005534023 0.017851852 -0.010769069
+		 0.016883813 -0.015450299 0.014347896 -0.01912123 0.010491535 -0.021422863 0.0056906044
+		 -0.0221304 0.00041362643 -0.021173507 -0.0048236549 -0.018645704 -0.0095088184 -0.014793992
+		 -0.013182729 -0.0099958181 -0.015485972 -0.0047207326 -0.016192555 0.0005146116 -0.015233964
+		 0.0051980615 -0.012703985 0.0088718534 -0.0088502169 0.01117757 -0.004048869 0.011889279
+		 0.0012317896 0.010937035 0.0064768642 0.0084113181 0.011173636 0.004555285 0.014858678
+		 0.00071446598 0.015682124 -0.0041684806 0.016804606 -0.0091556311 0.016364068 -0.013762802
+		 0.014407545 -0.017542511 0.011125639 -0.020125985 0.0068377405 -0.021260589 0.0019611716
+		 -0.02083388 -0.0030281246 -0.018886894 -0.0076414645 -0.015609503 -0.011427104 -0.011322767
+		 -0.01401335 -0.0064469129 -0.015147865 -0.0014596507 -0.014719129 0.0031518415 -0.012770504
+		 0.0069369562 -0.0094920993 0.0095268153 -0.0052039325 0.010667998 -0.00032308698
+		 0.010247111 0.0046755224 0.0083007738 0.0093022287 0.0050153732 0.013098843 0.0016753823
+		 0.014062684 -0.0027658641 0.015613094 -0.007463038 0.015715908 -0.011960387 0.014366277
+		 -0.015823036 0.01169695 -0.018675297 0.0079663545 -0.020238489 0.0035365224 -0.020357877
+		 -0.0011608303 -0.019020408 -0.0056662261 -0.016355902 -0.0095374286 -0.01262553 -0.012395084
+		 -0.0081950575 -0.013959169 -0.0034985021 -0.014077425 0.0010055043 -0.012738764 0.0048771687
+		 -0.010074496 0.007739339 -0.0063436329 0.0093122907 -0.0019079745 0.0094386823 0.0028014928
+		 0.0081000924 0.0073233433 0.0054235756 0.011207186 0.0025738925 0.0010059057 0.0021054447
+		 0.0035554143 0.00088140368 0.0058357269 -0.00098398328 0.0076326057 -0.0033149123
+		 0.0087701529 -0.0058882236 0.0091340691 -0.0084519684 0.0086842775 -0.01075393 0.0074618459
+		 -0.012565523 0.0055867434 -0.013708621 0.0032428503 -0.014071345 0.00066113472 -0.013618693
+		 -0.0019055903 -0.012395501 -0.004207015 -0.010520622 -0.0060186684 -0.0081752213
+		 -0.007163316 -0.005587168 -0.0075268149 -0.00300912 -0.0070692301 -0.00069833547
+		 -0.0058311 0.0011113435 -0.0039343722 0.0022365451 -0.0015740981 0.00016151369 0.0003131032
+		 0.00023654103 0.00028926134 0.00028863549 0.00023716688 0.00031220913 0.00016188622
+		 0.000305444 7.0571899e-05 0.00026860833 -2.7596951e-05 0.00020566583 -0.00012296438
+		 0.00012233853 -0.00020629168 2.7284026e-05 -0.0002695322 -7.0616603e-05 -0.00030636787
+		 -0.00016136467 -0.0003131032 -0.00023663044 -0.00028926134 -0.00028848648 -0.00023716688
+		 -0.00031237304 -0.00016182661 -0.0003053695 -7.0571899e-05 -0.00026875734 2.7596951e-05
+		 -0.00020554662 0.00012296438 -0.00012247264 0.00020629168 -2.7149916e-05 0.0002695322
+		 7.0527196e-05 0.00030636787 -0.00075724721 -0.0026878715 -0.00059190392 -0.0013504624
+		 0.00095713139 0.00031703711 0.00087535381 -0.00069355965 -0.0012897849 -0.0011104941
+		 0.00044265389 0.00067055225 0.0014537871 0.00085908175 0.0015988946 0.00011736155
+		 0.00089654326 0.0013365149 0.0012510121 0.00061964989 0.0014961064 7.8320503e-05
+		 0.0002092123 -0.0016705394 0.0012598932 -0.00055837631 0.00034436584 0.00085842609
+		 0.00029212236 0.0015842319 0.00077599287 0.0010170341 0.00062778592 -9.4234943e-05
+		 0.00080084801 -0.00038266182 0.0014950633 -0.00048744678 0.00022694468 0.00098085403
+		 -0.00035169721 0.0016105175 0.00018531084 0.0012248755 0.00035893917 0.00011962652
+		 -0.00017729402 -0.00090378523 0.00086379051 -0.00070726871 0.000990659 -0.0006159544
+		 0.0013655722 -0.00094676018 -0.00036948919 0.00088894367 -0.0009919107 0.0013785958
+		 -0.00043433905 0.0012236238 2.899766e-05 0.00023251772 0.00082370639 -0.0010278821
+		 0.00073364377 -0.00062841177 0.0011304021 -0.0013219714 0.0020962358 -0.00064897537
+		 0.0012573004 -0.00072240829 -0.00043553114 0.00012028217 -0.0013468862 0.00082778931
+		 -0.00099167228 0.0010102391 -0.00031915307 0.00023162365 0.00069230795 -0.0013149977
+		 0.00041988492 -0.0009548068 0.00078570843 -0.0016581416 0.0013687015 -0.0018109679
+		 -1.9311905e-05 -0.00051170588 -0.0013027191 0.00033140182 -0.0013883114 0.00061452389
+		 -0.00064229965 0.00011885166 0.00048220158 -0.0015472174 -0.0010262728 0.00078868866
+		 -0.00072795153 0.0013329983 -0.00020390749 -0.00098001957 0.00032585859 -0.001839757
+		 -0.0016153455 0.00015419722 -0.00090572238 -8.803606e-05 0.0002117455 -0.0017014742
+		 -0.0019971728 0.00074064732 -0.00046998262 -0.00082749128 -0.00013947487 -0.0018857718
+		 -0.0013595819 0.00038844347 -0.0017399788 -0.00023245811 -0.0010904074 -0.00035601854
+		 -9.1552734e-05 -0.0017688274 -0.00073510408 -0.00066804886 -0.00058591366 -0.0018194914
+		 -0.0014384985 0.00036138296 -0.0017561913 -0.00062543154 -0.0011882484 -0.0006493926
+		 -0.00039967895 -0.0017485023 -0.00094661117 -0.0005016923 -0.00099232793 -0.0016517639
+		 -0.0014393926 -0.00010251999 -0.0016356707 -0.0010421872 -0.00119403 -0.00094687939
+		 -0.0006864965 -0.0016447306 -0.0010583997 -0.00036752224 -0.0013391972 -0.0013936162
+		 -0.00015312433 0.0026610494 -0.00017470121 0.0018926263 -0.0011052191 -0.0012271404
+		 -0.00092849135 -0.0014663935 0.00047630072 0.0016216636;
+createNode polyLayoutUV -n "polyLayoutUV68";
+	rename -uid "E0AA1D4B-492A-1451-3FB8-37A91D3D0A5D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:541]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV119";
+	rename -uid "54FA92F8-409A-3B66-559C-1E8762EC5AED";
+	setAttr ".uopa" yes;
+	setAttr -s 730 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0.59803092 0.12108123 0.59908187 0.12108123
+		 0.59908158 0.12779927 0.59803063 0.12779921 0.60013282 0.12108129 0.60013247 0.12779933
+		 0.59698004 0.12108117 0.59697974 0.12779915 0.59592909 0.12108111 0.59592879 0.12779915
+		 0.59487814 0.12108105 0.59487784 0.12779909 0.59382725 0.12108105 0.59382695 0.12779903
+		 0.012397677 0.027423382 0.011346757 0.027425289 0.011334479 0.020707369 0.012385398
+		 0.020705462 0.010295853 0.027427256 0.010283574 0.020709276 0.013448596 0.027421474
+		 0.013436317 0.020703554 0.0092449337 0.027429163 0.0092326552 0.020711243 0.0081940144
+		 0.027431071 0.0081817359 0.020713151 0.00714311 0.027432978 0.0071308315 0.020715058
+		 -0.14890099 0.02923955 -0.14783448 0.034543365 -0.15086228 0.035297632 -0.15196377
+		 0.029606834 -0.14584249 0.02883108 -0.1448139 0.033690482 -0.14613312 0.039778113
+		 -0.14917064 0.040913016 -0.15389794 0.035978764 -0.15503609 0.029952824 -0.14924675
+		 0.023877755 -0.15232038 0.023839548 -0.14278823 0.028354645 -0.14178693 0.03273946
+		 -0.14315927 0.038457662 -0.14618134 0.023919597 -0.15222806 0.041867852 -0.15693781
+		 0.036631972 -0.15812281 0.030300453 -0.15540767 0.023808479 -0.14880019 0.018521711
+		 -0.15185279 0.018071972 -0.13970697 0.027759686 -0.13880384 0.031471729 -0.1402908
+		 0.037006587 -0.14311892 0.023959503 -0.14575678 0.019018263 -0.15526021 0.04269132
+		 -0.15851447 0.023787215 -0.1549201 0.017655313 -0.14758414 0.013249256 -0.15058863
+		 0.012394637 -0.14005446 0.023984596 -0.14271605 0.019575074 -0.14459765 0.014203846
+		 -0.15800619 0.017253079 -0.15361166 0.011619337 -0.14565378 0.0081179701 -0.14864415
+		 0.0068439236 -0.13696045 0.023987383 -0.13663727 0.026890844 -0.1396699 0.020229086
+		 -0.1416204 0.015262909 -0.14275265 0.0095675364 -0.15664965 0.010877244 -0.15167958
+		 0.0057515414 -0.13663608 0.021100819 -0.13870609 0.016579434 -0.13997602 0.011121556
+		 -0.15470904 0.0048030098 0.054438353 0.37997842 0.055652857 0.37470558 0.058705509
+		 0.37515444 0.057443082 0.38083217 0.051451504 0.37902465 0.052609265 0.37420988 0.056097865
+		 0.36934936 0.059171557 0.36938676 0.061773002 0.37557024 0.06046629 0.38160658 0.052509427
+		 0.38511023 0.05550009 0.38638341 0.048473954 0.3779664 0.049568385 0.37365395 0.053032398
+		 0.36930844 0.049607873 0.38366154 0.055750549 0.36398771 0.058813274 0.36361954 0.06225884
+		 0.36941695 0.064859211 0.37597162 0.063504517 0.38234785 0.058535874 0.38747495 0.045559257
+		 0.37665075 0.046522051 0.3730008 0.049970001 0.36926937 0.046830744 0.38210824 0.052692175
+		 0.36439705 0.054682493 0.35868418 0.057710111 0.35792905 0.061885476 0.3632727 0.065365613
+		 0.36943734 0.061565638 0.38842264 0.046905547 0.3692452 0.049638093 0.36487436 0.051662207
+		 0.35953796 0.052979708 0.35344991 0.056016922 0.35231417 0.060745597 0.35724708 0.064972103
+		 0.36292419 0.043488026 0.37212995 0.0438115 0.36924326 0.04655695 0.36547023 0.048635513
+		 0.36048982 0.050006151 0.35477126 0.059074044 0.35135844 0.063785255 0.35659301 0.043487489
+		 0.36633992 0.045652777 0.36175838 0.047138184 0.35622314 0.062105954 0.35053411 -0.47830293
+		 -0.3650769 -0.47898009 -0.3618899 -0.48049867 -0.3622604 -0.47984549 -0.36527753
+		 -0.47994924 -0.35885358 -0.48146358 -0.35932726 -0.48200974 -0.36264753 -0.48137867
+		 -0.36548537 -0.47804976 -0.36834294 -0.47960261 -0.36835313 -0.48298094 -0.35987282
+		 -0.4835116 -0.36307424 -0.48290452 -0.36570978 -0.48114574 -0.36836827 -0.47824639
+		 -0.37159836 -0.4797892 -0.3714242 -0.48447576 -0.36050922 -0.48500448 -0.36355102
+		 -0.48442578 -0.36595756 -0.48268205 -0.36838692 -0.48132476 -0.37125087 -0.47883955
+		 -0.37476289 -0.48035887 -0.37443599 -0.48592606 -0.36123335 -0.48649275 -0.36407995
+		 -0.48594567 -0.36623544 -0.48421425 -0.36840743 -0.48285559 -0.37106687 -0.48187611
+		 -0.37409511 -0.4796789 -0.37779132 -0.48119432 -0.3773793 -0.48731411 -0.36200976
+		 -0.48794958 -0.36473757 -0.48746836 -0.36656189 -0.48574495 -0.36842698 -0.48438424
+		 -0.37086231 -0.48338938 -0.37371773 -0.48272237 -0.37690163 -0.48727664 -0.36843908
+		 -0.4859108 -0.37062374 -0.48489904 -0.37329102 -0.48424047 -0.37633398 -0.48898482
+		 -0.36699724 -0.48882312 -0.36844009 -0.48745084 -0.37032595 -0.48641187 -0.37281525
+		 -0.48572674 -0.37567356 -0.48898506 -0.36989129 -0.48790276 -0.37218121 -0.48716027
+		 -0.37494791 -0.74009693 -0.36279404 -0.74069011 -0.36595851 -0.73914731 -0.36613274
+		 -0.7385776 -0.36312091 -0.74088681 -0.369214 -0.73933393 -0.36920381 -0.73761177
+		 -0.36630607 -0.73706037 -0.36346179 -0.73925757 -0.35976559 -0.73774213 -0.36017764
+		 -0.74063367 -0.37248003 -0.7390911 -0.37227941 -0.73779082 -0.36918873 -0.73608094
+		 -0.36649013 -0.73554713 -0.36383927 -0.7362141 -0.36065531 -0.73995656 -0.37566704
+		 -0.73843795 -0.37529656 -0.73755789 -0.37207156 -0.73625451 -0.36917001 -0.73455226
+		 -0.36669469 -0.73403746 -0.36426598 -0.73469603 -0.36122298 -0.73898745 -0.37870339
+		 -0.73747307 -0.37822971 -0.73692685 -0.37490946 -0.73603207 -0.37184721 -0.73472232
+		 -0.36914957 -0.73302573 -0.36693329 -0.73252463 -0.36474174 -0.73320973 -0.3618834
+		 -0.73595572 -0.37768415 -0.735425 -0.37448272 -0.73451078 -0.37159944 -0.73319161
+		 -0.36913002 -0.73148572 -0.36723107 -0.73103374 -0.36537582 -0.73177624 -0.36260909
+		 -0.73446089 -0.37704775 -0.73393214 -0.374006 -0.73299086 -0.37132156 -0.73165989
+		 -0.36911792 -0.73301059 -0.37632364 -0.73244381 -0.37347707 -0.7314682 -0.3709951
+		 -0.73011345 -0.36911696 -0.7299515 -0.36766577 -0.73162252 -0.37554729 -0.73098701
+		 -0.37281942 -0.72995174 -0.37055981 0.53153706 0.059758365 0.53164244 0.059758425
+		 0.53164232 0.060431957 0.531537 0.060431957 0.53174776 0.059758425 0.5317477 0.060431957
+		 0.5318532 0.059758425 0.53185308 0.060431957 0.53195852 0.059758425 0.53195846 0.060431957
+		 -0.42724898 0.0044901967 -0.42735434 0.0044901967 -0.42735425 0.0038167238 -0.4272489
+		 0.0038167834 -0.42745969 0.0044901967 -0.4274596 0.0038167238 -0.42756504 0.0044901967
+		 -0.42756495 0.0038167238 -0.42767039 0.0044901967 -0.4276703 0.0038167238 -0.3875646
+		 0.29959235 -0.38845119 0.30345279;
+	setAttr ".uvtk[250:499]" -0.39066228 0.30314177 -0.38982061 0.2989791 -0.38534814
+		 0.30034554 -0.38625044 0.30382642 -0.38876879 0.30735916 -0.39097884 0.30733672 -0.3928858
+		 0.30288208 -0.39209068 0.29849866 -0.38319212 0.30122396 -0.38405615 0.30426168 -0.38656351
+		 0.30738452 -0.38851815 0.31127077 -0.39073229 0.31153142 -0.3932007 0.30731973 -0.39512432
+		 0.30264673 -0.39434579 0.29811937 -0.38111192 0.30217442 -0.38185817 0.3047483 -0.38435578
+		 0.30740944 -0.38630855 0.31095082 -0.38774222 0.31516057 -0.39000776 0.3157028 -0.39295286
+		 0.31174994 -0.39544013 0.30731067 -0.38214278 0.30742612 -0.38409966 0.31056422 -0.38549942
+		 0.31447518 -0.392272 0.31611788 -0.39518183 0.31195509 -0.37967187 0.30536184 -0.37990934
+		 0.30742773 -0.38188046 0.31011808 -0.38330323 0.3136524 -0.39451069 0.31644613 -0.37967139
+		 0.30950451 -0.3811782 0.31273466 0.14133549 -0.34204316 0.14217371 -0.34569007 0.14426243
+		 -0.34539586 0.14346665 -0.34146348 0.13924164 -0.34275514 0.1400947 -0.34604338 0.14247435
+		 -0.3493804 0.14456224 -0.34935886 0.14636302 -0.34515017 0.14561117 -0.3410092 0.137205
+		 -0.34358534 0.13802177 -0.34645492 0.14039099 -0.34940469 0.14223826 -0.3530758 0.14432997
+		 -0.35332167 0.14666122 -0.34934244 0.14847773 -0.34492743 0.1477415 -0.34065053 0.13523996
+		 -0.34448358 0.13594538 -0.34691501 0.13830543 -0.34942865 0.14015079 -0.3527739 0.14150584
+		 -0.3567507 0.14364624 -0.35726255 0.14642781 -0.35352772 0.14877683 -0.34933347 0.13621473
+		 -0.34944475 0.13806397 -0.35240906 0.13938689 -0.35610354 0.14578533 -0.3576543 0.14853358
+		 -0.3537212 0.13388002 -0.34749502 0.13410473 -0.34944665 0.13596731 -0.3519879 0.13731205
+		 -0.35532659 0.14790034 -0.35796401 0.13388032 -0.35140866 0.13530427 -0.35446 -0.5992977
+		 -0.0055280924 -0.59898311 -0.0035520196 -0.59996301 -0.0034541488 -0.60028177 -0.0053750277
+		 -0.59885538 -0.0015022755 -0.59984058 -0.001500845 -0.6009388 -0.0033513904 -0.60127753
+		 -0.005184114 -0.59898931 0.00055778027 -0.59997481 0.00045716763 -0.60081732 -0.0015035272
+		 -0.60191113 -0.0032303929 -0.60227454 -0.0049366951 -0.59933209 0.0025536418 -0.60032576
+		 0.0023884177 -0.60095358 0.00034576654 -0.6017881 -0.00150913 -0.60288024 -0.0030830503
+		 -0.60326296 -0.0046235323 -0.60132754 0.0021784306 -0.60192645 0.00021088123 -0.60275573
+		 -0.001516521 -0.60384619 -0.0029054284 -0.60423404 -0.004242301 -0.60232449 0.0019085407
+		 -0.60289377 4.6908855e-05 -0.60372353 -0.00152421 -0.6048075 -0.0026994348 -0.60515898
+		 -0.0038190484 -0.60330564 0.001573503 -0.60385573 -0.00014716387 -0.60469508 -0.0015304089
+		 -0.6057725 -0.0024695992 -0.60606408 -0.0033420324 -0.6049605 -0.0054323077 -0.60574913
+		 -0.0048218966 -0.60426265 0.0011751056 -0.60481209 -0.0003657937 -0.60567713 -0.0015321374
+		 -0.60517389 0.00073778629 -0.60577023 -0.00059849024 -0.60501295 0.0023518801 -0.6057871
+		 0.0017256737 -0.60606396 0.00026321411 0.36336249 -0.62732911 0.36301601 -0.62977535
+		 0.36423254 -0.62988281 0.36458367 -0.62750077 0.36288077 -0.63229358 0.36410272 -0.63229018
+		 0.36544538 -0.62999898 0.36581695 -0.62772024 0.36303556 -0.63482183 0.36425692 -0.63470173
+		 0.36531669 -0.63228357 0.36665606 -0.63013786 0.36704856 -0.62800622 0.36342835 -0.63728738
+		 0.36465776 -0.63709247 0.36547101 -0.63456893 0.36652589 -0.63227487 0.36786693 -0.63030589
+		 0.36826456 -0.62836158 0.36589271 -0.6368432 0.36667979 -0.63441062 0.36773366 -0.63226557
+		 0.369084 -0.63050085 0.36945099 -0.62876886 0.36711794 -0.63652599 0.36788595 -0.63422322
+		 0.36894143 -0.63225937 0.36831987 -0.63614285 0.36909473 -0.63400936 0.37015861 -0.63225865
+		 0.37029791 -0.6307891 0.36948699 -0.63571739 0.37029719 -0.63371992 0.14176136 -0.075158119
+		 0.14082992 -0.075460732 0.14225107 -0.078249991 0.14003754 -0.076036453 0.14274079
+		 -0.075158119 0.13946187 -0.076828778 0.14367229 -0.075460792 0.1391592 -0.077760279
+		 0.14446461 -0.076036453 0.1391592 -0.078739643 0.14504027 -0.076828837 0.13946182
+		 -0.079671144 0.14534295 -0.077760339 0.14003748 -0.080463529 0.14534295 -0.078739703
+		 0.14082986 -0.08103919 0.14504027 -0.079671204 0.1417613 -0.081341863 0.14446455
+		 -0.080463529 0.14274073 -0.081341863 0.14367223 -0.08103925 0.0049569011 -0.16740566
+		 0.0046542287 -0.16833711 0.0077461004 -0.16882688 0.0046542287 -0.16931653 0.0055325627
+		 -0.16661331 0.0049568415 -0.17024803 0.0063249469 -0.16603762 0.0055325627 -0.17104042
+		 0.0072564483 -0.16573498 0.0063248873 -0.17161608 0.0082358718 -0.16573498 0.0072563887
+		 -0.17191875 0.0091673136 -0.16603765 0.0082358122 -0.17191875 0.0099596977 -0.16661334
+		 0.009167254 -0.17161614 0.010535359 -0.16740569 0.0099596381 -0.17104042 0.010838032
+		 -0.16833717 0.010535359 -0.17024809 0.010837972 -0.16931659 -0.1988634 0.032596529
+		 -0.1990256 0.032678783 -0.19936736 0.032207489 -0.19904415 0.03204152 -0.19868539
+		 0.033150375 -0.19915462 0.032807171 -0.19962467 0.032464266 -0.1997139 0.031737655
+		 -0.1992337 0.031483948 -0.19868365 0.032568634 -0.19868311 0.031984806 -0.19923794
+		 0.032968998 -0.19979231 0.032787502 -0.20009568 0.032118917 -0.20007087 0.03126806
+		 -0.19945084 0.030930996 -0.19868378 0.031396687 -0.19850402 0.03259784 -0.19832247
+		 0.032043457 -0.19926716 0.033148646 -0.19985099 0.03314811 -0.2003506 0.032599151
+		 -0.20056556 0.031765252 -0.19813415 0.0314852 -0.19834217 0.032681167 -0.19799927
+		 0.032211125 -0.19923925 0.033328414 -0.19979428 0.033509135 -0.20043908 0.033148766
+		 -0.20090047 0.032382667 -0.20103014 0.031399935 -0.20043923 0.030805618 -0.19765392
+		 0.031740069 -0.19821379 0.032810152 -0.19774249 0.032468438 -0.199157 0.033490598
+		 -0.19962829 0.033832371 -0.2003518 0.033698678 -0.19791764 0.030935317 -0.19730029
+		 0.031270206 -0.19727269 0.032121897 -0.19813153 0.032972395 -0.19757652 0.032791615
+		 -0.19902863 0.033619583 -0.19937153 0.034089625 -0.20009808 0.034178913 -0.19680306
+		 0.031764895 -0.19701898 0.032602072 -0.19810364 0.033152103 -0.19751981 0.03315264
+		 -0.19886677 0.03370291 -0.1990483 0.034257293 -0.19971687 0.03456068 -0.20056772
+		 0.034535885 -0.20090479 0.033915818 -0.19693494 0.030805647 -0.19634062 0.031396568;
+	setAttr ".uvtk[500:729]" -0.19646603 0.032384932 -0.19693172 0.033151984 -0.19813284
+		 0.033331752 -0.19757849 0.033513308 -0.19868714 0.033732176 -0.19868767 0.034316003
+		 -0.19923665 0.03481555 -0.2000705 0.035030544 -0.1970202 0.033701658 -0.19821617
+		 0.033493638 -0.19774613 0.033836484 -0.19850738 0.033704221 -0.19832665 0.03425926
+		 -0.198687 0.034904063 -0.19945313 0.035365462 -0.20043585 0.035495102 -0.20103016
+		 0.034904182 -0.1972751 0.034181833 -0.19834518 0.033621967 -0.19800344 0.034093261
+		 -0.1981371 0.034816802 -0.19647032 0.033918142 -0.19680524 0.034535468 -0.1976569
+		 0.034563065 -0.19729993 0.03503269 -0.19791996 0.035369754 -0.19634065 0.034900844
+		 -0.19693157 0.035495162 0.033314943 0.01577419 0.033302665 0.018761948 0.032367587
+		 0.021599472 0.030601233 0.024009109 0.028176486 0.025754988 0.025330663 0.026666045
+		 0.022342399 0.026653051 0.019504324 0.025717139 0.017094299 0.023949951 0.015348271
+		 0.021524429 0.014437243 0.018678084 0.014450379 0.015689537 0.015386373 0.012851417
+		 0.017153502 0.010441586 0.019578725 0.0086959302 0.022424549 0.0077853501 0.025412261
+		 0.0077989101 0.028249323 0.0087352395 0.030658126 0.010502666 0.032403022 0.012928337
+		 0.036195576 0.015310004 0.036185771 0.019210637 0.03497085 0.022917449 0.032669604
+		 0.026067287 0.029507339 0.028351694 0.025793761 0.029546916 0.021892533 0.029535919
+		 0.018185645 0.028319836 0.015035957 0.026017755 0.012751758 0.022855073 0.011556633
+		 0.019141331 0.011567555 0.015240043 0.012783483 0.011533067 0.015085414 0.0083833337
+		 0.018247992 0.0060992092 0.021961614 0.0049044043 0.02586253 0.0049159378 0.029568702
+		 0.0061326399 0.032717228 0.0084351748 0.035000175 0.011597648 0.039510071 0.014776781
+		 0.03950268 0.019727364 0.037965745 0.024433792 0.035049289 0.028435022 0.031038731
+		 0.03133899 0.02632688 0.032861263 0.021375224 0.032852769 0.016668603 0.031314462
+		 0.012667745 0.028396964 0.0097642541 0.024385989 0.0082422718 0.019674137 0.008250773
+		 0.014722571 0.0097889602 0.010015935 0.012706347 0.0060150027 0.016717374 0.0031115413
+		 0.021429315 0.001589939 0.026380688 0.0015992075 0.031086445 0.0031383112 0.035085917
+		 0.0060561374 0.037988096 0.010066479 0.042787462 0.014249101 0.042782664 0.020237893
+		 0.04092747 0.025932729 0.037402838 0.030775845 0.032553583 0.034292638 0.026854664
+		 0.036138505 0.020864248 0.036132723 0.015168935 0.034275889 0.010326281 0.030749977
+		 0.0068102404 0.025900215 0.0049649216 0.020201355 0.0049709231 0.014211178 0.006827727
+		 0.008515954 0.010353662 0.0036732852 0.01520361 0.00015735254 0.020902723 -0.0016874745
+		 0.026892737 -0.0016805269 0.032586902 0.00017726421 0.037427843 0.0037034228 0.040942281
+		 0.0085521638 0.046554595 0.013628438 0.046557277 0.02081117 0.044340283 0.027644187
+		 0.040119648 0.033458173 0.034308344 0.037683398 0.027475432 0.039905638 0.020290256
+		 0.039907247 0.013456449 0.037688166 0.0076430179 0.033465952 0.0034190137 0.027654022
+		 0.0011977102 0.020821303 0.0011965418 0.013636559 0.0034156907 0.0068030283 0.0076380707
+		 0.00098969787 0.013450429 -0.0032341536 0.020283595 -0.005454802 0.027468264 -0.0054547763
+		 0.034300596 -0.0032344498 0.040111721 0.00098799914 0.044333637 0.0067984089 0.57880688
+		 -0.19448844 0.57847691 -0.19550329 0.57847691 -0.1965704 0.57880652 -0.19758534 0.57943368
+		 -0.19844872 0.58029687 -0.19907606 0.58131176 -0.19940594 0.58237886 -0.19940606
+		 0.58339381 -0.19907638 0.58425725 -0.19844925 0.58488452 -0.197586 0.58521438 -0.19657114
+		 0.5852145 -0.19550401 0.58488488 -0.19448909 0.58425772 -0.19362569 0.58339447 -0.19299835
+		 0.58237964 -0.1926685 0.58131248 -0.19266838 0.58029753 -0.19299802 0.57943416 -0.19362518
+		 0.45707202 -0.27700102 0.45732465 -0.27723485 0.45746335 -0.27703875 0.4572542 -0.27684283
+		 0.45763087 -0.27739584 0.45771885 -0.27717024 0.45759991 -0.27684414 0.45744148 -0.27669227
+		 0.45779487 -0.27694261 0.45773655 -0.27665049 0.45763093 -0.27654767 0.45711201 -0.27659279
+		 0.45733431 -0.27649802 0.45801026 -0.27721679 0.45801207 -0.27697688 0.45786786 -0.27671641
+		 0.45787412 -0.27645814 0.45782143 -0.27640629 0.45756143 -0.27641708 0.45830238 -0.27717185
+		 0.45822936 -0.27694315 0.45801303 -0.27673912 0.45794016 -0.27649134 0.45801264 -0.2762664
+		 0.45778716 -0.27634078 0.45729679 -0.27627313 0.45753664 -0.27627039 0.45855945 -0.27704191
+		 0.45842522 -0.27684516 0.45815817 -0.27671641 0.45801321 -0.27650273 0.457775 -0.27626783
+		 0.45733127 -0.27604842 0.45755911 -0.27612287 0.45838755 -0.27739704 0.45869505 -0.27724016
+		 0.45877057 -0.27684689 0.45858371 -0.27669382 0.45828968 -0.27665055 0.45808619 -0.27649122
+		 0.45778617 -0.27619463 0.45743281 -0.27585113 0.45762625 -0.27599031 0.45895189 -0.277008
+		 0.4589144 -0.27659476 0.45869064 -0.27649921 0.45839521 -0.27654785 0.45815212 -0.27645791
+		 0.45781958 -0.27612847 0.45723775 -0.27571064 0.45710468 -0.2759642 0.45758736 -0.27569187
+		 0.45773089 -0.27588433 0.45846409 -0.27641714 0.45820463 -0.27640599 0.45787197 -0.27607572
+		 0.45743546 -0.27550465 0.45778891 -0.27558815 0.45786381 -0.27581596 0.45872808 -0.27627343
+		 0.45848823 -0.27626985 0.45823842 -0.27634037 0.45793825 -0.27604175 0.45801193 -0.27555251
+		 0.4580116 -0.2757923 0.45869344 -0.27604818 0.45846516 -0.27612215 0.45825014 -0.27626723
+		 0.45801181 -0.27602994 0.45823497 -0.2755881 0.45815948 -0.27581567 0.4585914 -0.27585077
+		 0.45839748 -0.27598935 0.45823845 -0.27619398 0.45808551 -0.27604151 0.45843658 -0.27569181
+		 0.45829266 -0.27588367 0.45891917 -0.27596372 0.45878673 -0.2757107 0.45820463 -0.27612776
+		 0.45815191 -0.27607518 0.45858866 -0.27550381;
+createNode polyAutoProj -n "polyAutoProj66";
+	rename -uid "1834B743-40A1-CC3E-ADD0-3D995C081C36";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:541]";
+	setAttr ".ix" -type "matrix" 0.13151802581605504 0.22553215996773693 -0.023244864184745969 0
+		 0.086773958935475112 -0.025243406054429183 0.24603885974916312 0 0.20946445746556774 -0.13114909559844862 -0.087330554719393758 0
+		 15.13654499554846 -1.3560645872557404 8.7734972685400994 1;
+	setAttr ".s" -type "double3" 0.57010565106920552 0.57010565106920552 0.57010565106920552 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode groupId -n "groupId168";
+	rename -uid "5C789644-4F62-F4C0-8AF6-E2A86AA4A900";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts24";
+	rename -uid "2653E9D9-4CE4-3588-893C-E59938BEA9C6";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:541]";
+createNode polyTweakUV -n "polyTweakUV120";
+	rename -uid "AB15D490-48F1-1F3A-1DEA-DB9C1A1D9C66";
+	setAttr ".uopa" yes;
+	setAttr -s 730 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.0020909309 0.006370008 -0.0010324121
+		 0.0061986446 -0.00022043288 -0.0068055987 -0.0012789294 -0.0066341162 0.0052443147
+		 0.0059523582 0.0060562044 -0.0070518255 -0.00040587783 0.0065020919 0.00040598214
+		 -0.0065020919 0.0012788922 0.0066340566 0.0020908825 -0.006370008 0.00022047944 0.0068054795
+		 0.0010324791 -0.006198585 -0.0060562701 0.0070518851 -0.0052443873 -0.0059522986
+		 -0.00035876036 -0.0066049695 -0.0014206767 -0.0065677762 -0.0019423664 0.0064145923
+		 -0.00088045001 0.006377399 0.00026096404 -0.0064911842 -0.00026087463 0.0064912438
+		 0.0059213936 -0.0065672994 0.0053995848 0.0064150095 0.0019423366 -0.0064145327 0.0014206618
+		 0.0065677166 0.00088043511 -0.0063773394 0.00035873055 0.0066049099 -0.0053995848
+		 -0.0064150691 -0.0059213936 0.0065672994 -0.0122087 -0.0081268996 -0.00094527006
+		 -0.011821151 0.0018318892 -0.011618137 -0.0098516345 -0.0079647601 -0.012202978 -0.0072365701
+		 -0.0013945699 -0.010197282 0.016376138 -0.0053303242 0.019155025 -0.0043894351 0.0061728358
+		 -0.0091542304 -0.0059407353 -0.0064568371 -0.016639709 0.00059948862 -0.014477015
+		 0.00092925131 -0.0091328621 -0.0056867599 0.0013213754 -0.0070070624 0.015375495
+		 -0.0042039156 -0.016474009 0.00028760731 0.023360372 -0.001078546 0.011318862 -0.0038836002
+		 -0.001324594 -0.0033184588 -0.010803521 0.0013176203 -0.013588786 0.0091390535 -0.011321247
+		 0.0095697567 -0.0020891428 -0.0041357428 0.0072898865 -0.0046207309 0.016480088 -0.0008354485
+		 -0.013222873 -6.6071749e-05 -0.013535202 0.007675387 0.02862674 0.0052109063 -0.0064821839
+		 0.0017982572 -0.0075573921 0.0087475777 -0.0032936335 0.01243484 -0.00066691637 0.012630392
+		 -0.0062116385 -0.00058953464 -0.010385215 0.0054326057 -0.0036766529 0.010395132
+		 -0.0031501651 0.0064436197 0.0034234524 0.010605846 0.013701797 0.0058159977 0.016357303
+		 0.0049059214 0.0053582788 -0.0013661087 0.0090560317 -0.0042381585 -0.0034171343
+		 0.0029189289 -0.0010207891 0.0068008527 0.012632966 0.0045725554 0.0081871152 0.0058173761
+		 0.020247161 0.0016353864 0.0077786446 0.0014684647 0.004847765 0.0034250915 0.013507307
+		 0.00086114928 0.025032878 -0.0045185941 0.0025219917 -0.012397528 0.013498545 -0.008778438
+		 0.011179507 -0.0088199675 -0.00021624565 -0.012215704 0.0030019283 -0.010768414 0.01348722
+		 -0.0077393949 0.017160118 -0.00013691187 0.015001416 -7.3388219e-05 0.0073491931
+		 -0.00763008 -0.0044416189 -0.0098344982 -0.015290499 -0.0063077807 -0.018133104 -0.0050223768
+		 0.00043347478 -0.0076313317 0.010375828 -0.005969584 0.016991377 -0.00025375187 -0.014043778
+		 -0.0054526031 0.013337493 0.0084640756 0.011038005 0.0086899847 0.011334121 -9.0286136e-05
+		 0.0028543472 -0.0049661696 -0.0093790293 -0.0046981275 -0.022221744 -0.0013900995
+		 -0.0053081214 -0.0047546327 0.0034561753 -0.003989622 0.013736814 -0.00037670135
+		 -0.014763445 -0.0021433532 0.013284862 0.0071491748 0.0027533174 0.011826247 8.8214874e-05
+		 0.011999447 0.0072033405 0.0075474828 0.007021904 -0.00020684302 -0.027231336 0.0051103532
+		 0.0067177713 -0.00038914382 0.010169506 0.0051276088 0.0031055212 0.009790875 -0.013739109
+		 0.0048214123 -0.016341329 0.0042576101 -0.0041150451 0.0098887384 0.0026892424 0.0047655776
+		 -0.0076439083 -0.0031375885 -0.004866451 -0.00022402406 0.0030644536 0.0030388981
+		 0.00030383468 0.0061389804 -0.012907982 0.0032993741 -0.020357549 0.0013049124 -0.0090832114
+		 0.0049597472 -0.0082056224 0.0025410652 -0.0058064461 0.0032464713 -0.014165282 -0.00048290938
+		 -0.025406301 -0.0046460303 3.2782555e-06 0.00026524067 -0.0074011683 0.00094151497
+		 -0.0051489472 -0.0025339127 0.0021058917 -0.0019605756 -0.016999781 0.0065494776
+		 -0.014746726 0.0023903251 -0.0030857325 -0.0045982003 0.003965795 -0.0034127235 0.003706038
+		 0.0023676157 0.0057974458 0.0015360713 -0.012757599 -0.00029617548 -0.0016184449
+		 -0.0054830909 0.00515306 -0.0041648746 0.0075654387 0.00069582462 0.0031781793 0.0048756599
+		 0.0054463148 0.0053674579 -0.011214554 -0.0017402768 -0.0011481047 -0.005337894 0.0052498579
+		 -0.0042874813 0.0085815191 -9.5546246e-05 0.007283926 0.0050871372 -0.0013698936
+		 0.0052756071 0.0011838675 0.0068234205 -0.010303438 -0.0020152926 -0.00208354 -0.0042699575
+		 0.0038617849 -0.003870666 0.0084396601 -0.00077879429 0.0082769394 0.004217267 0.0031913519
+		 0.0070168376 -0.0088037252 0.00097298622 -0.0061864257 0.0030283928 -0.010204852
+		 -0.00093561411 -0.004554987 -0.0031420588 0.00061440468 -0.0031350255 0.0067649484
+		 -0.001288116 0.0080313087 0.0029427409 0.0042895079 0.0061670542 -0.004280746 0.0036514401
+		 0.0032240748 -0.0015274882 0.0062106848 0.0014945269 0.0041126013 0.0045281649 -0.0032505393
+		 0.0031766295 -0.0047274232 -0.0027223229 -0.002578795 -0.0014236569 0.002379775 0.00023770332
+		 0.0022569895 0.0022674799 -0.0032562017 0.0017841458 -0.003484726 1.6450882e-05 -0.0012632012
+		 0.00058811903 -0.004452765 -0.00058698654 0.0048014522 -0.0014606714 -0.0015836954
+		 -0.0018945336 -0.0036978126 -0.0037530065 0.0025426149 -0.0044078231 -0.0045134425
+		 0.00034981966 -0.0066284537 -0.0001718998 -0.0055545568 -0.004761219 0.00052285194
+		 -0.0059153438 0.012948275 0.0040302873 0.010685861 0.00057029724 -0.0031998754 0.0028347373
+		 -0.0055124164 0.0036914349 -0.0084270239 -0.00061053038 -0.0067172647 -0.0050125718
+		 -0.00085055828 -0.0062108636 0.0087786317 -0.001350522 0.0023924708 0.0031496882
+		 -0.00023496151 0.0052206516 -0.0074204206 0.0038493276 -0.0094789267 -0.00093358755
+		 -0.0067670941 -0.0046061277 -0.0011734962 -0.0054659843 0.0074422359 -0.0020129681
+		 0.011278927 -0.0010484457 0.008564949 0.0016995072 -0.0023698211 0.0059578419 -0.008513689
+		 0.0034708381 -0.0093753338 -0.0011146665 -0.0053339601 -0.0036970973 -1.5318394e-05
+		 -0.0037629008 0.0068683624 -0.0015467405 0.0064621568 0.0030668974 -0.0036501884
+		 0.0056763887 -0.0083947778 0.0027120709 -0.0077375174 -0.0011402369 -0.0019288063
+		 -0.0025609732 0.002800107 -0.0022729039 0.0072103143 0.00015431643 0.0051090717 0.0033334494
+		 -0.0037098527 0.0046077967 -0.006693244 0.0017435551 -0.0042228699 -0.0010351539
+		 0.0046690702 0.0026224852 -0.002170682 0.0029411912 -0.0030790567 0.00085866451 0.0015696287
+		 -0.00079578161 0.003603816 -0.0020116568 0.0053359866 0.00079870224 0.00095450878
+		 0.0015674829 0.002576232 0.00074350834 0.0017496645 -0.0027016997 -0.00046807528
+		 -0.0028684139 -0.00058436394 0.0027096272 0.0016333461 0.0028762817 5.8144331e-05
+		 -0.0029140115 -5.8144331e-05 0.0026640892 0.00058436394 -0.0028319955 0.00046807528
+		 0.002745986 -0.0016333759 -0.0026289225 -0.0017496347 0.002949059 -0.0020180941 0.003117919
+		 0.00019943714 0.0028306246 0.0008533895 -0.0027486086 -0.0013641417 -0.0024613142
+		 -0.00032699108 0.0026647449 0.00032696128 -0.0029145479 -0.0008534193 0.0026260614
+		 -0.00019949675 -0.0029531717 0.0013641715 0.0027087331 0.0020181537 -0.0028705001
+		 0.0027809739 0.0070145726 -0.0096048117 0.0055654347;
+	setAttr ".uvtk[250:499]" -0.0082994103 0.0052387118 0.0035116076 0.006213516
+		 0.0039442778 0.0069260597 -0.0086120963 0.0052756369 -0.01418227 -0.0010320246 -0.012884915
+		 -0.001460135 -0.0054907799 0.0040476322 0.0057144165 0.0042401552 0.0074259639 0.0060024261
+		 -0.0045642257 0.0044924617 -0.013101697 -0.00056487322 -0.010952353 -0.0075262785
+		 -0.0097203851 -0.0081307292 -0.010069907 -0.0018152893 -0.0020170212 0.0015652776
+		 0.0089752078 0.00055593252 0.013652921 0.0038431883 0.0033042431 0.0032441318 -0.0088416934
+		 -0.00010311604 -0.0098007321 -0.0062627196 -0.00049930811 -0.0084851384 3.7252903e-05
+		 -0.0088989139 -0.0068992376 -0.0077468157 -0.0066226125 -0.0020655096 -0.00073367357
+		 0.00024777651 -0.0055096149 -0.0045724511 0.001101613 -0.0072287321 0.0022678375
+		 -0.0080646873 -0.0033218861 -0.0059264898 0.015318274 0.0027444065 0.011961818 0.00039637089
+		 0.0026988983 -0.0025280714 0.0052212477 -0.005307436 0.0057099462 -0.0053241849 0.015088439
+		 -0.0017779469 0.012158751 -0.0024679899 -0.0027828813 -0.0070040822 0.0092946291
+		 -0.0057520866 0.0079129934 -0.0053680539 -0.0035641789 -0.0061283112 -0.0038309097
+		 -0.0069974065 0.0084503889 -0.0055227876 0.013813436 0.00063583255 0.012435019 0.0011053383
+		 0.005104959 -0.0041219592 -0.0057501793 -0.0040872097 -0.0071377158 -0.0061613321
+		 0.0046164393 -0.0048033595 0.012888491 0.00012722611 0.010787964 0.0069094002 0.0094902515
+		 0.0075396895 0.0096190572 0.0015017986 0.001711309 -0.0015861988 -0.0089270473 -0.00034081936
+		 -0.013136208 -0.0040926933 -0.0029814839 -0.0036220551 0.0088509321 -0.0003760457
+		 0.0097717047 0.0056233704 0.00079011917 0.0076397657 0.00022441149 0.0080644488 0.0066782832
+		 0.0071842968 0.0062534213 0.0017932057 0.0010234714 -0.00076806545 0.0056787133 0.0039145052
+		 -0.00072312355 0.0063804984 -0.0019733906 0.0072484016 0.0031884313 0.0053929389
+		 -0.014675915 -0.0031958818 -0.011343598 -0.00095734 -0.0022773147 0.0018541813 -0.0047010183
+		 0.0044645965 -0.0053196549 0.0045307875 -0.014370799 0.0010977685 -0.011446476 0.0016370416
+		 -0.00058835745 0.0034644604 0.0014114976 0.0041798949 0.0030884743 0.0046718717 0.00096976757
+		 0.0044369102 0.001547873 0.0026633143 0.0032102466 0.0020723343 0.0046783686 0.0044343472
+		 0.0021374226 0.0044484138 -0.001239419 0.0011428595 0.00047415495 -0.00061398745
+		 0.004871726 0.0014240146 0.0057528019 0.0037013888 0.0026540756 0.0038519502 -0.006144464
+		 0.0017550588 -0.0045368671 -0.00063508749 0.0021514893 -0.0017247796 0.0060821176
+		 0.00073385239 0.0059031844 0.0026476979 0.0022708178 0.0028873086 -0.0032120943 -0.0021829009
+		 0.0033764243 -0.0024150014 0.0063974261 1.8000603e-05 0.0047532916 0.0014023781 0.00074958801
+		 0.0017254949 -0.0023729801 -0.003172338 0.0037485361 -0.0028234124 0.0053921342 -0.00070297718
+		 0.0019855499 1.8835068e-05 -0.0017870069 0.00014072657 -0.0022417307 -0.0037707686
+		 0.0028908253 -0.0030302405 0.0026644468 -0.0014021993 -0.0028271675 -0.0014808774
+		 -0.0060458779 -0.0015166402 -0.0079318285 -0.00026983023 -0.0087824464 -0.0017198324
+		 -0.0030605793 -0.004073143 0.00046408176 -0.0030334592 -0.0021925569 -0.0020393133
+		 -0.0048508048 -0.0038471222 -0.0039556623 -0.0027744174 -0.013581693 -0.0032006502
+		 -0.013439834 -0.0029655695 -0.0082861781 -0.0032680631 0.0022348762 -0.0042116642
+		 -0.0026637316 -0.004379034 -0.0042907596 -0.0048010349 0.00067102909 -0.0050506592
+		 -0.0038763881 -0.0020927787 -0.0054741502 -0.0015619397 -0.0052827597 -0.0045241117
+		 -8.8632107e-05 -0.0049340725 -0.00040543079 0.00018727779 -0.0020638108 0.0017396212
+		 -0.006480515 -0.00099515915 -0.0052237511 -0.0037477612 0.00018852949 -0.0041537285
+		 0.0070267916 7.802248e-05 0.0054162741 0.0021831989 -0.0031408072 0.0026369691 -0.006465435
+		 -0.00040519238 -0.0037158728 -0.0026004314 0.0017006397 -0.002843082 0.0044897199
+		 0.0034188032 -0.0032232404 0.0030676126 -0.0050207973 0.00019198656 -0.00035631657
+		 -0.0011180639 0.0046029687 -0.00092309713 0.004447639 0.0040045381 -0.0019158125
+		 0.0031241179 -0.0017984509 0.0007520318 0.0054916143 0.0040030479 0.0011786222 0.0028439164
+		 0.0036022067 0.0012474656 0.0050530434 -0.00020307302 0.0078240633 0.0032473207 0.0062164664
+		 0.0029104352 -3.4570694e-06 4.3511391e-06 -2.3245811e-06 4.7683716e-06 -5.9604645e-08
+		 0 -1.013279e-06 4.5895576e-06 -4.3511391e-06 3.4570694e-06 5.9604645e-07 4.1723251e-06
+		 -4.7087669e-06 2.3841858e-06 2.0265579e-06 3.2782555e-06 -4.7683716e-06 9.5367432e-07
+		 3.3378601e-06 1.9073486e-06 -4.1127205e-06 -6.5565109e-07 4.1723251e-06 6.5565109e-07
+		 -3.2782555e-06 -1.9073486e-06 4.5895576e-06 -8.9406967e-07 -1.9073486e-06 -3.2782555e-06
+		 4.7683716e-06 -2.4437904e-06 -5.9604645e-07 -4.1723251e-06 4.4107437e-06 -3.3974648e-06
+		 8.3446503e-07 -4.5895576e-06 3.516674e-06 -4.3511391e-06 2.3245811e-06 -4.7683716e-06
+		 7.1525574e-07 4.2319298e-06 2.0861626e-06 3.3974648e-06 5.9604645e-08 0 3.3378601e-06
+		 2.0861626e-06 -6.5565109e-07 4.529953e-06 4.2319298e-06 8.3446503e-07 -2.2649765e-06
+		 4.7087669e-06 4.7683716e-06 -7.1525574e-07 -3.3974648e-06 4.2915344e-06 4.6491623e-06
+		 -2.2649765e-06 -4.0531158e-06 3.2186508e-06 4.1723251e-06 -3.2782555e-06 -4.7087669e-06
+		 2.2053719e-06 3.2782555e-06 -4.2319298e-06 -4.6491623e-06 7.7486038e-07 2.0861626e-06
+		 -4.7087669e-06 -4.2319298e-06 -8.3446503e-07 8.3446503e-07 -4.5895576e-06 -3.2186508e-06
+		 -2.0265579e-06 -8.3446503e-07 -4.2319298e-06 -2.2053719e-06 -3.3974648e-06 0.00027614832
+		 0.0014651418 0.00081652403 0.0010121465 0.002037853 0.0017991662 0.0011255741 0.0025070608
+		 -0.00093558431 -0.00043022633 0.0011804402 0.00041484833 0.0026217997 0.00079041719
+		 0.0020759702 0.001339227 0.0010336637 0.0018495321 -0.00037327409 0.0017396808 0.00016587973
+		 0.0029682815 0.0013263226 -0.00027084351 0.0027429163 -0.00037777424 0.0027278364
+		 7.0571899e-05 0.00017333031 -0.0010659695 -0.001260668 -0.0008701086 0.00068229437
+		 0.0023290515 -0.0010739267 0.0018119216 -0.00090476871 0.0031677485 0.0012539923
+		 -0.00097167492 0.002543509 -0.0014491081 0.0024354458 -0.0013622046 0.00099289417
+		 -0.0025113225 0.00018107891 0.0027597249 -0.0017590821 0.0016657114 -0.0020725429
+		 0.003046155 0.00097945333 -0.0016214252 0.0020821989 -0.002409339 0.0020044446 -0.0018643141
+		 0.00035429001 -0.0046070814 -0.0029316843 -0.0075530112 -0.0041476786 -0.0056095123
+		 -0.0012508035 0.003051877 -0.002356261 0.0013017058 -0.0030808151 0.002461791 0.00052681565
+		 -0.0021621585 0.0013748109 -0.0033223629 0.0015253425 -0.0022168159 0.0035645366
+		 0.00054112077 0.0014699101 0.0011795163 -0.0025187731 0.0023992062 -0.0028092563
+		 0.0007610321 -0.0037885606 0.0015489459 -7.0363283e-05 -0.0025262237 0.00036653876
+		 -0.0039067864 0.0010153055 -0.003259778 2.5451183e-05 0.00035881996 -0.0030285716
+		 0.0013561249 -0.0030837953 0.00011128187 -0.004249543 0.00058865547 -0.00075575709
+		 -0.0026723742 -0.00080114603 -0.0040284395 -0.00025251508 -0.0039121509 -0.0012525022
+		 -0.001219213 -0.0010569394 0.00021588802 0.0066845417 -0.0029167831 0.0047414899
+		 -0.0041335225;
+	setAttr ".uvtk[500:729]" -0.00017011166 -0.0010763407 -0.003508091 0.001003921
+		 -0.0031561255 -0.00058954954 -0.0044492781 -0.00048267841 -0.0014562309 -0.0026000738
+		 -0.0018718839 -0.0038289428 -0.0016847253 -0.0036202669 -0.0026966035 -0.0020398498
+		 -0.0039387345 0.00050163269 -0.0030098855 -0.0012751818 -0.0043278039 -0.0016511083
+		 -0.0021058023 -0.0023254752 -0.002831459 -0.0033676624 -0.0021859407 -0.0031894445
+		 -0.0047914088 -0.001401782 -0.0075671673 0.0020560026 -0.0056245327 0.0032730699
+		 -0.0042312741 -0.00093108416 -0.0026459992 -0.0018725395 -0.0037438571 -0.0026597977
+		 -0.0025373101 -0.0027102828 -0.0015813112 0.0037463307 -0.002219975 0.0016505122
+		 -0.0035793483 -0.002199769 -0.0014000535 0.00020551682 3.3944845e-05 9.4175339e-06
+		 0.0020486712 0.0066926479 0.0032649636 0.0047490001 -0.0010752082 0.019533575 -0.0070404559
+		 0.01980684 -0.012800366 0.018223807 -0.017790258 0.014940009 -0.021521866 0.010277107
+		 -0.023631126 0.0046909153 -0.023912251 -0.0012722462 -0.02233845 -0.0070295036 -0.019063652
+		 -0.012017995 -0.014408663 -0.015750229 -0.0088284165 -0.01786086 -0.0028687716 -0.018143564
+		 0.0028873235 -0.016569942 0.0078769326 -0.013293773 0.011611186 -0.0086345226 0.013724886
+		 -0.0030473322 0.014010064 0.0029218197 0.012438506 0.0086888373 0.0091635734 0.013689116
+		 0.0045079589 0.017431907 -0.00025516748 0.017156869 -0.0055341423 0.017852046 -0.010769129
+		 0.016883761 -0.015450358 0.01434809 -0.019121081 0.01049158 -0.021422863 0.0056906492
+		 -0.022130251 0.00041344762 -0.021173567 -0.0048237443 -0.018645734 -0.009508878 -0.014794096
+		 -0.013182819 -0.0099957287 -0.015485972 -0.0047206581 -0.016192675 0.0005146116 -0.015234053
+		 0.0051980615 -0.012704074 0.0088718757 -0.0088503659 0.011177503 -0.0040488094 0.011889301
+		 0.0012318343 0.010937028 0.0064770579 0.0084113181 0.011173584 0.0045553446 0.014858879
+		 0.00071427226 0.015682336 -0.0041687191 0.016804606 -0.0091556609 0.016364142 -0.013762802
+		 0.014407448 -0.017542392 0.011125743 -0.020125896 0.0068377852 -0.02126047 0.0019611418
+		 -0.02083385 -0.0030281842 -0.018886894 -0.0076414347 -0.015609473 -0.011426955 -0.011322945
+		 -0.014013439 -0.0064470172 -0.015147716 -0.0014594793 -0.014719099 0.0031519532 -0.012770534
+		 0.0069369972 -0.0094920695 0.0095268264 -0.0052038729 0.010668039 -0.00032296777
+		 0.010247216 0.0046754405 0.0083009377 0.0093023181 0.005015254 0.013098843 0.0016753376
+		 0.014062645 -0.0027660728 0.015613053 -0.0074630678 0.015715726 -0.011960417 0.014366299
+		 -0.015822977 0.011697173 -0.018675208 0.0079663992 -0.0202384 0.0035364032 -0.020357907
+		 -0.0011610091 -0.019020438 -0.0056661665 -0.016355842 -0.009537518 -0.012625545 -0.012395173
+		 -0.008195132 -0.013959259 -0.0034983009 -0.014077336 0.001005508 -0.012738913 0.0048770867
+		 -0.010074615 0.007739488 -0.0063435733 0.009312205 -0.0019077361 0.0094384477 0.0028015301
+		 0.0081002787 0.0073231682 0.0054234862 0.011207148 0.0025740862 0.0010060386 0.0021052957
+		 0.003555526 0.00088146329 0.0058357231 -0.00098401308 0.0076325536 -0.0033150315
+		 0.008770138 -0.0058881342 0.0091341138 -0.0084520876 0.0086841881 -0.010753959 0.0074619949
+		 -0.012565464 0.0055868328 -0.013708562 0.0032428205 -0.014071137 0.00066110492 -0.013618559
+		 -0.0019056201 -0.012395374 -0.0042069256 -0.010520667 -0.0060185194 -0.0081753861
+		 -0.0071634054 -0.005587081 -0.0075267553 -0.0030092895 -0.0070692301 -0.00069838762
+		 -0.0058311373 0.0011112168 -0.0039343648 0.0022366643 -0.0015739799 0.00016152859
+		 0.0003131032 0.00023669004 0.00028944016 0.00028854609 0.00023722649 0.00031232834
+		 0.00016176701 0.00030553341 7.0571899e-05 0.00026869774 -2.7537346e-05 0.00020554662
+		 -0.00012290478 0.00012242794 -0.00020629168 2.7239323e-05 -0.00026965141 -7.0661306e-05
+		 -0.00030630827 -0.0001616478 -0.00031328201 -0.00023658574 -0.00028932095 -0.0002886802
+		 -0.00023710728 -0.00031225383 -0.00016188622 -0.00030545145 -7.0631504e-05 -0.00026860833
+		 2.7477741e-05 -0.00020570308 0.00012296438 -0.00012236834 0.00020644069 -2.7135015e-05
+		 0.0002695024 7.0556998e-05 0.00030639768 -0.00075724721 -0.0026878119 -0.00059190392
+		 -0.0013504624 0.0009572804 0.00031703711 0.00087535381 -0.00069355965 -0.0012896955
+		 -0.0011104941 0.0004427135 0.00067061186 0.0014537275 0.00085914135 0.0015988648
+		 0.00011742115 0.00089651346 0.0013365746 0.0012511015 0.00061970949 0.0014961064
+		 7.8320503e-05 0.0002091229 -0.001670599 0.0012597144 -0.00055843592 0.00034445524
+		 0.00085842609 0.00029218197 0.0015842319 0.00077602267 0.0010169744 0.00062772632
+		 -9.4234943e-05 0.00080087781 -0.00038266182 0.0014950931 -0.00048744678 0.00022706389
+		 0.00098091364 -0.00035178661 0.0016105175 0.00018540025 0.0012248755 0.00035884976
+		 0.00011968613 -0.00017717481 -0.00090378523 0.00086373091 -0.00070720911 0.0009906292
+		 -0.0006159544 0.0013655722 -0.00094676018 -0.0003695488 0.00088894367 -0.0009919405
+		 0.0013785958 -0.00043439865 0.0012235641 2.9087067e-05 0.00023245811 0.00082352757
+		 -0.0010278821 0.00073346496 -0.00062841177 0.0011304319 -0.0013219118 0.0020962358
+		 -0.00064897537 0.0012571812 -0.0007224679 -0.00043570995 0.00012028217 -0.0013470054
+		 0.00082784891 -0.00099152327 0.0010102391 -0.00031912327 0.00023162365 0.00069224834
+		 -0.0013149977 0.00041985512 -0.0009548068 0.00078570843 -0.001658082 0.0013688207
+		 -0.0018109679 -1.9311905e-05 -0.00051176548 -0.0013027191 0.00033140182 -0.0013884008
+		 0.00061446428 -0.00064229965 0.00011885166 0.00048226118 -0.0015472174 -0.0010262728
+		 0.00078874826 -0.00072801113 0.0013329387 -0.00020396709 -0.00097995996 0.000325948
+		 -0.0018396974 -0.0016152263 0.00015413761 -0.00090581179 -8.7976456e-05 0.0002116859
+		 -0.0017014742 -0.001996994 0.00074052811 -0.00046995282 -0.00082755089 -0.00013941526
+		 -0.0018857121 -0.0013597012 0.00038838387 -0.0017398596 -0.00023251772 -0.0010904074
+		 -0.00035607815 -9.1642141e-05 -0.0017688274 -0.00073498487 -0.00066804886 -0.00058582425
+		 -0.0018194914 -0.0014383793 0.00036132336 -0.0017561316 -0.00062543154 -0.001188159
+		 -0.00064945221 -0.00039958954 -0.0017485023 -0.00094667077 -0.0005017519 -0.00099241734
+		 -0.0016516447 -0.0014393926 -0.00010251999 -0.0016357601 -0.0010421872 -0.0011940002
+		 -0.00094693899 -0.00068643689 -0.0016447306 -0.0010583997 -0.00036746264 -0.0013390481
+		 -0.0013936162 -0.00015312433 0.0026609302 -0.00017482042 0.0018926859 -0.0011053085
+		 -0.0012271404 -0.00092852116 -0.0014663935 0.00047630072 0.0016215444;
+createNode polyLayoutUV -n "polyLayoutUV69";
+	rename -uid "11842BA5-4725-8837-A65F-1BA0D643C35F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:541]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV121";
+	rename -uid "2B9E8C88-46C6-0E00-DD0E-F78186DD380F";
+	setAttr ".uopa" yes;
+	setAttr -s 730 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0.59803098 0.12108105 0.59908193 0.12108111
+		 0.5990817 0.12779909 0.59803075 0.12779909 0.60013288 0.12108117 0.60013258 0.12779915
+		 0.59698009 0.12108099 0.5969798 0.12779903 0.59592921 0.12108099 0.59592891 0.12779897
+		 0.59487826 0.12108094 0.59487796 0.12779891 0.59382731 0.12108088 0.59382701 0.12779891
+		 0.012397617 0.027423322 0.011346698 0.02742523 0.011334419 0.020707309 0.012385339
+		 0.020705402 0.010295779 0.027427137 0.0102835 0.020709217 0.013448536 0.027421415
+		 0.013436258 0.020703435 0.0092448592 0.027429104 0.0092325807 0.020711124 0.0081939399
+		 0.027431011 0.0081816614 0.020713031 0.0071430206 0.027432919 0.0071307421 0.020714998
+		 -0.14890116 0.029239595 -0.14783466 0.034543425 -0.15086246 0.035297662 -0.15196389
+		 0.029606879 -0.14584267 0.028831154 -0.14481407 0.033690542 -0.1461333 0.039778143
+		 -0.14917082 0.040913045 -0.15389806 0.035978794 -0.15503621 0.029952869 -0.14924687
+		 0.023877814 -0.15232056 0.023839608 -0.14278841 0.028354704 -0.14178711 0.03273952
+		 -0.14315945 0.038457692 -0.14618146 0.023919657 -0.15222824 0.041867882 -0.15693796
+		 0.036632031 -0.15812296 0.030300498 -0.15540785 0.023808524 -0.14880031 0.018521771
+		 -0.15185297 0.018072024 -0.13970715 0.027759746 -0.13880402 0.031471804 -0.14029098
+		 0.037006617 -0.1431191 0.023959562 -0.1457569 0.019018322 -0.15526032 0.04269135
+		 -0.15851462 0.02378726 -0.15492028 0.01765538 -0.14758432 0.013249323 -0.15058881
+		 0.012394704 -0.14005464 0.023984656 -0.14271623 0.019575134 -0.14459783 0.014203914
+		 -0.15800631 0.017253131 -0.15361184 0.011619404 -0.14565396 0.0081180446 -0.14864433
+		 0.006844 -0.13696063 0.023987442 -0.13663745 0.026890904 -0.13967001 0.020229146
+		 -0.14162058 0.015262976 -0.14275283 0.0095676109 -0.1566498 0.010877311 -0.15167975
+		 0.0057516196 -0.13663626 0.021100879 -0.13870627 0.016579501 -0.1399762 0.011121631
+		 -0.15470922 0.0048030876 0.054438293 0.37997851 0.055652797 0.37470573 0.058705449
+		 0.37515458 0.057443023 0.38083225 0.051451504 0.37902477 0.052609205 0.37421006 0.056097806
+		 0.36934954 0.059171498 0.36938691 0.061772943 0.37557039 0.06046623 0.38160673 0.052509367
+		 0.38511035 0.055500031 0.3863835 0.048473924 0.37796655 0.049568415 0.3736541 0.053032398
+		 0.36930859 0.049607843 0.38366163 0.055750489 0.36398786 0.058813214 0.36361971 0.06225878
+		 0.36941707 0.064859092 0.37597173 0.063504457 0.38234794 0.058535814 0.38747504 0.045559257
+		 0.37665084 0.046521991 0.37300098 0.049969971 0.36926961 0.046830773 0.38210836 0.052692175
+		 0.36439723 0.054682493 0.35868442 0.057710052 0.35792929 0.061885357 0.36327288 0.065365553
+		 0.36943746 0.061565578 0.3884227 0.046905518 0.36924535 0.049638063 0.36487454 0.051662207
+		 0.35953814 0.052979648 0.35345015 0.056016922 0.35231438 0.060745537 0.35724726 0.064972043
+		 0.3629244 0.043488026 0.37213007 0.0438115 0.36924344 0.04655695 0.36547035 0.048635513
+		 0.36049002 0.050006151 0.35477147 0.059073985 0.35135868 0.063785195 0.35659319 0.043487489
+		 0.36634007 0.045652747 0.36175859 0.047138125 0.35622334 0.062105894 0.35053438 -0.47830337
+		 -0.36507636 -0.47898057 -0.36188936 -0.48049915 -0.36225986 -0.47984594 -0.36527699
+		 -0.47994971 -0.35885304 -0.48146406 -0.35932672 -0.48201022 -0.362647 -0.48137915
+		 -0.36548483 -0.4780502 -0.3683424 -0.47960308 -0.36835259 -0.48298141 -0.35987228
+		 -0.48351207 -0.36307377 -0.482905 -0.36570925 -0.48114622 -0.36836773 -0.47824687
+		 -0.37159789 -0.47978964 -0.37142369 -0.48447624 -0.36050868 -0.48500496 -0.36355048
+		 -0.48442626 -0.36595702 -0.48268253 -0.36838645 -0.48132524 -0.37125036 -0.47884002
+		 -0.37476239 -0.48035935 -0.37443548 -0.48592654 -0.36123288 -0.48649323 -0.36407942
+		 -0.48594615 -0.3662349 -0.48421472 -0.36840689 -0.48285607 -0.37106636 -0.48187658
+		 -0.37409461 -0.47967938 -0.37779081 -0.48119479 -0.37737879 -0.48731458 -0.36200923
+		 -0.48795006 -0.36473709 -0.48746884 -0.36656141 -0.48574543 -0.36842644 -0.48438472
+		 -0.37086177 -0.48338985 -0.37371722 -0.48272285 -0.37690112 -0.48727712 -0.36843854
+		 -0.48591128 -0.37062323 -0.48489952 -0.37329051 -0.48424095 -0.37633348 -0.4889853
+		 -0.36699671 -0.48882359 -0.36843956 -0.48745131 -0.37032542 -0.48641235 -0.37281474
+		 -0.48572722 -0.37567306 -0.48898554 -0.36989075 -0.48790324 -0.3721807 -0.48716074
+		 -0.37494737 -0.74009758 -0.36279368 -0.74069077 -0.36595815 -0.73914796 -0.36613238
+		 -0.73857826 -0.36312056 -0.74088746 -0.36921364 -0.73933458 -0.36920345 -0.73761243
+		 -0.36630571 -0.73706102 -0.36346143 -0.73925823 -0.35976523 -0.73774278 -0.36017728
+		 -0.74063432 -0.37247968 -0.73909175 -0.37227908 -0.73779148 -0.36918837 -0.7360816
+		 -0.36648977 -0.73554772 -0.36383891 -0.7362147 -0.36065495 -0.73995715 -0.37566671
+		 -0.73843861 -0.37529624 -0.73755854 -0.37207124 -0.73625517 -0.36916971 -0.73455292
+		 -0.36669433 -0.73403811 -0.36426562 -0.73469663 -0.36122262 -0.73898804 -0.37870309
+		 -0.73747373 -0.37822941 -0.73692751 -0.3749091 -0.73603272 -0.37184688 -0.73472297
+		 -0.36914921 -0.73302639 -0.36693293 -0.73252523 -0.36474138 -0.73321038 -0.36188304
+		 -0.73595631 -0.37768382 -0.73542565 -0.37448239 -0.73451144 -0.37159911 -0.73319221
+		 -0.36912972 -0.73148632 -0.36723071 -0.7310344 -0.36537546 -0.73177683 -0.36260873
+		 -0.73446149 -0.37704742 -0.73393273 -0.37400568 -0.73299152 -0.37132123 -0.73166054
+		 -0.36911756 -0.73301119 -0.37632331 -0.73244447 -0.37347674 -0.73146886 -0.37099475
+		 -0.73011404 -0.3691166 -0.7299521 -0.36766541 -0.73162311 -0.37554696 -0.73098761
+		 -0.3728191 -0.72995234 -0.37055945 0.53153729 0.059758484 0.53164268 0.059758484
+		 0.53164262 0.060432017 0.53153729 0.060432017 0.53174806 0.059758484 0.53174794 0.060432017
+		 0.53185344 0.059758484 0.53185332 0.060432017 0.53195876 0.059758484 0.5319587 0.060432017
+		 -0.42724898 0.0044900775 -0.42735434 0.0044900775 -0.42735425 0.0038166046 -0.4272489
+		 0.0038166046 -0.42745969 0.0044900775 -0.4274596 0.0038166046 -0.42756504 0.0044900775
+		 -0.42756498 0.003816545 -0.42767042 0.0044900775 -0.42767033 0.003816545 -0.38756502
+		 0.29959255 -0.38845164 0.30345303;
+	setAttr ".uvtk[250:499]" -0.3906627 0.30314198 -0.38982105 0.29897937 -0.38534862
+		 0.30034578 -0.38625088 0.30382666 -0.38876921 0.30735937 -0.39097929 0.30733696 -0.39288622
+		 0.30288231 -0.39209113 0.29849887 -0.3831926 0.30122423 -0.38405657 0.30426189 -0.38656396
+		 0.30738473 -0.3885186 0.31127095 -0.39073271 0.31153166 -0.39320111 0.30732 -0.39512473
+		 0.30264693 -0.39434621 0.29811963 -0.38111234 0.30217466 -0.38185865 0.30474854 -0.38435626
+		 0.30740967 -0.386309 0.31095099 -0.38774267 0.31516081 -0.39000821 0.31570297 -0.39295328
+		 0.31175017 -0.39544055 0.30731085 -0.38214326 0.30742633 -0.38410014 0.31056446 -0.38549984
+		 0.31447536 -0.39227244 0.31611806 -0.39518225 0.31195527 -0.37967229 0.30536211 -0.37990981
+		 0.30742794 -0.38188088 0.31011826 -0.3833037 0.31365263 -0.3945111 0.3164463 -0.37967187
+		 0.30950475 -0.38117862 0.3127349 0.14133501 -0.34204316 0.14217323 -0.3456901 0.14426202
+		 -0.34539586 0.14346623 -0.34146348 0.13924122 -0.34275514 0.14009422 -0.34604341
+		 0.14247394 -0.34938043 0.14456183 -0.34935889 0.1463626 -0.3451502 0.14561069 -0.3410092
+		 0.13720453 -0.34358537 0.13802129 -0.34645498 0.14039057 -0.34940475 0.14223778 -0.35307586
+		 0.14432955 -0.35332176 0.1466608 -0.34934247 0.14847732 -0.34492743 0.14774108 -0.34065053
+		 0.13523942 -0.34448361 0.1359449 -0.34691504 0.13830495 -0.34942868 0.14015031 -0.35277396
+		 0.14150542 -0.35675079 0.14364582 -0.35726264 0.14642739 -0.35352778 0.14877641 -0.34933352
+		 0.13621426 -0.34944481 0.13806349 -0.35240912 0.13938642 -0.35610363 0.14578491 -0.35765439
+		 0.14853317 -0.35372126 0.13387954 -0.34749505 0.13410425 -0.34944671 0.13596684 -0.35198796
+		 0.13731158 -0.35532668 0.14789993 -0.3579641 0.13387984 -0.35140872 0.1353038 -0.35446006
+		 -0.59929848 -0.0055277944 -0.59898388 -0.0035517216 -0.59996378 -0.0034538507 -0.60028255
+		 -0.0053747296 -0.59885615 -0.0015019774 -0.59984136 -0.0015005469 -0.60093957 -0.0033510923
+		 -0.60127831 -0.005183816 -0.59899008 0.00055807829 -0.59997559 0.00045746565 -0.6008181
+		 -0.0015032291 -0.6019119 -0.0032300949 -0.60227531 -0.0049363375 -0.59933287 0.0025539398
+		 -0.60032654 0.0023887157 -0.60095435 0.00034606457 -0.60178882 -0.001508832 -0.60288101
+		 -0.0030827522 -0.60326374 -0.0046232343 -0.60132825 0.0021787286 -0.60192722 0.00021123886
+		 -0.6027565 -0.001516223 -0.60384697 -0.0029051304 -0.60423481 -0.004242003 -0.60232526
+		 0.0019088387 -0.60289454 4.7206879e-05 -0.60372424 -0.001523912 -0.60480827 -0.0026990771
+		 -0.60515976 -0.0038187504 -0.60330641 0.0015738606 -0.6038565 -0.00014686584 -0.60469586
+		 -0.0015301108 -0.60577327 -0.0024693012 -0.60606486 -0.0033416748 -0.60496128 -0.0054320097
+		 -0.60574991 -0.0048215985 -0.60426337 0.0011754036 -0.60481286 -0.00036549568 -0.6056779
+		 -0.0015317798 -0.60517466 0.00073808432 -0.60577101 -0.00059819221 -0.60501373 0.0023521781
+		 -0.60578787 0.0017259717 -0.60606474 0.00026351213 0.36336201 -0.62732887 0.36301559
+		 -0.62977505 0.36423212 -0.62988245 0.36458325 -0.62750053 0.36288035 -0.63229328
+		 0.3641023 -0.63228989 0.36544496 -0.62999868 0.36581653 -0.62772 0.36303514 -0.63482147
+		 0.3642565 -0.63470143 0.36531627 -0.63228321 0.36665559 -0.63013756 0.36704808 -0.62800598
+		 0.36342794 -0.63728702 0.36465728 -0.63709205 0.36547053 -0.63456857 0.36652541 -0.63227463
+		 0.36786646 -0.63030565 0.36826408 -0.62836128 0.36589223 -0.63684285 0.36667931 -0.63441026
+		 0.36773318 -0.63226533 0.36908352 -0.63050056 0.36945051 -0.62876856 0.36711746 -0.63652563
+		 0.36788547 -0.63422287 0.36894095 -0.63225901 0.36831939 -0.63614249 0.36909425 -0.63400906
+		 0.37015808 -0.6322583 0.37029743 -0.6307888 0.36948651 -0.63571703 0.37029672 -0.63371962
+		 0.14176124 -0.075158 0.1408298 -0.075460672 0.14225096 -0.078249931 0.14003742 -0.076036334
+		 0.14274067 -0.075158 0.1394617 -0.076828718 0.14367217 -0.075460672 0.13915902 -0.07776016
+		 0.14446455 -0.076036394 0.13915902 -0.078739583 0.14504021 -0.076828778 0.1394617
+		 -0.079671085 0.14534289 -0.07776022 0.14003736 -0.080463469 0.14534283 -0.078739643
+		 0.14082974 -0.081039131 0.14504015 -0.079671144 0.14176118 -0.081341803 0.14446449
+		 -0.080463529 0.14274061 -0.081341803 0.14367211 -0.08103919 0.0049566031 -0.16740525
+		 0.0046539307 -0.16833675 0.007745862 -0.16882646 0.0046539307 -0.16931617 0.0055323243
+		 -0.16661289 0.0049566031 -0.17024767 0.0063247085 -0.1660372 0.0055322647 -0.17104
+		 0.0072561502 -0.16573456 0.0063246489 -0.17161572 0.0082355738 -0.16573456 0.0072561502
+		 -0.17191839 0.0091670752 -0.16603723 0.0082355142 -0.17191839 0.0099594593 -0.16661292
+		 0.0091670156 -0.17161572 0.010535121 -0.16740531 0.0099593997 -0.17104006 0.010837793
+		 -0.16833681 0.010535121 -0.17024767 0.010837734 -0.16931623 -0.19886428 0.032596469
+		 -0.19902648 0.032678723 -0.19936824 0.032207429 -0.19904503 0.03204146 -0.19868627
+		 0.033150315 -0.19915549 0.032807112 -0.19962554 0.032464206 -0.19971478 0.031737626
+		 -0.19923458 0.031483948 -0.19868453 0.032568574 -0.19868399 0.031984746 -0.19923882
+		 0.032968938 -0.19979317 0.032787442 -0.20009655 0.032118857 -0.20007174 0.031268001
+		 -0.19945171 0.030930966 -0.19868466 0.031396657 -0.19850491 0.03259778 -0.19832337
+		 0.032043427 -0.19926804 0.033148587 -0.19985187 0.03314805 -0.20035146 0.032599092
+		 -0.20056643 0.031765223 -0.19813505 0.03148514 -0.19834304 0.032681108 -0.19800016
+		 0.032211065 -0.19924013 0.033328354 -0.19979514 0.033509076 -0.20043994 0.033148706
+		 -0.20090133 0.032382607 -0.201031 0.031399876 -0.20044009 0.030805588 -0.19765481
+		 0.03174004 -0.19821468 0.032810152 -0.19774339 0.032468379 -0.19915788 0.033490539
+		 -0.19962917 0.033832252 -0.20035267 0.033698618 -0.19791853 0.030935287 -0.19730118
+		 0.031270176 -0.19727361 0.032121837 -0.19813243 0.032972336 -0.19757742 0.032791555
+		 -0.19902951 0.033619523 -0.1993724 0.034089565 -0.20009896 0.034178853 -0.19680396
+		 0.031764835 -0.19701988 0.032602012 -0.1981045 0.033152044 -0.1975207 0.03315258
+		 -0.19886765 0.03370285 -0.19904917 0.034257233 -0.19971773 0.034560621 -0.20056859
+		 0.034535766 -0.20090564 0.033915758 -0.19693583 0.030805588 -0.19634154 0.031396508;
+	setAttr ".uvtk[500:729]" -0.19646692 0.032384872 -0.19693261 0.033151925 -0.19813374
+		 0.033331692 -0.19757938 0.033513248 -0.19868803 0.033732116 -0.19868857 0.034315884
+		 -0.19923753 0.03481549 -0.20007136 0.035030484 -0.1970211 0.033701599 -0.19821706
+		 0.033493578 -0.19774702 0.033836424 -0.19850826 0.033704162 -0.19832754 0.0342592
+		 -0.19868788 0.034904003 -0.19945401 0.035365343 -0.20043671 0.035495043 -0.20103101
+		 0.034904122 -0.197276 0.034181774 -0.19834608 0.033621907 -0.19800434 0.034093201
+		 -0.19813797 0.034816682 -0.19647124 0.033918083 -0.19680613 0.034535408 -0.19765776
+		 0.034563005 -0.19730082 0.03503263 -0.19792083 0.035369694 -0.19634154 0.034900784
+		 -0.19693246 0.035495043 0.033314824 0.015774041 0.033302575 0.018761784 0.032367468
+		 0.021599323 0.030601144 0.02400896 0.028176397 0.025754839 0.025330544 0.026665896
+		 0.022342294 0.026652873 0.019504219 0.02571699 0.017094195 0.023949772 0.015348181
+		 0.02152428 0.014437161 0.018677905 0.014450289 0.015689373 0.015386283 0.012851268
+		 0.017153412 0.010441422 0.019578636 0.0086957812 0.022424459 0.0077852011 0.025412172
+		 0.0077987611 0.028249234 0.0087350756 0.030658036 0.010502517 0.032402933 0.012928173
+		 0.036195457 0.015309855 0.036185682 0.019210473 0.03497076 0.0229173 0.032669485
+		 0.026067138 0.02950725 0.028351516 0.025793672 0.029546738 0.021892443 0.029535741
+		 0.018185556 0.028319687 0.015035868 0.026017606 0.012751661 0.022854924 0.011556536
+		 0.019141167 0.011567466 0.015239879 0.012783393 0.011532918 0.015085325 0.0083831698
+		 0.018247902 0.0060990602 0.02196151 0.0049042553 0.025862455 0.0049157813 0.029568613
+		 0.0061324835 0.032717139 0.0084350109 0.035000086 0.011597484 0.039509982 0.014776632
+		 0.039502591 0.0197272 0.037965655 0.024433643 0.03504917 0.028434843 0.031038642
+		 0.031338841 0.026326805 0.032861114 0.02137512 0.03285262 0.016668499 0.031314284
+		 0.012667656 0.028396815 0.0097641572 0.02438584 0.0082421824 0.019673973 0.0082506835
+		 0.014722407 0.0097888634 0.010015771 0.01270625 0.0060148463 0.01671727 0.0031113923
+		 0.021429226 0.00158979 0.026380599 0.0015990511 0.031086355 0.0031381547 0.035085827
+		 0.0060559809 0.037987977 0.010066316 0.042787373 0.014248937 0.042782575 0.020237729
+		 0.04092738 0.02593258 0.037402719 0.030775696 0.032553494 0.034292489 0.02685456
+		 0.036138356 0.020864144 0.036132544 0.015168846 0.034275711 0.010326192 0.030749798
+		 0.006810151 0.025900066 0.0049648322 0.020201206 0.0049708337 0.014211014 0.0068276338
+		 0.008515805 0.010353565 0.0036731288 0.015203521 0.0001571998 0.020902619 -0.0016876273
+		 0.026892632 -0.0016806759 0.032586813 0.00017711148 0.037427723 0.0037032738 0.040942192
+		 0.0085519999 0.046554476 0.013628289 0.046557158 0.020810992 0.044340193 0.027644008
+		 0.040119559 0.033458024 0.034308225 0.037683249 0.027475327 0.039905459 0.020290151
+		 0.039907068 0.01345636 0.037687987 0.0076429285 0.033465803 0.0034189243 0.027653843
+		 0.0011976229 0.020821124 0.0011964538 0.01363641 0.0034156032 0.0068028793 0.0076379813
+		 0.00098954886 0.013450325 -0.0032343026 0.02028349 -0.005454951 0.02746816 -0.0054549254
+		 0.034300506 -0.0032345988 0.040111601 0.00098784268 0.044333547 0.0067982599 0.5788058
+		 -0.19448879 0.57847595 -0.19550365 0.57847583 -0.19657075 0.57880551 -0.1975857 0.57943273
+		 -0.19844911 0.58029592 -0.19907641 0.58131075 -0.1994063 0.58237791 -0.19940642 0.58339286
+		 -0.19907677 0.58425623 -0.19844961 0.58488357 -0.19758636 0.58521342 -0.1965715 0.58521354
+		 -0.19550437 0.58488393 -0.19448945 0.58425677 -0.19362605 0.58339351 -0.19299871
+		 0.58237863 -0.19266884 0.58131152 -0.19266874 0.58029658 -0.19299838 0.5794332 -0.19362554
+		 0.45707142 -0.27700102 0.45732406 -0.27723485 0.4574627 -0.27703875 0.45725358 -0.27684283
+		 0.45763025 -0.27739584 0.45771825 -0.27717024 0.45759928 -0.27684414 0.45744085 -0.27669227
+		 0.45779428 -0.27694261 0.45773599 -0.27665049 0.45763031 -0.27654767 0.45711142 -0.27659285
+		 0.45733371 -0.27649802 0.45800963 -0.27721679 0.45801142 -0.27697688 0.45786723 -0.27671641
+		 0.45787355 -0.27645814 0.4578208 -0.27640635 0.45756081 -0.27641708 0.45830175 -0.27717185
+		 0.45822874 -0.27694315 0.4580124 -0.27673918 0.45793959 -0.27649134 0.45801204 -0.2762664
+		 0.45778653 -0.27634078 0.45729619 -0.27627319 0.45753604 -0.27627039 0.45855886 -0.27704191
+		 0.45842457 -0.27684522 0.45815757 -0.27671647 0.45801258 -0.27650273 0.45777437 -0.27626783
+		 0.45733061 -0.27604842 0.45755848 -0.27612287 0.45838693 -0.27739704 0.4586944 -0.27724016
+		 0.45876998 -0.27684689 0.45858312 -0.27669388 0.45828903 -0.27665055 0.45808557 -0.27649122
+		 0.45778555 -0.27619463 0.45743218 -0.27585113 0.45762563 -0.27599031 0.45895129 -0.277008
+		 0.4589138 -0.27659476 0.45868999 -0.27649921 0.45839462 -0.27654785 0.45815152 -0.27645791
+		 0.45781898 -0.27612847 0.45723718 -0.2757107 0.45710406 -0.2759642 0.4575868 -0.27569187
+		 0.45773032 -0.27588439 0.45846349 -0.27641714 0.458204 -0.27640605 0.45787141 -0.27607578
+		 0.45743483 -0.27550465 0.45778832 -0.27558821 0.45786321 -0.27581602 0.45872748 -0.27627343
+		 0.45848763 -0.27626985 0.4582378 -0.27634037 0.45793763 -0.27604181 0.45801133 -0.27555251
+		 0.45801097 -0.2757923 0.45869279 -0.27604818 0.45846456 -0.27612215 0.45824951 -0.27626729
+		 0.45801124 -0.27603 0.45823437 -0.2755881 0.45815885 -0.27581567 0.45859075 -0.27585077
+		 0.45839688 -0.27598935 0.45823786 -0.27619398 0.45808485 -0.27604151 0.45843595 -0.27569181
+		 0.45829207 -0.27588367 0.45891857 -0.27596378 0.45878607 -0.2757107 0.458204 -0.27612776
+		 0.45815128 -0.27607524 0.45858806 -0.27550381;
+createNode polyAutoProj -n "polyAutoProj67";
+	rename -uid "B538A114-4F5F-3E1C-B2A8-4DA38801CB5D";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:541]";
+	setAttr ".ix" -type "matrix" 0.12055654518822428 -0.22363024718257291 0.064480244746539739 0
+		 -0.087727090016710113 0.02359833381923785 0.245864080994741 0 -0.2155739944768672 -0.13466514467838311 -0.063993919392942925 0
+		 17.317644461414606 3.2217977217287426 7.75742928236241 1;
+	setAttr ".s" -type "double3" 0.5591379498814959 0.5591379498814959 0.5591379498814959 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode groupId -n "groupId169";
+	rename -uid "C5A3D7EA-4BA8-2F98-0A94-B7A76557AC9C";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts25";
+	rename -uid "59DD9AE7-4A35-72AB-45E8-28A890907F41";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:541]";
+createNode polyTweakUV -n "polyTweakUV122";
+	rename -uid "982F1747-43E1-4F7A-BBE6-758B9B0B1BF0";
+	setAttr ".uopa" yes;
+	setAttr -s 730 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.0020909309 0.0063700676 -0.0010323524
+		 0.0061986446 -0.00022041798 -0.0068054795 -0.0012789667 -0.0066341162 0.0052442998
+		 0.0059523582 0.006056264 -0.0070518255 -0.00040592253 0.0065021515 0.00040601194
+		 -0.0065020323 0.0012789331 0.0066340566 0.0020908788 -0.0063700676 0.00022047199
+		 0.0068054795 0.0010324288 -0.0061987042 -0.0060563209 0.0070517659 -0.0052443631
+		 -0.0059523582 -0.00035867095 -0.0066050291 -0.0014206469 -0.0065677762 -0.001942426
+		 0.0064145327 -0.00088047981 0.0063772798 0.00026082993 -0.0064911842 -0.00026085973
+		 0.0064911246 0.0059213936 -0.0065674186 0.0053996146 0.0064150095 0.0019425154 -0.0064145327
+		 0.0014206171 0.0065678358 0.00088045001 -0.0063772798 0.00035865605 0.0066050291
+		 -0.0053996146 -0.0064149499 -0.0059213936 0.0065674186 -0.0122087 -0.0081268996 -0.00094538927
+		 -0.011821151 0.0018319488 -0.011618137 -0.0098516345 -0.0079647452 -0.012202859 -0.0072365701
+		 -0.0013944507 -0.010197282 0.016376138 -0.0053303242 0.019155085 -0.0043894351 0.0061728358
+		 -0.0091542006 -0.0059406757 -0.0064568669 -0.016639709 0.00059948862 -0.014477015
+		 0.00092926621 -0.0091328621 -0.0056867898 0.0013213158 -0.0070070624 0.015375495
+		 -0.0042039454 -0.016474009 0.00028762221 0.023360431 -0.001078546 0.011318862 -0.0038836002
+		 -0.0013245344 -0.0033184886 -0.010803461 0.0013176203 -0.013588846 0.0091390461 -0.011321127
+		 0.0095697567 -0.0020892024 -0.0041357279 0.0072899461 -0.0046207607 0.016480029 -0.00083547831
+		 -0.013222933 -6.6071749e-05 -0.013535202 0.0076753795 0.028626621 0.0052109063 -0.0064823031
+		 0.001798287 -0.0075573325 0.0087475777 -0.0032936931 0.01243484 -0.00066679716 0.012630396
+		 -0.0062116981 -0.00058953464 -0.010385215 0.0054326206 -0.0036765933 0.010395132
+		 -0.0031501651 0.0064436421 0.0034233928 0.010605861 0.013701618 0.0058160089 0.016357303
+		 0.0049059344 0.0053582788 -0.0013661087 0.0090560317 -0.0042381585 -0.0034170747
+		 0.002918914 -0.0010207891 0.0068008453 0.012633026 0.0045725666 0.0081870556 0.0058174059
+		 0.020247161 0.0016354132 0.0077787042 0.0014684647 0.0048478246 0.0034250915 0.013507307
+		 0.00086114556 0.025032818 -0.0045185634 0.0025221109 -0.012397557 0.013498485 -0.0087784529
+		 0.011179447 -0.0088199675 -0.00021624565 -0.012215734 0.0030018687 -0.010768414 0.01348716
+		 -0.0077394247 0.017160058 -0.00013692677 0.015001416 -7.3388219e-05 0.0073491335
+		 -0.0076301098 -0.0044415593 -0.0098344982 -0.015290499 -0.0063077807 -0.018133223
+		 -0.0050224364 0.00043350458 -0.0076313913 0.010375857 -0.0059696287 0.016991436 -0.00025375187
+		 -0.014043778 -0.0054526925 0.013337493 0.0084640831 0.011037946 0.008690007 0.011334062
+		 -9.0271235e-05 0.0028543472 -0.0049661994 -0.0093790293 -0.0046981275 -0.022221863
+		 -0.0013901293 -0.0053081214 -0.0047546774 0.0034562051 -0.0039896369 0.013736814
+		 -0.00037671626 -0.014763415 -0.0021434128 0.013284862 0.0071491748 0.002753377 0.011826262
+		 8.815527e-05 0.011999484 0.0072033405 0.0075475127 0.007021904 -0.00020679832 -0.027231336
+		 0.0051103532 0.0067178309 -0.00038915873 0.010169536 0.0051276088 0.0031054616 0.0097908825
+		 -0.01373893 0.004821457 -0.016341269 0.0042576604 -0.0041149855 0.0098887943 0.0026892424
+		 0.0047656298 -0.0076439083 -0.0031376332 -0.0048664808 -0.00022403896 0.0030643642
+		 0.0030388981 0.00030386448 0.0061389804 -0.012908041 0.0032994114 -0.020357549 0.0013049762
+		 -0.0090830922 0.0049598068 -0.008205682 0.0025410503 -0.0058065057 0.0032464713 -0.014165252
+		 -0.00048289075 -0.025406301 -0.0046459502 3.2782555e-06 0.00026524067 -0.007401228
+		 0.00094157457 -0.0051489472 -0.0025339127 0.0021058321 -0.0019605756 -0.016999722
+		 0.0065495372 -0.014746845 0.0023903847 -0.0030856729 -0.0045982003 0.0039658546 -0.0034127235
+		 0.0037059784 0.0023676157 0.0057973862 0.0015360713 -0.012757659 -0.00029611588 -0.0016183853
+		 -0.0054830909 0.00515306 -0.0041648746 0.0075654387 0.00069582462 0.0031781793 0.0048757195
+		 0.0054462552 0.0053675175 -0.011214435 -0.0017403364 -0.0011481047 -0.0053378344
+		 0.0052499771 -0.0042874813 0.0085814595 -9.5486641e-05 0.0072839856 0.0050870776
+		 -0.0013699532 0.0052756667 0.0011839867 0.0068234205 -0.010303557 -0.0020153522 -0.0020834804
+		 -0.0042699575 0.0038616657 -0.0038707256 0.0084396005 -0.00077879429 0.0082769394
+		 0.0042172074 0.0031914115 0.0070168376 -0.0088037252 0.00097298622 -0.0061864257
+		 0.0030283928 -0.010204911 -0.00093567371 -0.0045549273 -0.0031420588 0.00061446428
+		 -0.0031350255 0.0067649484 -0.0012880564 0.0080313683 0.0029427409 0.0042896271 0.0061670542
+		 -0.004280746 0.0036514401 0.0032240152 -0.0015274882 0.0062106848 0.0014944673 0.0041126013
+		 0.0045281649 -0.0032505393 0.0031766891 -0.004727602 -0.0027223229 -0.0025787354
+		 -0.0014236569 0.002379775 0.00023764372 0.0022569299 0.0022674203 -0.0032562017 0.0017841458
+		 -0.003484726 1.6450882e-05 -0.0012632012 0.00058805943 -0.004452765 -0.00058704615
+		 0.0048014522 -0.0014606714 -0.001583755 -0.0018945336 -0.0036978126 -0.0037530065
+		 0.0025426149 -0.0044078827 -0.0045134425 0.00034981966 -0.0066284537 -0.0001718998
+		 -0.0055546165 -0.0047612786 0.00052279234 -0.0059154034 0.012948215 0.0040303469
+		 0.010685861 0.00057035685 -0.0031998754 0.0028347969 -0.0055122972 0.0036914349 -0.0084270239
+		 -0.00061053038 -0.0067172647 -0.0050125122 -0.00085067749 -0.0062108636 0.0087786913
+		 -0.001350522 0.0023924708 0.0031496882 -0.00023496151 0.0052206516 -0.0074204206
+		 0.0038493276 -0.0094788074 -0.00093358755 -0.0067671537 -0.0046061277 -0.0011734366
+		 -0.0054660439 0.0074421167 -0.0020130277 0.011278927 -0.0010484457 0.008564949 0.0016994476
+		 -0.0023698211 0.0059577823 -0.0085137486 0.0034707785 -0.0093752742 -0.0011146665
+		 -0.0053339005 -0.0036971569 -1.5377998e-05 -0.0037629008 0.0068683624 -0.0015467405
+		 0.0064621568 0.0030668974 -0.0036502481 0.0056763887 -0.0083948374 0.0027121305 -0.0077374578
+		 -0.0011401176 -0.0019288659 -0.0025609732 0.002800107 -0.0022729039 0.0072103143
+		 0.00015431643 0.0051091313 0.0033334494 -0.0037098527 0.0046077371 -0.0066933036
+		 0.0017434955 -0.0042228699 -0.0010351539 0.0046691895 0.0026225448 -0.0021706223
+		 0.0029411316 -0.0030789971 0.00085860491 0.0015695095 -0.00079572201 0.0036039352
+		 -0.0020115972 0.0053359866 0.00079870224 0.00095450878 0.0015674233 0.002576232 0.00074356794
+		 0.0017496347 -0.0027016997 -0.00046810508 -0.0028683543 -0.00058427453 0.0027096272
+		 0.0016334355 0.0028763413 5.8144331e-05 -0.0029138923 -5.8025122e-05 0.00266397 0.00058412552
+		 -0.0028320551 0.00046795607 0.002745986 -0.0016333461 -0.0026289821 -0.0017495155
+		 0.0029489994 -0.0020180941 0.003117919 0.00019919872 0.0028307438 0.00085324049 -0.002748549
+		 -0.0013640523 -0.0024613142 -0.00032699108 0.0026646852 0.00032705069 -0.0029144883
+		 -0.0008534193 0.002626121 -0.00019937754 -0.0029531717 0.0013641715 0.0027086735
+		 0.0020182133 -0.0028706193 0.0027809143 0.0070144236 -0.0096048713 0.0055654347;
+	setAttr ".uvtk[250:499]" -0.0082993507 0.0052387714 0.0035117269 0.006213665
+		 0.0039442182 0.0069260001 -0.0086120963 0.0052756369 -0.014182091 -0.0010320842 -0.012884915
+		 -0.0014601946 -0.0054907799 0.0040476322 0.0057144761 0.004240185 0.0074258447 0.0060022771
+		 -0.0045641661 0.0044924915 -0.013101637 -0.00056493282 -0.010952473 -0.0075260997
+		 -0.0097203255 -0.0081306696 -0.010070086 -0.0018153489 -0.0020170212 0.001565367
+		 0.0089751482 0.00055587292 0.013652861 0.0038433373 0.0033043623 0.0032441914 -0.0088418126
+		 -0.00010317564 -0.0098007917 -0.0062626004 -0.00049942732 -0.0084851384 3.7312508e-05
+		 -0.0088989735 -0.0068992376 -0.0077469349 -0.0066224337 -0.0020655692 -0.00073349476
+		 0.0002477169 -0.0055095553 -0.0045725703 0.0011014938 -0.0072287917 0.0022678375
+		 -0.0080646276 -0.0033218861 -0.0059264898 0.015318453 0.0027444363 0.011961758 0.00039634109
+		 0.0026989579 -0.0025279522 0.0052211285 -0.0053073764 0.0057098269 -0.0053243041
+		 0.015088618 -0.0017777681 0.012158692 -0.0024679303 -0.0027830005 -0.0070040226 0.0092948079
+		 -0.0057519078 0.0079129934 -0.0053679943 -0.0035642385 -0.0061283112 -0.0038308501
+		 -0.0069975257 0.0084505081 -0.005522728 0.013813436 0.00063577294 0.012435138 0.0011053085
+		 0.0051047802 -0.0041220188 -0.0057504177 -0.0040870905 -0.0071377158 -0.0061612725
+		 0.0046162605 -0.0048034787 0.012888491 0.00012716651 0.010788202 0.0069094002 0.0094903111
+		 0.0075397789 0.0096190572 0.0015017986 0.0017111897 -0.0015860796 -0.0089271665 -0.00034087896
+		 -0.013136208 -0.0040926933 -0.0029815435 -0.0036220551 0.0088506937 -0.00037613511
+		 0.0097718835 0.0056233704 0.00079011917 0.0076396167 0.00022447109 0.0080646276 0.006678164
+		 0.0071843266 0.0062536001 0.0017932057 0.001023531 -0.00076815486 0.0056785941 0.0039144754
+		 -0.00072294474 0.006380409 -0.0019735098 0.0072485209 0.0031884313 0.0053930879 -0.014675915
+		 -0.0031958222 -0.011343479 -0.00095745921 -0.0022773147 0.0018541813 -0.0047009587
+		 0.0044644177 -0.0053196549 0.0045307875 -0.014370739 0.0010977387 -0.011446357 0.0016371012
+		 -0.00058835745 0.0034645796 0.0014115572 0.0041801333 0.0030884147 0.0046719313 0.00097006559
+		 0.0044370294 0.0015479326 0.0026634336 0.0032102466 0.0020723939 0.0046784878 0.0044344068
+		 0.0021376014 0.0044483542 -0.001239419 0.0011430383 0.00047403574 -0.00061392784
+		 0.004871428 0.0014240742 0.0057527423 0.0037014484 0.0026541352 0.0038518906 -0.0061445832
+		 0.0017550588 -0.0045367479 -0.00063490868 0.0021514893 -0.00172472 0.0060822368 0.00073391199
+		 0.0059030652 0.0026475787 0.0022708178 0.0028873086 -0.0032120347 -0.0021830201 0.0033762455
+		 -0.0024151206 0.0063974857 1.8060207e-05 0.0047533512 0.0014022589 0.00074958801
+		 0.001725316 -0.0023730397 -0.0031722784 0.0037482977 -0.0028234124 0.0053919554 -0.00070297718
+		 0.0019855499 1.8835068e-05 -0.001786828 0.00014054775 -0.0022418499 -0.0037708282
+		 0.0028908849 -0.0030302405 0.002664268 -0.0014021993 -0.0028270483 -0.001480937 -0.0060459971
+		 -0.0015167594 -0.0079315901 -0.00026994944 -0.0087822676 -0.0017198324 -0.0030606985
+		 -0.0040730834 0.00046402216 -0.003033638 -0.0021924376 -0.0020393729 -0.0048507452
+		 -0.0038471222 -0.0039556026 -0.002774477 -0.013581634 -0.0032007098 -0.013439775
+		 -0.0029657483 -0.0082863569 -0.0032680631 0.0022346973 -0.004211843 -0.0026637316
+		 -0.0043791533 -0.0042909384 -0.0048011541 0.00067102909 -0.0050506592 -0.0038765669
+		 -0.0020928979 -0.0054742098 -0.0015619993 -0.0052826405 -0.0045241714 -8.8751316e-05
+		 -0.0049343109 -0.00040531158 0.0001873374 -0.0020638704 0.0017395616 -0.0064806938
+		 -0.00099521875 -0.0052238703 -0.0037478805 0.00018823147 -0.0041537285 0.0070269704
+		 7.802248e-05 0.0054165721 0.0021833181 -0.0031405687 0.0026369691 -0.0064653158 -0.00040525198
+		 -0.0037158728 -0.0026003718 0.0017004609 -0.0028431416 0.0044898391 0.0034187436
+		 -0.0032232404 0.0030677319 -0.0050207376 0.00019204617 -0.00035649538 -0.0011180043
+		 0.0046029687 -0.00092291832 0.004447639 0.0040045977 -0.0019156933 0.0031241775 -0.0017984509
+		 0.00075209141 0.0054916739 0.0040031672 0.0011785626 0.002843976 0.0036022067 0.0012475252
+		 0.005053103 -0.00020307302 0.0078242421 0.0032473207 0.0062165856 0.002910614 -3.4570694e-06
+		 4.2915344e-06 -2.3245811e-06 4.7087669e-06 0 0 -8.9406967e-07 4.7087669e-06 -4.3511391e-06
+		 3.3974648e-06 6.5565109e-07 4.1127205e-06 -4.7683716e-06 2.3841858e-06 1.9669533e-06
+		 3.2186508e-06 -4.6491623e-06 8.9406967e-07 3.2782555e-06 1.9669533e-06 -4.1723251e-06
+		 -5.364418e-07 4.1723251e-06 6.5565109e-07 -3.2782555e-06 -2.0265579e-06 4.6491623e-06
+		 -8.9406967e-07 -1.9669533e-06 -3.2782555e-06 4.7087669e-06 -2.2053719e-06 -6.5565109e-07
+		 -4.1723251e-06 4.3511391e-06 -3.4570694e-06 8.9406967e-07 -4.7683716e-06 3.4570694e-06
+		 -4.3511391e-06 2.3841858e-06 -4.7087669e-06 5.9604645e-07 4.1723251e-06 2.1457672e-06
+		 3.2782555e-06 5.9604645e-08 0 3.2186508e-06 2.0861626e-06 -7.1525574e-07 4.7087669e-06
+		 4.2915344e-06 8.3446503e-07 -2.2053719e-06 4.5895576e-06 4.7087669e-06 -7.7486038e-07
+		 -3.2782555e-06 4.1723251e-06 4.7087669e-06 -2.0265579e-06 -4.2319298e-06 3.2782555e-06
+		 4.2915344e-06 -3.3378601e-06 -4.6491623e-06 2.2649765e-06 3.3378601e-06 -4.2319298e-06
+		 -4.5895576e-06 7.1525574e-07 2.0265579e-06 -4.7087669e-06 -4.1723251e-06 -5.9604645e-07
+		 7.7486038e-07 -4.7087669e-06 -3.3378601e-06 -2.1457672e-06 -7.7486038e-07 -4.2319298e-06
+		 -2.0861626e-06 -3.3378601e-06 0.00027602911 0.0014651418 0.00081652403 0.0010121465
+		 0.0020378232 0.0017991662 0.0011255145 0.0025071502 -0.00093573332 -0.00043028593
+		 0.0011803508 0.00041466951 0.0026217699 0.0007904768 0.0020757914 0.0013390779 0.0010337234
+		 0.0018495321 -0.0003733933 0.0017396212 0.00016576052 0.0029684007 0.0013262928 -0.00027090311
+		 0.0027428865 -0.00037771463 0.0027279556 7.0631504e-05 0.00017336011 -0.0010660291
+		 -0.0012606978 -0.00086995959 0.00068226457 0.0023288727 -0.0010738075 0.0018119216
+		 -0.00090476871 0.0031678081 0.0012539327 -0.00097173452 0.0025435388 -0.0014491081
+		 0.0024352968 -0.0013622046 0.00099301338 -0.0025112331 0.00018119812 0.0027597249
+		 -0.0017592907 0.0016657114 -0.0020725727 0.003046155 0.00097942352 -0.0016214848
+		 0.0020821691 -0.0024094582 0.0020045936 -0.0018643737 0.00035437942 -0.0046070814
+		 -0.0029315352 -0.00755319 -0.004147768 -0.0056094229 -0.0012508929 0.003051728 -0.0023563504
+		 0.001301527 -0.0030807853 0.002461791 0.00052672625 -0.0021622777 0.0013747513 -0.0033223033
+		 0.0015251637 -0.0022166967 0.0035647154 0.00054129958 0.0014698505 0.0011794567 -0.0025186539
+		 0.0023990273 -0.0028091967 0.0007609725 -0.0037885606 0.0015490055 -7.0363283e-05
+		 -0.0025262237 0.00036653876 -0.0039066076 0.0010154545 -0.0032595992 2.5570393e-05
+		 0.00035887957 -0.0030286908 0.0013561249 -0.0030837059 0.00011122227 -0.004249543
+		 0.00058859587 -0.0007558465 -0.0026724339 -0.00080117583 -0.0040283799 -0.00025269389
+		 -0.0039122701 -0.001252383 -0.001219213 -0.00105685 0.00021600723 0.0066846013 -0.0029167235
+		 0.0047416091 -0.0041337013;
+	setAttr ".uvtk[500:729]" -0.00017005205 -0.0010763407 -0.0035079718 0.0010038614
+		 -0.0031560361 -0.00058960915 -0.0044492781 -0.00048279762 -0.0014563203 -0.0026001334
+		 -0.0018720031 -0.0038288832 -0.0016846359 -0.0036200881 -0.0026965439 -0.0020399094
+		 -0.0039387941 0.0005017519 -0.0030100048 -0.0012753606 -0.004327774 -0.0016509891
+		 -0.0021056831 -0.0023255348 -0.0028314888 -0.0033676028 -0.0021859407 -0.0031896234
+		 -0.0047914088 -0.0014017224 -0.0075672567 0.0020561218 -0.0056243539 0.0032731891
+		 -0.0042311549 -0.00093120337 -0.002646178 -0.0018725395 -0.0037438571 -0.0026596189
+		 -0.0025371611 -0.0027101636 -0.001581192 0.0037463903 -0.0022198558 0.0016505122
+		 -0.0035794079 -0.0021998882 -0.0014001131 0.00020551682 3.3915043e-05 9.4175339e-06
+		 0.0020487905 0.0066927075 0.0032650828 0.0047490597 -0.0010751635 0.019533604 -0.0070405453
+		 0.019806772 -0.012800395 0.018223807 -0.017790288 0.014939979 -0.021521866 0.010276929
+		 -0.023630977 0.0046908557 -0.023912251 -0.0012723953 -0.02233845 -0.007029593 -0.019063652
+		 -0.012017846 -0.014408693 -0.015750021 -0.0088283271 -0.017860711 -0.0028687865 -0.018143326
+		 0.002887249 -0.016569763 0.007876873 -0.013293803 0.011611305 -0.008634612 0.013724864
+		 -0.0030473471 0.014010169 0.0029216856 0.012438416 0.0086888671 0.0091634542 0.013689145
+		 0.0045078844 0.01743187 -0.0002553165 0.017156832 -0.0055341423 0.017851971 -0.010769039
+		 0.016883761 -0.015450388 0.014347985 -0.019121259 0.01049155 -0.021422833 0.0056905746
+		 -0.02213043 0.00041356683 -0.021173537 -0.0048237443 -0.018645614 -0.0095087588 -0.014794037
+		 -0.013182849 -0.0099958032 -0.015486002 -0.0047206581 -0.016192675 0.00051452219
+		 -0.015233874 0.0051980838 -0.012704015 0.0088718235 -0.0088501871 0.011177465 -0.0040488094
+		 0.011889219 0.0012318939 0.010937005 0.0064770132 0.0084111691 0.011173628 0.0045552701
+		 0.014858827 0.00071430206 0.015682325 -0.0041684806 0.016804542 -0.0091557801 0.016363859
+		 -0.013762832 0.014407463 -0.017542422 0.011125669 -0.020125926 0.0068377107 -0.02126047
+		 0.0019610822 -0.02083382 -0.0030281246 -0.018886954 -0.0076415241 -0.015609384 -0.011427015
+		 -0.011322826 -0.014013499 -0.0064468533 -0.015147746 -0.0014594421 -0.014719129 0.0031519234
+		 -0.012770385 0.006937176 -0.0094920695 0.0095268078 -0.005203858 0.010668188 -0.00032295287
+		 0.010247126 0.0046755448 0.008300893 0.0093020871 0.0050153285 0.013098817 0.0016753823
+		 0.014062574 -0.0027659535 0.015613139 -0.0074631572 0.015715789 -0.011960357 0.014366314
+		 -0.015822917 0.011696994 -0.018675178 0.0079663098 -0.02023834 0.0035363734 -0.020357758
+		 -0.0011609197 -0.0190202 -0.0056661665 -0.016355872 -0.0095374584 -0.012625381 -0.012395144
+		 -0.0081949979 -0.013959169 -0.0034984425 -0.014077276 0.0010054223 -0.012738734 0.0048772395
+		 -0.010074496 0.0077394489 -0.0063435435 0.0093120933 -0.0019077957 0.0094385184 0.0028016344
+		 0.0081000477 0.0073232986 0.0054235011 0.011207271 0.0025737882 0.0010059783 0.0021052957
+		 0.0035554161 0.00088140368 0.0058356598 -0.00098413229 0.0076324269 -0.0033148825
+		 0.0087701678 -0.0058881938 0.0091340095 -0.0084519088 0.0086841583 -0.010753989 0.0074619353
+		 -0.012565404 0.0055867434 -0.013708621 0.0032428205 -0.014071286 0.00066110492 -0.013618514
+		 -0.0019055605 -0.012395471 -0.0042069256 -0.010520473 -0.0060184598 -0.0081752557
+		 -0.0071632862 -0.0055871741 -0.0075267106 -0.0030092029 -0.0070690513 -0.00069827586
+		 -0.0058311522 0.0011112392 -0.0039343461 0.0022365749 -0.0015740413 0.00016157329
+		 0.00031331182 0.00023654103 0.00028932095 0.0002887249 0.00023731589 0.00031232834
+		 0.00016194582 0.0003054738 7.0571899e-05 0.00026866794 -2.7477741e-05 0.00020566583
+		 -0.00012296438 0.00012221932 -0.00020623207 2.7194619e-05 -0.00026959181 -7.0571899e-05
+		 -0.00030642748 -0.0001616329 -0.00031328201 -0.00023661554 -0.00028926134 -0.00028856844
+		 -0.00023728609 -0.000312455 -0.00016188622 -0.00030536205 -7.0691109e-05 -0.00026878715
+		 2.7537346e-05 -0.00020553917 0.00012299418 -0.00012232363 0.00020626187 -2.7269125e-05
+		 0.0002694428 7.0735812e-05 0.00030627847 -0.00075724721 -0.0026878715 -0.00059199333
+		 -0.0013504624 0.00095722079 0.00031703711 0.00087544322 -0.00069361925 -0.0012897551
+		 -0.0011104941 0.0004427433 0.00067055225 0.0014537275 0.00085908175 0.0015989244
+		 0.00011736155 0.00089651346 0.0013365746 0.0012511313 0.00061964989 0.0014960468
+		 7.8380108e-05 0.00020927191 -0.001670599 0.0012597144 -0.00055843592 0.00034442544
+		 0.00085836649 0.00029215217 0.0015842319 0.00077599287 0.0010169744 0.00062769651
+		 -9.4234943e-05 0.00080084801 -0.00038272142 0.0014951229 -0.00048744678 0.00022700429
+		 0.00098079443 -0.00035175681 0.0016105771 0.00018537045 0.0012248755 0.00035884976
+		 0.00011968613 -0.00017723441 -0.00090372562 0.0008636117 -0.00070720911 0.00099074841
+		 -0.0006159544 0.0013654828 -0.00094676018 -0.00036948919 0.00088894367 -0.0009919107
+		 0.0013785362 -0.00043442845 0.0012235641 2.9057264e-05 0.00023251772 0.00082361698
+		 -0.0010278225 0.00073343515 -0.00062847137 0.0011304617 -0.0013219714 0.0020962954
+		 -0.00064897537 0.00125736 -0.0007224679 -0.00043576956 0.00012022257 -0.0013470054
+		 0.00082778931 -0.00099161267 0.0010102987 -0.00031918287 0.00023168325 0.00069212914
+		 -0.0013149977 0.00041988492 -0.0009547472 0.00078564882 -0.0016581416 0.0013688207
+		 -0.0018110275 -1.9192696e-05 -0.00051170588 -0.0013026595 0.00033140182 -0.0013883412
+		 0.00061458349 -0.00064229965 0.00011885166 0.00048220158 -0.0015471578 -0.0010261834
+		 0.00078880787 -0.00072789192 0.0013329983 -0.00020396709 -0.00098001957 0.0003259778
+		 -0.0018396974 -0.0016152263 0.00015419722 -0.00090575218 -8.803606e-05 0.00021162629
+		 -0.0017014742 -0.0019970536 0.00074052811 -0.00046998262 -0.00082755089 -0.00013947487
+		 -0.0018857121 -0.0013595223 0.00038838387 -0.0017399788 -0.00023251772 -0.0010902882
+		 -0.00035607815 -9.1642141e-05 -0.0017687678 -0.00073504448 -0.00066810846 -0.00058588386
+		 -0.0018194914 -0.0014384389 0.00036132336 -0.0017561316 -0.00062549114 -0.0011882484
+		 -0.0006493926 -0.00039961934 -0.0017485023 -0.00094670057 -0.0005016923 -0.00099241734
+		 -0.0016516447 -0.0014395118 -0.00010246038 -0.0016357005 -0.0010422468 -0.001193881
+		 -0.00094693899 -0.0006865263 -0.001644671 -0.0010583997 -0.00036752224 -0.0013391376
+		 -0.0013935566 -0.00015300512 0.0026609898 -0.00017488003 0.0018926263 -0.0011052489
+		 -0.0012270808 -0.00092849135 -0.0014663935 0.00047630072 0.0016215444;
+createNode polyLayoutUV -n "polyLayoutUV70";
+	rename -uid "E89990A0-4469-4A49-9472-359277BAF574";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:541]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV123";
+	rename -uid "3A36A2EE-414F-E951-FA99-32AEE6821930";
+	setAttr ".uopa" yes;
+	setAttr -s 730 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0.59803087 0.12108123 0.59908181 0.12108123
+		 0.59908152 0.12779933 0.59803057 0.12779927 0.60013276 0.12108129 0.60013247 0.12779933
+		 0.59697998 0.12108117 0.59697962 0.12779921 0.59592903 0.12108111 0.59592873 0.12779915
+		 0.59487808 0.12108105 0.59487778 0.12779915 0.59382713 0.12108105 0.59382683 0.12779909
+		 0.012397617 0.027423441 0.011346698 0.027425408 0.011334419 0.020707369 0.012385339
+		 0.020705462 0.010295779 0.027427316 0.0102835 0.020709336 0.013448566 0.027421534
+		 0.013436288 0.020703554 0.0092448443 0.027429223 0.0092325658 0.020711243 0.0081939101
+		 0.02743113 0.0081816465 0.020713151 0.0071429908 0.027433097 0.0071307123 0.020715058
+		 -0.14890081 0.029239595 -0.14783424 0.034543425 -0.15086204 0.035297692 -0.15196353
+		 0.029606894 -0.14584225 0.028831124 -0.14481372 0.033690542 -0.14613289 0.039778203
+		 -0.14917046 0.040913075 -0.1538977 0.035978824 -0.15503585 0.029952869 -0.14924651
+		 0.023877785 -0.15232021 0.023839578 -0.14278799 0.028354689 -0.14178669 0.03273952
+		 -0.14315903 0.038457721 -0.14618111 0.023919627 -0.15222788 0.041867942 -0.15693763
+		 0.036632031 -0.15812263 0.030300483 -0.15540749 0.023808494 -0.14879996 0.018521726
+		 -0.15185261 0.018071987 -0.13970673 0.027759731 -0.1388036 0.031471804 -0.14029056
+		 0.037006646 -0.14311868 0.023959532 -0.14575654 0.019018278 -0.15525997 0.04269138
+		 -0.15851426 0.023787245 -0.15491992 0.017655328 -0.14758396 0.013249263 -0.15058845
+		 0.012394637 -0.14005423 0.023984626 -0.14271587 0.019575089 -0.14459741 0.014203854
+		 -0.15800598 0.017253086 -0.15361148 0.011619329 -0.14565355 0.0081179626 -0.14864391
+		 0.0068439143 -0.13696015 0.023987412 -0.13663703 0.026890889 -0.13966966 0.020229101
+		 -0.14162016 0.015262917 -0.14275241 0.0095675327 -0.15664944 0.01087724 -0.15167934
+		 0.0057515283 -0.13663584 0.021100849 -0.13870585 0.016579449 -0.13997579 0.011121556
+		 -0.15470886 0.004802994 0.054438353 0.37997851 0.055652916 0.37470567 0.058705568
+		 0.37515453 0.057443142 0.38083225 0.051451564 0.37902474 0.052609265 0.37421 0.056097865
+		 0.36934945 0.059171617 0.36938682 0.061773062 0.37557033 0.060466349 0.38160673 0.052509427
+		 0.38511038 0.05550015 0.38638356 0.048473984 0.37796655 0.049568444 0.37365407 0.053032458
+		 0.36930853 0.049607903 0.38366163 0.055750608 0.36398777 0.058813334 0.3636196 0.062258899
+		 0.36941701 0.064859271 0.37597167 0.063504577 0.38234797 0.058535933 0.38747507 0.045559287
+		 0.37665081 0.046522051 0.37300086 0.049970001 0.36926952 0.046830803 0.38210839 0.052692235
+		 0.36439711 0.054682553 0.35868424 0.057710171 0.35792911 0.061885536 0.36327276 0.065365672
+		 0.3694374 0.061565697 0.38842273 0.046905518 0.36924529 0.049638122 0.36487442 0.051662266
+		 0.35953799 0.052979767 0.35344994 0.056016982 0.3523142 0.060745656 0.35724711 0.064972162
+		 0.36292425 0.043488026 0.37213004 0.0438115 0.36924335 0.046556979 0.36547023 0.048635542
+		 0.36048988 0.050006211 0.35477129 0.059074104 0.35135847 0.063785315 0.35659304 0.043487519
+		 0.36633998 0.045652777 0.36175847 0.047138155 0.35622317 0.062106013 0.35053417 -0.47830302
+		 -0.36507648 -0.47898021 -0.36188942 -0.48049876 -0.36225992 -0.47984558 -0.36527711
+		 -0.47994933 -0.3588531 -0.4814637 -0.35932678 -0.48200986 -0.36264706 -0.48137879
+		 -0.36548495 -0.47804984 -0.36834252 -0.47960272 -0.36835271 -0.48298106 -0.3598724
+		 -0.48351172 -0.36307383 -0.48290464 -0.3657093 -0.48114583 -0.36836779 -0.47824651
+		 -0.37159795 -0.47978929 -0.37142378 -0.48447588 -0.3605088 -0.4850046 -0.36355054
+		 -0.48442587 -0.36595708 -0.48268214 -0.36838651 -0.48132488 -0.37125042 -0.47883967
+		 -0.37476248 -0.48035899 -0.37443557 -0.48592618 -0.36123294 -0.48649287 -0.36407948
+		 -0.48594582 -0.36623502 -0.48421437 -0.36840701 -0.48285571 -0.37106642 -0.48187622
+		 -0.37409469 -0.47967899 -0.3777909 -0.48119444 -0.37737888 -0.48731422 -0.36200929
+		 -0.4879497 -0.36473715 -0.48746848 -0.36656147 -0.48574507 -0.3684265 -0.48438436
+		 -0.37086186 -0.4833895 -0.37371728 -0.48272249 -0.37690121 -0.48727676 -0.36843866
+		 -0.48591092 -0.37062329 -0.48489916 -0.3732906 -0.48424059 -0.37633356 -0.48898494
+		 -0.36699677 -0.48882324 -0.36843961 -0.48745096 -0.37032551 -0.48641199 -0.37281483
+		 -0.48572686 -0.37567315 -0.48898518 -0.36989081 -0.48790288 -0.37218079 -0.48716038
+		 -0.37494746 -0.74009693 -0.36279374 -0.74069011 -0.36595827 -0.73914731 -0.36613244
+		 -0.7385776 -0.36312068 -0.74088681 -0.36921376 -0.73933393 -0.36920357 -0.73761177
+		 -0.36630583 -0.73706037 -0.36346155 -0.73925757 -0.35976535 -0.73774213 -0.36017734
+		 -0.74063367 -0.37247977 -0.7390911 -0.37227917 -0.73779082 -0.36918843 -0.73608094
+		 -0.36648983 -0.73554707 -0.36383897 -0.73621404 -0.36065507 -0.7399565 -0.3756668
+		 -0.73843795 -0.37529632 -0.73755789 -0.37207133 -0.73625451 -0.36916977 -0.73455226
+		 -0.36669445 -0.73403746 -0.36426568 -0.73469597 -0.36122274 -0.73898739 -0.37870318
+		 -0.73747307 -0.3782295 -0.73692685 -0.37490922 -0.73603207 -0.37184697 -0.73472226
+		 -0.36914933 -0.73302567 -0.36693299 -0.73252463 -0.36474144 -0.73320973 -0.36188316
+		 -0.73595566 -0.37768391 -0.735425 -0.37448248 -0.73451078 -0.3715992 -0.73319161
+		 -0.36912978 -0.73148566 -0.36723083 -0.73103374 -0.36537552 -0.73177618 -0.36260885
+		 -0.73446083 -0.37704751 -0.73393208 -0.37400576 -0.73299086 -0.37132132 -0.73165989
+		 -0.36911768 -0.73301053 -0.3763234 -0.73244381 -0.37347683 -0.7314682 -0.37099484
+		 -0.73011339 -0.36911672 -0.72995144 -0.36766553 -0.73162246 -0.37554702 -0.73098695
+		 -0.37281919 -0.72995168 -0.37055957 0.53153735 0.059758663 0.53164274 0.059758663
+		 0.53164268 0.060432136 0.53153729 0.060432136 0.53174806 0.059758663 0.53174806 0.060432136
+		 0.53185344 0.059758663 0.53185332 0.060432196 0.53195882 0.059758663 0.5319587 0.060432196
+		 -0.42724887 0.0044902563 -0.42735422 0.0044902563 -0.42735413 0.003816843 -0.42724878
+		 0.003816843 -0.42745954 0.0044902563 -0.42745948 0.0038167834 -0.42756492 0.0044902563
+		 -0.42756483 0.0038167834 -0.42767024 0.0044902563 -0.42767018 0.0038167834 -0.38756469
+		 0.29959264 -0.38845128 0.30345315;
+	setAttr ".uvtk[250:499]" -0.39066237 0.30314204 -0.38982069 0.2989794 -0.38534826
+		 0.30034587 -0.38625053 0.30382672 -0.38876888 0.30735946 -0.39097896 0.30733705 -0.39288589
+		 0.30288243 -0.3920908 0.29849896 -0.38319224 0.30122426 -0.38405621 0.30426195 -0.3865636
+		 0.30738482 -0.38851827 0.31127113 -0.39073238 0.31153178 -0.39320081 0.30732009 -0.39512444
+		 0.30264699 -0.39434591 0.29811966 -0.38111198 0.30217475 -0.38185829 0.30474859 -0.3843559
+		 0.30740976 -0.38630864 0.31095111 -0.38774234 0.31516093 -0.39000788 0.31570315 -0.39295298
+		 0.31175029 -0.39544025 0.30731094 -0.3821429 0.30742648 -0.38409978 0.31056458 -0.38549948
+		 0.31447554 -0.39227211 0.31611824 -0.39518195 0.31195545 -0.37967193 0.30536216 -0.3799094
+		 0.30742806 -0.38188052 0.31011838 -0.38330334 0.31365275 -0.39451081 0.31644642 -0.37967151
+		 0.30950487 -0.38117826 0.31273502 0.14133495 -0.34204292 0.14217317 -0.34568989 0.14426196
+		 -0.34539562 0.14346617 -0.34146321 0.1392411 -0.3427549 0.14009416 -0.34604317 0.14247388
+		 -0.34938025 0.14456177 -0.34935868 0.14636254 -0.34514996 0.14561069 -0.34100893
+		 0.13720447 -0.34358513 0.13802123 -0.34645474 0.14039052 -0.34940457 0.14223772 -0.35307568
+		 0.14432949 -0.35332158 0.1466608 -0.34934229 0.14847726 -0.34492722 0.14774108 -0.34065026
+		 0.13523936 -0.34448338 0.13594484 -0.34691483 0.13830483 -0.34942847 0.14015025 -0.35277379
+		 0.14150536 -0.35675064 0.14364576 -0.35726249 0.14642739 -0.35352761 0.14877641 -0.34933329
+		 0.13621414 -0.34944463 0.13806337 -0.35240895 0.13938636 -0.35610345 0.14578491 -0.35765424
+		 0.14853317 -0.35372108 0.13387942 -0.34749484 0.13410413 -0.34944648 0.13596672 -0.35198778
+		 0.13731146 -0.35532653 0.14789987 -0.35796395 0.13387972 -0.35140854 0.13530374 -0.35445988
+		 -0.59929788 -0.0055279136 -0.59898329 -0.0035518408 -0.59996319 -0.00345397 -0.60028195
+		 -0.0053747892 -0.59885556 -0.0015020967 -0.59984076 -0.0015006661 -0.60093904 -0.0033511519
+		 -0.60127771 -0.0051839352 -0.59898949 0.00055795908 -0.59997499 0.00045734644 -0.6008175
+		 -0.0015033484 -0.60191131 -0.0032302141 -0.60227472 -0.0049364567 -0.59933227 0.0025538206
+		 -0.60032594 0.0023885965 -0.60095376 0.00034594536 -0.60178828 -0.0015089512 -0.60288048
+		 -0.0030828714 -0.60326314 -0.0046233535 -0.60132772 0.0021786094 -0.60192662 0.00021111965
+		 -0.6027559 -0.0015163422 -0.60384637 -0.0029052496 -0.60423422 -0.0042421222 -0.60232466
+		 0.0019087195 -0.60289395 4.7087669e-05 -0.6037237 -0.0015240312 -0.60480767 -0.0026991963
+		 -0.60515916 -0.0038188696 -0.60330582 0.0015736818 -0.60385591 -0.00014698505 -0.60469526
+		 -0.00153023 -0.60577267 -0.0024694204 -0.60606426 -0.003341794 -0.60496068 -0.0054321289
+		 -0.60574931 -0.0048217177 -0.60426283 0.0011752844 -0.60481226 -0.00036561489 -0.60567731
+		 -0.001531899 -0.60517406 0.00073796511 -0.60577041 -0.00059831142 -0.60501313 0.0023520589
+		 -0.60578728 0.0017258525 -0.60606414 0.00026339293 0.36336219 -0.62732959 0.36301571
+		 -0.62977582 0.36423224 -0.62988323 0.36458343 -0.62750125 0.36288047 -0.63229406
+		 0.36410242 -0.6322906 0.36544514 -0.62999946 0.36581665 -0.62772071 0.36303526 -0.63482225
+		 0.36425668 -0.63470221 0.36531645 -0.63228405 0.36665577 -0.63013828 0.36704826 -0.6280067
+		 0.36342812 -0.63728786 0.36465746 -0.63709289 0.36547071 -0.63456941 0.36652559 -0.63227534
+		 0.36786664 -0.63030636 0.36826426 -0.628362 0.36589241 -0.63684368 0.36667949 -0.6344111
+		 0.36773336 -0.63226604 0.3690837 -0.63050127 0.36945069 -0.62876928 0.36711764 -0.63652647
+		 0.36788565 -0.6342237 0.36894113 -0.63225979 0.36831957 -0.63614333 0.36909443 -0.63400984
+		 0.37015831 -0.63225913 0.37029767 -0.63078952 0.36948669 -0.63571781 0.3702969 -0.6337204
+		 0.1417613 -0.07515794 0.14082986 -0.075460553 0.14225101 -0.078249812 0.14003748
+		 -0.076036215 0.14274073 -0.07515794 0.13946182 -0.076828599 0.14367223 -0.075460613
+		 0.13915914 -0.077760041 0.14446455 -0.076036274 0.13915914 -0.078739464 0.14504021
+		 -0.076828659 0.13946182 -0.079670906 0.14534289 -0.0777601 0.14003748 -0.08046329
+		 0.14534283 -0.078739524 0.1408298 -0.081038952 0.14504021 -0.079670966 0.14176124
+		 -0.081341624 0.14446449 -0.08046335 0.14274067 -0.081341624 0.14367217 -0.081039011
+		 0.0049568415 -0.16740525 0.0046541691 -0.16833675 0.0077460408 -0.16882646 0.0046541691
+		 -0.16931611 0.0055325031 -0.16661292 0.0049567819 -0.17024761 0.0063248873 -0.16603723
+		 0.0055325031 -0.17103994 0.0072563291 -0.16573459 0.0063248277 -0.17161566 0.0082357526
+		 -0.16573462 0.0072562695 -0.17191833 0.0091671944 -0.16603726 0.008235693 -0.17191833
+		 0.0099595785 -0.16661295 0.0091671944 -0.17161566 0.01053524 -0.16740531 0.0099595189
+		 -0.17104 0.010837853 -0.16833681 0.01053524 -0.17024767 0.010837853 -0.16931617 -0.19886443
+		 0.032596529 -0.19902663 0.032678783 -0.19936839 0.032207489 -0.19904518 0.03204149
+		 -0.19868642 0.033150375 -0.19915564 0.032807112 -0.1996257 0.032464206 -0.19971493
+		 0.031737655 -0.19923472 0.031483978 -0.19868468 0.032568574 -0.19868414 0.031984776
+		 -0.19923897 0.032968998 -0.19979334 0.032787442 -0.20009671 0.032118917 -0.2000719
+		 0.03126803 -0.19945186 0.030930996 -0.19868481 0.031396687 -0.19850506 0.03259784
+		 -0.19832352 0.032043427 -0.19926819 0.033148646 -0.19985202 0.03314811 -0.20035163
+		 0.032599092 -0.20056659 0.031765252 -0.19813517 0.03148517 -0.19834319 0.032681167
+		 -0.19800031 0.032211065 -0.19924028 0.033328354 -0.19979531 0.033509135 -0.20044011
+		 0.033148766 -0.20090148 0.032382607 -0.20103116 0.031399906 -0.20044026 0.030805618
+		 -0.19765496 0.031740069 -0.19821483 0.032810152 -0.19774354 0.032468379 -0.19915803
+		 0.033490539 -0.19962932 0.033832312 -0.20035283 0.033698678 -0.19791868 0.030935317
+		 -0.19730133 0.031270206 -0.19727373 0.032121837 -0.19813257 0.032972336 -0.19757754
+		 0.032791615 -0.19902965 0.033619583 -0.19937256 0.034089625 -0.20009911 0.034178853
+		 -0.19680411 0.031764895 -0.19702002 0.032602072 -0.19810465 0.033152103 -0.19752082
+		 0.03315264 -0.1988678 0.03370291 -0.19904934 0.034257293 -0.19971789 0.034560621
+		 -0.20056875 0.034535825 -0.2009058 0.033915818 -0.19693598 0.030805618 -0.19634166
+		 0.031396538;
+	setAttr ".uvtk[500:729]" -0.19646704 0.032384932 -0.19693276 0.033151984 -0.19813389
+		 0.033331752 -0.1975795 0.033513248 -0.19868818 0.033732116 -0.1986887 0.034315944
+		 -0.19923767 0.03481555 -0.20007153 0.035030544 -0.19702125 0.033701599 -0.19821721
+		 0.033493578 -0.19774717 0.033836484 -0.19850841 0.033704221 -0.19832766 0.03425926
+		 -0.19868803 0.034904063 -0.19945416 0.035365403 -0.20043688 0.035495102 -0.20103118
+		 0.034904182 -0.19727615 0.034181833 -0.19834623 0.033621967 -0.19800445 0.034093261
+		 -0.19813812 0.034816742 -0.19647136 0.033918083 -0.19680625 0.034535468 -0.19765791
+		 0.034563065 -0.19730094 0.03503269 -0.19792098 0.035369754 -0.19634169 0.034900784
+		 -0.19693258 0.035495102 0.033314973 0.015774131 0.033302724 0.018761873 0.032367647
+		 0.021599412 0.030601293 0.024009049 0.028176546 0.025754929 0.025330693 0.026665986
+		 0.022342443 0.026652992 0.019504368 0.02571708 0.017094329 0.023949891 0.015348315
+		 0.02152437 0.014437281 0.018677995 0.014450416 0.015689477 0.015386403 0.012851343
+		 0.017153546 0.010441512 0.01957877 0.0086958557 0.022424594 0.0077852756 0.025412306
+		 0.0077988356 0.028249383 0.008735165 0.030658185 0.010502592 0.032403082 0.012928247
+		 0.036195636 0.01530993 0.036185831 0.019210592 0.034970909 0.02291739 0.032669634
+		 0.026067227 0.029507399 0.028351635 0.025793821 0.029546857 0.021892577 0.02953586
+		 0.01818569 0.028319776 0.015035987 0.026017725 0.012751788 0.022855014 0.011556663
+		 0.019141287 0.011567585 0.015239984 0.012783512 0.011533007 0.015085444 0.0083832592
+		 0.018248037 0.0060991347 0.021961644 0.0049043223 0.025862575 0.0049158558 0.029568762
+		 0.006132558 0.032717288 0.0084350854 0.035000235 0.011597559 0.039510131 0.014776707
+		 0.03950274 0.01972729 0.037965804 0.024433732 0.035049349 0.028434962 0.031038791
+		 0.03133893 0.026326939 0.032861203 0.021375269 0.032852739 0.016668633 0.031314403
+		 0.012667783 0.028396934 0.0097642839 0.024385959 0.0082423016 0.019674093 0.0082507953
+		 0.014722496 0.0097889826 0.01001586 0.012706369 0.0060149208 0.016717404 0.0031114593
+		 0.02142936 0.0015898496 0.026380733 0.0015991181 0.031086504 0.0031382218 0.035085976
+		 0.0060560554 0.037988156 0.01006639 0.042787522 0.014249027 0.042782754 0.020237818
+		 0.040927559 0.02593267 0.037402898 0.030775785 0.032553643 0.034292608 0.026854739
+		 0.036138475 0.020864293 0.036132663 0.01516898 0.03427583 0.010326318 0.030749917
+		 0.0068102665 0.025900155 0.004964944 0.020201311 0.0049709417 0.014211103 0.0068277456
+		 0.0085158944 0.010353677 0.0036732033 0.01520364 0.00015726686 0.020902753 -0.001687564
+		 0.026892766 -0.0016806163 0.032586962 0.00017717108 0.037427872 0.0037033409 0.040942371
+		 0.0085520744 0.046554655 0.013628364 0.046557337 0.020811081 0.044340342 0.027644098
+		 0.040119708 0.033458143 0.034308404 0.037683368 0.027475491 0.039905578 0.0202903
+		 0.039907187 0.013456486 0.037688136 0.0076430552 0.033465922 0.0034190379 0.027653962
+		 0.001197728 0.020821244 0.0011965565 0.0136365 0.0034157075 0.0068029463 0.0076380894
+		 0.00098961592 0.013450451 -0.0032342412 0.020283625 -0.0054548942 0.027468294 -0.0054548718
+		 0.034300655 -0.0032345448 0.04011178 0.00098790228 0.044333696 0.006798327 0.5788058
+		 -0.1944885 0.57847589 -0.19550332 0.57847577 -0.19657046 0.57880545 -0.1975854 0.57943261
+		 -0.19844878 0.5802958 -0.19907612 0.58131069 -0.19940597 0.58237779 -0.19940609 0.58339274
+		 -0.19907644 0.58425605 -0.19844928 0.58488345 -0.19758603 0.5852133 -0.1965712 0.58521342
+		 -0.19550407 0.58488375 -0.19448912 0.58425665 -0.19362575 0.58339339 -0.19299841
+		 0.58237857 -0.19266854 0.5813114 -0.19266844 0.58029652 -0.19299808 0.57943308 -0.19362524
+		 0.4570713 -0.27700084 0.457324 -0.27723473 0.45746261 -0.27703857 0.45725349 -0.27684271
+		 0.45763016 -0.27739573 0.45771816 -0.27717012 0.45759919 -0.27684397 0.45744076 -0.27669209
+		 0.45779419 -0.27694249 0.4577359 -0.27665037 0.45763022 -0.27654755 0.4571113 -0.27659267
+		 0.45733365 -0.27649784 0.45800954 -0.27721661 0.45801133 -0.27697676 0.45786721 -0.27671629
+		 0.45787346 -0.27645797 0.45782071 -0.27640617 0.45756072 -0.27641696 0.45830166 -0.27717173
+		 0.45822865 -0.27694303 0.45801231 -0.276739 0.45793951 -0.27649117 0.45801193 -0.27626628
+		 0.45778644 -0.27634066 0.4572961 -0.27627301 0.45753595 -0.27627021 0.45855874 -0.27704179
+		 0.45842451 -0.27684504 0.45815745 -0.27671629 0.45801249 -0.27650255 0.45777425 -0.27626771
+		 0.45733052 -0.27604824 0.45755839 -0.27612275 0.45838687 -0.27739692 0.45869434 -0.27723998
+		 0.45876992 -0.27684677 0.458583 -0.2766937 0.45828897 -0.27665043 0.45808548 -0.27649105
+		 0.45778546 -0.27619451 0.45743212 -0.27585101 0.45762554 -0.27599013 0.45895118 -0.27700788
+		 0.45891368 -0.27659464 0.45868993 -0.27649903 0.4583945 -0.27654767 0.4581514 -0.27645779
+		 0.45781893 -0.27612829 0.45723709 -0.27571052 0.45710397 -0.27596408 0.45758671 -0.27569175
+		 0.45773023 -0.27588421 0.45846343 -0.27641702 0.45820391 -0.27640587 0.45787129 -0.2760756
+		 0.45743474 -0.27550453 0.4577882 -0.27558804 0.45786309 -0.27581584 0.45872742 -0.27627331
+		 0.45848757 -0.27626973 0.45823774 -0.27634019 0.45793754 -0.27604163 0.45801121 -0.27555233
+		 0.45801091 -0.27579212 0.45869273 -0.276048 0.45846444 -0.27612197 0.45824942 -0.27626711
+		 0.45801115 -0.27602983 0.45823428 -0.27558792 0.45815876 -0.27581549 0.45859069 -0.27585065
+		 0.45839682 -0.27598917 0.45823774 -0.2761938 0.45808479 -0.27604133 0.45843586 -0.27569163
+		 0.45829195 -0.27588356 0.45891845 -0.2759636 0.45878601 -0.27571058 0.45820391 -0.27612764
+		 0.45815125 -0.27607507 0.458588 -0.2755037;
+createNode polyAutoProj -n "polyAutoProj68";
+	rename -uid "A2255A44-4553-AC03-2C2F-DBBDF5606179";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:541]";
+	setAttr ".ix" -type "matrix" 0.11372092757729224 -0.23437688022369427 -0.028932657202562908 0
+		 0.096225841599781078 0.016662706747513693 0.24323858990195801 0 -0.21566225456627033 -0.11615464788671666 0.09327357468725414 0
+		 17.205419049880451 3.2195906450636724 8.1167932081014502 1;
+	setAttr ".s" -type "double3" 0.56454244379591501 0.56454244379591501 0.56454244379591501 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode groupId -n "groupId170";
+	rename -uid "CC583E6E-429E-98EE-95DD-DB9D59D3D62B";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts26";
+	rename -uid "08627BB3-4C46-4CB0-D1DD-78979F543DBD";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:541]";
+createNode polyTweakUV -n "polyTweakUV124";
+	rename -uid "9CAA3D0C-4F53-7DFC-89A0-988CC8448E28";
+	setAttr ".uopa" yes;
+	setAttr -s 730 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.002090849 0.006370008 -0.0010323524
+		 0.0061986446 -0.00022047758 -0.0068055391 -0.0012789592 -0.0066340566 0.00524427
+		 0.0059523582 0.0060562938 -0.0070518255 -0.00040600449 0.0065020323 0.00040597469
+		 -0.0065020323 0.0012788996 0.0066341162 0.0020909011 -0.0063700676 0.00022051856
+		 0.0068054795 0.0010324102 -0.006198585 -0.0060562519 0.0070518255 -0.0052443584 -0.0059522986
+		 -0.00035870075 -0.0066050291 -0.0014205873 -0.0065677166 -0.001942426 0.0064144731
+		 -0.00088050961 0.0063773394 0.00026082993 -0.0064911246 -0.00026090443 0.0064911842
+		 0.0059213638 -0.006567359 0.0053996444 0.0064150095 0.0019424707 -0.0064145923 0.0014206469
+		 0.0065678358 0.00088046491 -0.0063773394 0.00035864115 0.0066049695 -0.0053995699
+		 -0.0064149499 -0.0059213936 0.0065672994 -0.012208641 -0.0081269145 -0.00094532967
+		 -0.011821121 0.0018320084 -0.011618167 -0.0098515749 -0.0079647601 -0.012202919 -0.007236585
+		 -0.0013944507 -0.010197252 0.016376078 -0.0053303242 0.019155025 -0.0043894053 0.0061727762
+		 -0.0091542304 -0.0059406757 -0.0064568222 -0.016639709 0.00059947371 -0.014477015
+		 0.00092925131 -0.0091328621 -0.0056867898 0.0013213158 -0.0070070922 0.015375495
+		 -0.0042039156 -0.016474009 0.00028759241 0.023360372 -0.001078546 0.011318982 -0.0038835704
+		 -0.0013245344 -0.0033184588 -0.010803461 0.0013176501 -0.013588846 0.0091390461 -0.011321127
+		 0.0095697492 -0.0020892024 -0.0041357428 0.0072900057 -0.0046207458 0.016480088 -0.0008354485
+		 -0.013222933 -6.6071749e-05 -0.013535202 0.0076753795 0.02862668 0.0052109361 -0.0064822435
+		 0.0017982572 -0.0075573921 0.0087475851 -0.0032937527 0.012434833 -0.00066691637
+		 0.012630414 -0.0062116981 -0.00058954954 -0.010385275 0.0054326057 -0.0036766529
+		 0.010395139 -0.0031501651 0.0064436421 0.0034233928 0.010605861 0.013701677 0.0058160014
+		 0.016357303 0.004905927 0.0053582191 -0.0013661534 0.0090560913 -0.0042381585 -0.0034170747
+		 0.0029188991 -0.0010207295 0.0068008378 0.012632906 0.0045725591 0.0081870556 0.005817391
+		 0.020247221 0.0016354052 0.0077787042 0.0014684498 0.0048478246 0.0034250766 0.013507187
+		 0.00086116046 0.025032878 -0.0045185741 0.0025220513 -0.012397528 0.013498485 -0.0087784678
+		 0.011179447 -0.0088199824 -0.00021630526 -0.012215704 0.0030019283 -0.010768384 0.01348716
+		 -0.0077394247 0.017160118 -0.00013692677 0.015001416 -7.3418021e-05 0.0073491335
+		 -0.0076301098 -0.0044415593 -0.0098344684 -0.015290439 -0.0063077509 -0.018133104
+		 -0.0050223768 0.00043350458 -0.0076313615 0.010375887 -0.0059695989 0.016991377 -0.00025376678
+		 -0.014043748 -0.0054526329 0.013337493 0.0084640756 0.011037886 0.0086899847 0.011334062
+		 -9.0256333e-05 0.0028543472 -0.0049661845 -0.0093790889 -0.0046981275 -0.022221744
+		 -0.0013901293 -0.005308181 -0.0047546178 0.0034562647 -0.0039896369 0.013736844 -0.00037668645
+		 -0.014763415 -0.0021433532 0.013284802 0.0071491748 0.002753377 0.011826247 8.8214874e-05
+		 0.011999454 0.0072033405 0.0075474903 0.007021904 -0.00020685792 -0.027231276 0.005110383
+		 0.0067178011 -0.00038914382 0.010169595 0.0051276088 0.0031054616 0.0097908676 -0.013739049
+		 0.004821429 -0.016341329 0.004257625 -0.0041149855 0.009888757 0.0026892424 0.0047656
+		 -0.0076439679 -0.0031375885 -0.0048663914 -0.00022405386 0.003064394 0.0030388832
+		 0.00030380487 0.0061389878 -0.012907982 0.0032993965 -0.020357609 0.001304938 -0.0090831518
+		 0.0049597621 -0.008205682 0.0025410503 -0.0058065057 0.0032464787 -0.014165193 -0.00048289448
+		 -0.025406361 -0.004646 3.2782555e-06 0.00026518106 -0.007401228 0.00094157457 -0.0051489472
+		 -0.0025338531 0.0021058321 -0.0019605756 -0.016999781 0.0065495372 -0.014746785 0.0023903847
+		 -0.0030857325 -0.0045982599 0.003965795 -0.0034127235 0.0037059784 0.0023676157 0.0057974458
+		 0.0015361309 -0.012757599 -0.00029611588 -0.0016184449 -0.0054831505 0.0051531196
+		 -0.0041648149 0.0075654984 0.00069582462 0.0031781793 0.0048757195 0.0054462552 0.0053675771
+		 -0.011214495 -0.0017402768 -0.0011481643 -0.0053379536 0.0052499175 -0.0042874813
+		 0.0085814595 -9.5486641e-05 0.007283926 0.0050870776 -0.0013698936 0.0052756071 0.0011840463
+		 0.0068233609 -0.010303497 -0.0020153522 -0.0020834804 -0.0042699575 0.0038617253
+		 -0.0038707256 0.0084396601 -0.00077879429 0.0082769394 0.004217267 0.0031914115 0.007016778
+		 -0.008803606 0.00097298622 -0.0061864257 0.0030283928 -0.010204911 -0.00093561411
+		 -0.004554987 -0.0031419992 0.00061434507 -0.0031350255 0.0067648888 -0.0012880564
+		 0.0080313683 0.0029427409 0.0042896271 0.0061670542 -0.004280746 0.0036514401 0.0032240152
+		 -0.0015274882 0.0062106252 0.0014945269 0.0041126013 0.0045281649 -0.0032504797 0.0031766891
+		 -0.0047274828 -0.0027223825 -0.002578795 -0.0014236569 0.002379775 0.00023764372
+		 0.0022569299 0.0022674799 -0.0032561421 0.0017841458 -0.003484726 1.6450882e-05 -0.0012632012
+		 0.00058805943 -0.0044528246 -0.00058704615 0.0048014522 -0.001460731 -0.001583755
+		 -0.0018945336 -0.003697753 -0.0037530065 0.0025425553 -0.0044078231 -0.0045133233
+		 0.00034987926 -0.0066284537 -0.0001718998 -0.0055546165 -0.0047612786 0.00052285194
+		 -0.0059153438 0.012948275 0.0040302873 0.010685861 0.00057035685 -0.0031998754 0.0028347969
+		 -0.0055123568 0.0036915541 -0.0084271431 -0.00061053038 -0.0067172647 -0.0050125718
+		 -0.00085055828 -0.006210804 0.0087786317 -0.0013504624 0.0023924112 0.0031496882
+		 -0.00023502111 0.005220592 -0.0074204206 0.0038493276 -0.0094788671 -0.00093352795
+		 -0.0067671537 -0.0046060681 -0.001173377 -0.0054660439 0.0074421763 -0.0020129085
+		 0.011278868 -0.0010484457 0.008564949 0.0016994476 -0.0023698807 0.0059577227 -0.008513689
+		 0.0034707785 -0.0093752742 -0.0011147261 -0.0053339005 -0.0036972165 -1.5437603e-05
+		 -0.0037629008 0.0068683624 -0.0015466809 0.0064621568 0.0030668974 -0.0036502481
+		 0.0056763887 -0.008394897 0.0027121305 -0.0077374578 -0.0011401772 -0.0019288063
+		 -0.0025609732 0.002800107 -0.0022729039 0.0072103739 0.00015431643 0.0051090717 0.0033334494
+		 -0.0037098527 0.0046077371 -0.006693244 0.0017435551 -0.0042228699 -0.0010351539
+		 0.0046691298 0.0026225448 -0.0021706223 0.0029411316 -0.0030789375 0.00085860491
+		 0.0015695691 -0.00079572201 0.0036038756 -0.0020116568 0.0053360462 0.00079864264
+		 0.00095444918 0.0015674233 0.0025762916 0.00074356794 0.0017496049 -0.0027015805
+		 -0.00046792626 -0.0028683543 -0.00058418512 0.0027095079 0.0016333163 0.0028762221
+		 5.8144331e-05 -0.0029138923 -5.8144331e-05 0.0026640296 0.00058418512 -0.0028319955
+		 0.00046792626 0.0027459264 -0.0016333163 -0.0026288629 -0.0017495751 0.0029489994
+		 -0.0020180345 0.0031177998 0.00019925833 0.0028306246 0.00085324049 -0.0027484298
+		 -0.0013640821 -0.002461195 -0.00032699108 0.002664566 0.00032699108 -0.0029144287
+		 -0.00085330009 0.0026260018 -0.00019931793 -0.0029530525 0.0013641119 0.0027085543
+		 0.0020180941 -0.0028703809 0.0027807355 0.0070144832 -0.0096048117 0.0055655241;
+	setAttr ".uvtk[250:499]" -0.0082993507 0.0052388012 0.0035116076 0.0062136948
+		 0.0039442182 0.0069261491 -0.0086120963 0.0052756667 -0.014182031 -0.0010321438 -0.012884736
+		 -0.0014602542 -0.0054907203 0.004047513 0.0057144761 0.0042403042 0.0074259639 0.0060024559
+		 -0.0045642257 0.0044925809 -0.013101816 -0.00056499243 -0.010952413 -0.0075261593
+		 -0.0097203255 -0.0081307888 -0.010069966 -0.0018154383 -0.0020172 0.0015653372 0.0089750886
+		 0.00055593252 0.01365304 0.0038433969 0.0033043027 0.003244251 -0.0088415146 -0.00010323524
+		 -0.0098007917 -0.0062625408 -0.00049960613 -0.0084852576 3.7193298e-05 -0.0088988543
+		 -0.0068992376 -0.0077469945 -0.0066223741 -0.0020656586 -0.00073355436 0.0002476573
+		 -0.0055096149 -0.0045725703 0.0011014938 -0.0072287917 0.0022678375 -0.008064568
+		 -0.0033220649 -0.0059263706 0.015318394 0.0027444661 0.011961818 0.00039625168 0.0026989579
+		 -0.0025278926 0.0052211881 -0.0053074956 0.0057097673 -0.0053244829 0.015088558 -0.0017777681
+		 0.012158871 -0.0024679303 -0.0027828813 -0.0070040822 0.0092946887 -0.0057519078
+		 0.007913053 -0.0053680539 -0.0035642982 -0.0061281323 -0.0038308501 -0.0069975257
+		 0.0084502697 -0.0055226088 0.013813317 0.00063571334 0.012435138 0.0011052489 0.0051047802
+		 -0.0041220188 -0.0057504177 -0.0040869713 -0.0071374774 -0.0061613917 0.0046162605
+		 -0.0048034787 0.012888312 0.0001270771 0.010788143 0.0069094896 0.0094904304 0.0075397789
+		 0.0096189976 0.001501739 0.0017111897 -0.0015859008 -0.0089272261 -0.00034099817
+		 -0.013136327 -0.0040926933 -0.0029815435 -0.0036219954 0.0088506341 -0.00037619472
+		 0.0097717047 0.0056233406 0.00079029799 0.0076396167 0.00022447109 0.0080646276 0.006678164
+		 0.0071842372 0.0062535405 0.0017931759 0.0010237098 -0.00076824427 0.0056786537 0.0039145052
+		 -0.00072288513 0.0063804984 -0.0019733906 0.0072485507 0.0031884313 0.0053930283
+		 -0.014675915 -0.0031958222 -0.011343718 -0.00095754862 -0.0022773147 0.0018542111
+		 -0.0047006607 0.0044645071 -0.0053195953 0.0045308173 -0.014370799 0.0010977089 -0.011446416
+		 0.0016371012 -0.00058841705 0.0034644604 0.0014114976 0.0041800737 0.0030887127 0.0046718717
+		 0.0009701848 0.004437089 0.0015478134 0.0026634932 0.0032103062 0.0020724535 0.0046785474
+		 0.0044344068 0.002137661 0.0044484138 -0.0012394786 0.0011430979 0.00047433376 -0.00061392784
+		 0.0048715472 0.0014241338 0.0057528615 0.0037014484 0.0026541352 0.0038519502 -0.0061447024
+		 0.001755178 -0.0045366883 -0.00063496828 0.0021516085 -0.0017247796 0.0060821176
+		 0.0007339716 0.0059031844 0.0026475787 0.002270937 0.0028870702 -0.0032120347 -0.0021829605
+		 0.0033763647 -0.002415061 0.0063974261 1.8060207e-05 0.0047531724 0.0014021993 0.00074934959
+		 0.0017253757 -0.0023730397 -0.0031723976 0.0037484169 -0.002823472 0.0053919554 -0.00070291758
+		 0.0019856095 1.8656254e-05 -0.0017868876 0.00014042854 -0.0022417307 -0.0037706494
+		 0.0028907061 -0.0030301809 0.0026643276 -0.0014021993 -0.0028269291 -0.0014809966
+		 -0.0060461164 -0.0015168786 -0.0079315901 -0.00026994944 -0.0087824464 -0.0017200708
+		 -0.0030608773 -0.004073143 0.00046408176 -0.0030334592 -0.0021926761 -0.0020393133
+		 -0.0048508048 -0.0038470626 -0.0039554834 -0.002774477 -0.013581693 -0.003200531
+		 -0.013439953 -0.0029655695 -0.0082864761 -0.0032680035 0.0022349358 -0.004211843
+		 -0.0026640296 -0.0043790936 -0.0042908192 -0.0048011541 0.00067090988 -0.0050507784
+		 -0.0038764477 -0.0020927787 -0.0054741502 -0.0015619397 -0.0052827597 -0.004524231
+		 -8.8453293e-05 -0.0049342513 -0.00040566921 0.0001873374 -0.0020637512 0.0017396212
+		 -0.0064806342 -0.00099515915 -0.0052238107 -0.0037478805 0.00018835068 -0.0041539073
+		 0.0070270896 7.802248e-05 0.0054163933 0.0021833181 -0.0031406879 0.0026370287 -0.0064653158
+		 -0.00040519238 -0.0037160516 -0.0026004314 0.0017005205 -0.0028430223 0.0044900775
+		 0.0034189224 -0.0032232404 0.0030676723 -0.0050206184 0.00019204617 -0.00035661459
+		 -0.0011180043 0.0046030283 -0.00092303753 0.004447639 0.0040046573 -0.0019159317
+		 0.0031241775 -0.0017982721 0.00075215101 0.0054916739 0.0040029883 0.0011784434 0.0028439164
+		 0.0036020279 0.0012475848 0.005053103 -0.00020301342 0.0078243017 0.0032473803 0.006216526
+		 0.0029103756 -3.4570694e-06 4.3511391e-06 -2.3245811e-06 4.6491623e-06 0 0 -8.9406967e-07
+		 4.7087669e-06 -4.3511391e-06 3.4570694e-06 5.9604645e-07 4.0531158e-06 -4.6491623e-06
+		 2.2649765e-06 1.9669533e-06 3.3378601e-06 -4.7087669e-06 8.9406967e-07 3.2186508e-06
+		 1.9669533e-06 -4.1127205e-06 -5.364418e-07 4.2319298e-06 5.364418e-07 -3.2782555e-06
+		 -2.0861626e-06 4.6491623e-06 -8.9406967e-07 -1.9669533e-06 -3.1590462e-06 4.8279762e-06
+		 -2.2649765e-06 -6.5565109e-07 -4.1723251e-06 4.2915344e-06 -3.516674e-06 8.9406967e-07
+		 -4.7683716e-06 3.3974648e-06 -4.1723251e-06 2.2649765e-06 -4.7087669e-06 6.5565109e-07
+		 4.1723251e-06 2.2649765e-06 3.3974648e-06 -5.9604645e-08 0 3.3378601e-06 2.1457672e-06
+		 -8.3446503e-07 4.7087669e-06 4.2319298e-06 6.5565109e-07 -2.0265579e-06 4.5895576e-06
+		 4.6491623e-06 -7.7486038e-07 -3.3974648e-06 4.3511391e-06 4.7087669e-06 -2.2053719e-06
+		 -4.2915344e-06 3.3378601e-06 4.1723251e-06 -3.4570694e-06 -4.5895576e-06 2.1457672e-06
+		 3.516674e-06 -4.1127205e-06 -4.7683716e-06 7.7486038e-07 2.1457672e-06 -4.7087669e-06
+		 -4.1723251e-06 -7.1525574e-07 7.1525574e-07 -4.7683716e-06 -3.3974648e-06 -2.2053719e-06
+		 -5.9604645e-07 -4.2319298e-06 -2.1457672e-06 -3.2186508e-06 0.00027617812 0.0014651418
+		 0.00081652403 0.0010120273 0.0020377636 0.0017991662 0.0011253655 0.0025070906 -0.0009355545
+		 -0.00043034554 0.001180321 0.00041466951 0.0026218295 0.0007904768 0.0020759702 0.001339227
+		 0.0010336637 0.0018494427 -0.00037324429 0.0017395616 0.00016579032 0.0029683113
+		 0.0013263524 -0.00027096272 0.002742976 -0.00037777424 0.0027278066 7.0631504e-05
+		 0.00017344952 -0.0010659397 -0.0012607872 -0.0008700192 0.00068235397 0.0023290813
+		 -0.0010738671 0.0018119812 -0.00090476871 0.0031677485 0.0012541413 -0.00097179413
+		 0.0025435686 -0.0014492273 0.0024353564 -0.0013621449 0.00099292397 -0.0025112033
+		 0.00018119812 0.0027596354 -0.0017592013 0.0016656518 -0.0020726323 0.003046155 0.00097948313
+		 -0.0016215444 0.0020822585 -0.002409339 0.0020045042 -0.0018644333 0.00035440922
+		 -0.0046070218 -0.0029316843 -0.0075530112 -0.0041477382 -0.0056094229 -0.0012509227
+		 0.0030518472 -0.0023564696 0.001301527 -0.0030808449 0.002461791 0.00052666664 -0.0021622181
+		 0.0013748407 -0.0033222437 0.0015252531 -0.0022165775 0.0035645962 0.00054121017
+		 0.0014696717 0.0011795163 -0.0025185943 0.0023989677 -0.0028091371 0.0007609129 -0.0037885904
+		 0.0015489459 -7.0393085e-05 -0.0025263429 0.00036647916 -0.0039064884 0.0010153055
+		 -0.003259778 2.5629997e-05 0.00035887957 -0.0030285716 0.0013561845 -0.0030838251
+		 0.00011110306 -0.004249543 0.00058853626 -0.00075569749 -0.0026724339 -0.00080129504
+		 -0.0040284991 -0.00025272369 -0.0039120913 -0.0012524426 -0.0012190342 -0.0010567605
+		 0.00021606684 0.0066844225 -0.0029167533 0.0047413707 -0.0041336119;
+	setAttr ".uvtk[500:729]" -0.00017005205 -0.0010763407 -0.0035079122 0.0010037422
+		 -0.0031559765 -0.00058966875 -0.0044493079 -0.00048273802 -0.0014561713 -0.0026000142
+		 -0.0018719435 -0.0038287044 -0.0016846657 -0.0036200881 -0.0026964247 -0.0020399094
+		 -0.0039386749 0.0005018115 -0.0030100942 -0.001275301 -0.0043278039 -0.0016509295
+		 -0.0021057129 -0.0023254752 -0.0028314292 -0.003367722 -0.0021857917 -0.0031895041
+		 -0.00479123 -0.0014016032 -0.0075671375 0.0020560026 -0.0056244433 0.0032731295 -0.0042313337
+		 -0.00093114376 -0.0026460886 -0.0018726587 -0.0037439167 -0.0026595592 -0.0025373697
+		 -0.0027101636 -0.001581192 0.0037463903 -0.0022197962 0.0016506314 -0.0035794079
+		 -0.002199769 -0.0014001727 0.00020545721 3.4123659e-05 9.5367432e-06 0.0020486116
+		 0.0066925883 0.0032649636 0.0047488809 -0.0010752529 0.019533701 -0.0070405155 0.019806936
+		 -0.012800425 0.018223807 -0.017790228 0.014940053 -0.021521926 0.010276958 -0.023630977
+		 0.0046907514 -0.023912281 -0.0012724102 -0.02233839 -0.0070293844 -0.019063681 -0.012017846
+		 -0.014408678 -0.01575011 -0.0088284165 -0.01786077 -0.0028687418 -0.018143445 0.0028873235
+		 -0.016569763 0.007876873 -0.013293594 0.011611201 -0.0086346418 0.013724938 -0.0030474514
+		 0.014010079 0.0029217154 0.012438446 0.0086889267 0.0091635436 0.013689145 0.004507944
+		 0.017432019 -0.00025516748 0.017156854 -0.0055342615 0.017851844 -0.01076901 0.016883761
+		 -0.015450299 0.014348 -0.019121051 0.010491505 -0.021422744 0.0056904852 -0.022130191
+		 0.00041341782 -0.021173477 -0.0048237443 -0.018645585 -0.0095086992 -0.014793918
+		 -0.013182908 -0.009995684 -0.015486002 -0.0047207326 -0.016192734 0.00051452219 -0.015233845
+		 0.005198054 -0.012704015 0.0088718832 -0.0088503361 0.01117745 -0.0040489137 0.011889294
+		 0.0012318343 0.01093699 0.0064770132 0.008411184 0.011173628 0.0045552254 0.014858693
+		 0.00071436167 0.015682343 -0.0041685104 0.016804606 -0.0091557503 0.016363934 -0.013762891
+		 0.014407441 -0.017542481 0.011125684 -0.020125955 0.0068376213 -0.02126056 0.001961112
+		 -0.02083391 -0.0030280054 -0.018886924 -0.0076415539 -0.015609443 -0.011427045 -0.011322781
+		 -0.014013469 -0.0064469576 -0.015147775 -0.0014596134 -0.014719158 0.0031518489 -0.012770295
+		 0.0069370866 -0.0094920397 0.0095269196 -0.0052039772 0.010668114 -0.00032296777
+		 0.010247074 0.0046754777 0.0083007365 0.0093021467 0.005015254 0.013098866 0.0016752183
+		 0.014062652 -0.0027659833 0.015613221 -0.0074630082 0.015715756 -0.011960298 0.014366403
+		 -0.015823007 0.011696979 -0.018675297 0.0079662204 -0.0202384 0.0035364628 -0.020357728
+		 -0.0011609793 -0.019020319 -0.0056660473 -0.016355902 -0.009537518 -0.01262559 -0.012394965
+		 -0.0081949383 -0.013959229 -0.0034982786 -0.014077187 0.0010054521 -0.012738794 0.0048771575
+		 -0.010074466 0.0077393726 -0.0063436627 0.0093122497 -0.0019078553 0.0094385706 0.0028017014
+		 0.008100234 0.0073232427 0.0054235905 0.011207342 0.0025738031 0.0010060484 0.0021053255
+		 0.0035554115 0.00088134408 0.0058356486 -0.00098416209 0.0076324418 -0.0033149123
+		 0.0087700635 -0.0058881044 0.009133935 -0.0084519386 0.0086843371 -0.010754049 0.0074617863
+		 -0.012565494 0.0055868328 -0.013708621 0.0032428801 -0.014071316 0.00066107512 -0.013618588
+		 -0.0019055307 -0.012395471 -0.004206866 -0.010520492 -0.0060186386 -0.008175265 -0.0071631372
+		 -0.0055870996 -0.0075268298 -0.0030091992 -0.0070692003 -0.00069827214 -0.0058311746
+		 0.0011112764 -0.0039343797 0.0022365451 -0.0015740599 0.00016154349 0.0003131628
+		 0.00023663044 0.00028935075 0.00028860569 0.00023716688 0.00031229854 0.00016182661
+		 0.0003053546 7.0571899e-05 0.00026866794 -2.7596951e-05 0.00020560622 -0.00012296438
+		 0.00012242794 -0.00020635128 2.7298927e-05 -0.0002695322 -7.0542097e-05 -0.00030630827
+		 -0.00016148388 -0.0003131628 -0.00023655593 -0.00028932095 -0.0002887547 -0.00023716688
+		 -0.00031227618 -0.00016188622 -0.00030558556 -7.0571899e-05 -0.00026865304 2.7596951e-05
+		 -0.00020556897 0.00012296438 -0.00012238324 0.00020638108 -2.7254224e-05 0.00026959181
+		 7.0616603e-05 0.00030630827 -0.00075739622 -0.0026878715 -0.00059190392 -0.0013504624
+		 0.00095719099 0.00031703711 0.00087529421 -0.00069355965 -0.0012897253 -0.0011104941
+		 0.0004426837 0.00067055225 0.0014537275 0.00085914135 0.001598835 0.00011742115 0.00089654326
+		 0.0013365746 0.0012510717 0.00061964989 0.001496166 7.8320503e-05 0.0002092123 -0.001670599
+		 0.0012596846 -0.00055837631 0.00034436584 0.0008584857 0.00029209256 0.0015842319
+		 0.00077605247 0.0010169744 0.00062775612 -9.4294548e-05 0.00080093741 -0.00038272142
+		 0.0014952123 -0.00048744678 0.0002271235 0.00098085403 -0.00035172701 0.0016105771
+		 0.00018531084 0.0012248755 0.00035876036 0.00011962652 -0.00017729402 -0.00090378523
+		 0.0008636415 -0.00070726871 0.0009906888 -0.000616014 0.0013655424 -0.00094676018
+		 -0.00036942959 0.00088894367 -0.00099188089 0.0013785958 -0.00043436885 0.0012235641
+		 2.8967857e-05 0.00023251772 0.00082352757 -0.0010279417 0.00073343515 -0.00062841177
+		 0.0011305213 -0.0013219118 0.0020963252 -0.00064897537 0.0012572408 -0.00072240829
+		 -0.00043559074 0.00012028217 -0.0013469458 0.00082784891 -0.00099149346 0.0010102391
+		 -0.00031897426 0.00023162365 0.00069218874 -0.0013149977 0.00041982532 -0.0009546876
+		 0.00078573823 -0.001658082 0.0013687611 -0.0018109679 -1.937151e-05 -0.00051176548
+		 -0.0013025999 0.00033140182 -0.0013884008 0.00061452389 -0.00064226985 0.00011885166
+		 0.00048232079 -0.0015471578 -0.0010263324 0.00078868866 -0.00072795153 0.0013329387
+		 -0.0002039969 -0.00098007917 0.0003258884 -0.001839757 -0.0016152859 0.00015413761
+		 -0.00090584159 -8.8095665e-05 0.0002116859 -0.0017014742 -0.0019971132 0.00074052811
+		 -0.00046995282 -0.00082755089 -0.00013941526 -0.0018856525 -0.0013596416 0.00038838387
+		 -0.0017399788 -0.00023245811 -0.001090318 -0.00035607815 -9.1731548e-05 -0.0017687678
+		 -0.00073513389 -0.00066804886 -0.00058594346 -0.0018194914 -0.0014383793 0.00036138296
+		 -0.0017561913 -0.00062543154 -0.001188159 -0.00064945221 -0.00039970875 -0.0017485023
+		 -0.00094667077 -0.0005016923 -0.00099238753 -0.0016515851 -0.0014393926 -0.00010246038
+		 -0.0016357601 -0.0010421276 -0.0011939406 -0.00094687939 -0.00068631768 -0.001644671
+		 -0.0010583699 -0.00036752224 -0.0013390481 -0.0013936758 -0.00015318394 0.0026609898
+		 -0.00017470121 0.0018925667 -0.0011053383 -0.0012272 -0.00092849135 -0.0014663935
+		 0.00047636032 0.001621604;
+createNode polyLayoutUV -n "polyLayoutUV71";
+	rename -uid "CCB75895-4A33-9060-7BB1-7BB8A745F15A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:541]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV125";
+	rename -uid "31ED4613-446F-CCBE-D1D7-EC967193100A";
+	setAttr ".uopa" yes;
+	setAttr -s 730 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0.59803098 0.12108117 0.59908193 0.12108123
+		 0.59908164 0.12779927 0.59803069 0.12779921 0.60013282 0.12108123 0.60013252 0.12779927
+		 0.59698004 0.12108111 0.59697974 0.12779915 0.59592909 0.12108105 0.59592885 0.12779909
+		 0.5948782 0.12108105 0.5948779 0.12779909 0.59382725 0.12108099 0.59382689 0.12779903
+		 0.012397647 0.027423322 0.011346698 0.027425289 0.011334419 0.020707309 0.012385368
+		 0.020705342 0.010295779 0.027427197 0.0102835 0.020709217 0.013448566 0.027421415
+		 0.013436288 0.020703435 0.0092448592 0.027429104 0.0092325807 0.020711124 0.008193925
+		 0.027431011 0.0081816614 0.020713031 0.0071430057 0.027432978 0.0071307272 0.020714939
+		 -0.14890099 0.02923958 -0.14783448 0.034543425 -0.15086228 0.035297662 -0.15196371
+		 0.029606879 -0.14584249 0.028831139 -0.1448139 0.033690542 -0.14613307 0.039778173
+		 -0.14917064 0.040913045 -0.15389788 0.035978794 -0.15503603 0.029952854 -0.14924669
+		 0.023877785 -0.15232038 0.023839578 -0.14278823 0.028354689 -0.14178687 0.03273949
+		 -0.14315921 0.038457721 -0.14618129 0.023919627 -0.15222806 0.041867912 -0.15693781
+		 0.036632031 -0.15812281 0.030300468 -0.15540767 0.023808494 -0.14880013 0.018521741
+		 -0.15185279 0.018071987 -0.13970691 0.027759731 -0.13880378 0.031471789 -0.1402908
+		 0.037006617 -0.14311886 0.023959532 -0.14575672 0.019018278 -0.15526015 0.04269135
+		 -0.15851444 0.023787245 -0.1549201 0.017655335 -0.14758414 0.013249271 -0.15058863
+		 0.012394652 -0.1400544 0.023984626 -0.14271605 0.019575089 -0.14459759 0.014203861
+		 -0.15800616 0.017253101 -0.15361166 0.011619344 -0.14565378 0.0081179775 -0.14864415
+		 0.006843931 -0.13696039 0.023987412 -0.13663727 0.026890889 -0.13966984 0.020229116
+		 -0.1416204 0.015262924 -0.14275259 0.0095675476 -0.15664962 0.010877252 -0.15167958
+		 0.0057515488 -0.13663608 0.021100849 -0.13870603 0.016579457 -0.13997597 0.011121571
+		 -0.15470904 0.0048030163 0.054438353 0.37997848 0.055652916 0.37470567 0.058705568
+		 0.37515455 0.057443142 0.38083223 0.051451564 0.37902474 0.052609265 0.37421 0.056097865
+		 0.36934948 0.059171557 0.36938679 0.061773062 0.37557036 0.06046629 0.3816067 0.052509427
+		 0.38511029 0.05550015 0.3863835 0.048473984 0.37796652 0.049568444 0.37365404 0.053032458
+		 0.36930853 0.049607933 0.38366157 0.055750608 0.3639878 0.058813274 0.36361966 0.06225884
+		 0.36941701 0.064859211 0.37597167 0.063504517 0.38234791 0.058535874 0.38747504 0.045559317
+		 0.37665081 0.046522081 0.37300092 0.049970031 0.36926952 0.046830803 0.38210836 0.052692235
+		 0.36439711 0.054682553 0.35868433 0.057710111 0.35792917 0.061885476 0.36327279 0.065365613
+		 0.36943737 0.061565638 0.3884227 0.046905547 0.36924529 0.049638152 0.36487448 0.051662266
+		 0.35953802 0.052979767 0.35345003 0.056016982 0.35231426 0.060745597 0.35724717 0.064972103
+		 0.36292428 0.043488055 0.37213004 0.04381156 0.36924338 0.046557009 0.36547026 0.048635602
+		 0.3604899 0.050006211 0.35477135 0.059074104 0.35135856 0.063785315 0.3565931 0.043487549
+		 0.36633998 0.045652807 0.36175847 0.047138214 0.35622326 0.062105954 0.35053426 -0.4783031
+		 -0.36507672 -0.47898027 -0.36188972 -0.48049885 -0.36226022 -0.47984567 -0.36527735
+		 -0.47994941 -0.3588534 -0.48146376 -0.35932708 -0.48200995 -0.36264735 -0.48137888
+		 -0.36548519 -0.47804993 -0.36834276 -0.47960278 -0.36835295 -0.48298115 -0.3598727
+		 -0.48351181 -0.36307412 -0.4829047 -0.3657096 -0.48114592 -0.36836809 -0.47824657
+		 -0.37159821 -0.47978938 -0.37142405 -0.48447594 -0.3605091 -0.48500466 -0.36355084
+		 -0.48442596 -0.36595738 -0.48268223 -0.36838675 -0.48132494 -0.37125072 -0.47883976
+		 -0.37476274 -0.48035905 -0.37443584 -0.48592624 -0.36123323 -0.48649293 -0.36407977
+		 -0.48594588 -0.36623526 -0.48421443 -0.36840725 -0.48285577 -0.37106669 -0.48187628
+		 -0.37409496 -0.47967908 -0.37779114 -0.4811945 -0.37737915 -0.48731428 -0.36200958
+		 -0.48794979 -0.36473745 -0.48746854 -0.36656177 -0.48574513 -0.3684268 -0.48438445
+		 -0.37086213 -0.48338959 -0.37371755 -0.48272258 -0.37690148 -0.48727682 -0.3684389
+		 -0.48591098 -0.37062356 -0.48489922 -0.37329084 -0.48424065 -0.3763338 -0.488985
+		 -0.36699706 -0.48882332 -0.36843991 -0.48745102 -0.37032577 -0.48641205 -0.3728151
+		 -0.48572692 -0.37567338 -0.48898524 -0.36989111 -0.48790294 -0.37218106 -0.48716044
+		 -0.37494773 -0.7400974 -0.36279392 -0.74069059 -0.36595839 -0.73914778 -0.36613262
+		 -0.73857808 -0.36312079 -0.74088728 -0.36921388 -0.7393344 -0.36920369 -0.73761225
+		 -0.36630595 -0.73706084 -0.36346167 -0.73925805 -0.35976547 -0.7377426 -0.36017752
+		 -0.74063414 -0.37247992 -0.73909158 -0.37227929 -0.7377913 -0.36918861 -0.73608142
+		 -0.36649001 -0.7355476 -0.36383915 -0.73621458 -0.36065519 -0.73995703 -0.37566692
+		 -0.73843843 -0.37529644 -0.73755836 -0.37207144 -0.73625499 -0.36916989 -0.73455274
+		 -0.36669457 -0.73403794 -0.36426586 -0.73469651 -0.36122286 -0.73898792 -0.37870327
+		 -0.73747355 -0.37822959 -0.73692733 -0.37490934 -0.73603255 -0.37184709 -0.73472279
+		 -0.36914945 -0.73302621 -0.36693317 -0.73252511 -0.36474162 -0.73321021 -0.36188328
+		 -0.73595619 -0.37768403 -0.73542547 -0.3744826 -0.73451126 -0.37159932 -0.73319209
+		 -0.3691299 -0.7314862 -0.36723095 -0.73103422 -0.3653757 -0.73177671 -0.36260897
+		 -0.73446131 -0.37704763 -0.73393261 -0.37400588 -0.73299134 -0.37132144 -0.73166037
+		 -0.3691178 -0.73301107 -0.37632349 -0.73244429 -0.37347695 -0.73146868 -0.37099499
+		 -0.73011392 -0.36911684 -0.72995198 -0.36766565 -0.73162299 -0.37554717 -0.73098749
+		 -0.3728193 -0.72995222 -0.37055969 0.531537 0.059758246 0.53164244 0.059758246 0.53164232
+		 0.060431898 0.53153694 0.060431898 0.53174782 0.059758246 0.5317477 0.060431957 0.5318532
+		 0.059758246 0.53185308 0.060431957 0.53195858 0.059758306 0.53195846 0.060431957
+		 -0.42724913 0.0044901967 -0.42735451 0.0044901967 -0.42735443 0.003816545 -0.42724904
+		 0.003816545 -0.4274599 0.0044901967 -0.42745981 0.003816545 -0.42756528 0.0044901967
+		 -0.42756519 0.003816545 -0.42767066 0.0044901371 -0.42767057 0.003816545 -0.38756487
+		 0.29959252 -0.38845149 0.303453;
+	setAttr ".uvtk[250:499]" -0.39066258 0.30314198 -0.38982093 0.29897928 -0.38534844
+		 0.30034575 -0.3862507 0.3038266 -0.38876909 0.30735943 -0.39097917 0.30733696 -0.39288613
+		 0.30288228 -0.39209101 0.29849881 -0.38319242 0.3012242 -0.38405639 0.30426189 -0.38656378
+		 0.30738473 -0.38851848 0.31127107 -0.39073259 0.31153172 -0.39320102 0.30731997 -0.39512467
+		 0.30264693 -0.39434615 0.29811954 -0.38111216 0.30217463 -0.38185847 0.30474851 -0.38435608
+		 0.30740967 -0.38630885 0.31095105 -0.38774255 0.31516087 -0.39000809 0.31570309 -0.39295319
+		 0.31175023 -0.39544049 0.30731088 -0.38214308 0.30742639 -0.38409996 0.31056452 -0.38549966
+		 0.31447548 -0.39227235 0.31611818 -0.39518219 0.31195539 -0.37967211 0.30536208 -0.37990957
+		 0.307428 -0.3818807 0.31011832 -0.38330352 0.31365269 -0.39451104 0.31644642 -0.37967169
+		 0.30950475 -0.38117844 0.31273496 0.14133495 -0.34204304 0.14217323 -0.34569001 0.14426202
+		 -0.34539574 0.14346623 -0.34146336 0.13924116 -0.34275502 0.14009422 -0.34604329
+		 0.14247388 -0.34938034 0.14456183 -0.3493588 0.1463626 -0.34515008 0.14561069 -0.34100905
+		 0.13720453 -0.34358525 0.13802129 -0.34645486 0.14039052 -0.34940466 0.14223778 -0.3530758
+		 0.14432955 -0.35332167 0.1466608 -0.34934241 0.14847732 -0.34492731 0.14774108 -0.34065041
+		 0.13523942 -0.34448349 0.1359449 -0.34691495 0.13830489 -0.34942859 0.14015031 -0.35277387
+		 0.14150542 -0.35675073 0.14364582 -0.35726258 0.14642739 -0.35352772 0.14877641 -0.34933341
+		 0.1362142 -0.34944475 0.13806343 -0.35240903 0.13938642 -0.35610357 0.14578491 -0.35765433
+		 0.14853323 -0.35372117 0.13387948 -0.34749496 0.13410419 -0.34944659 0.13596678 -0.3519879
+		 0.13731152 -0.35532662 0.14789993 -0.35796404 0.13387978 -0.35140863 0.1353038 -0.35446
+		 -0.59929806 -0.0055280924 -0.59898347 -0.0035520196 -0.59996337 -0.0034541488 -0.60028207
+		 -0.0053749681 -0.59885573 -0.0015023351 -0.59984088 -0.0015009046 -0.60093915 -0.0033513904
+		 -0.60127783 -0.005184114 -0.59898961 0.00055772066 -0.59997517 0.00045704842 -0.60081762
+		 -0.0015035868 -0.60191143 -0.0032303929 -0.60227484 -0.0049366355 -0.59933245 0.0025535226
+		 -0.60032612 0.0023882985 -0.60095394 0.00034564734 -0.6017884 -0.0015091896 -0.60288054
+		 -0.0030831099 -0.60326326 -0.0046235323 -0.60132784 0.0021783113 -0.60192674 0.00021082163
+		 -0.60275602 -0.0015165806 -0.60384649 -0.0029054284 -0.60423428 -0.0042423606 -0.60232478
+		 0.0019084811 -0.60289407 4.6789646e-05 -0.60372376 -0.0015242696 -0.60480773 -0.0026994348
+		 -0.60515922 -0.0038190484 -0.60330594 0.0015734434 -0.60385603 -0.00014722347 -0.60469532
+		 -0.0015304685 -0.60577273 -0.0024696589 -0.60606432 -0.0033420324 -0.60496074 -0.0054323077
+		 -0.60574937 -0.0048218966 -0.60426289 0.0011749864 -0.60481232 -0.00036585331 -0.60567737
+		 -0.0015321374 -0.60517418 0.00073772669 -0.60577047 -0.00059854984 -0.60501319 0.0023517609
+		 -0.60578734 0.0017255545 -0.6060642 0.0002630949 0.36336249 -0.62732995 0.36301601
+		 -0.62977618 0.3642326 -0.62988359 0.36458373 -0.62750161 0.36288077 -0.63229442 0.36410272
+		 -0.63229096 0.36544544 -0.62999976 0.36581701 -0.62772107 0.36303556 -0.63482261
+		 0.36425698 -0.63470256 0.36531675 -0.6322844 0.36665606 -0.63013864 0.36704856 -0.62800705
+		 0.36342841 -0.63728821 0.36465776 -0.63709325 0.36547101 -0.63456976 0.36652589 -0.6322757
+		 0.36786693 -0.63030672 0.36826462 -0.62836236 0.36589271 -0.63684404 0.36667979 -0.63441145
+		 0.36773366 -0.6322664 0.36908406 -0.63050163 0.36945105 -0.62876964 0.367118 -0.63652682
+		 0.36788595 -0.63422406 0.36894149 -0.63226014 0.36831987 -0.63614368 0.36909473 -0.6340102
+		 0.37015861 -0.63225949 0.37029797 -0.63078988 0.36948705 -0.63571823 0.37029725 -0.63372076
+		 0.14176112 -0.075158238 0.14082962 -0.075460851 0.14225078 -0.07825011 0.14003724
+		 -0.076036572 0.14274049 -0.075158238 0.13946158 -0.076828897 0.14367199 -0.075460911
+		 0.1391589 -0.077760398 0.14446437 -0.076036632 0.13915884 -0.078739822 0.14504004
+		 -0.076828957 0.13946152 -0.079671323 0.14534271 -0.077760458 0.14003718 -0.080463648
+		 0.14534265 -0.078739882 0.14082956 -0.081039369 0.14504004 -0.079671383 0.14176106
+		 -0.081342041 0.14446431 -0.080463707 0.14274043 -0.081342041 0.14367193 -0.081039369
+		 0.0049566031 -0.16740543 0.0046539307 -0.16833687 0.0077458024 -0.16882664 0.0046539307
+		 -0.16931629 0.0055323243 -0.16661307 0.0049566031 -0.17024779 0.0063246489 -0.16603738
+		 0.0055322647 -0.17104012 0.0072561502 -0.16573474 0.0063246489 -0.17161584 0.0082355738
+		 -0.16573477 0.0072560906 -0.17191851 0.0091670156 -0.16603741 0.0082355142 -0.17191851
+		 0.0099593997 -0.1666131 0.0091669559 -0.17161584 0.010535061 -0.16740546 0.0099593401
+		 -0.17104018 0.010837734 -0.16833693 0.010535061 -0.17024785 0.010837674 -0.16931635
+		 -0.19886391 0.032596409 -0.19902611 0.032678664 -0.19936787 0.03220737 -0.19904466
+		 0.032041401 -0.1986859 0.033150256 -0.19915512 0.032806993 -0.19962516 0.032464147
+		 -0.19971441 0.031737566 -0.1992342 0.031483829 -0.19868416 0.032568514 -0.19868362
+		 0.031984687 -0.19923845 0.032968879 -0.19979282 0.032787323 -0.20009618 0.032118797
+		 -0.20007138 0.031267941 -0.19945134 0.030930907 -0.1986843 0.031396598 -0.19850454
+		 0.032597721 -0.19832301 0.032043338 -0.19926767 0.033148527 -0.1998515 0.033147991
+		 -0.20035109 0.032599032 -0.20056605 0.031765163 -0.19813466 0.031485081 -0.19834268
+		 0.032681048 -0.19799978 0.032211006 -0.19923976 0.033328235 -0.19979478 0.033509016
+		 -0.20043957 0.033148646 -0.20090094 0.032382488 -0.20103063 0.031399816 -0.20043972
+		 0.030805498 -0.19765446 0.03174001 -0.19821432 0.032810032 -0.19774303 0.032468319
+		 -0.19915751 0.033490419 -0.1996288 0.033832192 -0.2003523 0.033698559 -0.19791818
+		 0.030935198 -0.19730082 0.031270117 -0.19727322 0.032121778 -0.19813207 0.032972217
+		 -0.19757703 0.032791495 -0.19902913 0.033619463 -0.19937204 0.034089506 -0.20009859
+		 0.034178734 -0.1968036 0.031764776 -0.19701952 0.032601953 -0.19810414 0.033151984
+		 -0.19752032 0.033152521 -0.19886728 0.033702791 -0.19904882 0.034257174 -0.19971737
+		 0.034560502 -0.20056823 0.034535706 -0.20090526 0.033915699 -0.19693547 0.030805528
+		 -0.19634116 0.031396449;
+	setAttr ".uvtk[500:729]" -0.19646654 0.032384813 -0.19693226 0.033151865 -0.19813338
+		 0.033331633 -0.197579 0.033513129 -0.19868766 0.033731997 -0.19868819 0.034315825
+		 -0.19923715 0.034815431 -0.20007101 0.035030425 -0.19702074 0.033701479 -0.19821668
+		 0.033493459 -0.19774663 0.033836365 -0.19850791 0.033704102 -0.19832715 0.03425914
+		 -0.19868752 0.034903944 -0.19945364 0.035365283 -0.20043635 0.035494983 -0.20103064
+		 0.034904063 -0.19727564 0.034181714 -0.19834572 0.033621848 -0.19800395 0.034093142
+		 -0.19813761 0.034816623 -0.19647086 0.033917964 -0.19680578 0.034535348 -0.19765741
+		 0.034562945 -0.19730043 0.03503257 -0.19792047 0.035369635 -0.19634119 0.034900665
+		 -0.19693211 0.035494983 0.033314764 0.015774041 0.033302486 0.018761799 0.032367408
+		 0.021599323 0.030601054 0.02400896 0.028176308 0.025754839 0.025330484 0.026665896
+		 0.02234222 0.026652902 0.019504145 0.02571699 0.01709412 0.023949802 0.015348092
+		 0.02152428 0.014437057 0.018677935 0.0144502 0.015689388 0.015386194 0.012851268
+		 0.017153323 0.010441422 0.019578546 0.0086957812 0.02242437 0.0077852011 0.025412098
+		 0.0077987611 0.028249145 0.0087350756 0.030657947 0.010502517 0.032402843 0.012928173
+		 0.036195397 0.015309855 0.036185622 0.019210503 0.034970671 0.0229173 0.032669425
+		 0.026067138 0.02950716 0.028351545 0.025793597 0.029546767 0.021892369 0.02953577
+		 0.018185467 0.028319687 0.015035778 0.026017606 0.012751572 0.022854924 0.011556447
+		 0.019141182 0.011567377 0.015239894 0.012783304 0.011532918 0.01508522 0.0083831847
+		 0.018247813 0.0060990527 0.021961421 0.0049042478 0.025862351 0.0049157813 0.029568523
+		 0.006132476 0.032717049 0.0084350109 0.034999996 0.011597484 0.039509892 0.014776632
+		 0.039502531 0.0197272 0.037965596 0.024433643 0.035049111 0.028434873 0.031038582
+		 0.031338841 0.026326716 0.032861114 0.021375045 0.03285262 0.016668424 0.031314313
+		 0.012667567 0.028396815 0.0097640678 0.02438584 0.0082420856 0.019674003 0.0082505867
+		 0.014722422 0.009788774 0.010015786 0.012706161 0.0060148463 0.016717181 0.0031113848
+		 0.021429136 0.0015897825 0.026380509 0.0015990436 0.031086266 0.0031381547 0.035085738
+		 0.0060559735 0.037987918 0.010066316 0.042787284 0.014248937 0.042782515 0.020237729
+		 0.040927321 0.02593258 0.03740266 0.030775696 0.032553434 0.034292489 0.026854485
+		 0.036138386 0.020864069 0.036132574 0.015168756 0.03427574 0.010326102 0.030749828
+		 0.0068100579 0.025900066 0.0049647354 0.020201206 0.0049707368 0.014211029 0.006827537
+		 0.008515805 0.010353468 0.0036731288 0.015203431 0.00015719607 0.020902529 -0.0016876347
+		 0.026892558 -0.0016806871 0.032586724 0.0001771003 0.037427664 0.0037032664 0.040942132
+		 0.0085519999 0.046554416 0.013628289 0.046557099 0.020810992 0.044340104 0.027644008
+		 0.040119469 0.033458024 0.034308165 0.037683249 0.027475283 0.039905488 0.020290077
+		 0.039907098 0.013456263 0.037688017 0.0076428428 0.033465832 0.0034188293 0.027653873
+		 0.0011975224 0.020821154 0.0011963537 0.01363641 0.0034155026 0.0068028718 0.0076378807
+		 0.00098954141 0.013450235 -0.0032343119 0.020283401 -0.0054549617 0.027468055 -0.0054549398
+		 0.034300417 -0.0032346137 0.040111542 0.00098783523 0.044333458 0.006798245 0.57880652
+		 -0.1944887 0.57847667 -0.19550356 0.57847649 -0.19657069 0.57880616 -0.19758564 0.57943332
+		 -0.19844902 0.58029658 -0.19907635 0.58131146 -0.19940624 0.58237851 -0.19940636
+		 0.58339351 -0.19907671 0.58425689 -0.19844955 0.58488417 -0.1975863 0.58521414 -0.19657144
+		 0.5852142 -0.19550431 0.58488458 -0.19448936 0.58425742 -0.19362596 0.58339417 -0.19299865
+		 0.58237934 -0.19266877 0.58131218 -0.19266865 0.58029723 -0.19299829 0.5794338 -0.19362545
+		 0.45707223 -0.27700114 0.45732486 -0.27723503 0.4574635 -0.27703887 0.45725432 -0.27684301
+		 0.45763102 -0.27739602 0.45771906 -0.27717042 0.45760009 -0.27684426 0.45744169 -0.27669239
+		 0.45779508 -0.27694279 0.45773673 -0.27665067 0.45763111 -0.27654785 0.45711216 -0.27659297
+		 0.45733452 -0.27649814 0.45801044 -0.27721691 0.45801222 -0.27697706 0.45786804 -0.27671659
+		 0.4578743 -0.27645832 0.45782158 -0.27640647 0.45756161 -0.27641726 0.45830256 -0.27717203
+		 0.45822954 -0.27694333 0.45801315 -0.2767393 0.45794037 -0.27649146 0.45801282 -0.27626657
+		 0.45778731 -0.27634096 0.457297 -0.27627331 0.45753679 -0.27627051 0.45855963 -0.27704209
+		 0.45842534 -0.27684534 0.45815834 -0.27671659 0.45801336 -0.27650285 0.45777515 -0.27626801
+		 0.45733142 -0.27604854 0.45755926 -0.27612305 0.45838776 -0.27739722 0.45869523 -0.27724028
+		 0.45877075 -0.27684706 0.45858389 -0.276694 0.4582898 -0.27665073 0.45808631 -0.27649134
+		 0.45778635 -0.27619481 0.45743296 -0.27585131 0.4576264 -0.27599049 0.45895207 -0.27700818
+		 0.45891458 -0.27659494 0.45869082 -0.27649939 0.45839539 -0.27654803 0.45815229 -0.27645808
+		 0.45781976 -0.27612859 0.45723793 -0.27571082 0.45710483 -0.27596438 0.45758757 -0.27569205
+		 0.4577311 -0.27588451 0.45846426 -0.27641732 0.45820478 -0.27640617 0.45787218 -0.2760759
+		 0.45743561 -0.27550483 0.45778909 -0.27558833 0.45786399 -0.27581614 0.45872825 -0.27627361
+		 0.4584884 -0.27627003 0.45823863 -0.27634054 0.4579384 -0.27604192 0.45801207 -0.27555263
+		 0.45801175 -0.27579242 0.45869362 -0.2760483 0.45846534 -0.27612233 0.45825028 -0.27626741
+		 0.45801201 -0.27603012 0.45823511 -0.27558821 0.45815963 -0.27581578 0.45859158 -0.27585095
+		 0.45839766 -0.27598947 0.4582386 -0.2761941 0.45808563 -0.27604169 0.45843676 -0.27569193
+		 0.45829287 -0.27588385 0.45891935 -0.2759639 0.4587869 -0.27571088 0.45820478 -0.27612793
+		 0.45815212 -0.27607536 0.45858884 -0.27550399;
+createNode polyAutoProj -n "polyAutoProj69";
+	rename -uid "F079AA02-4712-BBAF-2344-2FBDB333DAF7";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:541]";
+	setAttr ".ix" -type "matrix" -0.13151826634681349 0.2234025651153303 0.038682160258340099 0
+		 0.055300049072013906 0.074976312897194086 -0.24499495317701461 0 -0.21987933098632567 -0.11476896971509909 -0.084753958024231565 0
+		 19.874879014986856 -1.5240467926554375 10.864402396390391 1;
+	setAttr ".s" -type "double3" 0.5699651160785244 0.5699651160785244 0.5699651160785244 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode groupId -n "groupId171";
+	rename -uid "7F922403-414B-1764-638F-8EBDB712D08A";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts27";
+	rename -uid "623D1249-4B2A-7703-F511-9BA229F53585";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:541]";
+createNode polyTweakUV -n "polyTweakUV126";
+	rename -uid "05FB49DF-4748-606F-7E44-BAA13BFA3608";
+	setAttr ".uopa" yes;
+	setAttr -s 730 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.0020909831 0.0063701272 -0.0010323077
+		 0.006198585 -0.00022050738 -0.0068055391 -0.0012789369 -0.0066341758 0.0052443296
+		 0.0059523582 0.0060562789 -0.0070517659 -0.00040594488 0.0065020919 0.00040596724
+		 -0.0065020919 0.0012789443 0.0066341162 0.0020908639 -0.006370008 0.00022049807 0.0068054795
+		 0.0010324288 -0.0061986446 -0.0060562799 0.0070517659 -0.0052443501 -0.0059522986
+		 -0.00035867095 -0.0066049695 -0.0014207363 -0.0065678358 -0.0019423664 0.0064145923
+		 -0.00088053942 0.0063773394 0.00026090443 -0.0064911842 -0.00026087463 0.0064911246
+		 0.0059213936 -0.006567359 0.0053996444 0.0064150095 0.0019423962 -0.0064145327 0.001420632
+		 0.0065677762 0.00088045001 -0.0063773394 0.00035870075 0.0066049695 -0.0053995997
+		 -0.0064150095 -0.0059213489 0.0065672994 -0.0122087 -0.0081268996 -0.00094527006
+		 -0.011821091 0.0018318892 -0.011618108 -0.0098515749 -0.0079647452 -0.012202919 -0.007236585
+		 -0.0013944507 -0.010197252 0.016376078 -0.0053302646 0.019155025 -0.0043894053 0.0061728954
+		 -0.0091541708 -0.0059407353 -0.0064568222 -0.016639709 0.00059947371 -0.014476955
+		 0.00092923641 -0.0091328621 -0.0056867898 0.0013213158 -0.0070070326 0.015375495
+		 -0.0042039454 -0.016474068 0.00028759241 0.023360431 -0.0010784864 0.011318922 -0.0038835406
+		 -0.0013245344 -0.003318429 -0.010803461 0.0013176203 -0.013588846 0.0091390312 -0.011321247
+		 0.0095697418 -0.0020891428 -0.0041357726 0.0072899461 -0.0046207458 0.016480088 -0.00083547831
+		 -0.013222873 -6.608665e-05 -0.013535142 0.0076753497 0.02862668 0.0052109659 -0.0064821839
+		 0.0017982721 -0.0075573921 0.0087475777 -0.0032936931 0.012434818 -0.00066685677
+		 0.012630392 -0.0062116385 -0.00058954954 -0.010385215 0.0054325908 -0.0036766529
+		 0.010395102 -0.0031501651 0.0064436272 0.0034233928 0.010605868 0.013701618 0.0058159847
+		 0.016357362 0.0049059158 0.0053583384 -0.0013661683 0.0090560317 -0.0042381734 -0.0034171939
+		 0.0029188991 -0.0010207295 0.0068008229 0.012632966 0.0045725293 0.0081871152 0.0058173984
+		 0.020247161 0.0016353969 0.0077787042 0.0014684349 0.0048477054 0.0034250692 0.013507247
+		 0.00086113065 0.025032818 -0.0045185722 0.0025219917 -0.012397498 0.013498485 -0.008778438
+		 0.011179447 -0.0088199526 -0.00021618605 -0.012215704 0.0030018687 -0.010768354 0.013487101
+		 -0.0077394247 0.017160058 -0.00013692677 0.015001357 -7.3418021e-05 0.0073491931
+		 -0.0076300651 -0.0044416785 -0.0098344386 -0.01529038 -0.0063077509 -0.018133163
+		 -0.0050223768 0.00043356419 -0.0076313317 0.010375887 -0.0059695989 0.016991436 -0.00025378168
+		 -0.014043748 -0.0054526031 0.013337493 0.0084640533 0.011038005 0.0086899772 0.011334062
+		 -9.0286136e-05 0.0028543472 -0.0049661845 -0.0093790293 -0.0046980977 -0.022221804
+		 -0.0013900697 -0.0053081214 -0.0047546625 0.0034562349 -0.0039896369 0.013736844
+		 -0.00037670135 -0.014763415 -0.002143383 0.013284743 0.007149145 0.0027533174 0.011826232
+		 8.8214874e-05 0.011999447 0.0072033405 0.0075474903 0.0070218444 -0.00020682812 -0.027231276
+		 0.0051104128 0.0067177713 -0.00038914382 0.010169506 0.0051275939 0.0031054616 0.0097908452
+		 -0.01373899 0.0048214123 -0.016341329 0.0042576138 -0.0041149855 0.0098887496 0.0026892424
+		 0.0047655851 -0.0076438785 -0.0031376034 -0.004866451 -0.00022406876 0.0030644536
+		 0.0030388832 0.00030383468 0.006138958 -0.012907982 0.003299363 -0.020357549 0.0013049296
+		 -0.0090831518 0.0049597584 -0.008205682 0.0025410205 -0.0058064163 0.0032464564 -0.014165223
+		 -0.00048291311 -0.025406301 -0.0046459977 3.3378601e-06 0.00026518106 -0.0074012876
+		 0.00094151497 -0.0051489472 -0.0025339127 0.0021058321 -0.001960516 -0.016999722
+		 0.0065495372 -0.014746726 0.0023903251 -0.0030856729 -0.0045981407 0.0039658546 -0.0034127831
+		 0.003706038 0.0023676157 0.0057973862 0.0015361309 -0.012757599 -0.00029611588 -0.0016183853
+		 -0.0054831505 0.0051531196 -0.0041648746 0.0075654984 0.00069576502 0.0031781197
+		 0.0048757195 0.0054461956 0.0053674579 -0.011214375 -0.0017402768 -0.0011481047 -0.005337894
+		 0.0052499175 -0.0042874813 0.0085814595 -9.5546246e-05 0.0072839856 0.0050870776
+		 -0.0013699532 0.0052756071 0.0011839867 0.0068233609 -0.010303497 -0.0020153522 -0.0020834804
+		 -0.0042700171 0.0038617849 -0.003870666 0.0084396005 -0.00077873468 0.008276999 0.0042172074
+		 0.0031913519 0.007016778 -0.0088036656 0.00097292662 -0.0061864257 0.0030283928 -0.010204792
+		 -0.00093567371 -0.0045549273 -0.0031419992 0.00061434507 -0.0031350255 0.0067648888
+		 -0.0012880564 0.0080313683 0.0029427409 0.0042895079 0.0061670542 -0.004280746 0.0036514401
+		 0.0032240152 -0.0015274882 0.0062106848 0.0014945269 0.0041125417 0.0045282245 -0.0032505393
+		 0.0031766295 -0.0047274828 -0.0027222633 -0.002578795 -0.0014236569 0.002379775 0.00023764372
+		 0.0022568703 0.0022674799 -0.0032562613 0.0017841458 -0.0034846067 1.6450882e-05
+		 -0.0012632012 0.00058805943 -0.0044528246 -0.00058698654 0.0048015714 -0.0014606714
+		 -0.001583755 -0.001894474 -0.0036978126 -0.0037530065 0.0025426745 -0.0044078231
+		 -0.0045134425 0.00034987926 -0.0066283941 -0.00017184019 -0.0055546165 -0.0047612786
+		 0.00052279234 -0.0059152842 0.012948215 0.0040302873 0.010685921 0.00057035685 -0.0031998158
+		 0.0028347969 -0.0055122972 0.0036914945 -0.0084270835 -0.00061058998 -0.006717205
+		 -0.0050125122 -0.00085061789 -0.006210804 0.0087786913 -0.0013504624 0.0023924112
+		 0.0031496882 -0.00023502111 0.0052206516 -0.0074204206 0.0038493276 -0.0094788074
+		 -0.00093358755 -0.0067670941 -0.0046061277 -0.0011734366 -0.0054660439 0.0074421763
+		 -0.0020129085 0.011278808 -0.0010485053 0.0085648298 0.0016995072 -0.0023698211 0.0059577227
+		 -0.0085138083 0.0034707785 -0.0093752146 -0.0011146069 -0.0053339005 -0.0036971569
+		 -1.5377998e-05 -0.00376302 0.0068683624 -0.0015466809 0.0064620376 0.0030668974 -0.0036501884
+		 0.0056763887 -0.0083948374 0.0027120709 -0.0077374578 -0.0011401772 -0.0019288063
+		 -0.0025609732 0.0028002262 -0.0022728443 0.0072102547 0.00015425682 0.0051090121
+		 0.0033333898 -0.0037098527 0.0046077967 -0.0066933036 0.0017435551 -0.0042228103
+		 -0.0010351539 0.0046691298 0.0026225448 -0.0021706223 0.0029411316 -0.0030790567
+		 0.00085860491 0.0015695691 -0.00079578161 0.0036039352 -0.0020115972 0.0053359866
+		 0.00079864264 0.00095444918 0.0015674233 0.0025761724 0.00074350834 0.0017496943
+		 -0.0027016401 -0.00046798587 -0.0028683543 -0.00058424473 0.0027095675 0.0016334057
+		 0.0028762221 5.8084726e-05 -0.0029138327 -5.8174133e-05 0.0026640296 0.00058415532
+		 -0.0028319955 0.00046789646 0.002745986 -0.0016332567 -0.0026288629 -0.0017495453
+		 0.0029489398 -0.0020180047 0.0031178594 0.00019922853 0.0028306246 0.00085321069
+		 -0.0027484894 -0.0013640225 -0.0024612546 -0.00032702088 0.0026646852 0.00032696128
+		 -0.0029145479 -0.0008533597 0.0026260018 -0.00019937754 -0.0029530525 0.0013642311
+		 0.0027086139 0.0020182133 -0.0028704405 0.0027808547 0.0070144236 -0.0096046329 0.0055653453;
+	setAttr ".uvtk[250:499]" -0.0082994699 0.005238831 0.0035116076 0.0062136054
+		 0.0039442182 0.0069259405 -0.0086120963 0.0052757263 -0.014182091 -0.0010320246 -0.012884617
+		 -0.001460135 -0.0054906607 0.0040476024 0.0057144761 0.0042402744 0.0074259043 0.0060023963
+		 -0.0045643449 0.0044923723 -0.013101697 -0.00056487322 -0.010952175 -0.0075261593
+		 -0.0097203851 -0.0081307888 -0.010069668 -0.0018152893 -0.0020172 0.0015653074 0.0089751482
+		 0.00055593252 0.013652742 0.0038431585 0.0033043623 0.003244102 -0.0088416934 -0.00010311604
+		 -0.0098007917 -0.0062626004 -0.00049942732 -0.008485198 3.7193298e-05 -0.0088989735
+		 -0.0068991184 -0.0077467561 -0.0066223145 -0.0020655096 -0.00073355436 0.00024777651
+		 -0.0055096745 -0.0045725107 0.0011014938 -0.0072287917 0.0022678971 -0.0080645084
+		 -0.0033220649 -0.0059264898 0.015318274 0.0027444661 0.011961818 0.00039637089 0.0026990175
+		 -0.0025280118 0.0052211285 -0.005307436 0.0057098269 -0.0053244233 0.015088439 -0.0017780066
+		 0.012158573 -0.0024679303 -0.0027828813 -0.0070040226 0.0092946887 -0.0057519078
+		 0.0079131126 -0.0053681135 -0.0035643578 -0.0061283112 -0.0038309097 -0.0069974661
+		 0.0084503889 -0.0055226684 0.013813317 0.00063583255 0.012435138 0.0011053383 0.0051047802
+		 -0.0041218996 -0.0057504773 -0.0040869713 -0.0071375966 -0.0061612725 0.0046163797
+		 -0.0048034191 0.012888312 0.00012722611 0.010788083 0.006909281 0.0094904304 0.0075398088
+		 0.0096190572 0.0015018284 0.0017111897 -0.0015861392 -0.0089271665 -0.00034093857
+		 -0.013136148 -0.0040926337 -0.0029814243 -0.0036220551 0.0088508725 -0.0003760457
+		 0.0097717643 0.00562343 0.00079017878 0.0076395571 0.00022429228 0.0080645382 0.0066781044
+		 0.007184267 0.0062536001 0.0017932653 0.0010236502 -0.00076809525 0.0056787133 0.0039143562
+		 -0.00072306395 0.0063803196 -0.001973629 0.0072485209 0.0031883717 0.0053929687 -0.014675975
+		 -0.0031959414 -0.01134342 -0.0009573698 -0.0022771955 0.0018541217 -0.0047008395
+		 0.0044645369 -0.0053197145 0.0045307577 -0.014370859 0.0010977983 -0.011446357 0.0016369224
+		 -0.00058823824 0.00346452 0.0014114976 0.0041801333 0.0030885935 0.0046716928 0.00097000599
+		 0.0044369102 0.0015478134 0.0026635528 0.0032099485 0.0020725727 0.0046785474 0.0044344664
+		 0.0021377802 0.0044485331 -0.0012394786 0.0011429191 0.00047421455 -0.00061386824
+		 0.0048714876 0.001424253 0.0057526827 0.0037012696 0.0026540756 0.0038517714 -0.006144464
+		 0.0017549992 -0.0045368075 -0.00063490868 0.0021516085 -0.0017249584 0.0060821176
+		 0.00073409081 0.0059031248 0.0026477575 0.0022708774 0.0028871894 -0.0032118559 -0.0021830797
+		 0.0033761859 -0.0024150014 0.0063973665 1.8179417e-05 0.0047532916 0.0014023185 0.0007494688
+		 0.0017253757 -0.0023730993 -0.0031722784 0.0037484169 -0.0028234124 0.0053919554
+		 -0.00070279837 0.0019856095 1.8835068e-05 -0.0017869473 0.00014048815 -0.0022417307
+		 -0.0037708282 0.0028908253 -0.0030303597 0.002664268 -0.0014020801 -0.0028268695
+		 -0.0014809966 -0.0060459971 -0.001516819 -0.0079315305 -0.00026994944 -0.008782506
+		 -0.0017199516 -0.0030607581 -0.0040732026 0.00046408176 -0.003033638 -0.0021924376
+		 -0.0020391941 -0.0048508644 -0.0038471222 -0.0039554238 -0.0027745366 -0.013581574
+		 -0.003200531 -0.013440013 -0.0029657483 -0.0082863569 -0.0032681227 0.0022346377
+		 -0.0042119026 -0.00266397 -0.0043792129 -0.0042905807 -0.0048009753 0.0006711483
+		 -0.0050506592 -0.0038764477 -0.0020926595 -0.0054740906 -0.0015618205 -0.0052825212
+		 -0.0045243502 -8.8751316e-05 -0.0049343705 -0.00040560961 0.000187397 -0.0020635724
+		 0.0017394423 -0.006480515 -0.00099503994 -0.0052239895 -0.0037477612 0.00018835068
+		 -0.0041537285 0.0070267916 7.8082085e-05 0.0054165721 0.0021831393 -0.0031404495
+		 0.0026370883 -0.0064653158 -0.00040507317 -0.0037158728 -0.0026003718 0.0017007589
+		 -0.0028432012 0.0044897199 0.0034189224 -0.0032234788 0.003067553 -0.005020678 0.00019216537
+		 -0.00035661459 -0.0011181831 0.0046029091 -0.00092315674 0.004447639 0.0040044785
+		 -0.0019157529 0.0031242371 -0.0017982721 0.00075221062 0.0054918528 0.0040030479
+		 0.0011784434 0.002843976 0.0036021471 0.0012476444 0.0050528646 -0.00020319223 0.0078241229
+		 0.003247261 0.0062162876 0.0029104948 -3.516674e-06 4.3511391e-06 -2.2053719e-06
+		 4.5895576e-06 5.9604645e-08 0 -8.3446503e-07 4.7087669e-06 -4.4107437e-06 3.3974648e-06
+		 5.364418e-07 4.2319298e-06 -4.6491623e-06 2.2649765e-06 2.0265579e-06 3.2782555e-06
+		 -4.7087669e-06 8.9406967e-07 3.3378601e-06 1.9669533e-06 -4.1127205e-06 -5.364418e-07
+		 4.0531158e-06 5.9604645e-07 -3.3974648e-06 -2.0861626e-06 4.6491623e-06 -8.3446503e-07
+		 -2.0265579e-06 -3.2186508e-06 4.6491623e-06 -2.2649765e-06 -5.364418e-07 -4.2319298e-06
+		 4.4107437e-06 -3.516674e-06 9.5367432e-07 -4.7087669e-06 3.4570694e-06 -4.2319298e-06
+		 2.2053719e-06 -4.7683716e-06 7.7486038e-07 4.1127205e-06 2.0265579e-06 3.3378601e-06
+		 -5.9604645e-08 0 3.3974648e-06 2.0265579e-06 -7.7486038e-07 4.7087669e-06 4.0531158e-06
+		 7.1525574e-07 -2.2053719e-06 4.7683716e-06 4.5895576e-06 -7.7486038e-07 -3.2782555e-06
+		 4.2319298e-06 4.7683716e-06 -2.1457672e-06 -4.2319298e-06 3.2782555e-06 4.2915344e-06
+		 -3.4570694e-06 -4.7087669e-06 2.1457672e-06 3.2782555e-06 -4.1723251e-06 -4.5895576e-06
+		 7.7486038e-07 2.2649765e-06 -4.7087669e-06 -4.2319298e-06 -6.5565109e-07 7.1525574e-07
+		 -4.6491623e-06 -3.3378601e-06 -2.2053719e-06 -7.7486038e-07 -4.2319298e-06 -2.0265579e-06
+		 -3.2186508e-06 0.00027596951 0.0014652014 0.00081640482 0.0010122061 0.0020378828
+		 0.0017992854 0.0011254549 0.00250718 -0.0009354949 -0.00043016672 0.0011803508 0.00041472912
+		 0.0026217103 0.00079035759 0.0020758808 0.0013391972 0.0010337532 0.0018495619 -0.0003734529
+		 0.0017395616 0.00016593933 0.0029683113 0.0013264716 -0.00027102232 0.0027430654
+		 -0.00037789345 0.002728045 7.0750713e-05 0.00017347932 -0.0010661185 -0.0012606978
+		 -0.0008700192 0.00068232417 0.0023290813 -0.0010738671 0.0018120408 -0.00090479851
+		 0.0031678677 0.0012539625 -0.00097167492 0.0025435388 -0.0014490485 0.0024355054
+		 -0.0013622046 0.00099292397 -0.0025113821 0.00018104911 0.0027597845 -0.0017592907
+		 0.0016658306 -0.0020724237 0.0030462742 0.00097960234 -0.0016214252 0.0020823181
+		 -0.0024093986 0.0020045042 -0.0018643141 0.00035431981 -0.004607141 -0.0029316843
+		 -0.0075530112 -0.004147768 -0.0056093931 -0.0012509227 0.0030518174 -0.002356261
+		 0.0013015866 -0.0030808449 0.0024616718 0.00052672625 -0.0021621585 0.0013747215
+		 -0.0033223033 0.0015254021 -0.0022168159 0.0035645664 0.00054123998 0.0014696717
+		 0.0011793673 -0.0025187135 0.0023991466 -0.0028092563 0.00076085329 -0.0037886202
+		 0.0015488267 -7.0512295e-05 -0.0025262237 0.00036659837 -0.0039066672 0.0010155439
+		 -0.0032596588 2.5629997e-05 0.00035873055 -0.0030286312 0.0013561845 -0.0030836165
+		 0.00011128187 -0.004249692 0.00058871508 -0.00075593591 -0.0026724935 -0.00080123544
+		 -0.0040284991 -0.00025260448 -0.0039122701 -0.0012524724 -0.0012190938 -0.0010568798
+		 0.00021600723 0.0066844821 -0.0029166937 0.0047414303 -0.0041335523;
+	setAttr ".uvtk[500:729]" -0.00016999245 -0.0010764599 -0.0035080314 0.001003921
+		 -0.0031561255 -0.00058954954 -0.0044493377 -0.00048273802 -0.0014564097 -0.002600193
+		 -0.0018718243 -0.0038288832 -0.0016846359 -0.0036200285 -0.0026964247 -0.002039969
+		 -0.0039387345 0.00050157309 -0.0030098855 -0.0012752414 -0.0043278337 -0.0016509891
+		 -0.0021057427 -0.0023255348 -0.0028314888 -0.003367722 -0.0021858513 -0.0031895041
+		 -0.0047911704 -0.0014018416 -0.0075672269 0.002055943 -0.0056244731 0.0032731891
+		 -0.0042312145 -0.00093120337 -0.002646178 -0.0018725395 -0.0037437379 -0.0026596785
+		 -0.0025373399 -0.0027100444 -0.001581192 0.0037463903 -0.0022197962 0.0016506314
+		 -0.0035794377 -0.0021998882 -0.0014002919 0.00020545721 3.400445e-05 9.3579292e-06
+		 0.0020486116 0.0066927075 0.0032649636 0.0047489405 -0.0010752678 0.019533589 -0.0070404708
+		 0.01980678 -0.012800455 0.018223777 -0.017790288 0.014940009 -0.021521837 0.010277048
+		 -0.023630947 0.0046909153 -0.023912191 -0.0012723804 -0.02233845 -0.0070294738 -0.019063711
+		 -0.012017876 -0.014408633 -0.01575008 -0.0088284463 -0.01786077 -0.002868861 -0.018143415
+		 0.0028872937 -0.016569823 0.0078768283 -0.013293713 0.011611275 -0.008634612 0.013724834
+		 -0.0030472875 0.014010139 0.0029218048 0.012438402 0.008688882 0.0091634989 0.013689116
+		 0.0045078248 0.017431848 -0.00025519729 0.01715707 -0.0055341125 0.017851971 -0.010769039
+		 0.016883887 -0.015450269 0.014347985 -0.01912123 0.010491729 -0.021422803 0.0056906492
+		 -0.0221304 0.00041353703 -0.021173447 -0.0048238337 -0.018645614 -0.009508729 -0.014794007
+		 -0.013182908 -0.0099957138 -0.015485883 -0.0047207028 -0.016192764 0.00051452219
+		 -0.015233845 0.0051979572 -0.012704104 0.0088717863 -0.0088502169 0.011177436 -0.0040487498
+		 0.011889189 0.0012320429 0.010936894 0.0064769983 0.008411184 0.011173747 0.0045552403
+		 0.01485882 0.00071428716 0.015682168 -0.0041687191 0.01680452 -0.0091556609 0.016363911
+		 -0.013762772 0.014407448 -0.017542273 0.011125714 -0.020125896 0.0068377852 -0.021260351
+		 0.001960963 -0.02083379 -0.0030281544 -0.018886834 -0.0076414347 -0.015609384 -0.011427075
+		 -0.011322871 -0.014013439 -0.0064469576 -0.015147805 -0.0014596507 -0.014719039 0.0031520054
+		 -0.012770444 0.006937176 -0.0094922185 0.0095269121 -0.0052038133 0.010668196 -0.00032292306
+		 0.010247231 0.0046755001 0.0083007067 0.0093021244 0.005015254 0.013098788 0.0016753674
+		 0.014062705 -0.0027658641 0.015613083 -0.0074629784 0.0157157 -0.011960357 0.014366232
+		 -0.015822947 0.011696979 -0.018675178 0.0079663843 -0.02023837 0.0035363436 -0.020357788
+		 -0.0011609197 -0.019020289 -0.0056661069 -0.016355783 -0.0095374882 -0.012625441
+		 -0.012395144 -0.0081949383 -0.013959229 -0.0034982488 -0.014077246 0.0010053553 -0.012738764
+		 0.0048771948 -0.010074586 0.0077393632 -0.0063434988 0.009312287 -0.0019078553 0.0094384737
+		 0.0028015301 0.0081002638 0.0073231868 0.0054235905 0.011207204 0.0025739372 0.0010061306
+		 0.0021053851 0.0035553901 0.00088140368 0.0058356225 -0.00098404288 0.0076324716
+		 -0.0033150017 0.0087700933 -0.0058882833 0.0091340989 -0.008452028 0.0086841881 -0.01075393
+		 0.0074618459 -0.012565434 0.0055867136 -0.013708562 0.0032427609 -0.014071181 0.00066110492
+		 -0.013618618 -0.0019056201 -0.012395494 -0.0042069852 -0.010520589 -0.006018579 -0.0081753721
+		 -0.0071632862 -0.0055871061 -0.0075266659 -0.0030093072 -0.0070691705 -0.000698369
+		 -0.0058311448 0.0011112541 -0.0039344095 0.0022365153 -0.0015740832 0.00016148388
+		 0.0003130734 0.00023674965 0.00028941035 0.00028860569 0.00023722649 0.00031235814
+		 0.00016188622 0.0003054738 7.0691109e-05 0.00026872754 -2.7596951e-05 0.00020560622
+		 -0.00012302399 0.00012251735 -0.00020647049 2.720952e-05 -0.0002694726 -7.0676208e-05
+		 -0.00030624866 -0.00016161799 -0.0003131032 -0.00023666024 -0.00028949976 -0.00028851628
+		 -0.00023728609 -0.00031232834 -0.00016188622 -0.00030542165 -7.0512295e-05 -0.00026869774
+		 2.7537346e-05 -0.00020553917 0.00012296438 -0.00012245774 0.00020641088 -2.7358532e-05
+		 0.0002694726 7.0542097e-05 0.00030645728 -0.00075739622 -0.0026879311 -0.00059187412
+		 -0.001350522 0.0009572804 0.0003169775 0.00087541342 -0.00069361925 -0.0012895465
+		 -0.0011104941 0.00044289231 0.00067049265 0.0014537275 0.00085914135 0.0015989542
+		 0.00011736155 0.00089663267 0.0013365746 0.0012512505 0.00061964989 0.0014960468
+		 7.8260899e-05 0.00020927191 -0.0016706586 0.001259774 -0.00055843592 0.00034430623
+		 0.00085842609 0.00029200315 0.0015842319 0.00077611208 0.0010169744 0.00062790513
+		 -9.4234943e-05 0.0008008182 -0.00038272142 0.0014952719 -0.00048744678 0.00022703409
+		 0.00098085403 -0.00035172701 0.0016105771 0.00018522143 0.0012248158 0.00035876036
+		 0.00011962652 -0.00017741323 -0.00090372562 0.00086379051 -0.00070720911 0.00099077821
+		 -0.000616014 0.0013655722 -0.00094676018 -0.00036942959 0.00088894367 -0.00099182129
+		 0.0013786554 -0.00043439865 0.0012235641 2.887845e-05 0.00023251772 0.00082358718
+		 -0.0010278821 0.00073349476 -0.00062847137 0.0011305809 -0.0013219714 0.0020962656
+		 -0.00064897537 0.0012573004 -0.00072240829 -0.00043559074 0.00012028217 -0.0013470054
+		 0.00082784891 -0.00099158287 0.0010102987 -0.00031897426 0.00023162365 0.00069230795
+		 -0.0013149977 0.00041991472 -0.0009547472 0.00078561902 -0.0016581416 0.0013688803
+		 -0.0018109679 -1.9431114e-05 -0.00051170588 -0.0013025999 0.00033140182 -0.0013884902
+		 0.00061452389 -0.00064238906 0.00011885166 0.00048217177 -0.0015472174 -0.0010262728
+		 0.00078874826 -0.00072792172 0.0013329387 -0.0002040267 -0.00098001957 0.00032603741
+		 -0.001839757 -0.0016153455 0.00015419722 -0.00090566278 -8.803606e-05 0.00021183491
+		 -0.0017014146 -0.0019970834 0.00074052811 -0.00046995282 -0.00082755089 -0.00013938546
+		 -0.0018857121 -0.0013597012 0.00038844347 -0.0017399788 -0.00023239851 -0.0010903776
+		 -0.00035601854 -9.1761351e-05 -0.0017688274 -0.0007352531 -0.00066804886 -0.00058606267
+		 -0.0018194914 -0.0014383793 0.00036138296 -0.0017562509 -0.00062543154 -0.001188159
+		 -0.00064945221 -0.00039982796 -0.0017485023 -0.00094673038 -0.0005016923 -0.00099244714
+		 -0.0016516447 -0.0014394522 -0.00010246038 -0.0016358793 -0.0010421276 -0.0011940002
+		 -0.00094687939 -0.00068631768 -0.0016447306 -0.0010583401 -0.00036746264 -0.0013391674
+		 -0.0013936162 -0.00015324354 0.0026610494 -0.00017482042 0.0018926859 -0.0011051893
+		 -0.0012271404 -0.00092861056 -0.0014663339 0.00047630072 0.0016216636;
+createNode polyLayoutUV -n "polyLayoutUV72";
+	rename -uid "C0C98C96-469E-32B9-92B4-91AA6A8A6E02";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:541]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV127";
+	rename -uid "D6AEFBC7-4FDB-42A4-83EA-BF9754F867E9";
+	setAttr ".uopa" yes;
+	setAttr -s 730 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0.59803092 0.12108141 0.59908187 0.12108147
+		 0.59908164 0.12779957 0.59803063 0.12779951 0.60013282 0.12108147 0.60013252 0.12779963
+		 0.59697998 0.12108135 0.59697968 0.12779951 0.59592909 0.12108129 0.59592873 0.12779945
+		 0.59487814 0.12108129 0.59487784 0.12779939 0.59382713 0.12108123 0.59382683 0.12779933
+		 0.012397677 0.027423739 0.011346728 0.027425647 0.011334449 0.020707607 0.012385398
+		 0.02070564 0.010295793 0.027427554 0.010283515 0.020709515 0.013448596 0.027421832
+		 0.013436317 0.020703733 0.0092448443 0.027429521 0.0092325807 0.020711422 0.0081939101
+		 0.027431428 0.0081816316 0.020713329 0.0071429759 0.027433336 0.0071306974 0.020715237
+		 -0.14890099 0.029239848 -0.14783442 0.034543693 -0.15086222 0.03529796 -0.15196371
+		 0.029607147 -0.14584243 0.028831378 -0.14481384 0.03369081 -0.14613307 0.039778471
+		 -0.14917058 0.040913373 -0.15389788 0.035979092 -0.15503603 0.029953107 -0.14924669
+		 0.023878023 -0.15232038 0.023839816 -0.14278817 0.028354943 -0.14178681 0.032739788
+		 -0.14315915 0.038458019 -0.14618129 0.023919865 -0.15222806 0.04186824 -0.15693781
+		 0.036632329 -0.15812281 0.030300751 -0.15540767 0.023808733 -0.14880013 0.01852195
+		 -0.15185279 0.018072195 -0.13970685 0.027759984 -0.13880372 0.031472042 -0.14029068
+		 0.037006915 -0.1431188 0.023959771 -0.14575666 0.019018486 -0.15526015 0.042691678
+		 -0.15851447 0.023787469 -0.1549201 0.017655544 -0.14758408 0.013249449 -0.15058863
+		 0.012394823 -0.14005435 0.023984849 -0.14271599 0.019575298 -0.14459759 0.014204048
+		 -0.15800619 0.017253302 -0.15361166 0.011619523 -0.14565372 0.008118134 -0.14864409
+		 0.0068440819 -0.13696033 0.023987651 -0.13663715 0.026891127 -0.13966978 0.020229325
+		 -0.14162034 0.015263118 -0.14275253 0.0095677115 -0.15664965 0.010877427 -0.15167952
+		 0.0057516932 -0.13663596 0.021101072 -0.13870597 0.016579658 -0.13997591 0.011121742
+		 -0.15470904 0.0048031569 0.054438472 0.37997881 0.055653036 0.37470597 0.058705688
+		 0.37515482 0.057443261 0.38083255 0.051451683 0.37902504 0.052609384 0.37421024 0.056097984
+		 0.36934972 0.059171736 0.36938706 0.061773181 0.37557063 0.060466468 0.38160697 0.052509546
+		 0.38511062 0.055500269 0.3863838 0.048474073 0.37796679 0.049568564 0.37365434 0.053032577
+		 0.36930877 0.049607992 0.3836619 0.055750728 0.36398804 0.058813453 0.36361986 0.062259018
+		 0.36941725 0.06485939 0.37597197 0.063504696 0.38234824 0.058536053 0.38747534 0.045559376
+		 0.37665111 0.04652217 0.37300116 0.04997012 0.36926973 0.046830863 0.38210863 0.052692354
+		 0.36439735 0.054682672 0.35868448 0.05771029 0.35792938 0.061885655 0.36327302 0.065365791
+		 0.36943763 0.061565816 0.38842303 0.046905637 0.36924556 0.049638212 0.36487469 0.051662385
+		 0.35953823 0.052979887 0.35345021 0.056017101 0.35231441 0.060745776 0.35724735 0.064972281
+		 0.36292452 0.043488115 0.37213033 0.043811619 0.36924362 0.046557099 0.36547053 0.048635691
+		 0.36049014 0.05000633 0.35477152 0.059074223 0.35135871 0.063785434 0.35659328 0.043487608
+		 0.36634028 0.045652896 0.36175871 0.047138304 0.3562234 0.062106133 0.35053441 -0.47830275
+		 -0.36507624 -0.47897995 -0.36188924 -0.48049852 -0.36225975 -0.47984535 -0.36527687
+		 -0.47994909 -0.35885286 -0.48146346 -0.35932654 -0.48200962 -0.36264682 -0.48137856
+		 -0.36548471 -0.47804961 -0.36834228 -0.47960246 -0.36835253 -0.48298082 -0.35987216
+		 -0.48351148 -0.36307359 -0.4829044 -0.36570913 -0.48114559 -0.36836761 -0.47824624
+		 -0.37159777 -0.47978905 -0.3714236 -0.48447564 -0.36050856 -0.4850044 -0.36355031
+		 -0.48442566 -0.3659569 -0.48268193 -0.36838633 -0.48132461 -0.37125027 -0.47883943
+		 -0.37476233 -0.48035875 -0.37443542 -0.48592594 -0.3612327 -0.48649266 -0.3640793
+		 -0.48594558 -0.36623478 -0.48421413 -0.36840683 -0.48285547 -0.37106627 -0.48187599
+		 -0.37409455 -0.47967875 -0.37779075 -0.4811942 -0.37737873 -0.48731402 -0.36200905
+		 -0.48794949 -0.36473691 -0.48746827 -0.36656129 -0.48574483 -0.36842632 -0.48438415
+		 -0.37086168 -0.48338929 -0.37371713 -0.48272228 -0.37690106 -0.48727655 -0.36843848
+		 -0.48591068 -0.37062311 -0.48489892 -0.37329042 -0.48424035 -0.37633342 -0.48898473
+		 -0.36699659 -0.48882306 -0.36843944 -0.48745075 -0.37032533 -0.48641178 -0.37281466
+		 -0.48572665 -0.375673 -0.48898497 -0.36989063 -0.48790267 -0.37218061 -0.48716018
+		 -0.37494731 -0.74009669 -0.36279345 -0.74068987 -0.36595803 -0.73914707 -0.3661322
+		 -0.73857737 -0.36312038 -0.74088657 -0.36921346 -0.73933369 -0.36920327 -0.73761147
+		 -0.36630553 -0.73706013 -0.36346126 -0.73925734 -0.35976505 -0.73774189 -0.36017704
+		 -0.74063343 -0.37247953 -0.73909086 -0.3722789 -0.73779058 -0.36918819 -0.73608065
+		 -0.36648959 -0.73554683 -0.36383873 -0.7362138 -0.36065477 -0.73995626 -0.37566659
+		 -0.73843771 -0.37529609 -0.73755765 -0.37207109 -0.73625422 -0.36916953 -0.73455197
+		 -0.36669415 -0.73403716 -0.36426544 -0.73469573 -0.36122245 -0.73898715 -0.37870294
+		 -0.73747283 -0.37822926 -0.73692662 -0.37490898 -0.73603177 -0.37184671 -0.73472202
+		 -0.36914903 -0.73302543 -0.36693275 -0.73252434 -0.36474121 -0.73320943 -0.36188287
+		 -0.73595542 -0.3776837 -0.7354247 -0.37448224 -0.73451054 -0.37159896 -0.73319131
+		 -0.36912954 -0.73148537 -0.36723053 -0.73103344 -0.36537528 -0.73177588 -0.36260855
+		 -0.73446059 -0.3770473 -0.73393184 -0.37400553 -0.73299062 -0.37132108 -0.73165959
+		 -0.36911744 -0.73301029 -0.37632316 -0.73244357 -0.37347659 -0.7314679 -0.3709946
+		 -0.73011309 -0.36911649 -0.72995114 -0.36766529 -0.73162222 -0.37554681 -0.73098671
+		 -0.37281895 -0.72995138 -0.37055933 0.53153729 0.059758723 0.53164268 0.059758723
+		 0.53164268 0.060432255 0.53153723 0.060432255 0.53174806 0.059758723 0.531748 0.060432255
+		 0.53185344 0.059758723 0.53185338 0.060432315 0.53195882 0.059758782 0.5319587 0.060432315
+		 -0.42724887 0.0044903755 -0.42735422 0.0044903755 -0.42735413 0.003816843 -0.42724878
+		 0.0038169026 -0.42745957 0.0044903755 -0.42745951 0.003816843 -0.42756492 0.0044903755
+		 -0.42756486 0.003816843 -0.4276703 0.0044903159 -0.42767021 0.003816843 -0.38756463
+		 0.29959282 -0.38845125 0.30345336;
+	setAttr ".uvtk[250:499]" -0.39066237 0.30314225 -0.38982069 0.29897958 -0.3853482
+		 0.30034605 -0.38625047 0.30382693 -0.38876885 0.3073597 -0.39097896 0.30733728 -0.39288592
+		 0.30288258 -0.3920908 0.29849911 -0.38319212 0.30122447 -0.38405615 0.30426216 -0.38656354
+		 0.30738506 -0.38851824 0.31127137 -0.39073238 0.31153208 -0.39320081 0.30732033 -0.39512447
+		 0.30264723 -0.39434594 0.29811981 -0.38111186 0.30217496 -0.38185817 0.30474883 -0.38435584
+		 0.30741 -0.38630858 0.31095141 -0.38774228 0.31516123 -0.39000785 0.31570345 -0.39295298
+		 0.31175059 -0.39544028 0.30731118 -0.38214278 0.30742672 -0.38409972 0.31056482 -0.38549942
+		 0.31447583 -0.39227211 0.31611854 -0.39518198 0.31195569 -0.37967181 0.3053624 -0.37990928
+		 0.30742827 -0.3818804 0.31011868 -0.38330328 0.31365305 -0.39451084 0.31644678 -0.37967139
+		 0.30950511 -0.38117814 0.31273532 0.14133501 -0.3420428 0.14217323 -0.34568977 0.14426202
+		 -0.34539557 0.14346623 -0.34146312 0.13924116 -0.34275478 0.14009422 -0.34604308
+		 0.14247394 -0.34938014 0.14456183 -0.34935862 0.14636266 -0.34514987 0.14561075 -0.34100884
+		 0.13720453 -0.34358501 0.13802129 -0.34645465 0.14039057 -0.34940445 0.14223784 -0.35307562
+		 0.14432955 -0.35332149 0.14666086 -0.3493422 0.14847738 -0.34492713 0.14774114 -0.34065014
+		 0.13523936 -0.34448326 0.1359449 -0.34691474 0.13830489 -0.34942839 0.14015031 -0.3527737
+		 0.14150542 -0.35675055 0.14364582 -0.35726243 0.14642745 -0.35352755 0.14877653 -0.34933323
+		 0.1362142 -0.34944451 0.13806343 -0.35240886 0.13938642 -0.35610339 0.14578497 -0.35765418
+		 0.14853328 -0.35372102 0.13387948 -0.34749475 0.13410419 -0.34944642 0.13596678 -0.35198772
+		 0.13731152 -0.35532644 0.14789999 -0.35796389 0.13387978 -0.35140845 0.13530374 -0.35445982
+		 -0.5992974 -0.0055277944 -0.59898281 -0.0035517216 -0.59996271 -0.0034538507 -0.60028148
+		 -0.0053747296 -0.59885508 -0.0015019178 -0.59984028 -0.0015005469 -0.60093856 -0.0033510327
+		 -0.60127723 -0.005183816 -0.59898901 0.00055813789 -0.59997451 0.00045746565 -0.60081702
+		 -0.0015031695 -0.60191083 -0.0032300949 -0.6022743 -0.0049363971 -0.5993318 0.0025539994
+		 -0.60032547 0.0023887753 -0.60095328 0.00034606457 -0.60178781 -0.0015087724 -0.60288
+		 -0.0030827522 -0.60326266 -0.0046232343 -0.60132724 0.0021787882 -0.60192615 0.00021123886
+		 -0.60275549 -0.0015161633 -0.60384595 -0.0029051304 -0.60423374 -0.004242003 -0.60232419
+		 0.0019088984 -0.60289347 4.7206879e-05 -0.60372323 -0.001523912 -0.60480726 -0.0026990771
+		 -0.60515875 -0.0038187504 -0.6033054 0.0015738606 -0.60385549 -0.00014686584 -0.60469484
+		 -0.0015300512 -0.60577226 -0.0024693012 -0.60606384 -0.0033417344 -0.60496026 -0.0054320693
+		 -0.60574889 -0.0048215985 -0.60426235 0.0011754632 -0.60481179 -0.00036543608 -0.60567689
+		 -0.0015317798 -0.60517365 0.00073814392 -0.60576999 -0.00059813261 -0.60501271 0.0023522377
+		 -0.60578686 0.0017260313 -0.60606372 0.00026351213 0.36336279 -0.62732947 0.36301637
+		 -0.62977564 0.3642329 -0.62988305 0.36458403 -0.62750107 0.36288106 -0.63229394 0.36410308
+		 -0.63229048 0.36544573 -0.62999928 0.36581731 -0.62772059 0.36303586 -0.63482213
+		 0.36425728 -0.63470209 0.36531705 -0.63228387 0.36665636 -0.63013816 0.36704892 -0.62800658
+		 0.36342871 -0.63728774 0.36465812 -0.63709277 0.36547136 -0.63456929 0.36652625 -0.63227522
+		 0.36786729 -0.63030624 0.36826491 -0.62836182 0.36589307 -0.63684356 0.36668015 -0.63441092
+		 0.36773401 -0.63226593 0.36908436 -0.63050115 0.36945134 -0.62876916 0.3671183 -0.63652635
+		 0.3678863 -0.63422358 0.36894178 -0.63225961 0.36832023 -0.63614321 0.36909509 -0.63400972
+		 0.37015897 -0.63225895 0.37029833 -0.6307894 0.36948735 -0.63571775 0.37029761 -0.63372028
+		 0.14176166 -0.075157881 0.14083022 -0.075460494 0.14225131 -0.078249693 0.14003789
+		 -0.076036155 0.14274108 -0.075157881 0.13946217 -0.076828539 0.14367253 -0.075460553
+		 0.13915956 -0.077759981 0.14446485 -0.076036215 0.1391595 -0.078739345 0.14504051
+		 -0.076828599 0.13946217 -0.079670846 0.14534312 -0.077760041 0.14003783 -0.080463171
+		 0.14534312 -0.078739405 0.14083016 -0.081038833 0.14504051 -0.079670846 0.1417616
+		 -0.081341505 0.14446479 -0.080463231 0.14274102 -0.081341505 0.14367247 -0.081038892
+		 0.0049569607 -0.16740522 0.0046543479 -0.16833669 0.00774616 -0.1688264 0.0046543479
+		 -0.16931605 0.0055326819 -0.16661286 0.0049569607 -0.17024755 0.0063250065 -0.1660372
+		 0.0055326223 -0.17103988 0.0072565079 -0.16573456 0.0063250065 -0.17161554 0.0082358718
+		 -0.16573456 0.0072564483 -0.17191821 0.0091673732 -0.16603723 0.0082358122 -0.17191821
+		 0.0099596977 -0.16661289 0.0091673136 -0.1716156 0.010535359 -0.16740525 0.0099596381
+		 -0.17103994 0.010837972 -0.16833675 0.010535359 -0.17024755 0.010837972 -0.16931611
+		 -0.19886431 0.032596648 -0.19902651 0.032678902 -0.19936828 0.032207608 -0.19904506
+		 0.032041639 -0.19868629 0.033150554 -0.19915554 0.032807291 -0.1996256 0.032464385
+		 -0.19971484 0.031737775 -0.19923462 0.031484038 -0.19868454 0.032568753 -0.19868401
+		 0.031984895 -0.19923887 0.032969177 -0.19979325 0.032787621 -0.20009664 0.032119036
+		 -0.20007183 0.03126812 -0.19945176 0.030931085 -0.19868469 0.031396776 -0.19850491
+		 0.032597959 -0.19832337 0.032043606 -0.19926809 0.033148766 -0.19985195 0.033148229
+		 -0.20035155 0.03259927 -0.20056653 0.031765372 -0.19813502 0.03148526 -0.19834304
+		 0.032681286 -0.19800013 0.032211244 -0.19924018 0.033328533 -0.19979522 0.033509314
+		 -0.20044003 0.033148944 -0.20090145 0.032382786 -0.20103112 0.031400025 -0.20044018
+		 0.030805677 -0.19765478 0.031740218 -0.19821468 0.03281033 -0.19774336 0.032468557
+		 -0.19915791 0.033490717 -0.19962923 0.03383255 -0.20035276 0.033698857 -0.19791853
+		 0.030935377 -0.19730112 0.031270295 -0.19727355 0.032121956 -0.19813243 0.032972515
+		 -0.19757739 0.032791793 -0.19902955 0.033619761 -0.19937246 0.034089863 -0.20009904
+		 0.034179091 -0.1968039 0.031765014 -0.19701982 0.032602191 -0.1981045 0.033152282
+		 -0.19752064 0.033152819 -0.19886768 0.033703089 -0.19904922 0.034257472 -0.1997178
+		 0.034560859 -0.20056869 0.034536064 -0.20090577 0.033915997 -0.19693577 0.030805707
+		 -0.19634143 0.031396657;
+	setAttr ".uvtk[500:729]" -0.19646683 0.032385051 -0.19693255 0.033152163 -0.19813374
+		 0.033331931 -0.19757935 0.033513427 -0.19868805 0.033732355 -0.19868858 0.034316182
+		 -0.19923757 0.034815788 -0.20007145 0.035030782 -0.19702104 0.033701837 -0.19821706
+		 0.033493757 -0.19774699 0.033836663 -0.19850828 0.0337044 -0.19832751 0.034259439
+		 -0.19868791 0.034904301 -0.19945407 0.035365701 -0.20043682 0.035495341 -0.20103115
+		 0.03490442 -0.19727597 0.034182072 -0.19834608 0.033622146 -0.19800431 0.03409344
+		 -0.19813797 0.03481698 -0.19647115 0.033918321 -0.19680607 0.034535706 -0.19765773
+		 0.034563303 -0.19730076 0.035032928 -0.19792083 0.035369992 -0.19634145 0.034901083
+		 -0.19693241 0.0354954 0.033315092 0.015774086 0.033302844 0.018761873 0.032367736
+		 0.021599412 0.030601382 0.024009079 0.028176636 0.025754958 0.025330782 0.026666015
+		 0.022342503 0.026653022 0.019504398 0.025717109 0.017094359 0.023949891 0.01534833
+		 0.02152437 0.014437295 0.018677995 0.014450416 0.015689433 0.015386418 0.012851298
+		 0.017153561 0.010441437 0.0195788 0.0086957812 0.022424653 0.0077852011 0.025412381
+		 0.0077987611 0.028249472 0.0087350905 0.030658275 0.010502532 0.032403201 0.012928203
+		 0.036195755 0.0153099 0.03618598 0.019210577 0.034971029 0.02291739 0.032669753 0.026067257
+		 0.029507488 0.028351665 0.025793895 0.029546887 0.021892637 0.02953589 0.01818572
+		 0.028319836 0.015036002 0.026017725 0.012751788 0.022855014 0.011556655 0.019141242
+		 0.011567585 0.015239939 0.012783512 0.011532947 0.015085459 0.0083831847 0.018248066
+		 0.0060990453 0.021961704 0.0049042329 0.025862649 0.004915759 0.029568851 0.0061324686
+		 0.032717377 0.0084350109 0.035000354 0.011597514 0.03951028 0.014776677 0.039502889
+		 0.019727275 0.037965953 0.024433762 0.035049468 0.028434992 0.03103891 0.03133899
+		 0.026327014 0.032861292 0.021375313 0.032852799 0.016668662 0.031314462 0.012667783
+		 0.028396964 0.009764269 0.024385959 0.0082422793 0.019674063 0.008250773 0.014722466
+		 0.0097889677 0.010015801 0.012706377 0.0060148388 0.016717419 0.0031113625 0.021429405
+		 0.0015897453 0.026380807 0.0015990064 0.031086594 0.0031381249 0.035086095 0.006055966
+		 0.037988275 0.01006633 0.042787701 0.014248982 0.042782903 0.020237818 0.040927708
+		 0.025932699 0.037403017 0.030775845 0.032553762 0.034292668 0.026854813 0.036138564
+		 0.020864338 0.036132753 0.015168995 0.034275919 0.010326304 0.030749977 0.0068102367
+		 0.025900185 0.004964903 0.020201296 0.0049709044 0.014211059 0.0068277158 0.0085158199
+		 0.01035367 0.0036731064 0.015203655 0.00015714765 0.020902798 -0.0016876943 0.026892856
+		 -0.0016807467 0.032587081 0.0001770556 0.037428021 0.003703244 0.04094252 0.0085520148
+		 0.046554863 0.013628319 0.046557516 0.020811081 0.044340521 0.027644157 0.040119857
+		 0.033458203 0.034308523 0.037683457 0.027475566 0.039905697 0.020290345 0.039907306
+		 0.013456494 0.037688196 0.0076430254 0.033465981 0.0034189876 0.027653992 0.0011976669
+		 0.020821214 0.001196496 0.013636455 0.0034156609 0.0068028644 0.007638067 0.00098950416
+		 0.013450451 -0.003234379 0.020283669 -0.0054550441 0.027468383 -0.0054550208 0.034300774
+		 -0.0032346789 0.040111929 0.00098779052 0.044333875 0.0067982525 0.57880569 -0.19448856
+		 0.57847583 -0.19550341 0.57847571 -0.19657052 0.57880539 -0.19758543 0.57943249 -0.19844881
+		 0.58029574 -0.19907615 0.58131057 -0.199406 0.58237767 -0.19940612 0.58339262 -0.19907647
+		 0.58425599 -0.19844934 0.58488333 -0.19758609 0.58521318 -0.19657123 0.5852133 -0.19550413
+		 0.58488363 -0.19448921 0.58425653 -0.19362584 0.58339334 -0.19299853 0.58237845 -0.19266865
+		 0.58131135 -0.19266854 0.5802964 -0.19299817 0.57943302 -0.19362533 0.4570719 -0.27700078
+		 0.45732453 -0.27723461 0.4574632 -0.27703851 0.45725402 -0.27684259 0.45763072 -0.27739561
+		 0.45771873 -0.27717006 0.45759973 -0.27684391 0.45744133 -0.27669203 0.45779476 -0.27694237
+		 0.45773643 -0.27665025 0.45763078 -0.27654749 0.45711187 -0.27659261 0.45733416 -0.27649778
+		 0.45801011 -0.27721655 0.45801193 -0.2769767 0.45786774 -0.27671617 0.45787397 -0.27645791
+		 0.45782128 -0.27640611 0.45756128 -0.27641684 0.4583022 -0.27717161 0.45822918 -0.27694291
+		 0.45801285 -0.27673894 0.45794001 -0.27649111 0.45801249 -0.27626616 0.45778701 -0.27634054
+		 0.45729667 -0.27627289 0.45753646 -0.27627015 0.45855933 -0.27704167 0.45842505 -0.27684498
+		 0.45815805 -0.27671623 0.45801306 -0.27650249 0.45777482 -0.27626759 0.45733109 -0.27604818
+		 0.45755899 -0.27612263 0.45838743 -0.2773968 0.45869488 -0.27723992 0.45877045 -0.27684665
+		 0.45858359 -0.27669364 0.4582895 -0.27665031 0.45808604 -0.27649099 0.45778602 -0.27619439
+		 0.45743269 -0.27585089 0.45762607 -0.27599007 0.45895177 -0.27700782 0.45891428 -0.27659452
+		 0.45869046 -0.27649897 0.45839509 -0.27654761 0.45815197 -0.27645767 0.45781943 -0.27612823
+		 0.45723763 -0.2757104 0.4571045 -0.27596396 0.45758724 -0.27569163 0.45773077 -0.27588415
+		 0.45846397 -0.2764169 0.45820448 -0.27640575 0.45787185 -0.27607548 0.45743531 -0.27550441
+		 0.45778874 -0.27558792 0.45786366 -0.27581573 0.45872796 -0.27627319 0.45848811 -0.27626961
+		 0.45823827 -0.27634013 0.45793808 -0.27604157 0.45801175 -0.27555227 0.45801142 -0.27579206
+		 0.45869327 -0.27604795 0.45846504 -0.27612191 0.45824999 -0.27626705 0.45801169 -0.27602977
+		 0.45823482 -0.27558786 0.4581593 -0.27581543 0.45859122 -0.27585053 0.45839733 -0.27598912
+		 0.4582383 -0.27619374 0.45808536 -0.27604127 0.45843643 -0.27569157 0.45829254 -0.27588344
+		 0.45891905 -0.27596354 0.45878655 -0.27571046 0.45820445 -0.27612752 0.45815179 -0.27607501
+		 0.45858854 -0.27550358;
+createNode polyAutoProj -n "polyAutoProj70";
+	rename -uid "FBB97D24-4ADE-D0B4-F124-99BE318B564D";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:541]";
+	setAttr ".ix" -type "matrix" -0.11916824911869549 0.22940267419558752 0.043306021280306785 0
+		 -0.091360459591845633 -0.0010821105105327654 -0.24567084781317144 0 -0.21483543662623256 -0.12678845418250367 0.080451805827214812 0
+		 19.871211389562337 -1.4125247005951254 10.164446185137896 1;
+	setAttr ".s" -type "double3" 0.56801663989864437 0.56801663989864437 0.56801663989864437 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode groupId -n "groupId172";
+	rename -uid "28BCA0FF-45B0-5268-1E94-E18AA9E62630";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts28";
+	rename -uid "B25A85E6-451B-2B4D-051A-259000D40776";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:541]";
+createNode polyTweakUV -n "polyTweakUV128";
+	rename -uid "B810141C-4CF8-651F-5F2A-19AEC2B8C2E9";
+	setAttr ".uopa" yes;
+	setAttr -s 730 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.0020908713 0.0063700676 -0.0010323524
+		 0.006198585 -0.00022041798 -0.0068054795 -0.0012790188 -0.0066341162 0.0052443445
+		 0.0059523582 0.0060562044 -0.0070517659 -0.00040594488 0.0065020919 0.00040598959
+		 -0.0065020323 0.0012789331 0.0066341162 0.0020908862 -0.0063701272 0.00022053346
+		 0.0068054795 0.0010323804 -0.0061986446 -0.0060563092 0.0070517659 -0.0052443454
+		 -0.0059523582 -0.00035870075 -0.0066049695 -0.0014206171 -0.0065678358 -0.0019424856
+		 0.0064145923 -0.00088047981 0.0063772798 0.00026090443 -0.0064911842 -0.00026087463
+		 0.0064911246 0.0059213936 -0.006567359 0.0053996444 0.0064149499 0.0019423962 -0.0064146519
+		 0.0014206469 0.0065677762 0.00088049471 -0.0063772798 0.00035864115 0.0066050291
+		 -0.0053996146 -0.0064149499 -0.0059213489 0.0065672994 -0.012208641 -0.0081268996
+		 -0.00094532967 -0.011821121 0.0018319488 -0.011618137 -0.0098515749 -0.0079647601
+		 -0.012202859 -0.007236585 -0.0013945103 -0.010197222 0.016376138 -0.0053302944 0.019155085
+		 -0.0043894351 0.0061727762 -0.0091542006 -0.0059407353 -0.0064568222 -0.01663965
+		 0.00059950352 -0.014477015 0.00092925131 -0.0091329217 -0.0056867748 0.0013213158
+		 -0.0070070624 0.015375555 -0.0042039156 -0.016474068 0.00028760731 0.023360431 -0.0010785162
+		 0.011318922 -0.0038835704 -0.0013245344 -0.0033184439 -0.010803521 0.0013176054 -0.013588846
+		 0.0091390386 -0.011321187 0.0095697492 -0.0020892024 -0.0041357428 0.0072899461 -0.0046207309
+		 0.016480088 -0.0008354187 -0.013222933 -6.6101551e-05 -0.013535142 0.0076753721 0.028626621
+		 0.0052109361 -0.0064822435 0.0017982572 -0.0075573921 0.0087475702 -0.0032936931
+		 0.012434833 -0.00066685677 0.012630396 -0.0062116385 -0.00058953464 -0.010385215
+		 0.0054326057 -0.0036766529 0.010395117 -0.0031501651 0.0064436123 0.0034234524 0.010605846
+		 0.013701618 0.0058159996 0.016357303 0.0049059214 0.0053582191 -0.0013661385 0.0090560317
+		 -0.0042381585 -0.0034171343 0.002918914 -0.0010207295 0.0068008378 0.012633026 0.004572548
+		 0.0081871152 0.0058173761 0.020247221 0.0016353906 0.0077786446 0.0014684498 0.0048478246
+		 0.0034250915 0.013507187 0.00086113811 0.025032818 -0.0045185927 0.0025220513 -0.012397498
+		 0.013498485 -0.0087784529 0.011179447 -0.0088199675 -0.00021624565 -0.012215734 0.0030018687
+		 -0.010768414 0.01348716 -0.0077394396 0.017159998 -0.00013691187 0.015001416 -7.340312e-05
+		 0.0073491931 -0.00763008 -0.0044416189 -0.0098344684 -0.015290439 -0.0063077807 -0.018133223
+		 -0.0050224066 0.00043347478 -0.0076313615 0.010375917 -0.0059696138 0.016991496 -0.00025376678
+		 -0.014043778 -0.0054526627 0.013337553 0.0084640831 0.011038005 0.008690007 0.011334121
+		 -9.0286136e-05 0.0028543472 -0.0049661696 -0.0093790889 -0.0046981275 -0.022221804
+		 -0.0013900995 -0.005308181 -0.0047546625 0.0034562051 -0.0039896369 0.013736814 -0.00037674606
+		 -0.014763445 -0.002143383 0.013284862 0.0071491674 0.002753377 0.011826269 8.8274479e-05
+		 0.011999473 0.0072033405 0.0075475052 0.007021904 -0.00020682812 -0.027231336 0.0051103234
+		 0.0067177415 -0.00038915873 0.010169506 0.0051276088 0.0031054616 0.0097908899 -0.01373899
+		 0.0048214383 -0.016341329 0.0042576557 -0.0041149855 0.0098887831 0.0026891828 0.0047656149
+		 -0.0076439083 -0.0031376183 -0.0048664212 -0.00022406876 0.0030644238 0.0030388832
+		 0.00030380487 0.0061389804 -0.012908012 0.0032994002 -0.020357549 0.0013049704 -0.0090830922
+		 0.0049597993 -0.0082056522 0.0025410354 -0.0058065057 0.0032464787 -0.014165193 -0.00048289448
+		 -0.025406241 -0.0046459623 3.3378601e-06 0.00026518106 -0.007401228 0.00094157457
+		 -0.0051490068 -0.0025339127 0.0021058321 -0.0019605756 -0.016999781 0.0065495372
+		 -0.014746845 0.0023903251 -0.0030856729 -0.0045982003 0.003965795 -0.0034127235 0.003706038
+		 0.0023676157 0.0057974458 0.0015361905 -0.012757599 -0.00029605627 -0.0016184449
+		 -0.0054831505 0.0051530004 -0.0041648746 0.0075654387 0.00069582462 0.0031781197
+		 0.0048757195 0.0054463744 0.0053675771 -0.011214554 -0.0017402172 -0.0011481643 -0.0053378344
+		 0.0052498579 -0.0042874813 0.0085815191 -9.5546246e-05 0.0072839856 0.0050870776
+		 -0.0013699532 0.0052757263 0.0011838675 0.0068233609 -0.010303557 -0.0020153522 -0.0020834804
+		 -0.0042700171 0.0038617253 -0.0038707256 0.0084396601 -0.00077879429 0.008276999
+		 0.004217267 0.0031914115 0.007016778 -0.0088036656 0.00097298622 -0.0061863065 0.0030283928
+		 -0.010204911 -0.00093561411 -0.0045550466 -0.0031420588 0.00061446428 -0.0031350255
+		 0.0067649484 -0.001288116 0.0080314279 0.0029426813 0.0042896271 0.0061670542 -0.0042806864
+		 0.0036514997 0.0032240152 -0.0015275478 0.0062106848 0.0014945269 0.0041126013 0.0045282245
+		 -0.0032504797 0.0031766891 -0.0047275424 -0.0027223229 -0.0025787354 -0.0014237165
+		 0.0023798347 0.00023764372 0.0022568703 0.0022674799 -0.0032562017 0.0017840862 -0.0034846663
+		 1.6450882e-05 -0.0012632012 0.00058805943 -0.004452765 -0.00058704615 0.0048015118
+		 -0.0014606714 -0.001583755 -0.0018945336 -0.0036978126 -0.0037530065 0.0025426149
+		 -0.0044078231 -0.0045133829 0.00034987926 -0.0066284537 -0.00017184019 -0.0055545568
+		 -0.0047612786 0.00052285194 -0.0059153438 0.012948275 0.0040303469 0.010685921 0.00057029724
+		 -0.0031998754 0.0028347969 -0.0055124164 0.0036915541 -0.0084270835 -0.00061053038
+		 -0.0067172647 -0.0050125122 -0.00085061789 -0.0062108636 0.0087786913 -0.0013504624
+		 0.0023924708 0.0031497478 -0.00023496151 0.0052205324 -0.0074204803 0.0038493276
+		 -0.0094788074 -0.00093364716 -0.0067670345 -0.0046060681 -0.0011733174 -0.0054660439
+		 0.0074422359 -0.0020129085 0.011278868 -0.0010484457 0.0085648298 0.0016995072 -0.0023698807
+		 0.0059577227 -0.0085137486 0.0034707785 -0.0093752742 -0.0011146665 -0.0053339005
+		 -0.0036972165 -1.5377998e-05 -0.00376302 0.006868422 -0.0015466809 0.0064620972 0.0030668974
+		 -0.0036502481 0.0056763887 -0.0083949566 0.0027120113 -0.0077374578 -0.0011402369
+		 -0.0019289255 -0.0025609732 0.0028002262 -0.0022729039 0.0072103739 0.00015437603
+		 0.0051090121 0.0033334494 -0.0037099123 0.0046077967 -0.0066933036 0.0017435551 -0.0042227507
+		 -0.0010351539 0.0046691298 0.0026224256 -0.002170682 0.0029411316 -0.0030789971 0.0008585453
+		 0.0015695095 -0.00079578161 0.0036039352 -0.0020116568 0.005335927 0.00079864264
+		 0.00095450878 0.0015674233 0.0025761724 0.00074350834 0.0017496645 -0.0027016997
+		 -0.00046792626 -0.0028684139 -0.00058424473 0.0027095675 0.0016333461 0.0028762817
+		 5.8174133e-05 -0.0029139519 -5.8174133e-05 0.0026641488 0.00058424473 -0.0028320551
+		 0.00046792626 0.002745986 -0.0016333461 -0.0026289225 -0.0017496645 0.002949059 -0.0020181239
+		 0.0031177998 0.00019928813 0.0028306246 0.00085327029 -0.0027484894 -0.0013641417
+		 -0.0024612546 -0.00032696128 0.0026646852 0.00032699108 -0.0029144883 -0.00085318089
+		 0.0026260018 -0.00019919872 -0.0029530525 0.0013640523 0.0027086139 0.0020180345
+		 -0.0028704405 0.0027808547 0.0070146024 -0.0096048117 0.0055654943;
+	setAttr ".uvtk[250:499]" -0.0082994103 0.005238831 0.0035117269 0.0062137246
+		 0.0039443374 0.0069261193 -0.0086120367 0.0052756369 -0.01418221 -0.0010321438 -0.012884796
+		 -0.0014602542 -0.0054904819 0.0040476918 0.0057142377 0.0042401552 0.0074258447 0.0060023367
+		 -0.0045642257 0.0044923425 -0.013101697 -0.00056502223 -0.010952353 -0.0075260997
+		 -0.0097203255 -0.0081305504 -0.010069788 -0.0018154085 -0.0020172 0.0015653968 0.008975029
+		 0.00055608153 0.013652802 0.0038431883 0.0033041835 0.0032441318 -0.0088416338 -0.00010323524
+		 -0.0098006725 -0.0062625408 -0.00049942732 -0.0084852576 3.7431717e-05 -0.0088989139
+		 -0.0068989396 -0.0077468753 -0.0066224933 -0.002065599 -0.00073355436 0.0002476275
+		 -0.0055096149 -0.0045725703 0.0011016726 -0.0072288513 0.0022676587 -0.0080645084
+		 -0.0033220053 -0.0059263706 0.015318215 0.0027443469 0.011961937 0.00039622188 0.0026988387
+		 -0.0025278926 0.0052211285 -0.005307436 0.0057097673 -0.0053243637 0.015088379 -0.0017780066
+		 0.012158692 -0.0024678111 -0.0027828813 -0.0070041418 0.0092946887 -0.0057518482
+		 0.007913053 -0.0053679347 -0.0035642385 -0.0061282516 -0.0038309693 -0.0069974661
+		 0.0084505677 -0.0055226088 0.013813496 0.00063571334 0.012435317 0.0011051893 0.0051047802
+		 -0.0041220784 -0.0057503581 -0.0040869713 -0.007137537 -0.0061612725 0.0046165586
+		 -0.0048034191 0.012888432 0.0001270771 0.010788023 0.00690943 0.0094903111 0.0075397789
+		 0.0096191168 0.0015016794 0.0017111301 -0.0015860796 -0.0089271069 -0.00034099817
+		 -0.013136327 -0.0040925145 -0.0029815435 -0.0036218762 0.0088508129 -0.00037616491
+		 0.0097718835 0.0056233406 0.00079011917 0.0076397359 0.00022435188 0.0080646276 0.0066781044
+		 0.0071842968 0.0062536001 0.0017930865 0.0010237098 -0.00076818466 0.0056788921 0.0039143264
+		 -0.00072318316 0.0063804984 -0.0019735694 0.0072483718 0.0031883121 0.0053929985
+		 -0.014676034 -0.0031958818 -0.01134336 -0.00095748901 -0.0022773743 0.0018542111
+		 -0.0047008395 0.0044645369 -0.0053197145 0.0045308769 -0.014370918 0.0010977387 -0.011446536
+		 0.0016370118 -0.00058823824 0.0034645796 0.001411736 0.0041800737 0.0030887127 0.0046719313
+		 0.00097000599 0.0044370294 0.0015477538 0.0026636124 0.0032100677 0.0020725727 0.0046784282
+		 0.0044343472 0.002137661 0.0044483542 -0.0012392998 0.0011430383 0.00047433376 -0.00061398745
+		 0.0048715472 0.001424253 0.0057528615 0.003701508 0.0026541948 0.0038520694 -0.0061445832
+		 0.0017549992 -0.0045368671 -0.00063502789 0.0021514297 -0.0017247796 0.006082058
+		 0.00073409081 0.005903244 0.0026476979 0.0022709966 0.002887249 -0.0032120347 -0.0021830201
+		 0.0033763051 -0.0024151802 0.0063974261 1.8179417e-05 0.0047532916 0.0014021397 0.00074934959
+		 0.0017252564 -0.0023730397 -0.003172338 0.0037484765 -0.0028235912 0.0053919554 -0.00070285797
+		 0.0019854903 1.8715858e-05 -0.0017868876 0.00014048815 -0.0022417307 -0.0037708879
+		 0.0028907657 -0.0030302405 0.002664268 -0.0014020801 -0.0028269887 -0.0014810562
+		 -0.0060460567 -0.001516819 -0.0079315305 -0.00026977062 -0.0087823868 -0.0017199516
+		 -0.0030609965 -0.004073143 0.00046396255 -0.0030335784 -0.0021924376 -0.0020392537
+		 -0.0048508644 -0.0038472414 -0.0039556026 -0.0027745366 -0.013581634 -0.003200531
+		 -0.013439953 -0.0029658079 -0.0082864761 -0.0032681823 0.0022347569 -0.0042119026
+		 -0.0026638508 -0.0043790936 -0.0042906404 -0.0048011541 0.00067096949 -0.0050507784
+		 -0.0038764477 -0.0020927191 -0.0054740906 -0.0015618205 -0.0052826405 -0.004524231
+		 -8.8632107e-05 -0.0049342513 -0.0004054904 0.00018727779 -0.0020635724 0.0017396212
+		 -0.0064807534 -0.00099503994 -0.0052239299 -0.0037479401 0.00018829107 -0.0041537881
+		 0.0070269704 7.802248e-05 0.0054164529 0.0021832585 -0.0031405687 0.0026369691 -0.006465435
+		 -0.00040507317 -0.0037159324 -0.0026005507 0.0017005801 -0.0028432012 0.0044899583
+		 0.0034187436 -0.0032233596 0.0030676723 -0.0050207376 0.00019216537 -0.00035643578
+		 -0.0011180043 0.0046029091 -0.00092297792 0.004447639 0.0040047169 -0.0019158125
+		 0.0031241775 -0.0017986298 0.00075227022 0.0054917932 0.0040030479 0.0011786222 0.0028438568
+		 0.0036022067 0.001247704 0.0050529838 -0.00020307302 0.0078241825 0.0032472014 0.0062164068
+		 0.0029104352 -3.4570694e-06 4.2915344e-06 -2.2649765e-06 4.7683716e-06 5.9604645e-08
+		 0 -8.3446503e-07 4.6491623e-06 -4.4107437e-06 3.3974648e-06 4.1723251e-07 4.1723251e-06
+		 -4.7087669e-06 2.2649765e-06 1.9669533e-06 3.2186508e-06 -4.7087669e-06 9.5367432e-07
+		 3.3378601e-06 2.1457672e-06 -4.1127205e-06 -5.364418e-07 4.1127205e-06 5.364418e-07
+		 -3.3378601e-06 -1.9669533e-06 4.7087669e-06 -8.9406967e-07 -1.9669533e-06 -3.2186508e-06
+		 4.6491623e-06 -2.2649765e-06 -5.364418e-07 -4.2319298e-06 4.4107437e-06 -3.4570694e-06
+		 1.013279e-06 -4.6491623e-06 3.4570694e-06 -4.2915344e-06 2.2053719e-06 -4.8279762e-06
+		 8.3446503e-07 4.2915344e-06 2.0265579e-06 3.2782555e-06 5.9604645e-08 0 3.3974648e-06
+		 2.0861626e-06 -7.1525574e-07 4.6491623e-06 4.1127205e-06 6.5565109e-07 -2.1457672e-06
+		 4.7087669e-06 4.5895576e-06 -7.1525574e-07 -3.3974648e-06 4.1723251e-06 4.7683716e-06
+		 -2.0861626e-06 -4.1723251e-06 3.4570694e-06 4.2915344e-06 -3.2782555e-06 -4.6491623e-06
+		 2.0861626e-06 3.2186508e-06 -4.1723251e-06 -4.7683716e-06 7.7486038e-07 2.2053719e-06
+		 -4.7683716e-06 -4.1723251e-06 -6.5565109e-07 7.7486038e-07 -4.6491623e-06 -3.2782555e-06
+		 -2.0861626e-06 -7.1525574e-07 -4.2915344e-06 -2.2053719e-06 -3.3378601e-06 0.00027611852
+		 0.0014651418 0.00081640482 0.0010122061 0.0020376742 0.001799047 0.0011254251 0.0025071502
+		 -0.00093564391 -0.00043034554 0.001180321 0.00041472912 0.0026217997 0.00079041719
+		 0.0020757914 0.0013392568 0.0010337532 0.0018495321 -0.0003734231 0.0017394423 0.00016576052
+		 0.0029683411 0.0013263822 -0.00027084351 0.0027430058 -0.00037789345 0.0027279854
+		 7.0810318e-05 0.00017336011 -0.0010659695 -0.0012608171 -0.00086992979 0.00068250299
+		 0.0023289919 -0.0010737479 0.0018119812 -0.00090488791 0.0031678081 0.0012540817
+		 -0.00097185373 0.0025435984 -0.0014492273 0.0024353564 -0.0013622642 0.00099295378
+		 -0.0025113821 0.00018113852 0.0027597249 -0.0017592311 0.0016658306 -0.0020726025
+		 0.0030460954 0.00097951293 -0.0016214848 0.0020822883 -0.0024094582 0.0020045638
+		 -0.0018644333 0.00035429001 -0.0046070814 -0.0029316545 -0.0075530708 -0.004147619
+		 -0.0056093633 -0.0012508929 0.003051877 -0.0023563802 0.0013015866 -0.0030808151
+		 0.0024617314 0.00052669644 -0.0021620989 0.0013748109 -0.0033221841 0.0015252233
+		 -0.0022168756 0.0035645068 0.00054129958 0.0014697313 0.0011795163 -0.0025187135
+		 0.0023991466 -0.0028091073 0.0007610321 -0.0037884414 0.0015488267 -7.0512295e-05
+		 -0.0025263429 0.00036635995 -0.0039066076 0.0010154843 -0.003259778 2.5510788e-05
+		 0.00035873055 -0.003028512 0.0013561249 -0.0030836761 0.00011110306 -0.0042495728
+		 0.00058853626 -0.00075575709 -0.0026724935 -0.00080126524 -0.0040283203 -0.00025269389
+		 -0.0039122105 -0.0012524128 -0.0012189746 -0.0010569394 0.00021606684 0.0066844821
+		 -0.0029166639 0.0047414899 -0.0041336119;
+	setAttr ".uvtk[500:729]" -0.00016999245 -0.0010764003 -0.0035079718 0.0010037422
+		 -0.0031559765 -0.00058960915 -0.0044491589 -0.00048285723 -0.0014563501 -0.002600193
+		 -0.0018719733 -0.0038288236 -0.0016846359 -0.0036200881 -0.0026965439 -0.002039969
+		 -0.0039386153 0.00050157309 -0.0030100048 -0.0012751222 -0.0043278039 -0.0016509295
+		 -0.0021056235 -0.0023255944 -0.0028315783 -0.0033675432 -0.0021857023 -0.0031895041
+		 -0.0047912896 -0.0014017224 -0.0075670481 0.0020561218 -0.0056244433 0.0032731295
+		 -0.0042312145 -0.00093108416 -0.0026461482 -0.0018726587 -0.0037439167 -0.0026596189
+		 -0.0025372505 -0.002710104 -0.001581192 0.0037464499 -0.002219975 0.0016507506 -0.0035794377
+		 -0.0021998286 -0.0014001727 0.00020545721 3.3944845e-05 9.4175339e-06 0.0020487309
+		 0.0066926479 0.0032649636 0.0047490597 -0.0010753274 0.019533597 -0.0070405751 0.019806899
+		 -0.012800545 0.018223941 -0.017790228 0.014940128 -0.021521777 0.010277137 -0.023630977
+		 0.0046907365 -0.023912162 -0.0012723655 -0.02233839 -0.0070294738 -0.01906383 -0.012017965
+		 -0.014408752 -0.01575014 -0.0088285059 -0.017860711 -0.0028686523 -0.018143445 0.0028872788
+		 -0.016569912 0.0078769028 -0.013293713 0.011611305 -0.0086345971 0.01372496 -0.0030474812
+		 0.014010169 0.0029218793 0.012438476 0.0086889863 0.0091635138 0.013689265 0.0045080483
+		 0.017431967 -0.00025512278 0.017156869 -0.0055340528 0.017851882 -0.010769039 0.016883843
+		 -0.015450358 0.014348075 -0.019121051 0.01049158 -0.021422774 0.0056904703 -0.022130221
+		 0.00041356683 -0.021173567 -0.0048238337 -0.018645644 -0.0095088184 -0.014793992
+		 -0.013182729 -0.0099956691 -0.015486032 -0.0047206432 -0.016192585 0.0005146116 -0.015233934
+		 0.005197905 -0.012704134 0.0088719353 -0.008850202 0.01117748 -0.0040489584 0.011889346
+		 0.001231879 0.010936849 0.0064770728 0.0084112883 0.01117368 0.0045553148 0.01485873
+		 0.00071424246 0.01568234 -0.00416857 0.01680446 -0.0091557205 0.016363978 -0.013762832
+		 0.014407486 -0.017542452 0.011125624 -0.020125866 0.0068376064 -0.02126053 0.0019609332
+		 -0.02083388 -0.003028065 -0.018886894 -0.0076413751 -0.015609503 -0.011426926 -0.01132293
+		 -0.014013529 -0.0064469427 -0.015147686 -0.0014594793 -0.014719009 0.0031517521 -0.012770385
+		 0.006937027 -0.0094922483 0.0095270015 -0.005204007 0.010668062 -0.00032304227 0.010246985
+		 0.0046755075 0.008300893 0.0093021765 0.0050152987 0.01309872 0.0016752183 0.014062606
+		 -0.0027659833 0.015613027 -0.0074630976 0.015715867 -0.011960417 0.014366277 -0.015823036
+		 0.011697009 -0.018675238 0.0079662204 -0.020238459 0.003536433 -0.020357877 -0.0011608601
+		 -0.01902023 -0.0056661665 -0.016355932 -0.0095373392 -0.01262562 -0.012394994 -0.0081949383
+		 -0.01395908 -0.003498435 -0.014077306 0.0010055378 -0.012738705 0.0048771687 -0.010074526
+		 0.0077393111 -0.0063437074 0.0093122721 -0.0019078553 0.0094384439 0.0028015524 0.0081000999
+		 0.0073233396 0.0054236203 0.011207137 0.0025740117 0.0010060531 0.0021054447 0.0035554208
+		 0.00088140368 0.005835712 -0.00098401308 0.0076325834 -0.0033149719 0.0087701231
+		 -0.0058881342 0.0091339201 -0.0084519982 0.0086842775 -0.0107539 0.0074618459 -0.012565494
+		 0.0055867732 -0.013708532 0.0032428205 -0.014071137 0.00066104531 -0.013618588 -0.0019055903
+		 -0.012395382 -0.0042069554 -0.010520492 -0.0060186088 -0.0081753163 -0.0071632266
+		 -0.0055871466 -0.0075268745 -0.0030092401 -0.0070691705 -0.00069848448 -0.0058310553
+		 0.0011111647 -0.0039343387 0.0022365749 -0.0015740618 0.00016149879 0.0003130734
+		 0.00023657084 0.00028944016 0.00028863549 0.00023719668 0.00031232834 0.00016176701
+		 0.0003053844 7.0631504e-05 0.00026869774 -2.7596951e-05 0.00020566583 -0.00012302399
+		 0.00012236834 -0.00020629168 2.7239323e-05 -0.0002695322 -7.0527196e-05 -0.00030624866
+		 -0.00016161799 -0.0003131628 -0.00023669004 -0.00028932095 -0.00028853118 -0.00023728609
+		 -0.00031228364 -0.00016188622 -0.00030555576 -7.0512295e-05 -0.00026866049 2.7477741e-05
+		 -0.00020556897 0.00012296438 -0.00012248755 0.00020644069 -2.7135015e-05 0.0002694726
+		 7.0661306e-05 0.00030642748 -0.00075748563 -0.0026878715 -0.00059202313 -0.0013504028
+		 0.0009572804 0.0003169775 0.00087541342 -0.00069355965 -0.0012897253 -0.0011104345
+		 0.0004427135 0.00067055225 0.0014537573 0.00085914135 0.0015988946 0.00011736155
+		 0.00089651346 0.0013365746 0.0012511015 0.00061964989 0.0014962256 7.8380108e-05
+		 0.0002091229 -0.001670599 0.001259774 -0.00055843592 0.00034424663 0.0008584857 0.00029197335
+		 0.0015842319 0.00077596307 0.0010170341 0.00062790513 -9.4175339e-05 0.00080090761
+		 -0.00038272142 0.0014951527 -0.00048744678 0.0002271533 0.00098085403 -0.00035169721
+		 0.0016105771 0.00018519163 0.0012248755 0.00035890937 0.00011968613 -0.00017741323
+		 -0.00090372562 0.0008636117 -0.00070726871 0.00099056959 -0.00061589479 0.0013655126
+		 -0.00094670057 -0.00036942959 0.00088888407 -0.00099182129 0.0013785958 -0.00043451786
+		 0.0012236238 2.8848648e-05 0.00023251772 0.00082367659 -0.0010278225 0.00073352456
+		 -0.00062847137 0.0011304915 -0.0013219714 0.0020964146 -0.00064891577 0.0012574196
+		 -0.0007224679 -0.00043559074 0.00012028217 -0.0013468862 0.00082778931 -0.00099146366
+		 0.0010102987 -0.00031915307 0.00023162365 0.00069215894 -0.0013149977 0.00041988492
+		 -0.0009548068 0.00078579783 -0.001658082 0.0013687015 -0.0018110275 -1.9192696e-05
+		 -0.00051170588 -0.0013025999 0.00033140182 -0.0013884008 0.00061452389 -0.00064238906
+		 0.00011891127 0.00048229098 -0.0015471578 -0.001026243 0.00078868866 -0.00072804093
+		 0.0013329983 -0.00020396709 -0.00098001957 0.0003259182 -0.0018396974 -0.0016151667
+		 0.00015419722 -0.00090578198 -8.803606e-05 0.00021183491 -0.0017014146 -0.0019970238
+		 0.0007404685 -0.00047001243 -0.00082761049 -0.00013950467 -0.0018857718 -0.0013597012
+		 0.00038844347 -0.0017399192 -0.00023245811 -0.0010902584 -0.00035607815 -9.1582537e-05
+		 -0.0017688274 -0.0007352531 -0.00066816807 -0.00058606267 -0.0018196106 -0.0014383793
+		 0.00036138296 -0.001756072 -0.00062549114 -0.0011882186 -0.0006493926 -0.00039982796
+		 -0.0017485023 -0.00094664097 -0.0005017519 -0.00099253654 -0.0016517043 -0.0014393926
+		 -0.00010251999 -0.0016357601 -0.0010421872 -0.0011938512 -0.00094693899 -0.0006865263
+		 -0.0016447306 -0.0010583103 -0.00036752224 -0.0013390183 -0.0013936162 -0.00015300512
+		 0.0026609898 -0.00017476082 0.0018926263 -0.0011052787 -0.0012271404 -0.00092861056
+		 -0.0014663339 0.00047636032 0.0016214848;
+createNode polyLayoutUV -n "polyLayoutUV73";
+	rename -uid "4DBE184C-49B3-88DB-8A82-27AA5B576035";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:541]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV129";
+	rename -uid "82F2EA42-4DAD-899F-8BAF-C8A65B7A78AA";
+	setAttr ".uopa" yes;
+	setAttr -s 730 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0.59803104 0.12108117 0.59908199 0.12108117
+		 0.59908164 0.12779927 0.59803075 0.12779921 0.60013288 0.12108123 0.60013264 0.12779927
+		 0.59698009 0.12108111 0.5969798 0.12779915 0.59592921 0.12108105 0.59592885 0.12779909
+		 0.59487826 0.12108099 0.5948779 0.12779903 0.59382731 0.12108099 0.59382701 0.12779903
+		 0.012397707 0.027423322 0.011346757 0.02742523 0.011334479 0.02070719 0.012385428
+		 0.020705283 0.010295838 0.027427137 0.01028356 0.020709157 0.013448626 0.027421415
+		 0.013436347 0.020703375 0.0092449188 0.027429044 0.0092326403 0.020711064 0.0081939846
+		 0.027431011 0.0081817061 0.020712972 0.0071430653 0.027432919 0.0071307868 0.020714879
+		 -0.14890081 0.029239625 -0.1478343 0.034543455 -0.1508621 0.035297722 -0.15196359
+		 0.029606909 -0.14584231 0.028831154 -0.14481372 0.033690572 -0.14613295 0.039778203
+		 -0.14917046 0.040913105 -0.15389776 0.035978854 -0.15503591 0.029952869 -0.14924657
+		 0.0238778 -0.15232027 0.023839608 -0.14278805 0.028354704 -0.14178675 0.03273955
+		 -0.14315909 0.038457751 -0.14618117 0.023919657 -0.15222788 0.041867942 -0.15693766
+		 0.036632061 -0.15812266 0.030300513 -0.15540755 0.023808524 -0.14880002 0.018521756
+		 -0.15185261 0.018072002 -0.13970679 0.027759746 -0.1388036 0.031471819 -0.14029062
+		 0.037006646 -0.14311874 0.023959547 -0.14575654 0.019018292 -0.15526003 0.04269141
+		 -0.15851432 0.02378726 -0.15491992 0.017655343 -0.14758396 0.013249278 -0.15058851
+		 0.012394659 -0.14005423 0.023984641 -0.14271587 0.019575104 -0.14459747 0.014203876
+		 -0.15800601 0.017253108 -0.15361148 0.011619352 -0.14565361 0.0081179813 -0.14864397
+		 0.0068439329 -0.13696021 0.023987442 -0.13663709 0.026890904 -0.13966966 0.020229131
+		 -0.14162022 0.015262939 -0.14275247 0.009567555 -0.1566495 0.010877263 -0.1516794
+		 0.0057515497 -0.1366359 0.021100864 -0.13870591 0.016579472 -0.13997585 0.011121579
+		 -0.15470892 0.0048030135 0.054438412 0.3799786 0.055652976 0.37470573 0.058705628
+		 0.37515458 0.057443202 0.38083234 0.051451623 0.3790248 0.052609324 0.37421006 0.056097925
+		 0.36934951 0.059171677 0.36938691 0.061773121 0.37557039 0.060466409 0.38160679 0.052509487
+		 0.38511044 0.055500209 0.38638359 0.048474044 0.37796661 0.049568504 0.3736541 0.053032517
+		 0.36930859 0.049607962 0.38366172 0.055750668 0.36398783 0.058813393 0.36361966 0.062258959
+		 0.3694171 0.064859331 0.37597179 0.063504636 0.38234803 0.058535993 0.38747513 0.045559347
+		 0.37665087 0.046522081 0.37300098 0.04997009 0.36926958 0.046830863 0.38210845 0.052692294
+		 0.36439717 0.054682612 0.35868433 0.05771023 0.35792917 0.061885595 0.36327282 0.065365732
+		 0.36943746 0.061565757 0.38842279 0.046905607 0.36924535 0.049638152 0.36487448 0.051662326
+		 0.35953805 0.052979827 0.35345003 0.056017041 0.35231426 0.060745716 0.35724717 0.064972222
+		 0.36292431 0.043488085 0.3721301 0.04381156 0.36924344 0.046557069 0.36547029 0.048635632
+		 0.36048993 0.050006241 0.35477135 0.059074163 0.35135853 0.063785374 0.35659307 0.043487549
+		 0.36634004 0.045652837 0.36175853 0.047138244 0.35622323 0.062106073 0.3505342 -0.47830302
+		 -0.36507642 -0.47898021 -0.36188942 -0.48049879 -0.36225992 -0.47984561 -0.36527711
+		 -0.47994936 -0.35885304 -0.48146373 -0.35932672 -0.48200989 -0.36264706 -0.48137882
+		 -0.36548489 -0.47804987 -0.36834252 -0.47960272 -0.36835271 -0.48298109 -0.35987234
+		 -0.48351175 -0.36307377 -0.48290464 -0.3657093 -0.48114586 -0.36836779 -0.47824651
+		 -0.37159795 -0.47978932 -0.37142378 -0.48447591 -0.36050874 -0.48500463 -0.36355054
+		 -0.48442593 -0.36595708 -0.48268217 -0.36838651 -0.48132488 -0.37125045 -0.47883967
+		 -0.37476251 -0.48035899 -0.3744356 -0.48592621 -0.36123288 -0.4864929 -0.36407948
+		 -0.48594585 -0.36623496 -0.4842144 -0.36840701 -0.48285574 -0.37106645 -0.48187622
+		 -0.37409472 -0.47967902 -0.37779093 -0.48119444 -0.37737891 -0.48731425 -0.36200929
+		 -0.48794976 -0.36473715 -0.48746851 -0.36656147 -0.4857451 -0.3684265 -0.48438439
+		 -0.37086186 -0.48338953 -0.37371731 -0.48272252 -0.37690124 -0.48727679 -0.36843866
+		 -0.48591095 -0.37062332 -0.48489919 -0.3732906 -0.48424062 -0.37633359 -0.488985
+		 -0.36699677 -0.48882329 -0.36843961 -0.48745099 -0.37032551 -0.48641202 -0.37281483
+		 -0.48572689 -0.37567317 -0.48898521 -0.36989081 -0.48790291 -0.37218079 -0.48716041
+		 -0.37494749 -0.7400974 -0.36279368 -0.74069059 -0.36595821 -0.73914778 -0.36613238
+		 -0.73857808 -0.36312056 -0.74088728 -0.36921364 -0.7393344 -0.36920345 -0.73761225
+		 -0.36630577 -0.73706084 -0.36346149 -0.73925805 -0.35976523 -0.7377426 -0.36017728
+		 -0.74063414 -0.37247971 -0.73909158 -0.37227908 -0.7377913 -0.36918837 -0.73608142
+		 -0.36648977 -0.73554754 -0.36383891 -0.73621452 -0.36065495 -0.73995703 -0.37566674
+		 -0.73843843 -0.37529626 -0.73755836 -0.37207127 -0.73625499 -0.36916971 -0.73455274
+		 -0.36669433 -0.73403794 -0.36426562 -0.73469645 -0.36122262 -0.73898792 -0.37870312
+		 -0.73747355 -0.37822941 -0.73692733 -0.37490913 -0.73603249 -0.37184688 -0.73472273
+		 -0.36914921 -0.73302615 -0.36693293 -0.73252505 -0.36474138 -0.73321015 -0.36188304
+		 -0.73595613 -0.37768385 -0.73542547 -0.37448239 -0.73451126 -0.37159914 -0.73319209
+		 -0.36912972 -0.73148614 -0.36723071 -0.73103416 -0.36537546 -0.73177665 -0.36260873
+		 -0.73446131 -0.37704745 -0.73393255 -0.37400571 -0.73299134 -0.37132123 -0.73166037
+		 -0.36911762 -0.73301101 -0.37632334 -0.73244429 -0.37347674 -0.73146868 -0.37099478
+		 -0.73011386 -0.36911666 -0.72995192 -0.36766547 -0.73162293 -0.37554699 -0.73098743
+		 -0.37281913 -0.72995216 -0.37055951 0.53153741 0.059758544 0.53164274 0.059758544
+		 0.53164268 0.060432017 0.53153729 0.060432017 0.53174806 0.059758604 0.53174794 0.060432017
+		 0.53185344 0.059758604 0.53185332 0.060432017 0.53195882 0.059758604 0.5319587 0.060432017
+		 -0.42724887 0.0044901371 -0.42735422 0.0044901371 -0.42735413 0.0038166046 -0.42724878
+		 0.0038166046 -0.4274596 0.0044901371 -0.42745951 0.0038166046 -0.42756495 0.0044901371
+		 -0.42756486 0.0038166046 -0.4276703 0.0044901371 -0.42767024 0.0038166046 -0.38756496
+		 0.29959261 -0.38845155 0.30345312;
+	setAttr ".uvtk[250:499]" -0.39066264 0.30314201 -0.38982099 0.29897937 -0.3853485
+		 0.30034584 -0.38625079 0.30382669 -0.38876915 0.30735949 -0.39097923 0.30733702 -0.39288619
+		 0.30288237 -0.39209107 0.2984989 -0.38319248 0.30122426 -0.38405651 0.30426198 -0.38656387
+		 0.30738482 -0.38851854 0.31127107 -0.39073265 0.31153178 -0.39320108 0.30732006 -0.39512473
+		 0.30264699 -0.39434618 0.29811966 -0.38111222 0.30217469 -0.38185853 0.30474856 -0.38435614
+		 0.30740973 -0.38630891 0.31095111 -0.38774261 0.31516093 -0.39000815 0.31570315 -0.39295325
+		 0.31175029 -0.39544052 0.30731094 -0.38214314 0.30742642 -0.38410002 0.31056458 -0.38549978
+		 0.31447554 -0.39227238 0.31611824 -0.39518225 0.31195545 -0.37967217 0.30536214 -0.37990963
+		 0.30742803 -0.38188076 0.31011838 -0.38330358 0.31365275 -0.39451107 0.31644642 -0.37967175
+		 0.30950481 -0.3811785 0.31273502 0.14133465 -0.34204304 0.14217287 -0.34568995 0.14426166
+		 -0.34539574 0.14346588 -0.34146333 0.1392408 -0.34275499 0.14009386 -0.34604326 0.14247358
+		 -0.34938031 0.14456147 -0.34935877 0.14636225 -0.34515005 0.14561039 -0.34100905
+		 0.13720417 -0.34358522 0.13802093 -0.34645483 0.14039022 -0.34940463 0.14223742 -0.35307574
+		 0.14432919 -0.35332164 0.14666045 -0.34934235 0.14847696 -0.34492731 0.14774078 -0.34065038
+		 0.13523906 -0.34448346 0.13594455 -0.34691492 0.13830459 -0.34942856 0.14014995 -0.35277385
+		 0.14150506 -0.3567507 0.14364547 -0.35726255 0.14642709 -0.35352769 0.14877611 -0.34933341
+		 0.1362139 -0.34944469 0.13806313 -0.35240901 0.13938606 -0.35610351 0.14578456 -0.3576543
+		 0.14853287 -0.35372114 0.13387918 -0.34749493 0.13410383 -0.34944659 0.13596642 -0.35198784
+		 0.13731122 -0.35532659 0.14789957 -0.35796401 0.13387942 -0.3514086 0.13530344 -0.35445997
+		 -0.59929824 -0.0055279732 -0.59898365 -0.0035519004 -0.59996355 -0.0034540296 -0.60028231
+		 -0.0053749084 -0.59885591 -0.0015021563 -0.59984106 -0.0015007257 -0.60093933 -0.0033512712
+		 -0.60127807 -0.0051839948 -0.59898978 0.00055789948 -0.59997535 0.00045722723 -0.60081786
+		 -0.001503408 -0.60191166 -0.0032302737 -0.60227507 -0.0049365759 -0.59933263 0.002553761
+		 -0.6003263 0.0023885369 -0.60095412 0.00034582615 -0.60178858 -0.0015090108 -0.60288078
+		 -0.0030829906 -0.6032635 -0.0046234727 -0.60132802 0.0021785498 -0.60192698 0.00021100044
+		 -0.60275626 -0.0015164018 -0.60384673 -0.0029053092 -0.60423458 -0.0042422414 -0.60232502
+		 0.0019086599 -0.60289431 4.696846e-05 -0.603724 -0.0015241504 -0.60480803 -0.0026993155
+		 -0.60515952 -0.0038189888 -0.60330617 0.0015736222 -0.60385627 -0.00014704466 -0.60469562
+		 -0.0015302896 -0.60577303 -0.0024695396 -0.60606462 -0.0033419132 -0.60496104 -0.0054322481
+		 -0.60574967 -0.0048217773 -0.60426319 0.0011752248 -0.60481262 -0.0003656745 -0.60567766
+		 -0.0015320182 -0.60517442 0.0007379055 -0.60577077 -0.00059837103 -0.60501349 0.0023519993
+		 -0.60578763 0.0017257929 -0.6060645 0.00026333332 0.36336178 -0.62732911 0.36301535
+		 -0.62977529 0.36423188 -0.62988269 0.36458302 -0.62750077 0.36288011 -0.63229358
+		 0.36410207 -0.63229012 0.36544472 -0.62999892 0.3658163 -0.62772024 0.3630349 -0.63482177
+		 0.36425626 -0.63470173 0.36531603 -0.63228351 0.36665535 -0.6301378 0.36704791 -0.62800622
+		 0.3634277 -0.63728738 0.3646571 -0.63709235 0.36547035 -0.63456893 0.36652517 -0.63227487
+		 0.36786628 -0.63030589 0.3682639 -0.62836146 0.36589205 -0.63684314 0.36667913 -0.6344105
+		 0.36773294 -0.63226557 0.36908334 -0.63050079 0.36945033 -0.6287688 0.36711729 -0.63652593
+		 0.36788523 -0.63422316 0.36894077 -0.63225925 0.36831921 -0.63614273 0.36909407 -0.63400936
+		 0.3701579 -0.63225853 0.37029725 -0.63078904 0.36948633 -0.63571727 0.37029654 -0.63371992
+		 0.14176136 -0.075158119 0.14082992 -0.075460732 0.14225101 -0.078249931 0.14003754
+		 -0.076036394 0.14274079 -0.075158119 0.13946187 -0.076828778 0.14367223 -0.075460792
+		 0.1391592 -0.07776022 0.14446455 -0.076036453 0.1391592 -0.078739643 0.14504021 -0.076828837
+		 0.13946182 -0.079671085 0.14534289 -0.077760279 0.14003748 -0.080463469 0.14534289
+		 -0.078739703 0.14082986 -0.081039131 0.14504021 -0.079671144 0.1417613 -0.081341803
+		 0.14446455 -0.080463469 0.14274073 -0.081341803 0.14367217 -0.08103919 0.0049569607
+		 -0.16740531 0.0046542883 -0.16833675 0.0077461004 -0.16882652 0.0046542883 -0.16931617
+		 0.0055326223 -0.16661295 0.0049569011 -0.17024761 0.0063250065 -0.16603729 0.0055325627
+		 -0.17104 0.0072564483 -0.16573465 0.0063249469 -0.17161566 0.0082358718 -0.16573465
+		 0.0072563887 -0.17191833 0.0091673136 -0.16603732 0.0082358122 -0.17191833 0.0099596381
+		 -0.16661301 0.009167254 -0.17161572 0.0105353 -0.16740534 0.0099596381 -0.17104 0.010837972
+		 -0.16833681 0.0105353 -0.17024767 0.010837972 -0.16931623 -0.19886477 0.03259629
+		 -0.19902696 0.032678545 -0.19936873 0.032207251 -0.19904551 0.032041281 -0.19868676
+		 0.033150196 -0.19915599 0.032806933 -0.19962604 0.032464027 -0.19971527 0.031737447
+		 -0.19923507 0.031483769 -0.19868501 0.032568395 -0.19868447 0.031984568 -0.19923931
+		 0.032968819 -0.19979368 0.032787263 -0.20009705 0.032118678 -0.20007224 0.031267822
+		 -0.19945221 0.030930787 -0.19868515 0.031396478 -0.19850539 0.032597601 -0.19832385
+		 0.032043278 -0.19926853 0.033148408 -0.19985236 0.033147871 -0.20035197 0.032598913
+		 -0.20056693 0.031765044 -0.1981355 0.031484962 -0.19834352 0.032680929 -0.19800064
+		 0.032210886 -0.19924062 0.033328176 -0.19979565 0.033508956 -0.20044045 0.033148587
+		 -0.20090184 0.032382429 -0.20103151 0.031399697 -0.2004406 0.030805379 -0.19765529
+		 0.031739891 -0.19821516 0.032809973 -0.19774386 0.0324682 -0.19915836 0.03349036
+		 -0.19962966 0.033832133 -0.20035318 0.033698499 -0.19791901 0.030935109 -0.19730166
+		 0.031269997 -0.19727406 0.032121658 -0.1981329 0.032972157 -0.19757786 0.032791436
+		 -0.19903 0.033619404 -0.1993729 0.034089446 -0.20009945 0.034178674 -0.1968044 0.031764686
+		 -0.19702035 0.032601833 -0.19810498 0.033151925 -0.19752115 0.033152461 -0.19886814
+		 0.033702731 -0.19904967 0.034257114 -0.19971824 0.034560442 -0.20056911 0.034535646
+		 -0.20090616 0.033915639 -0.19693628 0.030805409 -0.19634199 0.031396329;
+	setAttr ".uvtk[500:729]" -0.19646737 0.032384753 -0.19693306 0.033151805 -0.19813421
+		 0.033331573 -0.19757983 0.033513069 -0.19868851 0.033731937 -0.19868904 0.034315765
+		 -0.19923802 0.034815371 -0.20007187 0.035030365 -0.19702154 0.03370142 -0.19821754
+		 0.0334934 -0.19774747 0.033836305 -0.19850875 0.033704042 -0.19832799 0.034259081
+		 -0.19868837 0.034903884 -0.1994545 0.035365224 -0.20043723 0.035494924 -0.20103154
+		 0.034904003 -0.19727647 0.034181654 -0.19834656 0.033621788 -0.19800478 0.034093082
+		 -0.19813845 0.034816563 -0.19647169 0.033917904 -0.19680658 0.034535289 -0.19765824
+		 0.034562886 -0.19730127 0.035032511 -0.19792131 0.035369575 -0.19634199 0.034900665
+		 -0.19693291 0.035494983 0.033314943 0.015774041 0.033302695 0.018761799 0.032367617
+		 0.021599323 0.030601263 0.024008989 0.028176516 0.025754839 0.025330678 0.026665926
+		 0.022342414 0.026652902 0.019504324 0.02571699 0.017094299 0.023949802 0.015348271
+		 0.02152428 0.014437251 0.01867792 0.014450379 0.015689388 0.015386373 0.012851268
+		 0.017153502 0.010441422 0.01957874 0.0086957812 0.022424564 0.0077851862 0.025412276
+		 0.0077987462 0.028249353 0.0087350756 0.030658126 0.010502502 0.032403052 0.012928173
+		 0.036195606 0.015309855 0.036185801 0.019210488 0.03497088 0.0229173 0.032669604
+		 0.026067168 0.029507369 0.028351545 0.025793791 0.029546767 0.021892548 0.02953577
+		 0.018185645 0.028319716 0.015035957 0.026017636 0.012751751 0.022854924 0.011556625
+		 0.019141182 0.011567555 0.015239894 0.012783475 0.011532918 0.015085414 0.0083831698
+		 0.018247992 0.0060990453 0.021961614 0.0049042404 0.02586256 0.0049157739 0.029568732
+		 0.006132476 0.032717258 0.0084350109 0.035000205 0.011597484 0.039510101 0.014776632
+		 0.03950271 0.019727215 0.037965775 0.024433643 0.035049319 0.028434873 0.031038761
+		 0.031338871 0.02632691 0.032861143 0.021375224 0.03285265 0.016668603 0.031314313
+		 0.012667745 0.028396845 0.0097642466 0.02438587 0.0082422644 0.019674003 0.0082507655
+		 0.014722422 0.0097889453 0.010015771 0.012706339 0.0060148388 0.016717359 0.0031113774
+		 0.02142933 0.0015897676 0.026380688 0.0015990362 0.031086475 0.0031381398 0.035085946
+		 0.0060559735 0.037988126 0.010066316 0.042787492 0.014248952 0.042782724 0.020237729
+		 0.040927529 0.02593258 0.037402868 0.030775726 0.032553613 0.034292519 0.026854694
+		 0.036138415 0.020864263 0.036132604 0.015168935 0.03427577 0.010326281 0.030749828
+		 0.0068102293 0.025900096 0.0049649067 0.020201206 0.0049709082 0.014211029 0.0068277083
+		 0.008515805 0.010353647 0.0036731213 0.01520361 0.00015718117 0.020902723 -0.0016876496
+		 0.026892737 -0.001680702 0.032586932 0.00017708912 0.037427843 0.0037032589 0.040942341
+		 0.0085519999 0.046554625 0.013628289 0.046557307 0.020811021 0.044340312 0.027644038
+		 0.040119678 0.033458054 0.034308374 0.037683278 0.027475446 0.039905518 0.02029027
+		 0.039907128 0.013456441 0.037688047 0.0076430142 0.033465832 0.0034189988 0.027653903
+		 0.0011976894 0.020821154 0.0011965208 0.01363641 0.0034156721 0.0068028718 0.0076380521
+		 0.00098952651 0.013450414 -0.0032343268 0.020283595 -0.0054549798 0.027468264 -0.0054549575
+		 0.034300625 -0.0032346267 0.04011175 0.00098782778 0.044333667 0.006798245 0.57880539
+		 -0.19448876 0.57847548 -0.19550362 0.57847536 -0.19657075 0.57880509 -0.19758567
+		 0.57943219 -0.19844905 0.58029544 -0.19907638 0.58131027 -0.19940627 0.58237743 -0.19940639
+		 0.58339232 -0.19907671 0.5842557 -0.19844958 0.58488303 -0.19758633 0.58521289 -0.19657147
+		 0.58521301 -0.19550437 0.58488339 -0.19448945 0.58425623 -0.19362605 0.58339298 -0.19299874
+		 0.58237809 -0.19266886 0.58131099 -0.19266874 0.5802961 -0.19299838 0.57943273 -0.19362554
+		 0.45707127 -0.27700096 0.45732391 -0.27723479 0.45746261 -0.27703869 0.45725343 -0.27684277
+		 0.4576301 -0.27739578 0.4577181 -0.27717018 0.45759913 -0.27684408 0.45744073 -0.27669221
+		 0.45779413 -0.27694255 0.45773584 -0.27665043 0.45763016 -0.27654761 0.45711127 -0.27659279
+		 0.45733356 -0.27649796 0.45800948 -0.27721673 0.45801127 -0.27697682 0.45786715 -0.27671635
+		 0.4578734 -0.27645808 0.45782062 -0.27640629 0.45756069 -0.27641702 0.4583016 -0.27717179
+		 0.45822859 -0.27694309 0.45801225 -0.27673912 0.45793942 -0.27649128 0.45801187 -0.27626634
+		 0.45778641 -0.27634072 0.45729604 -0.27627307 0.45753589 -0.27627033 0.45855868 -0.27704185
+		 0.45842445 -0.27684516 0.45815739 -0.27671641 0.45801246 -0.27650267 0.45777419 -0.27626777
+		 0.45733052 -0.27604836 0.45755836 -0.27612281 0.45838681 -0.27739698 0.45869428 -0.2772401
+		 0.45876986 -0.27684683 0.45858294 -0.27669382 0.45828891 -0.27665049 0.45808542 -0.27649117
+		 0.4577854 -0.27619457 0.45743206 -0.27585107 0.45762551 -0.27599025 0.45895112 -0.27700794
+		 0.45891362 -0.2765947 0.45868987 -0.27649915 0.45839444 -0.27654779 0.45815134 -0.27645785
+		 0.45781887 -0.27612841 0.45723701 -0.27571058 0.45710394 -0.27596414 0.45758662 -0.27569181
+		 0.45773014 -0.27588433 0.45846337 -0.27641708 0.45820382 -0.27640593 0.45787123 -0.27607572
+		 0.45743465 -0.27550459 0.45778817 -0.27558815 0.45786303 -0.2758159 0.4587273 -0.27627337
+		 0.45848751 -0.27626979 0.45823768 -0.27634031 0.45793751 -0.27604175 0.45801118 -0.27555245
+		 0.45801085 -0.27579224 0.45869267 -0.27604812 0.45846438 -0.27612209 0.45824936 -0.27626723
+		 0.45801106 -0.27602994 0.45823422 -0.27558804 0.45815873 -0.27581561 0.45859063 -0.27585071
+		 0.45839676 -0.27598929 0.45823768 -0.27619392 0.4580847 -0.27604145 0.4584358 -0.27569175
+		 0.45829192 -0.27588362 0.45891839 -0.27596372 0.45878595 -0.27571064 0.45820382 -0.2761277
+		 0.45815116 -0.27607518 0.45858794 -0.27550375;
+createNode polyAutoProj -n "polyAutoProj71";
+	rename -uid "822DA8E2-43BB-0A44-7154-C6B4BBF27855";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+	setAttr ".ix" -type "matrix" 0.033782226606050292 0 0 0 0 0.033782226606050292 0 0
+		 0 0 0.033782226606050292 0 16.915034819109064 1.2848932771832622 12.475604645044195 1;
+	setAttr ".s" -type "double3" 0.067564473347877296 0.067564473347877296 0.067564473347877296 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV130";
+	rename -uid "04F45D2E-4F18-1D95-C1F8-E5B0EA9D66D8";
+	setAttr ".uopa" yes;
+	setAttr -s 482 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.0091876388 0.021459103 -0.011555612
+		 0.01772064 -0.015655398 0.016314387 -0.012068212 0.018358886 -0.0058397055 0.021622717
+		 -0.0064525008 0.016449869 -0.00074350834 0.0096626878 -0.004466176 0.011352897 -0.018675566
+		 0.013081253 -0.014306128 0.013248563 0.00014430285 0.022183061 -0.00078725815 0.018411994
+		 -0.0024570823 0.018054336 -0.00024712086 0.011508465 0.0041747689 0.0066385865 0.00092351437
+		 0.023029387 -0.0072980523 0.011951268 -0.020518005 0.0088562965 -0.015799344 0.0070949197
+		 -0.0018046498 0.012652814 0.009647727 0.01957655 0.010620594 0.016183794 2.1517277e-05
+		 0.009462595 0.0029373169 0.0025752187 0.011390865 0.0022383332 0.0014434457 0.020076245
+		 0.0078889728 0.020130754 -0.0092765093 0.011807442 -0.021106482 0.0044848919 -0.016487122
+		 0.00088149309 -0.0028612018 0.0058884621 0.010764837 0.010895371 0.012633085 0.013037026
+		 0.014672995 0.010953367 0.0014930964 0.012529284 0.0055058002 0.016947299 0.009221673
+		 0.012646496 -0.010337353 0.011332989 -0.020395458 0.00082343817 -0.016342998 -0.0044069886
+		 -0.0039177537 -0.00087594986 0.01007694 0.0046819448 0.015384138 0.0072920322 0.0034046173
+		 0.00058549643 0.0046350956 0.00080299377 0.0010220408 -0.00059083104 -0.00084382296
+		 -0.0040414929 0.0031907558 0.00917238 0.0043914914 0.0087956786 0.00047957897 -0.00066834688
+		 -0.010357559 0.010973871 -0.018355548 -0.0012601614 -0.01537019 -0.007799685 -0.0049351454
+		 -0.0066351891 0.0085837841 -0.0014716983 0.014795542 0.0029206276 0.0046148896 0.00044393539
+		 0.0030373931 -0.0035124123 0.0011198521 0.0013790429 -0.0053557158 -0.0033861995
+		 -0.0091270804 0.011191428 -0.014944136 -0.00086963177 -0.013611436 -0.008353889 -0.0058667064
+		 -0.010406196 0.0063458681 -0.0065820813 0.012953222 -0.001304388 0.003554225 -3.0577183e-05
+		 -0.0062021017 0.012445271 -0.010113955 0.0029811859 -0.011228263 -0.0051705241 -0.0066459179
+		 -0.011252522 0.0034651756 -0.0096822381 0.0099329948 -0.0045375824 0.0015755892 -0.00017440319
+		 -0.00036674738 0.015163064 -0.0068422556 0.010397792 -0.008913219 0.002604425 -0.0071659088
+		 -0.0082993507 0.00011718273 -0.0098457932 0.0058332086 -0.0059437752 -0.0012562871
+		 0.00042384863 -0.0072156191 -0.00075244904 -0.0032653809 -0.006277442 0.00073009729
+		 -0.0046730042 -0.0049789548 0.0021141768 -0.0087599754 0.015289247 -0.0067445636
+		 0.012367666 -0.0057439804 0.0023142099 -0.0054752827 0.00026834011 -0.0098972321
+		 0.005138278 -0.0048787594 0.015818357 -0.0086597204 0.0092015862 -0.017113328 0.0095384717
+		 0.020222127 0.0032813773 0.017102122 0.010919735 0.017464936 0.0074533224 0.021627724
+		 0.0010661036 0.017439783 0.0030565113 0.01595521 0.011564396 0.0075387955 0.014627606
+		 0.0060037971 0.010833189 0.016999364 0.0021090508 0.021698475 -0.0026881695 0.011240423
+		 -0.010261089 0.011793613 -0.010252878 0.013236523 -0.00060107931 0.014187098 0.0084882453
+		 0.0089248419 0.01549454 0.0089598894 -0.011255413 -0.0017898679 0.015008844 -0.0052871108
+		 0.011934549 0.0043854117 0.0050489455 0.015701294 -0.0041408986 0.020464897 -0.0071105659
+		 0.011070907 -0.010757044 0.010577679 -0.0077473475 0.012493074 0.00084700063 0.010056496
+		 0.012557056 0.0037292838 -0.013694305 0.0021786094 0.015123919 -0.0040974617 0.012382813
+		 -0.008846581 0.011057004 -0.0081387162 0.0068285912 0.0027289391 -0.0017412007 0.013596535
+		 -0.010310978 0.017974138 -0.011342987 0.0092912912 -0.01130487 0.010724008 0.0050169434
+		 0.0061854124 0.011479009 0.0016540289 0.010990672 0.0068569183 0.0054495409 0.0024255514
+		 0.0072886944 -0.01251626 0.0078606009 -0.010243416 0.00065849721 0.001072526 -0.008531332
+		 0.010744989 -0.01541692 0.014304459 -0.014539391 0.0065869093 -0.011446774 0.012960672
+		 -0.011642284 0.010883987 -0.0081061581 0.0093028545 0.0027687103 0.0085104108 0.005894281
+		 0.012457788 0.0022163987 -0.0011289716 0.0079644024 -0.015006959 0.0036281645 -0.011541545
+		 -0.0055914521 -0.00054591894 -0.014315575 0.0072478056 -0.018491209 0.0095553994
+		 -0.015865177 0.0030323267 -0.010771066 0.0090777278 -0.010938299 0.012341559 -0.0032989625
+		 0.020315468 -0.0024247169 -0.0038332939 0.0078224838 -0.016240597 -0.00079420209
+		 -0.012006998 -0.010935724 -0.0020808578 -0.018109977 0.003279388 -0.018606275 0.0038039088
+		 -0.014473051 -0.0013990402 -0.0089318752 -0.0056129694 0.0072746575 -0.016169786
+		 -0.00454849 -0.011644244 -0.014402121 -0.0034669042 -0.018976927 -0.00072747469 -0.014961362
+		 -0.0030524731 -0.0093766451 -0.0069998503 -0.0056987703 -0.0063356757 0.0067704916
+		 -0.01476419 -0.0067637563 -0.010497212 -0.015046775 -0.0045985579 -0.016039431 -0.0038449168
+		 -0.0062510669 -0.0068836808 -0.00018340349 -0.014857471 -0.0010576248 -0.005782485
+		 0.006778717 -0.011981845 -0.0065388978 -0.0087291598 -0.011970609 -0.0052660704 -0.0084993243
+		 -0.0035020113 0.0077730417 -0.007778585 -0.0028812885 -0.0070351362 -0.0043293834
+		 -0.0054259896 0.0046237707 -0.0036197901 0.0074559152 0.0017286539 0.010211945 -0.0051198006
+		 0.0042649806 -0.0075026751 0.0081599057 -0.0036022067 0.0027459562 -0.002714172 0.0041796267
+		 -0.0054519176 0.0068206489 -0.0068435073 0.0043304861 0.00043582916 0.00038470328
+		 -0.0015100241 0.0052978694 -0.0033916682 0.0090201497 -0.007276237 0.0071810335 -0.0083218962
+		 0.0041767955 -0.0041231662 0.0011339188 -0.0077136755 0.0019297302 -7.7471137e-05
+		 0.0059549361 -0.00070209801 0.010469332 -0.0049020052 0.010448173 -0.0074028969 0.0042132735
+		 -0.0077303052 0.00053007901 -0.0093366504 0.0027375817 -0.0042389184 -0.00056262314
+		 -0.0080237091 -0.00070154667 0.0014407337 0.0060385913 0.0022992939 0.010728911 -0.0012957156
+		 0.012922369 -0.0057186633 0.0085711628 -0.0099528432 0.00094464421 -0.0039200038
+		 -0.0022248179 -0.0077160597 -0.0037012696 0.0028662086 0.0055154413 0.0051357895
+		 0.0096365213 0.0030255169 0.01349996 -0.0017107874 0.012381904 -0.0053245574 0.0024643019
+		 -0.0060456693 -0.0027108863 -0.010427043 -0.0029867887 -0.0031536967 -0.0036814809
+		 -0.0064586848 -0.0066156983 0.0040253326 0.0044508725 0.0073303282 0.0073850751 0.0071376786
+		 0.011784405 0.0036098808 0.013413332 -0.0018813908 0.0080307685 -0.0104101 0.0062264502
+		 -0.011690065 0.0009444356 -0.0092023611 -0.0073874295 -0.0019945502 -0.0047460496
+		 -0.0042641312 -0.0088671148 0.0047916472 0.0029941946 0.0085877031 0.0044706613 0.010074012
+		 0.008156836 0.0087315366 0.01103615 0.0040352196 0.0095647648 -0.0016365796 -0.0010257941
+		 -0.0049221218 -0.0091367476 -0.011091679 -0.0050238073 -0.0062660277 -0.011015028
+		 -0.00056907535 -0.0052691996 -0.0014276505 -0.0099595189 0.0051105544 0.0013320148
+		 0.008895345 0.0014709383 0.011298701 0.0037562251 0.011963334 0.0057932138 0.0097738504
+		 0.0065572187 0.0043182671 0.0010929164 -0.00018125772 -0.015085178 -0.0027127862
+		 -0.024437435;
+	setAttr ".uvtk[250:481]" -0.011638552 0.0086005628 -0.011744648 0.0013165474
+		 -0.0078599006 -0.010266721 -0.0021538585 -0.012730569 0.00094911456 -0.0051855445
+		 0.0015737489 -0.0096999407 0.0049948245 -0.00036452711 0.0085853338 -0.0011603385
+		 0.010824494 -0.00017526746 0.01256172 -0.00017502904 0.012616299 -0.00054713339 0.010204144
+		 -0.0023983847 0.0044292957 -0.012680816 -0.0089021921 -0.0057877898 -0.0027382374
+		 -0.012643903 0.002167359 -0.012153 0.0023816824 -0.0045284927 0.0042633265 -0.008250773
+		 0.0044738501 -0.0019765794 0.0077151582 -0.0035611093 0.010208322 -0.0019681752 0.01128177
+		 -0.0054570436 0.012510195 -0.0078311712 0.01328609 -0.012087949 0.0091734603 -0.016330654
+		 -0.012414426 0.012857348 -0.0093324929 0.0031678081 -0.0031635761 -0.0087953508 0.0025824383
+		 -0.011612505 0.0057736561 -0.0096787512 0.0035858378 -0.0034102499 0.0063235834 -0.0060512722
+		 0.0091935545 -0.0034074187 0.011858125 -0.027296344 -0.010986477 0.028065771 -0.0083017945
+		 0.017100066 -0.0034466088 -0.00032350421 0.0027530417 -0.0072613358 0.0065903105
+		 -0.0078017414 0.0081478916 -0.006411612 -0.0035576522 0.013450235 0.0025082454 0.0017952323
+		 0.0061962008 -0.0016948581 0.0082745329 -0.003443867 0.0086019356 0.00023934245 0.0010529011
+		 0.015854597 0.0057937726 0.0099061728 0.0069173221 0.0034802854 0.0035844091 0.025206834
+		 -0.012227118 0.0069050193 -0.012386203 -0.00044471025 -0.011682034 -0.0068132281
+		 -0.012236238 -0.00079157948 -0.0095736384 -0.0076267123 -0.0084761679 -0.012119263
+		 -0.0097433627 -0.0092065334 -0.010933578 -0.0047659278 -0.01311022 0.011119992 -0.010059744
+		 0.0013412833 -0.0038442612 -0.010715932 -0.003362447 -0.014563709 -0.0068278015 -0.012882054
+		 -0.0069518983 -0.0084656775 -0.0081856549 -0.0055247843 -0.010896802 0.0045275986
+		 -0.01041317 -0.00080662966 -0.011735976 0.026350945 -0.0090854764 0.015285879 -0.0041843951
+		 -0.0022445917 0.002084285 -0.0092632473 0.0019685924 -0.013599247 -0.0027219355 -0.014649272
+		 -0.0047718287 -0.010749459 -0.0036002398 -0.0055633485 -0.0043545365 -0.0040934682
+		 -0.0084623992 -0.0025072098 -0.0043532252 0.011528909 0.0017834604 -0.00022032857
+		 0.0055600107 -0.0037733316 0.0060049295 -0.0098501742 0.0016076863 -0.014123052 -0.0019397736
+		 -0.011876941 -0.0024485886 -0.0066441894 3.5345554e-05 -0.001529485 -0.0046580434
+		 -0.0024225414 -0.0097413659 0.00099667907 -0.0081169009 0.0001309514 0.00027155876
+		 0.013825923 0.0051033497 0.0078018904 0.0063378513 0.0013376474 0.0077362061 -0.0055437386
+		 0.0052367449 -0.011695594 0.0010675192 -0.011652231 -0.0010253787 -0.0071851313 -0.004524976
+		 -0.00072257221 -0.00867033 0.0024283826 -0.0072108507 0.0025268942 0.0028401315 0.02307862
+		 0.0076474845 -0.0084663928 0.0037730336 -0.010234445 0.00049591064 -0.0071191341
+		 -0.0039865375 0.00088717043 -0.0075767636 0.0054074526 -0.005787462 0.005001083 0.0081258714
+		 -0.0018949211 0.0087409616 -0.0054873526 0.0058581531 -0.0080600381 0.0019366741
+		 -0.0064778328 -0.0030826926 0.0023130625 -0.0076654553 0.0024847984 -0.0080552697
+		 -0.0011640638 -0.0051660836 0.0086366385 -0.0037023425 0.0071755201 0.0072815418
+		 -0.0055858493 0.0031533837 -0.0053720176 -0.001865983 0.0034188628 -0.0059342384
+		 0.0067911819 -0.0015369952 0.01106409 -0.00099685788 0.0085932612 0.0098119974 -0.004055649
+		 0.008187592 -0.0031899214 0.0040572286 -0.0039461255 -0.00042521954 0.0040601641
+		 -0.005489409 0.00071437657 -0.00626719 -0.00439661 -0.0018979013 0.010540247 0.0027926266
+		 0.011590339 0.0020104647 0.0088180006 0.010483801 -0.0022523403 0.0085330606 -0.0005517453
+		 0.0045956373 -0.0023363829 0.0010960698 0.0041261762 -0.0020136237 0.0062042847 0.0034331083
+		 0.01150474 0.0068984628 0.0098230988 0.0048425198 0.0076905042 0.011004239 0.0017069727
+		 0.008256346 0.0024658293 0.0047287345 -0.00063642859 0.0025192499 0.0035852194 -0.0017127991
+		 -0.0028386358 -0.0050326586 -0.010860864 0.0039149523 0.0076569393 0.008546859 0.009060286
+		 0.0098139942 0.0061475635 0.0070225894 0.0054067373 0.010967433 -0.0075865686 0.012306899
+		 -0.0022673756 0.0044252276 0.001034528 0.0036709011 0.0025044084 -0.00020086765 -0.016884897
+		 -0.0027694702 -0.026137577 0.0042550862 -0.00081436895 0.0096443295 0.0045677647
+		 0.011752725 0.003754288 0.0044239163 -0.014587874 0.010130435 -0.0044002365 0.012456894
+		 -0.0026142448 0.012297839 -0.0099639669 0.0091561675 -0.018344825 0.013180912 -0.014178947
+		 0.011806637 -0.029409895 0.00019824505 -0.0068815351 -0.0024657845 -0.0018187165
+		 -0.0033171773 0.0015894771 -0.00095963478 -0.0026455522 -0.0018619299 -0.0014129281
+		 -0.0027163029 -0.00081503391 -0.0022209287 0.003544271 -0.0010831952 -0.00043269992
+		 -0.00011610985 -0.00068324804 -0.001126647 -0.0030258894 -0.0014489889 -0.00030422211
+		 -0.00015452504 0.0044267774 -0.00074487925 0.00040671229 0.0041216612 0.0051066279
+		 0.0026520491 0.0017883182 -9.5546246e-05 -0.0040514469 0.00089898705 0.00016438961
+		 0.00189358 0.0043801665 -0.00049424171 9.6380711e-05 0.0022922754 0.00023233891 0.001952529
+		 -0.0040981174 0.0032470226 0.00063300133 0.0029245615 0.0033546686 -0.00085410476
+		 -0.0014596581 0.0025428832 -7.7962875e-05 0.0040189624 -0.003215611 0.0045142174
+		 0.0011437535 0.0019140542 0.0010119677 -0.0023237467 -0.0047778487 0.0028811991 0.00076138973
+		 0.0051151216 -0.0012606978 0.0036598742 0.0017417073 0.0027575791 0.0029742718 0.0042637587
+		 0.0021474361 0.0015996993 0.0072103143 -0.00099633634 0.0049278736 0.0029400438 -7.134676e-05
+		 0.0037625432 -0.0027773976 6.9364905e-05 0.0013993382 0.0036468059 -0.0004760623
+		 0.0045058578 -0.00037151575 0.0026437789 -0.004031539 0.00012683868 -8.98242e-05
+		 0.0032180697 -0.0012267232 0.0042643398 0.0018217564 0.0032417774 -0.00018471479
+		 0.00056961179 -0.00421381 -0.00023660064 -0.00019580126 0.00026792288 -0.0070859194
+		 0.0018336028 -0.0030524433 0.0032603592 0.0035496354 0.00089609623 4.1604042e-05
+		 -0.0014681518 -0.0034663677 -0.00046610832 0.00085008144 0.0022583008 -0.00076687336
+		 0.0012226105 0.0042970181 -0.0014495552 0.00026792288 -0.0024721026 -0.0017385483
+		 -4.1395426e-05 0.0031356812 0.0020288229 0.00027900934 -0.00085157156 0.0041148067
+		 -0.0027136505 0.00045472383 -0.0014258623 0.0013099313 0.0015242994 0.0071691275
+		 0.0016653836 0.00017306209 -0.0019703209 0.0028606057 -0.0018545985 0.00055927038
+		 0.0017228723 -0.0013160706 -0.0011478364 0.00015455484 0.0027885437 -0.0048446655;
+createNode polyLayoutUV -n "polyLayoutUV74";
+	rename -uid "3E12267B-4564-2D9A-3AA0-A89FEFB3C783";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV131";
+	rename -uid "816FC527-474C-D731-3994-0289BB76D36E";
+	setAttr ".uopa" yes;
+	setAttr -s 482 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.59954315 -0.43642622 -0.598351 -0.43649271
+		 -0.59826386 -0.43579698 -0.59951448 -0.43576545 -0.59959614 -0.4370912 -0.59848213
+		 -0.43718749 -0.5971458 -0.436647 -0.59698516 -0.43588763 -0.59822345 -0.43510079
+		 -0.59950882 -0.43510777 -0.60072768 -0.43642104 -0.60075188 -0.43577433 -0.59967911
+		 -0.43776008 -0.5986492 -0.43788499 -0.59737086 -0.43737817 -0.60070658 -0.4370715
+		 -0.59690106 -0.43511316 -0.59823036 -0.43440598 -0.59952545 -0.43445224 -0.60077775
+		 -0.43513012 -0.60190815 -0.43648359 -0.60198629 -0.43582961 -0.59980726 -0.43844464
+		 -0.59892893 -0.43857771 -0.59763008 -0.43806541 -0.60069072 -0.43772709 -0.60181218
+		 -0.43713939 -0.5968979 -0.4343352 -0.59828401 -0.43371451 -0.59956372 -0.43379813
+		 -0.60080445 -0.4344871 -0.60204506 -0.43517607 -0.60308611 -0.43662614 -0.60322624
+		 -0.43594605 -0.6006844 -0.4383893 -0.60169816 -0.43779886 -0.60290951 -0.43730053
+		 -0.59697539 -0.43356463 -0.59838259 -0.43302819 -0.59962261 -0.4331446 -0.60083109
+		 -0.43384412 -0.60208333 -0.43452197 -0.60332477 -0.4352597 -0.60425574 -0.43688893
+		 -0.60447901 -0.43616265 -0.60068852 -0.43906558 -0.60002565 -0.43913046 -0.60155588
+		 -0.43846461 -0.60270339 -0.43797284 -0.60397857 -0.43758008 -0.59712982 -0.43281153
+		 -0.59852272 -0.43234804 -0.59970069 -0.43249062 -0.60085702 -0.43319988 -0.60210001
+		 -0.43386644 -0.60337847 -0.43456823 -0.60463345 -0.43540961 -0.60134727 -0.43913034
+		 -0.60241461 -0.43863013 -0.60368055 -0.43822861 -0.5973531 -0.43208525 -0.59869933
+		 -0.43167368 -0.59979665 -0.43183482 -0.60088116 -0.43255317 -0.60209435 -0.43320876
+		 -0.60338545 -0.43387341 -0.60471094 -0.43463901 -0.59763026 -0.43139413 -0.59890544
+		 -0.43100137 -0.59991062 -0.43117535 -0.60090226 -0.43190271 -0.60206568 -0.43254796
+		 -0.60334504 -0.43317723 -0.60470772 -0.43386105 -0.59792829 -0.43074563 -0.59919423
+		 -0.43034407 -0.60005295 -0.4305096 -0.60091811 -0.43124714 -0.60201269 -0.43188301
+		 -0.60325783 -0.4324815 -0.60462368 -0.43308657 -0.60092443 -0.43058491 -0.60192972
+		 -0.43121412 -0.6031267 -0.43178675 -0.60446304 -0.43232724 -0.60026157 -0.42984387
+		 -0.60092032 -0.42990863 -0.60180163 -0.43052956 -0.60295963 -0.43108922 -0.60423791
+		 -0.43159604 -0.60158312 -0.42984375 -0.60267991 -0.4303965 -0.60397875 -0.4309088
+		 -0.19197926 0.012116805 -0.19080132 0.012259595 -0.19087958 0.01291357 -0.19211954
+		 0.012796894 -0.19180256 0.01144246 -0.19070524 0.01160381 -0.18962085 0.012322374
+		 -0.18964517 0.012969092 -0.19093853 0.01356709 -0.19221821 0.013483211 -0.19314882
+		 0.011853777 -0.19337228 0.012580022 -0.1915963 0.010770194 -0.1905911 0.010944359
+		 -0.18959963 0.011671916 -0.19287154 0.011162698 -0.18843633 0.012317404 -0.18840778
+		 0.012978211 -0.18967116 0.013613313 -0.19097692 0.014221206 -0.19227201 0.014174685
+		 -0.19352683 0.013333067 -0.19130737 0.010112957 -0.1904487 0.010278629 -0.18958366
+		 0.011016339 -0.1925734 0.010514244 -0.1884892 0.011652447 -0.18724412 0.012251168
+		 -0.18715709 0.012946919 -0.18840224 0.013635904 -0.18969798 0.014256299 -0.19099373
+		 0.014876723 -0.1922791 0.014869496 -0.19360447 0.014103636 -0.18957716 0.010354124
+		 -0.18857205 0.010983538 -0.18737513 0.011556372 -0.18603891 0.012097135 -0.18587846
+		 0.012856513 -0.18711686 0.013643101 -0.18841904 0.014291406 -0.1897248 0.014899284
+		 -0.19098818 0.015534401 -0.19223884 0.015565693 -0.19360143 0.014881611 -0.19023991
+		 0.0096129645 -0.18958122 0.0096778497 -0.18870002 0.010298954 -0.18754208 0.010858834
+		 -0.18626392 0.011365891 -0.18579453 0.013631016 -0.18712395 0.014337927 -0.18845743
+		 0.014945507 -0.18975079 0.01554352 -0.19095963 0.016195208 -0.19215181 0.016261429
+		 -0.19351754 0.015656114 -0.18891835 0.0096130986 -0.18782169 0.010166051 -0.18652296
+		 0.010678604 -0.18579149 0.014408976 -0.18717772 0.015029401 -0.18851638 0.015599042
+		 -0.18977511 0.016190231 -0.19090676 0.016860157 -0.19202083 0.01695624 -0.19335705
+		 0.016415477 -0.1858691 0.015179545 -0.18727642 0.015715718 -0.18859464 0.016253024
+		 -0.18979633 0.016840696 -0.19082391 0.01752907 -0.19185385 0.017653763 -0.19313204
+		 0.017146707 -0.18602365 0.01593259 -0.18741667 0.016395807 -0.18869072 0.016908795
+		 -0.1898123 0.017496258 -0.19069594 0.01821366 -0.19157428 0.018346548 -0.19287303
+		 0.017834008 -0.18624711 0.016658843 -0.1875934 0.017070144 -0.18880486 0.01756826
+		 -0.18981874 0.018158495 -0.18652439 0.017349899 -0.18779963 0.017742425 -0.18894726
+		 0.018233985 -0.18981475 0.01883477 -0.19047761 0.0188995 -0.18682253 0.017998368
+		 -0.1880886 0.018399656 -0.18915606 0.018899649 0.24515656 0.42868388 0.24512157 0.42861727
+		 0.24531853 0.428471 0.24539039 0.42860502 0.24492192 0.42875922 0.2450671 0.42856497
+		 0.24520862 0.42836761 0.24551092 0.42831624 0.24562387 0.4285177 0.2451684 0.4287582
+		 0.24541505 0.42875761 0.24499869 0.42853177 0.2450725 0.42830324 0.2453447 0.42816475
+		 0.24569918 0.42814904 0.24585292 0.42841119 0.24566244 0.42875701 0.24515581 0.42883265
+		 0.24538971 0.42890984 0.24492304 0.42852065 0.24492307 0.42828202 0.24514227 0.42807275
+		 0.24547388 0.42795417 0.24562445 0.42899585 0.24512015 0.42889941 0.24531698 0.42904392
+		 0.24484728 0.42853251 0.2447736 0.42830497 0.24492212 0.42804301 0.2452071 0.42783961
+		 0.24559639 0.42773384 0.24587697 0.42796853 0.24551092 0.42919642 0.24506523 0.42895216
+		 0.24520659 0.42914778 0.24477863 0.42856628 0.24463728 0.42837065 0.24470212 0.42807594
+		 0.24492012 0.42780316 0.24526563 0.42760345 0.24585146 0.42910233 0.24569955 0.42936081
+		 0.24534421 0.42934829 0.24499658 0.42898589 0.24507028 0.4292134 0.24472371 0.428619
+		 0.24452689 0.42847452 0.24449967 0.42817014 0.24463376 0.42784479 0.24491693 0.42756182
+		 0.24531743 0.42736274 0.24570031 0.42749912 0.24547647 0.42955562 0.24514177 0.42944247
+		 0.24492083 0.42899773 0.24492079 0.42923641 0.24468806 0.42868578 0.24445413 0.4286086
+		 0.24433295 0.42832199 0.24436741 0.42796281 0.24456933 0.42761087 0.24491264 0.42731795
+		 0.24536701 0.42711955 0.24579653 0.42726648;
+	setAttr ".uvtk[250:481]" 0.24587715 0.42953742 0.24560276 0.42977116 0.2452101
+		 0.42967364 0.24492173 0.4294754 0.24484515 0.42898667 0.24477138 0.42921513 0.24467546
+		 0.4287602 0.24442881 0.4287608 0.24421942 0.42852259 0.24414432 0.4281576 0.24424112
+		 0.42774725 0.24450997 0.42737383 0.24490701 0.42707109 0.24527454 0.42990753 0.24492374
+		 0.42971525 0.24470161 0.42944565 0.24477679 0.42895347 0.24463525 0.42915079 0.24468729
+		 0.42883456 0.2444535 0.42891341 0.24418141 0.42876136 0.24399245 0.42841607 0.24396671
+		 0.42798102 0.24413294 0.42751852 0.2444509 0.42713436 0.24571094 0.42999992 0.24533391
+		 0.43014461 0.24492693 0.42995659 0.24463677 0.4296788 0.24449919 0.42935362 0.24472229
+		 0.42890114 0.24452533 0.42904741 0.24422 0.42900074 0.24403043 0.42729172 0.24581346
+		 0.43022668 0.24539296 0.43038407 0.24493124 0.43020043 0.24457824 0.42991495 0.24437001
+		 0.42956424 0.24433295 0.42920217 0.24493685 0.43044734 0.24452643 0.43015566 0.24424747
+		 0.4297846 0.24414468 0.42936936 0.24399094 0.42910725 0.24447685 0.43039888 0.24414355
+		 0.43001926 0.24396686 0.42954987 0.24404734 0.43025196 0.32091326 0.44228742 0.32063878
+		 0.44252115 0.32051253 0.44230556 0.32073569 0.44211078 0.32031059 0.44265747 0.32024619
+		 0.44242358 0.32038033 0.44209823 0.32054704 0.44194642 0.32074696 0.44274992 0.32036987
+		 0.44289452 0.31996292 0.44270644 0.31995982 0.44246507 0.32017785 0.44219232 0.32024279
+		 0.44189769 0.32035318 0.44179383 0.32088763 0.44185233 0.32066065 0.44174579 0.32084942
+		 0.44297671 0.32042891 0.44313398 0.31996718 0.44295031 0.31961426 0.44266474 0.31967282
+		 0.44242859 0.31995782 0.44222525 0.32010645 0.44196329 0.32010141 0.44170201 0.32015634
+		 0.44164932 0.3204259 0.44165978 0.31997278 0.44319719 0.31956244 0.44290543 0.31928349
+		 0.4425343 0.31940606 0.44231403 0.3197377 0.44219548 0.31995696 0.44198623 0.32003275
+		 0.44173574 0.31995818 0.44150907 0.32019204 0.4415825 0.32069868 0.44150701 0.32045129
+		 0.44150758 0.31951278 0.44314864 0.31917953 0.44276902 0.31900299 0.4422996 0.31918079
+		 0.44211906 0.31953532 0.44210342 0.31980753 0.44196498 0.31995702 0.44174764 0.32020462
+		 0.44150814 0.32066011 0.44126767 0.32042661 0.44135493 0.31908327 0.44300163 0.31936911
+		 0.44195193 0.31967139 0.44190058 0.31988138 0.44173646 0.32019281 0.44143379 0.32054722
+		 0.44106621 0.32035479 0.44122088 0.3190271 0.44185689 0.31925619 0.4417505 0.31956148
+		 0.44179723 0.31981295 0.44170332 0.32015783 0.44136709 0.32073551 0.44089904 0.32088923
+		 0.44116122 0.32038099 0.44091469 0.32024488 0.44111753 0.31948972 0.44166321 0.31975847
+		 0.44165099 0.32010338 0.44131482 0.32051021 0.44070414 0.32017863 0.44082266 0.3201088
+		 0.44105315 0.31921762 0.44151109 0.31946501 0.44151059 0.31972352 0.44158438 0.32003498
+		 0.44128168 0.32063282 0.44048384 0.32091337 0.44071853 0.32024345 0.44058955 0.31995848
+		 0.44079286 0.3199594 0.44103187 0.31925568 0.44127235 0.3194904 0.44135839 0.31971171
+		 0.44151002 0.31995928 0.4412705 0.32030204 0.44035336 0.31995651 0.44055304 0.31973845
+		 0.44082582 0.31980991 0.44105482 0.31936923 0.44107172 0.31956315 0.44122431 0.31972432
+		 0.44143558 0.31988358 0.44128239 0.32035393 0.44011271 0.32073677 0.44024915 0.31995338
+		 0.4403117 0.31967017 0.44059455 0.31953597 0.44091988 0.31967357 0.44112045 0.31902871
+		 0.44116578 0.31918067 0.44090736 0.31975999 0.44136882 0.31981489 0.44131607 0.32040352
+		 0.43986949 0.32083303 0.44001651 0.31994912 0.44006783 0.31960577 0.4403607 0.31940374
+		 0.44071251 0.31994352 0.43982095 0.31954643 0.44012362 0.31927752 0.44049695 0.31900308
+		 0.44073072 0.31948742 0.43988416 0.31916934 0.44026825 0.31906688 0.44004142 0.40286726
+		 -0.44392222 0.40310234 -0.44819808 0.40546203 -0.44808951 0.40524369 -0.44360083
+		 0.40312737 -0.4526037 0.40548891 -0.45260805 0.40781671 -0.44800189 0.40767539 -0.44336638
+		 0.40307873 -0.45703137 0.40545189 -0.45714006 0.40783381 -0.45260698 0.41017056 -0.44796431
+		 0.41014042 -0.44326979 0.40286702 -0.46136087 0.4052729 -0.4616721 0.40781325 -0.45721921
+		 0.41016984 -0.45260334 0.4125264 -0.44798744 0.41261336 -0.44332874 0.40772629 -0.46187794
+		 0.41016909 -0.45724237 0.41250587 -0.45259967 0.41488776 -0.44806659 0.41506678 -0.44353458
+		 0.41019922 -0.46193689 0.41252294 -0.45720476 0.41485077 -0.45259863 0.41726094 -0.44817528
+		 0.41747266 -0.44384578 0.41266426 -0.46184027 0.41487765 -0.45711714 0.41721228 -0.45260298
+		 0.41509593 -0.46160585 0.41723728 -0.4570086 0.41747239 -0.46128443 -0.1429736 0.0020462871
+		 -0.14320752 0.0063222051 -0.14556721 0.0062142611 -0.14535013 0.0017255545 -0.14323138
+		 0.010727823 -0.14559288 0.01073277 -0.14792195 0.0061272979 -0.14778186 0.0014917254
+		 -0.1431815 0.015155494 -0.14555463 0.015264809 -0.14793777 0.010732353 -0.15027575
+		 0.006090343 -0.15024689 0.0013958216 -0.14296864 0.019484907 -0.14537442 0.019796759
+		 -0.14791597 0.01534456 -0.1502738 0.010729373 -0.15263161 0.0061141253 -0.15271981
+		 0.0014554262 -0.14782777 0.020003259 -0.15027183 0.015368402 -0.15260983 0.010726333
+		 -0.15499297 0.0061938763 -0.15517317 0.0016618967 -0.15030071 0.020062894 -0.15262564
+		 0.015331388 -0.15495472 0.010725915 -0.15736608 0.0063031912 -0.15757895 0.0019738078
+		 -0.15276574 0.01996693 -0.15498038 0.015244424 -0.15731621 0.010730922 -0.15519747
+		 0.019733161 -0.15734006 0.01513654 -0.15757398 0.019412398;
+createNode polyAutoProj -n "polyAutoProj72";
+	rename -uid "D6B21218-402E-0555-9457-9AA147D2D8E4";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+	setAttr ".ix" -type "matrix" 0.033782226606050292 0 0 0 0 0.033782226606050292 0 0
+		 0 0 0.033782226606050292 0 17.045677229930202 1.2848932771832622 12.471235462793326 1;
+	setAttr ".s" -type "double3" 0.067564473347877296 0.067564473347877296 0.067564473347877296 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV132";
+	rename -uid "EA658592-48B3-0C4D-B558-49A8045BD6D0";
+	setAttr ".uopa" yes;
+	setAttr -s 482 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.0091876388 0.021459103 -0.011555612
+		 0.01772064 -0.015655398 0.016314387 -0.012068212 0.018358886 -0.0058397055 0.021622717
+		 -0.0064525008 0.016449869 -0.00074350834 0.0096626878 -0.004466176 0.011352897 -0.018675566
+		 0.013081253 -0.014306128 0.013248563 0.00014430285 0.022183061 -0.00078725815 0.018411994
+		 -0.0024570823 0.018054336 -0.00024712086 0.011508465 0.0041747689 0.0066385865 0.00092351437
+		 0.023029387 -0.0072980523 0.011951268 -0.020518005 0.0088562965 -0.015799344 0.0070949197
+		 -0.0018046498 0.012652814 0.009647727 0.01957655 0.010620594 0.016183794 2.1517277e-05
+		 0.009462595 0.0029373169 0.0025752187 0.011390865 0.0022383332 0.0014434457 0.020076245
+		 0.0078889728 0.020130754 -0.0092765093 0.011807442 -0.021106482 0.0044848919 -0.016487122
+		 0.00088149309 -0.0028612018 0.0058884621 0.010764837 0.010895371 0.012633085 0.013037026
+		 0.014672995 0.010953367 0.0014930964 0.012529284 0.0055058002 0.016947299 0.009221673
+		 0.012646496 -0.010337353 0.011332989 -0.020395458 0.00082343817 -0.016342998 -0.0044069886
+		 -0.0039177537 -0.00087594986 0.01007694 0.0046819448 0.015384138 0.0072920322 0.0034046173
+		 0.00058549643 0.0046350956 0.00080299377 0.0010220408 -0.00059083104 -0.00084382296
+		 -0.0040414929 0.0031907558 0.00917238 0.0043914914 0.0087956786 0.00047957897 -0.00066834688
+		 -0.010357559 0.010973871 -0.018355548 -0.0012601614 -0.01537019 -0.007799685 -0.0049351454
+		 -0.0066351891 0.0085837841 -0.0014716983 0.014795542 0.0029206276 0.0046148896 0.00044393539
+		 0.0030373931 -0.0035124123 0.0011198521 0.0013790429 -0.0053557158 -0.0033861995
+		 -0.0091270804 0.011191428 -0.014944136 -0.00086963177 -0.013611436 -0.008353889 -0.0058667064
+		 -0.010406196 0.0063458681 -0.0065820813 0.012953222 -0.001304388 0.003554225 -3.0577183e-05
+		 -0.0062021017 0.012445271 -0.010113955 0.0029811859 -0.011228263 -0.0051705241 -0.0066459179
+		 -0.011252522 0.0034651756 -0.0096822381 0.0099329948 -0.0045375824 0.0015755892 -0.00017440319
+		 -0.00036674738 0.015163064 -0.0068422556 0.010397792 -0.008913219 0.002604425 -0.0071659088
+		 -0.0082993507 0.00011718273 -0.0098457932 0.0058332086 -0.0059437752 -0.0012562871
+		 0.00042384863 -0.0072156191 -0.00075244904 -0.0032653809 -0.006277442 0.00073009729
+		 -0.0046730042 -0.0049789548 0.0021141768 -0.0087599754 0.015289247 -0.0067445636
+		 0.012367666 -0.0057439804 0.0023142099 -0.0054752827 0.00026834011 -0.0098972321
+		 0.005138278 -0.0048787594 0.015818357 -0.0086597204 0.0092015862 -0.017113328 0.0095384717
+		 0.020222127 0.0032813773 0.017102122 0.010919735 0.017464936 0.0074533224 0.021627724
+		 0.0010661036 0.017439783 0.0030565113 0.01595521 0.011564396 0.0075387955 0.014627606
+		 0.0060037971 0.010833189 0.016999364 0.0021090508 0.021698475 -0.0026881695 0.011240423
+		 -0.010261089 0.011793613 -0.010252878 0.013236523 -0.00060107931 0.014187098 0.0084882453
+		 0.0089248419 0.01549454 0.0089598894 -0.011255413 -0.0017898679 0.015008844 -0.0052871108
+		 0.011934549 0.0043854117 0.0050489455 0.015701294 -0.0041408986 0.020464897 -0.0071105659
+		 0.011070907 -0.010757044 0.010577679 -0.0077473475 0.012493074 0.00084700063 0.010056496
+		 0.012557056 0.0037292838 -0.013694305 0.0021786094 0.015123919 -0.0040974617 0.012382813
+		 -0.008846581 0.011057004 -0.0081387162 0.0068285912 0.0027289391 -0.0017412007 0.013596535
+		 -0.010310978 0.017974138 -0.011342987 0.0092912912 -0.01130487 0.010724008 0.0050169434
+		 0.0061854124 0.011479009 0.0016540289 0.010990672 0.0068569183 0.0054495409 0.0024255514
+		 0.0072886944 -0.01251626 0.0078606009 -0.010243416 0.00065849721 0.001072526 -0.008531332
+		 0.010744989 -0.01541692 0.014304459 -0.014539391 0.0065869093 -0.011446774 0.012960672
+		 -0.011642284 0.010883987 -0.0081061581 0.0093028545 0.0027687103 0.0085104108 0.005894281
+		 0.012457788 0.0022163987 -0.0011289716 0.0079644024 -0.015006959 0.0036281645 -0.011541545
+		 -0.0055914521 -0.00054591894 -0.014315575 0.0072478056 -0.018491209 0.0095553994
+		 -0.015865177 0.0030323267 -0.010771066 0.0090777278 -0.010938299 0.012341559 -0.0032989625
+		 0.020315468 -0.0024247169 -0.0038332939 0.0078224838 -0.016240597 -0.00079420209
+		 -0.012006998 -0.010935724 -0.0020808578 -0.018109977 0.003279388 -0.018606275 0.0038039088
+		 -0.014473051 -0.0013990402 -0.0089318752 -0.0056129694 0.0072746575 -0.016169786
+		 -0.00454849 -0.011644244 -0.014402121 -0.0034669042 -0.018976927 -0.00072747469 -0.014961362
+		 -0.0030524731 -0.0093766451 -0.0069998503 -0.0056987703 -0.0063356757 0.0067704916
+		 -0.01476419 -0.0067637563 -0.010497212 -0.015046775 -0.0045985579 -0.016039431 -0.0038449168
+		 -0.0062510669 -0.0068836808 -0.00018340349 -0.014857471 -0.0010576248 -0.005782485
+		 0.006778717 -0.011981845 -0.0065388978 -0.0087291598 -0.011970609 -0.0052660704 -0.0084993243
+		 -0.0035020113 0.0077730417 -0.007778585 -0.0028812885 -0.0070351362 -0.0043293834
+		 -0.0054259896 0.0046237707 -0.0036197901 0.0074559152 0.0017286539 0.010211945 -0.0051198006
+		 0.0042649806 -0.0075026751 0.0081599057 -0.0036022067 0.0027459562 -0.002714172 0.0041796267
+		 -0.0054519176 0.0068206489 -0.0068435073 0.0043304861 0.00043582916 0.00038470328
+		 -0.0015100241 0.0052978694 -0.0033916682 0.0090201497 -0.007276237 0.0071810335 -0.0083218962
+		 0.0041767955 -0.0041231662 0.0011339188 -0.0077136755 0.0019297302 -7.7471137e-05
+		 0.0059549361 -0.00070209801 0.010469332 -0.0049020052 0.010448173 -0.0074028969 0.0042132735
+		 -0.0077303052 0.00053007901 -0.0093366504 0.0027375817 -0.0042389184 -0.00056262314
+		 -0.0080237091 -0.00070154667 0.0014407337 0.0060385913 0.0022992939 0.010728911 -0.0012957156
+		 0.012922369 -0.0057186633 0.0085711628 -0.0099528432 0.00094464421 -0.0039200038
+		 -0.0022248179 -0.0077160597 -0.0037012696 0.0028662086 0.0055154413 0.0051357895
+		 0.0096365213 0.0030255169 0.01349996 -0.0017107874 0.012381904 -0.0053245574 0.0024643019
+		 -0.0060456693 -0.0027108863 -0.010427043 -0.0029867887 -0.0031536967 -0.0036814809
+		 -0.0064586848 -0.0066156983 0.0040253326 0.0044508725 0.0073303282 0.0073850751 0.0071376786
+		 0.011784405 0.0036098808 0.013413332 -0.0018813908 0.0080307685 -0.0104101 0.0062264502
+		 -0.011690065 0.0009444356 -0.0092023611 -0.0073874295 -0.0019945502 -0.0047460496
+		 -0.0042641312 -0.0088671148 0.0047916472 0.0029941946 0.0085877031 0.0044706613 0.010074012
+		 0.008156836 0.0087315366 0.01103615 0.0040352196 0.0095647648 -0.0016365796 -0.0010257941
+		 -0.0049221218 -0.0091367476 -0.011091679 -0.0050238073 -0.0062660277 -0.011015028
+		 -0.00056907535 -0.0052691996 -0.0014276505 -0.0099595189 0.0051105544 0.0013320148
+		 0.008895345 0.0014709383 0.011298701 0.0037562251 0.011963334 0.0057932138 0.0097738504
+		 0.0065572187 0.0043182671 0.0010929164 -0.00018125772 -0.015085178 -0.0027127862
+		 -0.024437435;
+	setAttr ".uvtk[250:481]" -0.011638552 0.0086005628 -0.011744648 0.0013165474
+		 -0.0078599006 -0.010266721 -0.0021538585 -0.012730569 0.00094911456 -0.0051855445
+		 0.0015737489 -0.0096999407 0.0049948245 -0.00036452711 0.0085853338 -0.0011603385
+		 0.010824494 -0.00017526746 0.01256172 -0.00017502904 0.012616299 -0.00054713339 0.010204144
+		 -0.0023983847 0.0044292957 -0.012680816 -0.0089021921 -0.0057877898 -0.0027382374
+		 -0.012643903 0.002167359 -0.012153 0.0023816824 -0.0045284927 0.0042633265 -0.008250773
+		 0.0044738501 -0.0019765794 0.0077151582 -0.0035611093 0.010208322 -0.0019681752 0.01128177
+		 -0.0054570436 0.012510195 -0.0078311712 0.01328609 -0.012087949 0.0091734603 -0.016330654
+		 -0.012414426 0.012857348 -0.0093324929 0.0031678081 -0.0031635761 -0.0087953508 0.0025824383
+		 -0.011612505 0.0057736561 -0.0096787512 0.0035858378 -0.0034102499 0.0063235834 -0.0060512722
+		 0.0091935545 -0.0034074187 0.011858125 -0.027296344 -0.010986477 0.028065771 -0.0083017945
+		 0.017100066 -0.0034466088 -0.00032350421 0.0027530417 -0.0072613358 0.0065903105
+		 -0.0078017414 0.0081478916 -0.006411612 -0.0035576522 0.013450235 0.0025082454 0.0017952323
+		 0.0061962008 -0.0016948581 0.0082745329 -0.003443867 0.0086019356 0.00023934245 0.0010529011
+		 0.015854597 0.0057937726 0.0099061728 0.0069173221 0.0034802854 0.0035844091 0.025206834
+		 -0.012227118 0.0069050193 -0.012386203 -0.00044471025 -0.011682034 -0.0068132281
+		 -0.012236238 -0.00079157948 -0.0095736384 -0.0076267123 -0.0084761679 -0.012119263
+		 -0.0097433627 -0.0092065334 -0.010933578 -0.0047659278 -0.01311022 0.011119992 -0.010059744
+		 0.0013412833 -0.0038442612 -0.010715932 -0.003362447 -0.014563709 -0.0068278015 -0.012882054
+		 -0.0069518983 -0.0084656775 -0.0081856549 -0.0055247843 -0.010896802 0.0045275986
+		 -0.01041317 -0.00080662966 -0.011735976 0.026350945 -0.0090854764 0.015285879 -0.0041843951
+		 -0.0022445917 0.002084285 -0.0092632473 0.0019685924 -0.013599247 -0.0027219355 -0.014649272
+		 -0.0047718287 -0.010749459 -0.0036002398 -0.0055633485 -0.0043545365 -0.0040934682
+		 -0.0084623992 -0.0025072098 -0.0043532252 0.011528909 0.0017834604 -0.00022032857
+		 0.0055600107 -0.0037733316 0.0060049295 -0.0098501742 0.0016076863 -0.014123052 -0.0019397736
+		 -0.011876941 -0.0024485886 -0.0066441894 3.5345554e-05 -0.001529485 -0.0046580434
+		 -0.0024225414 -0.0097413659 0.00099667907 -0.0081169009 0.0001309514 0.00027155876
+		 0.013825923 0.0051033497 0.0078018904 0.0063378513 0.0013376474 0.0077362061 -0.0055437386
+		 0.0052367449 -0.011695594 0.0010675192 -0.011652231 -0.0010253787 -0.0071851313 -0.004524976
+		 -0.00072257221 -0.00867033 0.0024283826 -0.0072108507 0.0025268942 0.0028401315 0.02307862
+		 0.0076474845 -0.0084663928 0.0037730336 -0.010234445 0.00049591064 -0.0071191341
+		 -0.0039865375 0.00088717043 -0.0075767636 0.0054074526 -0.005787462 0.005001083 0.0081258714
+		 -0.0018949211 0.0087409616 -0.0054873526 0.0058581531 -0.0080600381 0.0019366741
+		 -0.0064778328 -0.0030826926 0.0023130625 -0.0076654553 0.0024847984 -0.0080552697
+		 -0.0011640638 -0.0051660836 0.0086366385 -0.0037023425 0.0071755201 0.0072815418
+		 -0.0055858493 0.0031533837 -0.0053720176 -0.001865983 0.0034188628 -0.0059342384
+		 0.0067911819 -0.0015369952 0.01106409 -0.00099685788 0.0085932612 0.0098119974 -0.004055649
+		 0.008187592 -0.0031899214 0.0040572286 -0.0039461255 -0.00042521954 0.0040601641
+		 -0.005489409 0.00071437657 -0.00626719 -0.00439661 -0.0018979013 0.010540247 0.0027926266
+		 0.011590339 0.0020104647 0.0088180006 0.010483801 -0.0022523403 0.0085330606 -0.0005517453
+		 0.0045956373 -0.0023363829 0.0010960698 0.0041261762 -0.0020136237 0.0062042847 0.0034331083
+		 0.01150474 0.0068984628 0.0098230988 0.0048425198 0.0076905042 0.011004239 0.0017069727
+		 0.008256346 0.0024658293 0.0047287345 -0.00063642859 0.0025192499 0.0035852194 -0.0017127991
+		 -0.0028386358 -0.0050326586 -0.010860864 0.0039149523 0.0076569393 0.008546859 0.009060286
+		 0.0098139942 0.0061475635 0.0070225894 0.0054067373 0.010967433 -0.0075865686 0.012306899
+		 -0.0022673756 0.0044252276 0.001034528 0.0036709011 0.0025044084 -0.00020086765 -0.016884897
+		 -0.0027694702 -0.026137577 0.0042550862 -0.00081436895 0.0096443295 0.0045677647
+		 0.011752725 0.003754288 0.0044239163 -0.014587874 0.010130435 -0.0044002365 0.012456894
+		 -0.0026142448 0.012297839 -0.0099639669 0.0091561675 -0.018344825 0.013180912 -0.014178947
+		 0.011806637 -0.029409895 0.00019824505 -0.0068815351 -0.0024657845 -0.0018187165
+		 -0.0033171773 0.0015894771 -0.00095963478 -0.0026455522 -0.0018619299 -0.0014129281
+		 -0.0027163029 -0.00081503391 -0.0022209287 0.003544271 -0.0010831952 -0.00043269992
+		 -0.00011610985 -0.00068324804 -0.001126647 -0.0030258894 -0.0014489889 -0.00030422211
+		 -0.00015452504 0.0044267774 -0.00074487925 0.00040671229 0.0041216612 0.0051066279
+		 0.0026520491 0.0017883182 -9.5546246e-05 -0.0040514469 0.00089898705 0.00016438961
+		 0.00189358 0.0043801665 -0.00049424171 9.6380711e-05 0.0022922754 0.00023233891 0.001952529
+		 -0.0040981174 0.0032470226 0.00063300133 0.0029245615 0.0033546686 -0.00085410476
+		 -0.0014596581 0.0025428832 -7.7962875e-05 0.0040189624 -0.003215611 0.0045142174
+		 0.0011437535 0.0019140542 0.0010119677 -0.0023237467 -0.0047778487 0.0028811991 0.00076138973
+		 0.0051151216 -0.0012606978 0.0036598742 0.0017417073 0.0027575791 0.0029742718 0.0042637587
+		 0.0021474361 0.0015996993 0.0072103143 -0.00099633634 0.0049278736 0.0029400438 -7.134676e-05
+		 0.0037625432 -0.0027773976 6.9364905e-05 0.0013993382 0.0036468059 -0.0004760623
+		 0.0045058578 -0.00037151575 0.0026437789 -0.004031539 0.00012683868 -8.98242e-05
+		 0.0032180697 -0.0012267232 0.0042643398 0.0018217564 0.0032417774 -0.00018471479
+		 0.00056961179 -0.00421381 -0.00023660064 -0.00019580126 0.00026792288 -0.0070859194
+		 0.0018336028 -0.0030524433 0.0032603592 0.0035496354 0.00089609623 4.1604042e-05
+		 -0.0014681518 -0.0034663677 -0.00046610832 0.00085008144 0.0022583008 -0.00076687336
+		 0.0012226105 0.0042970181 -0.0014495552 0.00026792288 -0.0024721026 -0.0017385483
+		 -4.1395426e-05 0.0031356812 0.0020288229 0.00027900934 -0.00085157156 0.0041148067
+		 -0.0027136505 0.00045472383 -0.0014258623 0.0013099313 0.0015242994 0.0071691275
+		 0.0016653836 0.00017306209 -0.0019703209 0.0028606057 -0.0018545985 0.00055927038
+		 0.0017228723 -0.0013160706 -0.0011478364 0.00015455484 0.0027885437 -0.0048446655;
+createNode polyLayoutUV -n "polyLayoutUV75";
+	rename -uid "7CAA7849-44D8-B72B-6577-DDA703C33F26";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV133";
+	rename -uid "96170B9A-418D-9410-06CC-B79B077C0F09";
+	setAttr ".uopa" yes;
+	setAttr -s 482 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.59954315 -0.43642622 -0.598351 -0.43649271
+		 -0.59826386 -0.43579698 -0.59951448 -0.43576545 -0.59959614 -0.4370912 -0.59848213
+		 -0.43718749 -0.5971458 -0.436647 -0.59698516 -0.43588763 -0.59822345 -0.43510079
+		 -0.59950882 -0.43510777 -0.60072768 -0.43642104 -0.60075188 -0.43577433 -0.59967911
+		 -0.43776008 -0.5986492 -0.43788499 -0.59737086 -0.43737817 -0.60070658 -0.4370715
+		 -0.59690106 -0.43511316 -0.59823036 -0.43440598 -0.59952545 -0.43445224 -0.60077775
+		 -0.43513012 -0.60190815 -0.43648359 -0.60198629 -0.43582961 -0.59980726 -0.43844464
+		 -0.59892893 -0.43857771 -0.59763008 -0.43806541 -0.60069072 -0.43772709 -0.60181218
+		 -0.43713939 -0.5968979 -0.4343352 -0.59828401 -0.43371451 -0.59956372 -0.43379813
+		 -0.60080445 -0.4344871 -0.60204506 -0.43517607 -0.60308611 -0.43662614 -0.60322624
+		 -0.43594605 -0.6006844 -0.4383893 -0.60169816 -0.43779886 -0.60290951 -0.43730053
+		 -0.59697539 -0.43356463 -0.59838259 -0.43302819 -0.59962261 -0.4331446 -0.60083109
+		 -0.43384412 -0.60208333 -0.43452197 -0.60332477 -0.4352597 -0.60425574 -0.43688893
+		 -0.60447901 -0.43616265 -0.60068852 -0.43906558 -0.60002565 -0.43913046 -0.60155588
+		 -0.43846461 -0.60270339 -0.43797284 -0.60397857 -0.43758008 -0.59712982 -0.43281153
+		 -0.59852272 -0.43234804 -0.59970069 -0.43249062 -0.60085702 -0.43319988 -0.60210001
+		 -0.43386644 -0.60337847 -0.43456823 -0.60463345 -0.43540961 -0.60134727 -0.43913034
+		 -0.60241461 -0.43863013 -0.60368055 -0.43822861 -0.5973531 -0.43208525 -0.59869933
+		 -0.43167368 -0.59979665 -0.43183482 -0.60088116 -0.43255317 -0.60209435 -0.43320876
+		 -0.60338545 -0.43387341 -0.60471094 -0.43463901 -0.59763026 -0.43139413 -0.59890544
+		 -0.43100137 -0.59991062 -0.43117535 -0.60090226 -0.43190271 -0.60206568 -0.43254796
+		 -0.60334504 -0.43317723 -0.60470772 -0.43386105 -0.59792829 -0.43074563 -0.59919423
+		 -0.43034407 -0.60005295 -0.4305096 -0.60091811 -0.43124714 -0.60201269 -0.43188301
+		 -0.60325783 -0.4324815 -0.60462368 -0.43308657 -0.60092443 -0.43058491 -0.60192972
+		 -0.43121412 -0.6031267 -0.43178675 -0.60446304 -0.43232724 -0.60026157 -0.42984387
+		 -0.60092032 -0.42990863 -0.60180163 -0.43052956 -0.60295963 -0.43108922 -0.60423791
+		 -0.43159604 -0.60158312 -0.42984375 -0.60267991 -0.4303965 -0.60397875 -0.4309088
+		 -0.19197926 0.012116805 -0.19080132 0.012259595 -0.19087958 0.01291357 -0.19211954
+		 0.012796894 -0.19180256 0.01144246 -0.19070524 0.01160381 -0.18962085 0.012322374
+		 -0.18964517 0.012969092 -0.19093853 0.01356709 -0.19221821 0.013483211 -0.19314882
+		 0.011853777 -0.19337228 0.012580022 -0.1915963 0.010770194 -0.1905911 0.010944359
+		 -0.18959963 0.011671916 -0.19287154 0.011162698 -0.18843633 0.012317404 -0.18840778
+		 0.012978211 -0.18967116 0.013613313 -0.19097692 0.014221206 -0.19227201 0.014174685
+		 -0.19352683 0.013333067 -0.19130737 0.010112957 -0.1904487 0.010278629 -0.18958366
+		 0.011016339 -0.1925734 0.010514244 -0.1884892 0.011652447 -0.18724412 0.012251168
+		 -0.18715709 0.012946919 -0.18840224 0.013635904 -0.18969798 0.014256299 -0.19099373
+		 0.014876723 -0.1922791 0.014869496 -0.19360447 0.014103636 -0.18957716 0.010354124
+		 -0.18857205 0.010983538 -0.18737513 0.011556372 -0.18603891 0.012097135 -0.18587846
+		 0.012856513 -0.18711686 0.013643101 -0.18841904 0.014291406 -0.1897248 0.014899284
+		 -0.19098818 0.015534401 -0.19223884 0.015565693 -0.19360143 0.014881611 -0.19023991
+		 0.0096129645 -0.18958122 0.0096778497 -0.18870002 0.010298954 -0.18754208 0.010858834
+		 -0.18626392 0.011365891 -0.18579453 0.013631016 -0.18712395 0.014337927 -0.18845743
+		 0.014945507 -0.18975079 0.01554352 -0.19095963 0.016195208 -0.19215181 0.016261429
+		 -0.19351754 0.015656114 -0.18891835 0.0096130986 -0.18782169 0.010166051 -0.18652296
+		 0.010678604 -0.18579149 0.014408976 -0.18717772 0.015029401 -0.18851638 0.015599042
+		 -0.18977511 0.016190231 -0.19090676 0.016860157 -0.19202083 0.01695624 -0.19335705
+		 0.016415477 -0.1858691 0.015179545 -0.18727642 0.015715718 -0.18859464 0.016253024
+		 -0.18979633 0.016840696 -0.19082391 0.01752907 -0.19185385 0.017653763 -0.19313204
+		 0.017146707 -0.18602365 0.01593259 -0.18741667 0.016395807 -0.18869072 0.016908795
+		 -0.1898123 0.017496258 -0.19069594 0.01821366 -0.19157428 0.018346548 -0.19287303
+		 0.017834008 -0.18624711 0.016658843 -0.1875934 0.017070144 -0.18880486 0.01756826
+		 -0.18981874 0.018158495 -0.18652439 0.017349899 -0.18779963 0.017742425 -0.18894726
+		 0.018233985 -0.18981475 0.01883477 -0.19047761 0.0188995 -0.18682253 0.017998368
+		 -0.1880886 0.018399656 -0.18915606 0.018899649 0.24515656 0.42868388 0.24512157 0.42861727
+		 0.24531853 0.428471 0.24539039 0.42860502 0.24492192 0.42875922 0.2450671 0.42856497
+		 0.24520862 0.42836761 0.24551092 0.42831624 0.24562387 0.4285177 0.2451684 0.4287582
+		 0.24541505 0.42875761 0.24499869 0.42853177 0.2450725 0.42830324 0.2453447 0.42816475
+		 0.24569918 0.42814904 0.24585292 0.42841119 0.24566244 0.42875701 0.24515581 0.42883265
+		 0.24538971 0.42890984 0.24492304 0.42852065 0.24492307 0.42828202 0.24514227 0.42807275
+		 0.24547388 0.42795417 0.24562445 0.42899585 0.24512015 0.42889941 0.24531698 0.42904392
+		 0.24484728 0.42853251 0.2447736 0.42830497 0.24492212 0.42804301 0.2452071 0.42783961
+		 0.24559639 0.42773384 0.24587697 0.42796853 0.24551092 0.42919642 0.24506523 0.42895216
+		 0.24520659 0.42914778 0.24477863 0.42856628 0.24463728 0.42837065 0.24470212 0.42807594
+		 0.24492012 0.42780316 0.24526563 0.42760345 0.24585146 0.42910233 0.24569955 0.42936081
+		 0.24534421 0.42934829 0.24499658 0.42898589 0.24507028 0.4292134 0.24472371 0.428619
+		 0.24452689 0.42847452 0.24449967 0.42817014 0.24463376 0.42784479 0.24491693 0.42756182
+		 0.24531743 0.42736274 0.24570031 0.42749912 0.24547647 0.42955562 0.24514177 0.42944247
+		 0.24492083 0.42899773 0.24492079 0.42923641 0.24468806 0.42868578 0.24445413 0.4286086
+		 0.24433295 0.42832199 0.24436741 0.42796281 0.24456933 0.42761087 0.24491264 0.42731795
+		 0.24536701 0.42711955 0.24579653 0.42726648;
+	setAttr ".uvtk[250:481]" 0.24587715 0.42953742 0.24560276 0.42977116 0.2452101
+		 0.42967364 0.24492173 0.4294754 0.24484515 0.42898667 0.24477138 0.42921513 0.24467546
+		 0.4287602 0.24442881 0.4287608 0.24421942 0.42852259 0.24414432 0.4281576 0.24424112
+		 0.42774725 0.24450997 0.42737383 0.24490701 0.42707109 0.24527454 0.42990753 0.24492374
+		 0.42971525 0.24470161 0.42944565 0.24477679 0.42895347 0.24463525 0.42915079 0.24468729
+		 0.42883456 0.2444535 0.42891341 0.24418141 0.42876136 0.24399245 0.42841607 0.24396671
+		 0.42798102 0.24413294 0.42751852 0.2444509 0.42713436 0.24571094 0.42999992 0.24533391
+		 0.43014461 0.24492693 0.42995659 0.24463677 0.4296788 0.24449919 0.42935362 0.24472229
+		 0.42890114 0.24452533 0.42904741 0.24422 0.42900074 0.24403043 0.42729172 0.24581346
+		 0.43022668 0.24539296 0.43038407 0.24493124 0.43020043 0.24457824 0.42991495 0.24437001
+		 0.42956424 0.24433295 0.42920217 0.24493685 0.43044734 0.24452643 0.43015566 0.24424747
+		 0.4297846 0.24414468 0.42936936 0.24399094 0.42910725 0.24447685 0.43039888 0.24414355
+		 0.43001926 0.24396686 0.42954987 0.24404734 0.43025196 0.32091326 0.44228742 0.32063878
+		 0.44252115 0.32051253 0.44230556 0.32073569 0.44211078 0.32031059 0.44265747 0.32024619
+		 0.44242358 0.32038033 0.44209823 0.32054704 0.44194642 0.32074696 0.44274992 0.32036987
+		 0.44289452 0.31996292 0.44270644 0.31995982 0.44246507 0.32017785 0.44219232 0.32024279
+		 0.44189769 0.32035318 0.44179383 0.32088763 0.44185233 0.32066065 0.44174579 0.32084942
+		 0.44297671 0.32042891 0.44313398 0.31996718 0.44295031 0.31961426 0.44266474 0.31967282
+		 0.44242859 0.31995782 0.44222525 0.32010645 0.44196329 0.32010141 0.44170201 0.32015634
+		 0.44164932 0.3204259 0.44165978 0.31997278 0.44319719 0.31956244 0.44290543 0.31928349
+		 0.4425343 0.31940606 0.44231403 0.3197377 0.44219548 0.31995696 0.44198623 0.32003275
+		 0.44173574 0.31995818 0.44150907 0.32019204 0.4415825 0.32069868 0.44150701 0.32045129
+		 0.44150758 0.31951278 0.44314864 0.31917953 0.44276902 0.31900299 0.4422996 0.31918079
+		 0.44211906 0.31953532 0.44210342 0.31980753 0.44196498 0.31995702 0.44174764 0.32020462
+		 0.44150814 0.32066011 0.44126767 0.32042661 0.44135493 0.31908327 0.44300163 0.31936911
+		 0.44195193 0.31967139 0.44190058 0.31988138 0.44173646 0.32019281 0.44143379 0.32054722
+		 0.44106621 0.32035479 0.44122088 0.3190271 0.44185689 0.31925619 0.4417505 0.31956148
+		 0.44179723 0.31981295 0.44170332 0.32015783 0.44136709 0.32073551 0.44089904 0.32088923
+		 0.44116122 0.32038099 0.44091469 0.32024488 0.44111753 0.31948972 0.44166321 0.31975847
+		 0.44165099 0.32010338 0.44131482 0.32051021 0.44070414 0.32017863 0.44082266 0.3201088
+		 0.44105315 0.31921762 0.44151109 0.31946501 0.44151059 0.31972352 0.44158438 0.32003498
+		 0.44128168 0.32063282 0.44048384 0.32091337 0.44071853 0.32024345 0.44058955 0.31995848
+		 0.44079286 0.3199594 0.44103187 0.31925568 0.44127235 0.3194904 0.44135839 0.31971171
+		 0.44151002 0.31995928 0.4412705 0.32030204 0.44035336 0.31995651 0.44055304 0.31973845
+		 0.44082582 0.31980991 0.44105482 0.31936923 0.44107172 0.31956315 0.44122431 0.31972432
+		 0.44143558 0.31988358 0.44128239 0.32035393 0.44011271 0.32073677 0.44024915 0.31995338
+		 0.4403117 0.31967017 0.44059455 0.31953597 0.44091988 0.31967357 0.44112045 0.31902871
+		 0.44116578 0.31918067 0.44090736 0.31975999 0.44136882 0.31981489 0.44131607 0.32040352
+		 0.43986949 0.32083303 0.44001651 0.31994912 0.44006783 0.31960577 0.4403607 0.31940374
+		 0.44071251 0.31994352 0.43982095 0.31954643 0.44012362 0.31927752 0.44049695 0.31900308
+		 0.44073072 0.31948742 0.43988416 0.31916934 0.44026825 0.31906688 0.44004142 0.40286726
+		 -0.44392222 0.40310234 -0.44819808 0.40546203 -0.44808951 0.40524369 -0.44360083
+		 0.40312737 -0.4526037 0.40548891 -0.45260805 0.40781671 -0.44800189 0.40767539 -0.44336638
+		 0.40307873 -0.45703137 0.40545189 -0.45714006 0.40783381 -0.45260698 0.41017056 -0.44796431
+		 0.41014042 -0.44326979 0.40286702 -0.46136087 0.4052729 -0.4616721 0.40781325 -0.45721921
+		 0.41016984 -0.45260334 0.4125264 -0.44798744 0.41261336 -0.44332874 0.40772629 -0.46187794
+		 0.41016909 -0.45724237 0.41250587 -0.45259967 0.41488776 -0.44806659 0.41506678 -0.44353458
+		 0.41019922 -0.46193689 0.41252294 -0.45720476 0.41485077 -0.45259863 0.41726094 -0.44817528
+		 0.41747266 -0.44384578 0.41266426 -0.46184027 0.41487765 -0.45711714 0.41721228 -0.45260298
+		 0.41509593 -0.46160585 0.41723728 -0.4570086 0.41747239 -0.46128443 -0.1429736 0.0020462871
+		 -0.14320752 0.0063222051 -0.14556721 0.0062142611 -0.14535013 0.0017255545 -0.14323138
+		 0.010727823 -0.14559288 0.01073277 -0.14792195 0.0061272979 -0.14778186 0.0014917254
+		 -0.1431815 0.015155494 -0.14555463 0.015264809 -0.14793777 0.010732353 -0.15027575
+		 0.006090343 -0.15024689 0.0013958216 -0.14296864 0.019484907 -0.14537442 0.019796759
+		 -0.14791597 0.01534456 -0.1502738 0.010729373 -0.15263161 0.0061141253 -0.15271981
+		 0.0014554262 -0.14782777 0.020003259 -0.15027183 0.015368402 -0.15260983 0.010726333
+		 -0.15499297 0.0061938763 -0.15517317 0.0016618967 -0.15030071 0.020062894 -0.15262564
+		 0.015331388 -0.15495472 0.010725915 -0.15736608 0.0063031912 -0.15757895 0.0019738078
+		 -0.15276574 0.01996693 -0.15498038 0.015244424 -0.15731621 0.010730922 -0.15519747
+		 0.019733161 -0.15734006 0.01513654 -0.15757398 0.019412398;
+createNode polyAutoProj -n "polyAutoProj73";
+	rename -uid "D5BFF498-42D7-37DE-B710-0E98E1170360";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+	setAttr ".ix" -type "matrix" 0.033782226606050292 0 0 0 0 0.033782226606050292 0 0
+		 0 0 0.033782226606050292 0 16.76188909875593 0.3076541040556009 12.439724650240237 1;
+	setAttr ".s" -type "double3" 0.067564473347877296 0.067564473347877296 0.067564473347877296 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV134";
+	rename -uid "53153C76-4C9D-4B86-6588-D2BA6242E76C";
+	setAttr ".uopa" yes;
+	setAttr -s 482 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.0091876388 0.021459103 -0.011555612
+		 0.01772064 -0.015655398 0.016314387 -0.012068212 0.018358886 -0.0058397055 0.021622717
+		 -0.0064525008 0.016449869 -0.00074350834 0.0096626878 -0.004466176 0.011352897 -0.018675566
+		 0.013081253 -0.014306128 0.013248563 0.00014430285 0.022183061 -0.00078725815 0.018411994
+		 -0.0024570823 0.018054336 -0.00024712086 0.011508465 0.0041747689 0.0066385865 0.00092351437
+		 0.023029387 -0.0072980523 0.011951268 -0.020518005 0.0088562965 -0.015799344 0.0070949197
+		 -0.0018046498 0.012652814 0.009647727 0.01957655 0.010620594 0.016183794 2.1517277e-05
+		 0.009462595 0.0029373169 0.0025752187 0.011390865 0.0022383332 0.0014434457 0.020076245
+		 0.0078889728 0.020130754 -0.0092765093 0.011807442 -0.021106482 0.0044848919 -0.016487122
+		 0.00088149309 -0.0028612018 0.0058884621 0.010764837 0.010895371 0.012633085 0.013037026
+		 0.014672995 0.010953367 0.0014930964 0.012529284 0.0055058002 0.016947299 0.009221673
+		 0.012646496 -0.010337353 0.011332989 -0.020395458 0.00082343817 -0.016342998 -0.0044069886
+		 -0.0039177537 -0.00087594986 0.01007694 0.0046819448 0.015384138 0.0072920322 0.0034046173
+		 0.00058549643 0.0046350956 0.00080299377 0.0010220408 -0.00059083104 -0.00084382296
+		 -0.0040414929 0.0031907558 0.00917238 0.0043914914 0.0087956786 0.00047957897 -0.00066834688
+		 -0.010357559 0.010973871 -0.018355548 -0.0012601614 -0.01537019 -0.007799685 -0.0049351454
+		 -0.0066351891 0.0085837841 -0.0014716983 0.014795542 0.0029206276 0.0046148896 0.00044393539
+		 0.0030373931 -0.0035124123 0.0011198521 0.0013790429 -0.0053557158 -0.0033861995
+		 -0.0091270804 0.011191428 -0.014944136 -0.00086963177 -0.013611436 -0.008353889 -0.0058667064
+		 -0.010406196 0.0063458681 -0.0065820813 0.012953222 -0.001304388 0.003554225 -3.0577183e-05
+		 -0.0062021017 0.012445271 -0.010113955 0.0029811859 -0.011228263 -0.0051705241 -0.0066459179
+		 -0.011252522 0.0034651756 -0.0096822381 0.0099329948 -0.0045375824 0.0015755892 -0.00017440319
+		 -0.00036674738 0.015163064 -0.0068422556 0.010397792 -0.008913219 0.002604425 -0.0071659088
+		 -0.0082993507 0.00011718273 -0.0098457932 0.0058332086 -0.0059437752 -0.0012562871
+		 0.00042384863 -0.0072156191 -0.00075244904 -0.0032653809 -0.006277442 0.00073009729
+		 -0.0046730042 -0.0049789548 0.0021141768 -0.0087599754 0.015289247 -0.0067445636
+		 0.012367666 -0.0057439804 0.0023142099 -0.0054752827 0.00026834011 -0.0098972321
+		 0.005138278 -0.0048787594 0.015818357 -0.0086597204 0.0092015862 -0.017113328 0.0095384717
+		 0.020222127 0.0032813773 0.017102122 0.010919735 0.017464936 0.0074533224 0.021627724
+		 0.0010661036 0.017439783 0.0030565113 0.01595521 0.011564396 0.0075387955 0.014627606
+		 0.0060037971 0.010833189 0.016999364 0.0021090508 0.021698475 -0.0026881695 0.011240423
+		 -0.010261089 0.011793613 -0.010252878 0.013236523 -0.00060107931 0.014187098 0.0084882453
+		 0.0089248419 0.01549454 0.0089598894 -0.011255413 -0.0017898679 0.015008844 -0.0052871108
+		 0.011934549 0.0043854117 0.0050489455 0.015701294 -0.0041408986 0.020464897 -0.0071105659
+		 0.011070907 -0.010757044 0.010577679 -0.0077473475 0.012493074 0.00084700063 0.010056496
+		 0.012557056 0.0037292838 -0.013694305 0.0021786094 0.015123919 -0.0040974617 0.012382813
+		 -0.008846581 0.011057004 -0.0081387162 0.0068285912 0.0027289391 -0.0017412007 0.013596535
+		 -0.010310978 0.017974138 -0.011342987 0.0092912912 -0.01130487 0.010724008 0.0050169434
+		 0.0061854124 0.011479009 0.0016540289 0.010990672 0.0068569183 0.0054495409 0.0024255514
+		 0.0072886944 -0.01251626 0.0078606009 -0.010243416 0.00065849721 0.001072526 -0.008531332
+		 0.010744989 -0.01541692 0.014304459 -0.014539391 0.0065869093 -0.011446774 0.012960672
+		 -0.011642284 0.010883987 -0.0081061581 0.0093028545 0.0027687103 0.0085104108 0.005894281
+		 0.012457788 0.0022163987 -0.0011289716 0.0079644024 -0.015006959 0.0036281645 -0.011541545
+		 -0.0055914521 -0.00054591894 -0.014315575 0.0072478056 -0.018491209 0.0095553994
+		 -0.015865177 0.0030323267 -0.010771066 0.0090777278 -0.010938299 0.012341559 -0.0032989625
+		 0.020315468 -0.0024247169 -0.0038332939 0.0078224838 -0.016240597 -0.00079420209
+		 -0.012006998 -0.010935724 -0.0020808578 -0.018109977 0.003279388 -0.018606275 0.0038039088
+		 -0.014473051 -0.0013990402 -0.0089318752 -0.0056129694 0.0072746575 -0.016169786
+		 -0.00454849 -0.011644244 -0.014402121 -0.0034669042 -0.018976927 -0.00072747469 -0.014961362
+		 -0.0030524731 -0.0093766451 -0.0069998503 -0.0056987703 -0.0063356757 0.0067704916
+		 -0.01476419 -0.0067637563 -0.010497212 -0.015046775 -0.0045985579 -0.016039431 -0.0038449168
+		 -0.0062510669 -0.0068836808 -0.00018340349 -0.014857471 -0.0010576248 -0.005782485
+		 0.006778717 -0.011981845 -0.0065388978 -0.0087291598 -0.011970609 -0.0052660704 -0.0084993243
+		 -0.0035020113 0.0077730417 -0.007778585 -0.0028812885 -0.0070351362 -0.0043293834
+		 -0.0054259896 0.0046237707 -0.0036197901 0.0074559152 0.0017286539 0.010211945 -0.0051198006
+		 0.0042649806 -0.0075026751 0.0081599057 -0.0036022067 0.0027459562 -0.002714172 0.0041796267
+		 -0.0054519176 0.0068206489 -0.0068435073 0.0043304861 0.00043582916 0.00038470328
+		 -0.0015100241 0.0052978694 -0.0033916682 0.0090201497 -0.007276237 0.0071810335 -0.0083218962
+		 0.0041767955 -0.0041231662 0.0011339188 -0.0077136755 0.0019297302 -7.7471137e-05
+		 0.0059549361 -0.00070209801 0.010469332 -0.0049020052 0.010448173 -0.0074028969 0.0042132735
+		 -0.0077303052 0.00053007901 -0.0093366504 0.0027375817 -0.0042389184 -0.00056262314
+		 -0.0080237091 -0.00070154667 0.0014407337 0.0060385913 0.0022992939 0.010728911 -0.0012957156
+		 0.012922369 -0.0057186633 0.0085711628 -0.0099528432 0.00094464421 -0.0039200038
+		 -0.0022248179 -0.0077160597 -0.0037012696 0.0028662086 0.0055154413 0.0051357895
+		 0.0096365213 0.0030255169 0.01349996 -0.0017107874 0.012381904 -0.0053245574 0.0024643019
+		 -0.0060456693 -0.0027108863 -0.010427043 -0.0029867887 -0.0031536967 -0.0036814809
+		 -0.0064586848 -0.0066156983 0.0040253326 0.0044508725 0.0073303282 0.0073850751 0.0071376786
+		 0.011784405 0.0036098808 0.013413332 -0.0018813908 0.0080307685 -0.0104101 0.0062264502
+		 -0.011690065 0.0009444356 -0.0092023611 -0.0073874295 -0.0019945502 -0.0047460496
+		 -0.0042641312 -0.0088671148 0.0047916472 0.0029941946 0.0085877031 0.0044706613 0.010074012
+		 0.008156836 0.0087315366 0.01103615 0.0040352196 0.0095647648 -0.0016365796 -0.0010257941
+		 -0.0049221218 -0.0091367476 -0.011091679 -0.0050238073 -0.0062660277 -0.011015028
+		 -0.00056907535 -0.0052691996 -0.0014276505 -0.0099595189 0.0051105544 0.0013320148
+		 0.008895345 0.0014709383 0.011298701 0.0037562251 0.011963334 0.0057932138 0.0097738504
+		 0.0065572187 0.0043182671 0.0010929164 -0.00018125772 -0.015085178 -0.0027127862
+		 -0.024437435;
+	setAttr ".uvtk[250:481]" -0.011638552 0.0086005628 -0.011744648 0.0013165474
+		 -0.0078599006 -0.010266721 -0.0021538585 -0.012730569 0.00094911456 -0.0051855445
+		 0.0015737489 -0.0096999407 0.0049948245 -0.00036452711 0.0085853338 -0.0011603385
+		 0.010824494 -0.00017526746 0.01256172 -0.00017502904 0.012616299 -0.00054713339 0.010204144
+		 -0.0023983847 0.0044292957 -0.012680816 -0.0089021921 -0.0057877898 -0.0027382374
+		 -0.012643903 0.002167359 -0.012153 0.0023816824 -0.0045284927 0.0042633265 -0.008250773
+		 0.0044738501 -0.0019765794 0.0077151582 -0.0035611093 0.010208322 -0.0019681752 0.01128177
+		 -0.0054570436 0.012510195 -0.0078311712 0.01328609 -0.012087949 0.0091734603 -0.016330654
+		 -0.012414426 0.012857348 -0.0093324929 0.0031678081 -0.0031635761 -0.0087953508 0.0025824383
+		 -0.011612505 0.0057736561 -0.0096787512 0.0035858378 -0.0034102499 0.0063235834 -0.0060512722
+		 0.0091935545 -0.0034074187 0.011858125 -0.027296344 -0.010986477 0.028065771 -0.0083017945
+		 0.017100066 -0.0034466088 -0.00032350421 0.0027530417 -0.0072613358 0.0065903105
+		 -0.0078017414 0.0081478916 -0.006411612 -0.0035576522 0.013450235 0.0025082454 0.0017952323
+		 0.0061962008 -0.0016948581 0.0082745329 -0.003443867 0.0086019356 0.00023934245 0.0010529011
+		 0.015854597 0.0057937726 0.0099061728 0.0069173221 0.0034802854 0.0035844091 0.025206834
+		 -0.012227118 0.0069050193 -0.012386203 -0.00044471025 -0.011682034 -0.0068132281
+		 -0.012236238 -0.00079157948 -0.0095736384 -0.0076267123 -0.0084761679 -0.012119263
+		 -0.0097433627 -0.0092065334 -0.010933578 -0.0047659278 -0.01311022 0.011119992 -0.010059744
+		 0.0013412833 -0.0038442612 -0.010715932 -0.003362447 -0.014563709 -0.0068278015 -0.012882054
+		 -0.0069518983 -0.0084656775 -0.0081856549 -0.0055247843 -0.010896802 0.0045275986
+		 -0.01041317 -0.00080662966 -0.011735976 0.026350945 -0.0090854764 0.015285879 -0.0041843951
+		 -0.0022445917 0.002084285 -0.0092632473 0.0019685924 -0.013599247 -0.0027219355 -0.014649272
+		 -0.0047718287 -0.010749459 -0.0036002398 -0.0055633485 -0.0043545365 -0.0040934682
+		 -0.0084623992 -0.0025072098 -0.0043532252 0.011528909 0.0017834604 -0.00022032857
+		 0.0055600107 -0.0037733316 0.0060049295 -0.0098501742 0.0016076863 -0.014123052 -0.0019397736
+		 -0.011876941 -0.0024485886 -0.0066441894 3.5345554e-05 -0.001529485 -0.0046580434
+		 -0.0024225414 -0.0097413659 0.00099667907 -0.0081169009 0.0001309514 0.00027155876
+		 0.013825923 0.0051033497 0.0078018904 0.0063378513 0.0013376474 0.0077362061 -0.0055437386
+		 0.0052367449 -0.011695594 0.0010675192 -0.011652231 -0.0010253787 -0.0071851313 -0.004524976
+		 -0.00072257221 -0.00867033 0.0024283826 -0.0072108507 0.0025268942 0.0028401315 0.02307862
+		 0.0076474845 -0.0084663928 0.0037730336 -0.010234445 0.00049591064 -0.0071191341
+		 -0.0039865375 0.00088717043 -0.0075767636 0.0054074526 -0.005787462 0.005001083 0.0081258714
+		 -0.0018949211 0.0087409616 -0.0054873526 0.0058581531 -0.0080600381 0.0019366741
+		 -0.0064778328 -0.0030826926 0.0023130625 -0.0076654553 0.0024847984 -0.0080552697
+		 -0.0011640638 -0.0051660836 0.0086366385 -0.0037023425 0.0071755201 0.0072815418
+		 -0.0055858493 0.0031533837 -0.0053720176 -0.001865983 0.0034188628 -0.0059342384
+		 0.0067911819 -0.0015369952 0.01106409 -0.00099685788 0.0085932612 0.0098119974 -0.004055649
+		 0.008187592 -0.0031899214 0.0040572286 -0.0039461255 -0.00042521954 0.0040601641
+		 -0.005489409 0.00071437657 -0.00626719 -0.00439661 -0.0018979013 0.010540247 0.0027926266
+		 0.011590339 0.0020104647 0.0088180006 0.010483801 -0.0022523403 0.0085330606 -0.0005517453
+		 0.0045956373 -0.0023363829 0.0010960698 0.0041261762 -0.0020136237 0.0062042847 0.0034331083
+		 0.01150474 0.0068984628 0.0098230988 0.0048425198 0.0076905042 0.011004239 0.0017069727
+		 0.008256346 0.0024658293 0.0047287345 -0.00063642859 0.0025192499 0.0035852194 -0.0017127991
+		 -0.0028386358 -0.0050326586 -0.010860864 0.0039149523 0.0076569393 0.008546859 0.009060286
+		 0.0098139942 0.0061475635 0.0070225894 0.0054067373 0.010967433 -0.0075865686 0.012306899
+		 -0.0022673756 0.0044252276 0.001034528 0.0036709011 0.0025044084 -0.00020086765 -0.016884897
+		 -0.0027694702 -0.026137577 0.0042550862 -0.00081436895 0.0096443295 0.0045677647
+		 0.011752725 0.003754288 0.0044239163 -0.014587874 0.010130435 -0.0044002365 0.012456894
+		 -0.0026142448 0.012297839 -0.0099639669 0.0091561675 -0.018344825 0.013180912 -0.014178947
+		 0.011806637 -0.029409895 0.00019824505 -0.0068815351 -0.0024657845 -0.0018187165
+		 -0.0033171773 0.0015894771 -0.00095963478 -0.0026455522 -0.0018619299 -0.0014129281
+		 -0.0027163029 -0.00081503391 -0.0022209287 0.003544271 -0.0010831952 -0.00043269992
+		 -0.00011610985 -0.00068324804 -0.001126647 -0.0030258894 -0.0014489889 -0.00030422211
+		 -0.00015452504 0.0044267774 -0.00074487925 0.00040671229 0.0041216612 0.0051066279
+		 0.0026520491 0.0017883182 -9.5546246e-05 -0.0040514469 0.00089898705 0.00016438961
+		 0.00189358 0.0043801665 -0.00049424171 9.6380711e-05 0.0022922754 0.00023233891 0.001952529
+		 -0.0040981174 0.0032470226 0.00063300133 0.0029245615 0.0033546686 -0.00085410476
+		 -0.0014596581 0.0025428832 -7.7962875e-05 0.0040189624 -0.003215611 0.0045142174
+		 0.0011437535 0.0019140542 0.0010119677 -0.0023237467 -0.0047778487 0.0028811991 0.00076138973
+		 0.0051151216 -0.0012606978 0.0036598742 0.0017417073 0.0027575791 0.0029742718 0.0042637587
+		 0.0021474361 0.0015996993 0.0072103143 -0.00099633634 0.0049278736 0.0029400438 -7.134676e-05
+		 0.0037625432 -0.0027773976 6.9364905e-05 0.0013993382 0.0036468059 -0.0004760623
+		 0.0045058578 -0.00037151575 0.0026437789 -0.004031539 0.00012683868 -8.98242e-05
+		 0.0032180697 -0.0012267232 0.0042643398 0.0018217564 0.0032417774 -0.00018471479
+		 0.00056961179 -0.00421381 -0.00023660064 -0.00019580126 0.00026792288 -0.0070859194
+		 0.0018336028 -0.0030524433 0.0032603592 0.0035496354 0.00089609623 4.1604042e-05
+		 -0.0014681518 -0.0034663677 -0.00046610832 0.00085008144 0.0022583008 -0.00076687336
+		 0.0012226105 0.0042970181 -0.0014495552 0.00026792288 -0.0024721026 -0.0017385483
+		 -4.1395426e-05 0.0031356812 0.0020288229 0.00027900934 -0.00085157156 0.0041148067
+		 -0.0027136505 0.00045472383 -0.0014258623 0.0013099313 0.0015242994 0.0071691275
+		 0.0016653836 0.00017306209 -0.0019703209 0.0028606057 -0.0018545985 0.00055927038
+		 0.0017228723 -0.0013160706 -0.0011478364 0.00015455484 0.0027885437 -0.0048446655;
+createNode polyLayoutUV -n "polyLayoutUV76";
+	rename -uid "3EE8E7AE-4AC2-4508-1B5A-8B9D69EDC829";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV135";
+	rename -uid "604FC825-4A51-631F-0912-ABB42576D6E2";
+	setAttr ".uopa" yes;
+	setAttr -s 482 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.59954315 -0.43642622 -0.598351 -0.43649271
+		 -0.59826386 -0.43579698 -0.59951448 -0.43576545 -0.59959614 -0.4370912 -0.59848213
+		 -0.43718749 -0.5971458 -0.436647 -0.59698516 -0.43588763 -0.59822345 -0.43510079
+		 -0.59950882 -0.43510777 -0.60072768 -0.43642104 -0.60075188 -0.43577433 -0.59967911
+		 -0.43776008 -0.5986492 -0.43788499 -0.59737086 -0.43737817 -0.60070658 -0.4370715
+		 -0.59690106 -0.43511316 -0.59823036 -0.43440598 -0.59952545 -0.43445224 -0.60077775
+		 -0.43513012 -0.60190815 -0.43648359 -0.60198629 -0.43582961 -0.59980726 -0.43844464
+		 -0.59892893 -0.43857771 -0.59763008 -0.43806541 -0.60069072 -0.43772709 -0.60181218
+		 -0.43713939 -0.5968979 -0.4343352 -0.59828401 -0.43371451 -0.59956372 -0.43379813
+		 -0.60080445 -0.4344871 -0.60204506 -0.43517607 -0.60308611 -0.43662614 -0.60322624
+		 -0.43594605 -0.6006844 -0.4383893 -0.60169816 -0.43779886 -0.60290951 -0.43730053
+		 -0.59697539 -0.43356463 -0.59838259 -0.43302819 -0.59962261 -0.4331446 -0.60083109
+		 -0.43384412 -0.60208333 -0.43452197 -0.60332477 -0.4352597 -0.60425574 -0.43688893
+		 -0.60447901 -0.43616265 -0.60068852 -0.43906558 -0.60002565 -0.43913046 -0.60155588
+		 -0.43846461 -0.60270339 -0.43797284 -0.60397857 -0.43758008 -0.59712982 -0.43281153
+		 -0.59852272 -0.43234804 -0.59970069 -0.43249062 -0.60085702 -0.43319988 -0.60210001
+		 -0.43386644 -0.60337847 -0.43456823 -0.60463345 -0.43540961 -0.60134727 -0.43913034
+		 -0.60241461 -0.43863013 -0.60368055 -0.43822861 -0.5973531 -0.43208525 -0.59869933
+		 -0.43167368 -0.59979665 -0.43183482 -0.60088116 -0.43255317 -0.60209435 -0.43320876
+		 -0.60338545 -0.43387341 -0.60471094 -0.43463901 -0.59763026 -0.43139413 -0.59890544
+		 -0.43100137 -0.59991062 -0.43117535 -0.60090226 -0.43190271 -0.60206568 -0.43254796
+		 -0.60334504 -0.43317723 -0.60470772 -0.43386105 -0.59792829 -0.43074563 -0.59919423
+		 -0.43034407 -0.60005295 -0.4305096 -0.60091811 -0.43124714 -0.60201269 -0.43188301
+		 -0.60325783 -0.4324815 -0.60462368 -0.43308657 -0.60092443 -0.43058491 -0.60192972
+		 -0.43121412 -0.6031267 -0.43178675 -0.60446304 -0.43232724 -0.60026157 -0.42984387
+		 -0.60092032 -0.42990863 -0.60180163 -0.43052956 -0.60295963 -0.43108922 -0.60423791
+		 -0.43159604 -0.60158312 -0.42984375 -0.60267991 -0.4303965 -0.60397875 -0.4309088
+		 -0.19197926 0.012116805 -0.19080132 0.012259595 -0.19087958 0.01291357 -0.19211954
+		 0.012796894 -0.19180256 0.01144246 -0.19070524 0.01160381 -0.18962085 0.012322374
+		 -0.18964517 0.012969092 -0.19093853 0.01356709 -0.19221821 0.013483211 -0.19314882
+		 0.011853777 -0.19337228 0.012580022 -0.1915963 0.010770194 -0.1905911 0.010944359
+		 -0.18959963 0.011671916 -0.19287154 0.011162698 -0.18843633 0.012317404 -0.18840778
+		 0.012978211 -0.18967116 0.013613313 -0.19097692 0.014221206 -0.19227201 0.014174685
+		 -0.19352683 0.013333067 -0.19130737 0.010112957 -0.1904487 0.010278629 -0.18958366
+		 0.011016339 -0.1925734 0.010514244 -0.1884892 0.011652447 -0.18724412 0.012251168
+		 -0.18715709 0.012946919 -0.18840224 0.013635904 -0.18969798 0.014256299 -0.19099373
+		 0.014876723 -0.1922791 0.014869496 -0.19360447 0.014103636 -0.18957716 0.010354124
+		 -0.18857205 0.010983538 -0.18737513 0.011556372 -0.18603891 0.012097135 -0.18587846
+		 0.012856513 -0.18711686 0.013643101 -0.18841904 0.014291406 -0.1897248 0.014899284
+		 -0.19098818 0.015534401 -0.19223884 0.015565693 -0.19360143 0.014881611 -0.19023991
+		 0.0096129645 -0.18958122 0.0096778497 -0.18870002 0.010298954 -0.18754208 0.010858834
+		 -0.18626392 0.011365891 -0.18579453 0.013631016 -0.18712395 0.014337927 -0.18845743
+		 0.014945507 -0.18975079 0.01554352 -0.19095963 0.016195208 -0.19215181 0.016261429
+		 -0.19351754 0.015656114 -0.18891835 0.0096130986 -0.18782169 0.010166051 -0.18652296
+		 0.010678604 -0.18579149 0.014408976 -0.18717772 0.015029401 -0.18851638 0.015599042
+		 -0.18977511 0.016190231 -0.19090676 0.016860157 -0.19202083 0.01695624 -0.19335705
+		 0.016415477 -0.1858691 0.015179545 -0.18727642 0.015715718 -0.18859464 0.016253024
+		 -0.18979633 0.016840696 -0.19082391 0.01752907 -0.19185385 0.017653763 -0.19313204
+		 0.017146707 -0.18602365 0.01593259 -0.18741667 0.016395807 -0.18869072 0.016908795
+		 -0.1898123 0.017496258 -0.19069594 0.01821366 -0.19157428 0.018346548 -0.19287303
+		 0.017834008 -0.18624711 0.016658843 -0.1875934 0.017070144 -0.18880486 0.01756826
+		 -0.18981874 0.018158495 -0.18652439 0.017349899 -0.18779963 0.017742425 -0.18894726
+		 0.018233985 -0.18981475 0.01883477 -0.19047761 0.0188995 -0.18682253 0.017998368
+		 -0.1880886 0.018399656 -0.18915606 0.018899649 0.24515656 0.42868388 0.24512157 0.42861727
+		 0.24531853 0.428471 0.24539039 0.42860502 0.24492192 0.42875922 0.2450671 0.42856497
+		 0.24520862 0.42836761 0.24551092 0.42831624 0.24562387 0.4285177 0.2451684 0.4287582
+		 0.24541505 0.42875761 0.24499869 0.42853177 0.2450725 0.42830324 0.2453447 0.42816475
+		 0.24569918 0.42814904 0.24585292 0.42841119 0.24566244 0.42875701 0.24515581 0.42883265
+		 0.24538971 0.42890984 0.24492304 0.42852065 0.24492307 0.42828202 0.24514227 0.42807275
+		 0.24547388 0.42795417 0.24562445 0.42899585 0.24512015 0.42889941 0.24531698 0.42904392
+		 0.24484728 0.42853251 0.2447736 0.42830497 0.24492212 0.42804301 0.2452071 0.42783961
+		 0.24559639 0.42773384 0.24587697 0.42796853 0.24551092 0.42919642 0.24506523 0.42895216
+		 0.24520659 0.42914778 0.24477863 0.42856628 0.24463728 0.42837065 0.24470212 0.42807594
+		 0.24492012 0.42780316 0.24526563 0.42760345 0.24585146 0.42910233 0.24569955 0.42936081
+		 0.24534421 0.42934829 0.24499658 0.42898589 0.24507028 0.4292134 0.24472371 0.428619
+		 0.24452689 0.42847452 0.24449967 0.42817014 0.24463376 0.42784479 0.24491693 0.42756182
+		 0.24531743 0.42736274 0.24570031 0.42749912 0.24547647 0.42955562 0.24514177 0.42944247
+		 0.24492083 0.42899773 0.24492079 0.42923641 0.24468806 0.42868578 0.24445413 0.4286086
+		 0.24433295 0.42832199 0.24436741 0.42796281 0.24456933 0.42761087 0.24491264 0.42731795
+		 0.24536701 0.42711955 0.24579653 0.42726648;
+	setAttr ".uvtk[250:481]" 0.24587715 0.42953742 0.24560276 0.42977116 0.2452101
+		 0.42967364 0.24492173 0.4294754 0.24484515 0.42898667 0.24477138 0.42921513 0.24467546
+		 0.4287602 0.24442881 0.4287608 0.24421942 0.42852259 0.24414432 0.4281576 0.24424112
+		 0.42774725 0.24450997 0.42737383 0.24490701 0.42707109 0.24527454 0.42990753 0.24492374
+		 0.42971525 0.24470161 0.42944565 0.24477679 0.42895347 0.24463525 0.42915079 0.24468729
+		 0.42883456 0.2444535 0.42891341 0.24418141 0.42876136 0.24399245 0.42841607 0.24396671
+		 0.42798102 0.24413294 0.42751852 0.2444509 0.42713436 0.24571094 0.42999992 0.24533391
+		 0.43014461 0.24492693 0.42995659 0.24463677 0.4296788 0.24449919 0.42935362 0.24472229
+		 0.42890114 0.24452533 0.42904741 0.24422 0.42900074 0.24403043 0.42729172 0.24581346
+		 0.43022668 0.24539296 0.43038407 0.24493124 0.43020043 0.24457824 0.42991495 0.24437001
+		 0.42956424 0.24433295 0.42920217 0.24493685 0.43044734 0.24452643 0.43015566 0.24424747
+		 0.4297846 0.24414468 0.42936936 0.24399094 0.42910725 0.24447685 0.43039888 0.24414355
+		 0.43001926 0.24396686 0.42954987 0.24404734 0.43025196 0.32091326 0.44228742 0.32063878
+		 0.44252115 0.32051253 0.44230556 0.32073569 0.44211078 0.32031059 0.44265747 0.32024619
+		 0.44242358 0.32038033 0.44209823 0.32054704 0.44194642 0.32074696 0.44274992 0.32036987
+		 0.44289452 0.31996292 0.44270644 0.31995982 0.44246507 0.32017785 0.44219232 0.32024279
+		 0.44189769 0.32035318 0.44179383 0.32088763 0.44185233 0.32066065 0.44174579 0.32084942
+		 0.44297671 0.32042891 0.44313398 0.31996718 0.44295031 0.31961426 0.44266474 0.31967282
+		 0.44242859 0.31995782 0.44222525 0.32010645 0.44196329 0.32010141 0.44170201 0.32015634
+		 0.44164932 0.3204259 0.44165978 0.31997278 0.44319719 0.31956244 0.44290543 0.31928349
+		 0.4425343 0.31940606 0.44231403 0.3197377 0.44219548 0.31995696 0.44198623 0.32003275
+		 0.44173574 0.31995818 0.44150907 0.32019204 0.4415825 0.32069868 0.44150701 0.32045129
+		 0.44150758 0.31951278 0.44314864 0.31917953 0.44276902 0.31900299 0.4422996 0.31918079
+		 0.44211906 0.31953532 0.44210342 0.31980753 0.44196498 0.31995702 0.44174764 0.32020462
+		 0.44150814 0.32066011 0.44126767 0.32042661 0.44135493 0.31908327 0.44300163 0.31936911
+		 0.44195193 0.31967139 0.44190058 0.31988138 0.44173646 0.32019281 0.44143379 0.32054722
+		 0.44106621 0.32035479 0.44122088 0.3190271 0.44185689 0.31925619 0.4417505 0.31956148
+		 0.44179723 0.31981295 0.44170332 0.32015783 0.44136709 0.32073551 0.44089904 0.32088923
+		 0.44116122 0.32038099 0.44091469 0.32024488 0.44111753 0.31948972 0.44166321 0.31975847
+		 0.44165099 0.32010338 0.44131482 0.32051021 0.44070414 0.32017863 0.44082266 0.3201088
+		 0.44105315 0.31921762 0.44151109 0.31946501 0.44151059 0.31972352 0.44158438 0.32003498
+		 0.44128168 0.32063282 0.44048384 0.32091337 0.44071853 0.32024345 0.44058955 0.31995848
+		 0.44079286 0.3199594 0.44103187 0.31925568 0.44127235 0.3194904 0.44135839 0.31971171
+		 0.44151002 0.31995928 0.4412705 0.32030204 0.44035336 0.31995651 0.44055304 0.31973845
+		 0.44082582 0.31980991 0.44105482 0.31936923 0.44107172 0.31956315 0.44122431 0.31972432
+		 0.44143558 0.31988358 0.44128239 0.32035393 0.44011271 0.32073677 0.44024915 0.31995338
+		 0.4403117 0.31967017 0.44059455 0.31953597 0.44091988 0.31967357 0.44112045 0.31902871
+		 0.44116578 0.31918067 0.44090736 0.31975999 0.44136882 0.31981489 0.44131607 0.32040352
+		 0.43986949 0.32083303 0.44001651 0.31994912 0.44006783 0.31960577 0.4403607 0.31940374
+		 0.44071251 0.31994352 0.43982095 0.31954643 0.44012362 0.31927752 0.44049695 0.31900308
+		 0.44073072 0.31948742 0.43988416 0.31916934 0.44026825 0.31906688 0.44004142 0.40286726
+		 -0.44392222 0.40310234 -0.44819808 0.40546203 -0.44808951 0.40524369 -0.44360083
+		 0.40312737 -0.4526037 0.40548891 -0.45260805 0.40781671 -0.44800189 0.40767539 -0.44336638
+		 0.40307873 -0.45703137 0.40545189 -0.45714006 0.40783381 -0.45260698 0.41017056 -0.44796431
+		 0.41014042 -0.44326979 0.40286702 -0.46136087 0.4052729 -0.4616721 0.40781325 -0.45721921
+		 0.41016984 -0.45260334 0.4125264 -0.44798744 0.41261336 -0.44332874 0.40772629 -0.46187794
+		 0.41016909 -0.45724237 0.41250587 -0.45259967 0.41488776 -0.44806659 0.41506678 -0.44353458
+		 0.41019922 -0.46193689 0.41252294 -0.45720476 0.41485077 -0.45259863 0.41726094 -0.44817528
+		 0.41747266 -0.44384578 0.41266426 -0.46184027 0.41487765 -0.45711714 0.41721228 -0.45260298
+		 0.41509593 -0.46160585 0.41723728 -0.4570086 0.41747239 -0.46128443 -0.1429736 0.0020462871
+		 -0.14320752 0.0063222051 -0.14556721 0.0062142611 -0.14535013 0.0017255545 -0.14323138
+		 0.010727823 -0.14559288 0.01073277 -0.14792195 0.0061272979 -0.14778186 0.0014917254
+		 -0.1431815 0.015155494 -0.14555463 0.015264809 -0.14793777 0.010732353 -0.15027575
+		 0.006090343 -0.15024689 0.0013958216 -0.14296864 0.019484907 -0.14537442 0.019796759
+		 -0.14791597 0.01534456 -0.1502738 0.010729373 -0.15263161 0.0061141253 -0.15271981
+		 0.0014554262 -0.14782777 0.020003259 -0.15027183 0.015368402 -0.15260983 0.010726333
+		 -0.15499297 0.0061938763 -0.15517317 0.0016618967 -0.15030071 0.020062894 -0.15262564
+		 0.015331388 -0.15495472 0.010725915 -0.15736608 0.0063031912 -0.15757895 0.0019738078
+		 -0.15276574 0.01996693 -0.15498038 0.015244424 -0.15731621 0.010730922 -0.15519747
+		 0.019733161 -0.15734006 0.01513654 -0.15757398 0.019412398;
+createNode polyAutoProj -n "polyAutoProj74";
+	rename -uid "C9B5EBE3-4AC8-1C78-AE04-7D8AE5A3BBF0";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+	setAttr ".ix" -type "matrix" 0.033782226606050292 0 0 0 0 0.033782226606050292 0 0
+		 0 0 0.033782226606050292 0 16.846652578031598 0.3076541040556009 12.439724650240237 1;
+	setAttr ".s" -type "double3" 0.067564473347877296 0.067564473347877296 0.067564473347877296 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV136";
+	rename -uid "17CE9C3B-4BE6-DBE7-9042-0BAD8BC5FB75";
+	setAttr ".uopa" yes;
+	setAttr -s 482 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.0091876388 0.021459103 -0.011555612
+		 0.01772064 -0.015655398 0.016314387 -0.012068212 0.018358886 -0.0058397055 0.021622717
+		 -0.0064525008 0.016449869 -0.00074350834 0.0096626878 -0.004466176 0.011352897 -0.018675566
+		 0.013081253 -0.014306128 0.013248563 0.00014430285 0.022183061 -0.00078725815 0.018411994
+		 -0.0024570823 0.018054336 -0.00024712086 0.011508465 0.0041747689 0.0066385865 0.00092351437
+		 0.023029387 -0.0072980523 0.011951268 -0.020518005 0.0088562965 -0.015799344 0.0070949197
+		 -0.0018046498 0.012652814 0.009647727 0.01957655 0.010620594 0.016183794 2.1517277e-05
+		 0.009462595 0.0029373169 0.0025752187 0.011390865 0.0022383332 0.0014434457 0.020076245
+		 0.0078889728 0.020130754 -0.0092765093 0.011807442 -0.021106482 0.0044848919 -0.016487122
+		 0.00088149309 -0.0028612018 0.0058884621 0.010764837 0.010895371 0.012633085 0.013037026
+		 0.014672995 0.010953367 0.0014930964 0.012529284 0.0055058002 0.016947299 0.009221673
+		 0.012646496 -0.010337353 0.011332989 -0.020395458 0.00082343817 -0.016342998 -0.0044069886
+		 -0.0039177537 -0.00087594986 0.01007694 0.0046819448 0.015384138 0.0072920322 0.0034046173
+		 0.00058549643 0.0046350956 0.00080299377 0.0010220408 -0.00059083104 -0.00084382296
+		 -0.0040414929 0.0031907558 0.00917238 0.0043914914 0.0087956786 0.00047957897 -0.00066834688
+		 -0.010357559 0.010973871 -0.018355548 -0.0012601614 -0.01537019 -0.007799685 -0.0049351454
+		 -0.0066351891 0.0085837841 -0.0014716983 0.014795542 0.0029206276 0.0046148896 0.00044393539
+		 0.0030373931 -0.0035124123 0.0011198521 0.0013790429 -0.0053557158 -0.0033861995
+		 -0.0091270804 0.011191428 -0.014944136 -0.00086963177 -0.013611436 -0.008353889 -0.0058667064
+		 -0.010406196 0.0063458681 -0.0065820813 0.012953222 -0.001304388 0.003554225 -3.0577183e-05
+		 -0.0062021017 0.012445271 -0.010113955 0.0029811859 -0.011228263 -0.0051705241 -0.0066459179
+		 -0.011252522 0.0034651756 -0.0096822381 0.0099329948 -0.0045375824 0.0015755892 -0.00017440319
+		 -0.00036674738 0.015163064 -0.0068422556 0.010397792 -0.008913219 0.002604425 -0.0071659088
+		 -0.0082993507 0.00011718273 -0.0098457932 0.0058332086 -0.0059437752 -0.0012562871
+		 0.00042384863 -0.0072156191 -0.00075244904 -0.0032653809 -0.006277442 0.00073009729
+		 -0.0046730042 -0.0049789548 0.0021141768 -0.0087599754 0.015289247 -0.0067445636
+		 0.012367666 -0.0057439804 0.0023142099 -0.0054752827 0.00026834011 -0.0098972321
+		 0.005138278 -0.0048787594 0.015818357 -0.0086597204 0.0092015862 -0.017113328 0.0095384717
+		 0.020222127 0.0032813773 0.017102122 0.010919735 0.017464936 0.0074533224 0.021627724
+		 0.0010661036 0.017439783 0.0030565113 0.01595521 0.011564396 0.0075387955 0.014627606
+		 0.0060037971 0.010833189 0.016999364 0.0021090508 0.021698475 -0.0026881695 0.011240423
+		 -0.010261089 0.011793613 -0.010252878 0.013236523 -0.00060107931 0.014187098 0.0084882453
+		 0.0089248419 0.01549454 0.0089598894 -0.011255413 -0.0017898679 0.015008844 -0.0052871108
+		 0.011934549 0.0043854117 0.0050489455 0.015701294 -0.0041408986 0.020464897 -0.0071105659
+		 0.011070907 -0.010757044 0.010577679 -0.0077473475 0.012493074 0.00084700063 0.010056496
+		 0.012557056 0.0037292838 -0.013694305 0.0021786094 0.015123919 -0.0040974617 0.012382813
+		 -0.008846581 0.011057004 -0.0081387162 0.0068285912 0.0027289391 -0.0017412007 0.013596535
+		 -0.010310978 0.017974138 -0.011342987 0.0092912912 -0.01130487 0.010724008 0.0050169434
+		 0.0061854124 0.011479009 0.0016540289 0.010990672 0.0068569183 0.0054495409 0.0024255514
+		 0.0072886944 -0.01251626 0.0078606009 -0.010243416 0.00065849721 0.001072526 -0.008531332
+		 0.010744989 -0.01541692 0.014304459 -0.014539391 0.0065869093 -0.011446774 0.012960672
+		 -0.011642284 0.010883987 -0.0081061581 0.0093028545 0.0027687103 0.0085104108 0.005894281
+		 0.012457788 0.0022163987 -0.0011289716 0.0079644024 -0.015006959 0.0036281645 -0.011541545
+		 -0.0055914521 -0.00054591894 -0.014315575 0.0072478056 -0.018491209 0.0095553994
+		 -0.015865177 0.0030323267 -0.010771066 0.0090777278 -0.010938299 0.012341559 -0.0032989625
+		 0.020315468 -0.0024247169 -0.0038332939 0.0078224838 -0.016240597 -0.00079420209
+		 -0.012006998 -0.010935724 -0.0020808578 -0.018109977 0.003279388 -0.018606275 0.0038039088
+		 -0.014473051 -0.0013990402 -0.0089318752 -0.0056129694 0.0072746575 -0.016169786
+		 -0.00454849 -0.011644244 -0.014402121 -0.0034669042 -0.018976927 -0.00072747469 -0.014961362
+		 -0.0030524731 -0.0093766451 -0.0069998503 -0.0056987703 -0.0063356757 0.0067704916
+		 -0.01476419 -0.0067637563 -0.010497212 -0.015046775 -0.0045985579 -0.016039431 -0.0038449168
+		 -0.0062510669 -0.0068836808 -0.00018340349 -0.014857471 -0.0010576248 -0.005782485
+		 0.006778717 -0.011981845 -0.0065388978 -0.0087291598 -0.011970609 -0.0052660704 -0.0084993243
+		 -0.0035020113 0.0077730417 -0.007778585 -0.0028812885 -0.0070351362 -0.0043293834
+		 -0.0054259896 0.0046237707 -0.0036197901 0.0074559152 0.0017286539 0.010211945 -0.0051198006
+		 0.0042649806 -0.0075026751 0.0081599057 -0.0036022067 0.0027459562 -0.002714172 0.0041796267
+		 -0.0054519176 0.0068206489 -0.0068435073 0.0043304861 0.00043582916 0.00038470328
+		 -0.0015100241 0.0052978694 -0.0033916682 0.0090201497 -0.007276237 0.0071810335 -0.0083218962
+		 0.0041767955 -0.0041231662 0.0011339188 -0.0077136755 0.0019297302 -7.7471137e-05
+		 0.0059549361 -0.00070209801 0.010469332 -0.0049020052 0.010448173 -0.0074028969 0.0042132735
+		 -0.0077303052 0.00053007901 -0.0093366504 0.0027375817 -0.0042389184 -0.00056262314
+		 -0.0080237091 -0.00070154667 0.0014407337 0.0060385913 0.0022992939 0.010728911 -0.0012957156
+		 0.012922369 -0.0057186633 0.0085711628 -0.0099528432 0.00094464421 -0.0039200038
+		 -0.0022248179 -0.0077160597 -0.0037012696 0.0028662086 0.0055154413 0.0051357895
+		 0.0096365213 0.0030255169 0.01349996 -0.0017107874 0.012381904 -0.0053245574 0.0024643019
+		 -0.0060456693 -0.0027108863 -0.010427043 -0.0029867887 -0.0031536967 -0.0036814809
+		 -0.0064586848 -0.0066156983 0.0040253326 0.0044508725 0.0073303282 0.0073850751 0.0071376786
+		 0.011784405 0.0036098808 0.013413332 -0.0018813908 0.0080307685 -0.0104101 0.0062264502
+		 -0.011690065 0.0009444356 -0.0092023611 -0.0073874295 -0.0019945502 -0.0047460496
+		 -0.0042641312 -0.0088671148 0.0047916472 0.0029941946 0.0085877031 0.0044706613 0.010074012
+		 0.008156836 0.0087315366 0.01103615 0.0040352196 0.0095647648 -0.0016365796 -0.0010257941
+		 -0.0049221218 -0.0091367476 -0.011091679 -0.0050238073 -0.0062660277 -0.011015028
+		 -0.00056907535 -0.0052691996 -0.0014276505 -0.0099595189 0.0051105544 0.0013320148
+		 0.008895345 0.0014709383 0.011298701 0.0037562251 0.011963334 0.0057932138 0.0097738504
+		 0.0065572187 0.0043182671 0.0010929164 -0.00018125772 -0.015085178 -0.0027127862
+		 -0.024437435;
+	setAttr ".uvtk[250:481]" -0.011638552 0.0086005628 -0.011744648 0.0013165474
+		 -0.0078599006 -0.010266721 -0.0021538585 -0.012730569 0.00094911456 -0.0051855445
+		 0.0015737489 -0.0096999407 0.0049948245 -0.00036452711 0.0085853338 -0.0011603385
+		 0.010824494 -0.00017526746 0.01256172 -0.00017502904 0.012616299 -0.00054713339 0.010204144
+		 -0.0023983847 0.0044292957 -0.012680816 -0.0089021921 -0.0057877898 -0.0027382374
+		 -0.012643903 0.002167359 -0.012153 0.0023816824 -0.0045284927 0.0042633265 -0.008250773
+		 0.0044738501 -0.0019765794 0.0077151582 -0.0035611093 0.010208322 -0.0019681752 0.01128177
+		 -0.0054570436 0.012510195 -0.0078311712 0.01328609 -0.012087949 0.0091734603 -0.016330654
+		 -0.012414426 0.012857348 -0.0093324929 0.0031678081 -0.0031635761 -0.0087953508 0.0025824383
+		 -0.011612505 0.0057736561 -0.0096787512 0.0035858378 -0.0034102499 0.0063235834 -0.0060512722
+		 0.0091935545 -0.0034074187 0.011858125 -0.027296344 -0.010986477 0.028065771 -0.0083017945
+		 0.017100066 -0.0034466088 -0.00032350421 0.0027530417 -0.0072613358 0.0065903105
+		 -0.0078017414 0.0081478916 -0.006411612 -0.0035576522 0.013450235 0.0025082454 0.0017952323
+		 0.0061962008 -0.0016948581 0.0082745329 -0.003443867 0.0086019356 0.00023934245 0.0010529011
+		 0.015854597 0.0057937726 0.0099061728 0.0069173221 0.0034802854 0.0035844091 0.025206834
+		 -0.012227118 0.0069050193 -0.012386203 -0.00044471025 -0.011682034 -0.0068132281
+		 -0.012236238 -0.00079157948 -0.0095736384 -0.0076267123 -0.0084761679 -0.012119263
+		 -0.0097433627 -0.0092065334 -0.010933578 -0.0047659278 -0.01311022 0.011119992 -0.010059744
+		 0.0013412833 -0.0038442612 -0.010715932 -0.003362447 -0.014563709 -0.0068278015 -0.012882054
+		 -0.0069518983 -0.0084656775 -0.0081856549 -0.0055247843 -0.010896802 0.0045275986
+		 -0.01041317 -0.00080662966 -0.011735976 0.026350945 -0.0090854764 0.015285879 -0.0041843951
+		 -0.0022445917 0.002084285 -0.0092632473 0.0019685924 -0.013599247 -0.0027219355 -0.014649272
+		 -0.0047718287 -0.010749459 -0.0036002398 -0.0055633485 -0.0043545365 -0.0040934682
+		 -0.0084623992 -0.0025072098 -0.0043532252 0.011528909 0.0017834604 -0.00022032857
+		 0.0055600107 -0.0037733316 0.0060049295 -0.0098501742 0.0016076863 -0.014123052 -0.0019397736
+		 -0.011876941 -0.0024485886 -0.0066441894 3.5345554e-05 -0.001529485 -0.0046580434
+		 -0.0024225414 -0.0097413659 0.00099667907 -0.0081169009 0.0001309514 0.00027155876
+		 0.013825923 0.0051033497 0.0078018904 0.0063378513 0.0013376474 0.0077362061 -0.0055437386
+		 0.0052367449 -0.011695594 0.0010675192 -0.011652231 -0.0010253787 -0.0071851313 -0.004524976
+		 -0.00072257221 -0.00867033 0.0024283826 -0.0072108507 0.0025268942 0.0028401315 0.02307862
+		 0.0076474845 -0.0084663928 0.0037730336 -0.010234445 0.00049591064 -0.0071191341
+		 -0.0039865375 0.00088717043 -0.0075767636 0.0054074526 -0.005787462 0.005001083 0.0081258714
+		 -0.0018949211 0.0087409616 -0.0054873526 0.0058581531 -0.0080600381 0.0019366741
+		 -0.0064778328 -0.0030826926 0.0023130625 -0.0076654553 0.0024847984 -0.0080552697
+		 -0.0011640638 -0.0051660836 0.0086366385 -0.0037023425 0.0071755201 0.0072815418
+		 -0.0055858493 0.0031533837 -0.0053720176 -0.001865983 0.0034188628 -0.0059342384
+		 0.0067911819 -0.0015369952 0.01106409 -0.00099685788 0.0085932612 0.0098119974 -0.004055649
+		 0.008187592 -0.0031899214 0.0040572286 -0.0039461255 -0.00042521954 0.0040601641
+		 -0.005489409 0.00071437657 -0.00626719 -0.00439661 -0.0018979013 0.010540247 0.0027926266
+		 0.011590339 0.0020104647 0.0088180006 0.010483801 -0.0022523403 0.0085330606 -0.0005517453
+		 0.0045956373 -0.0023363829 0.0010960698 0.0041261762 -0.0020136237 0.0062042847 0.0034331083
+		 0.01150474 0.0068984628 0.0098230988 0.0048425198 0.0076905042 0.011004239 0.0017069727
+		 0.008256346 0.0024658293 0.0047287345 -0.00063642859 0.0025192499 0.0035852194 -0.0017127991
+		 -0.0028386358 -0.0050326586 -0.010860864 0.0039149523 0.0076569393 0.008546859 0.009060286
+		 0.0098139942 0.0061475635 0.0070225894 0.0054067373 0.010967433 -0.0075865686 0.012306899
+		 -0.0022673756 0.0044252276 0.001034528 0.0036709011 0.0025044084 -0.00020086765 -0.016884897
+		 -0.0027694702 -0.026137577 0.0042550862 -0.00081436895 0.0096443295 0.0045677647
+		 0.011752725 0.003754288 0.0044239163 -0.014587874 0.010130435 -0.0044002365 0.012456894
+		 -0.0026142448 0.012297839 -0.0099639669 0.0091561675 -0.018344825 0.013180912 -0.014178947
+		 0.011806637 -0.029409895 0.00019824505 -0.0068815351 -0.0024657845 -0.0018187165
+		 -0.0033171773 0.0015894771 -0.00095963478 -0.0026455522 -0.0018619299 -0.0014129281
+		 -0.0027163029 -0.00081503391 -0.0022209287 0.003544271 -0.0010831952 -0.00043269992
+		 -0.00011610985 -0.00068324804 -0.001126647 -0.0030258894 -0.0014489889 -0.00030422211
+		 -0.00015452504 0.0044267774 -0.00074487925 0.00040671229 0.0041216612 0.0051066279
+		 0.0026520491 0.0017883182 -9.5546246e-05 -0.0040514469 0.00089898705 0.00016438961
+		 0.00189358 0.0043801665 -0.00049424171 9.6380711e-05 0.0022922754 0.00023233891 0.001952529
+		 -0.0040981174 0.0032470226 0.00063300133 0.0029245615 0.0033546686 -0.00085410476
+		 -0.0014596581 0.0025428832 -7.7962875e-05 0.0040189624 -0.003215611 0.0045142174
+		 0.0011437535 0.0019140542 0.0010119677 -0.0023237467 -0.0047778487 0.0028811991 0.00076138973
+		 0.0051151216 -0.0012606978 0.0036598742 0.0017417073 0.0027575791 0.0029742718 0.0042637587
+		 0.0021474361 0.0015996993 0.0072103143 -0.00099633634 0.0049278736 0.0029400438 -7.134676e-05
+		 0.0037625432 -0.0027773976 6.9364905e-05 0.0013993382 0.0036468059 -0.0004760623
+		 0.0045058578 -0.00037151575 0.0026437789 -0.004031539 0.00012683868 -8.98242e-05
+		 0.0032180697 -0.0012267232 0.0042643398 0.0018217564 0.0032417774 -0.00018471479
+		 0.00056961179 -0.00421381 -0.00023660064 -0.00019580126 0.00026792288 -0.0070859194
+		 0.0018336028 -0.0030524433 0.0032603592 0.0035496354 0.00089609623 4.1604042e-05
+		 -0.0014681518 -0.0034663677 -0.00046610832 0.00085008144 0.0022583008 -0.00076687336
+		 0.0012226105 0.0042970181 -0.0014495552 0.00026792288 -0.0024721026 -0.0017385483
+		 -4.1395426e-05 0.0031356812 0.0020288229 0.00027900934 -0.00085157156 0.0041148067
+		 -0.0027136505 0.00045472383 -0.0014258623 0.0013099313 0.0015242994 0.0071691275
+		 0.0016653836 0.00017306209 -0.0019703209 0.0028606057 -0.0018545985 0.00055927038
+		 0.0017228723 -0.0013160706 -0.0011478364 0.00015455484 0.0027885437 -0.0048446655;
+createNode polyLayoutUV -n "polyLayoutUV77";
+	rename -uid "DAAE550B-44C6-941C-ACE5-37AB8C2933E3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV137";
+	rename -uid "37224DDC-45AB-56D0-589B-83AE1239368B";
+	setAttr ".uopa" yes;
+	setAttr -s 482 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.59954315 -0.43642622 -0.598351 -0.43649271
+		 -0.59826386 -0.43579698 -0.59951448 -0.43576545 -0.59959614 -0.4370912 -0.59848213
+		 -0.43718749 -0.5971458 -0.436647 -0.59698516 -0.43588763 -0.59822345 -0.43510079
+		 -0.59950882 -0.43510777 -0.60072768 -0.43642104 -0.60075188 -0.43577433 -0.59967911
+		 -0.43776008 -0.5986492 -0.43788499 -0.59737086 -0.43737817 -0.60070658 -0.4370715
+		 -0.59690106 -0.43511316 -0.59823036 -0.43440598 -0.59952545 -0.43445224 -0.60077775
+		 -0.43513012 -0.60190815 -0.43648359 -0.60198629 -0.43582961 -0.59980726 -0.43844464
+		 -0.59892893 -0.43857771 -0.59763008 -0.43806541 -0.60069072 -0.43772709 -0.60181218
+		 -0.43713939 -0.5968979 -0.4343352 -0.59828401 -0.43371451 -0.59956372 -0.43379813
+		 -0.60080445 -0.4344871 -0.60204506 -0.43517607 -0.60308611 -0.43662614 -0.60322624
+		 -0.43594605 -0.6006844 -0.4383893 -0.60169816 -0.43779886 -0.60290951 -0.43730053
+		 -0.59697539 -0.43356463 -0.59838259 -0.43302819 -0.59962261 -0.4331446 -0.60083109
+		 -0.43384412 -0.60208333 -0.43452197 -0.60332477 -0.4352597 -0.60425574 -0.43688893
+		 -0.60447901 -0.43616265 -0.60068852 -0.43906558 -0.60002565 -0.43913046 -0.60155588
+		 -0.43846461 -0.60270339 -0.43797284 -0.60397857 -0.43758008 -0.59712982 -0.43281153
+		 -0.59852272 -0.43234804 -0.59970069 -0.43249062 -0.60085702 -0.43319988 -0.60210001
+		 -0.43386644 -0.60337847 -0.43456823 -0.60463345 -0.43540961 -0.60134727 -0.43913034
+		 -0.60241461 -0.43863013 -0.60368055 -0.43822861 -0.5973531 -0.43208525 -0.59869933
+		 -0.43167368 -0.59979665 -0.43183482 -0.60088116 -0.43255317 -0.60209435 -0.43320876
+		 -0.60338545 -0.43387341 -0.60471094 -0.43463901 -0.59763026 -0.43139413 -0.59890544
+		 -0.43100137 -0.59991062 -0.43117535 -0.60090226 -0.43190271 -0.60206568 -0.43254796
+		 -0.60334504 -0.43317723 -0.60470772 -0.43386105 -0.59792829 -0.43074563 -0.59919423
+		 -0.43034407 -0.60005295 -0.4305096 -0.60091811 -0.43124714 -0.60201269 -0.43188301
+		 -0.60325783 -0.4324815 -0.60462368 -0.43308657 -0.60092443 -0.43058491 -0.60192972
+		 -0.43121412 -0.6031267 -0.43178675 -0.60446304 -0.43232724 -0.60026157 -0.42984387
+		 -0.60092032 -0.42990863 -0.60180163 -0.43052956 -0.60295963 -0.43108922 -0.60423791
+		 -0.43159604 -0.60158312 -0.42984375 -0.60267991 -0.4303965 -0.60397875 -0.4309088
+		 -0.19197926 0.012116805 -0.19080132 0.012259595 -0.19087958 0.01291357 -0.19211954
+		 0.012796894 -0.19180256 0.01144246 -0.19070524 0.01160381 -0.18962085 0.012322374
+		 -0.18964517 0.012969092 -0.19093853 0.01356709 -0.19221821 0.013483211 -0.19314882
+		 0.011853777 -0.19337228 0.012580022 -0.1915963 0.010770194 -0.1905911 0.010944359
+		 -0.18959963 0.011671916 -0.19287154 0.011162698 -0.18843633 0.012317404 -0.18840778
+		 0.012978211 -0.18967116 0.013613313 -0.19097692 0.014221206 -0.19227201 0.014174685
+		 -0.19352683 0.013333067 -0.19130737 0.010112957 -0.1904487 0.010278629 -0.18958366
+		 0.011016339 -0.1925734 0.010514244 -0.1884892 0.011652447 -0.18724412 0.012251168
+		 -0.18715709 0.012946919 -0.18840224 0.013635904 -0.18969798 0.014256299 -0.19099373
+		 0.014876723 -0.1922791 0.014869496 -0.19360447 0.014103636 -0.18957716 0.010354124
+		 -0.18857205 0.010983538 -0.18737513 0.011556372 -0.18603891 0.012097135 -0.18587846
+		 0.012856513 -0.18711686 0.013643101 -0.18841904 0.014291406 -0.1897248 0.014899284
+		 -0.19098818 0.015534401 -0.19223884 0.015565693 -0.19360143 0.014881611 -0.19023991
+		 0.0096129645 -0.18958122 0.0096778497 -0.18870002 0.010298954 -0.18754208 0.010858834
+		 -0.18626392 0.011365891 -0.18579453 0.013631016 -0.18712395 0.014337927 -0.18845743
+		 0.014945507 -0.18975079 0.01554352 -0.19095963 0.016195208 -0.19215181 0.016261429
+		 -0.19351754 0.015656114 -0.18891835 0.0096130986 -0.18782169 0.010166051 -0.18652296
+		 0.010678604 -0.18579149 0.014408976 -0.18717772 0.015029401 -0.18851638 0.015599042
+		 -0.18977511 0.016190231 -0.19090676 0.016860157 -0.19202083 0.01695624 -0.19335705
+		 0.016415477 -0.1858691 0.015179545 -0.18727642 0.015715718 -0.18859464 0.016253024
+		 -0.18979633 0.016840696 -0.19082391 0.01752907 -0.19185385 0.017653763 -0.19313204
+		 0.017146707 -0.18602365 0.01593259 -0.18741667 0.016395807 -0.18869072 0.016908795
+		 -0.1898123 0.017496258 -0.19069594 0.01821366 -0.19157428 0.018346548 -0.19287303
+		 0.017834008 -0.18624711 0.016658843 -0.1875934 0.017070144 -0.18880486 0.01756826
+		 -0.18981874 0.018158495 -0.18652439 0.017349899 -0.18779963 0.017742425 -0.18894726
+		 0.018233985 -0.18981475 0.01883477 -0.19047761 0.0188995 -0.18682253 0.017998368
+		 -0.1880886 0.018399656 -0.18915606 0.018899649 0.24515656 0.42868388 0.24512157 0.42861727
+		 0.24531853 0.428471 0.24539039 0.42860502 0.24492192 0.42875922 0.2450671 0.42856497
+		 0.24520862 0.42836761 0.24551092 0.42831624 0.24562387 0.4285177 0.2451684 0.4287582
+		 0.24541505 0.42875761 0.24499869 0.42853177 0.2450725 0.42830324 0.2453447 0.42816475
+		 0.24569918 0.42814904 0.24585292 0.42841119 0.24566244 0.42875701 0.24515581 0.42883265
+		 0.24538971 0.42890984 0.24492304 0.42852065 0.24492307 0.42828202 0.24514227 0.42807275
+		 0.24547388 0.42795417 0.24562445 0.42899585 0.24512015 0.42889941 0.24531698 0.42904392
+		 0.24484728 0.42853251 0.2447736 0.42830497 0.24492212 0.42804301 0.2452071 0.42783961
+		 0.24559639 0.42773384 0.24587697 0.42796853 0.24551092 0.42919642 0.24506523 0.42895216
+		 0.24520659 0.42914778 0.24477863 0.42856628 0.24463728 0.42837065 0.24470212 0.42807594
+		 0.24492012 0.42780316 0.24526563 0.42760345 0.24585146 0.42910233 0.24569955 0.42936081
+		 0.24534421 0.42934829 0.24499658 0.42898589 0.24507028 0.4292134 0.24472371 0.428619
+		 0.24452689 0.42847452 0.24449967 0.42817014 0.24463376 0.42784479 0.24491693 0.42756182
+		 0.24531743 0.42736274 0.24570031 0.42749912 0.24547647 0.42955562 0.24514177 0.42944247
+		 0.24492083 0.42899773 0.24492079 0.42923641 0.24468806 0.42868578 0.24445413 0.4286086
+		 0.24433295 0.42832199 0.24436741 0.42796281 0.24456933 0.42761087 0.24491264 0.42731795
+		 0.24536701 0.42711955 0.24579653 0.42726648;
+	setAttr ".uvtk[250:481]" 0.24587715 0.42953742 0.24560276 0.42977116 0.2452101
+		 0.42967364 0.24492173 0.4294754 0.24484515 0.42898667 0.24477138 0.42921513 0.24467546
+		 0.4287602 0.24442881 0.4287608 0.24421942 0.42852259 0.24414432 0.4281576 0.24424112
+		 0.42774725 0.24450997 0.42737383 0.24490701 0.42707109 0.24527454 0.42990753 0.24492374
+		 0.42971525 0.24470161 0.42944565 0.24477679 0.42895347 0.24463525 0.42915079 0.24468729
+		 0.42883456 0.2444535 0.42891341 0.24418141 0.42876136 0.24399245 0.42841607 0.24396671
+		 0.42798102 0.24413294 0.42751852 0.2444509 0.42713436 0.24571094 0.42999992 0.24533391
+		 0.43014461 0.24492693 0.42995659 0.24463677 0.4296788 0.24449919 0.42935362 0.24472229
+		 0.42890114 0.24452533 0.42904741 0.24422 0.42900074 0.24403043 0.42729172 0.24581346
+		 0.43022668 0.24539296 0.43038407 0.24493124 0.43020043 0.24457824 0.42991495 0.24437001
+		 0.42956424 0.24433295 0.42920217 0.24493685 0.43044734 0.24452643 0.43015566 0.24424747
+		 0.4297846 0.24414468 0.42936936 0.24399094 0.42910725 0.24447685 0.43039888 0.24414355
+		 0.43001926 0.24396686 0.42954987 0.24404734 0.43025196 0.32091326 0.44228742 0.32063878
+		 0.44252115 0.32051253 0.44230556 0.32073569 0.44211078 0.32031059 0.44265747 0.32024619
+		 0.44242358 0.32038033 0.44209823 0.32054704 0.44194642 0.32074696 0.44274992 0.32036987
+		 0.44289452 0.31996292 0.44270644 0.31995982 0.44246507 0.32017785 0.44219232 0.32024279
+		 0.44189769 0.32035318 0.44179383 0.32088763 0.44185233 0.32066065 0.44174579 0.32084942
+		 0.44297671 0.32042891 0.44313398 0.31996718 0.44295031 0.31961426 0.44266474 0.31967282
+		 0.44242859 0.31995782 0.44222525 0.32010645 0.44196329 0.32010141 0.44170201 0.32015634
+		 0.44164932 0.3204259 0.44165978 0.31997278 0.44319719 0.31956244 0.44290543 0.31928349
+		 0.4425343 0.31940606 0.44231403 0.3197377 0.44219548 0.31995696 0.44198623 0.32003275
+		 0.44173574 0.31995818 0.44150907 0.32019204 0.4415825 0.32069868 0.44150701 0.32045129
+		 0.44150758 0.31951278 0.44314864 0.31917953 0.44276902 0.31900299 0.4422996 0.31918079
+		 0.44211906 0.31953532 0.44210342 0.31980753 0.44196498 0.31995702 0.44174764 0.32020462
+		 0.44150814 0.32066011 0.44126767 0.32042661 0.44135493 0.31908327 0.44300163 0.31936911
+		 0.44195193 0.31967139 0.44190058 0.31988138 0.44173646 0.32019281 0.44143379 0.32054722
+		 0.44106621 0.32035479 0.44122088 0.3190271 0.44185689 0.31925619 0.4417505 0.31956148
+		 0.44179723 0.31981295 0.44170332 0.32015783 0.44136709 0.32073551 0.44089904 0.32088923
+		 0.44116122 0.32038099 0.44091469 0.32024488 0.44111753 0.31948972 0.44166321 0.31975847
+		 0.44165099 0.32010338 0.44131482 0.32051021 0.44070414 0.32017863 0.44082266 0.3201088
+		 0.44105315 0.31921762 0.44151109 0.31946501 0.44151059 0.31972352 0.44158438 0.32003498
+		 0.44128168 0.32063282 0.44048384 0.32091337 0.44071853 0.32024345 0.44058955 0.31995848
+		 0.44079286 0.3199594 0.44103187 0.31925568 0.44127235 0.3194904 0.44135839 0.31971171
+		 0.44151002 0.31995928 0.4412705 0.32030204 0.44035336 0.31995651 0.44055304 0.31973845
+		 0.44082582 0.31980991 0.44105482 0.31936923 0.44107172 0.31956315 0.44122431 0.31972432
+		 0.44143558 0.31988358 0.44128239 0.32035393 0.44011271 0.32073677 0.44024915 0.31995338
+		 0.4403117 0.31967017 0.44059455 0.31953597 0.44091988 0.31967357 0.44112045 0.31902871
+		 0.44116578 0.31918067 0.44090736 0.31975999 0.44136882 0.31981489 0.44131607 0.32040352
+		 0.43986949 0.32083303 0.44001651 0.31994912 0.44006783 0.31960577 0.4403607 0.31940374
+		 0.44071251 0.31994352 0.43982095 0.31954643 0.44012362 0.31927752 0.44049695 0.31900308
+		 0.44073072 0.31948742 0.43988416 0.31916934 0.44026825 0.31906688 0.44004142 0.40286726
+		 -0.44392222 0.40310234 -0.44819808 0.40546203 -0.44808951 0.40524369 -0.44360083
+		 0.40312737 -0.4526037 0.40548891 -0.45260805 0.40781671 -0.44800189 0.40767539 -0.44336638
+		 0.40307873 -0.45703137 0.40545189 -0.45714006 0.40783381 -0.45260698 0.41017056 -0.44796431
+		 0.41014042 -0.44326979 0.40286702 -0.46136087 0.4052729 -0.4616721 0.40781325 -0.45721921
+		 0.41016984 -0.45260334 0.4125264 -0.44798744 0.41261336 -0.44332874 0.40772629 -0.46187794
+		 0.41016909 -0.45724237 0.41250587 -0.45259967 0.41488776 -0.44806659 0.41506678 -0.44353458
+		 0.41019922 -0.46193689 0.41252294 -0.45720476 0.41485077 -0.45259863 0.41726094 -0.44817528
+		 0.41747266 -0.44384578 0.41266426 -0.46184027 0.41487765 -0.45711714 0.41721228 -0.45260298
+		 0.41509593 -0.46160585 0.41723728 -0.4570086 0.41747239 -0.46128443 -0.1429736 0.0020462871
+		 -0.14320752 0.0063222051 -0.14556721 0.0062142611 -0.14535013 0.0017255545 -0.14323138
+		 0.010727823 -0.14559288 0.01073277 -0.14792195 0.0061272979 -0.14778186 0.0014917254
+		 -0.1431815 0.015155494 -0.14555463 0.015264809 -0.14793777 0.010732353 -0.15027575
+		 0.006090343 -0.15024689 0.0013958216 -0.14296864 0.019484907 -0.14537442 0.019796759
+		 -0.14791597 0.01534456 -0.1502738 0.010729373 -0.15263161 0.0061141253 -0.15271981
+		 0.0014554262 -0.14782777 0.020003259 -0.15027183 0.015368402 -0.15260983 0.010726333
+		 -0.15499297 0.0061938763 -0.15517317 0.0016618967 -0.15030071 0.020062894 -0.15262564
+		 0.015331388 -0.15495472 0.010725915 -0.15736608 0.0063031912 -0.15757895 0.0019738078
+		 -0.15276574 0.01996693 -0.15498038 0.015244424 -0.15731621 0.010730922 -0.15519747
+		 0.019733161 -0.15734006 0.01513654 -0.15757398 0.019412398;
+createNode polyAutoProj -n "polyAutoProj75";
+	rename -uid "B005CF92-4E23-1094-FF12-17B3A03B9E16";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+	setAttr ".ix" -type "matrix" 0.033782226606050292 0 0 0 0 0.033782226606050292 0 0
+		 0 0 0.033782226606050292 0 18.412769994384398 0.3076541040556009 12.356146030502874 1;
+	setAttr ".s" -type "double3" 0.067564473347877296 0.067564473347877296 0.067564473347877296 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV138";
+	rename -uid "314CE09B-4B27-354E-9440-128F76B960DA";
+	setAttr ".uopa" yes;
+	setAttr -s 482 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.0091876388 0.021459103 -0.011555612
+		 0.01772064 -0.015655398 0.016314387 -0.012068212 0.018358886 -0.0058397055 0.021622717
+		 -0.0064525008 0.016449869 -0.00074350834 0.0096626878 -0.004466176 0.011352897 -0.018675566
+		 0.013081253 -0.014306128 0.013248563 0.00014430285 0.022183061 -0.00078725815 0.018411994
+		 -0.0024570823 0.018054336 -0.00024712086 0.011508465 0.0041747689 0.0066385865 0.00092351437
+		 0.023029387 -0.0072980523 0.011951268 -0.020518005 0.0088562965 -0.015799344 0.0070949197
+		 -0.0018046498 0.012652814 0.009647727 0.01957655 0.010620594 0.016183794 2.1517277e-05
+		 0.009462595 0.0029373169 0.0025752187 0.011390865 0.0022383332 0.0014434457 0.020076245
+		 0.0078889728 0.020130754 -0.0092765093 0.011807442 -0.021106482 0.0044848919 -0.016487122
+		 0.00088149309 -0.0028612018 0.0058884621 0.010764837 0.010895371 0.012633085 0.013037026
+		 0.014672995 0.010953367 0.0014930964 0.012529284 0.0055058002 0.016947299 0.009221673
+		 0.012646496 -0.010337353 0.011332989 -0.020395458 0.00082343817 -0.016342998 -0.0044069886
+		 -0.0039177537 -0.00087594986 0.01007694 0.0046819448 0.015384138 0.0072920322 0.0034046173
+		 0.00058549643 0.0046350956 0.00080299377 0.0010220408 -0.00059083104 -0.00084382296
+		 -0.0040414929 0.0031907558 0.00917238 0.0043914914 0.0087956786 0.00047957897 -0.00066834688
+		 -0.010357559 0.010973871 -0.018355548 -0.0012601614 -0.01537019 -0.007799685 -0.0049351454
+		 -0.0066351891 0.0085837841 -0.0014716983 0.014795542 0.0029206276 0.0046148896 0.00044393539
+		 0.0030373931 -0.0035124123 0.0011198521 0.0013790429 -0.0053557158 -0.0033861995
+		 -0.0091270804 0.011191428 -0.014944136 -0.00086963177 -0.013611436 -0.008353889 -0.0058667064
+		 -0.010406196 0.0063458681 -0.0065820813 0.012953222 -0.001304388 0.003554225 -3.0577183e-05
+		 -0.0062021017 0.012445271 -0.010113955 0.0029811859 -0.011228263 -0.0051705241 -0.0066459179
+		 -0.011252522 0.0034651756 -0.0096822381 0.0099329948 -0.0045375824 0.0015755892 -0.00017440319
+		 -0.00036674738 0.015163064 -0.0068422556 0.010397792 -0.008913219 0.002604425 -0.0071659088
+		 -0.0082993507 0.00011718273 -0.0098457932 0.0058332086 -0.0059437752 -0.0012562871
+		 0.00042384863 -0.0072156191 -0.00075244904 -0.0032653809 -0.006277442 0.00073009729
+		 -0.0046730042 -0.0049789548 0.0021141768 -0.0087599754 0.015289247 -0.0067445636
+		 0.012367666 -0.0057439804 0.0023142099 -0.0054752827 0.00026834011 -0.0098972321
+		 0.005138278 -0.0048787594 0.015818357 -0.0086597204 0.0092015862 -0.017113328 0.0095384717
+		 0.020222127 0.0032813773 0.017102122 0.010919735 0.017464936 0.0074533224 0.021627724
+		 0.0010661036 0.017439783 0.0030565113 0.01595521 0.011564396 0.0075387955 0.014627606
+		 0.0060037971 0.010833189 0.016999364 0.0021090508 0.021698475 -0.0026881695 0.011240423
+		 -0.010261089 0.011793613 -0.010252878 0.013236523 -0.00060107931 0.014187098 0.0084882453
+		 0.0089248419 0.01549454 0.0089598894 -0.011255413 -0.0017898679 0.015008844 -0.0052871108
+		 0.011934549 0.0043854117 0.0050489455 0.015701294 -0.0041408986 0.020464897 -0.0071105659
+		 0.011070907 -0.010757044 0.010577679 -0.0077473475 0.012493074 0.00084700063 0.010056496
+		 0.012557056 0.0037292838 -0.013694305 0.0021786094 0.015123919 -0.0040974617 0.012382813
+		 -0.008846581 0.011057004 -0.0081387162 0.0068285912 0.0027289391 -0.0017412007 0.013596535
+		 -0.010310978 0.017974138 -0.011342987 0.0092912912 -0.01130487 0.010724008 0.0050169434
+		 0.0061854124 0.011479009 0.0016540289 0.010990672 0.0068569183 0.0054495409 0.0024255514
+		 0.0072886944 -0.01251626 0.0078606009 -0.010243416 0.00065849721 0.001072526 -0.008531332
+		 0.010744989 -0.01541692 0.014304459 -0.014539391 0.0065869093 -0.011446774 0.012960672
+		 -0.011642284 0.010883987 -0.0081061581 0.0093028545 0.0027687103 0.0085104108 0.005894281
+		 0.012457788 0.0022163987 -0.0011289716 0.0079644024 -0.015006959 0.0036281645 -0.011541545
+		 -0.0055914521 -0.00054591894 -0.014315575 0.0072478056 -0.018491209 0.0095553994
+		 -0.015865177 0.0030323267 -0.010771066 0.0090777278 -0.010938299 0.012341559 -0.0032989625
+		 0.020315468 -0.0024247169 -0.0038332939 0.0078224838 -0.016240597 -0.00079420209
+		 -0.012006998 -0.010935724 -0.0020808578 -0.018109977 0.003279388 -0.018606275 0.0038039088
+		 -0.014473051 -0.0013990402 -0.0089318752 -0.0056129694 0.0072746575 -0.016169786
+		 -0.00454849 -0.011644244 -0.014402121 -0.0034669042 -0.018976927 -0.00072747469 -0.014961362
+		 -0.0030524731 -0.0093766451 -0.0069998503 -0.0056987703 -0.0063356757 0.0067704916
+		 -0.01476419 -0.0067637563 -0.010497212 -0.015046775 -0.0045985579 -0.016039431 -0.0038449168
+		 -0.0062510669 -0.0068836808 -0.00018340349 -0.014857471 -0.0010576248 -0.005782485
+		 0.006778717 -0.011981845 -0.0065388978 -0.0087291598 -0.011970609 -0.0052660704 -0.0084993243
+		 -0.0035020113 0.0077730417 -0.007778585 -0.0028812885 -0.0070351362 -0.0043293834
+		 -0.0054259896 0.0046237707 -0.0036197901 0.0074559152 0.0017286539 0.010211945 -0.0051198006
+		 0.0042649806 -0.0075026751 0.0081599057 -0.0036022067 0.0027459562 -0.002714172 0.0041796267
+		 -0.0054519176 0.0068206489 -0.0068435073 0.0043304861 0.00043582916 0.00038470328
+		 -0.0015100241 0.0052978694 -0.0033916682 0.0090201497 -0.007276237 0.0071810335 -0.0083218962
+		 0.0041767955 -0.0041231662 0.0011339188 -0.0077136755 0.0019297302 -7.7471137e-05
+		 0.0059549361 -0.00070209801 0.010469332 -0.0049020052 0.010448173 -0.0074028969 0.0042132735
+		 -0.0077303052 0.00053007901 -0.0093366504 0.0027375817 -0.0042389184 -0.00056262314
+		 -0.0080237091 -0.00070154667 0.0014407337 0.0060385913 0.0022992939 0.010728911 -0.0012957156
+		 0.012922369 -0.0057186633 0.0085711628 -0.0099528432 0.00094464421 -0.0039200038
+		 -0.0022248179 -0.0077160597 -0.0037012696 0.0028662086 0.0055154413 0.0051357895
+		 0.0096365213 0.0030255169 0.01349996 -0.0017107874 0.012381904 -0.0053245574 0.0024643019
+		 -0.0060456693 -0.0027108863 -0.010427043 -0.0029867887 -0.0031536967 -0.0036814809
+		 -0.0064586848 -0.0066156983 0.0040253326 0.0044508725 0.0073303282 0.0073850751 0.0071376786
+		 0.011784405 0.0036098808 0.013413332 -0.0018813908 0.0080307685 -0.0104101 0.0062264502
+		 -0.011690065 0.0009444356 -0.0092023611 -0.0073874295 -0.0019945502 -0.0047460496
+		 -0.0042641312 -0.0088671148 0.0047916472 0.0029941946 0.0085877031 0.0044706613 0.010074012
+		 0.008156836 0.0087315366 0.01103615 0.0040352196 0.0095647648 -0.0016365796 -0.0010257941
+		 -0.0049221218 -0.0091367476 -0.011091679 -0.0050238073 -0.0062660277 -0.011015028
+		 -0.00056907535 -0.0052691996 -0.0014276505 -0.0099595189 0.0051105544 0.0013320148
+		 0.008895345 0.0014709383 0.011298701 0.0037562251 0.011963334 0.0057932138 0.0097738504
+		 0.0065572187 0.0043182671 0.0010929164 -0.00018125772 -0.015085178 -0.0027127862
+		 -0.024437435;
+	setAttr ".uvtk[250:481]" -0.011638552 0.0086005628 -0.011744648 0.0013165474
+		 -0.0078599006 -0.010266721 -0.0021538585 -0.012730569 0.00094911456 -0.0051855445
+		 0.0015737489 -0.0096999407 0.0049948245 -0.00036452711 0.0085853338 -0.0011603385
+		 0.010824494 -0.00017526746 0.01256172 -0.00017502904 0.012616299 -0.00054713339 0.010204144
+		 -0.0023983847 0.0044292957 -0.012680816 -0.0089021921 -0.0057877898 -0.0027382374
+		 -0.012643903 0.002167359 -0.012153 0.0023816824 -0.0045284927 0.0042633265 -0.008250773
+		 0.0044738501 -0.0019765794 0.0077151582 -0.0035611093 0.010208322 -0.0019681752 0.01128177
+		 -0.0054570436 0.012510195 -0.0078311712 0.01328609 -0.012087949 0.0091734603 -0.016330654
+		 -0.012414426 0.012857348 -0.0093324929 0.0031678081 -0.0031635761 -0.0087953508 0.0025824383
+		 -0.011612505 0.0057736561 -0.0096787512 0.0035858378 -0.0034102499 0.0063235834 -0.0060512722
+		 0.0091935545 -0.0034074187 0.011858125 -0.027296344 -0.010986477 0.028065771 -0.0083017945
+		 0.017100066 -0.0034466088 -0.00032350421 0.0027530417 -0.0072613358 0.0065903105
+		 -0.0078017414 0.0081478916 -0.006411612 -0.0035576522 0.013450235 0.0025082454 0.0017952323
+		 0.0061962008 -0.0016948581 0.0082745329 -0.003443867 0.0086019356 0.00023934245 0.0010529011
+		 0.015854597 0.0057937726 0.0099061728 0.0069173221 0.0034802854 0.0035844091 0.025206834
+		 -0.012227118 0.0069050193 -0.012386203 -0.00044471025 -0.011682034 -0.0068132281
+		 -0.012236238 -0.00079157948 -0.0095736384 -0.0076267123 -0.0084761679 -0.012119263
+		 -0.0097433627 -0.0092065334 -0.010933578 -0.0047659278 -0.01311022 0.011119992 -0.010059744
+		 0.0013412833 -0.0038442612 -0.010715932 -0.003362447 -0.014563709 -0.0068278015 -0.012882054
+		 -0.0069518983 -0.0084656775 -0.0081856549 -0.0055247843 -0.010896802 0.0045275986
+		 -0.01041317 -0.00080662966 -0.011735976 0.026350945 -0.0090854764 0.015285879 -0.0041843951
+		 -0.0022445917 0.002084285 -0.0092632473 0.0019685924 -0.013599247 -0.0027219355 -0.014649272
+		 -0.0047718287 -0.010749459 -0.0036002398 -0.0055633485 -0.0043545365 -0.0040934682
+		 -0.0084623992 -0.0025072098 -0.0043532252 0.011528909 0.0017834604 -0.00022032857
+		 0.0055600107 -0.0037733316 0.0060049295 -0.0098501742 0.0016076863 -0.014123052 -0.0019397736
+		 -0.011876941 -0.0024485886 -0.0066441894 3.5345554e-05 -0.001529485 -0.0046580434
+		 -0.0024225414 -0.0097413659 0.00099667907 -0.0081169009 0.0001309514 0.00027155876
+		 0.013825923 0.0051033497 0.0078018904 0.0063378513 0.0013376474 0.0077362061 -0.0055437386
+		 0.0052367449 -0.011695594 0.0010675192 -0.011652231 -0.0010253787 -0.0071851313 -0.004524976
+		 -0.00072257221 -0.00867033 0.0024283826 -0.0072108507 0.0025268942 0.0028401315 0.02307862
+		 0.0076474845 -0.0084663928 0.0037730336 -0.010234445 0.00049591064 -0.0071191341
+		 -0.0039865375 0.00088717043 -0.0075767636 0.0054074526 -0.005787462 0.005001083 0.0081258714
+		 -0.0018949211 0.0087409616 -0.0054873526 0.0058581531 -0.0080600381 0.0019366741
+		 -0.0064778328 -0.0030826926 0.0023130625 -0.0076654553 0.0024847984 -0.0080552697
+		 -0.0011640638 -0.0051660836 0.0086366385 -0.0037023425 0.0071755201 0.0072815418
+		 -0.0055858493 0.0031533837 -0.0053720176 -0.001865983 0.0034188628 -0.0059342384
+		 0.0067911819 -0.0015369952 0.01106409 -0.00099685788 0.0085932612 0.0098119974 -0.004055649
+		 0.008187592 -0.0031899214 0.0040572286 -0.0039461255 -0.00042521954 0.0040601641
+		 -0.005489409 0.00071437657 -0.00626719 -0.00439661 -0.0018979013 0.010540247 0.0027926266
+		 0.011590339 0.0020104647 0.0088180006 0.010483801 -0.0022523403 0.0085330606 -0.0005517453
+		 0.0045956373 -0.0023363829 0.0010960698 0.0041261762 -0.0020136237 0.0062042847 0.0034331083
+		 0.01150474 0.0068984628 0.0098230988 0.0048425198 0.0076905042 0.011004239 0.0017069727
+		 0.008256346 0.0024658293 0.0047287345 -0.00063642859 0.0025192499 0.0035852194 -0.0017127991
+		 -0.0028386358 -0.0050326586 -0.010860864 0.0039149523 0.0076569393 0.008546859 0.009060286
+		 0.0098139942 0.0061475635 0.0070225894 0.0054067373 0.010967433 -0.0075865686 0.012306899
+		 -0.0022673756 0.0044252276 0.001034528 0.0036709011 0.0025044084 -0.00020086765 -0.016884897
+		 -0.0027694702 -0.026137577 0.0042550862 -0.00081436895 0.0096443295 0.0045677647
+		 0.011752725 0.003754288 0.0044239163 -0.014587874 0.010130435 -0.0044002365 0.012456894
+		 -0.0026142448 0.012297839 -0.0099639669 0.0091561675 -0.018344825 0.013180912 -0.014178947
+		 0.011806637 -0.029409895 0.00019824505 -0.0068815351 -0.0024657845 -0.0018187165
+		 -0.0033171773 0.0015894771 -0.00095963478 -0.0026455522 -0.0018619299 -0.0014129281
+		 -0.0027163029 -0.00081503391 -0.0022209287 0.003544271 -0.0010831952 -0.00043269992
+		 -0.00011610985 -0.00068324804 -0.001126647 -0.0030258894 -0.0014489889 -0.00030422211
+		 -0.00015452504 0.0044267774 -0.00074487925 0.00040671229 0.0041216612 0.0051066279
+		 0.0026520491 0.0017883182 -9.5546246e-05 -0.0040514469 0.00089898705 0.00016438961
+		 0.00189358 0.0043801665 -0.00049424171 9.6380711e-05 0.0022922754 0.00023233891 0.001952529
+		 -0.0040981174 0.0032470226 0.00063300133 0.0029245615 0.0033546686 -0.00085410476
+		 -0.0014596581 0.0025428832 -7.7962875e-05 0.0040189624 -0.003215611 0.0045142174
+		 0.0011437535 0.0019140542 0.0010119677 -0.0023237467 -0.0047778487 0.0028811991 0.00076138973
+		 0.0051151216 -0.0012606978 0.0036598742 0.0017417073 0.0027575791 0.0029742718 0.0042637587
+		 0.0021474361 0.0015996993 0.0072103143 -0.00099633634 0.0049278736 0.0029400438 -7.134676e-05
+		 0.0037625432 -0.0027773976 6.9364905e-05 0.0013993382 0.0036468059 -0.0004760623
+		 0.0045058578 -0.00037151575 0.0026437789 -0.004031539 0.00012683868 -8.98242e-05
+		 0.0032180697 -0.0012267232 0.0042643398 0.0018217564 0.0032417774 -0.00018471479
+		 0.00056961179 -0.00421381 -0.00023660064 -0.00019580126 0.00026792288 -0.0070859194
+		 0.0018336028 -0.0030524433 0.0032603592 0.0035496354 0.00089609623 4.1604042e-05
+		 -0.0014681518 -0.0034663677 -0.00046610832 0.00085008144 0.0022583008 -0.00076687336
+		 0.0012226105 0.0042970181 -0.0014495552 0.00026792288 -0.0024721026 -0.0017385483
+		 -4.1395426e-05 0.0031356812 0.0020288229 0.00027900934 -0.00085157156 0.0041148067
+		 -0.0027136505 0.00045472383 -0.0014258623 0.0013099313 0.0015242994 0.0071691275
+		 0.0016653836 0.00017306209 -0.0019703209 0.0028606057 -0.0018545985 0.00055927038
+		 0.0017228723 -0.0013160706 -0.0011478364 0.00015455484 0.0027885437 -0.0048446655;
+createNode polyLayoutUV -n "polyLayoutUV78";
+	rename -uid "D88C9ADE-45C7-26A1-564E-30B6E0DB0305";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV139";
+	rename -uid "62CBDE4E-402A-9026-9B4F-B9BE28C0E25A";
+	setAttr ".uopa" yes;
+	setAttr -s 482 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.59954315 -0.43642622 -0.598351 -0.43649271
+		 -0.59826386 -0.43579698 -0.59951448 -0.43576545 -0.59959614 -0.4370912 -0.59848213
+		 -0.43718749 -0.5971458 -0.436647 -0.59698516 -0.43588763 -0.59822345 -0.43510079
+		 -0.59950882 -0.43510777 -0.60072768 -0.43642104 -0.60075188 -0.43577433 -0.59967911
+		 -0.43776008 -0.5986492 -0.43788499 -0.59737086 -0.43737817 -0.60070658 -0.4370715
+		 -0.59690106 -0.43511316 -0.59823036 -0.43440598 -0.59952545 -0.43445224 -0.60077775
+		 -0.43513012 -0.60190815 -0.43648359 -0.60198629 -0.43582961 -0.59980726 -0.43844464
+		 -0.59892893 -0.43857771 -0.59763008 -0.43806541 -0.60069072 -0.43772709 -0.60181218
+		 -0.43713939 -0.5968979 -0.4343352 -0.59828401 -0.43371451 -0.59956372 -0.43379813
+		 -0.60080445 -0.4344871 -0.60204506 -0.43517607 -0.60308611 -0.43662614 -0.60322624
+		 -0.43594605 -0.6006844 -0.4383893 -0.60169816 -0.43779886 -0.60290951 -0.43730053
+		 -0.59697539 -0.43356463 -0.59838259 -0.43302819 -0.59962261 -0.4331446 -0.60083109
+		 -0.43384412 -0.60208333 -0.43452197 -0.60332477 -0.4352597 -0.60425574 -0.43688893
+		 -0.60447901 -0.43616265 -0.60068852 -0.43906558 -0.60002565 -0.43913046 -0.60155588
+		 -0.43846461 -0.60270339 -0.43797284 -0.60397857 -0.43758008 -0.59712982 -0.43281153
+		 -0.59852272 -0.43234804 -0.59970069 -0.43249062 -0.60085702 -0.43319988 -0.60210001
+		 -0.43386644 -0.60337847 -0.43456823 -0.60463345 -0.43540961 -0.60134727 -0.43913034
+		 -0.60241461 -0.43863013 -0.60368055 -0.43822861 -0.5973531 -0.43208525 -0.59869933
+		 -0.43167368 -0.59979665 -0.43183482 -0.60088116 -0.43255317 -0.60209435 -0.43320876
+		 -0.60338545 -0.43387341 -0.60471094 -0.43463901 -0.59763026 -0.43139413 -0.59890544
+		 -0.43100137 -0.59991062 -0.43117535 -0.60090226 -0.43190271 -0.60206568 -0.43254796
+		 -0.60334504 -0.43317723 -0.60470772 -0.43386105 -0.59792829 -0.43074563 -0.59919423
+		 -0.43034407 -0.60005295 -0.4305096 -0.60091811 -0.43124714 -0.60201269 -0.43188301
+		 -0.60325783 -0.4324815 -0.60462368 -0.43308657 -0.60092443 -0.43058491 -0.60192972
+		 -0.43121412 -0.6031267 -0.43178675 -0.60446304 -0.43232724 -0.60026157 -0.42984387
+		 -0.60092032 -0.42990863 -0.60180163 -0.43052956 -0.60295963 -0.43108922 -0.60423791
+		 -0.43159604 -0.60158312 -0.42984375 -0.60267991 -0.4303965 -0.60397875 -0.4309088
+		 -0.19197926 0.012116805 -0.19080132 0.012259595 -0.19087958 0.01291357 -0.19211954
+		 0.012796894 -0.19180256 0.01144246 -0.19070524 0.01160381 -0.18962085 0.012322374
+		 -0.18964517 0.012969092 -0.19093853 0.01356709 -0.19221821 0.013483211 -0.19314882
+		 0.011853777 -0.19337228 0.012580022 -0.1915963 0.010770194 -0.1905911 0.010944359
+		 -0.18959963 0.011671916 -0.19287154 0.011162698 -0.18843633 0.012317404 -0.18840778
+		 0.012978211 -0.18967116 0.013613313 -0.19097692 0.014221206 -0.19227201 0.014174685
+		 -0.19352683 0.013333067 -0.19130737 0.010112957 -0.1904487 0.010278629 -0.18958366
+		 0.011016339 -0.1925734 0.010514244 -0.1884892 0.011652447 -0.18724412 0.012251168
+		 -0.18715709 0.012946919 -0.18840224 0.013635904 -0.18969798 0.014256299 -0.19099373
+		 0.014876723 -0.1922791 0.014869496 -0.19360447 0.014103636 -0.18957716 0.010354124
+		 -0.18857205 0.010983538 -0.18737513 0.011556372 -0.18603891 0.012097135 -0.18587846
+		 0.012856513 -0.18711686 0.013643101 -0.18841904 0.014291406 -0.1897248 0.014899284
+		 -0.19098818 0.015534401 -0.19223884 0.015565693 -0.19360143 0.014881611 -0.19023991
+		 0.0096129645 -0.18958122 0.0096778497 -0.18870002 0.010298954 -0.18754208 0.010858834
+		 -0.18626392 0.011365891 -0.18579453 0.013631016 -0.18712395 0.014337927 -0.18845743
+		 0.014945507 -0.18975079 0.01554352 -0.19095963 0.016195208 -0.19215181 0.016261429
+		 -0.19351754 0.015656114 -0.18891835 0.0096130986 -0.18782169 0.010166051 -0.18652296
+		 0.010678604 -0.18579149 0.014408976 -0.18717772 0.015029401 -0.18851638 0.015599042
+		 -0.18977511 0.016190231 -0.19090676 0.016860157 -0.19202083 0.01695624 -0.19335705
+		 0.016415477 -0.1858691 0.015179545 -0.18727642 0.015715718 -0.18859464 0.016253024
+		 -0.18979633 0.016840696 -0.19082391 0.01752907 -0.19185385 0.017653763 -0.19313204
+		 0.017146707 -0.18602365 0.01593259 -0.18741667 0.016395807 -0.18869072 0.016908795
+		 -0.1898123 0.017496258 -0.19069594 0.01821366 -0.19157428 0.018346548 -0.19287303
+		 0.017834008 -0.18624711 0.016658843 -0.1875934 0.017070144 -0.18880486 0.01756826
+		 -0.18981874 0.018158495 -0.18652439 0.017349899 -0.18779963 0.017742425 -0.18894726
+		 0.018233985 -0.18981475 0.01883477 -0.19047761 0.0188995 -0.18682253 0.017998368
+		 -0.1880886 0.018399656 -0.18915606 0.018899649 0.24515656 0.42868388 0.24512157 0.42861727
+		 0.24531853 0.428471 0.24539039 0.42860502 0.24492192 0.42875922 0.2450671 0.42856497
+		 0.24520862 0.42836761 0.24551092 0.42831624 0.24562387 0.4285177 0.2451684 0.4287582
+		 0.24541505 0.42875761 0.24499869 0.42853177 0.2450725 0.42830324 0.2453447 0.42816475
+		 0.24569918 0.42814904 0.24585292 0.42841119 0.24566244 0.42875701 0.24515581 0.42883265
+		 0.24538971 0.42890984 0.24492304 0.42852065 0.24492307 0.42828202 0.24514227 0.42807275
+		 0.24547388 0.42795417 0.24562445 0.42899585 0.24512015 0.42889941 0.24531698 0.42904392
+		 0.24484728 0.42853251 0.2447736 0.42830497 0.24492212 0.42804301 0.2452071 0.42783961
+		 0.24559639 0.42773384 0.24587697 0.42796853 0.24551092 0.42919642 0.24506523 0.42895216
+		 0.24520659 0.42914778 0.24477863 0.42856628 0.24463728 0.42837065 0.24470212 0.42807594
+		 0.24492012 0.42780316 0.24526563 0.42760345 0.24585146 0.42910233 0.24569955 0.42936081
+		 0.24534421 0.42934829 0.24499658 0.42898589 0.24507028 0.4292134 0.24472371 0.428619
+		 0.24452689 0.42847452 0.24449967 0.42817014 0.24463376 0.42784479 0.24491693 0.42756182
+		 0.24531743 0.42736274 0.24570031 0.42749912 0.24547647 0.42955562 0.24514177 0.42944247
+		 0.24492083 0.42899773 0.24492079 0.42923641 0.24468806 0.42868578 0.24445413 0.4286086
+		 0.24433295 0.42832199 0.24436741 0.42796281 0.24456933 0.42761087 0.24491264 0.42731795
+		 0.24536701 0.42711955 0.24579653 0.42726648;
+	setAttr ".uvtk[250:481]" 0.24587715 0.42953742 0.24560276 0.42977116 0.2452101
+		 0.42967364 0.24492173 0.4294754 0.24484515 0.42898667 0.24477138 0.42921513 0.24467546
+		 0.4287602 0.24442881 0.4287608 0.24421942 0.42852259 0.24414432 0.4281576 0.24424112
+		 0.42774725 0.24450997 0.42737383 0.24490701 0.42707109 0.24527454 0.42990753 0.24492374
+		 0.42971525 0.24470161 0.42944565 0.24477679 0.42895347 0.24463525 0.42915079 0.24468729
+		 0.42883456 0.2444535 0.42891341 0.24418141 0.42876136 0.24399245 0.42841607 0.24396671
+		 0.42798102 0.24413294 0.42751852 0.2444509 0.42713436 0.24571094 0.42999992 0.24533391
+		 0.43014461 0.24492693 0.42995659 0.24463677 0.4296788 0.24449919 0.42935362 0.24472229
+		 0.42890114 0.24452533 0.42904741 0.24422 0.42900074 0.24403043 0.42729172 0.24581346
+		 0.43022668 0.24539296 0.43038407 0.24493124 0.43020043 0.24457824 0.42991495 0.24437001
+		 0.42956424 0.24433295 0.42920217 0.24493685 0.43044734 0.24452643 0.43015566 0.24424747
+		 0.4297846 0.24414468 0.42936936 0.24399094 0.42910725 0.24447685 0.43039888 0.24414355
+		 0.43001926 0.24396686 0.42954987 0.24404734 0.43025196 0.32091326 0.44228742 0.32063878
+		 0.44252115 0.32051253 0.44230556 0.32073569 0.44211078 0.32031059 0.44265747 0.32024619
+		 0.44242358 0.32038033 0.44209823 0.32054704 0.44194642 0.32074696 0.44274992 0.32036987
+		 0.44289452 0.31996292 0.44270644 0.31995982 0.44246507 0.32017785 0.44219232 0.32024279
+		 0.44189769 0.32035318 0.44179383 0.32088763 0.44185233 0.32066065 0.44174579 0.32084942
+		 0.44297671 0.32042891 0.44313398 0.31996718 0.44295031 0.31961426 0.44266474 0.31967282
+		 0.44242859 0.31995782 0.44222525 0.32010645 0.44196329 0.32010141 0.44170201 0.32015634
+		 0.44164932 0.3204259 0.44165978 0.31997278 0.44319719 0.31956244 0.44290543 0.31928349
+		 0.4425343 0.31940606 0.44231403 0.3197377 0.44219548 0.31995696 0.44198623 0.32003275
+		 0.44173574 0.31995818 0.44150907 0.32019204 0.4415825 0.32069868 0.44150701 0.32045129
+		 0.44150758 0.31951278 0.44314864 0.31917953 0.44276902 0.31900299 0.4422996 0.31918079
+		 0.44211906 0.31953532 0.44210342 0.31980753 0.44196498 0.31995702 0.44174764 0.32020462
+		 0.44150814 0.32066011 0.44126767 0.32042661 0.44135493 0.31908327 0.44300163 0.31936911
+		 0.44195193 0.31967139 0.44190058 0.31988138 0.44173646 0.32019281 0.44143379 0.32054722
+		 0.44106621 0.32035479 0.44122088 0.3190271 0.44185689 0.31925619 0.4417505 0.31956148
+		 0.44179723 0.31981295 0.44170332 0.32015783 0.44136709 0.32073551 0.44089904 0.32088923
+		 0.44116122 0.32038099 0.44091469 0.32024488 0.44111753 0.31948972 0.44166321 0.31975847
+		 0.44165099 0.32010338 0.44131482 0.32051021 0.44070414 0.32017863 0.44082266 0.3201088
+		 0.44105315 0.31921762 0.44151109 0.31946501 0.44151059 0.31972352 0.44158438 0.32003498
+		 0.44128168 0.32063282 0.44048384 0.32091337 0.44071853 0.32024345 0.44058955 0.31995848
+		 0.44079286 0.3199594 0.44103187 0.31925568 0.44127235 0.3194904 0.44135839 0.31971171
+		 0.44151002 0.31995928 0.4412705 0.32030204 0.44035336 0.31995651 0.44055304 0.31973845
+		 0.44082582 0.31980991 0.44105482 0.31936923 0.44107172 0.31956315 0.44122431 0.31972432
+		 0.44143558 0.31988358 0.44128239 0.32035393 0.44011271 0.32073677 0.44024915 0.31995338
+		 0.4403117 0.31967017 0.44059455 0.31953597 0.44091988 0.31967357 0.44112045 0.31902871
+		 0.44116578 0.31918067 0.44090736 0.31975999 0.44136882 0.31981489 0.44131607 0.32040352
+		 0.43986949 0.32083303 0.44001651 0.31994912 0.44006783 0.31960577 0.4403607 0.31940374
+		 0.44071251 0.31994352 0.43982095 0.31954643 0.44012362 0.31927752 0.44049695 0.31900308
+		 0.44073072 0.31948742 0.43988416 0.31916934 0.44026825 0.31906688 0.44004142 0.40286726
+		 -0.44392222 0.40310234 -0.44819808 0.40546203 -0.44808951 0.40524369 -0.44360083
+		 0.40312737 -0.4526037 0.40548891 -0.45260805 0.40781671 -0.44800189 0.40767539 -0.44336638
+		 0.40307873 -0.45703137 0.40545189 -0.45714006 0.40783381 -0.45260698 0.41017056 -0.44796431
+		 0.41014042 -0.44326979 0.40286702 -0.46136087 0.4052729 -0.4616721 0.40781325 -0.45721921
+		 0.41016984 -0.45260334 0.4125264 -0.44798744 0.41261336 -0.44332874 0.40772629 -0.46187794
+		 0.41016909 -0.45724237 0.41250587 -0.45259967 0.41488776 -0.44806659 0.41506678 -0.44353458
+		 0.41019922 -0.46193689 0.41252294 -0.45720476 0.41485077 -0.45259863 0.41726094 -0.44817528
+		 0.41747266 -0.44384578 0.41266426 -0.46184027 0.41487765 -0.45711714 0.41721228 -0.45260298
+		 0.41509593 -0.46160585 0.41723728 -0.4570086 0.41747239 -0.46128443 -0.1429736 0.0020462871
+		 -0.14320752 0.0063222051 -0.14556721 0.0062142611 -0.14535013 0.0017255545 -0.14323138
+		 0.010727823 -0.14559288 0.01073277 -0.14792195 0.0061272979 -0.14778186 0.0014917254
+		 -0.1431815 0.015155494 -0.14555463 0.015264809 -0.14793777 0.010732353 -0.15027575
+		 0.006090343 -0.15024689 0.0013958216 -0.14296864 0.019484907 -0.14537442 0.019796759
+		 -0.14791597 0.01534456 -0.1502738 0.010729373 -0.15263161 0.0061141253 -0.15271981
+		 0.0014554262 -0.14782777 0.020003259 -0.15027183 0.015368402 -0.15260983 0.010726333
+		 -0.15499297 0.0061938763 -0.15517317 0.0016618967 -0.15030071 0.020062894 -0.15262564
+		 0.015331388 -0.15495472 0.010725915 -0.15736608 0.0063031912 -0.15757895 0.0019738078
+		 -0.15276574 0.01996693 -0.15498038 0.015244424 -0.15731621 0.010730922 -0.15519747
+		 0.019733161 -0.15734006 0.01513654 -0.15757398 0.019412398;
+createNode polyAutoProj -n "polyAutoProj76";
+	rename -uid "83E3D40B-4992-57F6-A260-A8B75FE4E33B";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+	setAttr ".ix" -type "matrix" 0.033782226606050292 0 0 0 0 0.033782226606050292 0 0
+		 0 0 0.033782226606050292 0 18.500439185737594 0.3076541040556009 12.354124322001356 1;
+	setAttr ".s" -type "double3" 0.067564473347877296 0.067564473347877296 0.067564473347877296 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV140";
+	rename -uid "8FC93122-416D-3678-B463-1E8A7D9939DE";
+	setAttr ".uopa" yes;
+	setAttr -s 482 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.0091876388 0.021459103 -0.011555612
+		 0.01772064 -0.015655398 0.016314387 -0.012068212 0.018358886 -0.0058397055 0.021622717
+		 -0.0064525008 0.016449869 -0.00074350834 0.0096626878 -0.004466176 0.011352897 -0.018675566
+		 0.013081253 -0.014306128 0.013248563 0.00014430285 0.022183061 -0.00078725815 0.018411994
+		 -0.0024570823 0.018054336 -0.00024712086 0.011508465 0.0041747689 0.0066385865 0.00092351437
+		 0.023029387 -0.0072980523 0.011951268 -0.020518005 0.0088562965 -0.015799344 0.0070949197
+		 -0.0018046498 0.012652814 0.009647727 0.01957655 0.010620594 0.016183794 2.1517277e-05
+		 0.009462595 0.0029373169 0.0025752187 0.011390865 0.0022383332 0.0014434457 0.020076245
+		 0.0078889728 0.020130754 -0.0092765093 0.011807442 -0.021106482 0.0044848919 -0.016487122
+		 0.00088149309 -0.0028612018 0.0058884621 0.010764837 0.010895371 0.012633085 0.013037026
+		 0.014672995 0.010953367 0.0014930964 0.012529284 0.0055058002 0.016947299 0.009221673
+		 0.012646496 -0.010337353 0.011332989 -0.020395458 0.00082343817 -0.016342998 -0.0044069886
+		 -0.0039177537 -0.00087594986 0.01007694 0.0046819448 0.015384138 0.0072920322 0.0034046173
+		 0.00058549643 0.0046350956 0.00080299377 0.0010220408 -0.00059083104 -0.00084382296
+		 -0.0040414929 0.0031907558 0.00917238 0.0043914914 0.0087956786 0.00047957897 -0.00066834688
+		 -0.010357559 0.010973871 -0.018355548 -0.0012601614 -0.01537019 -0.007799685 -0.0049351454
+		 -0.0066351891 0.0085837841 -0.0014716983 0.014795542 0.0029206276 0.0046148896 0.00044393539
+		 0.0030373931 -0.0035124123 0.0011198521 0.0013790429 -0.0053557158 -0.0033861995
+		 -0.0091270804 0.011191428 -0.014944136 -0.00086963177 -0.013611436 -0.008353889 -0.0058667064
+		 -0.010406196 0.0063458681 -0.0065820813 0.012953222 -0.001304388 0.003554225 -3.0577183e-05
+		 -0.0062021017 0.012445271 -0.010113955 0.0029811859 -0.011228263 -0.0051705241 -0.0066459179
+		 -0.011252522 0.0034651756 -0.0096822381 0.0099329948 -0.0045375824 0.0015755892 -0.00017440319
+		 -0.00036674738 0.015163064 -0.0068422556 0.010397792 -0.008913219 0.002604425 -0.0071659088
+		 -0.0082993507 0.00011718273 -0.0098457932 0.0058332086 -0.0059437752 -0.0012562871
+		 0.00042384863 -0.0072156191 -0.00075244904 -0.0032653809 -0.006277442 0.00073009729
+		 -0.0046730042 -0.0049789548 0.0021141768 -0.0087599754 0.015289247 -0.0067445636
+		 0.012367666 -0.0057439804 0.0023142099 -0.0054752827 0.00026834011 -0.0098972321
+		 0.005138278 -0.0048787594 0.015818357 -0.0086597204 0.0092015862 -0.017113328 0.0095384717
+		 0.020222127 0.0032813773 0.017102122 0.010919735 0.017464936 0.0074533224 0.021627724
+		 0.0010661036 0.017439783 0.0030565113 0.01595521 0.011564396 0.0075387955 0.014627606
+		 0.0060037971 0.010833189 0.016999364 0.0021090508 0.021698475 -0.0026881695 0.011240423
+		 -0.010261089 0.011793613 -0.010252878 0.013236523 -0.00060107931 0.014187098 0.0084882453
+		 0.0089248419 0.01549454 0.0089598894 -0.011255413 -0.0017898679 0.015008844 -0.0052871108
+		 0.011934549 0.0043854117 0.0050489455 0.015701294 -0.0041408986 0.020464897 -0.0071105659
+		 0.011070907 -0.010757044 0.010577679 -0.0077473475 0.012493074 0.00084700063 0.010056496
+		 0.012557056 0.0037292838 -0.013694305 0.0021786094 0.015123919 -0.0040974617 0.012382813
+		 -0.008846581 0.011057004 -0.0081387162 0.0068285912 0.0027289391 -0.0017412007 0.013596535
+		 -0.010310978 0.017974138 -0.011342987 0.0092912912 -0.01130487 0.010724008 0.0050169434
+		 0.0061854124 0.011479009 0.0016540289 0.010990672 0.0068569183 0.0054495409 0.0024255514
+		 0.0072886944 -0.01251626 0.0078606009 -0.010243416 0.00065849721 0.001072526 -0.008531332
+		 0.010744989 -0.01541692 0.014304459 -0.014539391 0.0065869093 -0.011446774 0.012960672
+		 -0.011642284 0.010883987 -0.0081061581 0.0093028545 0.0027687103 0.0085104108 0.005894281
+		 0.012457788 0.0022163987 -0.0011289716 0.0079644024 -0.015006959 0.0036281645 -0.011541545
+		 -0.0055914521 -0.00054591894 -0.014315575 0.0072478056 -0.018491209 0.0095553994
+		 -0.015865177 0.0030323267 -0.010771066 0.0090777278 -0.010938299 0.012341559 -0.0032989625
+		 0.020315468 -0.0024247169 -0.0038332939 0.0078224838 -0.016240597 -0.00079420209
+		 -0.012006998 -0.010935724 -0.0020808578 -0.018109977 0.003279388 -0.018606275 0.0038039088
+		 -0.014473051 -0.0013990402 -0.0089318752 -0.0056129694 0.0072746575 -0.016169786
+		 -0.00454849 -0.011644244 -0.014402121 -0.0034669042 -0.018976927 -0.00072747469 -0.014961362
+		 -0.0030524731 -0.0093766451 -0.0069998503 -0.0056987703 -0.0063356757 0.0067704916
+		 -0.01476419 -0.0067637563 -0.010497212 -0.015046775 -0.0045985579 -0.016039431 -0.0038449168
+		 -0.0062510669 -0.0068836808 -0.00018340349 -0.014857471 -0.0010576248 -0.005782485
+		 0.006778717 -0.011981845 -0.0065388978 -0.0087291598 -0.011970609 -0.0052660704 -0.0084993243
+		 -0.0035020113 0.0077730417 -0.007778585 -0.0028812885 -0.0070351362 -0.0043293834
+		 -0.0054259896 0.0046237707 -0.0036197901 0.0074559152 0.0017286539 0.010211945 -0.0051198006
+		 0.0042649806 -0.0075026751 0.0081599057 -0.0036022067 0.0027459562 -0.002714172 0.0041796267
+		 -0.0054519176 0.0068206489 -0.0068435073 0.0043304861 0.00043582916 0.00038470328
+		 -0.0015100241 0.0052978694 -0.0033916682 0.0090201497 -0.007276237 0.0071810335 -0.0083218962
+		 0.0041767955 -0.0041231662 0.0011339188 -0.0077136755 0.0019297302 -7.7471137e-05
+		 0.0059549361 -0.00070209801 0.010469332 -0.0049020052 0.010448173 -0.0074028969 0.0042132735
+		 -0.0077303052 0.00053007901 -0.0093366504 0.0027375817 -0.0042389184 -0.00056262314
+		 -0.0080237091 -0.00070154667 0.0014407337 0.0060385913 0.0022992939 0.010728911 -0.0012957156
+		 0.012922369 -0.0057186633 0.0085711628 -0.0099528432 0.00094464421 -0.0039200038
+		 -0.0022248179 -0.0077160597 -0.0037012696 0.0028662086 0.0055154413 0.0051357895
+		 0.0096365213 0.0030255169 0.01349996 -0.0017107874 0.012381904 -0.0053245574 0.0024643019
+		 -0.0060456693 -0.0027108863 -0.010427043 -0.0029867887 -0.0031536967 -0.0036814809
+		 -0.0064586848 -0.0066156983 0.0040253326 0.0044508725 0.0073303282 0.0073850751 0.0071376786
+		 0.011784405 0.0036098808 0.013413332 -0.0018813908 0.0080307685 -0.0104101 0.0062264502
+		 -0.011690065 0.0009444356 -0.0092023611 -0.0073874295 -0.0019945502 -0.0047460496
+		 -0.0042641312 -0.0088671148 0.0047916472 0.0029941946 0.0085877031 0.0044706613 0.010074012
+		 0.008156836 0.0087315366 0.01103615 0.0040352196 0.0095647648 -0.0016365796 -0.0010257941
+		 -0.0049221218 -0.0091367476 -0.011091679 -0.0050238073 -0.0062660277 -0.011015028
+		 -0.00056907535 -0.0052691996 -0.0014276505 -0.0099595189 0.0051105544 0.0013320148
+		 0.008895345 0.0014709383 0.011298701 0.0037562251 0.011963334 0.0057932138 0.0097738504
+		 0.0065572187 0.0043182671 0.0010929164 -0.00018125772 -0.015085178 -0.0027127862
+		 -0.024437435;
+	setAttr ".uvtk[250:481]" -0.011638552 0.0086005628 -0.011744648 0.0013165474
+		 -0.0078599006 -0.010266721 -0.0021538585 -0.012730569 0.00094911456 -0.0051855445
+		 0.0015737489 -0.0096999407 0.0049948245 -0.00036452711 0.0085853338 -0.0011603385
+		 0.010824494 -0.00017526746 0.01256172 -0.00017502904 0.012616299 -0.00054713339 0.010204144
+		 -0.0023983847 0.0044292957 -0.012680816 -0.0089021921 -0.0057877898 -0.0027382374
+		 -0.012643903 0.002167359 -0.012153 0.0023816824 -0.0045284927 0.0042633265 -0.008250773
+		 0.0044738501 -0.0019765794 0.0077151582 -0.0035611093 0.010208322 -0.0019681752 0.01128177
+		 -0.0054570436 0.012510195 -0.0078311712 0.01328609 -0.012087949 0.0091734603 -0.016330654
+		 -0.012414426 0.012857348 -0.0093324929 0.0031678081 -0.0031635761 -0.0087953508 0.0025824383
+		 -0.011612505 0.0057736561 -0.0096787512 0.0035858378 -0.0034102499 0.0063235834 -0.0060512722
+		 0.0091935545 -0.0034074187 0.011858125 -0.027296344 -0.010986477 0.028065771 -0.0083017945
+		 0.017100066 -0.0034466088 -0.00032350421 0.0027530417 -0.0072613358 0.0065903105
+		 -0.0078017414 0.0081478916 -0.006411612 -0.0035576522 0.013450235 0.0025082454 0.0017952323
+		 0.0061962008 -0.0016948581 0.0082745329 -0.003443867 0.0086019356 0.00023934245 0.0010529011
+		 0.015854597 0.0057937726 0.0099061728 0.0069173221 0.0034802854 0.0035844091 0.025206834
+		 -0.012227118 0.0069050193 -0.012386203 -0.00044471025 -0.011682034 -0.0068132281
+		 -0.012236238 -0.00079157948 -0.0095736384 -0.0076267123 -0.0084761679 -0.012119263
+		 -0.0097433627 -0.0092065334 -0.010933578 -0.0047659278 -0.01311022 0.011119992 -0.010059744
+		 0.0013412833 -0.0038442612 -0.010715932 -0.003362447 -0.014563709 -0.0068278015 -0.012882054
+		 -0.0069518983 -0.0084656775 -0.0081856549 -0.0055247843 -0.010896802 0.0045275986
+		 -0.01041317 -0.00080662966 -0.011735976 0.026350945 -0.0090854764 0.015285879 -0.0041843951
+		 -0.0022445917 0.002084285 -0.0092632473 0.0019685924 -0.013599247 -0.0027219355 -0.014649272
+		 -0.0047718287 -0.010749459 -0.0036002398 -0.0055633485 -0.0043545365 -0.0040934682
+		 -0.0084623992 -0.0025072098 -0.0043532252 0.011528909 0.0017834604 -0.00022032857
+		 0.0055600107 -0.0037733316 0.0060049295 -0.0098501742 0.0016076863 -0.014123052 -0.0019397736
+		 -0.011876941 -0.0024485886 -0.0066441894 3.5345554e-05 -0.001529485 -0.0046580434
+		 -0.0024225414 -0.0097413659 0.00099667907 -0.0081169009 0.0001309514 0.00027155876
+		 0.013825923 0.0051033497 0.0078018904 0.0063378513 0.0013376474 0.0077362061 -0.0055437386
+		 0.0052367449 -0.011695594 0.0010675192 -0.011652231 -0.0010253787 -0.0071851313 -0.004524976
+		 -0.00072257221 -0.00867033 0.0024283826 -0.0072108507 0.0025268942 0.0028401315 0.02307862
+		 0.0076474845 -0.0084663928 0.0037730336 -0.010234445 0.00049591064 -0.0071191341
+		 -0.0039865375 0.00088717043 -0.0075767636 0.0054074526 -0.005787462 0.005001083 0.0081258714
+		 -0.0018949211 0.0087409616 -0.0054873526 0.0058581531 -0.0080600381 0.0019366741
+		 -0.0064778328 -0.0030826926 0.0023130625 -0.0076654553 0.0024847984 -0.0080552697
+		 -0.0011640638 -0.0051660836 0.0086366385 -0.0037023425 0.0071755201 0.0072815418
+		 -0.0055858493 0.0031533837 -0.0053720176 -0.001865983 0.0034188628 -0.0059342384
+		 0.0067911819 -0.0015369952 0.01106409 -0.00099685788 0.0085932612 0.0098119974 -0.004055649
+		 0.008187592 -0.0031899214 0.0040572286 -0.0039461255 -0.00042521954 0.0040601641
+		 -0.005489409 0.00071437657 -0.00626719 -0.00439661 -0.0018979013 0.010540247 0.0027926266
+		 0.011590339 0.0020104647 0.0088180006 0.010483801 -0.0022523403 0.0085330606 -0.0005517453
+		 0.0045956373 -0.0023363829 0.0010960698 0.0041261762 -0.0020136237 0.0062042847 0.0034331083
+		 0.01150474 0.0068984628 0.0098230988 0.0048425198 0.0076905042 0.011004239 0.0017069727
+		 0.008256346 0.0024658293 0.0047287345 -0.00063642859 0.0025192499 0.0035852194 -0.0017127991
+		 -0.0028386358 -0.0050326586 -0.010860864 0.0039149523 0.0076569393 0.008546859 0.009060286
+		 0.0098139942 0.0061475635 0.0070225894 0.0054067373 0.010967433 -0.0075865686 0.012306899
+		 -0.0022673756 0.0044252276 0.001034528 0.0036709011 0.0025044084 -0.00020086765 -0.016884897
+		 -0.0027694702 -0.026137577 0.0042550862 -0.00081436895 0.0096443295 0.0045677647
+		 0.011752725 0.003754288 0.0044239163 -0.014587874 0.010130435 -0.0044002365 0.012456894
+		 -0.0026142448 0.012297839 -0.0099639669 0.0091561675 -0.018344825 0.013180912 -0.014178947
+		 0.011806637 -0.029409895 0.00019824505 -0.0068815351 -0.0024657845 -0.0018187165
+		 -0.0033171773 0.0015894771 -0.00095963478 -0.0026455522 -0.0018619299 -0.0014129281
+		 -0.0027163029 -0.00081503391 -0.0022209287 0.003544271 -0.0010831952 -0.00043269992
+		 -0.00011610985 -0.00068324804 -0.001126647 -0.0030258894 -0.0014489889 -0.00030422211
+		 -0.00015452504 0.0044267774 -0.00074487925 0.00040671229 0.0041216612 0.0051066279
+		 0.0026520491 0.0017883182 -9.5546246e-05 -0.0040514469 0.00089898705 0.00016438961
+		 0.00189358 0.0043801665 -0.00049424171 9.6380711e-05 0.0022922754 0.00023233891 0.001952529
+		 -0.0040981174 0.0032470226 0.00063300133 0.0029245615 0.0033546686 -0.00085410476
+		 -0.0014596581 0.0025428832 -7.7962875e-05 0.0040189624 -0.003215611 0.0045142174
+		 0.0011437535 0.0019140542 0.0010119677 -0.0023237467 -0.0047778487 0.0028811991 0.00076138973
+		 0.0051151216 -0.0012606978 0.0036598742 0.0017417073 0.0027575791 0.0029742718 0.0042637587
+		 0.0021474361 0.0015996993 0.0072103143 -0.00099633634 0.0049278736 0.0029400438 -7.134676e-05
+		 0.0037625432 -0.0027773976 6.9364905e-05 0.0013993382 0.0036468059 -0.0004760623
+		 0.0045058578 -0.00037151575 0.0026437789 -0.004031539 0.00012683868 -8.98242e-05
+		 0.0032180697 -0.0012267232 0.0042643398 0.0018217564 0.0032417774 -0.00018471479
+		 0.00056961179 -0.00421381 -0.00023660064 -0.00019580126 0.00026792288 -0.0070859194
+		 0.0018336028 -0.0030524433 0.0032603592 0.0035496354 0.00089609623 4.1604042e-05
+		 -0.0014681518 -0.0034663677 -0.00046610832 0.00085008144 0.0022583008 -0.00076687336
+		 0.0012226105 0.0042970181 -0.0014495552 0.00026792288 -0.0024721026 -0.0017385483
+		 -4.1395426e-05 0.0031356812 0.0020288229 0.00027900934 -0.00085157156 0.0041148067
+		 -0.0027136505 0.00045472383 -0.0014258623 0.0013099313 0.0015242994 0.0071691275
+		 0.0016653836 0.00017306209 -0.0019703209 0.0028606057 -0.0018545985 0.00055927038
+		 0.0017228723 -0.0013160706 -0.0011478364 0.00015455484 0.0027885437 -0.0048446655;
+createNode polyLayoutUV -n "polyLayoutUV79";
+	rename -uid "293815C1-4FE0-0EF2-8A3D-ABA4DCFEB05C";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+	setAttr ".fr" no;
+	setAttr ".l" 0;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".sc" 0;
+	setAttr ".dl" yes;
+	setAttr ".rbf" 3;
+	setAttr ".lm" 1;
+createNode polyTweakUV -n "polyTweakUV141";
+	rename -uid "2CAA9705-4B24-A468-D464-3FA079E37AD9";
+	setAttr ".uopa" yes;
+	setAttr -s 482 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.59954315 -0.43642622 -0.598351 -0.43649271
+		 -0.59826386 -0.43579698 -0.59951448 -0.43576545 -0.59959614 -0.4370912 -0.59848213
+		 -0.43718749 -0.5971458 -0.436647 -0.59698516 -0.43588763 -0.59822345 -0.43510079
+		 -0.59950882 -0.43510777 -0.60072768 -0.43642104 -0.60075188 -0.43577433 -0.59967911
+		 -0.43776008 -0.5986492 -0.43788499 -0.59737086 -0.43737817 -0.60070658 -0.4370715
+		 -0.59690106 -0.43511316 -0.59823036 -0.43440598 -0.59952545 -0.43445224 -0.60077775
+		 -0.43513012 -0.60190815 -0.43648359 -0.60198629 -0.43582961 -0.59980726 -0.43844464
+		 -0.59892893 -0.43857771 -0.59763008 -0.43806541 -0.60069072 -0.43772709 -0.60181218
+		 -0.43713939 -0.5968979 -0.4343352 -0.59828401 -0.43371451 -0.59956372 -0.43379813
+		 -0.60080445 -0.4344871 -0.60204506 -0.43517607 -0.60308611 -0.43662614 -0.60322624
+		 -0.43594605 -0.6006844 -0.4383893 -0.60169816 -0.43779886 -0.60290951 -0.43730053
+		 -0.59697539 -0.43356463 -0.59838259 -0.43302819 -0.59962261 -0.4331446 -0.60083109
+		 -0.43384412 -0.60208333 -0.43452197 -0.60332477 -0.4352597 -0.60425574 -0.43688893
+		 -0.60447901 -0.43616265 -0.60068852 -0.43906558 -0.60002565 -0.43913046 -0.60155588
+		 -0.43846461 -0.60270339 -0.43797284 -0.60397857 -0.43758008 -0.59712982 -0.43281153
+		 -0.59852272 -0.43234804 -0.59970069 -0.43249062 -0.60085702 -0.43319988 -0.60210001
+		 -0.43386644 -0.60337847 -0.43456823 -0.60463345 -0.43540961 -0.60134727 -0.43913034
+		 -0.60241461 -0.43863013 -0.60368055 -0.43822861 -0.5973531 -0.43208525 -0.59869933
+		 -0.43167368 -0.59979665 -0.43183482 -0.60088116 -0.43255317 -0.60209435 -0.43320876
+		 -0.60338545 -0.43387341 -0.60471094 -0.43463901 -0.59763026 -0.43139413 -0.59890544
+		 -0.43100137 -0.59991062 -0.43117535 -0.60090226 -0.43190271 -0.60206568 -0.43254796
+		 -0.60334504 -0.43317723 -0.60470772 -0.43386105 -0.59792829 -0.43074563 -0.59919423
+		 -0.43034407 -0.60005295 -0.4305096 -0.60091811 -0.43124714 -0.60201269 -0.43188301
+		 -0.60325783 -0.4324815 -0.60462368 -0.43308657 -0.60092443 -0.43058491 -0.60192972
+		 -0.43121412 -0.6031267 -0.43178675 -0.60446304 -0.43232724 -0.60026157 -0.42984387
+		 -0.60092032 -0.42990863 -0.60180163 -0.43052956 -0.60295963 -0.43108922 -0.60423791
+		 -0.43159604 -0.60158312 -0.42984375 -0.60267991 -0.4303965 -0.60397875 -0.4309088
+		 -0.19197926 0.012116805 -0.19080132 0.012259595 -0.19087958 0.01291357 -0.19211954
+		 0.012796894 -0.19180256 0.01144246 -0.19070524 0.01160381 -0.18962085 0.012322374
+		 -0.18964517 0.012969092 -0.19093853 0.01356709 -0.19221821 0.013483211 -0.19314882
+		 0.011853777 -0.19337228 0.012580022 -0.1915963 0.010770194 -0.1905911 0.010944359
+		 -0.18959963 0.011671916 -0.19287154 0.011162698 -0.18843633 0.012317404 -0.18840778
+		 0.012978211 -0.18967116 0.013613313 -0.19097692 0.014221206 -0.19227201 0.014174685
+		 -0.19352683 0.013333067 -0.19130737 0.010112957 -0.1904487 0.010278629 -0.18958366
+		 0.011016339 -0.1925734 0.010514244 -0.1884892 0.011652447 -0.18724412 0.012251168
+		 -0.18715709 0.012946919 -0.18840224 0.013635904 -0.18969798 0.014256299 -0.19099373
+		 0.014876723 -0.1922791 0.014869496 -0.19360447 0.014103636 -0.18957716 0.010354124
+		 -0.18857205 0.010983538 -0.18737513 0.011556372 -0.18603891 0.012097135 -0.18587846
+		 0.012856513 -0.18711686 0.013643101 -0.18841904 0.014291406 -0.1897248 0.014899284
+		 -0.19098818 0.015534401 -0.19223884 0.015565693 -0.19360143 0.014881611 -0.19023991
+		 0.0096129645 -0.18958122 0.0096778497 -0.18870002 0.010298954 -0.18754208 0.010858834
+		 -0.18626392 0.011365891 -0.18579453 0.013631016 -0.18712395 0.014337927 -0.18845743
+		 0.014945507 -0.18975079 0.01554352 -0.19095963 0.016195208 -0.19215181 0.016261429
+		 -0.19351754 0.015656114 -0.18891835 0.0096130986 -0.18782169 0.010166051 -0.18652296
+		 0.010678604 -0.18579149 0.014408976 -0.18717772 0.015029401 -0.18851638 0.015599042
+		 -0.18977511 0.016190231 -0.19090676 0.016860157 -0.19202083 0.01695624 -0.19335705
+		 0.016415477 -0.1858691 0.015179545 -0.18727642 0.015715718 -0.18859464 0.016253024
+		 -0.18979633 0.016840696 -0.19082391 0.01752907 -0.19185385 0.017653763 -0.19313204
+		 0.017146707 -0.18602365 0.01593259 -0.18741667 0.016395807 -0.18869072 0.016908795
+		 -0.1898123 0.017496258 -0.19069594 0.01821366 -0.19157428 0.018346548 -0.19287303
+		 0.017834008 -0.18624711 0.016658843 -0.1875934 0.017070144 -0.18880486 0.01756826
+		 -0.18981874 0.018158495 -0.18652439 0.017349899 -0.18779963 0.017742425 -0.18894726
+		 0.018233985 -0.18981475 0.01883477 -0.19047761 0.0188995 -0.18682253 0.017998368
+		 -0.1880886 0.018399656 -0.18915606 0.018899649 0.24515656 0.42868388 0.24512157 0.42861727
+		 0.24531853 0.428471 0.24539039 0.42860502 0.24492192 0.42875922 0.2450671 0.42856497
+		 0.24520862 0.42836761 0.24551092 0.42831624 0.24562387 0.4285177 0.2451684 0.4287582
+		 0.24541505 0.42875761 0.24499869 0.42853177 0.2450725 0.42830324 0.2453447 0.42816475
+		 0.24569918 0.42814904 0.24585292 0.42841119 0.24566244 0.42875701 0.24515581 0.42883265
+		 0.24538971 0.42890984 0.24492304 0.42852065 0.24492307 0.42828202 0.24514227 0.42807275
+		 0.24547388 0.42795417 0.24562445 0.42899585 0.24512015 0.42889941 0.24531698 0.42904392
+		 0.24484728 0.42853251 0.2447736 0.42830497 0.24492212 0.42804301 0.2452071 0.42783961
+		 0.24559639 0.42773384 0.24587697 0.42796853 0.24551092 0.42919642 0.24506523 0.42895216
+		 0.24520659 0.42914778 0.24477863 0.42856628 0.24463728 0.42837065 0.24470212 0.42807594
+		 0.24492012 0.42780316 0.24526563 0.42760345 0.24585146 0.42910233 0.24569955 0.42936081
+		 0.24534421 0.42934829 0.24499658 0.42898589 0.24507028 0.4292134 0.24472371 0.428619
+		 0.24452689 0.42847452 0.24449967 0.42817014 0.24463376 0.42784479 0.24491693 0.42756182
+		 0.24531743 0.42736274 0.24570031 0.42749912 0.24547647 0.42955562 0.24514177 0.42944247
+		 0.24492083 0.42899773 0.24492079 0.42923641 0.24468806 0.42868578 0.24445413 0.4286086
+		 0.24433295 0.42832199 0.24436741 0.42796281 0.24456933 0.42761087 0.24491264 0.42731795
+		 0.24536701 0.42711955 0.24579653 0.42726648;
+	setAttr ".uvtk[250:481]" 0.24587715 0.42953742 0.24560276 0.42977116 0.2452101
+		 0.42967364 0.24492173 0.4294754 0.24484515 0.42898667 0.24477138 0.42921513 0.24467546
+		 0.4287602 0.24442881 0.4287608 0.24421942 0.42852259 0.24414432 0.4281576 0.24424112
+		 0.42774725 0.24450997 0.42737383 0.24490701 0.42707109 0.24527454 0.42990753 0.24492374
+		 0.42971525 0.24470161 0.42944565 0.24477679 0.42895347 0.24463525 0.42915079 0.24468729
+		 0.42883456 0.2444535 0.42891341 0.24418141 0.42876136 0.24399245 0.42841607 0.24396671
+		 0.42798102 0.24413294 0.42751852 0.2444509 0.42713436 0.24571094 0.42999992 0.24533391
+		 0.43014461 0.24492693 0.42995659 0.24463677 0.4296788 0.24449919 0.42935362 0.24472229
+		 0.42890114 0.24452533 0.42904741 0.24422 0.42900074 0.24403043 0.42729172 0.24581346
+		 0.43022668 0.24539296 0.43038407 0.24493124 0.43020043 0.24457824 0.42991495 0.24437001
+		 0.42956424 0.24433295 0.42920217 0.24493685 0.43044734 0.24452643 0.43015566 0.24424747
+		 0.4297846 0.24414468 0.42936936 0.24399094 0.42910725 0.24447685 0.43039888 0.24414355
+		 0.43001926 0.24396686 0.42954987 0.24404734 0.43025196 0.32091326 0.44228742 0.32063878
+		 0.44252115 0.32051253 0.44230556 0.32073569 0.44211078 0.32031059 0.44265747 0.32024619
+		 0.44242358 0.32038033 0.44209823 0.32054704 0.44194642 0.32074696 0.44274992 0.32036987
+		 0.44289452 0.31996292 0.44270644 0.31995982 0.44246507 0.32017785 0.44219232 0.32024279
+		 0.44189769 0.32035318 0.44179383 0.32088763 0.44185233 0.32066065 0.44174579 0.32084942
+		 0.44297671 0.32042891 0.44313398 0.31996718 0.44295031 0.31961426 0.44266474 0.31967282
+		 0.44242859 0.31995782 0.44222525 0.32010645 0.44196329 0.32010141 0.44170201 0.32015634
+		 0.44164932 0.3204259 0.44165978 0.31997278 0.44319719 0.31956244 0.44290543 0.31928349
+		 0.4425343 0.31940606 0.44231403 0.3197377 0.44219548 0.31995696 0.44198623 0.32003275
+		 0.44173574 0.31995818 0.44150907 0.32019204 0.4415825 0.32069868 0.44150701 0.32045129
+		 0.44150758 0.31951278 0.44314864 0.31917953 0.44276902 0.31900299 0.4422996 0.31918079
+		 0.44211906 0.31953532 0.44210342 0.31980753 0.44196498 0.31995702 0.44174764 0.32020462
+		 0.44150814 0.32066011 0.44126767 0.32042661 0.44135493 0.31908327 0.44300163 0.31936911
+		 0.44195193 0.31967139 0.44190058 0.31988138 0.44173646 0.32019281 0.44143379 0.32054722
+		 0.44106621 0.32035479 0.44122088 0.3190271 0.44185689 0.31925619 0.4417505 0.31956148
+		 0.44179723 0.31981295 0.44170332 0.32015783 0.44136709 0.32073551 0.44089904 0.32088923
+		 0.44116122 0.32038099 0.44091469 0.32024488 0.44111753 0.31948972 0.44166321 0.31975847
+		 0.44165099 0.32010338 0.44131482 0.32051021 0.44070414 0.32017863 0.44082266 0.3201088
+		 0.44105315 0.31921762 0.44151109 0.31946501 0.44151059 0.31972352 0.44158438 0.32003498
+		 0.44128168 0.32063282 0.44048384 0.32091337 0.44071853 0.32024345 0.44058955 0.31995848
+		 0.44079286 0.3199594 0.44103187 0.31925568 0.44127235 0.3194904 0.44135839 0.31971171
+		 0.44151002 0.31995928 0.4412705 0.32030204 0.44035336 0.31995651 0.44055304 0.31973845
+		 0.44082582 0.31980991 0.44105482 0.31936923 0.44107172 0.31956315 0.44122431 0.31972432
+		 0.44143558 0.31988358 0.44128239 0.32035393 0.44011271 0.32073677 0.44024915 0.31995338
+		 0.4403117 0.31967017 0.44059455 0.31953597 0.44091988 0.31967357 0.44112045 0.31902871
+		 0.44116578 0.31918067 0.44090736 0.31975999 0.44136882 0.31981489 0.44131607 0.32040352
+		 0.43986949 0.32083303 0.44001651 0.31994912 0.44006783 0.31960577 0.4403607 0.31940374
+		 0.44071251 0.31994352 0.43982095 0.31954643 0.44012362 0.31927752 0.44049695 0.31900308
+		 0.44073072 0.31948742 0.43988416 0.31916934 0.44026825 0.31906688 0.44004142 0.40286726
+		 -0.44392222 0.40310234 -0.44819808 0.40546203 -0.44808951 0.40524369 -0.44360083
+		 0.40312737 -0.4526037 0.40548891 -0.45260805 0.40781671 -0.44800189 0.40767539 -0.44336638
+		 0.40307873 -0.45703137 0.40545189 -0.45714006 0.40783381 -0.45260698 0.41017056 -0.44796431
+		 0.41014042 -0.44326979 0.40286702 -0.46136087 0.4052729 -0.4616721 0.40781325 -0.45721921
+		 0.41016984 -0.45260334 0.4125264 -0.44798744 0.41261336 -0.44332874 0.40772629 -0.46187794
+		 0.41016909 -0.45724237 0.41250587 -0.45259967 0.41488776 -0.44806659 0.41506678 -0.44353458
+		 0.41019922 -0.46193689 0.41252294 -0.45720476 0.41485077 -0.45259863 0.41726094 -0.44817528
+		 0.41747266 -0.44384578 0.41266426 -0.46184027 0.41487765 -0.45711714 0.41721228 -0.45260298
+		 0.41509593 -0.46160585 0.41723728 -0.4570086 0.41747239 -0.46128443 -0.1429736 0.0020462871
+		 -0.14320752 0.0063222051 -0.14556721 0.0062142611 -0.14535013 0.0017255545 -0.14323138
+		 0.010727823 -0.14559288 0.01073277 -0.14792195 0.0061272979 -0.14778186 0.0014917254
+		 -0.1431815 0.015155494 -0.14555463 0.015264809 -0.14793777 0.010732353 -0.15027575
+		 0.006090343 -0.15024689 0.0013958216 -0.14296864 0.019484907 -0.14537442 0.019796759
+		 -0.14791597 0.01534456 -0.1502738 0.010729373 -0.15263161 0.0061141253 -0.15271981
+		 0.0014554262 -0.14782777 0.020003259 -0.15027183 0.015368402 -0.15260983 0.010726333
+		 -0.15499297 0.0061938763 -0.15517317 0.0016618967 -0.15030071 0.020062894 -0.15262564
+		 0.015331388 -0.15495472 0.010725915 -0.15736608 0.0063031912 -0.15757895 0.0019738078
+		 -0.15276574 0.01996693 -0.15498038 0.015244424 -0.15731621 0.010730922 -0.15519747
+		 0.019733161 -0.15734006 0.01513654 -0.15757398 0.019412398;
 select -ne :time1;
 	setAttr ".o" 1100;
 	setAttr ".unw" 1100;
@@ -35922,9 +48723,9 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 292 ".dsm";
+	setAttr -s 318 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 138 ".gn";
+	setAttr -s 148 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -35945,12 +48746,10 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :modelPanel4ViewSelectedSet;
-	setAttr ".ihi" 0;
-	setAttr -s 85 ".dsm";
 connectAttr "polyPlane1.out" "pPlaneShape1.i";
 connectAttr "polyCube1.out" "pCubeShape1.i";
-connectAttr "polyExtrudeFace29.out" "pCubeShape3.i";
+connectAttr "polyTweakUV40.out" "pCubeShape3.i";
+connectAttr "polyTweakUV40.uvtk[0]" "pCubeShape3.uvst[0].uvtw";
 connectAttr "polyExtrudeFace3.out" "pCubeShape6.i";
 connectAttr "polyExtrudeFace4.out" "pCubeShape7.i";
 connectAttr "polyExtrudeFace5.out" "pCubeShape8.i";
@@ -36172,17 +48971,69 @@ connectAttr "polyTweakUV9.uvtk[0]" "pCylinder11Shape.uvst[0].uvtw";
 connectAttr "polyExtrudeFace28.out" "pPlaneShape3.i";
 connectAttr "polyLayoutUV3.out" "pPlaneShape4.i";
 connectAttr "polyTweakUV5.uvtk[0]" "pPlaneShape4.uvst[0].uvtw";
-connectAttr "polyCube13.out" "pCubeShape129.i";
-connectAttr "polyExtrudeFace35.out" "pCubeShape141.i";
-connectAttr "polyExtrudeFace41.out" "pCubeShape142.i";
-connectAttr "polyCylinder5.out" "pCylinderShape11.i";
-connectAttr "polyCube16.out" "pCubeShape144.i";
+connectAttr "polyTweakUV52.out" "pCubeShape129.i";
+connectAttr "polyTweakUV52.uvtk[0]" "pCubeShape129.uvst[0].uvtw";
+connectAttr "polyTweakUV56.out" "pCubeShape132.i";
+connectAttr "polyTweakUV56.uvtk[0]" "pCubeShape132.uvst[0].uvtw";
+connectAttr "polyTweakUV54.out" "pCubeShape133.i";
+connectAttr "polyTweakUV54.uvtk[0]" "pCubeShape133.uvst[0].uvtw";
+connectAttr "polyTweakUV48.out" "pCubeShape134.i";
+connectAttr "polyTweakUV48.uvtk[0]" "pCubeShape134.uvst[0].uvtw";
+connectAttr "polyTweakUV50.out" "pCubeShape135.i";
+connectAttr "polyTweakUV50.uvtk[0]" "pCubeShape135.uvst[0].uvtw";
+connectAttr "polyTweakUV63.out" "pCubeShape136.i";
+connectAttr "polyTweakUV63.uvtk[0]" "pCubeShape136.uvst[0].uvtw";
+connectAttr "polyTweakUV65.out" "pCubeShape137.i";
+connectAttr "polyTweakUV65.uvtk[0]" "pCubeShape137.uvst[0].uvtw";
+connectAttr "polyTweakUV67.out" "pCubeShape138.i";
+connectAttr "polyTweakUV67.uvtk[0]" "pCubeShape138.uvst[0].uvtw";
+connectAttr "polyTweakUV59.out" "pCubeShape139.i";
+connectAttr "polyTweakUV59.uvtk[0]" "pCubeShape139.uvst[0].uvtw";
+connectAttr "polyTweakUV61.out" "pCubeShape140.i";
+connectAttr "polyTweakUV61.uvtk[0]" "pCubeShape140.uvst[0].uvtw";
+connectAttr "polyTweakUV75.out" "pCubeShape141.i";
+connectAttr "polyTweakUV75.uvtk[0]" "pCubeShape141.uvst[0].uvtw";
+connectAttr "polyTweakUV71.out" "pCubeShape142.i";
+connectAttr "polyTweakUV71.uvtk[0]" "pCubeShape142.uvst[0].uvtw";
+connectAttr "polyTweakUV81.out" "pCylinderShape11.i";
+connectAttr "polyTweakUV81.uvtk[0]" "pCylinderShape11.uvst[0].uvtw";
+connectAttr "polyTweakUV83.out" "pCylinderShape13.i";
+connectAttr "polyTweakUV83.uvtk[0]" "pCylinderShape13.uvst[0].uvtw";
+connectAttr "polyTweakUV85.out" "pCylinderShape14.i";
+connectAttr "polyTweakUV85.uvtk[0]" "pCylinderShape14.uvst[0].uvtw";
+connectAttr "polyTweakUV87.out" "pCylinderShape15.i";
+connectAttr "polyTweakUV87.uvtk[0]" "pCylinderShape15.uvst[0].uvtw";
+connectAttr "polyTweakUV57.out" "pCubeShape143.i";
+connectAttr "polyTweakUV57.uvtk[0]" "pCubeShape143.uvst[0].uvtw";
+connectAttr "polyTweakUV91.out" "pCubeShape144.i";
+connectAttr "polyTweakUV91.uvtk[0]" "pCubeShape144.uvst[0].uvtw";
+connectAttr "polyTweakUV89.out" "pCubeShape145.i";
+connectAttr "polyTweakUV89.uvtk[0]" "pCubeShape145.uvst[0].uvtw";
 connectAttr "polyCube17.out" "pCubeShape146.i";
-connectAttr "polyCube18.out" "pCubeShape157.i";
-connectAttr "polyCube19.out" "pCubeShape158.i";
-connectAttr "polyCube20.out" "pCubeShape159.i";
-connectAttr "polyCube21.out" "pCubeShape160.i";
-connectAttr "polySphere1.out" "pSphereShape1.i";
+connectAttr "polyTweakUV45.out" "pCubeShape155.i";
+connectAttr "polyTweakUV45.uvtk[0]" "pCubeShape155.uvst[0].uvtw";
+connectAttr "polyTweakUV46.out" "pCubeShape156.i";
+connectAttr "polyTweakUV46.uvtk[0]" "pCubeShape156.uvst[0].uvtw";
+connectAttr "polyTweakUV69.out" "pCubeShape157.i";
+connectAttr "polyTweakUV69.uvtk[0]" "pCubeShape157.uvst[0].uvtw";
+connectAttr "polyTweakUV77.out" "pCubeShape158.i";
+connectAttr "polyTweakUV77.uvtk[0]" "pCubeShape158.uvst[0].uvtw";
+connectAttr "polyTweakUV79.out" "pCubeShape159.i";
+connectAttr "polyTweakUV79.uvtk[0]" "pCubeShape159.uvst[0].uvtw";
+connectAttr "polyTweakUV93.out" "pCubeShape160.i";
+connectAttr "polyTweakUV93.uvtk[0]" "pCubeShape160.uvst[0].uvtw";
+connectAttr "polyTweakUV131.out" "pSphereShape1.i";
+connectAttr "polyTweakUV131.uvtk[0]" "pSphereShape1.uvst[0].uvtw";
+connectAttr "polyTweakUV133.out" "pSphereShape2.i";
+connectAttr "polyTweakUV133.uvtk[0]" "pSphereShape2.uvst[0].uvtw";
+connectAttr "polyTweakUV135.out" "pSphereShape3.i";
+connectAttr "polyTweakUV135.uvtk[0]" "pSphereShape3.uvst[0].uvtw";
+connectAttr "polyTweakUV137.out" "pSphereShape4.i";
+connectAttr "polyTweakUV137.uvtk[0]" "pSphereShape4.uvst[0].uvtw";
+connectAttr "polyTweakUV141.out" "pSphereShape5.i";
+connectAttr "polyTweakUV141.uvtk[0]" "pSphereShape5.uvst[0].uvtw";
+connectAttr "polyTweakUV139.out" "pSphereShape6.i";
+connectAttr "polyTweakUV139.uvtk[0]" "pSphereShape6.uvst[0].uvtw";
 connectAttr "groupId127.id" "pSphereShape7.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pSphereShape7.iog.og[0].gco";
 connectAttr "groupParts13.og" "pSphereShape7.i";
@@ -36195,36 +49046,123 @@ connectAttr "groupId129.id" "pSphereShape8.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pSphereShape8.iog.og[0].gco";
 connectAttr "groupParts14.og" "pSphereShape8.i";
 connectAttr "groupId130.id" "pSphereShape8.ciog.cog[0].cgid";
-connectAttr "groupParts15.og" "pCylinder38Shape.i";
+connectAttr "polyTweakUV115.out" "pCylinder38Shape.i";
 connectAttr "groupId131.id" "pCylinder38Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pCylinder38Shape.iog.og[0].gco";
 connectAttr "groupId132.id" "pCylinder38Shape.ciog.cog[0].cgid";
-connectAttr "groupId133.id" "pCylinder39Shape.iog.og[0].gid";
+connectAttr "polyTweakUV115.uvtk[0]" "pCylinder38Shape.uvst[0].uvtw";
+connectAttr "groupId166.id" "pCylinder39Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pCylinder39Shape.iog.og[0].gco";
-connectAttr "groupId134.id" "pCylinder39Shape.ciog.cog[1].cgid";
-connectAttr "groupId135.id" "pCylinder40Shape.iog.og[0].gid";
+connectAttr "polyTweakUV117.out" "pCylinder39Shape.i";
+connectAttr "polyTweakUV117.uvtk[0]" "pCylinder39Shape.uvst[0].uvtw";
+connectAttr "groupId168.id" "pCylinder40Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pCylinder40Shape.iog.og[0].gco";
-connectAttr "groupId136.id" "pCylinder40Shape.ciog.cog[2].cgid";
-connectAttr "groupId137.id" "pCylinder41Shape.iog.og[0].gid";
+connectAttr "polyTweakUV121.out" "pCylinder40Shape.i";
+connectAttr "polyTweakUV121.uvtk[0]" "pCylinder40Shape.uvst[0].uvtw";
+connectAttr "groupId167.id" "pCylinder41Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pCylinder41Shape.iog.og[0].gco";
-connectAttr "groupId138.id" "pCylinder41Shape.ciog.cog[3].cgid";
-connectAttr "groupId139.id" "pCylinder42Shape.iog.og[0].gid";
+connectAttr "polyTweakUV119.out" "pCylinder41Shape.i";
+connectAttr "polyTweakUV119.uvtk[0]" "pCylinder41Shape.uvst[0].uvtw";
+connectAttr "groupId172.id" "pCylinder42Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pCylinder42Shape.iog.og[0].gco";
-connectAttr "groupId140.id" "pCylinder42Shape.ciog.cog[2].cgid";
-connectAttr "groupId141.id" "pCylinder43Shape.iog.og[0].gid";
+connectAttr "polyTweakUV129.out" "pCylinder42Shape.i";
+connectAttr "polyTweakUV129.uvtk[0]" "pCylinder42Shape.uvst[0].uvtw";
+connectAttr "groupId171.id" "pCylinder43Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pCylinder43Shape.iog.og[0].gco";
-connectAttr "groupId142.id" "pCylinder43Shape.ciog.cog[3].cgid";
-connectAttr "groupId143.id" "pCylinder44Shape.iog.og[0].gid";
+connectAttr "polyTweakUV127.out" "pCylinder43Shape.i";
+connectAttr "polyTweakUV127.uvtk[0]" "pCylinder43Shape.uvst[0].uvtw";
+connectAttr "groupId169.id" "pCylinder44Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pCylinder44Shape.iog.og[0].gco";
-connectAttr "groupId144.id" "pCylinder44Shape.ciog.cog[4].cgid";
-connectAttr "groupId145.id" "pCylinder45Shape.iog.og[0].gid";
+connectAttr "polyTweakUV123.out" "pCylinder44Shape.i";
+connectAttr "polyTweakUV123.uvtk[0]" "pCylinder44Shape.uvst[0].uvtw";
+connectAttr "groupId170.id" "pCylinder45Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pCylinder45Shape.iog.og[0].gco";
-connectAttr "groupId146.id" "pCylinder45Shape.ciog.cog[5].cgid";
-connectAttr "polyCube22.out" "pCubeShape161.i";
-connectAttr "polyCube23.out" "pCubeShape163.i";
-connectAttr "polyCube24.out" "pCubeShape164.i";
-connectAttr "polyCube25.out" "pCubeShape165.i";
-connectAttr "polyCube26.out" "pCubeShape169.i";
+connectAttr "polyTweakUV125.out" "pCylinder45Shape.i";
+connectAttr "polyTweakUV125.uvtk[0]" "pCylinder45Shape.uvst[0].uvtw";
+connectAttr "polyTweakUV95.out" "pCubeShape161.i";
+connectAttr "polyTweakUV95.uvtk[0]" "pCubeShape161.uvst[0].uvtw";
+connectAttr "polyTweakUV97.out" "pCubeShape162.i";
+connectAttr "polyTweakUV97.uvtk[0]" "pCubeShape162.uvst[0].uvtw";
+connectAttr "polyTweakUV73.out" "pCubeShape163.i";
+connectAttr "polyTweakUV73.uvtk[0]" "pCubeShape163.uvst[0].uvtw";
+connectAttr "polyTweakUV99.out" "pCubeShape164.i";
+connectAttr "polyTweakUV99.uvtk[0]" "pCubeShape164.uvst[0].uvtw";
+connectAttr "polyTweakUV103.out" "pCubeShape165.i";
+connectAttr "polyTweakUV103.uvtk[0]" "pCubeShape165.uvst[0].uvtw";
+connectAttr "polyTweakUV105.out" "pCubeShape166.i";
+connectAttr "polyTweakUV105.uvtk[0]" "pCubeShape166.uvst[0].uvtw";
+connectAttr "polyTweakUV109.out" "pCubeShape167.i";
+connectAttr "polyTweakUV109.uvtk[0]" "pCubeShape167.uvst[0].uvtw";
+connectAttr "polyTweakUV107.out" "pCubeShape168.i";
+connectAttr "polyTweakUV107.uvtk[0]" "pCubeShape168.uvst[0].uvtw";
+connectAttr "polyTweakUV111.out" "pCylinderShape46.i";
+connectAttr "polyTweakUV111.uvtk[0]" "pCylinderShape46.uvst[0].uvtw";
+connectAttr "polyTweakUV113.out" "pCylinderShape47.i";
+connectAttr "polyTweakUV113.uvtk[0]" "pCylinderShape47.uvst[0].uvtw";
+connectAttr "polyTweakUV101.out" "pCubeShape169.i";
+connectAttr "polyTweakUV101.uvtk[0]" "pCubeShape169.uvst[0].uvtw";
+connectAttr "polyLayoutUV12.out" "pCubeShape170.i";
+connectAttr "polyTweakUV22.uvtk[0]" "pCubeShape170.uvst[0].uvtw";
+connectAttr "polyTweakUV12.out" "pCubeShape171.i";
+connectAttr "polyTweakUV12.uvtk[0]" "pCubeShape171.uvst[0].uvtw";
+connectAttr "polyTweakUV14.out" "pCubeShape172.i";
+connectAttr "polyTweakUV14.uvtk[0]" "pCubeShape172.uvst[0].uvtw";
+connectAttr "polyTweakUV35.out" "pCylinderShape52.i";
+connectAttr "polyTweakUV35.uvtk[0]" "pCylinderShape52.uvst[0].uvtw";
+connectAttr "polyTweakUV15.out" "pCubeShape173.i";
+connectAttr "polyTweakUV15.uvtk[0]" "pCubeShape173.uvst[0].uvtw";
+connectAttr "polyTweakUV26.out" "pCylinderShape53.i";
+connectAttr "polyTweakUV26.uvtk[0]" "pCylinderShape53.uvst[0].uvtw";
+connectAttr "polyTweakUV33.out" "pCylinderShape55.i";
+connectAttr "polyTweakUV33.uvtk[0]" "pCylinderShape55.uvst[0].uvtw";
+connectAttr "polyTweakUV31.out" "pCylinderShape56.i";
+connectAttr "polyTweakUV31.uvtk[0]" "pCylinderShape56.uvst[0].uvtw";
+connectAttr "polyTweakUV24.out" "pCylinderShape57.i";
+connectAttr "polyTweakUV24.uvtk[0]" "pCylinderShape57.uvst[0].uvtw";
+connectAttr "polyMapCut9.out" "pCylinderShape58.i";
+connectAttr "polyTweakUV29.out" "pCylinderShape59.i";
+connectAttr "polyTweakUV29.uvtk[0]" "pCylinderShape59.uvst[0].uvtw";
+connectAttr "polyTweakUV28.out" "pCylinderShape60.i";
+connectAttr "polyTweakUV28.uvtk[0]" "pCylinderShape60.uvst[0].uvtw";
+connectAttr "polyTweakUV11.out" "pCubeShape174.i";
+connectAttr "polyTweakUV11.uvtk[0]" "pCubeShape174.uvst[0].uvtw";
+connectAttr "polyTweakUV13.out" "pCubeShape175.i";
+connectAttr "polyTweakUV13.uvtk[0]" "pCubeShape175.uvst[0].uvtw";
+connectAttr "polyTweakUV37.out" "pCylinderShape61.i";
+connectAttr "polyTweakUV37.uvtk[0]" "pCylinderShape61.uvst[0].uvtw";
+connectAttr "groupId149.id" "pCylinderShape62.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pCylinderShape62.iog.og[0].gco";
+connectAttr "groupParts16.og" "pCylinderShape62.i";
+connectAttr "groupId150.id" "pCylinderShape62.ciog.cog[0].cgid";
+connectAttr "groupId151.id" "pCubeShape176.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pCubeShape176.iog.og[0].gco";
+connectAttr "groupParts17.og" "pCubeShape176.i";
+connectAttr "groupId152.id" "pCubeShape176.ciog.cog[0].cgid";
+connectAttr "groupId147.id" "pCubeShape177.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pCubeShape177.iog.og[0].gco";
+connectAttr "groupId148.id" "pCubeShape177.ciog.cog[0].cgid";
+connectAttr "groupId155.id" "pCubeShape178.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pCubeShape178.iog.og[0].gco";
+connectAttr "groupId156.id" "pCubeShape178.ciog.cog[0].cgid";
+connectAttr "groupId153.id" "pCubeShape179.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pCubeShape179.iog.og[0].gco";
+connectAttr "groupId154.id" "pCubeShape179.ciog.cog[0].cgid";
+connectAttr "groupId161.id" "pCylinderShape63.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pCylinderShape63.iog.og[0].gco";
+connectAttr "groupParts19.og" "pCylinderShape63.i";
+connectAttr "groupId162.id" "pCylinderShape63.ciog.cog[0].cgid";
+connectAttr "groupId159.id" "pCube181Shape.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pCube181Shape.iog.og[0].gco";
+connectAttr "groupId160.id" "pCube181Shape.ciog.cog[1].cgid";
+connectAttr "polyTweakUV38.out" "pCylinder64Shape.i";
+connectAttr "groupId163.id" "pCylinder64Shape.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pCylinder64Shape.iog.og[0].gco";
+connectAttr "groupId164.id" "pCylinder64Shape.ciog.cog[0].cgid";
+connectAttr "polyTweakUV38.uvtk[0]" "pCylinder64Shape.uvst[0].uvtw";
+connectAttr "groupId165.id" "pCylinder65Shape.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pCylinder65Shape.iog.og[0].gco";
+connectAttr "polyTweakUV39.out" "pCylinder65Shape.i";
+connectAttr "polyTweakUV39.uvtk[0]" "pCylinder65Shape.uvst[0].uvtw";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -36527,6 +49465,438 @@ connectAttr "deleteComponent8.og" "groupParts14.ig";
 connectAttr "groupId129.id" "groupParts14.gi";
 connectAttr "polyUnite4.out" "groupParts15.ig";
 connectAttr "groupId131.id" "groupParts15.gi";
+connectAttr "polyCube27.out" "polySplitRing1.ip";
+connectAttr "pCubeShape170.wm" "polySplitRing1.mp";
+connectAttr "polySplitRing1.out" "polySplitRing2.ip";
+connectAttr "pCubeShape170.wm" "polySplitRing2.mp";
+connectAttr "polyTweak17.out" "polySplitRing3.ip";
+connectAttr "pCubeShape170.wm" "polySplitRing3.mp";
+connectAttr "polySplitRing2.out" "polyTweak17.ip";
+connectAttr "polySplitRing3.out" "polySplitRing4.ip";
+connectAttr "pCubeShape170.wm" "polySplitRing4.mp";
+connectAttr "polySplitRing4.out" "polyExtrudeFace46.ip";
+connectAttr "pCubeShape170.wm" "polyExtrudeFace46.mp";
+connectAttr "polyExtrudeFace46.out" "polyExtrudeFace47.ip";
+connectAttr "pCubeShape170.wm" "polyExtrudeFace47.mp";
+connectAttr "polyExtrudeFace47.out" "polyExtrudeFace48.ip";
+connectAttr "pCubeShape170.wm" "polyExtrudeFace48.mp";
+connectAttr "polyExtrudeFace48.out" "polyExtrudeFace49.ip";
+connectAttr "pCubeShape170.wm" "polyExtrudeFace49.mp";
+connectAttr "polyExtrudeFace49.out" "polyExtrudeFace50.ip";
+connectAttr "pCubeShape170.wm" "polyExtrudeFace50.mp";
+connectAttr "polyTweak18.out" "polyExtrudeFace51.ip";
+connectAttr "pCubeShape170.wm" "polyExtrudeFace51.mp";
+connectAttr "polyExtrudeFace50.out" "polyTweak18.ip";
+connectAttr "polyTweak19.out" "polyExtrudeFace52.ip";
+connectAttr "pCubeShape170.wm" "polyExtrudeFace52.mp";
+connectAttr "polyExtrudeFace51.out" "polyTweak19.ip";
+connectAttr "polyCylinder7.out" "polyExtrudeFace53.ip";
+connectAttr "pCylinderShape52.wm" "polyExtrudeFace53.mp";
+connectAttr "polyTweak20.out" "polyExtrudeFace54.ip";
+connectAttr "pCylinderShape52.wm" "polyExtrudeFace54.mp";
+connectAttr "polyExtrudeFace53.out" "polyTweak20.ip";
+connectAttr "polyCylinder8.out" "deleteComponent9.ig";
+connectAttr "polyCylinder9.out" "polyExtrudeFace55.ip";
+connectAttr "pCylinderShape62.wm" "polyExtrudeFace55.mp";
+connectAttr "polyTweak21.out" "polyExtrudeFace56.ip";
+connectAttr "pCylinderShape62.wm" "polyExtrudeFace56.mp";
+connectAttr "polyExtrudeFace55.out" "polyTweak21.ip";
+connectAttr "polyExtrudeFace56.out" "polyExtrudeFace57.ip";
+connectAttr "pCylinderShape62.wm" "polyExtrudeFace57.mp";
+connectAttr "polyTweak22.out" "polyExtrudeFace58.ip";
+connectAttr "pCylinderShape62.wm" "polyExtrudeFace58.mp";
+connectAttr "polyExtrudeFace57.out" "polyTweak22.ip";
+connectAttr "polyExtrudeFace58.out" "groupParts16.ig";
+connectAttr "groupId149.id" "groupParts16.gi";
+connectAttr "polyCube30.out" "groupParts17.ig";
+connectAttr "groupId151.id" "groupParts17.gi";
+connectAttr "pCylinderShape63.o" "polyUnite6.ip[0]";
+connectAttr "pCube181Shape.o" "polyUnite6.ip[1]";
+connectAttr "pCylinderShape63.wm" "polyUnite6.im[0]";
+connectAttr "pCube181Shape.wm" "polyUnite6.im[1]";
+connectAttr "polyCylinder10.out" "groupParts19.ig";
+connectAttr "groupId161.id" "groupParts19.gi";
+connectAttr "polyUnite6.out" "groupParts20.ig";
+connectAttr "groupId163.id" "groupParts20.gi";
+connectAttr "polySurfaceShape20.o" "polyAutoProj7.ip";
+connectAttr "pCubeShape174.wm" "polyAutoProj7.mp";
+connectAttr "polyAutoProj7.out" "polyLayoutUV4.ip";
+connectAttr "polyLayoutUV4.out" "polyTweakUV10.ip";
+connectAttr "polyTweakUV10.out" "polyLayoutUV5.ip";
+connectAttr "polyLayoutUV5.out" "polyTweakUV11.ip";
+connectAttr "polyCube28.out" "polyAutoProj8.ip";
+connectAttr "pCubeShape171.wm" "polyAutoProj8.mp";
+connectAttr "polyAutoProj8.out" "polyMapCut6.ip";
+connectAttr "polyMapCut6.out" "polyTweakUV12.ip";
+connectAttr "polySurfaceShape21.o" "polyAutoProj9.ip";
+connectAttr "pCubeShape175.wm" "polyAutoProj9.mp";
+connectAttr "polyAutoProj9.out" "polyMapCut7.ip";
+connectAttr "polyMapCut7.out" "polyTweakUV13.ip";
+connectAttr "polySurfaceShape22.o" "polyLayoutUV6.ip";
+connectAttr "polyLayoutUV6.out" "polyTweakUV14.ip";
+connectAttr "polyCube29.out" "polyAutoProj10.ip";
+connectAttr "pCubeShape173.wm" "polyAutoProj10.mp";
+connectAttr "polyAutoProj10.out" "polyMapCut8.ip";
+connectAttr "polyMapCut8.out" "polyTweakUV15.ip";
+connectAttr "polyTweak23.out" "polyAutoProj11.ip";
+connectAttr "pCubeShape170.wm" "polyAutoProj11.mp";
+connectAttr "polyExtrudeFace52.out" "polyTweak23.ip";
+connectAttr "polyAutoProj11.out" "polyTweakUV16.ip";
+connectAttr "polyTweakUV16.out" "polyLayoutUV7.ip";
+connectAttr "polyLayoutUV7.out" "polyTweakUV17.ip";
+connectAttr "polyTweakUV17.out" "polyAutoProj12.ip";
+connectAttr "pCubeShape170.wm" "polyAutoProj12.mp";
+connectAttr "polyAutoProj12.out" "polyLayoutUV8.ip";
+connectAttr "polyLayoutUV8.out" "polyTweakUV18.ip";
+connectAttr "polyTweakUV18.out" "polyAutoProj13.ip";
+connectAttr "pCubeShape170.wm" "polyAutoProj13.mp";
+connectAttr "polyAutoProj13.out" "polyPlanarProj2.ip";
+connectAttr "pCubeShape170.wm" "polyPlanarProj2.mp";
+connectAttr "polyPlanarProj2.out" "polyLayoutUV9.ip";
+connectAttr "polyLayoutUV9.out" "polyTweakUV19.ip";
+connectAttr "polyTweakUV19.out" "polyAutoProj14.ip";
+connectAttr "pCubeShape170.wm" "polyAutoProj14.mp";
+connectAttr "polyAutoProj14.out" "polyMapDel5.ip";
+connectAttr "polyMapDel5.out" "polyAutoProj15.ip";
+connectAttr "pCubeShape170.wm" "polyAutoProj15.mp";
+connectAttr "polyAutoProj15.out" "polyTweakUV20.ip";
+connectAttr "polyTweakUV20.out" "polyLayoutUV10.ip";
+connectAttr "polyLayoutUV10.out" "polyTweakUV21.ip";
+connectAttr "polyTweakUV21.out" "polyLayoutUV11.ip";
+connectAttr "polyLayoutUV11.out" "polyTweakUV22.ip";
+connectAttr "polyTweakUV22.out" "polyLayoutUV12.ip";
+connectAttr "polySurfaceShape23.o" "polyAutoProj16.ip";
+connectAttr "pCylinderShape57.wm" "polyAutoProj16.mp";
+connectAttr "polyAutoProj16.out" "polyTweakUV23.ip";
+connectAttr "polyTweakUV23.out" "polyLayoutUV13.ip";
+connectAttr "polyLayoutUV13.out" "polyTweakUV24.ip";
+connectAttr "polySurfaceShape24.o" "polyAutoProj17.ip";
+connectAttr "pCylinderShape58.wm" "polyAutoProj17.mp";
+connectAttr "polyAutoProj17.out" "polyMapCut9.ip";
+connectAttr "deleteComponent9.og" "polyAutoProj18.ip";
+connectAttr "pCylinderShape53.wm" "polyAutoProj18.mp";
+connectAttr "polyAutoProj18.out" "polyTweakUV25.ip";
+connectAttr "polyTweakUV25.out" "polyLayoutUV14.ip";
+connectAttr "polyLayoutUV14.out" "polyTweakUV26.ip";
+connectAttr "polySurfaceShape25.o" "polyAutoProj19.ip";
+connectAttr "pCylinderShape60.wm" "polyAutoProj19.mp";
+connectAttr "polyAutoProj19.out" "polyTweakUV27.ip";
+connectAttr "polyTweakUV27.out" "polyLayoutUV15.ip";
+connectAttr "polyLayoutUV15.out" "polyTweakUV28.ip";
+connectAttr "polySurfaceShape26.o" "polyAutoProj20.ip";
+connectAttr "pCylinderShape59.wm" "polyAutoProj20.mp";
+connectAttr "polyAutoProj20.out" "polyLayoutUV16.ip";
+connectAttr "polyLayoutUV16.out" "polyTweakUV29.ip";
+connectAttr "polySurfaceShape27.o" "polyAutoProj21.ip";
+connectAttr "pCylinderShape56.wm" "polyAutoProj21.mp";
+connectAttr "polyAutoProj21.out" "polyLayoutUV17.ip";
+connectAttr "polyLayoutUV17.out" "polyTweakUV30.ip";
+connectAttr "polyTweakUV30.out" "polyLayoutUV18.ip";
+connectAttr "polyLayoutUV18.out" "polyTweakUV31.ip";
+connectAttr "polySurfaceShape28.o" "polyAutoProj22.ip";
+connectAttr "pCylinderShape55.wm" "polyAutoProj22.mp";
+connectAttr "polyAutoProj22.out" "polyLayoutUV19.ip";
+connectAttr "polyLayoutUV19.out" "polyTweakUV32.ip";
+connectAttr "polyTweakUV32.out" "polyLayoutUV20.ip";
+connectAttr "polyLayoutUV20.out" "polyTweakUV33.ip";
+connectAttr "polyExtrudeFace54.out" "polyAutoProj23.ip";
+connectAttr "pCylinderShape52.wm" "polyAutoProj23.mp";
+connectAttr "polyAutoProj23.out" "polyTweakUV34.ip";
+connectAttr "polyTweakUV34.out" "polyLayoutUV21.ip";
+connectAttr "polyLayoutUV21.out" "polyTweakUV35.ip";
+connectAttr "polySurfaceShape29.o" "polyAutoProj24.ip";
+connectAttr "pCylinderShape61.wm" "polyAutoProj24.mp";
+connectAttr "polyAutoProj24.out" "polyTweakUV36.ip";
+connectAttr "polyTweakUV36.out" "polyLayoutUV22.ip";
+connectAttr "polyLayoutUV22.out" "polyTweakUV37.ip";
+connectAttr "groupParts20.og" "polyAutoProj25.ip";
+connectAttr "pCylinder64Shape.wm" "polyAutoProj25.mp";
+connectAttr "polyAutoProj25.out" "polyLayoutUV23.ip";
+connectAttr "polyLayoutUV23.out" "polyTweakUV38.ip";
+connectAttr "groupParts21.og" "polyAutoProj26.ip";
+connectAttr "pCylinder65Shape.wm" "polyAutoProj26.mp";
+connectAttr "polySurfaceShape30.o" "groupParts21.ig";
+connectAttr "groupId165.id" "groupParts21.gi";
+connectAttr "polyAutoProj26.out" "polyLayoutUV24.ip";
+connectAttr "polyLayoutUV24.out" "polyTweakUV39.ip";
+connectAttr "polyTweak24.out" "polyAutoProj27.ip";
+connectAttr "pCubeShape3.wm" "polyAutoProj27.mp";
+connectAttr "polyExtrudeFace29.out" "polyTweak24.ip";
+connectAttr "polyAutoProj27.out" "polyLayoutUV25.ip";
+connectAttr "polyLayoutUV25.out" "polyTweakUV40.ip";
+connectAttr "polySurfaceShape31.o" "polyAutoProj28.ip";
+connectAttr "pCubeShape143.wm" "polyAutoProj28.mp";
+connectAttr "polyAutoProj28.out" "polyLayoutUV26.ip";
+connectAttr "polyLayoutUV26.out" "polyTweakUV41.ip";
+connectAttr "polyTweakUV41.out" "polyLayoutUV27.ip";
+connectAttr "polyLayoutUV27.out" "polyTweakUV42.ip";
+connectAttr "polySurfaceShape32.o" "polyAutoProj29.ip";
+connectAttr "pCubeShape155.wm" "polyAutoProj29.mp";
+connectAttr "polyAutoProj29.out" "polyLayoutUV28.ip";
+connectAttr "polyLayoutUV28.out" "polyTweakUV43.ip";
+connectAttr "polyTweakUV43.out" "polyLayoutUV29.ip";
+connectAttr "polyLayoutUV29.out" "polyTweakUV44.ip";
+connectAttr "polyTweakUV44.out" "polyLayoutUV30.ip";
+connectAttr "polyLayoutUV30.out" "polyTweakUV45.ip";
+connectAttr "polySurfaceShape33.o" "polyLayoutUV31.ip";
+connectAttr "polyLayoutUV31.out" "polyTweakUV46.ip";
+connectAttr "polySurfaceShape34.o" "polyAutoProj30.ip";
+connectAttr "pCubeShape134.wm" "polyAutoProj30.mp";
+connectAttr "polyAutoProj30.out" "polyTweakUV47.ip";
+connectAttr "polyTweakUV47.out" "polyLayoutUV32.ip";
+connectAttr "polyLayoutUV32.out" "polyTweakUV48.ip";
+connectAttr "polySurfaceShape35.o" "polyAutoProj31.ip";
+connectAttr "pCubeShape135.wm" "polyAutoProj31.mp";
+connectAttr "polyAutoProj31.out" "polyTweakUV49.ip";
+connectAttr "polyTweakUV49.out" "polyLayoutUV33.ip";
+connectAttr "polyLayoutUV33.out" "polyTweakUV50.ip";
+connectAttr "polyTweak25.out" "polyAutoProj32.ip";
+connectAttr "pCubeShape129.wm" "polyAutoProj32.mp";
+connectAttr "polyCube13.out" "polyTweak25.ip";
+connectAttr "polyAutoProj32.out" "polyTweakUV51.ip";
+connectAttr "polyTweakUV51.out" "polyLayoutUV34.ip";
+connectAttr "polyLayoutUV34.out" "polyTweakUV52.ip";
+connectAttr "polySurfaceShape36.o" "polyAutoProj33.ip";
+connectAttr "pCubeShape133.wm" "polyAutoProj33.mp";
+connectAttr "polyAutoProj33.out" "polyTweakUV53.ip";
+connectAttr "polyTweakUV53.out" "polyLayoutUV35.ip";
+connectAttr "polyLayoutUV35.out" "polyTweakUV54.ip";
+connectAttr "polySurfaceShape37.o" "polyAutoProj34.ip";
+connectAttr "pCubeShape132.wm" "polyAutoProj34.mp";
+connectAttr "polyAutoProj34.out" "polyTweakUV55.ip";
+connectAttr "polyTweakUV55.out" "polyLayoutUV36.ip";
+connectAttr "polyLayoutUV36.out" "polyTweakUV56.ip";
+connectAttr "polyTweakUV42.out" "polyLayoutUV37.ip";
+connectAttr "polyLayoutUV37.out" "polyTweakUV57.ip";
+connectAttr "polySurfaceShape38.o" "polyAutoProj35.ip";
+connectAttr "pCubeShape139.wm" "polyAutoProj35.mp";
+connectAttr "polyAutoProj35.out" "polyTweakUV58.ip";
+connectAttr "polyTweakUV58.out" "polyLayoutUV38.ip";
+connectAttr "polyLayoutUV38.out" "polyTweakUV59.ip";
+connectAttr "polySurfaceShape39.o" "polyAutoProj36.ip";
+connectAttr "pCubeShape140.wm" "polyAutoProj36.mp";
+connectAttr "polyAutoProj36.out" "polyTweakUV60.ip";
+connectAttr "polyTweakUV60.out" "polyLayoutUV39.ip";
+connectAttr "polyLayoutUV39.out" "polyTweakUV61.ip";
+connectAttr "polySurfaceShape40.o" "polyAutoProj37.ip";
+connectAttr "pCubeShape136.wm" "polyAutoProj37.mp";
+connectAttr "polyAutoProj37.out" "polyTweakUV62.ip";
+connectAttr "polyTweakUV62.out" "polyLayoutUV40.ip";
+connectAttr "polyLayoutUV40.out" "polyTweakUV63.ip";
+connectAttr "polySurfaceShape41.o" "polyAutoProj38.ip";
+connectAttr "pCubeShape137.wm" "polyAutoProj38.mp";
+connectAttr "polyAutoProj38.out" "polyTweakUV64.ip";
+connectAttr "polyTweakUV64.out" "polyLayoutUV41.ip";
+connectAttr "polyLayoutUV41.out" "polyTweakUV65.ip";
+connectAttr "polySurfaceShape42.o" "polyAutoProj39.ip";
+connectAttr "pCubeShape138.wm" "polyAutoProj39.mp";
+connectAttr "polyAutoProj39.out" "polyTweakUV66.ip";
+connectAttr "polyTweakUV66.out" "polyLayoutUV42.ip";
+connectAttr "polyLayoutUV42.out" "polyTweakUV67.ip";
+connectAttr "polyTweak26.out" "polyAutoProj40.ip";
+connectAttr "pCubeShape157.wm" "polyAutoProj40.mp";
+connectAttr "polyCube18.out" "polyTweak26.ip";
+connectAttr "polyAutoProj40.out" "polyTweakUV68.ip";
+connectAttr "polyTweakUV68.out" "polyLayoutUV43.ip";
+connectAttr "polyLayoutUV43.out" "polyTweakUV69.ip";
+connectAttr "polyTweak27.out" "polyAutoProj41.ip";
+connectAttr "pCubeShape142.wm" "polyAutoProj41.mp";
+connectAttr "polyExtrudeFace41.out" "polyTweak27.ip";
+connectAttr "polyAutoProj41.out" "polyTweakUV70.ip";
+connectAttr "polyTweakUV70.out" "polyLayoutUV44.ip";
+connectAttr "polyLayoutUV44.out" "polyTweakUV71.ip";
+connectAttr "polyCube23.out" "polyAutoProj42.ip";
+connectAttr "pCubeShape163.wm" "polyAutoProj42.mp";
+connectAttr "polyAutoProj42.out" "polyTweakUV72.ip";
+connectAttr "polyTweakUV72.out" "polyLayoutUV45.ip";
+connectAttr "polyLayoutUV45.out" "polyTweakUV73.ip";
+connectAttr "polyExtrudeFace35.out" "polyAutoProj43.ip";
+connectAttr "pCubeShape141.wm" "polyAutoProj43.mp";
+connectAttr "polyAutoProj43.out" "polyTweakUV74.ip";
+connectAttr "polyTweakUV74.out" "polyLayoutUV46.ip";
+connectAttr "polyLayoutUV46.out" "polyTweakUV75.ip";
+connectAttr "polyTweak28.out" "polyAutoProj44.ip";
+connectAttr "pCubeShape158.wm" "polyAutoProj44.mp";
+connectAttr "polyCube19.out" "polyTweak28.ip";
+connectAttr "polyAutoProj44.out" "polyTweakUV76.ip";
+connectAttr "polyTweakUV76.out" "polyLayoutUV47.ip";
+connectAttr "polyLayoutUV47.out" "polyTweakUV77.ip";
+connectAttr "polyCube20.out" "polyAutoProj45.ip";
+connectAttr "pCubeShape159.wm" "polyAutoProj45.mp";
+connectAttr "polyAutoProj45.out" "polyTweakUV78.ip";
+connectAttr "polyTweakUV78.out" "polyLayoutUV48.ip";
+connectAttr "polyLayoutUV48.out" "polyTweakUV79.ip";
+connectAttr "polyCylinder5.out" "polyAutoProj46.ip";
+connectAttr "pCylinderShape11.wm" "polyAutoProj46.mp";
+connectAttr "polyAutoProj46.out" "polyTweakUV80.ip";
+connectAttr "polyTweakUV80.out" "polyLayoutUV49.ip";
+connectAttr "polyLayoutUV49.out" "polyTweakUV81.ip";
+connectAttr "polySurfaceShape43.o" "polyAutoProj47.ip";
+connectAttr "pCylinderShape13.wm" "polyAutoProj47.mp";
+connectAttr "polyAutoProj47.out" "polyTweakUV82.ip";
+connectAttr "polyTweakUV82.out" "polyLayoutUV50.ip";
+connectAttr "polyLayoutUV50.out" "polyTweakUV83.ip";
+connectAttr "polySurfaceShape44.o" "polyAutoProj48.ip";
+connectAttr "pCylinderShape14.wm" "polyAutoProj48.mp";
+connectAttr "polyAutoProj48.out" "polyTweakUV84.ip";
+connectAttr "polyTweakUV84.out" "polyLayoutUV51.ip";
+connectAttr "polyLayoutUV51.out" "polyTweakUV85.ip";
+connectAttr "polySurfaceShape45.o" "polyAutoProj49.ip";
+connectAttr "pCylinderShape15.wm" "polyAutoProj49.mp";
+connectAttr "polyAutoProj49.out" "polyTweakUV86.ip";
+connectAttr "polyTweakUV86.out" "polyLayoutUV52.ip";
+connectAttr "polyLayoutUV52.out" "polyTweakUV87.ip";
+connectAttr "polySurfaceShape46.o" "polyAutoProj50.ip";
+connectAttr "pCubeShape145.wm" "polyAutoProj50.mp";
+connectAttr "polyAutoProj50.out" "polyTweakUV88.ip";
+connectAttr "polyTweakUV88.out" "polyLayoutUV53.ip";
+connectAttr "polyLayoutUV53.out" "polyTweakUV89.ip";
+connectAttr "polyCube16.out" "polyAutoProj51.ip";
+connectAttr "pCubeShape144.wm" "polyAutoProj51.mp";
+connectAttr "polyAutoProj51.out" "polyTweakUV90.ip";
+connectAttr "polyTweakUV90.out" "polyLayoutUV54.ip";
+connectAttr "polyLayoutUV54.out" "polyTweakUV91.ip";
+connectAttr "polyTweak29.out" "polyAutoProj52.ip";
+connectAttr "pCubeShape160.wm" "polyAutoProj52.mp";
+connectAttr "polyCube21.out" "polyTweak29.ip";
+connectAttr "polyAutoProj52.out" "polyTweakUV92.ip";
+connectAttr "polyTweakUV92.out" "polyLayoutUV55.ip";
+connectAttr "polyLayoutUV55.out" "polyTweakUV93.ip";
+connectAttr "polyTweak30.out" "polyAutoProj53.ip";
+connectAttr "pCubeShape161.wm" "polyAutoProj53.mp";
+connectAttr "polyCube22.out" "polyTweak30.ip";
+connectAttr "polyAutoProj53.out" "polyTweakUV94.ip";
+connectAttr "polyTweakUV94.out" "polyLayoutUV56.ip";
+connectAttr "polyLayoutUV56.out" "polyTweakUV95.ip";
+connectAttr "polySurfaceShape47.o" "polyAutoProj54.ip";
+connectAttr "pCubeShape162.wm" "polyAutoProj54.mp";
+connectAttr "polyAutoProj54.out" "polyTweakUV96.ip";
+connectAttr "polyTweakUV96.out" "polyLayoutUV57.ip";
+connectAttr "polyLayoutUV57.out" "polyTweakUV97.ip";
+connectAttr "polyCube24.out" "polyAutoProj55.ip";
+connectAttr "pCubeShape164.wm" "polyAutoProj55.mp";
+connectAttr "polyAutoProj55.out" "polyTweakUV98.ip";
+connectAttr "polyTweakUV98.out" "polyLayoutUV58.ip";
+connectAttr "polyLayoutUV58.out" "polyTweakUV99.ip";
+connectAttr "polyCube26.out" "polyAutoProj56.ip";
+connectAttr "pCubeShape169.wm" "polyAutoProj56.mp";
+connectAttr "polyAutoProj56.out" "polyTweakUV100.ip";
+connectAttr "polyTweakUV100.out" "polyLayoutUV59.ip";
+connectAttr "polyLayoutUV59.out" "polyTweakUV101.ip";
+connectAttr "polyCube25.out" "polyAutoProj57.ip";
+connectAttr "pCubeShape165.wm" "polyAutoProj57.mp";
+connectAttr "polyAutoProj57.out" "polyTweakUV102.ip";
+connectAttr "polyTweakUV102.out" "polyLayoutUV60.ip";
+connectAttr "polyLayoutUV60.out" "polyTweakUV103.ip";
+connectAttr "polySurfaceShape48.o" "polyAutoProj58.ip";
+connectAttr "pCubeShape166.wm" "polyAutoProj58.mp";
+connectAttr "polyAutoProj58.out" "polyTweakUV104.ip";
+connectAttr "polyTweakUV104.out" "polyLayoutUV61.ip";
+connectAttr "polyLayoutUV61.out" "polyTweakUV105.ip";
+connectAttr "polySurfaceShape49.o" "polyAutoProj59.ip";
+connectAttr "pCubeShape168.wm" "polyAutoProj59.mp";
+connectAttr "polyAutoProj59.out" "polyTweakUV106.ip";
+connectAttr "polyTweakUV106.out" "polyLayoutUV62.ip";
+connectAttr "polyLayoutUV62.out" "polyTweakUV107.ip";
+connectAttr "polySurfaceShape50.o" "polyAutoProj60.ip";
+connectAttr "pCubeShape167.wm" "polyAutoProj60.mp";
+connectAttr "polyAutoProj60.out" "polyTweakUV108.ip";
+connectAttr "polyTweakUV108.out" "polyLayoutUV63.ip";
+connectAttr "polyLayoutUV63.out" "polyTweakUV109.ip";
+connectAttr "polySurfaceShape51.o" "polyAutoProj61.ip";
+connectAttr "pCylinderShape46.wm" "polyAutoProj61.mp";
+connectAttr "polyAutoProj61.out" "polyTweakUV110.ip";
+connectAttr "polyTweakUV110.out" "polyLayoutUV64.ip";
+connectAttr "polyLayoutUV64.out" "polyTweakUV111.ip";
+connectAttr "polySurfaceShape52.o" "polyAutoProj62.ip";
+connectAttr "pCylinderShape47.wm" "polyAutoProj62.mp";
+connectAttr "polyAutoProj62.out" "polyTweakUV112.ip";
+connectAttr "polyTweakUV112.out" "polyLayoutUV65.ip";
+connectAttr "polyLayoutUV65.out" "polyTweakUV113.ip";
+connectAttr "groupParts15.og" "polyAutoProj63.ip";
+connectAttr "pCylinder38Shape.wm" "polyAutoProj63.mp";
+connectAttr "polyAutoProj63.out" "polyTweakUV114.ip";
+connectAttr "polyTweakUV114.out" "polyLayoutUV66.ip";
+connectAttr "polyLayoutUV66.out" "polyTweakUV115.ip";
+connectAttr "groupParts22.og" "polyAutoProj64.ip";
+connectAttr "pCylinder39Shape.wm" "polyAutoProj64.mp";
+connectAttr "polySurfaceShape53.o" "groupParts22.ig";
+connectAttr "groupId166.id" "groupParts22.gi";
+connectAttr "polyAutoProj64.out" "polyTweakUV116.ip";
+connectAttr "polyTweakUV116.out" "polyLayoutUV67.ip";
+connectAttr "polyLayoutUV67.out" "polyTweakUV117.ip";
+connectAttr "groupParts23.og" "polyAutoProj65.ip";
+connectAttr "pCylinder41Shape.wm" "polyAutoProj65.mp";
+connectAttr "polySurfaceShape54.o" "groupParts23.ig";
+connectAttr "groupId167.id" "groupParts23.gi";
+connectAttr "polyAutoProj65.out" "polyTweakUV118.ip";
+connectAttr "polyTweakUV118.out" "polyLayoutUV68.ip";
+connectAttr "polyLayoutUV68.out" "polyTweakUV119.ip";
+connectAttr "groupParts24.og" "polyAutoProj66.ip";
+connectAttr "pCylinder40Shape.wm" "polyAutoProj66.mp";
+connectAttr "polySurfaceShape55.o" "groupParts24.ig";
+connectAttr "groupId168.id" "groupParts24.gi";
+connectAttr "polyAutoProj66.out" "polyTweakUV120.ip";
+connectAttr "polyTweakUV120.out" "polyLayoutUV69.ip";
+connectAttr "polyLayoutUV69.out" "polyTweakUV121.ip";
+connectAttr "groupParts25.og" "polyAutoProj67.ip";
+connectAttr "pCylinder44Shape.wm" "polyAutoProj67.mp";
+connectAttr "polySurfaceShape56.o" "groupParts25.ig";
+connectAttr "groupId169.id" "groupParts25.gi";
+connectAttr "polyAutoProj67.out" "polyTweakUV122.ip";
+connectAttr "polyTweakUV122.out" "polyLayoutUV70.ip";
+connectAttr "polyLayoutUV70.out" "polyTweakUV123.ip";
+connectAttr "groupParts26.og" "polyAutoProj68.ip";
+connectAttr "pCylinder45Shape.wm" "polyAutoProj68.mp";
+connectAttr "polySurfaceShape57.o" "groupParts26.ig";
+connectAttr "groupId170.id" "groupParts26.gi";
+connectAttr "polyAutoProj68.out" "polyTweakUV124.ip";
+connectAttr "polyTweakUV124.out" "polyLayoutUV71.ip";
+connectAttr "polyLayoutUV71.out" "polyTweakUV125.ip";
+connectAttr "groupParts27.og" "polyAutoProj69.ip";
+connectAttr "pCylinder43Shape.wm" "polyAutoProj69.mp";
+connectAttr "polySurfaceShape58.o" "groupParts27.ig";
+connectAttr "groupId171.id" "groupParts27.gi";
+connectAttr "polyAutoProj69.out" "polyTweakUV126.ip";
+connectAttr "polyTweakUV126.out" "polyLayoutUV72.ip";
+connectAttr "polyLayoutUV72.out" "polyTweakUV127.ip";
+connectAttr "groupParts28.og" "polyAutoProj70.ip";
+connectAttr "pCylinder42Shape.wm" "polyAutoProj70.mp";
+connectAttr "polySurfaceShape59.o" "groupParts28.ig";
+connectAttr "groupId172.id" "groupParts28.gi";
+connectAttr "polyAutoProj70.out" "polyTweakUV128.ip";
+connectAttr "polyTweakUV128.out" "polyLayoutUV73.ip";
+connectAttr "polyLayoutUV73.out" "polyTweakUV129.ip";
+connectAttr "polySphere1.out" "polyAutoProj71.ip";
+connectAttr "pSphereShape1.wm" "polyAutoProj71.mp";
+connectAttr "polyAutoProj71.out" "polyTweakUV130.ip";
+connectAttr "polyTweakUV130.out" "polyLayoutUV74.ip";
+connectAttr "polyLayoutUV74.out" "polyTweakUV131.ip";
+connectAttr "polySurfaceShape60.o" "polyAutoProj72.ip";
+connectAttr "pSphereShape2.wm" "polyAutoProj72.mp";
+connectAttr "polyAutoProj72.out" "polyTweakUV132.ip";
+connectAttr "polyTweakUV132.out" "polyLayoutUV75.ip";
+connectAttr "polyLayoutUV75.out" "polyTweakUV133.ip";
+connectAttr "polySurfaceShape61.o" "polyAutoProj73.ip";
+connectAttr "pSphereShape3.wm" "polyAutoProj73.mp";
+connectAttr "polyAutoProj73.out" "polyTweakUV134.ip";
+connectAttr "polyTweakUV134.out" "polyLayoutUV76.ip";
+connectAttr "polyLayoutUV76.out" "polyTweakUV135.ip";
+connectAttr "polySurfaceShape62.o" "polyAutoProj74.ip";
+connectAttr "pSphereShape4.wm" "polyAutoProj74.mp";
+connectAttr "polyAutoProj74.out" "polyTweakUV136.ip";
+connectAttr "polyTweakUV136.out" "polyLayoutUV77.ip";
+connectAttr "polyLayoutUV77.out" "polyTweakUV137.ip";
+connectAttr "polySurfaceShape63.o" "polyAutoProj75.ip";
+connectAttr "pSphereShape6.wm" "polyAutoProj75.mp";
+connectAttr "polyAutoProj75.out" "polyTweakUV138.ip";
+connectAttr "polyTweakUV138.out" "polyLayoutUV78.ip";
+connectAttr "polyLayoutUV78.out" "polyTweakUV139.ip";
+connectAttr "polySurfaceShape64.o" "polyAutoProj76.ip";
+connectAttr "pSphereShape5.wm" "polyAutoProj76.mp";
+connectAttr "polyAutoProj76.out" "polyTweakUV140.ip";
+connectAttr "polyTweakUV140.out" "polyLayoutUV79.ip";
+connectAttr "polyLayoutUV79.out" "polyTweakUV141.ip";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
@@ -36791,20 +50161,6 @@ connectAttr "pSphereShape8.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "pSphereShape8.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinder38Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinder38Shape.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinder39Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinder39Shape.ciog.cog[1]" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinder40Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinder40Shape.ciog.cog[2]" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinder41Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinder41Shape.ciog.cog[3]" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinder42Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinder42Shape.ciog.cog[2]" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinder43Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinder43Shape.ciog.cog[3]" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinder44Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinder44Shape.ciog.cog[4]" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinder45Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinder45Shape.ciog.cog[5]" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape161.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape162.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape163.iog" ":initialShadingGroup.dsm" -na;
@@ -36820,6 +50176,46 @@ connectAttr "pCylinderShape48.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinderShape49.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinderShape50.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinderShape51.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape170.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape171.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape172.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape52.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape173.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape53.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape54.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape55.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape56.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape57.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape58.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape59.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape60.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape174.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape175.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape61.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape177.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape177.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape62.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape62.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape176.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape176.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape179.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape179.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape178.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape178.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCube181Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCube181Shape.ciog.cog[1]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape63.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape63.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinder64Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinder64Shape.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinder65Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinder39Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinder41Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinder40Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinder44Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinder45Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinder43Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinder42Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId2.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId3.msg" ":initialShadingGroup.gn" -na;
@@ -36944,18 +50340,28 @@ connectAttr "groupId128.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId129.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId130.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId131.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId133.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId134.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId135.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId136.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId137.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId138.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId139.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId140.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId141.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId142.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId143.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId144.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId145.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId146.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId147.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId148.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId149.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId150.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId151.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId152.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId153.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId154.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId155.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId156.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId157.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId159.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId160.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId161.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId162.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId163.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId165.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId166.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId167.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId168.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId169.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId170.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId171.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId172.msg" ":initialShadingGroup.gn" -na;
 // End of Mech Factory.ma
